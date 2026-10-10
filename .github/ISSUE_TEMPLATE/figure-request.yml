@@ -1,0 +1,51 @@
+name: "Figure request / 绘图需求"
+description: "Describe a reading task and known facts / 说明阅读任务与已知事实"
+title: "[Figure] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What should this figure help someone understand?
+        MuseDraw's first release handles software architecture. Other research-figure directions are welcome as proposals, not promises of an existing workflow.
+        先说图要帮助谁理解什么。首版支持软件架构；其他科研图方向可提案，不代表现已有对应工作流。
+  - type: textarea
+    id: task
+    attributes:
+      label: "Reading task / 阅读任务"
+      description: "Audience, question and intended use / 读者、问题与使用场景"
+      placeholder: "Example: reviewers need to distinguish components from deployment instances."
+    validations:
+      required: true
+  - type: dropdown
+    id: view
+    attributes:
+      label: "Figure direction / 图示方向"
+      options:
+        - "Software capability map / 软件能力归属"
+        - "Component or integration view / 组件或集成"
+        - "Deployment view / 部署"
+        - "New research-figure proposal / 新科研图方向提案"
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: "Known facts and relationships / 已知事实与关系"
+      description: "List objects, groups, connections and supported directions. For deployment, provide actual environments or instances. / 列对象、分组、连接与有依据的方向；部署图需给实际环境或实例。"
+    validations:
+      required: true
+  - type: textarea
+    id: unknowns
+    attributes:
+      label: "Unknowns and constraints / 未知项与约束"
+      description: "Say what must not be guessed; include desired size, labels or visual references. / 说明不应猜什么，可附尺寸、标签与视觉参考要求。"
+  - type: textarea
+    id: references
+    attributes:
+      label: "Optional references / 可选参考"
+      description: "Public links or original material you may share. A public template is not automatically licensed for copying. / 可提供公开链接或有权分享的原创材料；公开模板不自动等于允许复制。"
+  - type: markdown
+    attributes:
+      value: |
+        Please remove credentials and private project data. Reference technologies are not default facts; no token-saving or universal-client guarantee is implied.
+        请移除凭据与私有项目数据。参考中的技术选型不是默认事实；提案不附带 token 节省或全部客户端适配保证。

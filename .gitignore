@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+output/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+# Keep committed native SVG and PNG examples; do not ignore images globally.

@@ -1,0 +1,55 @@
+name: "Example or rule proposal / 案例与规则提案"
+description: "Propose an original example, design rule or workflow / 提议原创案例、设计规则或工作流"
+title: "[Example] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Design and writing contributions are welcome; coding is not required. English or Chinese is enough for a first contribution.
+        欢迎设计与文字贡献，不要求会编程；首次贡献可只用中文或英文。
+        A new example uses examples/<case>/brief.md, diagram.svg, diagram.png and review.md. A new Skill workflow should have a working capability and checked example before release.
+        新案例最少包含 brief.md、diagram.svg、diagram.png、review.md；新 Skill 工作流实现并验证后再发布。
+  - type: input
+    id: summary
+    attributes:
+      label: "One concrete improvement / 一项具体改进"
+      placeholder: "A small component view without invented platform sidebars"
+    validations:
+      required: true
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: "Contribution type / 贡献类型"
+      options:
+        - "Original example / 原创案例"
+        - "Design rule / 设计规则"
+        - "Workflow or tooling / 工作流或工具"
+        - "Documentation / 文档"
+    validations:
+      required: true
+  - type: textarea
+    id: brief
+    attributes:
+      label: "Task, facts and scope / 任务、事实与范围"
+      description: "What question does it answer? Which objects and relationships are known, and which remain unknown? / 回答什么问题？哪些对象和关系已知，哪些未知？"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Proposed evidence and checks / 拟提供的证据与检查"
+      description: "Example files or before/after, local check, actual visual review, and unverified items. / 案例文件或前后对比、本地检查、实际看图与未验证项。"
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: "Implementation route, if relevant / 涉及实现时的路线"
+      description: "For a new workflow, explain its input, implemented output and verification. Do not promise unbuilt capabilities. / 新工作流说明输入、已实现产物与验证，不承诺尚未实现的能力。"
+  - type: checkboxes
+    id: originality
+    attributes:
+      label: "Contribution rights / 贡献授权"
+      options:
+        - label: "I can license my original contribution under Apache-2.0; any third-party asset needs explicit applicable redistribution permission and attribution. / 我有权以 Apache-2.0 授权自己的原创贡献；第三方资产须有明确适用的再分发授权与来源。"
+          required: true

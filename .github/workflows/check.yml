@@ -1,0 +1,53 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Offline artifacts, Python regressions and Node syntax
+        run: python scripts/check.py
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Install the explicitly pinned browser-test dependency
+        run: npm install --no-save --prefix output/browser-deps playwright@1.63.0
+      - name: Install Chromium for browser fixtures
+        run: node output/browser-deps/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Unified checks including real layout and rejected-input fixtures
+        run: python scripts/check.py --playwright output/browser-deps/node_modules/playwright/index.mjs
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'

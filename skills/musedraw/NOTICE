@@ -1,0 +1,14 @@
+MuseDraw
+Copyright 2026 MuseDraw contributors
+
+Project-authored instructions, helper code and example figures are provided under
+the Apache License, Version 2.0. External sites linked as visual references retain
+their own rights. Their screenshots, source templates, logos and author text are
+not distributed in this repository.
+
+The two bundled architecture examples are original generic demonstrations, not
+customer systems, deployment recommendations or third-party endorsements.
+
+The Apache license text was reused from the KJDraw repository. Its existing
+Microsoft and Google notices are retained; no third-party figure templates or
+application code were imported with that license document.
