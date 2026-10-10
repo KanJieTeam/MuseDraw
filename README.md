@@ -1,78 +1,66 @@
 # MuseDraw
 
-Professional scientific figures for your AI agent. Starting with software architecture.
+科研绘图助手，让研究与想法清晰成图。
 
-[简体中文](README.zh-CN.md)
+[快速开始](#快速开始) · [使用指南](docs/usage.zh-CN.md) · [参与贡献](#参与贡献) · [English](README.en.md)
 
-![Original data-platform capability architecture](examples/data-platform/diagram.png)
+MuseDraw 是一个面向科研工作者的开源绘图 Skill 项目。它将专业配图的设计方法、视觉规范和制作流程带到你熟悉的 AI 智能体中，帮助你把已有资料整理成清楚、得体的图。
 
-MuseDraw gives your existing AI agent design guidance, original examples and a figure-making workflow. It is a self-contained Skill, not a standalone web app or an MCP server.
+你提供内容与需求，智能体负责理解和执行，MuseDraw 提供绘图工作流。继续在同一个对话里修改，无需换一个聊天产品。
 
-## Start with one prompt
+## 快速开始
 
-Ask an agent that can read repository files, run local tools and save output:
-
-```text
-Use https://github.com/KanJieTeam/MuseDraw to draw a data-platform architecture diagram.
-Show data sources, batch and streaming ingestion, a warehouse/lake, data services
-and consumption, with governance and operations alongside.
-Treat this as a generic reference. Return PNG and editable SVG.
-```
-
-The agent should read the repository's [SKILL.md](SKILL.md), then load [skills/musedraw/SKILL.md](skills/musedraw/SKILL.md) and the relevant resources. Pasting a URL does not automatically install a Skill or give a chat page file and execution tools. See the [usage guide](docs/usage.md) for the complete workflow.
-
-<details>
-<summary>Optional: install with the Skills CLI</summary>
-
-Requires Node.js 18+:
+在支持 Skill、文件读写和本地工具的智能体中安装：
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
 ```
 
-Follow the interactive prompts to choose your agent/client. Installation registers the Skill; it does not supply the host's execution environment or PNG dependencies.
+按提示选择你正在使用的客户端，然后直接描述需求：
 
-</details>
+```text
+使用 MuseDraw，把下面这份系统说明画成架构图，用于技术汇报。
+[粘贴你的资料与要求]
+```
 
-## What this release does
+也可以把本仓库地址交给具备仓库读取与工具执行能力的智能体，请它加载完整的 MuseDraw Skill 后完成绘图。
 
-- Capability maps: layers, grouped capabilities and cross-cutting support.
-- Component and integration views: components, interfaces, exchanges and boundaries.
-- Deployment views: instances, environments and network boundaries supplied in your brief.
+安装命令需要 Node.js 18+；制图与图片导出的运行条件见[使用指南](docs/usage.zh-CN.md)。MuseDraw 沿用你现有的智能体与模型，不额外要求配置 MCP 服务。
 
-Default delivery is PNG plus editable SVG, built from native text and geometry. The bundled Python renderer implements a fixed data-platform capability layout—not a general-purpose architecture layout engine. Other views are designed as original SVG according to the brief.
+## 从内容到配图
 
-Research workflows and Python/R statistical plots are future directions, not supported features in this release. Organizational charts and generic business flowcharts are also outside the current architecture scope.
+- **先理清信息。** 根据用途与读者，梳理层级、分组和关系，再选择合适的构图。
+- **让视觉服务内容。** 协调字体、间距、配色与重点，不用装饰掩盖信息。
+- **用对话继续修改。** 调整布局或风格时保留已确认的内容；修改内容时保留未受影响的部分。
+- **交付可使用的图片。** 输出 PNG，保留 SVG 源文件；渲染后检查文字、边界与连线。
 
-## Another view: inspection software
+不需要先写复杂的提示词。说明图的用途，提供必要资料；如果有喜欢的视觉风格，也可以一起交给智能体。
 
-![Original inspection-software component architecture](examples/inspection-platform/diagram.png)
+## 当前进展
 
-A logical component view with 10 nodes and 10 relationships. It separates API access, business services, storage and messaging without inventing deployment instances or a cloud vendor.
+目前提供 `musedraw` Skill，覆盖软件与数据平台的能力架构、组件与集成视图，以及依据已有部署资料绘制的部署视图。
 
-- Data platform: [SVG](examples/data-platform/diagram.svg), [brief](examples/data-platform/brief.md), [review](examples/data-platform/review.md).
-- Inspection platform: [SVG](examples/inspection-platform/diagram.svg), [brief](examples/inspection-platform/brief.md), [review](examples/inspection-platform/review.md).
+我们的方向是逐步完善科研绘图工作流：方法框架、实验流程、算法示意，以及 Python/R 数据绘图。这些方向尚未发布，欢迎围绕具体需求参与建设。
 
-These are original reference examples, not customer-system evidence or external acceptance reports.
+MuseDraw 以 **Skill、设计指南和辅助工具** 组织能力。完整用法见[使用指南](docs/usage.zh-CN.md)，技能入口见 [SKILL.md](skills/musedraw/SKILL.md)。
 
-## Tools and revisions
+## 参与贡献
 
-The bundled renderer requires Python 3.10+. PNG preview/export uses existing Node.js 22+, Playwright and Chrome/Chromium or another compatible browser. The agent must check what its environment actually provides and report missing dependencies. No separate CAD engine is required; MuseDraw itself adds no model API key or MCP requirement.
+欢迎科研工作者、设计师与开发者一起完善 MuseDraw。你可以：
 
-Continue asking the same agent to adjust grouping, spacing, typography or color. For a visual-only revision, ask it to keep the supplied components and relationships unchanged. SVG is available for further editing.
+- 改进构图、配色、字体和可读性规则。
+- 增加能从输入走到图片交付的科研绘图工作流。
+- 完善生成工具、检查、文档与客户端使用说明。
+- 提交实际使用中遇到的问题与改进建议。
 
-See [usage](docs/usage.md) for rendering, checks and dependency limits.
-
-## Contribute
-
-Design improvements, reproducible cases and actionable bug reports are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), then run the repository check:
+先读[贡献指南](CONTRIBUTING.zh-CN.md)。较大的新方向可以先在 [Issues](https://github.com/KanJieTeam/MuseDraw/issues) 讨论；提交修改前运行：
 
 ```bash
 python scripts/check.py
 ```
 
-Automated checks do not replace looking at the exported figure or reviewing its architecture semantics.
+首次贡献可以使用中文或英文。规则和工具的检查之外，涉及图的修改还需要实际看图。
 
-## License
+## 许可证
 
-[Apache-2.0](LICENSE). Original examples and their source files are included; community reference templates are not redistributed.
+[Apache-2.0](LICENSE)。欢迎使用、修改与贡献；引入第三方素材时，请确认授权并注明来源。

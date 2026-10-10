@@ -1,6 +1,6 @@
 # 使用 MuseDraw
 
-[English](usage.md) · [返回 README](../README.zh-CN.md)
+[English](usage.md) · [返回 README](../README.md)
 
 MuseDraw 是供现有 AI 智能体使用的 Skill。智能体理解你的需求，Skill 提供架构设计判断、原创案例与文件生成工作流。首版只覆盖软件架构图。
 

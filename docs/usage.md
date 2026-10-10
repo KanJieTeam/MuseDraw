@@ -1,6 +1,6 @@
 # Using MuseDraw
 
-[简体中文](usage.zh-CN.md) · [Back to README](../README.md)
+[简体中文](usage.zh-CN.md) · [Back to README](../README.en.md)
 
 MuseDraw is a Skill for an existing AI agent. The agent understands your request; the Skill supplies architecture design decisions, original cases and a file-generation workflow. The first release covers software architecture only.
 
