@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="112" viewBox="0 0 400 112" role="img" aria-labelledby="title desc">
+  <title id="title">MuseDraw</title>
+  <desc id="desc">A folded M mark beside the MuseDraw wordmark.</desc>
+  <g transform="translate(8 18) scale(1.25)">
+  <path d="M10 50V12H18L32 27V43L21 31V50Z" fill="#F0F3FA"/>
+  <path d="M32 27L46 12H54V50H43V31L32 43Z" fill="#8FA9FF"/>
+  </g>
+  <text x="98" y="78" fill="#F0F3FA" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="-2">MuseDraw</text>
+</svg>

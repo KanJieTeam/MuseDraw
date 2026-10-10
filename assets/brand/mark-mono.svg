@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">MuseDraw monochrome symbol</title>
+  <desc id="desc">An M formed from two folded drawing planes, in one color.</desc>
+  <path d="M10 50V12H18L32 27V43L21 31V50Z" fill="#182235"/>
+  <path d="M32 27L46 12H54V50H43V31L32 43Z" fill="#182235"/>
+</svg>

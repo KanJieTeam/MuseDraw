@@ -1,67 +1,72 @@
-# MuseDraw
+<div align="center">
 
-A scientific-figure assistant for turning research and ideas into clear visuals.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/brand/wordmark-dark.svg">
+  <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
+</picture>
 
-[Quick start](#quick-start) · [Usage guide](docs/usage.md) · [Contribute](#contribute) · [简体中文](README.md)
+<h3>A scientific-figure assistant</h3>
 
-MuseDraw is an open-source drawing Skill project for researchers. It brings figure-design methods, visual guidance and production workflows to the AI agent you already use, helping you turn your material into clear, considered figures.
+<p>Bring figure-design practice to your AI workflow.</p>
 
-You supply the content and requirements. Your agent interprets and executes them; MuseDraw provides the drawing workflow. Keep refining the figure in the same conversation.
+<p>
+  <a href="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml"><img src="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml/badge.svg" alt="Repository checks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-24292f?style=flat-square" alt="Apache-2.0"></a>
+</p>
+
+<p>
+  <a href="#quick-start">Quick start</a> ·
+  <a href="docs/usage.md">Usage guide</a> ·
+  <a href="#contribute">Contribute</a> ·
+  <a href="README.md">简体中文</a>
+</p>
+
+</div>
+
+---
+
+MuseDraw is an open-source drawing Skill for researchers. Bring composition, color, typography and image-production workflows to the agent you already use, and draw and revise in the same conversation.
 
 ## Quick start
 
-Install in an agent that supports Skills, file access and local tools:
+Install the Skill and choose your client when prompted:
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
 ```
 
-Choose your client when prompted, then describe your task:
+Then ask your agent: **Use MuseDraw to draw an architecture diagram from this system description.** Supply the material, the figure's purpose and your visual preferences.
 
-```text
-Use MuseDraw to turn the following system description into an architecture diagram
-for a technical presentation.
-[Paste your material and requirements]
-```
+Installation requires Node.js 18+ and an agent with file access and execution tools. Rendering and PNG export requirements are in the [usage guide](docs/usage.md).
 
-You can also give this repository URL to an agent with repository access and execution tools, and ask it to load the complete MuseDraw Skill before drawing.
+## Current capabilities
 
-The install command requires Node.js 18+. Rendering and export requirements are covered in the [usage guide](docs/usage.md). MuseDraw uses your existing agent and model; it does not require an additional MCP service.
+| View | What it communicates |
+| :--- | :--- |
+| Capability map | Functional layers, grouped capabilities and cross-cutting support |
+| Components and integration | Software components, interfaces, known interactions and system boundaries |
+| Deployment | Supplied instances, environments, networks and storage boundaries |
 
-## From content to figures
+Delivery includes **PNG images and SVG source**. Continue refining content, composition and style through conversation; preserve confirmed information and relationships during style-only changes.
 
-- **Structure the information first.** Identify hierarchy, groups and relationships, then choose a composition for the purpose and audience.
-- **Let design serve the content.** Coordinate typography, spacing, color and emphasis without letting decoration obscure the information.
-- **Refine through conversation.** Preserve confirmed content during visual changes and unaffected elements during content edits.
-- **Deliver usable images.** Export PNG and retain the SVG source; inspect the rendered text, boundaries and connectors.
+The available Skill is [`musedraw`](skills/musedraw/SKILL.md). Research methods, experimental workflows, algorithm diagrams and Python/R data visualization are future directions, not released Skills.
 
-Start with the figure's purpose and the material it should contain. If you have a preferred visual style, share that too.
+## Design approach
 
-## Current scope
-
-The available `musedraw` Skill covers software and data-platform capability maps, component and integration views, and deployment views based on supplied deployment facts.
-
-We aim to expand into research methods, experimental workflows, algorithm diagrams and Python/R data visualization. These workflows are not released yet; contributions grounded in specific needs are welcome.
-
-MuseDraw organizes its capabilities as **a Skill, design guides and supporting tools**. See the [usage guide](docs/usage.md) and [Skill entry](skills/musedraw/SKILL.md).
+- **Information first.** Identify the audience, content and relationships before choosing a view and composition.
+- **Restrained expression.** Organize information through hierarchy, space and limited accent colors.
+- **Inspect before delivery.** Render and check the text, boundaries and connectors, not just the generated code.
 
 ## Contribute
 
-Researchers, designers and developers are welcome. You can:
+Researchers, designers and developers are welcome. Improve design guidance and production tools, or contribute a scientific-figure workflow that goes from input to image delivery.
 
-- Improve composition, color, typography and readability guidance.
-- Add scientific-figure workflows that go from input to image delivery.
-- Improve generation tools, checks, documentation and client instructions.
-- Report problems and suggest improvements from actual use.
+[Contribution guide](CONTRIBUTING.md) · [Problems and suggestions](https://github.com/KanJieTeam/MuseDraw/issues)
 
-Read the [contribution guide](CONTRIBUTING.md). Discuss substantial new directions in [Issues](https://github.com/KanJieTeam/MuseDraw/issues), and run this check before submitting changes:
-
-```bash
-python scripts/check.py
-```
-
-Your first contribution may be in English or Chinese. Changes affecting figures also need visual inspection alongside rule and tool checks.
+Your first contribution may be in English or Chinese. Run `python scripts/check.py` before submitting; changes affecting figures also need visual inspection.
 
 ## License
 
-[Apache-2.0](LICENSE). Use, modify and contribute; check permissions and credit sources when introducing third-party material.
+[Apache-2.0](LICENSE) · [Brand assets](assets/brand/README.md)
+
+Check permissions and credit sources when introducing third-party material.

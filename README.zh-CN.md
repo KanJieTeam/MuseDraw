@@ -1,66 +1,72 @@
-# MuseDraw
+<div align="center">
 
-科研绘图助手，让研究与想法清晰成图。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/brand/wordmark-dark.svg">
+  <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
+</picture>
 
-[快速开始](#快速开始) · [使用指南](docs/usage.zh-CN.md) · [参与贡献](#参与贡献) · [English](README.en.md)
+<h3>科研绘图助手</h3>
 
-MuseDraw 是一个面向科研工作者的开源绘图 Skill 项目。它将专业配图的设计方法、视觉规范和制作流程带到你熟悉的 AI 智能体中，帮助你把已有资料整理成清楚、得体的图。
+<p>把专业配图的设计方法，带进你的 AI 工作流。</p>
 
-你提供内容与需求，智能体负责理解和执行，MuseDraw 提供绘图工作流。继续在同一个对话里修改，无需换一个聊天产品。
+<p>
+  <a href="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml"><img src="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml/badge.svg" alt="Repository checks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-24292f?style=flat-square" alt="Apache-2.0"></a>
+</p>
+
+<p>
+  <a href="#快速开始">快速开始</a> ·
+  <a href="docs/usage.zh-CN.md">使用指南</a> ·
+  <a href="#参与共建">参与共建</a> ·
+  <a href="README.en.md">English</a>
+</p>
+
+</div>
+
+---
+
+MuseDraw 是面向科研工作者的开源绘图 Skill。将构图、配色、排版和图片制作流程交给你熟悉的 AI 智能体，在原有对话中完成绘图与修改。
 
 ## 快速开始
 
-在支持 Skill、文件读写和本地工具的智能体中安装：
+安装 Skill，按提示选择你的客户端：
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
 ```
 
-按提示选择你正在使用的客户端，然后直接描述需求：
+安装后，直接告诉智能体：**使用 MuseDraw，根据这份系统说明绘制架构图。** 随后附上资料、图的用途和风格要求即可。
 
-```text
-使用 MuseDraw，把下面这份系统说明画成架构图，用于技术汇报。
-[粘贴你的资料与要求]
-```
+需要 Node.js 18+ 安装，以及具备文件读写与工具执行能力的智能体。绘图与 PNG 导出的运行条件见[使用指南](docs/usage.zh-CN.md)。
 
-也可以把本仓库地址交给具备仓库读取与工具执行能力的智能体，请它加载完整的 MuseDraw Skill 后完成绘图。
+## 当前能力
 
-安装命令需要 Node.js 18+；制图与图片导出的运行条件见[使用指南](docs/usage.zh-CN.md)。MuseDraw 沿用你现有的智能体与模型，不额外要求配置 MCP 服务。
+| 视图 | 适合表达的内容 |
+| :--- | :--- |
+| 能力架构 | 功能分层、能力分组、贯穿各层的支撑体系 |
+| 组件与集成 | 软件组件、接口、已知交互关系与系统边界 |
+| 部署架构 | 已提供的实例、环境、网络及存储边界 |
 
-## 从内容到配图
+交付 **PNG 图片与 SVG 源文件**。可以继续通过对话调整内容、构图和视觉风格；只改样式时，保留已确认的信息与关系。
 
-- **先理清信息。** 根据用途与读者，梳理层级、分组和关系，再选择合适的构图。
-- **让视觉服务内容。** 协调字体、间距、配色与重点，不用装饰掩盖信息。
-- **用对话继续修改。** 调整布局或风格时保留已确认的内容；修改内容时保留未受影响的部分。
-- **交付可使用的图片。** 输出 PNG，保留 SVG 源文件；渲染后检查文字、边界与连线。
+当前可安装的技能为 [`musedraw`](skills/musedraw/SKILL.md)。科研方法、实验流程、算法示意与 Python/R 数据绘图是后续方向，尚未作为技能发布。
 
-不需要先写复杂的提示词。说明图的用途，提供必要资料；如果有喜欢的视觉风格，也可以一起交给智能体。
+## 设计方法
 
-## 当前进展
+- **信息优先。** 先确定读者、内容与关系，再选择视图和构图。
+- **克制表达。** 用层级、留白与有限的强调色组织信息。
+- **看图再交付。** 渲染后检查文字、边界和连线，不只检查生成代码。
 
-目前提供 `musedraw` Skill，覆盖软件与数据平台的能力架构、组件与集成视图，以及依据已有部署资料绘制的部署视图。
+## 参与共建
 
-我们的方向是逐步完善科研绘图工作流：方法框架、实验流程、算法示意，以及 Python/R 数据绘图。这些方向尚未发布，欢迎围绕具体需求参与建设。
+欢迎科研工作者、设计师与开发者参与。可以改进设计规则、完善制作工具，或贡献一个从输入到图片交付的科研绘图工作流。
 
-MuseDraw 以 **Skill、设计指南和辅助工具** 组织能力。完整用法见[使用指南](docs/usage.zh-CN.md)，技能入口见 [SKILL.md](skills/musedraw/SKILL.md)。
+[阅读贡献指南](CONTRIBUTING.zh-CN.md) · [提出问题与建议](https://github.com/KanJieTeam/MuseDraw/issues)
 
-## 参与贡献
+首次贡献可以使用中文或英文。提交前运行 `python scripts/check.py`；涉及图的修改还需要实际看图。
 
-欢迎科研工作者、设计师与开发者一起完善 MuseDraw。你可以：
+## 开源许可
 
-- 改进构图、配色、字体和可读性规则。
-- 增加能从输入走到图片交付的科研绘图工作流。
-- 完善生成工具、检查、文档与客户端使用说明。
-- 提交实际使用中遇到的问题与改进建议。
+[Apache-2.0](LICENSE) · [品牌标识](assets/brand/README.md)
 
-先读[贡献指南](CONTRIBUTING.zh-CN.md)。较大的新方向可以先在 [Issues](https://github.com/KanJieTeam/MuseDraw/issues) 讨论；提交修改前运行：
-
-```bash
-python scripts/check.py
-```
-
-首次贡献可以使用中文或英文。规则和工具的检查之外，涉及图的修改还需要实际看图。
-
-## 许可证
-
-[Apache-2.0](LICENSE)。欢迎使用、修改与贡献；引入第三方素材时，请确认授权并注明来源。
+引入第三方素材时，请确认授权并注明来源。
