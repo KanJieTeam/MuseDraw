@@ -66,7 +66,8 @@ class ExportPngTests(unittest.TestCase):
             module = Path(directory) / "module.mjs"
             module.touch()
             with patch("export_png.subprocess.run") as run:
-                self.assertEqual(export_png.discover_playwright("node", str(module)), module)
+                # Windows TEMP may use an 8.3 alias; discovery returns a resolved path.
+                self.assertEqual(export_png.discover_playwright("node", str(module)), module.resolve())
                 run.assert_not_called()
 
     def test_missing_dependency_is_disclosed(self):
