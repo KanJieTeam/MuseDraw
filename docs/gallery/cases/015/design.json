@@ -1,0 +1,599 @@
+{
+  "id": 15,
+  "number": "015",
+  "title": "财务控制、执行与记录架构",
+  "family": "上执行中控制右ERP记录",
+  "theme": "淡蓝控制执行与淡黄角色",
+  "view": "capability",
+  "width": 1960,
+  "height": 1130,
+  "thumbnail": "cases/015/preview.png",
+  "svg": "cases/015/diagram.svg",
+  "png": "cases/015/diagram.png",
+  "drawio": "cases/015/diagram.drawio",
+  "prompt": "用 MuseDraw 画“财务控制、执行与记录架构”。采用上执行中控制右ERP记录，淡蓝控制执行与淡黄角色。分区：参与角色、执行平面、业务控制平面、业务自动化、记录系统。模块：业务人员、财务审核、运行维护、身份服务、密钥管理、任务执行、消息队列、费用管理、计划编制、业务状态、流程触发、任务编排、数据校核、回执处理、写入接口、读取接口、同步接口、账务记录。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "geometry": {
+    "number": 15,
+    "referenceId": "CQ-0036",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1625,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          46,
+          505,
+          270,
+          48
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          56,
+          574,
+          250,
+          138.66666666666666
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          56,
+          724.6666666666666,
+          250,
+          138.66666666666666
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          56,
+          875.3333333333333,
+          250,
+          138.66666666666666
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          370,
+          157,
+          1128,
+          48
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          380,
+          226,
+          268,
+          190
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          660,
+          226,
+          268,
+          190
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          940,
+          226,
+          268,
+          190
+        ]
+      },
+      {
+        "id": "t-10",
+        "box": [
+          1220,
+          226,
+          268,
+          190
+        ]
+      },
+      {
+        "id": "t-11",
+        "box": [
+          370,
+          475,
+          1128,
+          48
+        ]
+      },
+      {
+        "id": "t-12",
+        "box": [
+          399,
+          622,
+          274,
+          76
+        ]
+      },
+      {
+        "id": "t-13",
+        "box": [
+          399,
+          804,
+          274,
+          76
+        ]
+      },
+      {
+        "id": "t-14",
+        "box": [
+          747,
+          708,
+          304,
+          92
+        ]
+      },
+      {
+        "id": "t-15",
+        "box": [
+          1096,
+          573,
+          370,
+          48
+        ]
+      },
+      {
+        "id": "t-16",
+        "box": [
+          1106,
+          642,
+          350,
+          76
+        ]
+      },
+      {
+        "id": "t-17",
+        "box": [
+          1106,
+          730,
+          350,
+          76
+        ]
+      },
+      {
+        "id": "t-18",
+        "box": [
+          1106,
+          818,
+          350,
+          76
+        ]
+      },
+      {
+        "id": "t-19",
+        "box": [
+          1106,
+          906,
+          350,
+          76
+        ]
+      },
+      {
+        "id": "t-20",
+        "box": [
+          1550,
+          475,
+          364,
+          48
+        ]
+      },
+      {
+        "id": "t-21",
+        "box": [
+          1560,
+          544,
+          344,
+          108.5
+        ]
+      },
+      {
+        "id": "t-22",
+        "box": [
+          1560,
+          664.5,
+          344,
+          108.5
+        ]
+      },
+      {
+        "id": "t-23",
+        "box": [
+          1560,
+          785,
+          344,
+          108.5
+        ]
+      },
+      {
+        "id": "t-24",
+        "box": [
+          1560,
+          905.5,
+          344,
+          108.5
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "actors-1",
+        "label": "业务人员",
+        "box": [
+          56,
+          574,
+          250,
+          138.66666666666666
+        ],
+        "parent": "actors"
+      },
+      {
+        "id": "actors-2",
+        "label": "财务审核",
+        "box": [
+          56,
+          724.6666666666666,
+          250,
+          138.66666666666666
+        ],
+        "parent": "actors"
+      },
+      {
+        "id": "actors-3",
+        "label": "运行维护",
+        "box": [
+          56,
+          875.3333333333333,
+          250,
+          138.66666666666666
+        ],
+        "parent": "actors"
+      },
+      {
+        "id": "execution-1",
+        "label": "身份服务",
+        "box": [
+          380,
+          226,
+          268,
+          190
+        ],
+        "parent": "execution"
+      },
+      {
+        "id": "execution-2",
+        "label": "密钥管理",
+        "box": [
+          660,
+          226,
+          268,
+          190
+        ],
+        "parent": "execution"
+      },
+      {
+        "id": "execution-3",
+        "label": "任务执行",
+        "box": [
+          940,
+          226,
+          268,
+          190
+        ],
+        "parent": "execution"
+      },
+      {
+        "id": "execution-4",
+        "label": "消息队列",
+        "box": [
+          1220,
+          226,
+          268,
+          190
+        ],
+        "parent": "execution"
+      },
+      {
+        "id": "app-1",
+        "label": "费用管理",
+        "box": [
+          396,
+          568,
+          280,
+          134
+        ],
+        "parent": null
+      },
+      {
+        "id": "app-2",
+        "label": "计划编制",
+        "box": [
+          396,
+          750,
+          280,
+          134
+        ],
+        "parent": null
+      },
+      {
+        "id": "datastore",
+        "label": "业务状态",
+        "box": [
+          744,
+          654,
+          310,
+          150
+        ],
+        "parent": null
+      },
+      {
+        "id": "automation-1",
+        "label": "流程触发",
+        "box": [
+          1106,
+          642,
+          350,
+          76
+        ],
+        "parent": "automation"
+      },
+      {
+        "id": "automation-2",
+        "label": "任务编排",
+        "box": [
+          1106,
+          730,
+          350,
+          76
+        ],
+        "parent": "automation"
+      },
+      {
+        "id": "automation-3",
+        "label": "数据校核",
+        "box": [
+          1106,
+          818,
+          350,
+          76
+        ],
+        "parent": "automation"
+      },
+      {
+        "id": "automation-4",
+        "label": "回执处理",
+        "box": [
+          1106,
+          906,
+          350,
+          76
+        ],
+        "parent": "automation"
+      },
+      {
+        "id": "record-1",
+        "label": "写入接口",
+        "box": [
+          1560,
+          544,
+          344,
+          108.5
+        ],
+        "parent": "record"
+      },
+      {
+        "id": "record-2",
+        "label": "读取接口",
+        "box": [
+          1560,
+          664.5,
+          344,
+          108.5
+        ],
+        "parent": "record"
+      },
+      {
+        "id": "record-3",
+        "label": "同步接口",
+        "box": [
+          1560,
+          785,
+          344,
+          108.5
+        ],
+        "parent": "record"
+      },
+      {
+        "id": "record-4",
+        "label": "账务记录",
+        "box": [
+          1560,
+          905.5,
+          344,
+          108.5
+        ],
+        "parent": "record"
+      }
+    ],
+    "groups": [
+      {
+        "id": "actors",
+        "title": "参与角色",
+        "box": [
+          40,
+          500,
+          282,
+          530
+        ],
+        "headH": 58
+      },
+      {
+        "id": "execution",
+        "title": "执行平面",
+        "box": [
+          364,
+          152,
+          1140,
+          280
+        ],
+        "headH": 58
+      },
+      {
+        "id": "control",
+        "title": "业务控制平面",
+        "box": [
+          364,
+          470,
+          1140,
+          560
+        ],
+        "headH": 58
+      },
+      {
+        "id": "automation",
+        "title": "业务自动化",
+        "box": [
+          1090,
+          568,
+          382,
+          430
+        ],
+        "headH": 58
+      },
+      {
+        "id": "record",
+        "title": "记录系统",
+        "box": [
+          1544,
+          470,
+          376,
+          560
+        ],
+        "headH": 58
+      }
+    ],
+    "paths": [
+      {
+        "from": "app-1",
+        "to": "datastore",
+        "points": [
+          [
+            676,
+            635
+          ],
+          [
+            710,
+            635
+          ],
+          [
+            710,
+            729
+          ],
+          [
+            744,
+            729
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "app-2",
+        "to": "datastore",
+        "points": [
+          [
+            676,
+            817
+          ],
+          [
+            710,
+            817
+          ],
+          [
+            710,
+            729
+          ],
+          [
+            744,
+            729
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "datastore",
+        "to": "automation-2",
+        "points": [
+          [
+            1054,
+            729
+          ],
+          [
+            1080,
+            729
+          ],
+          [
+            1080,
+            768
+          ],
+          [
+            1106,
+            768
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "automation-3",
+        "to": "record-1",
+        "points": [
+          [
+            1456,
+            856
+          ],
+          [
+            1508,
+            856
+          ],
+          [
+            1508,
+            598.25
+          ],
+          [
+            1560,
+            598.25
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "Finance operations: control plane, Azure execution and ERP record",
+    "url": "https://learn.microsoft.com/en-us/power-platform/architecture/reference-architectures/finance-and-operations-dataverse"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1050" viewBox="0 0 1920 1050" role="img" aria-labelledby="title desc"><title id="title">企业智能应用分层平台</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":9,"referenceId":"CQ-0003","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1585,72]},{"id":"t-2","box":[292,153,1326,42]},{"id":"t-3","box":[302,216,427.3333333333333,52]},{"id":"t-4","box":[741.3333333333333,216,427.3333333333333,52]},{"id":"t-5","box":[1180.6666666666665,216,427.3333333333333,52]},{"id":"t-6","box":[292,327,1326,48]},{"id":"t-7","box":[46,327,208,48]},{"id":"t-8","box":[56,396,188,92]},{"id":"t-9","box":[56,500,188,92]},{"id":"t-10","box":[56,604,188,92]},{"id":"t-11","box":[1656,327,218,48]},{"id":"t-12","box":[1666,396,198,92]},{"id":"t-13","box":[1666,500,198,92]},{"id":"t-14","box":[1666,604,198,92]},{"id":"t-15","box":[316,405,1278,42]},{"id":"t-16","box":[326,468,305.5,62]},{"id":"t-17","box":[643.5,468,305.5,62]},{"id":"t-18","box":[961,468,305.5,62]},{"id":"t-19","box":[1278.5,468,305.5,62]},{"id":"t-20","box":[316,577,1278,48]},{"id":"t-21","box":[326,646,242,72]},{"id":"t-22","box":[580,646,242,72]},{"id":"t-23","box":[834,646,242,72]},{"id":"t-24","box":[1088,646,242,72]},{"id":"t-25","box":[1342,646,242,72]},{"id":"t-26","box":[316,765,1278,48]},{"id":"t-27","box":[326,834,305.5,100]},{"id":"t-28","box":[643.5,834,305.5,100]},{"id":"t-29","box":[961,834,305.5,100]},{"id":"t-30","box":[1278.5,834,305.5,100]}],"nodes":[{"id":"apps-1","label":"业务入口","box":[302,216,427.3333333333333,52],"parent":"apps"},{"id":"apps-2","label":"智能交互","box":[741.3333333333333,216,427.3333333333333,52],"parent":"apps"},{"id":"apps-3","label":"应用编排","box":[1180.6666666666665,216,427.3333333333333,52],"parent":"apps"},{"id":"design-1","label":"应用设计","box":[56,396,188,92],"parent":"design"},{"id":"design-2","label":"工具配置","box":[56,500,188,92],"parent":"design"},{"id":"design-3","label":"测试调试","box":[56,604,188,92],"parent":"design"},{"id":"gateway-1","label":"模型接入","box":[1666,396,198,92],"parent":"gateway"},{"id":"gateway-2","label":"工具接入","box":[1666,500,198,92],"parent":"gateway"},{"id":"gateway-3","label":"权限策略","box":[1666,604,198,92],"parent":"gateway"},{"id":"agents-1","label":"内容智能体","box":[326,468,305.5,62],"parent":"agents"},{"id":"agents-2","label":"业务智能体","box":[643.5,468,305.5,62],"parent":"agents"},{"id":"agents-3","label":"流程智能体","box":[961,468,305.5,62],"parent":"agents"},{"id":"agents-4","label":"工具调用","box":[1278.5,468,305.5,62],"parent":"agents"},{"id":"intelligence-1","label":"检索增强","box":[326,646,242,72],"parent":"intelligence"},{"id":"intelligence-2","label":"知识图谱","box":[580,646,242,72],"parent":"intelligence"},{"id":"intelligence-3","label":"向量索引","box":[834,646,242,72],"parent":"intelligence"},{"id":"intelligence-4","label":"基础模型","box":[1088,646,242,72],"parent":"intelligence"},{"id":"intelligence-5","label":"任务调度","box":[1342,646,242,72],"parent":"intelligence"},{"id":"data-1","label":"业务数据","box":[326,834,305.5,100],"parent":"data"},{"id":"data-2","label":"对象内容","box":[643.5,834,305.5,100],"parent":"data"},{"id":"data-3","label":"关系网络","box":[961,834,305.5,100],"parent":"data"},{"id":"data-4","label":"语义目录","box":[1278.5,834,305.5,100],"parent":"data"}],"groups":[{"id":"apps","title":"业务应用","box":[286,148,1338,136],"headH":52},{"id":"core","title":"企业智能平台","box":[286,322,1338,656],"headH":58},{"id":"design","title":"开发环境","box":[40,322,220,390],"headH":58},{"id":"gateway","title":"访问网关","box":[1650,322,230,390],"headH":58},{"id":"agents","title":"智能体层","box":[310,400,1290,146],"headH":52},{"id":"intelligence","title":"智能服务层","box":[310,572,1290,162],"headH":58},{"id":"data","title":"共享数据层","box":[310,760,1290,190],"headH":58}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1920" height="1050" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#28323E">企业智能应用分层平台</text>
+<g transform="translate(1652 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#266AA1"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L1886,112" fill="none" stroke="#266AA1" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="286" y="148" width="1338" height="136" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-2" x="955" y="184.5" text-anchor="middle" font-size="26" font-weight="600" fill="#28323E">业务应用</text>
+<rect x="302" y="216" width="427.3333333333333" height="52" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-3" x="515.6666666666666" y="251.000008" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">业务入口</text>
+<rect x="741.3333333333333" y="216" width="427.3333333333333" height="52" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-4" x="954.9999999999999" y="251.000008" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">智能交互</text>
+<rect x="1180.6666666666665" y="216" width="427.3333333333333" height="52" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-5" x="1394.3333333333333" y="251.000008" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">应用编排</text>
+<rect x="286" y="322" width="1338" height="656" rx="2" fill="#FFFFFF" stroke="#6F8AA4" stroke-width="1.2"/>
+<text id="t-6" x="955" y="361.5" text-anchor="middle" font-size="26" font-weight="600" fill="#266AA1">企业智能平台</text>
+<rect x="40" y="322" width="220" height="390" rx="2" fill="#FFFFFF" stroke="#6F8AA4" stroke-width="1.2"/>
+<text id="t-7" x="150" y="361.5" text-anchor="middle" font-size="26" font-weight="600" fill="#426783">开发环境</text>
+<rect x="56" y="396" width="188" height="92" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-8" x="150" y="451" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">应用设计</text>
+<rect x="56" y="500" width="188" height="92" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-9" x="150" y="555" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">工具配置</text>
+<rect x="56" y="604" width="188" height="92" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-10" x="150" y="659" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">测试调试</text>
+<rect x="1650" y="322" width="230" height="390" rx="2" fill="#FFFFFF" stroke="#6F8AA4" stroke-width="1.2"/>
+<text id="t-11" x="1765" y="361.5" text-anchor="middle" font-size="26" font-weight="600" fill="#426783">访问网关</text>
+<rect x="1666" y="396" width="198" height="92" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-12" x="1765" y="451" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">模型接入</text>
+<rect x="1666" y="500" width="198" height="92" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-13" x="1765" y="555" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">工具接入</text>
+<rect x="1666" y="604" width="198" height="92" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-14" x="1765" y="659" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">权限策略</text>
+<rect x="310" y="400" width="1290" height="146" rx="2" fill="#FFFFFF" stroke="#266AA1" stroke-width="1.2"/>
+<rect x="310" y="400" width="1290" height="52" rx="2" fill="#266AA1" stroke="#266AA1" stroke-width="1.2"/>
+<text id="t-15" x="955" y="436.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">智能体层</text>
+<rect x="326" y="468" width="305.5" height="62" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-16" x="478.75" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">内容智能体</text>
+<rect x="643.5" y="468" width="305.5" height="62" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-17" x="796.25" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">业务智能体</text>
+<rect x="961" y="468" width="305.5" height="62" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-18" x="1113.75" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">流程智能体</text>
+<rect x="1278.5" y="468" width="305.5" height="62" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-19" x="1431.25" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">工具调用</text>
+<rect x="310" y="572" width="1290" height="162" rx="2" fill="#FFFFFF" stroke="#547A99" stroke-width="1.2"/>
+<rect x="310" y="572" width="1290" height="58" rx="2" fill="#547A99" stroke="#547A99" stroke-width="1.2"/>
+<text id="t-20" x="955" y="611.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">智能服务层</text>
+<rect x="326" y="646" width="242" height="72" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-21" x="447" y="690.5" text-anchor="middle" font-size="21" font-weight="400" fill="#28323E">检索增强</text>
+<rect x="580" y="646" width="242" height="72" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-22" x="701" y="690.5" text-anchor="middle" font-size="21" font-weight="400" fill="#28323E">知识图谱</text>
+<rect x="834" y="646" width="242" height="72" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-23" x="955" y="690.5" text-anchor="middle" font-size="21" font-weight="400" fill="#28323E">向量索引</text>
+<rect x="1088" y="646" width="242" height="72" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-24" x="1209" y="690.5" text-anchor="middle" font-size="21" font-weight="400" fill="#28323E">基础模型</text>
+<rect x="1342" y="646" width="242" height="72" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-25" x="1463" y="690.5" text-anchor="middle" font-size="21" font-weight="400" fill="#28323E">任务调度</text>
+<rect x="310" y="760" width="1290" height="190" rx="2" fill="#FFFFFF" stroke="#2E4359" stroke-width="1.2"/>
+<rect x="310" y="760" width="1290" height="58" rx="2" fill="#2E4359" stroke="#2E4359" stroke-width="1.2"/>
+<text id="t-26" x="955" y="799.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">共享数据层</text>
+<rect x="326" y="834" width="305.5" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-27" x="478.75" y="893" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">业务数据</text>
+<rect x="643.5" y="834" width="305.5" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-28" x="796.25" y="893" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">对象内容</text>
+<rect x="961" y="834" width="305.5" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-29" x="1113.75" y="893" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">关系网络</text>
+<rect x="1278.5" y="834" width="305.5" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-30" x="1431.25" y="893" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">语义目录</text></g></svg>

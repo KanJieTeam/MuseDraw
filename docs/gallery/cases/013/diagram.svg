@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1170" viewBox="0 0 1600 1170" role="img" aria-labelledby="title desc"><title id="title">企业分析平台与交付底座</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":13,"referenceId":"CQ-0028","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1265,72]},{"id":"t-2","box":[46,189,264,48]},{"id":"t-3","box":[56,258,244,69]},{"id":"t-4","box":[56,339,244,69]},{"id":"t-5","box":[360,159,1194,48]},{"id":"t-6","box":[386,245,238,48]},{"id":"t-7","box":[396,314,218,175]},{"id":"t-8","box":[396,501,218,175]},{"id":"t-9","box":[396,688,218,175]},{"id":"t-10","box":[396,875,218,175]},{"id":"t-11","box":[662,245,866,48]},{"id":"t-12","box":[672,314,274,80]},{"id":"t-13","box":[958,314,274,80]},{"id":"t-14","box":[1244,314,274,80]},{"id":"t-15","box":[662,441,866,48]},{"id":"t-16","box":[672,510,417,76]},{"id":"t-17","box":[1101,510,417,76]},{"id":"t-18","box":[672,598,417,76]},{"id":"t-19","box":[1101,598,417,76]},{"id":"t-20","box":[662,721,866,48]},{"id":"t-21","box":[672,790,202.5,92]},{"id":"t-22","box":[886.5,790,202.5,92]},{"id":"t-23","box":[1101,790,202.5,92]},{"id":"t-24","box":[1315.5,790,202.5,92]},{"id":"t-25","box":[662,929,866,42]},{"id":"t-26","box":[672,992,274,58]},{"id":"t-27","box":[958,992,274,58]},{"id":"t-28","box":[1244,992,274,58]}],"nodes":[{"id":"access-1","label":"应用访问","box":[56,258,244,69],"parent":"access"},{"id":"access-2","label":"源代码库","box":[56,339,244,69],"parent":"access"},{"id":"delivery-1","label":"应用交付","box":[396,314,218,175],"parent":"delivery"},{"id":"delivery-2","label":"数据交付","box":[396,501,218,175],"parent":"delivery"},{"id":"delivery-3","label":"资源交付","box":[396,688,218,175],"parent":"delivery"},{"id":"delivery-4","label":"基础配置","box":[396,875,218,175],"parent":"delivery"},{"id":"application-1","label":"业务应用","box":[672,314,274,80],"parent":"application"},{"id":"application-2","label":"分析门户","box":[958,314,274,80],"parent":"application"},{"id":"application-3","label":"开放服务","box":[1244,314,274,80],"parent":"application"},{"id":"data-1","label":"数据生产","box":[672,510,417,76],"parent":"data"},{"id":"data-2","label":"数据消费","box":[1101,510,417,76],"parent":"data"},{"id":"data-3","label":"治理服务","box":[672,598,417,76],"parent":"data"},{"id":"data-4","label":"访问管理","box":[1101,598,417,76],"parent":"data"},{"id":"enterprise-1","label":"基础网络","box":[672,790,202.5,92],"parent":"enterprise"},{"id":"enterprise-2","label":"身份服务","box":[886.5,790,202.5,92],"parent":"enterprise"},{"id":"enterprise-3","label":"组织策略","box":[1101,790,202.5,92],"parent":"enterprise"},{"id":"enterprise-4","label":"运行监控","box":[1315.5,790,202.5,92],"parent":"enterprise"},{"id":"cloud-1","label":"资源计算","box":[672,992,274,58],"parent":"cloud"},{"id":"cloud-2","label":"数据加密","box":[958,992,274,58],"parent":"cloud"},{"id":"cloud-3","label":"威胁监测","box":[1244,992,274,58],"parent":"cloud"}],"groups":[{"id":"access","title":"受控入口","box":[40,184,276,240],"headH":58},{"id":"platform","title":"企业数据平台","box":[354,154,1206,946],"headH":58},{"id":"delivery","title":"持续交付","box":[380,240,250,826],"headH":58},{"id":"application","title":"应用层","box":[656,240,878,170],"headH":58},{"id":"data","title":"数据平台层","box":[656,436,878,254],"headH":58},{"id":"enterprise","title":"企业公共基础","box":[656,716,878,182],"headH":58},{"id":"cloud","title":"资源设施层","box":[656,924,878,142],"headH":52}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1600" height="1170" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#384758">企业分析平台与交付底座</text>
+<g transform="translate(1332 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#276CC1"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L1566,112" fill="none" stroke="#276CC1" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="40" y="184" width="276" height="240" rx="2" fill="#F0F3F6" stroke="#B7C5D2" stroke-width="1.2"/>
+<text id="t-2" x="178" y="223.5" text-anchor="middle" font-size="26" font-weight="600" fill="#34485E">受控入口</text>
+<rect x="56" y="258" width="244" height="69" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-3" x="178" y="301.5" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">应用访问</text>
+<rect x="56" y="339" width="244" height="69" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-4" x="178" y="382.5" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">源代码库</text>
+<rect x="354" y="154" width="1206" height="946" rx="2" fill="#fff" stroke="#276CC1" stroke-width="4"/>
+<rect x="354" y="154" width="1206" height="58" rx="2" fill="#276CC1" stroke="#276CC1" stroke-width="1.2"/>
+<text id="t-5" x="957" y="193.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">企业数据平台</text>
+<rect x="380" y="240" width="250" height="826" rx="2" fill="#EDF0F3" stroke="#AAB5BE" stroke-width="1.2"/>
+<text id="t-6" x="505" y="279.5" text-anchor="middle" font-size="26" font-weight="600" fill="#596671">持续交付</text>
+<rect x="396" y="314" width="218" height="175" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-7" x="505" y="410.5" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">应用交付</text>
+<rect x="396" y="501" width="218" height="175" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-8" x="505" y="597.5" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">数据交付</text>
+<rect x="396" y="688" width="218" height="175" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-9" x="505" y="784.5" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">资源交付</text>
+<rect x="396" y="875" width="218" height="175" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-10" x="505" y="971.5" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">基础配置</text>
+<rect x="656" y="240" width="878" height="170" rx="2" fill="#EEF1F4" stroke="#B4BFC9" stroke-width="1.2"/>
+<text id="t-11" x="1095" y="279.5" text-anchor="middle" font-size="26" font-weight="600" fill="#536474">应用层</text>
+<rect x="672" y="314" width="274" height="80" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-12" x="809" y="363" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">业务应用</text>
+<rect x="958" y="314" width="274" height="80" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-13" x="1095" y="363" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">分析门户</text>
+<rect x="1244" y="314" width="274" height="80" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-14" x="1381" y="363" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">开放服务</text>
+<rect x="656" y="436" width="878" height="254" rx="2" fill="#FFF1CB" stroke="#CABB8E" stroke-width="1.2"/>
+<text id="t-15" x="1095" y="475.5" text-anchor="middle" font-size="26" font-weight="600" fill="#8D7137">数据平台层</text>
+<rect x="672" y="510" width="417" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-16" x="880.5" y="557" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">数据生产</text>
+<rect x="1101" y="510" width="417" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-17" x="1309.5" y="557" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">数据消费</text>
+<rect x="672" y="598" width="417" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-18" x="880.5" y="645" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">治理服务</text>
+<rect x="1101" y="598" width="417" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-19" x="1309.5" y="645" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">访问管理</text>
+<rect x="656" y="716" width="878" height="182" rx="2" fill="#EEF1F4" stroke="#B4BFC9" stroke-width="1.2"/>
+<text id="t-20" x="1095" y="755.5" text-anchor="middle" font-size="26" font-weight="600" fill="#536474">企业公共基础</text>
+<rect x="672" y="790" width="202.5" height="92" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-21" x="773.25" y="844" text-anchor="middle" font-size="20" font-weight="400" fill="#384758">基础网络</text>
+<rect x="886.5" y="790" width="202.5" height="92" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-22" x="987.75" y="844" text-anchor="middle" font-size="20" font-weight="400" fill="#384758">身份服务</text>
+<rect x="1101" y="790" width="202.5" height="92" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-23" x="1202.25" y="844" text-anchor="middle" font-size="20" font-weight="400" fill="#384758">组织策略</text>
+<rect x="1315.5" y="790" width="202.5" height="92" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-24" x="1416.75" y="844" text-anchor="middle" font-size="20" font-weight="400" fill="#384758">运行监控</text>
+<rect x="656" y="924" width="878" height="142" rx="2" fill="#EEF1F4" stroke="#B4BFC9" stroke-width="1.2"/>
+<text id="t-25" x="1095" y="960.5" text-anchor="middle" font-size="26" font-weight="600" fill="#536474">资源设施层</text>
+<rect x="672" y="992" width="274" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-26" x="809" y="1030" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">资源计算</text>
+<rect x="958" y="992" width="274" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-27" x="1095" y="1030" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">数据加密</text>
+<rect x="1244" y="992" width="274" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-28" x="1381" y="1030" text-anchor="middle" font-size="23" font-weight="400" fill="#384758">威胁监测</text></g></svg>

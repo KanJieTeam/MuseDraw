@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1510" viewBox="0 0 1700 1510" role="img" aria-labelledby="title desc"><title id="title">流域推演与数字孪生体系</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":62,"referenceId":"BQ-0014","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1365,72]},{"id":"t-2","box":[48,590,94,160]},{"id":"t-3","box":[1558,590,94,160]},{"id":"t-4","box":[196,160,1298,40]},{"id":"t-5","box":[350,220,271,76]},{"id":"t-6","box":[633,220,271,76]},{"id":"t-7","box":[916,220,271,76]},{"id":"t-8","box":[1199,220,271,76]},{"id":"t-9","box":[196,385,1298,56]},{"id":"t-10","box":[261,485,1168,42]},{"id":"t-11","box":[296,575,528,42]},{"id":"t-12","box":[310,650,158.66666666666666,70]},{"id":"t-13","box":[480.66666666666663,650,158.66666666666666,70]},{"id":"t-14","box":[651.3333333333333,650,158.66666666666666,70]},{"id":"t-15","box":[866,575,528,42]},{"id":"t-16","box":[880,650,158.66666666666666,70]},{"id":"t-17","box":[1050.6666666666667,650,158.66666666666666,70]},{"id":"t-18","box":[1221.3333333333333,650,158.66666666666666,70]},{"id":"t-19","box":[296,805,1098,40]},{"id":"t-20","box":[310,860,204.4,62]},{"id":"t-21","box":[526.4,860,204.4,62]},{"id":"t-22","box":[742.8,860,204.4,62]},{"id":"t-23","box":[959.2,860,204.4,62]},{"id":"t-24","box":[1175.6,860,204.4,62]},{"id":"t-25","box":[261,1045,1168,40]},{"id":"t-26","box":[280,1095,273.5,62]},{"id":"t-27","box":[565.5,1095,273.5,62]},{"id":"t-28","box":[851,1095,273.5,62]},{"id":"t-29","box":[1136.5,1095,273.5,62]},{"id":"t-30","box":[196,1255,1298,42]},{"id":"t-31","box":[350,1340,271,78]},{"id":"t-32","box":[633,1340,271,78]},{"id":"t-33","box":[916,1340,271,78]},{"id":"t-34","box":[1199,1340,271,78]}],"nodes":[{"id":"applications-1","label":"情景模拟","box":[350,220,271,76],"parent":"applications"},{"id":"applications-2","label":"资源调配","box":[633,220,271,76],"parent":"applications"},{"id":"applications-3","label":"事件预演","box":[916,220,271,76],"parent":"applications"},{"id":"applications-4","label":"应急预案","box":[1199,220,271,76],"parent":"applications"},{"id":"model-1","label":"专业模型","box":[310,650,158.66666666666666,70],"parent":"model"},{"id":"model-2","label":"推演模型","box":[480.66666666666663,650,158.66666666666666,70],"parent":"model"},{"id":"model-3","label":"校准模型","box":[651.3333333333333,650,158.66666666666666,70],"parent":"model"},{"id":"knowledge-1","label":"调度方案","box":[880,650,158.66666666666666,70],"parent":"knowledge"},{"id":"knowledge-2","label":"历史情景","box":[1050.6666666666667,650,158.66666666666666,70],"parent":"knowledge"},{"id":"knowledge-3","label":"规则知识","box":[1221.3333333333333,650,158.66666666666666,70],"parent":"knowledge"},{"id":"data-1","label":"基础数据","box":[310,860,204.4,62],"parent":"data"},{"id":"data-2","label":"监测数据","box":[526.4,860,204.4,62],"parent":"data"},{"id":"data-3","label":"管理数据","box":[742.8,860,204.4,62],"parent":"data"},{"id":"data-4","label":"共享数据","box":[959.2,860,204.4,62],"parent":"data"},{"id":"data-5","label":"空间数据","box":[1175.6,860,204.4,62],"parent":"data"},{"id":"infra-1","label":"监测感知","box":[280,1095,273.5,62],"parent":"infra"},{"id":"infra-2","label":"通信网络","box":[565.5,1095,273.5,62],"parent":"infra"},{"id":"infra-3","label":"工程控制","box":[851,1095,273.5,62],"parent":"infra"},{"id":"infra-4","label":"计算环境","box":[1136.5,1095,273.5,62],"parent":"infra"},{"id":"physical-1","label":"调蓄工程","box":[350,1340,271,78],"parent":"physical"},{"id":"physical-2","label":"河道对象","box":[633,1340,271,78],"parent":"physical"},{"id":"physical-3","label":"活动区域","box":[916,1340,271,78],"parent":"physical"},{"id":"physical-4","label":"影响区域","box":[1199,1340,271,78],"parent":"physical"}],"groups":[{"id":"security","title":"","box":[35,155,120,1295],"headH":66},{"id":"assurance","title":"","box":[1545,155,120,1295],"headH":66},{"id":"applications","title":"业务应用","box":[190,155,1310,180],"headH":50},{"id":"digital","title":"数字孪生范围","box":[190,380,1310,825],"headH":66},{"id":"engine","title":"协同融合引擎","box":[255,480,1180,520],"headH":52},{"id":"model","title":"模型能力","box":[290,570,540,190],"headH":52},{"id":"knowledge","title":"知识能力","box":[860,570,540,190],"headH":52},{"id":"data","title":"共享数据底板","box":[290,800,1110,145],"headH":50},{"id":"infra","title":"信息支撑","box":[255,1040,1180,130],"headH":50},{"id":"physical","title":"物理对象范围","box":[190,1250,1310,200],"headH":52}],"paths":[{"from":"model-3","to":"knowledge-1","points":[[810,685],[845,685],[880,685]],"label":"","labelBox":null},{"from":"knowledge-3","to":"model-1","points":[[1379,720],[1420,720],[1420,965],[270,965],[270,685],[310,685]],"label":"","labelBox":null}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1700" height="1510" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="716.5" y="70.5" text-anchor="middle" font-size="36" font-weight="700" fill="#273A4D">流域推演与数字孪生体系</text>
+<g transform="translate(1432 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#6486A6"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L1666,112" fill="none" stroke="#6486A6" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="35" y="155" width="120" height="1295" rx="2" fill="#F1F1F1" stroke="#98A2AA" stroke-width="1.2"/>
+<text id="t-2" x="95" y="664.619995" text-anchor="middle" font-size="24" font-weight="600" fill="#273A4D"><tspan x="95" y="664.619995">安全</tspan><tspan x="95" y="694.380005">管控</tspan></text>
+<rect x="1545" y="155" width="120" height="1295" rx="2" fill="#F1F1F1" stroke="#98A2AA" stroke-width="1.2"/>
+<text id="t-3" x="1605" y="664.619995" text-anchor="middle" font-size="24" font-weight="600" fill="#273A4D"><tspan x="1605" y="664.619995">运行</tspan><tspan x="1605" y="694.380005">保障</tspan></text>
+<rect x="190" y="155" width="1310" height="180" rx="2" fill="#FAE6D8" stroke="#B9A79B" stroke-width="1.2"/>
+<text id="t-4" x="845" y="189.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">业务应用</text>
+<rect x="350" y="220" width="271" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-5" x="485.5" y="267" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">情景模拟</text>
+<rect x="633" y="220" width="271" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-6" x="768.5" y="267" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">资源调配</text>
+<rect x="916" y="220" width="271" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-7" x="1051.5" y="267" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">事件预演</text>
+<rect x="1199" y="220" width="271" height="76" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-8" x="1334.5" y="267" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">应急预案</text>
+<rect x="190" y="380" width="1310" height="825" rx="2" fill="#E4F0F7" stroke="#A5B8C4" stroke-width="1.2"/>
+<text id="t-9" x="845" y="422.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">数字孪生范围</text>
+<rect x="255" y="480" width="1180" height="520" rx="2" fill="#fff" stroke="#8D9CA5" stroke-width="1.2"/>
+<text id="t-10" x="845" y="515.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">协同融合引擎</text>
+<rect x="290" y="570" width="540" height="190" rx="2" fill="#FFF3CE" stroke="#C5B88B" stroke-width="1.2"/>
+<text id="t-11" x="560" y="605.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">模型能力</text>
+<rect x="310" y="650" width="158.66666666666666" height="70" rx="2" fill="#FFFAE8" stroke="#C5B88B" stroke-width="1.2"/>
+<text id="t-12" x="389.3333333333333" y="693.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">专业模型</text>
+<rect x="480.66666666666663" y="650" width="158.66666666666666" height="70" rx="2" fill="#FFFAE8" stroke="#C5B88B" stroke-width="1.2"/>
+<text id="t-13" x="560" y="693.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">推演模型</text>
+<rect x="651.3333333333333" y="650" width="158.66666666666666" height="70" rx="2" fill="#FFFAE8" stroke="#C5B88B" stroke-width="1.2"/>
+<text id="t-14" x="730.6666666666666" y="693.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">校准模型</text>
+<rect x="860" y="570" width="540" height="190" rx="2" fill="#E6F0D7" stroke="#ADB894" stroke-width="1.2"/>
+<text id="t-15" x="1130" y="605.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">知识能力</text>
+<rect x="880" y="650" width="158.66666666666666" height="70" rx="2" fill="#F5FAEF" stroke="#ADB894" stroke-width="1.2"/>
+<text id="t-16" x="959.3333333333334" y="693.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">调度方案</text>
+<rect x="1050.6666666666667" y="650" width="158.66666666666666" height="70" rx="2" fill="#F5FAEF" stroke="#ADB894" stroke-width="1.2"/>
+<text id="t-17" x="1130" y="693.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">历史情景</text>
+<rect x="1221.3333333333333" y="650" width="158.66666666666666" height="70" rx="2" fill="#F5FAEF" stroke="#ADB894" stroke-width="1.2"/>
+<text id="t-18" x="1300.6666666666665" y="693.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">规则知识</text>
+<rect x="290" y="800" width="1110" height="145" rx="2" fill="#E5E7E9" stroke="#A9ADB1" stroke-width="1.2"/>
+<text id="t-19" x="845" y="834.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">共享数据底板</text>
+<rect x="310" y="860" width="204.4" height="62" rx="2" fill="#F5F6F7" stroke="#B8BDC3" stroke-width="1.2"/>
+<text id="t-20" x="412.2" y="900" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">基础数据</text>
+<rect x="526.4" y="860" width="204.4" height="62" rx="2" fill="#F5F6F7" stroke="#B8BDC3" stroke-width="1.2"/>
+<text id="t-21" x="628.6" y="900" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">监测数据</text>
+<rect x="742.8" y="860" width="204.4" height="62" rx="2" fill="#F5F6F7" stroke="#B8BDC3" stroke-width="1.2"/>
+<text id="t-22" x="845" y="900" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">管理数据</text>
+<rect x="959.2" y="860" width="204.4" height="62" rx="2" fill="#F5F6F7" stroke="#B8BDC3" stroke-width="1.2"/>
+<text id="t-23" x="1061.4" y="900" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">共享数据</text>
+<rect x="1175.6" y="860" width="204.4" height="62" rx="2" fill="#F5F6F7" stroke="#B8BDC3" stroke-width="1.2"/>
+<text id="t-24" x="1277.8" y="900" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">空间数据</text>
+<rect x="255" y="1040" width="1180" height="130" rx="2" fill="#fff" stroke="#9BAAB4" stroke-width="1.2"/>
+<text id="t-25" x="845" y="1074.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">信息支撑</text>
+<rect x="280" y="1095" width="273.5" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-26" x="416.75" y="1135" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">监测感知</text>
+<rect x="565.5" y="1095" width="273.5" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-27" x="702.25" y="1135" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">通信网络</text>
+<rect x="851" y="1095" width="273.5" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-28" x="987.75" y="1135" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">工程控制</text>
+<rect x="1136.5" y="1095" width="273.5" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-29" x="1273.25" y="1135" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">计算环境</text>
+<rect x="190" y="1250" width="1310" height="200" rx="2" fill="#CADBED" stroke="#9EB4CB" stroke-width="1.2"/>
+<text id="t-30" x="845" y="1285.5" text-anchor="middle" font-size="25" font-weight="600" fill="#6486A6">物理对象范围</text>
+<rect x="350" y="1340" width="271" height="78" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-31" x="485.5" y="1388" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">调蓄工程</text>
+<rect x="633" y="1340" width="271" height="78" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-32" x="768.5" y="1388" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">河道对象</text>
+<rect x="916" y="1340" width="271" height="78" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-33" x="1051.5" y="1388" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">活动区域</text>
+<rect x="1199" y="1340" width="271" height="78" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-34" x="1334.5" y="1388" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">影响区域</text>
+<path d="M810,685 L845,685 L880,685" fill="none" stroke="#7D8B94" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1379,720 L1420,720 L1420,965 L270,965 L270,685 L310,685" fill="none" stroke="#7D8B94" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#arrow)"/></g></svg>

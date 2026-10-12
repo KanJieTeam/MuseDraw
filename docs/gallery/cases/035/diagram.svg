@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1880" height="1300" viewBox="0 0 1880 1300" role="img" aria-labelledby="title desc"><title id="title">批量文件任务执行与状态回传</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":35,"referenceId":"CQ-0022","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1545,72]},{"id":"t-2","box":[768,209,304,57]},{"id":"t-3","box":[768,419,304,52]},{"id":"t-4","box":[76,595,428,48]},{"id":"t-5","box":[108,738,364,57]},{"id":"t-6","box":[606,595,678,48]},{"id":"t-7","box":[633,754,190.66666666666666,87]},{"id":"t-8","box":[849.6666666666666,754,190.66666666666666,87]},{"id":"t-9","box":[1066.3333333333333,754,190.66666666666666,87]},{"id":"t-10","box":[630,885,305,58]},{"id":"t-11","box":[955,885,305,58]},{"id":"t-12","box":[1453,644,344,67]},{"id":"t-13","box":[1453,879,344,67]},{"id":"t-14","box":[1453,1134,344,57]},{"id":"t-15","box":[703,1134,374,57]},{"id":"t-16","box":[83,1134,374,57]},{"id":"t-17","box":[846,297,148,42]},{"id":"t-18","box":[345,399,156,42]},{"id":"t-19","box":[1294,681,132,44]},{"id":"t-20","box":[944,996,142,44]}],"nodes":[{"id":"user","label":"操作客户端","box":[765,155,310,115],"parent":null},{"id":"api","label":"任务接口","box":[765,365,310,110],"parent":null},{"id":"pending","label":"待处理队列","box":[105,684,370,115],"parent":"queue"},{"id":"pool-1","label":"解析实例","box":[630,700,196.66666666666666,145],"parent":"pool"},{"id":"pool-2","label":"转换实例","box":[846.6666666666666,700,196.66666666666666,145],"parent":"pool"},{"id":"pool-3","label":"校验实例","box":[1063.3333333333333,700,196.66666666666666,145],"parent":"pool"},{"id":"pool-4","label":"分派控制","box":[630,885,305,58],"parent":"pool"},{"id":"pool-5","label":"执行记录","box":[955,885,305,58],"parent":"pool"},{"id":"state","label":"任务状态库","box":[1450,590,350,125],"parent":null},{"id":"files","label":"结果文件","box":[1450,825,350,125],"parent":null},{"id":"notify","label":"状态通知","box":[1450,1080,350,115],"parent":null},{"id":"monitor","label":"执行观测","box":[700,1080,380,115],"parent":null},{"id":"config","label":"执行参数","box":[80,1080,380,115],"parent":null}],"groups":[{"id":"queue","title":"任务缓冲","box":[70,590,440,250],"headH":58},{"id":"pool","title":"文件执行单元","box":[600,590,690,380],"headH":58}],"paths":[{"from":"user","to":"api","points":[[920,270],[920,365]],"label":"提交文件","labelBox":[846,297,148,42]},{"from":"api","to":"pending","points":[[765,420],[85,420],[85,742],[105,742]],"label":"登记任务","labelBox":[345,399,156,42]},{"from":"pending","to":"pool-4","points":[[475,740],[550,740],[550,914],[630,914]],"label":"","labelBox":null},{"from":"pool-4","to":"pool-1","points":[[730,885],[730,845]],"label":"","labelBox":null},{"from":"pool-3","to":"state","points":[[1260,760],[1360,760],[1360,652],[1450,652]],"label":"更新状态","labelBox":[1294,681,132,44]},{"from":"pool-3","to":"files","points":[[1260,810],[1400,810],[1400,887],[1450,887]],"label":"","labelBox":null},{"from":"state","to":"notify","points":[[1800,652],[1830,652],[1830,1137],[1800,1137]],"label":"","labelBox":null},{"from":"pool-5","to":"monitor","points":[[1120,943],[1120,1018],[890,1018],[890,1080]],"label":"运行记录","labelBox":[944,996,142,44]},{"from":"config","to":"pool-4","points":[[460,1137],[535,1137],[535,982],[685,982],[685,943]],"label":"","labelBox":null}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1880" height="1300" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#2C3540">批量文件任务执行与状态回传</text>
+<g transform="translate(1612 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#A25F2D"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L1846,112" fill="none" stroke="#A25F2D" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="765" y="155" width="310" height="115" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(902 169) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="9" r="7"/><path d="M7,36v-8c0-13 26-13 26,0v8Z"/></g>
+<text id="t-2" x="920" y="246.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">操作客户端</text>
+<rect x="765" y="365" width="310" height="110" rx="2" fill="#FFFFFF" stroke="#A25F2D" stroke-width="1.2"/>
+<g transform="translate(902 379) scale(0.9)" fill="none" stroke="#A25F2D" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-3" x="920" y="454" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">任务接口</text>
+<rect x="70" y="590" width="440" height="250" rx="2" fill="#FFFFFF" stroke="#9A8394" stroke-width="1.2"/>
+<text id="t-4" x="290" y="629.5" text-anchor="middle" font-size="26" font-weight="600" fill="#765B70">任务缓冲</text>
+<rect x="105" y="684" width="370" height="115" rx="2" fill="#FFFFFF" stroke="#9A8394" stroke-width="1.2"/>
+<g transform="translate(272 698) scale(0.9)" fill="none" stroke="#765B70" stroke-width="2" stroke-linejoin="round"><rect x="1" y="4" width="38" height="32" rx="2"/><path d="M9,13h22 M9,21h22 M9,29h22"/></g>
+<text id="t-5" x="290" y="775.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">待处理队列</text>
+<rect x="600" y="590" width="690" height="380" rx="2" fill="#FFFFFF" stroke="#9A9EA3" stroke-width="1.2"/>
+<text id="t-6" x="945" y="630" text-anchor="middle" font-size="27" font-weight="600" fill="#2C3540">文件执行单元</text>
+<rect x="630" y="700" width="196.66666666666666" height="145" rx="2" fill="#A25F2D" stroke="#A25F2D" stroke-width="1.2"/>
+<g transform="translate(710.3333333333334 714) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-7" x="728.3333333333334" y="807" text-anchor="middle" font-size="24" font-weight="400" fill="#FFFFFF">解析实例</text>
+<rect x="846.6666666666666" y="700" width="196.66666666666666" height="145" rx="2" fill="#A25F2D" stroke="#A25F2D" stroke-width="1.2"/>
+<g transform="translate(927 714) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-8" x="945" y="807" text-anchor="middle" font-size="24" font-weight="400" fill="#FFFFFF">转换实例</text>
+<rect x="1063.3333333333333" y="700" width="196.66666666666666" height="145" rx="2" fill="#A25F2D" stroke="#A25F2D" stroke-width="1.2"/>
+<g transform="translate(1143.6666666666665 714) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-9" x="1161.6666666666665" y="807" text-anchor="middle" font-size="24" font-weight="400" fill="#FFFFFF">校验实例</text>
+<rect x="630" y="885" width="305" height="58" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-10" x="782.5" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">分派控制</text>
+<rect x="955" y="885" width="305" height="58" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-11" x="1107.5" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">执行记录</text>
+<rect x="1450" y="590" width="350" height="125" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(1607 604) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><ellipse cx="20" cy="7" rx="18" ry="6"/><path d="M2,7v27c0,8 36,8 36,0V7 M2,20c0,8 36,8 36,0"/></g>
+<text id="t-12" x="1625" y="686.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">任务状态库</text>
+<rect x="1450" y="825" width="350" height="125" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(1607 839) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><path d="M8,1h17l8,9v29H8Z M25,1v10h8 M13,20h15 M13,27h15 M13,34h10"/></g>
+<text id="t-13" x="1625" y="921.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">结果文件</text>
+<rect x="1450" y="1080" width="350" height="115" rx="2" fill="#FFFFFF" stroke="#9A8394" stroke-width="1.2"/>
+<g transform="translate(1607 1094) scale(0.9)" fill="none" stroke="#765B70" stroke-width="2" stroke-linejoin="round"><rect x="1" y="4" width="38" height="32" rx="2"/><path d="M9,13h22 M9,21h22 M9,29h22"/></g>
+<text id="t-14" x="1625" y="1171.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">状态通知</text>
+<rect x="700" y="1080" width="380" height="115" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(872 1094) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><rect x="1" y="1" width="38" height="27" rx="2"/><path d="M20,28v10 M9,39h22"/></g>
+<text id="t-15" x="890" y="1171.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">执行观测</text>
+<rect x="80" y="1080" width="380" height="115" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(252 1094) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><path d="M8,1h17l8,9v29H8Z M25,1v10h8 M13,20h15 M13,27h15 M13,34h10"/></g>
+<text id="t-16" x="270" y="1171.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">执行参数</text>
+<path d="M920,270 L920,365" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="846" y="297" width="148" height="42" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-17" x="920" y="326" text-anchor="middle" font-size="20" font-weight="400" fill="#A25F2D">提交文件</text>
+<path d="M765,420 L85,420 L85,742 L105,742" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="345" y="399" width="156" height="42" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-18" x="423" y="428" text-anchor="middle" font-size="20" font-weight="400" fill="#A25F2D">登记任务</text>
+<path d="M475,740 L550,740 L550,914 L630,914" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M730,885 L730,845" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1260,760 L1360,760 L1360,652 L1450,652" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1294" y="681" width="132" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-19" x="1360" y="711" text-anchor="middle" font-size="20" font-weight="400" fill="#A25F2D">更新状态</text>
+<path d="M1260,810 L1400,810 L1400,887 L1450,887" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1800,652 L1830,652 L1830,1137 L1800,1137" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1120,943 L1120,1018 L890,1018 L890,1080" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="944" y="996" width="142" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-20" x="1015" y="1026" text-anchor="middle" font-size="20" font-weight="400" fill="#A25F2D">运行记录</text>
+<path d="M460,1137 L535,1137 L535,982 L685,982 L685,943" fill="none" stroke="#A25F2D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/></g></svg>

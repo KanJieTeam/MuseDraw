@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="MuseDraw" compressed="false" version="1">
+  <diagram id="musedraw-82" name="客户授信服务能力架构">
+    <mxGraphModel dx="0" dy="0" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1480" math="0" shadow="0" background="#fff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t-1" value="客户授信服务能力架构" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=36;fontColor=#42372C;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=12;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="1" connectable="0" musedrawRole="text">
+          <mxGeometry x="34" y="20" width="1465" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-1" value="" style="shape=stencil(nVPtEoIgEHwa/jIEovbb6j1QKRlJHDSttw/CqSSzdJhhbu92WT4OQJKmYDUHGPWA7ADGG4TMbHDhYdbUPGtdsmNasFRyV2larUrei7wdNKIquBatrZI9IEnKsvKk1aXKHa6ZZdrorDrrfXW6wenmOQN8cGwpqq/seS5GMKB2LNDQsUEQwjiis4poCx8mS1yep1zF/nVH0ztapwoQDDFdcmVxBOmKZ/nDaFr4ea5Mqoa/J0zw6j4D/NY8Ks1HWEjp+ttbxSealPtJZH8H);fillColor=#182235;strokeColor=none;strokeWidth=1;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="1" connectable="0" musedrawRole="vector">
+          <mxGeometry x="1532" y="39" width="44" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-2" value="" style="shape=stencil(nVLtDoMgDHwa/hoGfv5223ugsklkYoDp9vaD1Dgl25IZEtK73rUNBdHStGzgiOAJ0SMi5ICxux1uA8zMwGsL5Mi0YJXkkDFWq45PorGzR/Qt18L6LD0hWlas7q5a3fsG8MC80kc3NfreD/AlRYQLf6DuE9i5PyJn8EjRrzzLfLvUC/6i/zzRPleMo5QkP43b4fIs+kcep1GehYZaKsPXhAvez+9AuJuL0nyDhZSw4KBKKHQUfCV6egE=);fillColor=#866633;strokeColor=none;strokeWidth=1;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="1" connectable="0" musedrawRole="vector">
+          <mxGeometry x="1554" y="39" width="22" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="text-3" value="MuseDraw" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Arial;fontSize=30;fontColor=#182235;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="1" connectable="0" musedrawRole="text">
+          <mxGeometry x="1589" y="41.7" width="146.4" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="s-entry" value="" style="shape=rectangle;fillColor=#F8F5EC;strokeColor=#CCBDA3;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="55" y="150" width="1360" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="t-2" value="访问入口" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=12;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-entry" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1348" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-entry-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-entry" connectable="1" musedrawRole="node">
+          <mxGeometry x="207" y="68" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-3" value="客户门户" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-entry-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-entry-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-entry" connectable="1" musedrawRole="node">
+          <mxGeometry x="491.5" y="68" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-4" value="服务工作台" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-entry-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-entry-3" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-entry" connectable="1" musedrawRole="node">
+          <mxGeometry x="776" y="68" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-5" value="移动客户端" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-entry-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-entry-4" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-entry" connectable="1" musedrawRole="node">
+          <mxGeometry x="1060.5" y="68" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-6" value="合作接口" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-entry-4" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="272.5" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-front" value="" style="shape=rectangle;fillColor=#F8F5EC;strokeColor=#CCBDA3;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="55" y="316" width="1670" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="t-7" value="接入服务" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=12;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-front" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1658" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-front-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-front" connectable="1" musedrawRole="node">
+          <mxGeometry x="255" y="67" width="683" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-8" value="接口验证" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-front-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="683" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-front-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-front" connectable="1" musedrawRole="node">
+          <mxGeometry x="950" y="67" width="683" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-9" value="请求转换" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-front-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="683" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-core" value="" style="shape=rectangle;fillColor=#F8F5EC;strokeColor=#CCBDA3;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="55" y="471" width="1360" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="t-10" value="授信业务核心" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=12;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-core" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1348" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-account" value="" style="shape=rectangle;fillColor=#FFF;strokeColor=#CBB990;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-core" connectable="1" musedrawRole="group">
+          <mxGeometry x="178" y="79" width="340" height="143" as="geometry" />
+        </mxCell>
+        <mxCell id="t-11" value="客户账户" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-account" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="328" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-account-a" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-account" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="72" width="296" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-12" value="账户登记" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-account-a" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="296" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-trade" value="" style="shape=rectangle;fillColor=#FFF;strokeColor=#CBB990;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-core" connectable="1" musedrawRole="group">
+          <mxGeometry x="539" y="79" width="795" height="143" as="geometry" />
+        </mxCell>
+        <mxCell id="t-13" value="业务处理" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-trade" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="783" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-trade-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-trade" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="72" width="242.333333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-14" value="授信申请" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-trade-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="242.333333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-trade-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-trade" connectable="1" musedrawRole="node">
+          <mxGeometry x="276.333333" y="72" width="242.333333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-15" value="交易登记" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-trade-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="242.333333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-trade-3" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-trade" connectable="1" musedrawRole="node">
+          <mxGeometry x="530.666667" y="72" width="242.333333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-16" value="结果回执" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-trade-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="242.333333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service" value="" style="shape=rectangle;fillColor=#FFF;strokeColor=#CBB990;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-core" connectable="1" musedrawRole="group">
+          <mxGeometry x="178" y="243" width="1156" height="217" as="geometry" />
+        </mxCell>
+        <mxCell id="t-17" value="业务服务" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1144" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-service" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="72" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-18" value="资料归集" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-service" connectable="1" musedrawRole="node">
+          <mxGeometry x="396.666667" y="72" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-19" value="身份核对" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service-3" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-service" connectable="1" musedrawRole="node">
+          <mxGeometry x="771.333333" y="72" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-20" value="额度查询" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service-4" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-service" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="142" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-21" value="合同登记" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service-4" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service-5" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-service" connectable="1" musedrawRole="node">
+          <mxGeometry x="396.666667" y="142" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-22" value="账单查询" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service-5" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-service-6" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-service" connectable="1" musedrawRole="node">
+          <mxGeometry x="771.333333" y="142" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-23" value="还款登记" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-service-6" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule" value="" style="shape=rectangle;fillColor=#FFF;strokeColor=#CBB990;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-core" connectable="1" musedrawRole="group">
+          <mxGeometry x="178" y="481" width="1156" height="217" as="geometry" />
+        </mxCell>
+        <mxCell id="t-24" value="规则模型" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1144" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="72" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-25" value="额度规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="303" y="72" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-26" value="授权规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-3" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="584" y="72" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-27" value="费用规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-4" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="865" y="72" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-28" value="账单规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-4" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-5" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="142" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-29" value="期限规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-5" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-6" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="303" y="142" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-30" value="利率规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-6" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-7" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="584" y="142" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-31" value="优惠规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-7" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-rule-8" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-rule" connectable="1" musedrawRole="node">
+          <mxGeometry x="865" y="142" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-32" value="异常规则" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-rule-8" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="269" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation" value="" style="shape=rectangle;fillColor=#FFF;strokeColor=#CBB990;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-core" connectable="1" musedrawRole="group">
+          <mxGeometry x="178" y="719" width="1156" height="197" as="geometry" />
+        </mxCell>
+        <mxCell id="t-33" value="核心基础" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1144" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-foundation" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="69" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-34" value="客户信息" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-foundation" connectable="1" musedrawRole="node">
+          <mxGeometry x="396.666667" y="69" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-35" value="账务记录" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation-3" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-foundation" connectable="1" musedrawRole="node">
+          <mxGeometry x="771.333333" y="69" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-36" value="交易路由" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation-4" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-foundation" connectable="1" musedrawRole="node">
+          <mxGeometry x="22" y="139" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-37" value="参数配置" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation-4" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation-5" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-foundation" connectable="1" musedrawRole="node">
+          <mxGeometry x="396.666667" y="139" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-38" value="状态登记" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation-5" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-foundation-6" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-foundation" connectable="1" musedrawRole="node">
+          <mxGeometry x="771.333333" y="139" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-39" value="审计查询" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-foundation-6" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="362.666667" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-partner" value="" style="shape=rectangle;fillColor=#F8F5EC;strokeColor=#CCBDA3;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="1436" y="150" width="289" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="t-40" value="协同系统" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-partner" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="277" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-partner-api" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-partner" connectable="1" musedrawRole="node">
+          <mxGeometry x="20" y="69" width="249" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t-41" value="业务接口" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-partner-api" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="249" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="s-systems" value="" style="shape=rectangle;fillColor=#F8F5EC;strokeColor=#CCBDA3;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="1436" y="471" width="289" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="t-42" value="外部系统" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#866633;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-systems" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="277" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-systems-1" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-systems" connectable="1" musedrawRole="node">
+          <mxGeometry x="20" y="194" width="249" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="t-43" value="身份服务" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-systems-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="249" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="s-systems-2" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-systems" connectable="1" musedrawRole="node">
+          <mxGeometry x="20" y="428" width="249" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="t-44" value="合同服务" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-systems-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="249" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="s-systems-3" value="" style="shape=rectangle;fillColor=#F2DEC0;strokeColor=#C6AE89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-systems" connectable="1" musedrawRole="node">
+          <mxGeometry x="20" y="662" width="249" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="t-45" value="记账服务" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#42372C;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-systems-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="249" height="118" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

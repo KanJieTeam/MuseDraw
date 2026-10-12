@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2320" height="1330" viewBox="0 0 2320 1330" role="img" aria-labelledby="title desc"><title id="title">本地渲染作业与外部执行区协作</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":42,"referenceId":"CQ-0023","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1985,72]},{"id":"t-2","box":[46,210,573,48]},{"id":"t-3","box":[158,359,344,62]},{"id":"t-4","box":[158,569,344,62]},{"id":"t-5","box":[93,864,214,62]},{"id":"t-6","box":[358,864,214,62]},{"id":"t-7","box":[158,1079,344,62]},{"id":"t-8","box":[681,380,258,48]},{"id":"t-9","box":[703,536,214,57]},{"id":"t-10","box":[703,697,214,57]},{"id":"t-11","box":[703,858,214,57]},{"id":"t-12","box":[1001,210,1268,48]},{"id":"t-13","box":[1046,305,1178,48]},{"id":"t-14","box":[1086,407,508,48]},{"id":"t-15","box":[1651,407,528,48]},{"id":"t-16","box":[1116,500,1028,48]},{"id":"t-17","box":[1135,582,484,86]},{"id":"t-18","box":[1641,582,484,86]},{"id":"t-19","box":[1135,690,484,86]},{"id":"t-20","box":[1641,690,484,86]},{"id":"t-21","box":[1123,946,434,67]},{"id":"t-22","box":[1688,946,454,67]},{"id":"t-23","box":[529,553,145,44]},{"id":"t-24","box":[704,598,149,44]},{"id":"t-25","box":[726,758,149,44]}],"nodes":[{"id":"users","label":"作业人员","box":[155,305,350,120],"parent":"local"},{"id":"scheduler","label":"作业调度","box":[155,515,350,120],"parent":"local"},{"id":"input","label":"输入文件区","box":[90,810,220,120],"parent":"local"},{"id":"output","label":"结果文件区","box":[355,810,220,120],"parent":"local"},{"id":"local-worker","label":"本地执行器","box":[155,1025,350,120],"parent":"local"},{"id":"connect-1","label":"加密连接","box":[700,482,220,115],"parent":"connect"},{"id":"connect-2","label":"专用链路","box":[700,643,220,115],"parent":"connect"},{"id":"connect-3","label":"连接观测","box":[700,804,220,115],"parent":"connect"},{"id":"files-1","label":"输入挂载甲","box":[1135,582,484,86],"parent":"files"},{"id":"files-2","label":"输入挂载乙","box":[1641,582,484,86],"parent":"files"},{"id":"files-3","label":"结果挂载甲","box":[1135,690,484,86],"parent":"files"},{"id":"files-4","label":"结果挂载乙","box":[1641,690,484,86],"parent":"files"},{"id":"worker-a","label":"任务执行甲","box":[1120,892,440,125],"parent":"za"},{"id":"worker-b","label":"任务执行乙","box":[1685,892,460,125],"parent":"zb"}],"groups":[{"id":"local","title":"本地作业区","box":[40,205,585,1005],"headH":58},{"id":"connect","title":"连接通道","box":[675,375,270,600],"headH":58},{"id":"offsite","title":"外部执行区","box":[995,205,1280,1005],"headH":58},{"id":"network-scope","title":"内部连接范围","box":[1040,300,1190,855],"headH":58},{"id":"za","title":"执行域甲","box":[1080,402,520,695],"headH":58},{"id":"zb","title":"执行域乙","box":[1645,402,540,695],"headH":58},{"id":"files","title":"共享文件范围","box":[1110,495,1040,325],"headH":58}],"paths":[{"from":"users","to":"scheduler","points":[[330,425],[330,515]],"label":"","labelBox":null},{"from":"scheduler","to":"connect-1","points":[[505,575],[700,575]],"label":"投递作业","labelBox":[529,553,145,44]},{"from":"connect-1","to":"worker-a","points":[[920,550],[1014,550],[1014,920],[1120,920]],"label":"","labelBox":null},{"from":"input","to":"files-1","points":[[200,810],[200,740],[650,740],[650,620],[1135,620]],"label":"分发输入","labelBox":[704,598,149,44]},{"from":"files-3","to":"output","points":[[1135,733],[981,733],[981,780],[465,780],[465,810]],"label":"回收结果","labelBox":[726,758,149,44]},{"from":"worker-a","to":"files-3","points":[[1340,892],[1340,776]],"label":"","labelBox":null},{"from":"worker-b","to":"files-4","points":[[1915,892],[1915,776]],"label":"","labelBox":null},{"from":"scheduler","to":"local-worker","points":[[155,575],[60,575],[60,1085],[155,1085]],"label":"","labelBox":null}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2320" height="1330" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#2C3540">本地渲染作业与外部执行区协作</text>
+<g transform="translate(2052 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#627383"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L2286,112" fill="none" stroke="#627383" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="40" y="205" width="585" height="1005" rx="2" fill="#F5F5F5" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-2" x="332.5" y="245.5" text-anchor="middle" font-size="29" font-weight="600" fill="#2C3540">本地作业区</text>
+<rect x="155" y="305" width="350" height="120" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(312 319) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="9" r="7"/><path d="M7,36v-8c0-13 26-13 26,0v8Z"/></g>
+<text id="t-3" x="330" y="399" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">作业人员</text>
+<rect x="155" y="515" width="350" height="120" rx="2" fill="#95683C" stroke="#95683C" stroke-width="1.2"/>
+<g transform="translate(312 529) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-4" x="330" y="609" text-anchor="middle" font-size="23" font-weight="400" fill="#FFFFFF">作业调度</text>
+<rect x="90" y="810" width="220" height="120" rx="2" fill="#FFFFFF" stroke="#8C9E80" stroke-width="1.2"/>
+<g transform="translate(182 824) scale(0.9)" fill="none" stroke="#5E7954" stroke-width="2" stroke-linejoin="round"><ellipse cx="20" cy="7" rx="18" ry="6"/><path d="M2,7v27c0,8 36,8 36,0V7 M2,20c0,8 36,8 36,0"/></g>
+<text id="t-5" x="200" y="904" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">输入文件区</text>
+<rect x="355" y="810" width="220" height="120" rx="2" fill="#FFFFFF" stroke="#8C9E80" stroke-width="1.2"/>
+<g transform="translate(447 824) scale(0.9)" fill="none" stroke="#5E7954" stroke-width="2" stroke-linejoin="round"><ellipse cx="20" cy="7" rx="18" ry="6"/><path d="M2,7v27c0,8 36,8 36,0V7 M2,20c0,8 36,8 36,0"/></g>
+<text id="t-6" x="465" y="904" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">结果文件区</text>
+<rect x="155" y="1025" width="350" height="120" rx="2" fill="#95683C" stroke="#95683C" stroke-width="1.2"/>
+<g transform="translate(312 1039) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-7" x="330" y="1119" text-anchor="middle" font-size="23" font-weight="400" fill="#FFFFFF">本地执行器</text>
+<rect x="675" y="375" width="270" height="600" rx="2" fill="#FFFFFF" stroke="#9C90A5" stroke-width="1.2"/>
+<text id="t-8" x="810" y="414.5" text-anchor="middle" font-size="26" font-weight="600" fill="#74627F">连接通道</text>
+<rect x="700" y="482" width="220" height="115" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(792 496) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><rect x="14" y="1" width="12" height="11"/><rect x="1" y="28" width="12" height="11"/><rect x="27" y="28" width="12" height="11"/><path d="M20,12v8 H7v8 M20,20h13v8"/></g>
+<text id="t-9" x="810" y="573.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">加密连接</text>
+<rect x="700" y="643" width="220" height="115" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(792 657) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><rect x="14" y="1" width="12" height="11"/><rect x="1" y="28" width="12" height="11"/><rect x="27" y="28" width="12" height="11"/><path d="M20,12v8 H7v8 M20,20h13v8"/></g>
+<text id="t-10" x="810" y="734.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">专用链路</text>
+<rect x="700" y="804" width="220" height="115" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<g transform="translate(792 818) scale(0.9)" fill="none" stroke="#647789" stroke-width="2" stroke-linejoin="round"><rect x="14" y="1" width="12" height="11"/><rect x="1" y="28" width="12" height="11"/><rect x="27" y="28" width="12" height="11"/><path d="M20,12v8 H7v8 M20,20h13v8"/></g>
+<text id="t-11" x="810" y="895.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2C3540">连接观测</text>
+<rect x="995" y="205" width="1280" height="1005" rx="2" fill="#FFFFFF" stroke="#9CAE9E" stroke-width="1.2"/>
+<text id="t-12" x="1635" y="245.5" text-anchor="middle" font-size="29" font-weight="600" fill="#556B58">外部执行区</text>
+<rect x="1040" y="300" width="1190" height="855" rx="2" fill="#FFFFFF" stroke="#8EAA93" stroke-width="1.2"/>
+<text id="t-13" x="1635" y="338.5" text-anchor="middle" font-size="25" font-weight="600" fill="#556B58">内部连接范围</text>
+<rect x="1080" y="402" width="520" height="695" rx="2" fill="#FFFFFF" stroke="#94A9BC" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-14" x="1340" y="440.5" text-anchor="middle" font-size="25" font-weight="600" fill="#526F88">执行域甲</text>
+<rect x="1645" y="402" width="540" height="695" rx="2" fill="#FFFFFF" stroke="#94A9BC" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-15" x="1915" y="440.5" text-anchor="middle" font-size="25" font-weight="600" fill="#526F88">执行域乙</text>
+<rect x="1110" y="495" width="1040" height="325" rx="2" fill="#FFFFFF" stroke="#96AB89" stroke-width="1.2"/>
+<text id="t-16" x="1630" y="534.5" text-anchor="middle" font-size="26" font-weight="600" fill="#556F4B">共享文件范围</text>
+<rect x="1135" y="582" width="484" height="86" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-17" x="1377" y="634.5" text-anchor="middle" font-size="24" font-weight="400" fill="#2C3540">输入挂载甲</text>
+<rect x="1641" y="582" width="484" height="86" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-18" x="1883" y="634.5" text-anchor="middle" font-size="24" font-weight="400" fill="#2C3540">输入挂载乙</text>
+<rect x="1135" y="690" width="484" height="86" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-19" x="1377" y="742.5" text-anchor="middle" font-size="24" font-weight="400" fill="#2C3540">结果挂载甲</text>
+<rect x="1641" y="690" width="484" height="86" rx="2" fill="#FFFFFF" stroke="#A9B4BF" stroke-width="1.2"/>
+<text id="t-20" x="1883" y="742.5" text-anchor="middle" font-size="24" font-weight="400" fill="#2C3540">结果挂载乙</text>
+<rect x="1120" y="892" width="440" height="125" rx="2" fill="#95683C" stroke="#95683C" stroke-width="1.2"/>
+<g transform="translate(1322 906) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-21" x="1340" y="988.5" text-anchor="middle" font-size="23" font-weight="400" fill="#FFFFFF">任务执行甲</text>
+<rect x="1685" y="892" width="460" height="125" rx="2" fill="#95683C" stroke="#95683C" stroke-width="1.2"/>
+<g transform="translate(1897 906) scale(0.9)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-22" x="1915" y="988.5" text-anchor="middle" font-size="23" font-weight="400" fill="#FFFFFF">任务执行乙</text>
+<path d="M330,425 L330,515" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M505,575 L700,575" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="529" y="553" width="145" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-23" x="601.5" y="583" text-anchor="middle" font-size="20" font-weight="400" fill="#627383">投递作业</text>
+<path d="M920,550 L1014,550 L1014,920 L1120,920" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M200,810 L200,740 L650,740 L650,620 L1135,620" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="704" y="598" width="149" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-24" x="778.5" y="628" text-anchor="middle" font-size="20" font-weight="400" fill="#627383">分发输入</text>
+<path d="M1135,733 L981,733 L981,780 L465,780 L465,810" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="726" y="758" width="149" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-25" x="800.5" y="788" text-anchor="middle" font-size="20" font-weight="400" fill="#627383">回收结果</text>
+<path d="M1340,892 L1340,776" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1915,892 L1915,776" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M155,575 L60,575 L60,1085 L155,1085" fill="none" stroke="#627383" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/></g></svg>

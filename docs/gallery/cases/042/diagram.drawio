@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="MuseDraw" compressed="false" version="1">
+  <diagram id="musedraw-42" name="本地渲染作业与外部执行区协作">
+    <mxGraphModel dx="0" dy="0" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2320" pageHeight="1330" math="0" shadow="0" background="#fff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t-1" value="本地渲染作业与外部执行区协作" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=36;fontColor=#2C3540;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=12;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="1" connectable="0" musedrawRole="text">
+          <mxGeometry x="34" y="20" width="1985" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-1" value="" style="shape=stencil(nVPtEoIgEHwa/jIEovbb6j1QKRlJHDSttw/CqSSzdJhhbu92WT4OQJKmYDUHGPWA7ADGG4TMbHDhYdbUPGtdsmNasFRyV2larUrei7wdNKIquBatrZI9IEnKsvKk1aXKHa6ZZdrorDrrfXW6wenmOQN8cGwpqq/seS5GMKB2LNDQsUEQwjiis4poCx8mS1yep1zF/nVH0ztapwoQDDFdcmVxBOmKZ/nDaFr4ea5Mqoa/J0zw6j4D/NY8Ks1HWEjp+ttbxSealPtJZH8H);fillColor=#182235;strokeColor=none;strokeWidth=1;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="1" connectable="0" musedrawRole="vector">
+          <mxGeometry x="2052" y="39" width="44" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-2" value="" style="shape=stencil(nVLtDoMgDHwa/hoGfv5223ugsklkYoDp9vaD1Dgl25IZEtK73rUNBdHStGzgiOAJ0SMi5ICxux1uA8zMwGsL5Mi0YJXkkDFWq45PorGzR/Qt18L6LD0hWlas7q5a3fsG8MC80kc3NfreD/AlRYQLf6DuE9i5PyJn8EjRrzzLfLvUC/6i/zzRPleMo5QkP43b4fIs+kcep1GehYZaKsPXhAvez+9AuJuL0nyDhZSw4KBKKHQUfCV6egE=);fillColor=#627383;strokeColor=none;strokeWidth=1;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="1" connectable="0" musedrawRole="vector">
+          <mxGeometry x="2074" y="39" width="22" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="text-3" value="MuseDraw" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Arial;fontSize=30;fontColor=#182235;fontStyle=1;align=left;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="1" connectable="0" musedrawRole="text">
+          <mxGeometry x="2109" y="41.7" width="146.4" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="line-4" value="" edge="1" parent="1" musedrawRole="line" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.5;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=none;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="34" y="112" as="sourcePoint" />
+            <mxPoint x="2286" y="112" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s-local" value="" style="shape=rectangle;fillColor=#F5F5F5;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="40" y="205" width="585" height="1005" as="geometry" />
+        </mxCell>
+        <mxCell id="t-2" value="本地作业区" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=29;fontColor=#2C3540;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-local" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="573" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-users" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-local" connectable="1" musedrawRole="node">
+          <mxGeometry x="115" y="100" width="350" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="circle-5" value="" style="shape=ellipse;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-users" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="168.7" y="15.8" width="12.6" height="12.6" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-6" value="" style="shape=stencil(fVHLDoMgEPwarg1CY9Oztf+BSCuRigF8/X0ha2LZxF7Izs4MA7uEV74ToyKMLoQ/CGMFpfGMuENY+FHJAM1ZOC0ao4DxwdleLboNu0cPnXI6JJbXhFeNkP3b2WloAY8iKVP1sXPKXsG3J20ombAnqI0eTtVlcbnT661kyCMnBxFF7srhylDmxnKeY57/j82fetjOviaN9eq3EYtjTBHgGb6sUxnWxsAi0C1YGFuwcl5/AQ==);fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-users" connectable="0" musedrawRole="vector">
+          <mxGeometry x="163.3" y="27.5" width="23.4" height="18.9" as="geometry" />
+        </mxCell>
+        <mxCell id="t-3" value="作业人员" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-users" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="344" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="s-scheduler" value="" style="shape=rectangle;fillColor=#95683C;strokeColor=#95683C;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-local" connectable="1" musedrawRole="node">
+          <mxGeometry x="115" y="310" width="350" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-7" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-scheduler" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="158.8" y="15.8" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-8" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-scheduler" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="158.8" y="34.7" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-9" value="" style="shape=stencil(lVJRDoMgDD0N/wz0BM7dA5UNIgMCTLfbD1LjBiZGf0hf+/r6oCDaeMEsRwTPiF4RIReM4xmxKDDzlvcBkhNzknWKQ8UHZ0Y+yyEsPVIL7mRIVdoi2nSsHx/OvPQA2LLETNHTTGn2G/qWSZ8MIXIDrpL6j1vvcvd01xsdUt6yc+2qPmF6FTtku6pP+S7Ft/wY/J4+gnIvd+N4hqVSsNxCpSTGFHwj2n4B);fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-scheduler" connectable="0" musedrawRole="vector">
+          <mxGeometry x="166" y="22.1" width="18" height="18.9" as="geometry" />
+        </mxCell>
+        <mxCell id="t-4" value="作业调度" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#FFFFFF;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-scheduler" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="344" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="s-input" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#8C9E80;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-local" connectable="1" musedrawRole="node">
+          <mxGeometry x="50" y="605" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ellipse-10" value="" style="shape=ellipse;fillColor=none;strokeColor=#5E7954;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-input" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="93.8" y="14.9" width="32.4" height="10.8" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-11" value="" style="shape=stencil(nVLLDoMgEPwaro2wrfZu7X+g0kqkahBff18IJoZN1aQXwiwzDMMugbSveCcIiyYCD8IYjSK7WlwhzPtOFMYXR64lz5XwJ73RbS0mWZpVI5tKaGncKWQE0pwX9Vu3Q1N63HHHdLtPOzrv2etWpyVAhD09V8lml5skF3pl91uCNMWgvQENVRSFmxkqLLgwA2bAsXX43E32O9zRR8B/4eKzbPFZtD1ju9laaAHu76vVIsBSKT8k6BZMtCU/jpB9AQ==);fillColor=none;strokeColor=#5E7954;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-input" connectable="0" musedrawRole="vector">
+          <mxGeometry x="93.8" y="20.3" width="32.4" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="t-5" value="输入文件区" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-input" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="214" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="s-output" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#8C9E80;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-local" connectable="1" musedrawRole="node">
+          <mxGeometry x="315" y="605" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ellipse-12" value="" style="shape=ellipse;fillColor=none;strokeColor=#5E7954;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-output" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="93.8" y="14.9" width="32.4" height="10.8" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-13" value="" style="shape=stencil(nVLLDoMgEPwaro2wrfZu7X+g0kqkahBff18IJoZN1aQXwiwzDMMugbSveCcIiyYCD8IYjSK7WlwhzPtOFMYXR64lz5XwJ73RbS0mWZpVI5tKaGncKWQE0pwX9Vu3Q1N63HHHdLtPOzrv2etWpyVAhD09V8lml5skF3pl91uCNMWgvQENVRSFmxkqLLgwA2bAsXX43E32O9zRR8B/4eKzbPFZtD1ju9laaAHu76vVIsBSKT8k6BZMtCU/jpB9AQ==);fillColor=none;strokeColor=#5E7954;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-output" connectable="0" musedrawRole="vector">
+          <mxGeometry x="93.8" y="20.3" width="32.4" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="t-6" value="结果文件区" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-output" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="214" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="s-local-worker" value="" style="shape=rectangle;fillColor=#95683C;strokeColor=#95683C;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-local" connectable="1" musedrawRole="node">
+          <mxGeometry x="115" y="820" width="350" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-14" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-local-worker" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="158.8" y="15.8" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-15" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-local-worker" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="158.8" y="34.7" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-16" value="" style="shape=stencil(lVJRDoMgDD0N/wz0BM7dA5UNIgMCTLfbD1LjBiZGf0hf+/r6oCDaeMEsRwTPiF4RIReM4xmxKDDzlvcBkhNzknWKQ8UHZ0Y+yyEsPVIL7mRIVdoi2nSsHx/OvPQA2LLETNHTTGn2G/qWSZ8MIXIDrpL6j1vvcvd01xsdUt6yc+2qPmF6FTtku6pP+S7Ft/wY/J4+gnIvd+N4hqVSsNxCpSTGFHwj2n4B);fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-local-worker" connectable="0" musedrawRole="vector">
+          <mxGeometry x="166" y="22.1" width="18" height="18.9" as="geometry" />
+        </mxCell>
+        <mxCell id="t-7" value="本地执行器" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#FFFFFF;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-local-worker" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="344" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="s-connect" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#9C90A5;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="675" y="375" width="270" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="t-8" value="连接通道" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#74627F;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-connect" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="258" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-connect-1" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-connect" connectable="1" musedrawRole="node">
+          <mxGeometry x="25" y="107" width="220" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-17" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-1" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="104.6" y="14.9" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-18" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-1" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="92.9" y="39.2" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-19" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-1" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="116.3" y="39.2" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-20" value="" style="shape=stencil(pZJtDsIgDIZPw3+E7ARz3qPbUMgQCMNt3l5ICUaMM9E/pG/79CMthLezBCcIoyvhR8LYgdL4Ri0rDbMTQ0DnAl5BrwVG5uDtJFY1hpyjjBRehRTlHeFtD8N08fZmRtQOEpmsq11S7w3zmtzqjjIrwk4Ia2U+w80+/QdcNlDo3am/1C7VfsPfh4nGc59R1Ms+Wy9etNIaL1ZVqcHowr/Buwc=);fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-1" connectable="0" musedrawRole="vector">
+          <mxGeometry x="98.3" y="24.8" width="23.4" height="14.4" as="geometry" />
+        </mxCell>
+        <mxCell id="t-9" value="加密连接" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-connect-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="214" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="s-connect-2" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-connect" connectable="1" musedrawRole="node">
+          <mxGeometry x="25" y="268" width="220" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-21" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-2" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="104.6" y="14.9" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-22" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-2" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="92.9" y="39.2" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-23" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-2" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="116.3" y="39.2" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-24" value="" style="shape=stencil(pZJtDsIgDIZPw3+E7ARz3qPbUMgQCMNt3l5ICUaMM9E/pG/79CMthLezBCcIoyvhR8LYgdL4Ri0rDbMTQ0DnAl5BrwVG5uDtJFY1hpyjjBRehRTlHeFtD8N08fZmRtQOEpmsq11S7w3zmtzqjjIrwk4Ia2U+w80+/QdcNlDo3am/1C7VfsPfh4nGc59R1Ms+Wy9etNIaL1ZVqcHowr/Buwc=);fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-2" connectable="0" musedrawRole="vector">
+          <mxGeometry x="98.3" y="24.8" width="23.4" height="14.4" as="geometry" />
+        </mxCell>
+        <mxCell id="t-10" value="专用链路" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-connect-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="214" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="s-connect-3" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-connect" connectable="1" musedrawRole="node">
+          <mxGeometry x="25" y="429" width="220" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-25" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-3" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="104.6" y="14.9" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-26" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-3" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="92.9" y="39.2" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-27" value="" style="shape=rectangle;fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-3" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="116.3" y="39.2" width="10.8" height="9.9" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-28" value="" style="shape=stencil(pZJtDsIgDIZPw3+E7ARz3qPbUMgQCMNt3l5ICUaMM9E/pG/79CMthLezBCcIoyvhR8LYgdL4Ri0rDbMTQ0DnAl5BrwVG5uDtJFY1hpyjjBRehRTlHeFtD8N08fZmRtQOEpmsq11S7w3zmtzqjjIrwk4Ia2U+w80+/QdcNlDo3am/1C7VfsPfh4nGc59R1Ms+Wy9etNIaL1ZVqcHowr/Buwc=);fillColor=none;strokeColor=#647789;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-connect-3" connectable="0" musedrawRole="vector">
+          <mxGeometry x="98.3" y="24.8" width="23.4" height="14.4" as="geometry" />
+        </mxCell>
+        <mxCell id="t-11" value="连接观测" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-connect-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="214" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="s-offsite" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#9CAE9E;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1" connectable="1" musedrawRole="group">
+          <mxGeometry x="995" y="205" width="1280" height="1005" as="geometry" />
+        </mxCell>
+        <mxCell id="t-12" value="外部执行区" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=29;fontColor=#556B58;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-offsite" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1268" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-network-scope" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#8EAA93;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-offsite" connectable="1" musedrawRole="group">
+          <mxGeometry x="45" y="95" width="1190" height="855" as="geometry" />
+        </mxCell>
+        <mxCell id="t-13" value="内部连接范围" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=25;fontColor=#556B58;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-network-scope" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1178" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-za" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#94A9BC;strokeWidth=1.2;dashed=1;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-network-scope" connectable="1" musedrawRole="group">
+          <mxGeometry x="40" y="102" width="520" height="695" as="geometry" />
+        </mxCell>
+        <mxCell id="t-14" value="执行域甲" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=25;fontColor=#526F88;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-za" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="508" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-zb" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#94A9BC;strokeWidth=1.2;dashed=1;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-network-scope" connectable="1" musedrawRole="group">
+          <mxGeometry x="605" y="102" width="540" height="695" as="geometry" />
+        </mxCell>
+        <mxCell id="t-15" value="执行域乙" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=25;fontColor=#526F88;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-zb" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="528" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-files" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#96AB89;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-network-scope" connectable="1" musedrawRole="group">
+          <mxGeometry x="70" y="195" width="1040" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="t-16" value="共享文件范围" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=26;fontColor=#556F4B;fontStyle=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-files" connectable="0" musedrawRole="text">
+          <mxGeometry x="6" y="5" width="1028" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s-files-1" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-files" connectable="1" musedrawRole="node">
+          <mxGeometry x="25" y="87" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="t-17" value="输入挂载甲" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=24;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-files-1" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="s-files-2" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-files" connectable="1" musedrawRole="node">
+          <mxGeometry x="531" y="87" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="t-18" value="输入挂载乙" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=24;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-files-2" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="s-files-3" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-files" connectable="1" musedrawRole="node">
+          <mxGeometry x="25" y="195" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="t-19" value="结果挂载甲" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=24;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-files-3" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="s-files-4" value="" style="shape=rectangle;fillColor=#FFFFFF;strokeColor=#A9B4BF;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-files" connectable="1" musedrawRole="node">
+          <mxGeometry x="531" y="195" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="t-20" value="结果挂载乙" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=24;fontColor=#2C3540;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-files-4" connectable="0" musedrawRole="text">
+          <mxGeometry x="0" y="0" width="484" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="s-worker-a" value="" style="shape=rectangle;fillColor=#95683C;strokeColor=#95683C;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-za" connectable="1" musedrawRole="node">
+          <mxGeometry x="40" y="490" width="440" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-29" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-worker-a" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="203.8" y="15.8" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-30" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-worker-a" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="203.8" y="34.7" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-31" value="" style="shape=stencil(lVJRDoMgDD0N/wz0BM7dA5UNIgMCTLfbD1LjBiZGf0hf+/r6oCDaeMEsRwTPiF4RIReM4xmxKDDzlvcBkhNzknWKQ8UHZ0Y+yyEsPVIL7mRIVdoi2nSsHx/OvPQA2LLETNHTTGn2G/qWSZ8MIXIDrpL6j1vvcvd01xsdUt6yc+2qPmF6FTtku6pP+S7Ft/wY/J4+gnIvd+N4hqVSsNxCpSTGFHwj2n4B);fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-worker-a" connectable="0" musedrawRole="vector">
+          <mxGeometry x="211" y="22.1" width="18" height="18.9" as="geometry" />
+        </mxCell>
+        <mxCell id="t-21" value="任务执行甲" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#FFFFFF;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-worker-a" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="434" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="s-worker-b" value="" style="shape=rectangle;fillColor=#95683C;strokeColor=#95683C;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="s-zb" connectable="1" musedrawRole="node">
+          <mxGeometry x="40" y="490" width="460" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-32" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-worker-b" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="213.8" y="15.8" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rect-33" value="" style="shape=rectangle;fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=3.6;" vertex="1" parent="s-worker-b" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="213.8" y="34.7" width="32.4" height="13.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vector-34" value="" style="shape=stencil(lVJRDoMgDD0N/wz0BM7dA5UNIgMCTLfbD1LjBiZGf0hf+/r6oCDaeMEsRwTPiF4RIReM4xmxKDDzlvcBkhNzknWKQ8UHZ0Y+yyEsPVIL7mRIVdoi2nSsHx/OvPQA2LLETNHTTGn2G/qWSZ8MIXIDrpL6j1vvcvd01xsdUt6yc+2qPmF6FTtku6pP+S7Ft/wY/J4+gnIvd+N4hqVSsNxCpSTGFHwj2n4B);fillColor=none;strokeColor=#FFFFFF;strokeWidth=2;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;" vertex="1" parent="s-worker-b" connectable="0" musedrawRole="vector">
+          <mxGeometry x="221" y="22.1" width="18" height="18.9" as="geometry" />
+        </mxCell>
+        <mxCell id="t-22" value="任务执行乙" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=23;fontColor=#FFFFFF;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-worker-b" connectable="0" musedrawRole="text">
+          <mxGeometry x="3" y="54" width="454" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="e-1" value="" edge="1" parent="s-local" musedrawRole="relation" source="s-users" target="s-scheduler" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="220" as="sourcePoint" />
+            <mxPoint x="290" y="310" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-2" value="" edge="1" parent="1" musedrawRole="relation" source="s-scheduler" target="s-connect-1" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.808696;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="575" as="sourcePoint" />
+            <mxPoint x="700" y="575" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rect-35" value="" style="shape=rectangle;fillColor=#fff;strokeColor=#fff;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;" vertex="1" parent="1" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="529" y="553" width="145" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="t-23" value="投递作业" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#627383;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="1" connectable="0" musedrawRole="text">
+          <mxGeometry x="529" y="553" width="145" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="e-3" value="" edge="1" parent="1" musedrawRole="relation" source="s-connect-1" target="s-worker-a" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.591304;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.224;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="550" as="sourcePoint" />
+            <mxPoint x="1120" y="920" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1014" y="550" />
+              <mxPoint x="1014" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-4" value="" edge="1" parent="1" musedrawRole="relation" source="s-input" target="s-files-1" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.44186;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="810" as="sourcePoint" />
+            <mxPoint x="1135" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="740" />
+              <mxPoint x="650" y="740" />
+              <mxPoint x="650" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rect-36" value="" style="shape=rectangle;fillColor=#fff;strokeColor=#fff;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;" vertex="1" parent="s-connect" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="29" y="223" width="149" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="t-24" value="分发输入" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#627383;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-connect" connectable="0" musedrawRole="text">
+          <mxGeometry x="29" y="223" width="149" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="e-5" value="" edge="1" parent="1" musedrawRole="relation" source="s-files-3" target="s-output" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1135" y="733" as="sourcePoint" />
+            <mxPoint x="465" y="810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="981" y="733" />
+              <mxPoint x="981" y="780" />
+              <mxPoint x="465" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rect-37" value="" style="shape=rectangle;fillColor=#fff;strokeColor=#fff;strokeWidth=1.2;dashed=0;dashPattern=7 5;rounded=1;shadow=0;glass=0;html=0;whiteSpace=wrap;absoluteArcSize=1;arcSize=4;" vertex="1" parent="s-connect" connectable="0" musedrawRole="primitive">
+          <mxGeometry x="51" y="383" width="149" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="t-25" value="回收结果" style="shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=Microsoft YaHei;fontSize=20;fontColor=#627383;fontStyle=0;align=center;verticalAlign=middle;spacing=0;spacingLeft=0;overflow=visible;autosize=0;editable=1;resizable=1;movable=1;" vertex="1" parent="s-connect" connectable="0" musedrawRole="text">
+          <mxGeometry x="51" y="383" width="149" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="e-6" value="" edge="1" parent="s-network-scope" musedrawRole="relation" source="s-worker-a" target="s-files-3" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.423554;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="592" as="sourcePoint" />
+            <mxPoint x="300" y="476" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-7" value="" edge="1" parent="s-network-scope" musedrawRole="relation" source="s-worker-b" target="s-files-4" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.566116;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="875" y="592" as="sourcePoint" />
+            <mxPoint x="875" y="476" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-8" value="" edge="1" parent="s-local" musedrawRole="relation" source="s-scheduler" target="s-local-worker" style="shape=connector;fillColor=none;strokeColor=#627383;strokeWidth=1.6;dashed=0;dashPattern=7 5;rounded=0;shadow=0;glass=0;html=0;whiteSpace=wrap;endArrow=block;endFill=1;endSize=7;startArrow=none;edgeStyle=none;noEdgeStyle=1;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115" y="370" as="sourcePoint" />
+            <mxPoint x="115" y="880" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="20" y="370" />
+              <mxPoint x="20" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

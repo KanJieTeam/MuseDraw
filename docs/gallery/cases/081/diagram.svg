@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1300" viewBox="0 0 2000 1300" role="img" aria-labelledby="title desc"><title id="title">企业知识服务能力图</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":81,"referenceId":"EQ-1242","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1665,72]},{"id":"t-2","box":[56,155,1888,95]},{"id":"t-3","box":[56,285,289,48]},{"id":"t-4","box":[66,352,269,58]},{"id":"t-5","box":[66,428,269,58]},{"id":"t-6","box":[66,504,269,58]},{"id":"t-7","box":[375,285,289,48]},{"id":"t-8","box":[385,352,269,58]},{"id":"t-9","box":[385,428,269,58]},{"id":"t-10","box":[385,504,269,58]},{"id":"t-11","box":[694,285,289,48]},{"id":"t-12","box":[704,352,269,58]},{"id":"t-13","box":[704,428,269,58]},{"id":"t-14","box":[704,504,269,58]},{"id":"t-15","box":[1013,285,289,48]},{"id":"t-16","box":[1023,352,269,58]},{"id":"t-17","box":[1023,428,269,58]},{"id":"t-18","box":[1023,504,269,58]},{"id":"t-19","box":[1332,285,289,48]},{"id":"t-20","box":[1342,352,269,58]},{"id":"t-21","box":[1342,428,269,58]},{"id":"t-22","box":[1342,504,269,58]},{"id":"t-23","box":[1651,285,289,48]},{"id":"t-24","box":[1661,352,269,58]},{"id":"t-25","box":[1661,428,269,58]},{"id":"t-26","box":[1661,504,269,58]},{"id":"t-27","box":[56,630,1888,48]},{"id":"t-28","box":[310,698,310.4,58]},{"id":"t-29","box":[632.4,698,310.4,58]},{"id":"t-30","box":[954.8,698,310.4,58]},{"id":"t-31","box":[1277.1999999999998,698,310.4,58]},{"id":"t-32","box":[1599.6,698,310.4,58]},{"id":"t-33","box":[56,802,1358,48]},{"id":"t-34","box":[72,885,246,58]},{"id":"t-35","box":[72,971,246,58]},{"id":"t-36","box":[342,885,246,58]},{"id":"t-37","box":[342,971,246,58]},{"id":"t-38","box":[612,885,246,58]},{"id":"t-39","box":[612,971,246,58]},{"id":"t-40","box":[882,885,246,58]},{"id":"t-41","box":[882,971,246,58]},{"id":"t-42","box":[1152,885,246,58]},{"id":"t-43","box":[1152,971,246,58]},{"id":"t-44","box":[1451,802,493,48]},{"id":"t-45","box":[1464,885,219.5,58]},{"id":"t-46","box":[1711.5,885,219.5,58]},{"id":"t-47","box":[1464,971,219.5,58]},{"id":"t-48","box":[1711.5,971,219.5,58]}],"nodes":[{"id":"pillar-0-1","label":"来源登记","box":[66,352,269,58],"parent":"pillar-0"},{"id":"pillar-0-2","label":"知识编目","box":[66,428,269,58],"parent":"pillar-0"},{"id":"pillar-0-3","label":"标签管理","box":[66,504,269,58],"parent":"pillar-0"},{"id":"pillar-1-1","label":"内容发布","box":[385,352,269,58],"parent":"pillar-1"},{"id":"pillar-1-2","label":"权限共享","box":[385,428,269,58],"parent":"pillar-1"},{"id":"pillar-1-3","label":"订阅通知","box":[385,504,269,58],"parent":"pillar-1"},{"id":"pillar-2-1","label":"案例收集","box":[704,352,269,58],"parent":"pillar-2"},{"id":"pillar-2-2","label":"经验归档","box":[704,428,269,58],"parent":"pillar-2"},{"id":"pillar-2-3","label":"专题整理","box":[704,504,269,58],"parent":"pillar-2"},{"id":"pillar-3-1","label":"条件检索","box":[1023,352,269,58],"parent":"pillar-3"},{"id":"pillar-3-2","label":"片段定位","box":[1023,428,269,58],"parent":"pillar-3"},{"id":"pillar-3-3","label":"结果排序","box":[1023,504,269,58],"parent":"pillar-3"},{"id":"pillar-4-1","label":"课程组织","box":[1342,352,269,58],"parent":"pillar-4"},{"id":"pillar-4-2","label":"学习记录","box":[1342,428,269,58],"parent":"pillar-4"},{"id":"pillar-4-3","label":"内容推荐","box":[1342,504,269,58],"parent":"pillar-4"},{"id":"pillar-5-1","label":"内容复核","box":[1661,352,269,58],"parent":"pillar-5"},{"id":"pillar-5-2","label":"使用统计","box":[1661,428,269,58],"parent":"pillar-5"},{"id":"pillar-5-3","label":"问题反馈","box":[1661,504,269,58],"parent":"pillar-5"},{"id":"knowledge-1","label":"制度知识","box":[310,698,310.4,58],"parent":"knowledge"},{"id":"knowledge-2","label":"产品知识","box":[632.4,698,310.4,58],"parent":"knowledge"},{"id":"knowledge-3","label":"业务知识","box":[954.8,698,310.4,58],"parent":"knowledge"},{"id":"knowledge-4","label":"项目知识","box":[1277.1999999999998,698,310.4,58],"parent":"knowledge"},{"id":"knowledge-5","label":"问答知识","box":[1599.6,698,310.4,58],"parent":"knowledge"},{"id":"sys-0-1","label":"内容工作台","box":[72,885,246,58],"parent":"system"},{"id":"sys-0-2","label":"知识编目","box":[72,971,246,58],"parent":"system"},{"id":"sys-1-1","label":"知识门户","box":[342,885,246,58],"parent":"system"},{"id":"sys-1-2","label":"内容订阅","box":[342,971,246,58],"parent":"system"},{"id":"sys-2-1","label":"检索中心","box":[612,885,246,58],"parent":"system"},{"id":"sys-2-2","label":"问答检索","box":[612,971,246,58],"parent":"system"},{"id":"sys-3-1","label":"学习管理","box":[882,885,246,58],"parent":"system"},{"id":"sys-3-2","label":"学习记录","box":[882,971,246,58],"parent":"system"},{"id":"sys-4-1","label":"案例库","box":[1152,885,246,58],"parent":"system"},{"id":"sys-4-2","label":"专题服务","box":[1152,971,246,58],"parent":"system"},{"id":"manage-1","label":"权限管理","box":[1464,885,219.5,58],"parent":"manage"},{"id":"manage-2","label":"流程配置","box":[1711.5,885,219.5,58],"parent":"manage"},{"id":"manage-3","label":"使用分析","box":[1464,971,219.5,58],"parent":"manage"},{"id":"manage-4","label":"质量复核","box":[1711.5,971,219.5,58],"parent":"manage"}],"groups":[{"id":"goal","title":"知识服务目标","box":[50,150,1900,105],"headH":105},{"id":"pillar-0","title":"知识整理","box":[50,280,301,318],"headH":58},{"id":"pillar-1","title":"内容共享","box":[369,280,301,318],"headH":58},{"id":"pillar-2","title":"经验沉淀","box":[688,280,301,318],"headH":58},{"id":"pillar-3","title":"检索服务","box":[1007,280,301,318],"headH":58},{"id":"pillar-4","title":"学习支持","box":[1326,280,301,318],"headH":58},{"id":"pillar-5","title":"知识评估","box":[1645,280,301,318],"headH":58},{"id":"knowledge","title":"共享知识层","box":[50,625,1900,144],"headH":58},{"id":"system","title":"知识服务系统","box":[50,797,1370,422],"headH":58},{"id":"manage","title":"管理系统","box":[1445,797,505,422],"headH":58}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2000" height="1300" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#26394A">企业知识服务能力图</text>
+<g transform="translate(1732 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#354FA8"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<rect x="50" y="150" width="1900" height="105" rx="2" fill="#3D55AA" stroke="#3D55AA" stroke-width="1.2"/>
+<rect x="50" y="150" width="1900" height="105" rx="2" fill="#3D55AA" stroke="#3D55AA" stroke-width="1.2"/>
+<text id="t-2" x="1000" y="213" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">知识服务目标</text>
+<rect x="50" y="280" width="301" height="318" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="50" y="280" width="301" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-3" x="200.5" y="319.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">知识整理</text>
+<rect x="66" y="352" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-4" x="200.5" y="390" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">来源登记</text>
+<rect x="66" y="428" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-5" x="200.5" y="466" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">知识编目</text>
+<rect x="66" y="504" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-6" x="200.5" y="542" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">标签管理</text>
+<rect x="369" y="280" width="301" height="318" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="369" y="280" width="301" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-7" x="519.5" y="319.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">内容共享</text>
+<rect x="385" y="352" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-8" x="519.5" y="390" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">内容发布</text>
+<rect x="385" y="428" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-9" x="519.5" y="466" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">权限共享</text>
+<rect x="385" y="504" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-10" x="519.5" y="542" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">订阅通知</text>
+<rect x="688" y="280" width="301" height="318" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="688" y="280" width="301" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-11" x="838.5" y="319.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">经验沉淀</text>
+<rect x="704" y="352" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-12" x="838.5" y="390" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">案例收集</text>
+<rect x="704" y="428" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-13" x="838.5" y="466" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">经验归档</text>
+<rect x="704" y="504" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-14" x="838.5" y="542" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">专题整理</text>
+<rect x="1007" y="280" width="301" height="318" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="1007" y="280" width="301" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-15" x="1157.5" y="319.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">检索服务</text>
+<rect x="1023" y="352" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-16" x="1157.5" y="390" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">条件检索</text>
+<rect x="1023" y="428" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-17" x="1157.5" y="466" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">片段定位</text>
+<rect x="1023" y="504" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-18" x="1157.5" y="542" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">结果排序</text>
+<rect x="1326" y="280" width="301" height="318" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="1326" y="280" width="301" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-19" x="1476.5" y="319.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">学习支持</text>
+<rect x="1342" y="352" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-20" x="1476.5" y="390" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">课程组织</text>
+<rect x="1342" y="428" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-21" x="1476.5" y="466" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">学习记录</text>
+<rect x="1342" y="504" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-22" x="1476.5" y="542" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">内容推荐</text>
+<rect x="1645" y="280" width="301" height="318" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="1645" y="280" width="301" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-23" x="1795.5" y="319.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">知识评估</text>
+<rect x="1661" y="352" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-24" x="1795.5" y="390" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">内容复核</text>
+<rect x="1661" y="428" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-25" x="1795.5" y="466" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">使用统计</text>
+<rect x="1661" y="504" width="269" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-26" x="1795.5" y="542" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">问题反馈</text>
+<rect x="50" y="625" width="1900" height="144" rx="2" fill="#BBD5F1" stroke="#8CB3E0" stroke-width="1.2"/>
+<text id="t-27" x="68" y="664.5" text-anchor="start" font-size="26" font-weight="600" fill="#354FA8">共享知识层</text>
+<rect x="310" y="698" width="310.4" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-28" x="465.2" y="736" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">制度知识</text>
+<rect x="632.4" y="698" width="310.4" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-29" x="787.5999999999999" y="736" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">产品知识</text>
+<rect x="954.8" y="698" width="310.4" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-30" x="1110" y="736" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">业务知识</text>
+<rect x="1277.1999999999998" y="698" width="310.4" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-31" x="1432.3999999999999" y="736" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">项目知识</text>
+<rect x="1599.6" y="698" width="310.4" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-32" x="1754.8" y="736" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">问答知识</text>
+<rect x="50" y="797" width="1370" height="422" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="50" y="797" width="1370" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-33" x="735" y="836.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">知识服务系统</text>
+<rect x="72" y="885" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-34" x="195" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">内容工作台</text>
+<rect x="72" y="971" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-35" x="195" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">知识编目</text>
+<rect x="342" y="885" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-36" x="465" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">知识门户</text>
+<rect x="342" y="971" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-37" x="465" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">内容订阅</text>
+<rect x="612" y="885" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-38" x="735" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">检索中心</text>
+<rect x="612" y="971" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-39" x="735" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">问答检索</text>
+<rect x="882" y="885" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-40" x="1005" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">学习管理</text>
+<rect x="882" y="971" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-41" x="1005" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">学习记录</text>
+<rect x="1152" y="885" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-42" x="1275" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">案例库</text>
+<rect x="1152" y="971" width="246" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-43" x="1275" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">专题服务</text>
+<rect x="1445" y="797" width="505" height="422" rx="2" fill="#F8FAFD" stroke="#A8B6D4" stroke-width="1.2"/>
+<rect x="1445" y="797" width="505" height="58" rx="2" fill="#405BAD" stroke="#405BAD" stroke-width="1.2"/>
+<text id="t-44" x="1697.5" y="836.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">管理系统</text>
+<rect x="1464" y="885" width="219.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-45" x="1573.75" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">权限管理</text>
+<rect x="1711.5" y="885" width="219.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-46" x="1821.25" y="923" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">流程配置</text>
+<rect x="1464" y="971" width="219.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-47" x="1573.75" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">使用分析</text>
+<rect x="1711.5" y="971" width="219.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-48" x="1821.25" y="1009" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">质量复核</text></g></svg>

@@ -5,7 +5,7 @@
   <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
 </picture>
 
-<h3>科研绘图助手</h3>
+<h3>专业绘图助手</h3>
 
 <p>把专业配图的设计方法，带进你的 AI 工作流。</p>
 
@@ -16,6 +16,7 @@
 
 <p>
   <a href="#快速开始">快速开始</a> ·
+  <a href="https://kanjieteam.github.io/MuseDraw/">图集</a> ·
   <a href="docs/usage.zh-CN.md">使用指南</a> ·
   <a href="#参与共建">参与共建</a> ·
   <a href="README.en.md">English</a>
@@ -25,7 +26,7 @@
 
 ---
 
-MuseDraw 是面向科研工作者的开源绘图 Skill。将构图、配色、排版和图片制作流程交给你熟悉的 AI 智能体，在原有对话中完成绘图与修改。
+MuseDraw 是一个开源专业绘图 Skill。将构图、配色、排版和图片制作流程带入你熟悉的 AI 智能体，用于技术方案、产品表达与科研配图，在原有对话中完成绘图与修改。
 
 ## 快速开始
 
@@ -49,6 +50,8 @@ npx skills add KanJieTeam/MuseDraw
 
 交付 **PNG 图片与 SVG 源文件**。可以继续通过对话调整内容、构图和视觉风格；只改样式时，保留已确认的信息与关系。
 
+[浏览 100 张原创架构图](https://kanjieteam.github.io/MuseDraw/)：放大查看、复制提示词，下载 PNG、SVG 或可逐个编辑的 drawio 文件。
+
 当前可安装的技能为 [`musedraw`](skills/musedraw/SKILL.md)。科研方法、实验流程、算法示意与 Python/R 数据绘图是后续方向，尚未作为技能发布。
 
 ## 设计方法
@@ -59,7 +62,7 @@ npx skills add KanJieTeam/MuseDraw
 
 ## 参与共建
 
-欢迎科研工作者、设计师与开发者参与。可以改进设计规则、完善制作工具，或贡献一个从输入到图片交付的科研绘图工作流。
+欢迎工程师、科研工作者、产品人员、设计师与开发者参与。可以改进设计规则、完善制作工具，或贡献一个从输入到图片交付的专业绘图工作流。
 
 [阅读贡献指南](CONTRIBUTING.zh-CN.md) · [提出问题与建议](https://github.com/KanJieTeam/MuseDraw/issues)
 

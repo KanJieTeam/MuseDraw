@@ -1,0 +1,831 @@
+{
+  "id": 16,
+  "number": "016",
+  "title": "双环境业务与安全部署",
+  "family": "双域对称安全部署拓扑",
+  "theme": "海军蓝冰蓝与草绿",
+  "view": "deployment",
+  "width": 1960,
+  "height": 1260,
+  "thumbnail": "cases/016/preview.png",
+  "svg": "cases/016/diagram.svg",
+  "png": "cases/016/diagram.png",
+  "drawio": "cases/016/diagram.drawio",
+  "prompt": "用 MuseDraw 画“双环境业务与安全部署”。采用双域对称安全部署拓扑，海军蓝冰蓝与草绿。分区：安全管理域、生产资源域、网络与安全、业务资源、持久存储、测试资源域、网络与安全、业务资源、持久存储。模块：策略中心、身份管理、审计中心、威胁监测、风险分析、密钥服务、网络入口、安全代理、边界策略、访问审计、业务实例、任务实例、配置服务、运行监控、关系存储、对象存储、备份服务、归档记录、网络入口、安全代理、边界策略、访问审计、业务实例、任务实例、配置服务、运行监控、关系存储、对象存储、备份服务、归档记录。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "geometry": {
+    "number": 16,
+    "referenceId": "EQ-0187",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1625,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          566,
+          159,
+          828,
+          48
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          576,
+          228,
+          261.3333333333333,
+          64
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          849.3333333333333,
+          228,
+          261.3333333333333,
+          64
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          1122.6666666666665,
+          228,
+          261.3333333333333,
+          64
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          576,
+          304,
+          261.3333333333333,
+          64
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          849.3333333333333,
+          304,
+          261.3333333333333,
+          64
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          1122.6666666666665,
+          304,
+          261.3333333333333,
+          64
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          46,
+          445,
+          888,
+          48
+        ]
+      },
+      {
+        "id": "t-10",
+        "box": [
+          70,
+          535,
+          840,
+          48
+        ]
+      },
+      {
+        "id": "t-11",
+        "box": [
+          80,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-12",
+        "box": [
+          288,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-13",
+        "box": [
+          496,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-14",
+        "box": [
+          704,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-15",
+        "box": [
+          70,
+          753,
+          840,
+          48
+        ]
+      },
+      {
+        "id": "t-16",
+        "box": [
+          80,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-17",
+        "box": [
+          288,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-18",
+        "box": [
+          496,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-19",
+        "box": [
+          704,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-20",
+        "box": [
+          70,
+          953,
+          840,
+          38
+        ]
+      },
+      {
+        "id": "t-21",
+        "box": [
+          80,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-22",
+        "box": [
+          288,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-23",
+        "box": [
+          496,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-24",
+        "box": [
+          704,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-25",
+        "box": [
+          1026,
+          445,
+          888,
+          48
+        ]
+      },
+      {
+        "id": "t-26",
+        "box": [
+          1050,
+          535,
+          840,
+          48
+        ]
+      },
+      {
+        "id": "t-27",
+        "box": [
+          1060,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-28",
+        "box": [
+          1268,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-29",
+        "box": [
+          1476,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-30",
+        "box": [
+          1684,
+          604,
+          196,
+          102
+        ]
+      },
+      {
+        "id": "t-31",
+        "box": [
+          1050,
+          753,
+          840,
+          48
+        ]
+      },
+      {
+        "id": "t-32",
+        "box": [
+          1060,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-33",
+        "box": [
+          1268,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-34",
+        "box": [
+          1476,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-35",
+        "box": [
+          1684,
+          822,
+          196,
+          84
+        ]
+      },
+      {
+        "id": "t-36",
+        "box": [
+          1050,
+          953,
+          840,
+          38
+        ]
+      },
+      {
+        "id": "t-37",
+        "box": [
+          1060,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-38",
+        "box": [
+          1268,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-39",
+        "box": [
+          1476,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-40",
+        "box": [
+          1684,
+          1012,
+          196,
+          80
+        ]
+      },
+      {
+        "id": "t-41",
+        "box": [
+          630,
+          386,
+          700,
+          50
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "security-1",
+        "label": "策略中心",
+        "box": [
+          576,
+          228,
+          261.3333333333333,
+          64
+        ],
+        "parent": "security"
+      },
+      {
+        "id": "security-2",
+        "label": "身份管理",
+        "box": [
+          849.3333333333333,
+          228,
+          261.3333333333333,
+          64
+        ],
+        "parent": "security"
+      },
+      {
+        "id": "security-3",
+        "label": "审计中心",
+        "box": [
+          1122.6666666666665,
+          228,
+          261.3333333333333,
+          64
+        ],
+        "parent": "security"
+      },
+      {
+        "id": "security-4",
+        "label": "威胁监测",
+        "box": [
+          576,
+          304,
+          261.3333333333333,
+          64
+        ],
+        "parent": "security"
+      },
+      {
+        "id": "security-5",
+        "label": "风险分析",
+        "box": [
+          849.3333333333333,
+          304,
+          261.3333333333333,
+          64
+        ],
+        "parent": "security"
+      },
+      {
+        "id": "security-6",
+        "label": "密钥服务",
+        "box": [
+          1122.6666666666665,
+          304,
+          261.3333333333333,
+          64
+        ],
+        "parent": "security"
+      },
+      {
+        "id": "production-network-1",
+        "label": "网络入口",
+        "box": [
+          80,
+          604,
+          196,
+          102
+        ],
+        "parent": "production-network"
+      },
+      {
+        "id": "production-network-2",
+        "label": "安全代理",
+        "box": [
+          288,
+          604,
+          196,
+          102
+        ],
+        "parent": "production-network"
+      },
+      {
+        "id": "production-network-3",
+        "label": "边界策略",
+        "box": [
+          496,
+          604,
+          196,
+          102
+        ],
+        "parent": "production-network"
+      },
+      {
+        "id": "production-network-4",
+        "label": "访问审计",
+        "box": [
+          704,
+          604,
+          196,
+          102
+        ],
+        "parent": "production-network"
+      },
+      {
+        "id": "production-compute-1",
+        "label": "业务实例",
+        "box": [
+          80,
+          822,
+          196,
+          84
+        ],
+        "parent": "production-compute"
+      },
+      {
+        "id": "production-compute-2",
+        "label": "任务实例",
+        "box": [
+          288,
+          822,
+          196,
+          84
+        ],
+        "parent": "production-compute"
+      },
+      {
+        "id": "production-compute-3",
+        "label": "配置服务",
+        "box": [
+          496,
+          822,
+          196,
+          84
+        ],
+        "parent": "production-compute"
+      },
+      {
+        "id": "production-compute-4",
+        "label": "运行监控",
+        "box": [
+          704,
+          822,
+          196,
+          84
+        ],
+        "parent": "production-compute"
+      },
+      {
+        "id": "production-store-1",
+        "label": "关系存储",
+        "box": [
+          80,
+          1012,
+          196,
+          80
+        ],
+        "parent": "production-store"
+      },
+      {
+        "id": "production-store-2",
+        "label": "对象存储",
+        "box": [
+          288,
+          1012,
+          196,
+          80
+        ],
+        "parent": "production-store"
+      },
+      {
+        "id": "production-store-3",
+        "label": "备份服务",
+        "box": [
+          496,
+          1012,
+          196,
+          80
+        ],
+        "parent": "production-store"
+      },
+      {
+        "id": "production-store-4",
+        "label": "归档记录",
+        "box": [
+          704,
+          1012,
+          196,
+          80
+        ],
+        "parent": "production-store"
+      },
+      {
+        "id": "testing-network-1",
+        "label": "网络入口",
+        "box": [
+          1060,
+          604,
+          196,
+          102
+        ],
+        "parent": "testing-network"
+      },
+      {
+        "id": "testing-network-2",
+        "label": "安全代理",
+        "box": [
+          1268,
+          604,
+          196,
+          102
+        ],
+        "parent": "testing-network"
+      },
+      {
+        "id": "testing-network-3",
+        "label": "边界策略",
+        "box": [
+          1476,
+          604,
+          196,
+          102
+        ],
+        "parent": "testing-network"
+      },
+      {
+        "id": "testing-network-4",
+        "label": "访问审计",
+        "box": [
+          1684,
+          604,
+          196,
+          102
+        ],
+        "parent": "testing-network"
+      },
+      {
+        "id": "testing-compute-1",
+        "label": "业务实例",
+        "box": [
+          1060,
+          822,
+          196,
+          84
+        ],
+        "parent": "testing-compute"
+      },
+      {
+        "id": "testing-compute-2",
+        "label": "任务实例",
+        "box": [
+          1268,
+          822,
+          196,
+          84
+        ],
+        "parent": "testing-compute"
+      },
+      {
+        "id": "testing-compute-3",
+        "label": "配置服务",
+        "box": [
+          1476,
+          822,
+          196,
+          84
+        ],
+        "parent": "testing-compute"
+      },
+      {
+        "id": "testing-compute-4",
+        "label": "运行监控",
+        "box": [
+          1684,
+          822,
+          196,
+          84
+        ],
+        "parent": "testing-compute"
+      },
+      {
+        "id": "testing-store-1",
+        "label": "关系存储",
+        "box": [
+          1060,
+          1012,
+          196,
+          80
+        ],
+        "parent": "testing-store"
+      },
+      {
+        "id": "testing-store-2",
+        "label": "对象存储",
+        "box": [
+          1268,
+          1012,
+          196,
+          80
+        ],
+        "parent": "testing-store"
+      },
+      {
+        "id": "testing-store-3",
+        "label": "备份服务",
+        "box": [
+          1476,
+          1012,
+          196,
+          80
+        ],
+        "parent": "testing-store"
+      },
+      {
+        "id": "testing-store-4",
+        "label": "归档记录",
+        "box": [
+          1684,
+          1012,
+          196,
+          80
+        ],
+        "parent": "testing-store"
+      }
+    ],
+    "groups": [
+      {
+        "id": "security",
+        "title": "安全管理域",
+        "box": [
+          560,
+          154,
+          840,
+          230
+        ],
+        "headH": 58
+      },
+      {
+        "id": "production",
+        "title": "生产资源域",
+        "box": [
+          40,
+          440,
+          900,
+          694
+        ],
+        "headH": 58
+      },
+      {
+        "id": "production-network",
+        "title": "网络与安全",
+        "box": [
+          64,
+          530,
+          852,
+          192
+        ],
+        "headH": 58
+      },
+      {
+        "id": "production-compute",
+        "title": "业务资源",
+        "box": [
+          64,
+          748,
+          852,
+          174
+        ],
+        "headH": 58
+      },
+      {
+        "id": "production-store",
+        "title": "持久存储",
+        "box": [
+          64,
+          948,
+          852,
+          160
+        ],
+        "headH": 48
+      },
+      {
+        "id": "testing",
+        "title": "测试资源域",
+        "box": [
+          1020,
+          440,
+          900,
+          694
+        ],
+        "headH": 58
+      },
+      {
+        "id": "testing-network",
+        "title": "网络与安全",
+        "box": [
+          1044,
+          530,
+          852,
+          192
+        ],
+        "headH": 58
+      },
+      {
+        "id": "testing-compute",
+        "title": "业务资源",
+        "box": [
+          1044,
+          748,
+          852,
+          174
+        ],
+        "headH": 58
+      },
+      {
+        "id": "testing-store",
+        "title": "持久存储",
+        "box": [
+          1044,
+          948,
+          852,
+          160
+        ],
+        "headH": 48
+      }
+    ],
+    "paths": []
+  },
+  "inspiration": {
+    "title": "数字政府政务云安全解决方案拓扑图_数据政务安全架构图_智慧数字政府解决方案",
+    "url": "https://www.edrawmax.cn/templates/file/1052369/"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

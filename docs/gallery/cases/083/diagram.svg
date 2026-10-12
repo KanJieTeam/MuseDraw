@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="1320" viewBox="0 0 1950 1320" role="img" aria-labelledby="title desc"><title id="title">内容知识服务架构</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":83,"referenceId":"EQ-1260","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1615,72]},{"id":"t-2","box":[56,155,1838,48]},{"id":"t-3","box":[283,234,385.25,58]},{"id":"t-4","box":[680.25,234,385.25,58]},{"id":"t-5","box":[1077.5,234,385.25,58]},{"id":"t-6","box":[1474.75,234,385.25,58]},{"id":"t-7","box":[56,352,1438,48]},{"id":"t-8","box":[276,437,287.75,58]},{"id":"t-9","box":[575.75,437,287.75,58]},{"id":"t-10","box":[875.5,437,287.75,58]},{"id":"t-11","box":[1175.25,437,287.75,58]},{"id":"t-12","box":[56,576,1438,48]},{"id":"t-13","box":[275,658,279.75,58]},{"id":"t-14","box":[577.75,658,279.75,58]},{"id":"t-15","box":[880.5,658,279.75,58]},{"id":"t-16","box":[1183.25,658,279.75,58]},{"id":"t-17","box":[275,739,279.75,58]},{"id":"t-18","box":[577.75,739,279.75,58]},{"id":"t-19","box":[880.5,739,279.75,58]},{"id":"t-20","box":[1183.25,739,279.75,58]},{"id":"t-21","box":[56,894,1438,48]},{"id":"t-22","box":[275,974,288,58]},{"id":"t-23","box":[575,974,288,58]},{"id":"t-24","box":[875,974,288,58]},{"id":"t-25","box":[1175,974,288,58]},{"id":"t-26","box":[275,1123,388,58]},{"id":"t-27","box":[675,1123,388,58]},{"id":"t-28","box":[1075,1123,388,58]},{"id":"t-29","box":[1530,352,364,48]},{"id":"t-30","box":[1549,437,326,56]},{"id":"t-31","box":[1559,521,306,58]},{"id":"t-32","box":[1559,599,306,58]},{"id":"t-33","box":[1549,695,326,56]},{"id":"t-34","box":[1559,779,306,58]},{"id":"t-35","box":[1559,857,306,58]},{"id":"t-36","box":[1549,953,326,56]},{"id":"t-37","box":[1559,1037,306,58]},{"id":"t-38","box":[1559,1115,306,58]}],"nodes":[{"id":"application-1","label":"内容检索","box":[283,234,385.25,58],"parent":"application"},{"id":"application-2","label":"关联查询","box":[680.25,234,385.25,58],"parent":"application"},{"id":"application-3","label":"问答服务","box":[1077.5,234,385.25,58],"parent":"application"},{"id":"application-4","label":"知识展示","box":[1474.75,234,385.25,58],"parent":"application"},{"id":"compute-1","label":"关系推理","box":[276,437,287.75,58],"parent":"compute"},{"id":"compute-2","label":"实体匹配","box":[575.75,437,287.75,58],"parent":"compute"},{"id":"compute-3","label":"内容聚类","box":[875.5,437,287.75,58],"parent":"compute"},{"id":"compute-4","label":"关联评分","box":[1175.25,437,287.75,58],"parent":"compute"},{"id":"graph-1","label":"实体登记","box":[275,658,279.75,58],"parent":"graph"},{"id":"graph-2","label":"关系登记","box":[577.75,658,279.75,58],"parent":"graph"},{"id":"graph-3","label":"标签维护","box":[880.5,658,279.75,58],"parent":"graph"},{"id":"graph-4","label":"属性规范","box":[1183.25,658,279.75,58],"parent":"graph"},{"id":"graph-5","label":"实体合并","box":[275,739,279.75,58],"parent":"graph"},{"id":"graph-6","label":"关系校验","box":[577.75,739,279.75,58],"parent":"graph"},{"id":"graph-7","label":"版本管理","box":[880.5,739,279.75,58],"parent":"graph"},{"id":"graph-8","label":"来源追溯","box":[1183.25,739,279.75,58],"parent":"graph"},{"id":"acquire-1","label":"文件解析","box":[275,974,288,58],"parent":"acquire"},{"id":"acquire-2","label":"页面采集","box":[575,974,288,58],"parent":"acquire"},{"id":"acquire-3","label":"字段抽取","box":[875,974,288,58],"parent":"acquire"},{"id":"acquire-4","label":"片段生成","box":[1175,974,288,58],"parent":"acquire"},{"id":"source-1","label":"文档资料","box":[275,1123,388,58],"parent":"acquire"},{"id":"source-2","label":"网页内容","box":[675,1123,388,58],"parent":"acquire"},{"id":"source-3","label":"业务记录","box":[1075,1123,388,58],"parent":"acquire"},{"id":"support-0-1","label":"图数据接口","box":[1559,521,306,58],"parent":"support-0"},{"id":"support-0-2","label":"文档接口","box":[1559,599,306,58],"parent":"support-0"},{"id":"support-1-1","label":"类型检查","box":[1559,779,306,58],"parent":"support-1"},{"id":"support-1-2","label":"质量查询","box":[1559,857,306,58],"parent":"support-1"},{"id":"support-2-1","label":"任务执行","box":[1559,1037,306,58],"parent":"support-2"},{"id":"support-2-2","label":"字段映射","box":[1559,1115,306,58],"parent":"support-2"}],"groups":[{"id":"application","title":"知识应用","box":[50,150,1850,175],"headH":58},{"id":"compute","title":"知识计算","box":[50,347,1450,202],"headH":58},{"id":"graph","title":"知识组织","box":[50,571,1450,296],"headH":58},{"id":"acquire","title":"内容获取","box":[50,889,1450,365],"headH":58},{"id":"support","title":"技术支撑目录","box":[1524,347,376,907],"headH":58},{"id":"support-0","title":"存储接口","box":[1543,432,338,234],"headH":66},{"id":"support-1","title":"数据检查","box":[1543,690,338,234],"headH":66},{"id":"support-2","title":"处理工具","box":[1543,948,338,234],"headH":66}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1950" height="1320" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#263A3E">内容知识服务架构</text>
+<g transform="translate(1682 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#41636C"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<rect x="50" y="150" width="1850" height="175" rx="2" fill="#EDF2F6" stroke="#BAC6D1" stroke-width="1.2"/>
+<text id="t-2" x="68" y="189.5" text-anchor="start" font-size="26" font-weight="600" fill="#41636C">知识应用</text>
+<rect x="283" y="234" width="385.25" height="58" rx="2" fill="#FFFFFF" stroke="#BAC6D1" stroke-width="1.2"/>
+<text id="t-3" x="475.625" y="272.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">内容检索</text>
+<rect x="680.25" y="234" width="385.25" height="58" rx="2" fill="#FFFFFF" stroke="#BAC6D1" stroke-width="1.2"/>
+<text id="t-4" x="872.875" y="272.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">关联查询</text>
+<rect x="1077.5" y="234" width="385.25" height="58" rx="2" fill="#FFFFFF" stroke="#BAC6D1" stroke-width="1.2"/>
+<text id="t-5" x="1270.125" y="272.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">问答服务</text>
+<rect x="1474.75" y="234" width="385.25" height="58" rx="2" fill="#FFFFFF" stroke="#BAC6D1" stroke-width="1.2"/>
+<text id="t-6" x="1667.375" y="272.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">知识展示</text>
+<rect x="50" y="347" width="1450" height="202" rx="2" fill="#EEF1ED" stroke="#BBC6BC" stroke-width="1.2"/>
+<text id="t-7" x="68" y="386.5" text-anchor="start" font-size="26" font-weight="600" fill="#41636C">知识计算</text>
+<rect x="276" y="437" width="287.75" height="58" rx="2" fill="#FFFFFF" stroke="#BBC6BC" stroke-width="1.2"/>
+<text id="t-8" x="419.875" y="475.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">关系推理</text>
+<rect x="575.75" y="437" width="287.75" height="58" rx="2" fill="#FFFFFF" stroke="#BBC6BC" stroke-width="1.2"/>
+<text id="t-9" x="719.625" y="475.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">实体匹配</text>
+<rect x="875.5" y="437" width="287.75" height="58" rx="2" fill="#FFFFFF" stroke="#BBC6BC" stroke-width="1.2"/>
+<text id="t-10" x="1019.375" y="475.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">内容聚类</text>
+<rect x="1175.25" y="437" width="287.75" height="58" rx="2" fill="#FFFFFF" stroke="#BBC6BC" stroke-width="1.2"/>
+<text id="t-11" x="1319.125" y="475.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">关联评分</text>
+<rect x="50" y="571" width="1450" height="296" rx="2" fill="#F3F0ED" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-12" x="68" y="610.5" text-anchor="start" font-size="26" font-weight="600" fill="#41636C">知识组织</text>
+<rect x="275" y="658" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-13" x="414.875" y="696.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">实体登记</text>
+<rect x="577.75" y="658" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-14" x="717.625" y="696.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">关系登记</text>
+<rect x="880.5" y="658" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-15" x="1020.375" y="696.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">标签维护</text>
+<rect x="1183.25" y="658" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-16" x="1323.125" y="696.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">属性规范</text>
+<rect x="275" y="739" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-17" x="414.875" y="777.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">实体合并</text>
+<rect x="577.75" y="739" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-18" x="717.625" y="777.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">关系校验</text>
+<rect x="880.5" y="739" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-19" x="1020.375" y="777.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">版本管理</text>
+<rect x="1183.25" y="739" width="279.75" height="58" rx="2" fill="#FFFFFF" stroke="#C6BFBC" stroke-width="1.2"/>
+<text id="t-20" x="1323.125" y="777.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">来源追溯</text>
+<rect x="50" y="889" width="1450" height="365" rx="2" fill="#F4F0E6" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-21" x="68" y="928.5" text-anchor="start" font-size="26" font-weight="600" fill="#41636C">内容获取</text>
+<rect x="275" y="974" width="288" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-22" x="419" y="1012.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">文件解析</text>
+<rect x="575" y="974" width="288" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-23" x="719" y="1012.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">页面采集</text>
+<rect x="875" y="974" width="288" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-24" x="1019" y="1012.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">字段抽取</text>
+<rect x="1175" y="974" width="288" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-25" x="1319" y="1012.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">片段生成</text>
+<rect x="275" y="1123" width="388" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-26" x="469" y="1161.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">文档资料</text>
+<rect x="675" y="1123" width="388" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-27" x="869" y="1161.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">网页内容</text>
+<rect x="1075" y="1123" width="388" height="58" rx="2" fill="#FFFFFF" stroke="#C8BDA2" stroke-width="1.2"/>
+<text id="t-28" x="1269" y="1161.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">业务记录</text>
+<rect x="1524" y="347" width="376" height="907" rx="2" fill="#E5EEEE" stroke="#9DCFD2" stroke-width="1.2"/>
+<text id="t-29" x="1712" y="386.5" text-anchor="middle" font-size="26" font-weight="600" fill="#41636C">技术支撑目录</text>
+<rect x="1543" y="432" width="338" height="234" rx="2" fill="#EFF4F4" stroke="#9DCFD2" stroke-width="1.2"/>
+<text id="t-30" x="1712" y="475.5" text-anchor="middle" font-size="26" font-weight="600" fill="#41636C">存储接口</text>
+<rect x="1559" y="521" width="306" height="58" rx="2" fill="#FFFFFF" stroke="#BBDDDD" stroke-width="1.2"/>
+<text id="t-31" x="1712" y="559.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">图数据接口</text>
+<rect x="1559" y="599" width="306" height="58" rx="2" fill="#FFFFFF" stroke="#BBDDDD" stroke-width="1.2"/>
+<text id="t-32" x="1712" y="637.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">文档接口</text>
+<rect x="1543" y="690" width="338" height="234" rx="2" fill="#EFF4F4" stroke="#9DCFD2" stroke-width="1.2"/>
+<text id="t-33" x="1712" y="733.5" text-anchor="middle" font-size="26" font-weight="600" fill="#41636C">数据检查</text>
+<rect x="1559" y="779" width="306" height="58" rx="2" fill="#FFFFFF" stroke="#BBDDDD" stroke-width="1.2"/>
+<text id="t-34" x="1712" y="817.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">类型检查</text>
+<rect x="1559" y="857" width="306" height="58" rx="2" fill="#FFFFFF" stroke="#BBDDDD" stroke-width="1.2"/>
+<text id="t-35" x="1712" y="895.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">质量查询</text>
+<rect x="1543" y="948" width="338" height="234" rx="2" fill="#EFF4F4" stroke="#9DCFD2" stroke-width="1.2"/>
+<text id="t-36" x="1712" y="991.5" text-anchor="middle" font-size="26" font-weight="600" fill="#41636C">处理工具</text>
+<rect x="1559" y="1037" width="306" height="58" rx="2" fill="#FFFFFF" stroke="#BBDDDD" stroke-width="1.2"/>
+<text id="t-37" x="1712" y="1075.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">任务执行</text>
+<rect x="1559" y="1115" width="306" height="58" rx="2" fill="#FFFFFF" stroke="#BBDDDD" stroke-width="1.2"/>
+<text id="t-38" x="1712" y="1153.5" text-anchor="middle" font-size="24" font-weight="400" fill="#263A3E">字段映射</text></g></svg>

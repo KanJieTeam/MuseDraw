@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2060" height="1380" viewBox="0 0 2060 1380" role="img" aria-labelledby="title desc"><title id="title">内容记录读写与缓存刷新链路</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":44,"referenceId":"CQ-0018","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1725,72]},{"id":"t-2","box":[336,210,1178,48]},{"id":"t-3","box":[43,719,229,62]},{"id":"t-4","box":[443,704,304,67]},{"id":"t-5","box":[1133,399,304,57]},{"id":"t-6","box":[1133,719,304,57]},{"id":"t-7","box":[1133,1044,304,57]},{"id":"t-8","box":[1653,399,339,57]},{"id":"t-9","box":[1653,1044,339,57]},{"id":"t-10","box":[1270,1250,385,90]},{"id":"t-11","box":[460,280,280,68]},{"id":"t-12","box":[460,1090,280,68]},{"id":"t-13","box":[1650,665,345,68]},{"id":"t-14","box":[285,703,145,44]},{"id":"t-15","box":[1211,280,148,44]},{"id":"t-16","box":[893,379,150,44]},{"id":"t-17","box":[1464,379,162,44]},{"id":"t-18","box":[772,1196,168,44]},{"id":"t-19","box":[834,919,148,44]},{"id":"t-20","box":[1451,1025,188,44]},{"id":"t-21","box":[1600,883,160,44]},{"id":"t-22","box":[1211,540,148,44]},{"id":"t-23","box":[805,1273,176,44]}],"nodes":[{"id":"client","label":"内容客户端","box":[40,665,235,120],"parent":null},{"id":"app","label":"内容应用","box":[440,650,310,125],"parent":"network"},{"id":"cache-end","label":"缓存访问端点","box":[1130,345,310,115],"parent":"network"},{"id":"process","label":"变更处理器","box":[1130,665,310,115],"parent":"network"},{"id":"data-end","label":"记录访问端点","box":[1130,990,310,115],"parent":"network"},{"id":"cache","label":"内容缓存","box":[1650,345,345,115],"parent":null},{"id":"database","label":"内容记录库","box":[1650,990,345,115],"parent":null},{"id":"observe","label":"运行观测","box":[1270,1250,385,90],"parent":null},{"id":"read-policy","label":"读取策略","box":[460,280,280,68],"parent":"network"},{"id":"write-policy","label":"写入策略","box":[460,1090,280,68],"parent":"network"},{"id":"version","label":"版本标记","box":[1650,665,345,68],"parent":null}],"groups":[{"id":"network","title":"应用内部连接范围","box":[330,205,1190,985],"headH":58}],"paths":[{"from":"client","to":"app","points":[[275,725],[440,725]],"label":"内容请求","labelBox":[285,703,145,44]},{"from":"app","to":"cache-end","points":[[745,650],[745,267],[1285,267],[1285,345]],"label":"读取缓存","labelBox":[1211,280,148,44]},{"from":"cache-end","to":"app","points":[[1130,401],[830,401],[830,595],[670,595],[670,650]],"label":"命中返回","labelBox":[893,379,150,44]},{"from":"cache-end","to":"cache","points":[[1440,401],[1650,401]],"label":"缓存访问","labelBox":[1464,379,162,44]},{"from":"app","to":"data-end","points":[[450,775],[450,1218],[1080,1218],[1080,1047],[1130,1047]],"label":"未命中查询","labelBox":[772,1196,168,44]},{"from":"app","to":"data-end","points":[[665,775],[665,941],[1285,941],[1285,990]],"label":"写入记录","labelBox":[834,919,148,44]},{"from":"data-end","to":"database","points":[[1440,1047],[1650,1047]],"label":"持久化记录","labelBox":[1451,1025,188,44]},{"from":"database","to":"process","points":[[1825,990],[1825,905],[1475,905],[1475,722],[1440,722]],"label":"变更事件","labelBox":[1600,883,160,44]},{"from":"process","to":"cache-end","points":[[1285,665],[1285,460]],"label":"更新缓存","labelBox":[1211,540,148,44]},{"from":"app","to":"observe","points":[[440,750],[305,750],[305,1295],[1270,1295]],"label":"日志与指标","labelBox":[805,1273,176,44]}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2060" height="1380" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#2D3C48">内容记录读写与缓存刷新链路</text>
+<g transform="translate(1792 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#397DAA"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L2026,112" fill="none" stroke="#397DAA" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="330" y="205" width="1190" height="985" rx="2" fill="#FAFBFC" stroke="#98A8B5" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-2" x="925" y="245" text-anchor="middle" font-size="27" font-weight="600" fill="#596D7C">应用内部连接范围</text>
+<rect x="40" y="665" width="235" height="120" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<g transform="translate(139.5 679) scale(0.9)" fill="none" stroke="#397DAA" stroke-width="2" stroke-linejoin="round"><rect x="1" y="1" width="38" height="27" rx="2"/><path d="M20,28v10 M9,39h22"/></g>
+<text id="t-3" x="157.5" y="759" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">内容客户端</text>
+<rect x="440" y="650" width="310" height="125" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<g transform="translate(577 664) scale(0.9)" fill="none" stroke="#397DAA" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-4" x="595" y="746.5" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">内容应用</text>
+<rect x="1130" y="345" width="310" height="115" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<g transform="translate(1267 359) scale(0.9)" fill="none" stroke="#397DAA" stroke-width="2" stroke-linejoin="round"><rect x="14" y="1" width="12" height="11"/><rect x="1" y="28" width="12" height="11"/><rect x="27" y="28" width="12" height="11"/><path d="M20,12v8 H7v8 M20,20h13v8"/></g>
+<text id="t-5" x="1285" y="436.5" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">缓存访问端点</text>
+<rect x="1130" y="665" width="310" height="115" rx="2" fill="#EAF0F8" stroke="#85A8CA" stroke-width="1.2"/>
+<g transform="translate(1267 679) scale(0.9)" fill="none" stroke="#397DAA" stroke-width="2" stroke-linejoin="round"><rect x="2" y="2" width="36" height="15" rx="2"/><rect x="2" y="23" width="36" height="15" rx="2"/><path d="M10,9h1 M10,30h1 M19,9h11 M19,30h11"/></g>
+<text id="t-6" x="1285" y="756.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2D3C48">变更处理器</text>
+<rect x="1130" y="990" width="310" height="115" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<g transform="translate(1267 1004) scale(0.9)" fill="none" stroke="#397DAA" stroke-width="2" stroke-linejoin="round"><rect x="14" y="1" width="12" height="11"/><rect x="1" y="28" width="12" height="11"/><rect x="27" y="28" width="12" height="11"/><path d="M20,12v8 H7v8 M20,20h13v8"/></g>
+<text id="t-7" x="1285" y="1081.5" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">记录访问端点</text>
+<rect x="1650" y="345" width="345" height="115" rx="2" fill="#EBF5EE" stroke="#87AC93" stroke-width="1.2"/>
+<g transform="translate(1804.5 359) scale(0.9)" fill="none" stroke="#558769" stroke-width="2" stroke-linejoin="round"><ellipse cx="20" cy="7" rx="18" ry="6"/><path d="M2,7v27c0,8 36,8 36,0V7 M2,20c0,8 36,8 36,0"/></g>
+<text id="t-8" x="1822.5" y="436.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2D3C48">内容缓存</text>
+<rect x="1650" y="990" width="345" height="115" rx="2" fill="#EAF0F8" stroke="#8EAAD0" stroke-width="1.2"/>
+<g transform="translate(1804.5 1004) scale(0.9)" fill="none" stroke="#5B7BAB" stroke-width="2" stroke-linejoin="round"><ellipse cx="20" cy="7" rx="18" ry="6"/><path d="M2,7v27c0,8 36,8 36,0V7 M2,20c0,8 36,8 36,0"/></g>
+<text id="t-9" x="1822.5" y="1081.5" text-anchor="middle" font-size="23" font-weight="400" fill="#2D3C48">内容记录库</text>
+<rect x="1270" y="1250" width="385" height="90" rx="2" fill="#F3F4F5" stroke="#ADB6BC" stroke-width="1.2"/>
+<text id="t-10" x="1462.5" y="1304" text-anchor="middle" font-size="23" font-weight="400" fill="#2D3C48">运行观测</text>
+<rect x="460" y="280" width="280" height="68" rx="2" fill="#EDF6EF" stroke="#95B39D" stroke-width="1.2"/>
+<text id="t-11" x="600" y="323" text-anchor="middle" font-size="23" font-weight="400" fill="#568366">读取策略</text>
+<rect x="460" y="1090" width="280" height="68" rx="2" fill="#ECF1FA" stroke="#9BB1D3" stroke-width="1.2"/>
+<text id="t-12" x="600" y="1133" text-anchor="middle" font-size="23" font-weight="400" fill="#537DAE">写入策略</text>
+<rect x="1650" y="665" width="345" height="68" rx="2" fill="#F6F7F9" stroke="#B3BDC9" stroke-width="1.2"/>
+<text id="t-13" x="1822.5" y="708" text-anchor="middle" font-size="23" font-weight="400" fill="#2D3C48">版本标记</text>
+<path d="M275,725 L440,725" fill="none" stroke="#374B5A" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="285" y="703" width="145" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-14" x="357.5" y="733" text-anchor="middle" font-size="20" font-weight="400" fill="#374B5A">内容请求</text>
+<path d="M745,650 L745,267 L1285,267 L1285,345" fill="none" stroke="#4F8E64" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1211" y="280" width="148" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-15" x="1285" y="310" text-anchor="middle" font-size="20" font-weight="400" fill="#4F8E64">读取缓存</text>
+<path d="M1130,401 L830,401 L830,595 L670,595 L670,650" fill="none" stroke="#4F8E64" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="893" y="379" width="150" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-16" x="968" y="409" text-anchor="middle" font-size="20" font-weight="400" fill="#4F8E64">命中返回</text>
+<path d="M1440,401 L1650,401" fill="none" stroke="#4F8E64" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1464" y="379" width="162" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-17" x="1545" y="409" text-anchor="middle" font-size="20" font-weight="400" fill="#4F8E64">缓存访问</text>
+<path d="M450,775 L450,1218 L1080,1218 L1080,1047 L1130,1047" fill="none" stroke="#4F8E64" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="772" y="1196" width="168" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-18" x="856" y="1226" text-anchor="middle" font-size="20" font-weight="400" fill="#4F8E64">未命中查询</text>
+<path d="M665,775 L665,941 L1285,941 L1285,990" fill="none" stroke="#4C76B8" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="834" y="919" width="148" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-19" x="908" y="949" text-anchor="middle" font-size="20" font-weight="400" fill="#4C76B8">写入记录</text>
+<path d="M1440,1047 L1650,1047" fill="none" stroke="#4C76B8" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1451" y="1025" width="188" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-20" x="1545" y="1055" text-anchor="middle" font-size="20" font-weight="400" fill="#4C76B8">持久化记录</text>
+<path d="M1825,990 L1825,905 L1475,905 L1475,722 L1440,722" fill="none" stroke="#4C76B8" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1600" y="883" width="160" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-21" x="1680" y="913" text-anchor="middle" font-size="20" font-weight="400" fill="#4C76B8">变更事件</text>
+<path d="M1285,665 L1285,460" fill="none" stroke="#4C76B8" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1211" y="540" width="148" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-22" x="1285" y="570" text-anchor="middle" font-size="20" font-weight="400" fill="#4C76B8">更新缓存</text>
+<path d="M440,750 L305,750 L305,1295 L1270,1295" fill="none" stroke="#9AA5AE" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="805" y="1273" width="176" height="44" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-23" x="893" y="1303" text-anchor="middle" font-size="20" font-weight="400" fill="#9AA5AE">日志与指标</text></g></svg>

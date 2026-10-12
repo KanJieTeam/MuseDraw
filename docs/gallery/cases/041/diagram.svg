@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2430" height="1450" viewBox="0 0 2430 1450" role="img" aria-labelledby="title desc"><title id="title">应用运行环境能力全景</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":41,"referenceId":"EQ-0903","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,2095,72]},{"id":"t-2","box":[346,195,1688,48]},{"id":"t-3","box":[365,277,261.6666666666667,70]},{"id":"t-4","box":[642.6666666666667,277,261.6666666666667,70]},{"id":"t-5","box":[920.3333333333334,277,261.6666666666667,70]},{"id":"t-6","box":[1198,277,261.6666666666667,70]},{"id":"t-7","box":[1475.6666666666667,277,261.6666666666667,70]},{"id":"t-8","box":[1753.3333333333335,277,261.6666666666667,70]},{"id":"t-9","box":[346,400,1688,48]},{"id":"t-10","box":[365,470,261.6666666666667,58]},{"id":"t-11","box":[642.6666666666667,470,261.6666666666667,58]},{"id":"t-12","box":[920.3333333333334,470,261.6666666666667,58]},{"id":"t-13","box":[1198,470,261.6666666666667,58]},{"id":"t-14","box":[1475.6666666666667,470,261.6666666666667,58]},{"id":"t-15","box":[1753.3333333333335,470,261.6666666666667,58]},{"id":"t-16","box":[371,590,250,64]},{"id":"t-17","box":[381,690,230,65]},{"id":"t-18","box":[381,784,230,65]},{"id":"t-19","box":[381,878,230,65]},{"id":"t-20","box":[381,972,230,65]},{"id":"t-21","box":[649,590,250,64]},{"id":"t-22","box":[659,690,230,65]},{"id":"t-23","box":[659,784,230,65]},{"id":"t-24","box":[659,878,230,65]},{"id":"t-25","box":[659,972,230,65]},{"id":"t-26","box":[927,590,250,64]},{"id":"t-27","box":[937,690,230,65]},{"id":"t-28","box":[937,784,230,65]},{"id":"t-29","box":[937,878,230,65]},{"id":"t-30","box":[937,972,230,65]},{"id":"t-31","box":[1205,590,250,64]},{"id":"t-32","box":[1215,690,230,65]},{"id":"t-33","box":[1215,784,230,65]},{"id":"t-34","box":[1215,878,230,65]},{"id":"t-35","box":[1215,972,230,65]},{"id":"t-36","box":[1483,590,250,64]},{"id":"t-37","box":[1493,690,230,65]},{"id":"t-38","box":[1493,784,230,65]},{"id":"t-39","box":[1493,878,230,65]},{"id":"t-40","box":[1493,972,230,65]},{"id":"t-41","box":[1761,590,250,64]},{"id":"t-42","box":[1771,690,230,65]},{"id":"t-43","box":[1771,784,230,65]},{"id":"t-44","box":[1771,878,230,65]},{"id":"t-45","box":[1771,972,230,65]},{"id":"t-46","box":[346,1090,1688,48]},{"id":"t-47","box":[371,1168,528,46]},{"id":"t-48","box":[383,1220,244.5,58]},{"id":"t-49","box":[642.5,1220,244.5,58]},{"id":"t-50","box":[941,1168,508,46]},{"id":"t-51","box":[953,1220,234.5,58]},{"id":"t-52","box":[1202.5,1220,234.5,58]},{"id":"t-53","box":[1491,1168,518,46]},{"id":"t-54","box":[1503,1220,154.66666666666666,58]},{"id":"t-55","box":[1672.6666666666667,1220,154.66666666666666,58]},{"id":"t-56","box":[1842.3333333333333,1220,154.66666666666666,58]},{"id":"t-57","box":[61,195,113,80]},{"id":"t-58","box":[67,360,101,140]},{"id":"t-59","box":[67,607,101,140]},{"id":"t-60","box":[67,854,101,140]},{"id":"t-61","box":[67,1101,101,140]},{"id":"t-62","box":[206,195,113,80]},{"id":"t-63","box":[212,360,101,140]},{"id":"t-64","box":[212,607,101,140]},{"id":"t-65","box":[212,854,101,140]},{"id":"t-66","box":[212,1101,101,140]},{"id":"t-67","box":[2076,195,113,80]},{"id":"t-68","box":[2082,360,101,140]},{"id":"t-69","box":[2082,607,101,140]},{"id":"t-70","box":[2082,854,101,140]},{"id":"t-71","box":[2082,1101,101,140]},{"id":"t-72","box":[2231,195,113,80]},{"id":"t-73","box":[2237,360,101,140]},{"id":"t-74","box":[2237,607,101,140]},{"id":"t-75","box":[2237,854,101,140]},{"id":"t-76","box":[2237,1101,101,140]}],"nodes":[{"id":"ops-1","label":"运行门户","box":[365,277,261.6666666666667,70],"parent":"ops"},{"id":"ops-2","label":"实例目录","box":[642.6666666666667,277,261.6666666666667,70],"parent":"ops"},{"id":"ops-3","label":"配置目录","box":[920.3333333333334,277,261.6666666666667,70],"parent":"ops"},{"id":"ops-4","label":"日志查询","box":[1198,277,261.6666666666667,70],"parent":"ops"},{"id":"ops-5","label":"监测看板","box":[1475.6666666666667,277,261.6666666666667,70],"parent":"ops"},{"id":"ops-6","label":"告警接收","box":[1753.3333333333335,277,261.6666666666667,70],"parent":"ops"},{"id":"services-1","label":"内容服务","box":[365,470,261.6666666666667,58],"parent":"services"},{"id":"services-2","label":"通知服务","box":[642.6666666666667,470,261.6666666666667,58],"parent":"services"},{"id":"services-3","label":"规则服务","box":[920.3333333333334,470,261.6666666666667,58],"parent":"services"},{"id":"services-4","label":"检索服务","box":[1198,470,261.6666666666667,58],"parent":"services"},{"id":"services-5","label":"文件服务","box":[1475.6666666666667,470,261.6666666666667,58],"parent":"services"},{"id":"services-6","label":"任务服务","box":[1753.3333333333335,470,261.6666666666667,58],"parent":"services"},{"id":"data-1","label":"关系数据","box":[381,690,230,65],"parent":"data"},{"id":"data-2","label":"文档数据","box":[381,784,230,65],"parent":"data"},{"id":"data-3","label":"对象存储","box":[381,878,230,65],"parent":"data"},{"id":"data-4","label":"缓存访问","box":[381,972,230,65],"parent":"data"},{"id":"message-1","label":"任务队列","box":[659,690,230,65],"parent":"message"},{"id":"message-2","label":"事件订阅","box":[659,784,230,65],"parent":"message"},{"id":"message-3","label":"通知投递","box":[659,878,230,65],"parent":"message"},{"id":"message-4","label":"状态回调","box":[659,972,230,65],"parent":"message"},{"id":"analysis-1","label":"数据整理","box":[937,690,230,65],"parent":"analysis"},{"id":"analysis-2","label":"索引构建","box":[937,784,230,65],"parent":"analysis"},{"id":"analysis-3","label":"作业编排","box":[937,878,230,65],"parent":"analysis"},{"id":"analysis-4","label":"指标计算","box":[937,972,230,65],"parent":"analysis"},{"id":"runtime-1","label":"实例管理","box":[1215,690,230,65],"parent":"runtime"},{"id":"runtime-2","label":"发布记录","box":[1215,784,230,65],"parent":"runtime"},{"id":"runtime-3","label":"配置注入","box":[1215,878,230,65],"parent":"runtime"},{"id":"runtime-4","label":"日志采集","box":[1215,972,230,65],"parent":"runtime"},{"id":"identity-1","label":"账户关联","box":[1493,690,230,65],"parent":"identity"},{"id":"identity-2","label":"角色授权","box":[1493,784,230,65],"parent":"identity"},{"id":"identity-3","label":"会话校验","box":[1493,878,230,65],"parent":"identity"},{"id":"identity-4","label":"访问审计","box":[1493,972,230,65],"parent":"identity"},{"id":"integration-1","label":"接口目录","box":[1771,690,230,65],"parent":"integration"},{"id":"integration-2","label":"请求转换","box":[1771,784,230,65],"parent":"integration"},{"id":"integration-3","label":"错误处理","box":[1771,878,230,65],"parent":"integration"},{"id":"integration-4","label":"版本登记","box":[1771,972,230,65],"parent":"integration"},{"id":"compute-1","label":"应用实例","box":[383,1220,244.5,58],"parent":"compute"},{"id":"compute-2","label":"作业实例","box":[642.5,1220,244.5,58],"parent":"compute"},{"id":"storage-1","label":"文件空间","box":[953,1220,234.5,58],"parent":"storage"},{"id":"storage-2","label":"备份空间","box":[1202.5,1220,234.5,58],"parent":"storage"},{"id":"network-1","label":"连接接入","box":[1503,1220,154.66666666666666,58],"parent":"network"},{"id":"network-2","label":"名称服务","box":[1672.6666666666667,1220,154.66666666666666,58],"parent":"network"},{"id":"network-3","label":"访问策略","box":[1842.3333333333333,1220,154.66666666666666,58],"parent":"network"},{"id":"standards-1","label":"编码规范","box":[67,360,101,140],"parent":"standards"},{"id":"standards-2","label":"接口规范","box":[67,607,101,140],"parent":"standards"},{"id":"standards-3","label":"资料规范","box":[67,854,101,140],"parent":"standards"},{"id":"standards-4","label":"运行规范","box":[67,1101,101,140],"parent":"standards"},{"id":"maintenance-1","label":"发布规则","box":[212,360,101,140],"parent":"maintenance"},{"id":"maintenance-2","label":"变更规则","box":[212,607,101,140],"parent":"maintenance"},{"id":"maintenance-3","label":"备份规则","box":[212,854,101,140],"parent":"maintenance"},{"id":"maintenance-4","label":"处置规则","box":[212,1101,101,140],"parent":"maintenance"},{"id":"security-1","label":"访问控制","box":[2082,360,101,140],"parent":"security"},{"id":"security-2","label":"授权核对","box":[2082,607,101,140],"parent":"security"},{"id":"security-3","label":"操作留痕","box":[2082,854,101,140],"parent":"security"},{"id":"security-4","label":"导出控制","box":[2082,1101,101,140],"parent":"security"},{"id":"assurance-1","label":"副本管理","box":[2237,360,101,140],"parent":"assurance"},{"id":"assurance-2","label":"恢复记录","box":[2237,607,101,140],"parent":"assurance"},{"id":"assurance-3","label":"故障通报","box":[2237,854,101,140],"parent":"assurance"},{"id":"assurance-4","label":"状态核验","box":[2237,1101,101,140],"parent":"assurance"}],"groups":[{"id":"ops","title":"运行管理","box":[340,190,1700,180],"headH":58},{"id":"services","title":"应用支撑","box":[340,395,1700,155],"headH":58},{"id":"data","title":"数据访问","box":[365,585,262,470],"headH":74},{"id":"message","title":"消息连接","box":[643,585,262,470],"headH":74},{"id":"analysis","title":"分析处理","box":[921,585,262,470],"headH":74},{"id":"runtime","title":"实例运行","box":[1199,585,262,470],"headH":74},{"id":"identity","title":"身份支撑","box":[1477,585,262,470],"headH":74},{"id":"integration","title":"接口连接","box":[1755,585,262,470],"headH":74},{"id":"resources","title":"运行资源","box":[340,1085,1700,225],"headH":58},{"id":"compute","title":"计算资源","box":[365,1163,540,120],"headH":56},{"id":"storage","title":"存储资源","box":[935,1163,520,120],"headH":56},{"id":"network","title":"网络资源","box":[1485,1163,530,120],"headH":56},{"id":"standards","title":"标准规范","box":[55,190,125,1120],"headH":90},{"id":"maintenance","title":"维护规则","box":[200,190,125,1120],"headH":90},{"id":"security","title":"安全控制","box":[2070,190,125,1120],"headH":90},{"id":"assurance","title":"恢复保障","box":[2225,190,125,1120],"headH":90}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2430" height="1450" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#26394A">应用运行环境能力全景</text>
+<g transform="translate(2162 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#2077C8"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L2396,112" fill="none" stroke="#2077C8" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="30" y="160" width="2370" height="1200" rx="2" fill="#E4E7EA" stroke="#B2BCC4" stroke-width="1.2"/>
+<rect x="340" y="190" width="1700" height="180" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-2" x="1190" y="228.5" text-anchor="middle" font-size="25" font-weight="600" fill="#257DCA">运行管理</text>
+<rect x="365" y="277" width="261.6666666666667" height="70" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-3" x="495.83333333333337" y="321" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">运行门户</text>
+<rect x="642.6666666666667" y="277" width="261.6666666666667" height="70" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-4" x="773.5000000000001" y="321" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">实例目录</text>
+<rect x="920.3333333333334" y="277" width="261.6666666666667" height="70" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-5" x="1051.1666666666667" y="321" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">配置目录</text>
+<rect x="1198" y="277" width="261.6666666666667" height="70" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-6" x="1328.8333333333333" y="321" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">日志查询</text>
+<rect x="1475.6666666666667" y="277" width="261.6666666666667" height="70" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-7" x="1606.5" y="321" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">监测看板</text>
+<rect x="1753.3333333333335" y="277" width="261.6666666666667" height="70" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-8" x="1884.1666666666667" y="321" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">告警接收</text>
+<rect x="340" y="395" width="1700" height="155" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-9" x="1190" y="433.5" text-anchor="middle" font-size="25" font-weight="600" fill="#257DCA">应用支撑</text>
+<rect x="365" y="470" width="261.6666666666667" height="58" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-10" x="495.83333333333337" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">内容服务</text>
+<rect x="642.6666666666667" y="470" width="261.6666666666667" height="58" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-11" x="773.5000000000001" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">通知服务</text>
+<rect x="920.3333333333334" y="470" width="261.6666666666667" height="58" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-12" x="1051.1666666666667" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">规则服务</text>
+<rect x="1198" y="470" width="261.6666666666667" height="58" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-13" x="1328.8333333333333" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">检索服务</text>
+<rect x="1475.6666666666667" y="470" width="261.6666666666667" height="58" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-14" x="1606.5" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">文件服务</text>
+<rect x="1753.3333333333335" y="470" width="261.6666666666667" height="58" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-15" x="1884.1666666666667" y="508" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">任务服务</text>
+<rect x="365" y="585" width="262" height="470" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="365" y="585" width="262" height="74" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-16" x="496" y="631.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">数据访问</text>
+<rect x="381" y="690" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-17" x="496" y="731.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">关系数据</text>
+<rect x="381" y="784" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-18" x="496" y="825.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">文档数据</text>
+<rect x="381" y="878" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-19" x="496" y="919.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">对象存储</text>
+<rect x="381" y="972" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-20" x="496" y="1013.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">缓存访问</text>
+<rect x="643" y="585" width="262" height="470" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="643" y="585" width="262" height="74" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-21" x="774" y="631.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">消息连接</text>
+<rect x="659" y="690" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-22" x="774" y="731.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">任务队列</text>
+<rect x="659" y="784" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-23" x="774" y="825.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">事件订阅</text>
+<rect x="659" y="878" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-24" x="774" y="919.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">通知投递</text>
+<rect x="659" y="972" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-25" x="774" y="1013.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">状态回调</text>
+<rect x="921" y="585" width="262" height="470" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="921" y="585" width="262" height="74" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-26" x="1052" y="631.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">分析处理</text>
+<rect x="937" y="690" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-27" x="1052" y="731.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">数据整理</text>
+<rect x="937" y="784" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-28" x="1052" y="825.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">索引构建</text>
+<rect x="937" y="878" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-29" x="1052" y="919.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">作业编排</text>
+<rect x="937" y="972" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-30" x="1052" y="1013.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">指标计算</text>
+<rect x="1199" y="585" width="262" height="470" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="1199" y="585" width="262" height="74" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-31" x="1330" y="631.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">实例运行</text>
+<rect x="1215" y="690" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-32" x="1330" y="731.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">实例管理</text>
+<rect x="1215" y="784" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-33" x="1330" y="825.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">发布记录</text>
+<rect x="1215" y="878" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-34" x="1330" y="919.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">配置注入</text>
+<rect x="1215" y="972" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-35" x="1330" y="1013.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">日志采集</text>
+<rect x="1477" y="585" width="262" height="470" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="1477" y="585" width="262" height="74" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-36" x="1608" y="631.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">身份支撑</text>
+<rect x="1493" y="690" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-37" x="1608" y="731.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">账户关联</text>
+<rect x="1493" y="784" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-38" x="1608" y="825.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">角色授权</text>
+<rect x="1493" y="878" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-39" x="1608" y="919.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">会话校验</text>
+<rect x="1493" y="972" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-40" x="1608" y="1013.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">访问审计</text>
+<rect x="1755" y="585" width="262" height="470" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="1755" y="585" width="262" height="74" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-41" x="1886" y="631.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">接口连接</text>
+<rect x="1771" y="690" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-42" x="1886" y="731.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">接口目录</text>
+<rect x="1771" y="784" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-43" x="1886" y="825.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">请求转换</text>
+<rect x="1771" y="878" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-44" x="1886" y="919.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">错误处理</text>
+<rect x="1771" y="972" width="230" height="65" rx="2" fill="#FFF" stroke="#B6CDE0" stroke-width="1.2"/>
+<text id="t-45" x="1886" y="1013.5" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">版本登记</text>
+<rect x="340" y="1085" width="1700" height="225" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-46" x="1190" y="1123.5" text-anchor="middle" font-size="25" font-weight="600" fill="#257DCA">运行资源</text>
+<rect x="365" y="1163" width="540" height="120" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="365" y="1163" width="540" height="56" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-47" x="635" y="1200" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">计算资源</text>
+<rect x="383" y="1220" width="244.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-48" x="505.25" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">应用实例</text>
+<rect x="642.5" y="1220" width="244.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-49" x="764.75" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">作业实例</text>
+<rect x="935" y="1163" width="520" height="120" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="935" y="1163" width="520" height="56" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-50" x="1195" y="1200" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">存储资源</text>
+<rect x="953" y="1220" width="234.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-51" x="1070.25" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">文件空间</text>
+<rect x="1202.5" y="1220" width="234.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-52" x="1319.75" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">备份空间</text>
+<rect x="1485" y="1163" width="530" height="120" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<rect x="1485" y="1163" width="530" height="56" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-53" x="1750" y="1200" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">网络资源</text>
+<rect x="1503" y="1220" width="154.66666666666666" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-54" x="1580.3333333333333" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">连接接入</text>
+<rect x="1672.6666666666667" y="1220" width="154.66666666666666" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-55" x="1750" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">名称服务</text>
+<rect x="1842.3333333333333" y="1220" width="154.66666666666666" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-56" x="1919.6666666666665" y="1257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">访问策略</text>
+<rect x="55" y="190" width="125" height="1120" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-57" x="117.5" y="229.739998" text-anchor="middle" font-size="23" font-weight="600" fill="#43804B"><tspan x="117.5" y="229.739998">标准规</tspan><tspan x="117.5" y="258.260002">范</tspan></text>
+<rect x="67" y="360" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-58" x="117.5" y="424.860001" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="117.5" y="424.860001">编码规</tspan><tspan x="117.5" y="452.139999">范</tspan></text>
+<rect x="67" y="607" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-59" x="117.5" y="671.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="117.5" y="671.859985">接口规</tspan><tspan x="117.5" y="699.140015">范</tspan></text>
+<rect x="67" y="854" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-60" x="117.5" y="918.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="117.5" y="918.859985">资料规</tspan><tspan x="117.5" y="946.140015">范</tspan></text>
+<rect x="67" y="1101" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-61" x="117.5" y="1165.860046" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="117.5" y="1165.860046">运行规</tspan><tspan x="117.5" y="1193.139954">范</tspan></text>
+<rect x="200" y="190" width="125" height="1120" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-62" x="262.5" y="229.739998" text-anchor="middle" font-size="23" font-weight="600" fill="#43804B"><tspan x="262.5" y="229.739998">维护规</tspan><tspan x="262.5" y="258.260002">则</tspan></text>
+<rect x="212" y="360" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-63" x="262.5" y="424.860001" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="262.5" y="424.860001">发布规</tspan><tspan x="262.5" y="452.139999">则</tspan></text>
+<rect x="212" y="607" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-64" x="262.5" y="671.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="262.5" y="671.859985">变更规</tspan><tspan x="262.5" y="699.140015">则</tspan></text>
+<rect x="212" y="854" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-65" x="262.5" y="918.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="262.5" y="918.859985">备份规</tspan><tspan x="262.5" y="946.140015">则</tspan></text>
+<rect x="212" y="1101" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-66" x="262.5" y="1165.860046" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="262.5" y="1165.860046">处置规</tspan><tspan x="262.5" y="1193.139954">则</tspan></text>
+<rect x="2070" y="190" width="125" height="1120" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-67" x="2132.5" y="229.739998" text-anchor="middle" font-size="23" font-weight="600" fill="#43804B"><tspan x="2132.5" y="229.739998">安全控</tspan><tspan x="2132.5" y="258.260002">制</tspan></text>
+<rect x="2082" y="360" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-68" x="2132.5" y="424.860001" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2132.5" y="424.860001">访问控</tspan><tspan x="2132.5" y="452.139999">制</tspan></text>
+<rect x="2082" y="607" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-69" x="2132.5" y="671.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2132.5" y="671.859985">授权核</tspan><tspan x="2132.5" y="699.140015">对</tspan></text>
+<rect x="2082" y="854" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-70" x="2132.5" y="918.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2132.5" y="918.859985">操作留</tspan><tspan x="2132.5" y="946.140015">痕</tspan></text>
+<rect x="2082" y="1101" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-71" x="2132.5" y="1165.860046" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2132.5" y="1165.860046">导出控</tspan><tspan x="2132.5" y="1193.139954">制</tspan></text>
+<rect x="2225" y="190" width="125" height="1120" rx="2" fill="#FFF" stroke="#CCD4DA" stroke-width="1.2"/>
+<text id="t-72" x="2287.5" y="229.739998" text-anchor="middle" font-size="23" font-weight="600" fill="#43804B"><tspan x="2287.5" y="229.739998">恢复保</tspan><tspan x="2287.5" y="258.260002">障</tspan></text>
+<rect x="2237" y="360" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-73" x="2287.5" y="424.860001" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2287.5" y="424.860001">副本管</tspan><tspan x="2287.5" y="452.139999">理</tspan></text>
+<rect x="2237" y="607" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-74" x="2287.5" y="671.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2287.5" y="671.859985">恢复记</tspan><tspan x="2287.5" y="699.140015">录</tspan></text>
+<rect x="2237" y="854" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-75" x="2287.5" y="918.859985" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2287.5" y="918.859985">故障通</tspan><tspan x="2287.5" y="946.140015">报</tspan></text>
+<rect x="2237" y="1101" width="101" height="140" rx="2" fill="#247DCC" stroke="#247DCC" stroke-width="1.2"/>
+<text id="t-76" x="2287.5" y="1165.860046" text-anchor="middle" font-size="22" font-weight="400" fill="#FFF"><tspan x="2287.5" y="1165.860046">状态核</tspan><tspan x="2287.5" y="1193.139954">验</tspan></text></g></svg>

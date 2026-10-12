@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="1530" viewBox="0 0 1950 1530" role="img" aria-labelledby="title desc"><title id="title">门店交易协同架构</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":88,"referenceId":"BQ-0042","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1615,72]},{"id":"t-2","box":[66,155,434,48]},{"id":"t-3","box":[82,231,195,58]},{"id":"t-4","box":[289,231,195,58]},{"id":"t-5","box":[536,155,434,48]},{"id":"t-6","box":[552,231,195,58]},{"id":"t-7","box":[759,231,195,58]},{"id":"t-8","box":[1006,155,434,48]},{"id":"t-9","box":[1022,231,195,58]},{"id":"t-10","box":[1229,231,195,58]},{"id":"t-11","box":[1476,155,434,48]},{"id":"t-12","box":[1492,231,195,58]},{"id":"t-13","box":[1699,231,195,58]},{"id":"t-14","box":[66,383,314,48]},{"id":"t-15","box":[84,480,278,90]},{"id":"t-16","box":[84,610,278,90]},{"id":"t-17","box":[84,740,278,90]},{"id":"t-18","box":[84,870,278,90]},{"id":"t-19","box":[84,1000,278,90]},{"id":"t-20","box":[84,1130,278,90]},{"id":"t-21","box":[416,383,1058,48]},{"id":"t-22","box":[436,468,320.6666666666667,58]},{"id":"t-23","box":[784.6666666666667,468,320.6666666666667,58]},{"id":"t-24","box":[1133.3333333333335,468,320.6666666666667,58]},{"id":"t-25","box":[436,554,320.6666666666667,58]},{"id":"t-26","box":[784.6666666666667,554,320.6666666666667,58]},{"id":"t-27","box":[1133.3333333333335,554,320.6666666666667,58]},{"id":"t-28","box":[1510,383,374,48]},{"id":"t-29","box":[1530,480,334,90]},{"id":"t-30","box":[1530,610,334,90]},{"id":"t-31","box":[1530,740,334,90]},{"id":"t-32","box":[1530,870,334,90]},{"id":"t-33","box":[1530,1000,334,90]},{"id":"t-34","box":[1530,1130,334,90]},{"id":"t-35","box":[416,694,1058,48]},{"id":"t-36","box":[767,784,350,72]},{"id":"t-37","box":[457,973,305,118]},{"id":"t-38","box":[1128,973,305,118]},{"id":"t-39","box":[457,1194,305,118]},{"id":"t-40","box":[1128,1194,305,118]},{"id":"t-41","box":[598,875,112,40]},{"id":"t-42","box":[1168,875,112,40]},{"id":"t-43","box":[865,1005,155,42]},{"id":"t-44","box":[621,1121,136,40]},{"id":"t-45","box":[1134,1121,136,40]},{"id":"t-46","box":[66,1390,1818,48]},{"id":"t-47","box":[300,1409,381,58]},{"id":"t-48","box":[693,1409,381,58]},{"id":"t-49","box":[1086,1409,381,58]},{"id":"t-50","box":[1479,1409,381,58]}],"nodes":[{"id":"supply-1","label":"采购提交","box":[82,231,195,58],"parent":"supply"},{"id":"supply-2","label":"收货登记","box":[289,231,195,58],"parent":"supply"},{"id":"product-1","label":"主档读取","box":[552,231,195,58],"parent":"product"},{"id":"product-2","label":"价格查询","box":[759,231,195,58],"parent":"product"},{"id":"customer-1","label":"会员查询","box":[1022,231,195,58],"parent":"customer"},{"id":"customer-2","label":"权益查询","box":[1229,231,195,58],"parent":"customer"},{"id":"partner-1","label":"订单接收","box":[1492,231,195,58],"parent":"partner"},{"id":"partner-2","label":"结果回执","box":[1699,231,195,58],"parent":"partner"},{"id":"left-1","label":"采购协同","box":[84,480,278,90],"parent":"left"},{"id":"left-2","label":"库存回执","box":[84,610,278,90],"parent":"left"},{"id":"left-3","label":"会员关联","box":[84,740,278,90],"parent":"left"},{"id":"left-4","label":"权益登记","box":[84,870,278,90],"parent":"left"},{"id":"left-5","label":"财务回执","box":[84,1000,278,90],"parent":"left"},{"id":"left-6","label":"资料同步","box":[84,1130,278,90],"parent":"left"},{"id":"pos-1","label":"销售登记","box":[436,468,320.6666666666667,58],"parent":"pos"},{"id":"pos-2","label":"退货登记","box":[784.6666666666667,468,320.6666666666667,58],"parent":"pos"},{"id":"pos-3","label":"商品查询","box":[1133.3333333333335,468,320.6666666666667,58],"parent":"pos"},{"id":"pos-4","label":"订单查询","box":[436,554,320.6666666666667,58],"parent":"pos"},{"id":"pos-5","label":"库存查询","box":[784.6666666666667,554,320.6666666666667,58],"parent":"pos"},{"id":"pos-6","label":"收款申请","box":[1133.3333333333335,554,320.6666666666667,58],"parent":"pos"},{"id":"right-1","label":"配送任务","box":[1530,480,334,90],"parent":"right"},{"id":"right-2","label":"配送状态","box":[1530,610,334,90],"parent":"right"},{"id":"right-3","label":"库存同步","box":[1530,740,334,90],"parent":"right"},{"id":"right-4","label":"供应查询","box":[1530,870,334,90],"parent":"right"},{"id":"right-5","label":"账单查询","box":[1530,1000,334,90],"parent":"right"},{"id":"right-6","label":"结算回执","box":[1530,1130,334,90],"parent":"right"},{"id":"master","label":"主档管理","box":[767,784,350,72],"parent":"core"},{"id":"order","label":"订单处理","box":[457,973,305,118],"parent":"core"},{"id":"stock","label":"库存处理","box":[1128,973,305,118],"parent":"core"},{"id":"collect","label":"收款处理","box":[457,1194,305,118],"parent":"core"},{"id":"fulfill","label":"履约处理","box":[1128,1194,305,118],"parent":"core"},{"id":"analysis-1","label":"销售分析","box":[300,1409,381,58],"parent":"analysis"},{"id":"analysis-2","label":"库存分析","box":[693,1409,381,58],"parent":"analysis"},{"id":"analysis-3","label":"客户分析","box":[1086,1409,381,58],"parent":"analysis"},{"id":"analysis-4","label":"订单分析","box":[1479,1409,381,58],"parent":"analysis"}],"groups":[{"id":"supply","title":"供应协同","box":[60,150,446,198],"headH":58},{"id":"product","title":"商品目录","box":[530,150,446,198],"headH":58},{"id":"customer","title":"客户服务","box":[1000,150,446,198],"headH":58},{"id":"partner","title":"合作接口","box":[1470,150,446,198],"headH":58},{"id":"left","title":"外围协同","box":[60,378,326,982],"headH":58},{"id":"pos","title":"门店操作","box":[410,378,1070,287],"headH":58},{"id":"right","title":"服务集成","box":[1504,378,386,982],"headH":58},{"id":"core","title":"交易核心协作","box":[410,689,1070,671],"headH":58},{"id":"analysis","title":"共享分析","box":[60,1385,1830,101],"headH":58}],"paths":[{"from":"master","to":"order","points":[[767,820],[608,820],[608,973]],"label":"商品资料","labelBox":[598,875,112,40]},{"from":"master","to":"stock","points":[[1117,820],[1280,820],[1280,973]],"label":"库存主档","labelBox":[1168,875,112,40]},{"from":"order","to":"stock","points":[[762,1032],[1128,1032]],"label":"库存检查","labelBox":[865,1005,155,42]},{"from":"order","to":"collect","points":[[610,1091],[610,1194]],"label":"收款申请","labelBox":[621,1121,136,40]},{"from":"stock","to":"fulfill","points":[[1280,1091],[1280,1194]],"label":"出库任务","labelBox":[1134,1121,136,40]}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1950" height="1530" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#26394A">门店交易协同架构</text>
+<g transform="translate(1682 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#65517D"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<rect x="60" y="150" width="446" height="198" rx="2" fill="#FFF6EC" stroke="#D6A092" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-2" x="283" y="189.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">供应协同</text>
+<rect x="82" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-3" x="179.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">采购提交</text>
+<rect x="289" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-4" x="386.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">收货登记</text>
+<rect x="530" y="150" width="446" height="198" rx="2" fill="#FFF6EC" stroke="#D6A092" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-5" x="753" y="189.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">商品目录</text>
+<rect x="552" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-6" x="649.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">主档读取</text>
+<rect x="759" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-7" x="856.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">价格查询</text>
+<rect x="1000" y="150" width="446" height="198" rx="2" fill="#FFF6EC" stroke="#D6A092" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-8" x="1223" y="189.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">客户服务</text>
+<rect x="1022" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-9" x="1119.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">会员查询</text>
+<rect x="1229" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-10" x="1326.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">权益查询</text>
+<rect x="1470" y="150" width="446" height="198" rx="2" fill="#FFF6EC" stroke="#D6A092" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-11" x="1693" y="189.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">合作接口</text>
+<rect x="1492" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-12" x="1589.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">订单接收</text>
+<rect x="1699" y="231" width="195" height="58" rx="2" fill="#F5DAC0" stroke="#D0B199" stroke-width="1.2"/>
+<text id="t-13" x="1796.5" y="269.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">结果回执</text>
+<rect x="60" y="378" width="326" height="982" rx="2" fill="#FFF" stroke="#CB8E8E" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-14" x="223" y="417.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">外围协同</text>
+<rect x="84" y="480" width="278" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-15" x="223" y="534.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">采购协同</text>
+<rect x="84" y="610" width="278" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-16" x="223" y="664.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">库存回执</text>
+<rect x="84" y="740" width="278" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-17" x="223" y="794.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">会员关联</text>
+<rect x="84" y="870" width="278" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-18" x="223" y="924.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">权益登记</text>
+<rect x="84" y="1000" width="278" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-19" x="223" y="1054.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">财务回执</text>
+<rect x="84" y="1130" width="278" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-20" x="223" y="1184.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">资料同步</text>
+<rect x="410" y="378" width="1070" height="287" rx="2" fill="#FFF" stroke="#CB8E8E" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-21" x="945" y="417.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">门店操作</text>
+<rect x="436" y="468" width="320.6666666666667" height="58" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-22" x="596.3333333333334" y="506.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">销售登记</text>
+<rect x="784.6666666666667" y="468" width="320.6666666666667" height="58" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-23" x="945.0000000000001" y="506.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">退货登记</text>
+<rect x="1133.3333333333335" y="468" width="320.6666666666667" height="58" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-24" x="1293.6666666666667" y="506.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">商品查询</text>
+<rect x="436" y="554" width="320.6666666666667" height="58" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-25" x="596.3333333333334" y="592.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">订单查询</text>
+<rect x="784.6666666666667" y="554" width="320.6666666666667" height="58" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-26" x="945.0000000000001" y="592.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">库存查询</text>
+<rect x="1133.3333333333335" y="554" width="320.6666666666667" height="58" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-27" x="1293.6666666666667" y="592.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">收款申请</text>
+<rect x="1504" y="378" width="386" height="982" rx="2" fill="#FFF" stroke="#CB8E8E" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-28" x="1697" y="417.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">服务集成</text>
+<rect x="1530" y="480" width="334" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-29" x="1697" y="534.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">配送任务</text>
+<rect x="1530" y="610" width="334" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-30" x="1697" y="664.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">配送状态</text>
+<rect x="1530" y="740" width="334" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-31" x="1697" y="794.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">库存同步</text>
+<rect x="1530" y="870" width="334" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-32" x="1697" y="924.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">供应查询</text>
+<rect x="1530" y="1000" width="334" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-33" x="1697" y="1054.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">账单查询</text>
+<rect x="1530" y="1130" width="334" height="90" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-34" x="1697" y="1184.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">结算回执</text>
+<rect x="410" y="689" width="1070" height="671" rx="2" fill="#FFF" stroke="#CB8E8E" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-35" x="945" y="728.5" text-anchor="middle" font-size="26" font-weight="600" fill="#65517D">交易核心协作</text>
+<rect x="767" y="784" width="350" height="72" rx="2" fill="#E4D4EF" stroke="#BDA7D1" stroke-width="1.2"/>
+<text id="t-36" x="942" y="829" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">主档管理</text>
+<rect x="457" y="973" width="305" height="118" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-37" x="609.5" y="1041" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">订单处理</text>
+<rect x="1128" y="973" width="305" height="118" rx="2" fill="#D5EAF6" stroke="#A8CCDF" stroke-width="1.2"/>
+<text id="t-38" x="1280.5" y="1041" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">库存处理</text>
+<rect x="457" y="1194" width="305" height="118" rx="2" fill="#E4D4EF" stroke="#BDA7D1" stroke-width="1.2"/>
+<text id="t-39" x="609.5" y="1262" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">收款处理</text>
+<rect x="1128" y="1194" width="305" height="118" rx="2" fill="#E4D4EF" stroke="#BDA7D1" stroke-width="1.2"/>
+<text id="t-40" x="1280.5" y="1262" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">履约处理</text>
+<path d="M767,820 L608,820 L608,973" fill="none" stroke="#65517D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="598" y="875" width="112" height="40" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-41" x="654" y="903" text-anchor="middle" font-size="20" font-weight="400" fill="#65517D">商品资料</text>
+<path d="M1117,820 L1280,820 L1280,973" fill="none" stroke="#65517D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1168" y="875" width="112" height="40" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-42" x="1224" y="903" text-anchor="middle" font-size="20" font-weight="400" fill="#65517D">库存主档</text>
+<path d="M762,1032 L1128,1032" fill="none" stroke="#65517D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="865" y="1005" width="155" height="42" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-43" x="942.5" y="1034" text-anchor="middle" font-size="20" font-weight="400" fill="#65517D">库存检查</text>
+<path d="M610,1091 L610,1194" fill="none" stroke="#65517D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="621" y="1121" width="136" height="40" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-44" x="689" y="1149" text-anchor="middle" font-size="20" font-weight="400" fill="#65517D">收款申请</text>
+<path d="M1280,1091 L1280,1194" fill="none" stroke="#65517D" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1134" y="1121" width="136" height="40" rx="2" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+<text id="t-45" x="1202" y="1149" text-anchor="middle" font-size="20" font-weight="400" fill="#65517D">出库任务</text>
+<rect x="60" y="1385" width="1830" height="101" rx="2" fill="#FFF" stroke="#CB8E8E" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text id="t-46" x="78" y="1424.5" text-anchor="start" font-size="26" font-weight="600" fill="#65517D">共享分析</text>
+<rect x="300" y="1409" width="381" height="58" rx="2" fill="#E8EEF3" stroke="#C4D1DD" stroke-width="1.2"/>
+<text id="t-47" x="490.5" y="1447.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">销售分析</text>
+<rect x="693" y="1409" width="381" height="58" rx="2" fill="#E8EEF3" stroke="#C4D1DD" stroke-width="1.2"/>
+<text id="t-48" x="883.5" y="1447.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">库存分析</text>
+<rect x="1086" y="1409" width="381" height="58" rx="2" fill="#E8EEF3" stroke="#C4D1DD" stroke-width="1.2"/>
+<text id="t-49" x="1276.5" y="1447.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">客户分析</text>
+<rect x="1479" y="1409" width="381" height="58" rx="2" fill="#E8EEF3" stroke="#C4D1DD" stroke-width="1.2"/>
+<text id="t-50" x="1669.5" y="1447.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">订单分析</text></g></svg>

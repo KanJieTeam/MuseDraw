@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1500" viewBox="0 0 1800 1500" role="img" aria-labelledby="title desc"><title id="title">风险评估模型能力架构</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":93,"referenceId":"EQ-1867","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1465,72]},{"id":"t-2","box":[86,201,1628,50]},{"id":"t-3","box":[302,280,268.8,58]},{"id":"t-4","box":[582.8,280,268.8,58]},{"id":"t-5","box":[863.6,280,268.8,58]},{"id":"t-6","box":[1144.4,280,268.8,58]},{"id":"t-7","box":[1425.2,280,268.8,58]},{"id":"t-8","box":[86,404,1628,50]},{"id":"t-9","box":[302,483,268.8,58]},{"id":"t-10","box":[582.8,483,268.8,58]},{"id":"t-11","box":[863.6,483,268.8,58]},{"id":"t-12","box":[1144.4,483,268.8,58]},{"id":"t-13","box":[1425.2,483,268.8,58]},{"id":"t-14","box":[86,607,1628,50]},{"id":"t-15","box":[302,686,268.8,58]},{"id":"t-16","box":[582.8,686,268.8,58]},{"id":"t-17","box":[863.6,686,268.8,58]},{"id":"t-18","box":[1144.4,686,268.8,58]},{"id":"t-19","box":[1425.2,686,268.8,58]},{"id":"t-20","box":[86,810,1628,50]},{"id":"t-21","box":[302,889,268.8,58]},{"id":"t-22","box":[582.8,889,268.8,58]},{"id":"t-23","box":[863.6,889,268.8,58]},{"id":"t-24","box":[1144.4,889,268.8,58]},{"id":"t-25","box":[1425.2,889,268.8,58]},{"id":"t-26","box":[86,1013,1628,50]},{"id":"t-27","box":[302,1092,268.8,58]},{"id":"t-28","box":[582.8,1092,268.8,58]},{"id":"t-29","box":[863.6,1092,268.8,58]},{"id":"t-30","box":[1144.4,1092,268.8,58]},{"id":"t-31","box":[1425.2,1092,268.8,58]},{"id":"t-32","box":[86,1216,1628,42]},{"id":"t-33","box":[302,1264,340.5,58]},{"id":"t-34","box":[652.5,1264,340.5,58]},{"id":"t-35","box":[1003,1264,340.5,58]},{"id":"t-36","box":[1353.5,1264,340.5,58]},{"id":"t-37","box":[302,1332,340.5,58]},{"id":"t-38","box":[652.5,1332,340.5,58]},{"id":"t-39","box":[1003,1332,340.5,58]},{"id":"t-40","box":[1353.5,1332,340.5,58]}],"nodes":[{"id":"app-1","label":"结果查询","box":[302,280,268.8,58],"parent":"app"},{"id":"app-2","label":"风险复核","box":[582.8,280,268.8,58],"parent":"app"},{"id":"app-3","label":"规则解释","box":[863.6,280,268.8,58],"parent":"app"},{"id":"app-4","label":"任务查询","box":[1144.4,280,268.8,58],"parent":"app"},{"id":"app-5","label":"问题反馈","box":[1425.2,280,268.8,58],"parent":"app"},{"id":"model-1","label":"模型登记","box":[302,483,268.8,58],"parent":"model"},{"id":"model-2","label":"版本管理","box":[582.8,483,268.8,58],"parent":"model"},{"id":"model-3","label":"发布记录","box":[863.6,483,268.8,58],"parent":"model"},{"id":"model-4","label":"适用条件","box":[1144.4,483,268.8,58],"parent":"model"},{"id":"model-5","label":"模型回溯","box":[1425.2,483,268.8,58],"parent":"model"},{"id":"algorithm-1","label":"评分计算","box":[302,686,268.8,58],"parent":"algorithm"},{"id":"algorithm-2","label":"分类计算","box":[582.8,686,268.8,58],"parent":"algorithm"},{"id":"algorithm-3","label":"相似计算","box":[863.6,686,268.8,58],"parent":"algorithm"},{"id":"algorithm-4","label":"异常计算","box":[1144.4,686,268.8,58],"parent":"algorithm"},{"id":"algorithm-5","label":"结果校验","box":[1425.2,686,268.8,58],"parent":"algorithm"},{"id":"feature-1","label":"字段映射","box":[302,889,268.8,58],"parent":"feature"},{"id":"feature-2","label":"特征定义","box":[582.8,889,268.8,58],"parent":"feature"},{"id":"feature-3","label":"时间窗口","box":[863.6,889,268.8,58],"parent":"feature"},{"id":"feature-4","label":"缺值处理","box":[1144.4,889,268.8,58],"parent":"feature"},{"id":"feature-5","label":"特征查询","box":[1425.2,889,268.8,58],"parent":"feature"},{"id":"process-1","label":"格式解析","box":[302,1092,268.8,58],"parent":"process"},{"id":"process-2","label":"类型检查","box":[582.8,1092,268.8,58],"parent":"process"},{"id":"process-3","label":"重复过滤","box":[863.6,1092,268.8,58],"parent":"process"},{"id":"process-4","label":"字段清洗","box":[1144.4,1092,268.8,58],"parent":"process"},{"id":"process-5","label":"来源关联","box":[1425.2,1092,268.8,58],"parent":"process"},{"id":"source-1","label":"申请记录","box":[302,1264,340.5,58],"parent":"source"},{"id":"source-2","label":"业务记录","box":[652.5,1264,340.5,58],"parent":"source"},{"id":"source-3","label":"交互日志","box":[1003,1264,340.5,58],"parent":"source"},{"id":"source-4","label":"服务记录","box":[1353.5,1264,340.5,58],"parent":"source"},{"id":"source-5","label":"外部资料","box":[302,1332,340.5,58],"parent":"source"},{"id":"source-6","label":"历史评估","box":[652.5,1332,340.5,58],"parent":"source"},{"id":"source-7","label":"规则数据","box":[1003,1332,340.5,58],"parent":"source"},{"id":"source-8","label":"主档数据","box":[1353.5,1332,340.5,58],"parent":"source"}],"groups":[{"id":"app","title":"评估应用","box":[80,196,1640,175],"headH":60},{"id":"model","title":"模型管理","box":[80,399,1640,175],"headH":60},{"id":"algorithm","title":"计算方法","box":[80,602,1640,175],"headH":60},{"id":"feature","title":"特征组织","box":[80,805,1640,175],"headH":60},{"id":"process","title":"数据整理","box":[80,1008,1640,175],"headH":60},{"id":"source","title":"数据来源","box":[80,1211,1640,183],"headH":52}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1800" height="1500" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#343B42">风险评估模型能力架构</text>
+<g transform="translate(1532 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#849EBB"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<rect x="55" y="145" width="1690" height="1288" rx="32" fill="#FFF" stroke="#BAC0C7" stroke-width="1.2"/>
+<rect x="80" y="196" width="1640" height="175" rx="2" fill="#F7DFD1" stroke="#C9C8C8" stroke-width="1.2"/>
+<text id="t-2" x="98" y="236.5" text-anchor="start" font-size="26" font-weight="600" fill="#849EBB">评估应用</text>
+<rect x="302" y="280" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-3" x="436.4" y="318.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">结果查询</text>
+<rect x="582.8" y="280" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-4" x="717.1999999999999" y="318.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">风险复核</text>
+<rect x="863.6" y="280" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-5" x="998" y="318.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">规则解释</text>
+<rect x="1144.4" y="280" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-6" x="1278.8000000000002" y="318.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">任务查询</text>
+<rect x="1425.2" y="280" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-7" x="1559.6000000000001" y="318.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">问题反馈</text>
+<rect x="80" y="399" width="1640" height="175" rx="2" fill="#F7DFD1" stroke="#C9C8C8" stroke-width="1.2"/>
+<text id="t-8" x="98" y="439.5" text-anchor="start" font-size="26" font-weight="600" fill="#849EBB">模型管理</text>
+<rect x="302" y="483" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-9" x="436.4" y="521.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">模型登记</text>
+<rect x="582.8" y="483" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-10" x="717.1999999999999" y="521.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">版本管理</text>
+<rect x="863.6" y="483" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-11" x="998" y="521.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">发布记录</text>
+<rect x="1144.4" y="483" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-12" x="1278.8000000000002" y="521.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">适用条件</text>
+<rect x="1425.2" y="483" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-13" x="1559.6000000000001" y="521.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">模型回溯</text>
+<rect x="80" y="602" width="1640" height="175" rx="2" fill="#DCE8F7" stroke="#C9C8C8" stroke-width="1.2"/>
+<text id="t-14" x="98" y="642.5" text-anchor="start" font-size="26" font-weight="600" fill="#849EBB">计算方法</text>
+<rect x="302" y="686" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-15" x="436.4" y="724.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">评分计算</text>
+<rect x="582.8" y="686" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-16" x="717.1999999999999" y="724.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">分类计算</text>
+<rect x="863.6" y="686" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-17" x="998" y="724.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">相似计算</text>
+<rect x="1144.4" y="686" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-18" x="1278.8000000000002" y="724.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">异常计算</text>
+<rect x="1425.2" y="686" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-19" x="1559.6000000000001" y="724.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">结果校验</text>
+<rect x="80" y="805" width="1640" height="175" rx="2" fill="#DCE8F7" stroke="#C9C8C8" stroke-width="1.2"/>
+<text id="t-20" x="98" y="845.5" text-anchor="start" font-size="26" font-weight="600" fill="#849EBB">特征组织</text>
+<rect x="302" y="889" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-21" x="436.4" y="927.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">字段映射</text>
+<rect x="582.8" y="889" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-22" x="717.1999999999999" y="927.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">特征定义</text>
+<rect x="863.6" y="889" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-23" x="998" y="927.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">时间窗口</text>
+<rect x="1144.4" y="889" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-24" x="1278.8000000000002" y="927.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">缺值处理</text>
+<rect x="1425.2" y="889" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-25" x="1559.6000000000001" y="927.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">特征查询</text>
+<rect x="80" y="1008" width="1640" height="175" rx="2" fill="#E2E1E0" stroke="#C9C8C8" stroke-width="1.2"/>
+<text id="t-26" x="98" y="1048.5" text-anchor="start" font-size="26" font-weight="600" fill="#849EBB">数据整理</text>
+<rect x="302" y="1092" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-27" x="436.4" y="1130.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">格式解析</text>
+<rect x="582.8" y="1092" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-28" x="717.1999999999999" y="1130.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">类型检查</text>
+<rect x="863.6" y="1092" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-29" x="998" y="1130.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">重复过滤</text>
+<rect x="1144.4" y="1092" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-30" x="1278.8000000000002" y="1130.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">字段清洗</text>
+<rect x="1425.2" y="1092" width="268.8" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-31" x="1559.6000000000001" y="1130.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">来源关联</text>
+<rect x="80" y="1211" width="1640" height="183" rx="2" fill="#E2E1E0" stroke="#C9C8C8" stroke-width="1.2"/>
+<text id="t-32" x="98" y="1247.5" text-anchor="start" font-size="26" font-weight="600" fill="#849EBB">数据来源</text>
+<rect x="302" y="1264" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-33" x="472.25" y="1302.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">申请记录</text>
+<rect x="652.5" y="1264" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-34" x="822.75" y="1302.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">业务记录</text>
+<rect x="1003" y="1264" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-35" x="1173.25" y="1302.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">交互日志</text>
+<rect x="1353.5" y="1264" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-36" x="1523.75" y="1302.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">服务记录</text>
+<rect x="302" y="1332" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-37" x="472.25" y="1370.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">外部资料</text>
+<rect x="652.5" y="1332" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-38" x="822.75" y="1370.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">历史评估</text>
+<rect x="1003" y="1332" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-39" x="1173.25" y="1370.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">规则数据</text>
+<rect x="1353.5" y="1332" width="340.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-40" x="1523.75" y="1370.5" text-anchor="middle" font-size="24" font-weight="400" fill="#343B42">主档数据</text></g></svg>
