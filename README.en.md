@@ -5,7 +5,7 @@
   <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
 </picture>
 
-<h3>A scientific-figure assistant</h3>
+<h3>A professional drawing assistant</h3>
 
 <p>Bring figure-design practice to your AI workflow.</p>
 
@@ -16,6 +16,7 @@
 
 <p>
   <a href="#quick-start">Quick start</a> ·
+  <a href="https://kanjieteam.github.io/MuseDraw/">Gallery</a> ·
   <a href="docs/usage.md">Usage guide</a> ·
   <a href="#contribute">Contribute</a> ·
   <a href="README.md">简体中文</a>
@@ -25,7 +26,7 @@
 
 ---
 
-MuseDraw is an open-source drawing Skill for researchers. Bring composition, color, typography and image-production workflows to the agent you already use, and draw and revise in the same conversation.
+MuseDraw is an open-source Skill for professional diagrams. Bring composition, color, typography and image-production workflows to the agent you already use, for technical, product and research communication. Draw and revise in the same conversation.
 
 ## Quick start
 
@@ -49,6 +50,8 @@ Installation requires Node.js 18+ and an agent with file access and execution to
 
 Delivery includes **PNG images and SVG source**. Continue refining content, composition and style through conversation; preserve confirmed information and relationships during style-only changes.
 
+[Browse 100 original architecture diagrams](https://kanjieteam.github.io/MuseDraw/): zoom in, copy a prompt, or download PNG, SVG and individually editable drawio files.
+
 The available Skill is [`musedraw`](skills/musedraw/SKILL.md). Research methods, experimental workflows, algorithm diagrams and Python/R data visualization are future directions, not released Skills.
 
 ## Design approach
@@ -59,7 +62,7 @@ The available Skill is [`musedraw`](skills/musedraw/SKILL.md). Research methods,
 
 ## Contribute
 
-Researchers, designers and developers are welcome. Improve design guidance and production tools, or contribute a scientific-figure workflow that goes from input to image delivery.
+Engineers, researchers, product teams, designers and developers are welcome. Improve design guidance and production tools, or contribute a professional-diagram workflow that goes from input to image delivery.
 
 [Contribution guide](CONTRIBUTING.md) · [Problems and suggestions](https://github.com/KanJieTeam/MuseDraw/issues)
 

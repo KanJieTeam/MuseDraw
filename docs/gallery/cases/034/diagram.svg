@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2130" height="1270" viewBox="0 0 2130 1270" role="img" aria-labelledby="title desc"><title id="title">项目资金台账与结算能力图</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":34,"referenceId":"EQ-0303","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1795,72]},{"id":"t-2","box":[181,160,1543,48]},{"id":"t-3","box":[195,237,240,60]},{"id":"t-4","box":[450,237,240,60]},{"id":"t-5","box":[705,237,240,60]},{"id":"t-6","box":[960,237,240,60]},{"id":"t-7","box":[1215,237,240,60]},{"id":"t-8","box":[1470,237,240,60]},{"id":"t-9","box":[181,345,1543,48]},{"id":"t-10","box":[201,435,189,48]},{"id":"t-11","box":[208,510,175,66]},{"id":"t-12","box":[208,593,175,66]},{"id":"t-13","box":[208,676,175,66]},{"id":"t-14","box":[417,435,189,48]},{"id":"t-15","box":[424,510,175,66]},{"id":"t-16","box":[424,593,175,66]},{"id":"t-17","box":[424,676,175,66]},{"id":"t-18","box":[633,435,189,48]},{"id":"t-19","box":[640,510,175,66]},{"id":"t-20","box":[640,593,175,66]},{"id":"t-21","box":[640,676,175,66]},{"id":"t-22","box":[849,435,189,48]},{"id":"t-23","box":[856,510,175,66]},{"id":"t-24","box":[856,593,175,66]},{"id":"t-25","box":[856,676,175,66]},{"id":"t-26","box":[1065,435,189,48]},{"id":"t-27","box":[1072,510,175,66]},{"id":"t-28","box":[1072,593,175,66]},{"id":"t-29","box":[1072,676,175,66]},{"id":"t-30","box":[1281,435,189,48]},{"id":"t-31","box":[1288,510,175,66]},{"id":"t-32","box":[1288,593,175,66]},{"id":"t-33","box":[1288,676,175,66]},{"id":"t-34","box":[1497,435,189,48]},{"id":"t-35","box":[1504,510,175,66]},{"id":"t-36","box":[1504,593,175,66]},{"id":"t-37","box":[1504,676,175,66]},{"id":"t-38","box":[195,754,367.5,58]},{"id":"t-39","box":[577.5,754,367.5,58]},{"id":"t-40","box":[960,754,367.5,58]},{"id":"t-41","box":[1342.5,754,367.5,58]},{"id":"t-42","box":[181,850,1543,48]},{"id":"t-43","box":[195,929,291,58]},{"id":"t-44","box":[501,929,291,58]},{"id":"t-45","box":[807,929,291,58]},{"id":"t-46","box":[1113,929,291,58]},{"id":"t-47","box":[1419,929,291,58]},{"id":"t-48","box":[181,1040,1543,48]},{"id":"t-49","box":[195,1110,291,58]},{"id":"t-50","box":[501,1110,291,58]},{"id":"t-51","box":[807,1110,291,58]},{"id":"t-52","box":[1113,1110,291,58]},{"id":"t-53","box":[1419,1110,291,58]},{"id":"t-54","box":[1776,160,298,48]},{"id":"t-55","box":[1795,260,260,68]},{"id":"t-56","box":[1795,369,260,68]},{"id":"t-57","box":[1795,478,260,68]},{"id":"t-58","box":[1795,587,260,68]},{"id":"t-59","box":[1795,696,260,68]},{"id":"t-60","box":[1795,805,260,68]},{"id":"t-61","box":[1795,914,260,68]},{"id":"t-62","box":[1795,1023,260,68]},{"id":"t-63","box":[45,167,95,136]},{"id":"t-64","box":[45,352,95,456]},{"id":"t-65","box":[45,857,95,141]},{"id":"t-66","box":[45,1047,95,126]}],"nodes":[{"id":"analysis-1","label":"预算执行","box":[195,237,240,60],"parent":"analysis"},{"id":"analysis-2","label":"资金占用","box":[450,237,240,60],"parent":"analysis"},{"id":"analysis-3","label":"结算进度","box":[705,237,240,60],"parent":"analysis"},{"id":"analysis-4","label":"票据统计","box":[960,237,240,60],"parent":"analysis"},{"id":"analysis-5","label":"异常核对","box":[1215,237,240,60],"parent":"analysis"},{"id":"analysis-6","label":"项目汇总","box":[1470,237,240,60],"parent":"analysis"},{"id":"budget-1","label":"额度登记","box":[208,510,175,66],"parent":"budget"},{"id":"budget-2","label":"分项分配","box":[208,593,175,66],"parent":"budget"},{"id":"budget-3","label":"调整留痕","box":[208,676,175,66],"parent":"budget"},{"id":"contract-1","label":"合同登记","box":[424,510,175,66],"parent":"contract"},{"id":"contract-2","label":"节点维护","box":[424,593,175,66],"parent":"contract"},{"id":"contract-3","label":"变更核对","box":[424,676,175,66],"parent":"contract"},{"id":"expense-1","label":"费用归集","box":[640,510,175,66],"parent":"expense"},{"id":"expense-2","label":"项目关联","box":[640,593,175,66],"parent":"expense"},{"id":"expense-3","label":"凭据整理","box":[640,676,175,66],"parent":"expense"},{"id":"payment-1","label":"申请登记","box":[856,510,175,66],"parent":"payment"},{"id":"payment-2","label":"条件核验","box":[856,593,175,66],"parent":"payment"},{"id":"payment-3","label":"状态跟踪","box":[856,676,175,66],"parent":"payment"},{"id":"receipt-1","label":"回款登记","box":[1072,510,175,66],"parent":"receipt"},{"id":"receipt-2","label":"来源核对","box":[1072,593,175,66],"parent":"receipt"},{"id":"receipt-3","label":"认领匹配","box":[1072,676,175,66],"parent":"receipt"},{"id":"invoice-1","label":"票据登记","box":[1288,510,175,66],"parent":"invoice"},{"id":"invoice-2","label":"关联台账","box":[1288,593,175,66],"parent":"invoice"},{"id":"invoice-3","label":"归档检索","box":[1288,676,175,66],"parent":"invoice"},{"id":"settlement-1","label":"结算清单","box":[1504,510,175,66],"parent":"settlement"},{"id":"settlement-2","label":"差异处理","box":[1504,593,175,66],"parent":"settlement"},{"id":"settlement-3","label":"结果确认","box":[1504,676,175,66],"parent":"settlement"},{"id":"business-1","label":"核对任务","box":[195,754,367.5,58],"parent":"business"},{"id":"business-2","label":"审批记录","box":[577.5,754,367.5,58],"parent":"business"},{"id":"business-3","label":"对账清单","box":[960,754,367.5,58],"parent":"business"},{"id":"business-4","label":"结算档案","box":[1342.5,754,367.5,58],"parent":"business"},{"id":"engine-1","label":"核算规则","box":[195,929,291,58],"parent":"engine"},{"id":"engine-2","label":"分摊规则","box":[501,929,291,58],"parent":"engine"},{"id":"engine-3","label":"匹配规则","box":[807,929,291,58],"parent":"engine"},{"id":"engine-4","label":"任务编排","box":[1113,929,291,58],"parent":"engine"},{"id":"engine-5","label":"表单配置","box":[1419,929,291,58],"parent":"engine"},{"id":"data-1","label":"项目目录","box":[195,1110,291,58],"parent":"data"},{"id":"data-2","label":"单位目录","box":[501,1110,291,58],"parent":"data"},{"id":"data-3","label":"科目目录","box":[807,1110,291,58],"parent":"data"},{"id":"data-4","label":"账户记录","box":[1113,1110,291,58],"parent":"data"},{"id":"data-5","label":"资料附件","box":[1419,1110,291,58],"parent":"data"},{"id":"integration-1","label":"项目资料","box":[1795,260,260,68],"parent":"integration"},{"id":"integration-2","label":"合同资料","box":[1795,369,260,68],"parent":"integration"},{"id":"integration-3","label":"预算资料","box":[1795,478,260,68],"parent":"integration"},{"id":"integration-4","label":"费用资料","box":[1795,587,260,68],"parent":"integration"},{"id":"integration-5","label":"付款状态","box":[1795,696,260,68],"parent":"integration"},{"id":"integration-6","label":"收款状态","box":[1795,805,260,68],"parent":"integration"},{"id":"integration-7","label":"票据资料","box":[1795,914,260,68],"parent":"integration"},{"id":"integration-8","label":"归档索引","box":[1795,1023,260,68],"parent":"integration"}],"groups":[{"id":"analysis","title":"资金视图","box":[175,155,1555,160],"headH":58},{"id":"business","title":"台账与结算","box":[175,340,1555,480],"headH":58},{"id":"budget","title":"预算台账","box":[195,430,201,315],"headH":58},{"id":"contract","title":"合同台账","box":[411,430,201,315],"headH":58},{"id":"expense","title":"费用台账","box":[627,430,201,315],"headH":58},{"id":"payment","title":"付款申请","box":[843,430,201,315],"headH":58},{"id":"receipt","title":"收款记录","box":[1059,430,201,315],"headH":58},{"id":"invoice","title":"票据管理","box":[1275,430,201,315],"headH":58},{"id":"settlement","title":"结算处理","box":[1491,430,201,315],"headH":58},{"id":"engine","title":"处理引擎","box":[175,845,1555,165],"headH":58},{"id":"data","title":"共享资料","box":[175,1035,1555,150],"headH":58},{"id":"integration","title":"集成中心","box":[1770,155,310,1030],"headH":58}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2130" height="1270" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#26394A">项目资金台账与结算能力图</text>
+<g transform="translate(1862 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#2473BD"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L2096,112" fill="none" stroke="#2473BD" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="175" y="155" width="1555" height="160" rx="2" fill="#EAEFF5" stroke="#B8C9D9" stroke-width="1.2"/>
+<text id="t-2" x="952.5" y="194.5" text-anchor="middle" font-size="26" font-weight="600" fill="#2777BD">资金视图</text>
+<rect x="195" y="237" width="240" height="60" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-3" x="315" y="276" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">预算执行</text>
+<rect x="450" y="237" width="240" height="60" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-4" x="570" y="276" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">资金占用</text>
+<rect x="705" y="237" width="240" height="60" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-5" x="825" y="276" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">结算进度</text>
+<rect x="960" y="237" width="240" height="60" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-6" x="1080" y="276" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">票据统计</text>
+<rect x="1215" y="237" width="240" height="60" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-7" x="1335" y="276" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">异常核对</text>
+<rect x="1470" y="237" width="240" height="60" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-8" x="1590" y="276" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">项目汇总</text>
+<rect x="175" y="340" width="1555" height="480" rx="2" fill="#E8EDF3" stroke="#B8C9D9" stroke-width="1.2"/>
+<text id="t-9" x="952.5" y="379.5" text-anchor="middle" font-size="26" font-weight="600" fill="#2777BD">台账与结算</text>
+<rect x="195" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="195" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-10" x="295.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">预算台账</text>
+<rect x="208" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-11" x="295.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">额度登记</text>
+<rect x="208" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-12" x="295.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">分项分配</text>
+<rect x="208" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-13" x="295.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">调整留痕</text>
+<rect x="411" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="411" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-14" x="511.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">合同台账</text>
+<rect x="424" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-15" x="511.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">合同登记</text>
+<rect x="424" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-16" x="511.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">节点维护</text>
+<rect x="424" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-17" x="511.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">变更核对</text>
+<rect x="627" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="627" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-18" x="727.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">费用台账</text>
+<rect x="640" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-19" x="727.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">费用归集</text>
+<rect x="640" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-20" x="727.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">项目关联</text>
+<rect x="640" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-21" x="727.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">凭据整理</text>
+<rect x="843" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="843" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-22" x="943.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">付款申请</text>
+<rect x="856" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-23" x="943.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">申请登记</text>
+<rect x="856" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-24" x="943.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">条件核验</text>
+<rect x="856" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-25" x="943.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">状态跟踪</text>
+<rect x="1059" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="1059" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-26" x="1159.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">收款记录</text>
+<rect x="1072" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-27" x="1159.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">回款登记</text>
+<rect x="1072" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-28" x="1159.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">来源核对</text>
+<rect x="1072" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-29" x="1159.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">认领匹配</text>
+<rect x="1275" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="1275" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-30" x="1375.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">票据管理</text>
+<rect x="1288" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-31" x="1375.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">票据登记</text>
+<rect x="1288" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-32" x="1375.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">关联台账</text>
+<rect x="1288" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-33" x="1375.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">归档检索</text>
+<rect x="1491" y="430" width="201" height="315" rx="2" fill="#D9EAF8" stroke="#9BBADC" stroke-width="1.2"/>
+<rect x="1491" y="430" width="201" height="58" rx="2" fill="#2B7FC9" stroke="#2B7FC9" stroke-width="1.2"/>
+<text id="t-34" x="1591.5" y="468" text-anchor="middle" font-size="23" font-weight="600" fill="#fff">结算处理</text>
+<rect x="1504" y="510" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-35" x="1591.5" y="552" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">结算清单</text>
+<rect x="1504" y="593" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-36" x="1591.5" y="635" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">差异处理</text>
+<rect x="1504" y="676" width="175" height="66" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-37" x="1591.5" y="718" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">结果确认</text>
+<rect x="195" y="754" width="367.5" height="58" rx="2" fill="#F9FCFE" stroke="#A8C3DD" stroke-width="1.2"/>
+<text id="t-38" x="378.75" y="791.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">核对任务</text>
+<rect x="577.5" y="754" width="367.5" height="58" rx="2" fill="#F9FCFE" stroke="#A8C3DD" stroke-width="1.2"/>
+<text id="t-39" x="761.25" y="791.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">审批记录</text>
+<rect x="960" y="754" width="367.5" height="58" rx="2" fill="#F9FCFE" stroke="#A8C3DD" stroke-width="1.2"/>
+<text id="t-40" x="1143.75" y="791.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">对账清单</text>
+<rect x="1342.5" y="754" width="367.5" height="58" rx="2" fill="#F9FCFE" stroke="#A8C3DD" stroke-width="1.2"/>
+<text id="t-41" x="1526.25" y="791.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">结算档案</text>
+<rect x="175" y="845" width="1555" height="165" rx="2" fill="#E8EDF3" stroke="#B8C9D9" stroke-width="1.2"/>
+<text id="t-42" x="952.5" y="884.5" text-anchor="middle" font-size="26" font-weight="600" fill="#2777BD">处理引擎</text>
+<rect x="195" y="929" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-43" x="340.5" y="967" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">核算规则</text>
+<rect x="501" y="929" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-44" x="646.5" y="967" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">分摊规则</text>
+<rect x="807" y="929" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-45" x="952.5" y="967" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">匹配规则</text>
+<rect x="1113" y="929" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-46" x="1258.5" y="967" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">任务编排</text>
+<rect x="1419" y="929" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-47" x="1564.5" y="967" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">表单配置</text>
+<rect x="175" y="1035" width="1555" height="150" rx="2" fill="#E8EDF3" stroke="#B8C9D9" stroke-width="1.2"/>
+<text id="t-48" x="952.5" y="1074.5" text-anchor="middle" font-size="26" font-weight="600" fill="#2777BD">共享资料</text>
+<rect x="195" y="1110" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-49" x="340.5" y="1148" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">项目目录</text>
+<rect x="501" y="1110" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-50" x="646.5" y="1148" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">单位目录</text>
+<rect x="807" y="1110" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-51" x="952.5" y="1148" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">科目目录</text>
+<rect x="1113" y="1110" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-52" x="1258.5" y="1148" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">账户记录</text>
+<rect x="1419" y="1110" width="291" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-53" x="1564.5" y="1148" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">资料附件</text>
+<rect x="1770" y="155" width="310" height="1030" rx="2" fill="#D9EAF8" stroke="#83B0D6" stroke-width="1.2"/>
+<rect x="1770" y="155" width="310" height="58" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-54" x="1925" y="194.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">集成中心</text>
+<rect x="1795" y="260" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-55" x="1925" y="303" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">项目资料</text>
+<rect x="1795" y="369" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-56" x="1925" y="412" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">合同资料</text>
+<rect x="1795" y="478" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-57" x="1925" y="521" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">预算资料</text>
+<rect x="1795" y="587" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-58" x="1925" y="630" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">费用资料</text>
+<rect x="1795" y="696" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-59" x="1925" y="739" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">付款状态</text>
+<rect x="1795" y="805" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-60" x="1925" y="848" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">收款状态</text>
+<rect x="1795" y="914" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-61" x="1925" y="957" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">票据资料</text>
+<rect x="1795" y="1023" width="260" height="68" rx="2" fill="#287BCA" stroke="#287BCA" stroke-width="1.2"/>
+<text id="t-62" x="1925" y="1066" text-anchor="middle" font-size="23" font-weight="400" fill="#FFF">归档索引</text>
+<rect x="40" y="155" width="105" height="160" rx="2" fill="#F8FAF8" stroke="#BBC9BC" stroke-width="1.2"/>
+<text id="t-63" x="92.5" y="244.5" text-anchor="middle" font-size="25" font-weight="600" fill="#3D8253">视图</text>
+<rect x="40" y="340" width="105" height="480" rx="2" fill="#F8FAF8" stroke="#BBC9BC" stroke-width="1.2"/>
+<text id="t-64" x="92.5" y="589.5" text-anchor="middle" font-size="25" font-weight="600" fill="#3D8253">业务</text>
+<rect x="40" y="845" width="105" height="165" rx="2" fill="#F8FAF8" stroke="#BBC9BC" stroke-width="1.2"/>
+<text id="t-65" x="92.5" y="937" text-anchor="middle" font-size="25" font-weight="600" fill="#3D8253">引擎</text>
+<rect x="40" y="1035" width="105" height="150" rx="2" fill="#F8FAF8" stroke="#BBC9BC" stroke-width="1.2"/>
+<text id="t-66" x="92.5" y="1119.5" text-anchor="middle" font-size="25" font-weight="600" fill="#3D8253">数据</text></g></svg>

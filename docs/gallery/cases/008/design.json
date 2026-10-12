@@ -1,0 +1,464 @@
+{
+  "id": 8,
+  "number": "008",
+  "title": "云分析服务双平面架构",
+  "family": "双平面与非对称内网格",
+  "theme": "棕金控制面题头、蓝色数据面与白底组件",
+  "view": "component",
+  "width": 1720,
+  "height": 1000,
+  "thumbnail": "cases/008/preview.png",
+  "svg": "cases/008/diagram.svg",
+  "png": "cases/008/diagram.png",
+  "drawio": "cases/008/diagram.drawio",
+  "prompt": "用 MuseDraw 画“云分析服务双平面架构”。采用双平面与非对称内网格，棕金控制面题头、蓝色数据面与白底组件。分区：控制面客户端、数据面客户端、控制平面、数据平面。模块：网页控制台、管理接口、查询终端、数据接口、业务应用、服务配置、身份管理、账单计量、资源编排、共享服务、请求均衡、计算集群、对象存储。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：棕金控制面题头、蓝色数据面与白底组件；普通正文中性深灰，辅助模块白底细边。",
+  "geometry": {
+    "number": 8,
+    "referenceId": "CQ-0002",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1385,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          46,
+          160,
+          328,
+          48
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          56,
+          229,
+          308,
+          72
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          56,
+          313,
+          308,
+          72
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          46,
+          551,
+          328,
+          48
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          56,
+          620,
+          308,
+          82.66666666666667
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          56,
+          714.6666666666666,
+          308,
+          82.66666666666667
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          56,
+          809.3333333333334,
+          308,
+          82.66666666666667
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          606,
+          160,
+          1048,
+          48
+        ]
+      },
+      {
+        "id": "t-10",
+        "box": [
+          616,
+          229,
+          508,
+          72
+        ]
+      },
+      {
+        "id": "t-11",
+        "box": [
+          1136,
+          229,
+          508,
+          72
+        ]
+      },
+      {
+        "id": "t-12",
+        "box": [
+          616,
+          313,
+          508,
+          72
+        ]
+      },
+      {
+        "id": "t-13",
+        "box": [
+          1136,
+          313,
+          508,
+          72
+        ]
+      },
+      {
+        "id": "t-14",
+        "box": [
+          920,
+          419,
+          420,
+          74
+        ]
+      },
+      {
+        "id": "t-15",
+        "box": [
+          606,
+          551,
+          1048,
+          48
+        ]
+      },
+      {
+        "id": "t-16",
+        "box": [
+          626,
+          622,
+          1008,
+          72
+        ]
+      },
+      {
+        "id": "t-17",
+        "box": [
+          629,
+          786,
+          254,
+          88
+        ]
+      },
+      {
+        "id": "t-18",
+        "box": [
+          918,
+          732,
+          716,
+          64
+        ]
+      },
+      {
+        "id": "t-19",
+        "box": [
+          918,
+          814,
+          716,
+          64
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "control-client-1",
+        "label": "网页控制台",
+        "box": [
+          56,
+          229,
+          308,
+          72
+        ],
+        "parent": "control-client"
+      },
+      {
+        "id": "control-client-2",
+        "label": "管理接口",
+        "box": [
+          56,
+          313,
+          308,
+          72
+        ],
+        "parent": "control-client"
+      },
+      {
+        "id": "data-client-1",
+        "label": "查询终端",
+        "box": [
+          56,
+          620,
+          308,
+          82.66666666666667
+        ],
+        "parent": "data-client"
+      },
+      {
+        "id": "data-client-2",
+        "label": "数据接口",
+        "box": [
+          56,
+          714.6666666666666,
+          308,
+          82.66666666666667
+        ],
+        "parent": "data-client"
+      },
+      {
+        "id": "data-client-3",
+        "label": "业务应用",
+        "box": [
+          56,
+          809.3333333333334,
+          308,
+          82.66666666666667
+        ],
+        "parent": "data-client"
+      },
+      {
+        "id": "control-1",
+        "label": "服务配置",
+        "box": [
+          616,
+          229,
+          508,
+          72
+        ],
+        "parent": "control"
+      },
+      {
+        "id": "control-2",
+        "label": "身份管理",
+        "box": [
+          1136,
+          229,
+          508,
+          72
+        ],
+        "parent": "control"
+      },
+      {
+        "id": "control-3",
+        "label": "账单计量",
+        "box": [
+          616,
+          313,
+          508,
+          72
+        ],
+        "parent": "control"
+      },
+      {
+        "id": "control-4",
+        "label": "资源编排",
+        "box": [
+          1136,
+          313,
+          508,
+          72
+        ],
+        "parent": "control"
+      },
+      {
+        "id": "shared",
+        "label": "共享服务",
+        "box": [
+          626,
+          622,
+          1008,
+          72
+        ],
+        "parent": null
+      },
+      {
+        "id": "lb",
+        "label": "请求均衡",
+        "box": [
+          626,
+          732,
+          260,
+          146
+        ],
+        "parent": null
+      },
+      {
+        "id": "cluster",
+        "label": "计算集群",
+        "box": [
+          918,
+          732,
+          716,
+          64
+        ],
+        "parent": null
+      },
+      {
+        "id": "storage",
+        "label": "对象存储",
+        "box": [
+          918,
+          814,
+          716,
+          64
+        ],
+        "parent": null
+      }
+    ],
+    "groups": [
+      {
+        "id": "control-client",
+        "title": "控制面客户端",
+        "box": [
+          40,
+          155,
+          340,
+          246
+        ],
+        "headH": 58
+      },
+      {
+        "id": "data-client",
+        "title": "数据面客户端",
+        "box": [
+          40,
+          546,
+          340,
+          362
+        ],
+        "headH": 58
+      },
+      {
+        "id": "control",
+        "title": "控制平面",
+        "box": [
+          600,
+          155,
+          1060,
+          246
+        ],
+        "headH": 58
+      },
+      {
+        "id": "data",
+        "title": "数据平面",
+        "box": [
+          600,
+          546,
+          1060,
+          362
+        ],
+        "headH": 58
+      }
+    ],
+    "paths": [
+      {
+        "from": "control-client-1",
+        "to": "control-1",
+        "points": [
+          [
+            364,
+            265
+          ],
+          [
+            490,
+            265
+          ],
+          [
+            490,
+            265
+          ],
+          [
+            616,
+            265
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "data-client-2",
+        "to": "lb",
+        "points": [
+          [
+            364,
+            756
+          ],
+          [
+            495,
+            756
+          ],
+          [
+            495,
+            805
+          ],
+          [
+            626,
+            805
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "lb",
+        "to": "cluster",
+        "points": [
+          [
+            886,
+            805
+          ],
+          [
+            902,
+            805
+          ],
+          [
+            902,
+            764
+          ],
+          [
+            918,
+            764
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "Building ClickHouse Cloud From Scratch in a Year · ClickHouse cloud components and their interactions",
+    "url": "https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

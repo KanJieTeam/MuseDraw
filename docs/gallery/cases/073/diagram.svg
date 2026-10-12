@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2050" height="1440" viewBox="0 0 2050 1440" role="img" aria-labelledby="title desc"><title id="title">金融服务能力分域总览</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":73,"referenceId":"EQ-0947","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1715,72]},{"id":"t-2","box":[51,160,158,56]},{"id":"t-3","box":[62,300,136,160]},{"id":"t-4","box":[62,472,136,160]},{"id":"t-5","box":[62,644,136,160]},{"id":"t-6","box":[62,816,136,160]},{"id":"t-7","box":[62,988,136,160]},{"id":"t-8","box":[1841,160,158,56]},{"id":"t-9","box":[1852,300,136,160]},{"id":"t-10","box":[1852,472,136,160]},{"id":"t-11","box":[1852,644,136,160]},{"id":"t-12","box":[1852,816,136,160]},{"id":"t-13","box":[1852,988,136,160]},{"id":"t-14","box":[246,160,1558,40]},{"id":"t-15","box":[270,235,241.66666666666666,65]},{"id":"t-16","box":[523.6666666666666,235,241.66666666666666,65]},{"id":"t-17","box":[777.3333333333333,235,241.66666666666666,65]},{"id":"t-18","box":[1031,235,241.66666666666666,65]},{"id":"t-19","box":[1284.6666666666665,235,241.66666666666666,65]},{"id":"t-20","box":[1538.3333333333333,235,241.66666666666666,65]},{"id":"t-21","box":[246,375,1558,40]},{"id":"t-22","box":[276,465,468,42]},{"id":"t-23","box":[286,547,218,64]},{"id":"t-24","box":[516,547,218,64]},{"id":"t-25","box":[286,623,218,64]},{"id":"t-26","box":[516,623,218,64]},{"id":"t-27","box":[786,465,468,42]},{"id":"t-28","box":[796,547,218,64]},{"id":"t-29","box":[1026,547,218,64]},{"id":"t-30","box":[796,623,218,64]},{"id":"t-31","box":[1026,623,218,64]},{"id":"t-32","box":[1296,465,478,42]},{"id":"t-33","box":[1306,547,223,64]},{"id":"t-34","box":[1541,547,223,64]},{"id":"t-35","box":[1306,623,223,64]},{"id":"t-36","box":[1541,623,223,64]},{"id":"t-37","box":[276,760,718,42]},{"id":"t-38","box":[286,842,343,64]},{"id":"t-39","box":[641,842,343,64]},{"id":"t-40","box":[286,918,343,64]},{"id":"t-41","box":[641,918,343,64]},{"id":"t-42","box":[1036,760,738,42]},{"id":"t-43","box":[1046,842,353,64]},{"id":"t-44","box":[1411,842,353,64]},{"id":"t-45","box":[1046,918,353,64]},{"id":"t-46","box":[1411,918,353,64]},{"id":"t-47","box":[246,1075,1558,40]},{"id":"t-48","box":[460,1120,321,62]},{"id":"t-49","box":[793,1120,321,62]},{"id":"t-50","box":[1126,1120,321,62]},{"id":"t-51","box":[1459,1120,321,62]},{"id":"t-52","box":[246,1235,1558,40]},{"id":"t-53","box":[460,1280,321,62]},{"id":"t-54","box":[793,1280,321,62]},{"id":"t-55","box":[1126,1280,321,62]},{"id":"t-56","box":[1459,1280,321,62]}],"nodes":[{"id":"operations-1","label":"监控管理","box":[62,300,136,160],"parent":"operations"},{"id":"operations-2","label":"运行审计","box":[62,472,136,160],"parent":"operations"},{"id":"operations-3","label":"变更管理","box":[62,644,136,160],"parent":"operations"},{"id":"operations-4","label":"配置管理","box":[62,816,136,160],"parent":"operations"},{"id":"operations-5","label":"故障响应","box":[62,988,136,160],"parent":"operations"},{"id":"assurance-1","label":"访问管理","box":[1852,300,136,160],"parent":"assurance"},{"id":"assurance-2","label":"数据保护","box":[1852,472,136,160],"parent":"assurance"},{"id":"assurance-3","label":"合规管理","box":[1852,644,136,160],"parent":"assurance"},{"id":"assurance-4","label":"风险管理","box":[1852,816,136,160],"parent":"assurance"},{"id":"assurance-5","label":"连续运行","box":[1852,988,136,160],"parent":"assurance"},{"id":"terminals-1","label":"柜面入口","box":[270,235,241.66666666666666,65],"parent":"terminals"},{"id":"terminals-2","label":"移动入口","box":[523.6666666666666,235,241.66666666666666,65],"parent":"terminals"},{"id":"terminals-3","label":"合作入口","box":[777.3333333333333,235,241.66666666666666,65],"parent":"terminals"},{"id":"terminals-4","label":"员工入口","box":[1031,235,241.66666666666666,65],"parent":"terminals"},{"id":"terminals-5","label":"渠道入口","box":[1284.6666666666665,235,241.66666666666666,65],"parent":"terminals"},{"id":"terminals-6","label":"开放入口","box":[1538.3333333333333,235,241.66666666666666,65],"parent":"terminals"},{"id":"bank-1","label":"账户管理","box":[286,547,218,64],"parent":"bank"},{"id":"bank-2","label":"存款服务","box":[516,547,218,64],"parent":"bank"},{"id":"bank-3","label":"信贷服务","box":[286,623,218,64],"parent":"bank"},{"id":"bank-4","label":"交易查询","box":[516,623,218,64],"parent":"bank"},{"id":"securities-1","label":"客户管理","box":[796,547,218,64],"parent":"securities"},{"id":"securities-2","label":"交易支持","box":[1026,547,218,64],"parent":"securities"},{"id":"securities-3","label":"产品管理","box":[796,623,218,64],"parent":"securities"},{"id":"securities-4","label":"风险评估","box":[1026,623,218,64],"parent":"securities"},{"id":"capital-1","label":"项目管理","box":[1306,547,223,64],"parent":"capital"},{"id":"capital-2","label":"尽职记录","box":[1541,547,223,64],"parent":"capital"},{"id":"capital-3","label":"投资跟踪","box":[1306,623,223,64],"parent":"capital"},{"id":"capital-4","label":"收益核算","box":[1541,623,223,64],"parent":"capital"},{"id":"fund-1","label":"份额管理","box":[286,842,343,64],"parent":"fund"},{"id":"fund-2","label":"估值支持","box":[641,842,343,64],"parent":"fund"},{"id":"fund-3","label":"申购赎回","box":[286,918,343,64],"parent":"fund"},{"id":"fund-4","label":"信息披露","box":[641,918,343,64],"parent":"fund"},{"id":"insurance-1","label":"保单管理","box":[1046,842,353,64],"parent":"insurance"},{"id":"insurance-2","label":"理赔支持","box":[1411,842,353,64],"parent":"insurance"},{"id":"insurance-3","label":"客户服务","box":[1046,918,353,64],"parent":"insurance"},{"id":"insurance-4","label":"风险控制","box":[1411,918,353,64],"parent":"insurance"},{"id":"support-1","label":"共享规则","box":[460,1120,321,62],"parent":"support"},{"id":"support-2","label":"统一流程","box":[793,1120,321,62],"parent":"support"},{"id":"support-3","label":"消息服务","box":[1126,1120,321,62],"parent":"support"},{"id":"support-4","label":"运营指标","box":[1459,1120,321,62],"parent":"support"},{"id":"foundation-1","label":"计算资源","box":[460,1280,321,62],"parent":"foundation"},{"id":"foundation-2","label":"数据资源","box":[793,1280,321,62],"parent":"foundation"},{"id":"foundation-3","label":"网络服务","box":[1126,1280,321,62],"parent":"foundation"},{"id":"foundation-4","label":"安全控制","box":[1459,1280,321,62],"parent":"foundation"}],"groups":[{"id":"operations","title":"运营管控","box":[45,155,170,1200],"headH":66},{"id":"assurance","title":"安全保障","box":[1835,155,170,1200],"headH":66},{"id":"terminals","title":"服务入口","box":[240,155,1570,180],"headH":50},{"id":"applications","title":"应用能力范围","box":[240,370,1570,665],"headH":50},{"id":"bank","title":"账户服务","box":[270,460,480,250],"headH":52},{"id":"securities","title":"投资服务","box":[780,460,480,250],"headH":52},{"id":"capital","title":"资本服务","box":[1290,460,490,250],"headH":52},{"id":"fund","title":"基金服务","box":[270,755,730,250],"headH":52},{"id":"insurance","title":"保障服务","box":[1030,755,750,250],"headH":52},{"id":"support","title":"业务支撑","box":[240,1070,1570,125],"headH":50},{"id":"foundation","title":"运行基础","box":[240,1230,1570,125],"headH":50}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2050" height="1440" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="891.5" y="70.5" text-anchor="middle" font-size="36" font-weight="700" fill="#273A4D">金融服务能力分域总览</text>
+<g transform="translate(1782 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#397BBF"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L2016,112" fill="none" stroke="#397BBF" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="45" y="155" width="170" height="1200" rx="2" fill="#D6F1F2" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-2" x="130" y="197" text-anchor="middle" font-size="23" font-weight="600" fill="#397BBF">运营管控</text>
+<rect x="62" y="300" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-3" x="130" y="388.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">监控管理</text>
+<rect x="62" y="472" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-4" x="130" y="560.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">运行审计</text>
+<rect x="62" y="644" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-5" x="130" y="732.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">变更管理</text>
+<rect x="62" y="816" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-6" x="130" y="904.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">配置管理</text>
+<rect x="62" y="988" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-7" x="130" y="1076.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">故障响应</text>
+<rect x="1835" y="155" width="170" height="1200" rx="2" fill="#D6F1F2" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-8" x="1920" y="197" text-anchor="middle" font-size="23" font-weight="600" fill="#397BBF">安全保障</text>
+<rect x="1852" y="300" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-9" x="1920" y="388.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">访问管理</text>
+<rect x="1852" y="472" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-10" x="1920" y="560.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">数据保护</text>
+<rect x="1852" y="644" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-11" x="1920" y="732.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">合规管理</text>
+<rect x="1852" y="816" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-12" x="1920" y="904.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">风险管理</text>
+<rect x="1852" y="988" width="136" height="160" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-13" x="1920" y="1076.5" text-anchor="middle" font-size="22" font-weight="400" fill="#273A4D">连续运行</text>
+<rect x="240" y="155" width="1570" height="180" rx="2" fill="#FFE0AB" stroke="#E1BE85" stroke-width="1.2"/>
+<text id="t-14" x="1025" y="189.5" text-anchor="middle" font-size="25" font-weight="600" fill="#397BBF">服务入口</text>
+<rect x="270" y="235" width="241.66666666666666" height="65" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-15" x="390.8333333333333" y="276.5" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">柜面入口</text>
+<rect x="523.6666666666666" y="235" width="241.66666666666666" height="65" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-16" x="644.5" y="276.5" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">移动入口</text>
+<rect x="777.3333333333333" y="235" width="241.66666666666666" height="65" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-17" x="898.1666666666666" y="276.5" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">合作入口</text>
+<rect x="1031" y="235" width="241.66666666666666" height="65" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-18" x="1151.8333333333333" y="276.5" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">员工入口</text>
+<rect x="1284.6666666666665" y="235" width="241.66666666666666" height="65" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-19" x="1405.4999999999998" y="276.5" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">渠道入口</text>
+<rect x="1538.3333333333333" y="235" width="241.66666666666666" height="65" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-20" x="1659.1666666666665" y="276.5" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">开放入口</text>
+<rect x="240" y="370" width="1570" height="665" rx="2" fill="#E3E6EB" stroke="#C4CBD2" stroke-width="1.2"/>
+<text id="t-21" x="1025" y="404.5" text-anchor="middle" font-size="25" font-weight="600" fill="#397BBF">应用能力范围</text>
+<rect x="270" y="460" width="480" height="250" rx="2" fill="#fff" stroke="#C4CBD2" stroke-width="1.2"/>
+<rect x="270" y="460" width="480" height="52" rx="2" fill="#397BBF" stroke="#397BBF" stroke-width="1.2"/>
+<text id="t-22" x="510" y="495.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">账户服务</text>
+<rect x="286" y="547" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-23" x="395" y="588" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">账户管理</text>
+<rect x="516" y="547" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-24" x="625" y="588" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">存款服务</text>
+<rect x="286" y="623" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-25" x="395" y="664" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">信贷服务</text>
+<rect x="516" y="623" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-26" x="625" y="664" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">交易查询</text>
+<rect x="780" y="460" width="480" height="250" rx="2" fill="#fff" stroke="#C4CBD2" stroke-width="1.2"/>
+<rect x="780" y="460" width="480" height="52" rx="2" fill="#397BBF" stroke="#397BBF" stroke-width="1.2"/>
+<text id="t-27" x="1020" y="495.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">投资服务</text>
+<rect x="796" y="547" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-28" x="905" y="588" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">客户管理</text>
+<rect x="1026" y="547" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-29" x="1135" y="588" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">交易支持</text>
+<rect x="796" y="623" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-30" x="905" y="664" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">产品管理</text>
+<rect x="1026" y="623" width="218" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-31" x="1135" y="664" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">风险评估</text>
+<rect x="1290" y="460" width="490" height="250" rx="2" fill="#fff" stroke="#C4CBD2" stroke-width="1.2"/>
+<rect x="1290" y="460" width="490" height="52" rx="2" fill="#397BBF" stroke="#397BBF" stroke-width="1.2"/>
+<text id="t-32" x="1535" y="495.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">资本服务</text>
+<rect x="1306" y="547" width="223" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-33" x="1417.5" y="588" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">项目管理</text>
+<rect x="1541" y="547" width="223" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-34" x="1652.5" y="588" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">尽职记录</text>
+<rect x="1306" y="623" width="223" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-35" x="1417.5" y="664" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">投资跟踪</text>
+<rect x="1541" y="623" width="223" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-36" x="1652.5" y="664" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">收益核算</text>
+<rect x="270" y="755" width="730" height="250" rx="2" fill="#fff" stroke="#C4CBD2" stroke-width="1.2"/>
+<rect x="270" y="755" width="730" height="52" rx="2" fill="#397BBF" stroke="#397BBF" stroke-width="1.2"/>
+<text id="t-37" x="635" y="790.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">基金服务</text>
+<rect x="286" y="842" width="343" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-38" x="457.5" y="883" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">份额管理</text>
+<rect x="641" y="842" width="343" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-39" x="812.5" y="883" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">估值支持</text>
+<rect x="286" y="918" width="343" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-40" x="457.5" y="959" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">申购赎回</text>
+<rect x="641" y="918" width="343" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-41" x="812.5" y="959" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">信息披露</text>
+<rect x="1030" y="755" width="750" height="250" rx="2" fill="#fff" stroke="#C4CBD2" stroke-width="1.2"/>
+<rect x="1030" y="755" width="750" height="52" rx="2" fill="#397BBF" stroke="#397BBF" stroke-width="1.2"/>
+<text id="t-42" x="1405" y="790.5" text-anchor="middle" font-size="25" font-weight="600" fill="#fff">保障服务</text>
+<rect x="1046" y="842" width="353" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-43" x="1222.5" y="883" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">保单管理</text>
+<rect x="1411" y="842" width="353" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-44" x="1587.5" y="883" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">理赔支持</text>
+<rect x="1046" y="918" width="353" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-45" x="1222.5" y="959" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">客户服务</text>
+<rect x="1411" y="918" width="353" height="64" rx="2" fill="#fff" stroke="#B7D8DC" stroke-width="1.2"/>
+<text id="t-46" x="1587.5" y="959" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">风险控制</text>
+<rect x="240" y="1070" width="1570" height="125" rx="2" fill="#A8D29D" stroke="#8DB681" stroke-width="1.2"/>
+<text id="t-47" x="1025" y="1104.5" text-anchor="middle" font-size="25" font-weight="600" fill="#315E2C">业务支撑</text>
+<rect x="460" y="1120" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-48" x="620.5" y="1160" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">共享规则</text>
+<rect x="793" y="1120" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-49" x="953.5" y="1160" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">统一流程</text>
+<rect x="1126" y="1120" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-50" x="1286.5" y="1160" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">消息服务</text>
+<rect x="1459" y="1120" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-51" x="1619.5" y="1160" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">运营指标</text>
+<rect x="240" y="1230" width="1570" height="125" rx="2" fill="#BEE5EB" stroke="#A2CCD3" stroke-width="1.2"/>
+<text id="t-52" x="1025" y="1264.5" text-anchor="middle" font-size="25" font-weight="600" fill="#266779">运行基础</text>
+<rect x="460" y="1280" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-53" x="620.5" y="1320" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">计算资源</text>
+<rect x="793" y="1280" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-54" x="953.5" y="1320" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">数据资源</text>
+<rect x="1126" y="1280" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-55" x="1286.5" y="1320" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">网络服务</text>
+<rect x="1459" y="1280" width="321" height="62" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-56" x="1619.5" y="1320" text-anchor="middle" font-size="23" font-weight="400" fill="#273A4D">安全控制</text></g></svg>

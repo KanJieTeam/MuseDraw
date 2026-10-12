@@ -1,0 +1,456 @@
+{
+  "id": 89,
+  "number": "089",
+  "title": "双域应用节点部署",
+  "family": "企业与平台双域四层镜像部署",
+  "theme": "杏橙与浅蓝环境题头、绿粉蓝分层与细灰框",
+  "view": "deployment",
+  "width": 1950,
+  "height": 1240,
+  "thumbnail": "cases/089/preview.png",
+  "svg": "cases/089/diagram.svg",
+  "png": "cases/089/diagram.png",
+  "drawio": "cases/089/diagram.drawio",
+  "prompt": "用MuseDraw画《双域应用节点部署》通用参考架构图。主要域：业务环境、共享环境。完整节点：业务应用、调用开发库、业务规则组件、业务数据节点、服务应用甲、服务应用乙、共享调用开发库、规则组件甲、规则组件乙、共享数据节点。设计：左域承载单应用、右域承载两应用，宽度按节点容量分配而非强制等宽；应用、开发库、规则和数据节点四层保持共同基线；域内调用为实细线，唯一跨域同步虚线严格落在底层数据节点。保持原生文字与几何，连线仅表达图中明确的组件依赖，能力容器不等同物理部署。",
+  "geometry": {
+    "number": 89,
+    "referenceId": "EQ-1680",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1615,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          76,
+          165,
+          588,
+          86
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          796,
+          165,
+          1078,
+          86
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          120,
+          340,
+          500,
+          118
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          120,
+          546,
+          500,
+          72
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          120,
+          717,
+          500,
+          72
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          120,
+          945,
+          500,
+          118
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          840,
+          340,
+          475,
+          118
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          1355,
+          340,
+          475,
+          118
+        ]
+      },
+      {
+        "id": "t-10",
+        "box": [
+          840,
+          546,
+          990,
+          72
+        ]
+      },
+      {
+        "id": "t-11",
+        "box": [
+          840,
+          717,
+          475,
+          72
+        ]
+      },
+      {
+        "id": "t-12",
+        "box": [
+          1355,
+          717,
+          475,
+          72
+        ]
+      },
+      {
+        "id": "t-13",
+        "box": [
+          840,
+          945,
+          990,
+          118
+        ]
+      },
+      {
+        "id": "t-14",
+        "box": [
+          660,
+          967,
+          140,
+          40
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "ea",
+        "label": "业务应用",
+        "box": [
+          120,
+          340,
+          500,
+          118
+        ],
+        "parent": "enterprise"
+      },
+      {
+        "id": "esdk",
+        "label": "调用开发库",
+        "box": [
+          120,
+          546,
+          500,
+          72
+        ],
+        "parent": "enterprise"
+      },
+      {
+        "id": "econtract",
+        "label": "业务规则组件",
+        "box": [
+          120,
+          717,
+          500,
+          72
+        ],
+        "parent": "enterprise"
+      },
+      {
+        "id": "edata",
+        "label": "业务数据节点",
+        "box": [
+          120,
+          945,
+          500,
+          118
+        ],
+        "parent": "enterprise"
+      },
+      {
+        "id": "pa",
+        "label": "服务应用甲",
+        "box": [
+          840,
+          340,
+          475,
+          118
+        ],
+        "parent": "platform"
+      },
+      {
+        "id": "pb",
+        "label": "服务应用乙",
+        "box": [
+          1355,
+          340,
+          475,
+          118
+        ],
+        "parent": "platform"
+      },
+      {
+        "id": "psdk",
+        "label": "共享调用开发库",
+        "box": [
+          840,
+          546,
+          990,
+          72
+        ],
+        "parent": "platform"
+      },
+      {
+        "id": "pca",
+        "label": "规则组件甲",
+        "box": [
+          840,
+          717,
+          475,
+          72
+        ],
+        "parent": "platform"
+      },
+      {
+        "id": "pcb",
+        "label": "规则组件乙",
+        "box": [
+          1355,
+          717,
+          475,
+          72
+        ],
+        "parent": "platform"
+      },
+      {
+        "id": "pdata",
+        "label": "共享数据节点",
+        "box": [
+          840,
+          945,
+          990,
+          118
+        ],
+        "parent": "platform"
+      }
+    ],
+    "groups": [
+      {
+        "id": "enterprise",
+        "title": "业务环境",
+        "box": [
+          70,
+          160,
+          600,
+          998
+        ],
+        "headH": 96
+      },
+      {
+        "id": "platform",
+        "title": "共享环境",
+        "box": [
+          790,
+          160,
+          1090,
+          998
+        ],
+        "headH": 96
+      }
+    ],
+    "paths": [
+      {
+        "from": "ea",
+        "to": "esdk",
+        "points": [
+          [
+            370,
+            458
+          ],
+          [
+            370,
+            546
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "esdk",
+        "to": "econtract",
+        "points": [
+          [
+            370,
+            618
+          ],
+          [
+            370,
+            717
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "econtract",
+        "to": "edata",
+        "points": [
+          [
+            370,
+            789
+          ],
+          [
+            370,
+            945
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "pa",
+        "to": "psdk",
+        "points": [
+          [
+            1077,
+            458
+          ],
+          [
+            1077,
+            546
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "pb",
+        "to": "psdk",
+        "points": [
+          [
+            1592,
+            458
+          ],
+          [
+            1592,
+            546
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "psdk",
+        "to": "pca",
+        "points": [
+          [
+            1077,
+            618
+          ],
+          [
+            1077,
+            717
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "psdk",
+        "to": "pcb",
+        "points": [
+          [
+            1592,
+            618
+          ],
+          [
+            1592,
+            717
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "pca",
+        "to": "pdata",
+        "points": [
+          [
+            1077,
+            789
+          ],
+          [
+            1077,
+            945
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "pcb",
+        "to": "pdata",
+        "points": [
+          [
+            1592,
+            789
+          ],
+          [
+            1592,
+            945
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "edata",
+        "to": "pdata",
+        "points": [
+          [
+            620,
+            1004
+          ],
+          [
+            840,
+            1004
+          ]
+        ],
+        "label": "数据同步",
+        "labelBox": [
+          660,
+          967,
+          140,
+          40
+        ]
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "独立节点部署方案"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

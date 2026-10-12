@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2250" height="1140" viewBox="0 0 2250 1140" role="img" aria-labelledby="title desc"><title id="title">跨地域访问策略对照</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":30,"referenceId":"CQ-0016","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1915,72]},{"id":"t-2","box":[55,150,660,58]},{"id":"t-3","box":[795,150,660,58]},{"id":"t-4","box":[1535,150,660,58]},{"id":"t-5","box":[61,240,648,48]},{"id":"t-6","box":[88,614,169,64]},{"id":"t-7","box":[316,335,358,48]},{"id":"t-8","box":[332,411,326,58]},{"id":"t-9","box":[332,482,326,58]},{"id":"t-10","box":[332,553,326,58]},{"id":"t-11","box":[316,720,358,48]},{"id":"t-12","box":[332,796,326,58]},{"id":"t-13","box":[332,867,326,58]},{"id":"t-14","box":[332,938,326,58]},{"id":"t-15","box":[801,240,648,48]},{"id":"t-16","box":[828,614,169,64]},{"id":"t-17","box":[1056,335,358,48]},{"id":"t-18","box":[1072,411,326,58]},{"id":"t-19","box":[1072,482,326,58]},{"id":"t-20","box":[1072,553,326,58]},{"id":"t-21","box":[1056,720,358,48]},{"id":"t-22","box":[1072,796,326,58]},{"id":"t-23","box":[1072,867,326,58]},{"id":"t-24","box":[1072,938,326,58]},{"id":"t-25","box":[1541,240,648,48]},{"id":"t-26","box":[1568,484,169,64]},{"id":"t-27","box":[1568,866,169,64]},{"id":"t-28","box":[1796,335,358,48]},{"id":"t-29","box":[1812,411,326,58]},{"id":"t-30","box":[1812,482,326,58]},{"id":"t-31","box":[1812,553,326,58]},{"id":"t-32","box":[1796,720,358,48]},{"id":"t-33","box":[1812,796,326,58]},{"id":"t-34","box":[1812,867,326,58]},{"id":"t-35","box":[1812,938,326,58]},{"id":"t-36","box":[734,609,44,48]},{"id":"t-37","box":[1474,609,44,48]}],"nodes":[{"id":"client-a","label":"业务客户端","box":[85,560,175,122],"parent":"dual"},{"id":"da-1","label":"区域入口","box":[332,411,326,58],"parent":"da"},{"id":"da-2","label":"应用服务","box":[332,482,326,58],"parent":"da"},{"id":"da-3","label":"配置记录","box":[332,553,326,58],"parent":"da"},{"id":"db-1","label":"区域入口","box":[332,796,326,58],"parent":"db"},{"id":"db-2","label":"应用服务","box":[332,867,326,58],"parent":"db"},{"id":"db-3","label":"配置记录","box":[332,938,326,58],"parent":"db"},{"id":"client-b","label":"业务客户端","box":[825,560,175,122],"parent":"priority"},{"id":"pa-1","label":"区域入口","box":[1072,411,326,58],"parent":"pa"},{"id":"pa-2","label":"应用服务","box":[1072,482,326,58],"parent":"pa"},{"id":"pa-3","label":"配置记录","box":[1072,553,326,58],"parent":"pa"},{"id":"pb-1","label":"区域入口","box":[1072,796,326,58],"parent":"pb"},{"id":"pb-2","label":"应用服务","box":[1072,867,326,58],"parent":"pb"},{"id":"pb-3","label":"配置记录","box":[1072,938,326,58],"parent":"pb"},{"id":"client-c1","label":"甲侧客户端","box":[1565,430,175,122],"parent":"pin"},{"id":"client-c2","label":"乙侧客户端","box":[1565,812,175,122],"parent":"pin"},{"id":"ca-1","label":"区域入口","box":[1812,411,326,58],"parent":"ca"},{"id":"ca-2","label":"应用服务","box":[1812,482,326,58],"parent":"ca"},{"id":"ca-3","label":"配置记录","box":[1812,553,326,58],"parent":"ca"},{"id":"cb-1","label":"区域入口","box":[1812,796,326,58],"parent":"cb"},{"id":"cb-2","label":"应用服务","box":[1812,867,326,58],"parent":"cb"},{"id":"cb-3","label":"配置记录","box":[1812,938,326,58],"parent":"cb"}],"groups":[{"id":"dual","title":"方案甲","box":[55,235,660,810],"headH":58},{"id":"da","title":"地域甲","box":[310,330,370,290],"headH":58},{"id":"db","title":"地域乙","box":[310,715,370,290],"headH":58},{"id":"priority","title":"方案乙","box":[795,235,660,810],"headH":58},{"id":"pa","title":"首选地域","box":[1050,330,370,290],"headH":58},{"id":"pb","title":"备用地域","box":[1050,715,370,290],"headH":58},{"id":"pin","title":"方案丙","box":[1535,235,660,810],"headH":58},{"id":"ca","title":"地域甲","box":[1790,330,370,290],"headH":58},{"id":"cb","title":"地域乙","box":[1790,715,370,290],"headH":58}],"paths":[{"from":"client-a","to":"da-1","points":[[260,590],[288,590],[288,440],[332,440]],"label":"","labelBox":null},{"from":"client-a","to":"db-1","points":[[260,652],[286,652],[286,825],[332,825]],"label":"","labelBox":null},{"from":"client-b","to":"pa-1","points":[[1000,590],[1028,590],[1028,440],[1072,440]],"label":"","labelBox":null},{"from":"client-b","to":"pb-1","points":[[1000,652],[1027,652],[1027,825],[1072,825]],"label":"","labelBox":null},{"from":"client-c1","to":"ca-1","points":[[1740,491],[1770,491],[1770,440],[1812,440]],"label":"","labelBox":null},{"from":"client-c2","to":"cb-1","points":[[1740,873],[1770,873],[1770,825],[1812,825]],"label":"","labelBox":null}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="2250" height="1140" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#394B50">跨地域访问策略对照</text>
+<g transform="translate(1982 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#719095"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L2216,112" fill="none" stroke="#719095" stroke-width="1.5" stroke-linejoin="round"/>
+<text id="t-2" x="385" y="190.5" text-anchor="middle" font-size="28" font-weight="600" fill="#394B50">并行访问</text>
+<text id="t-3" x="1125" y="190.5" text-anchor="middle" font-size="28" font-weight="600" fill="#394B50">主次访问</text>
+<text id="t-4" x="1865" y="190.5" text-anchor="middle" font-size="28" font-weight="600" fill="#394B50">地域绑定</text>
+<rect x="55" y="235" width="660" height="810" rx="2" fill="#F0F0EC" stroke="#B6B6AA" stroke-width="1.2"/>
+<text id="t-5" x="385" y="274.5" text-anchor="middle" font-size="26" font-weight="600" fill="#687B80">方案甲</text>
+<rect x="85" y="560" width="175" height="122" rx="2" fill="#fff" stroke="#AAA" stroke-width="1.2"/>
+<g transform="translate(154.5 574) scale(0.9)" fill="none" stroke="#719095" stroke-width="2" stroke-linejoin="round"><rect x="1" y="1" width="38" height="27" rx="2"/><path d="M20,28v10 M9,39h22"/></g>
+<text id="t-6" x="172.5" y="655" text-anchor="middle" font-size="23" font-weight="400" fill="#394B50">业务客户端</text>
+<rect x="310" y="330" width="370" height="290" rx="2" fill="#E7F2EE" stroke="#92B6AC" stroke-width="1.2"/>
+<text id="t-7" x="495" y="368.5" text-anchor="middle" font-size="24" font-weight="600" fill="#60877C">地域甲</text>
+<rect x="332" y="411" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-8" x="495" y="449" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">区域入口</text>
+<rect x="332" y="482" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-9" x="495" y="520" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">应用服务</text>
+<rect x="332" y="553" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-10" x="495" y="591" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">配置记录</text>
+<rect x="310" y="715" width="370" height="290" rx="2" fill="#E7F2EE" stroke="#92B6AC" stroke-width="1.2"/>
+<text id="t-11" x="495" y="753.5" text-anchor="middle" font-size="24" font-weight="600" fill="#60877C">地域乙</text>
+<rect x="332" y="796" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-12" x="495" y="834" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">区域入口</text>
+<rect x="332" y="867" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-13" x="495" y="905" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">应用服务</text>
+<rect x="332" y="938" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-14" x="495" y="976" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">配置记录</text>
+<path d="M260,590 L288,590 L288,440 L332,440" fill="none" stroke="#719095" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M260,652 L286,652 L286,825 L332,825" fill="none" stroke="#719095" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="795" y="235" width="660" height="810" rx="2" fill="#F0F0EC" stroke="#B6B6AA" stroke-width="1.2"/>
+<text id="t-15" x="1125" y="274.5" text-anchor="middle" font-size="26" font-weight="600" fill="#687B80">方案乙</text>
+<rect x="825" y="560" width="175" height="122" rx="2" fill="#fff" stroke="#AAA" stroke-width="1.2"/>
+<g transform="translate(894.5 574) scale(0.9)" fill="none" stroke="#719095" stroke-width="2" stroke-linejoin="round"><rect x="1" y="1" width="38" height="27" rx="2"/><path d="M20,28v10 M9,39h22"/></g>
+<text id="t-16" x="912.5" y="655" text-anchor="middle" font-size="23" font-weight="400" fill="#394B50">业务客户端</text>
+<rect x="1050" y="330" width="370" height="290" rx="2" fill="#E7F2EE" stroke="#92B6AC" stroke-width="1.2"/>
+<text id="t-17" x="1235" y="368.5" text-anchor="middle" font-size="24" font-weight="600" fill="#60877C">首选地域</text>
+<rect x="1072" y="411" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-18" x="1235" y="449" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">区域入口</text>
+<rect x="1072" y="482" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-19" x="1235" y="520" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">应用服务</text>
+<rect x="1072" y="553" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-20" x="1235" y="591" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">配置记录</text>
+<rect x="1050" y="715" width="370" height="290" rx="2" fill="#E7F2EE" stroke="#92B6AC" stroke-width="1.2"/>
+<text id="t-21" x="1235" y="753.5" text-anchor="middle" font-size="24" font-weight="600" fill="#60877C">备用地域</text>
+<rect x="1072" y="796" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-22" x="1235" y="834" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">区域入口</text>
+<rect x="1072" y="867" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-23" x="1235" y="905" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">应用服务</text>
+<rect x="1072" y="938" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-24" x="1235" y="976" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">配置记录</text>
+<path d="M1000,590 L1028,590 L1028,440 L1072,440" fill="none" stroke="#719095" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1000,652 L1027,652 L1027,825 L1072,825" fill="none" stroke="#719095" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<rect x="1535" y="235" width="660" height="810" rx="2" fill="#F0F0EC" stroke="#B6B6AA" stroke-width="1.2"/>
+<text id="t-25" x="1865" y="274.5" text-anchor="middle" font-size="26" font-weight="600" fill="#687B80">方案丙</text>
+<rect x="1565" y="430" width="175" height="122" rx="2" fill="#fff" stroke="#AAA" stroke-width="1.2"/>
+<g transform="translate(1634.5 444) scale(0.9)" fill="none" stroke="#719095" stroke-width="2" stroke-linejoin="round"><rect x="1" y="1" width="38" height="27" rx="2"/><path d="M20,28v10 M9,39h22"/></g>
+<text id="t-26" x="1652.5" y="525" text-anchor="middle" font-size="23" font-weight="400" fill="#394B50">甲侧客户端</text>
+<rect x="1565" y="812" width="175" height="122" rx="2" fill="#fff" stroke="#AAA" stroke-width="1.2"/>
+<g transform="translate(1634.5 826) scale(0.9)" fill="none" stroke="#719095" stroke-width="2" stroke-linejoin="round"><rect x="1" y="1" width="38" height="27" rx="2"/><path d="M20,28v10 M9,39h22"/></g>
+<text id="t-27" x="1652.5" y="907" text-anchor="middle" font-size="23" font-weight="400" fill="#394B50">乙侧客户端</text>
+<rect x="1790" y="330" width="370" height="290" rx="2" fill="#E7F2EE" stroke="#92B6AC" stroke-width="1.2"/>
+<text id="t-28" x="1975" y="368.5" text-anchor="middle" font-size="24" font-weight="600" fill="#60877C">地域甲</text>
+<rect x="1812" y="411" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-29" x="1975" y="449" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">区域入口</text>
+<rect x="1812" y="482" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-30" x="1975" y="520" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">应用服务</text>
+<rect x="1812" y="553" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-31" x="1975" y="591" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">配置记录</text>
+<rect x="1790" y="715" width="370" height="290" rx="2" fill="#E7F2EE" stroke="#92B6AC" stroke-width="1.2"/>
+<text id="t-32" x="1975" y="753.5" text-anchor="middle" font-size="24" font-weight="600" fill="#60877C">地域乙</text>
+<rect x="1812" y="796" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-33" x="1975" y="834" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">区域入口</text>
+<rect x="1812" y="867" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-34" x="1975" y="905" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">应用服务</text>
+<rect x="1812" y="938" width="326" height="58" rx="2" fill="#FFFFFF" stroke="#8FACCD" stroke-width="1.2"/>
+<text id="t-35" x="1975" y="976" text-anchor="middle" font-size="23" font-weight="400" fill="#253B53">配置记录</text>
+<path d="M1740,491 L1770,491 L1770,440 L1812,440" fill="none" stroke="#719095" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1740,873 L1770,873 L1770,825 L1812,825" fill="none" stroke="#719095" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="734" y="609" width="44" height="48" rx="20" fill="#FCF4D4" stroke="#D7C486" stroke-width="1.2"/>
+<text id="t-36" x="756" y="641.5" text-anchor="middle" font-size="22" font-weight="400" fill="#8D7938">或</text>
+<rect x="1474" y="609" width="44" height="48" rx="20" fill="#FCF4D4" stroke="#D7C486" stroke-width="1.2"/>
+<text id="t-37" x="1496" y="641.5" text-anchor="middle" font-size="22" font-weight="400" fill="#8D7938">或</text></g></svg>

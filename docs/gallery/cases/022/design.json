@@ -1,0 +1,391 @@
+{
+  "id": 22,
+  "number": "022",
+  "title": "媒体处理组件架构",
+  "family": "编排中心＋下部三分支组件",
+  "theme": "炭黑灰白",
+  "view": "component",
+  "width": 1700,
+  "height": 1110,
+  "thumbnail": "cases/022/preview.png",
+  "svg": "cases/022/diagram.svg",
+  "png": "cases/022/diagram.png",
+  "drawio": "cases/022/diagram.drawio",
+  "prompt": "用 MuseDraw 画“媒体处理组件架构”。采用编排中心＋下部三分支组件，炭黑灰白。分区：媒体处理服务。模块：原始媒体、媒体接入、媒体元数据、媒体资源库、处理编排、任务管理、内容检查、媒体分析。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "geometry": {
+    "number": 22,
+    "referenceId": "RQ-0017",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1365,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          396,
+          349,
+          1252,
+          48
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          693,
+          204,
+          354,
+          74
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          693,
+          496,
+          354,
+          74
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          43,
+          650,
+          289,
+          90
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          483,
+          706,
+          314,
+          74
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          1083,
+          706,
+          390,
+          74
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          451,
+          908,
+          334,
+          84
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          835,
+          908,
+          334,
+          84
+        ]
+      },
+      {
+        "id": "t-10",
+        "box": [
+          1219,
+          908,
+          390,
+          84
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "raw",
+        "label": "原始媒体",
+        "box": [
+          690,
+          150,
+          360,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "worker",
+        "label": "媒体接入",
+        "box": [
+          690,
+          442,
+          360,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "metadata",
+        "label": "媒体元数据",
+        "box": [
+          40,
+          596,
+          295,
+          148
+        ],
+        "parent": null
+      },
+      {
+        "id": "repository",
+        "label": "媒体资源库",
+        "box": [
+          480,
+          652,
+          320,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "orchestrator",
+        "label": "处理编排",
+        "box": [
+          1080,
+          652,
+          396,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "job",
+        "label": "任务管理",
+        "box": [
+          448,
+          854,
+          340,
+          142
+        ],
+        "parent": null
+      },
+      {
+        "id": "policy",
+        "label": "内容检查",
+        "box": [
+          832,
+          854,
+          340,
+          142
+        ],
+        "parent": null
+      },
+      {
+        "id": "analysis",
+        "label": "媒体分析",
+        "box": [
+          1216,
+          854,
+          396,
+          142
+        ],
+        "parent": null
+      }
+    ],
+    "groups": [
+      {
+        "id": "service",
+        "title": "媒体处理服务",
+        "box": [
+          390,
+          344,
+          1264,
+          690
+        ],
+        "headH": 58
+      }
+    ],
+    "paths": [
+      {
+        "from": "raw",
+        "to": "worker",
+        "points": [
+          [
+            870,
+            282
+          ],
+          [
+            870,
+            362
+          ],
+          [
+            870,
+            362
+          ],
+          [
+            870,
+            442
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "worker",
+        "to": "repository",
+        "points": [
+          [
+            870,
+            574
+          ],
+          [
+            870,
+            613
+          ],
+          [
+            640,
+            613
+          ],
+          [
+            640,
+            652
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "repository",
+        "to": "metadata",
+        "points": [
+          [
+            480,
+            718
+          ],
+          [
+            407.5,
+            718
+          ],
+          [
+            407.5,
+            670
+          ],
+          [
+            335,
+            670
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "worker",
+        "to": "orchestrator",
+        "points": [
+          [
+            1050,
+            508
+          ],
+          [
+            1065,
+            508
+          ],
+          [
+            1065,
+            718
+          ],
+          [
+            1080,
+            718
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "orchestrator",
+        "to": "job",
+        "points": [
+          [
+            1080,
+            718
+          ],
+          [
+            934,
+            718
+          ],
+          [
+            934,
+            925
+          ],
+          [
+            788,
+            925
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "orchestrator",
+        "to": "policy",
+        "points": [
+          [
+            1278,
+            784
+          ],
+          [
+            1278,
+            819
+          ],
+          [
+            1002,
+            819
+          ],
+          [
+            1002,
+            854
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "orchestrator",
+        "to": "analysis",
+        "points": [
+          [
+            1278,
+            784
+          ],
+          [
+            1278,
+            819
+          ],
+          [
+            1414,
+            819
+          ],
+          [
+            1414,
+            854
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "视频处理：组件与媒体存储",
+    "url": "https://icepanel.io/blog/design-youtube-using-icepanel"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

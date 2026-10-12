@@ -1,0 +1,370 @@
+{
+  "id": 11,
+  "number": "011",
+  "title": "在线商城系统全景",
+  "family": "中心服务＋三侧外围系统",
+  "theme": "炭黑灰白",
+  "view": "component",
+  "width": 1800,
+  "height": 1130,
+  "thumbnail": "cases/011/preview.png",
+  "svg": "cases/011/diagram.svg",
+  "png": "cases/011/diagram.png",
+  "drawio": "cases/011/diagram.drawio",
+  "prompt": "用 MuseDraw 画“在线商城系统全景”。采用中心服务＋三侧外围系统，炭黑灰白。分区：。模块：购物用户、负载测试、营销服务、在线商城、库存履约、外部汇率、结算服务、支付渠道。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "geometry": {
+    "number": 11,
+    "referenceId": "RQ-0002",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1465,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          653,
+          216,
+          354,
+          76
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          1133,
+          216,
+          354,
+          76
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          73,
+          544,
+          378,
+          94
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          653,
+          544,
+          434,
+          94
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          1323,
+          544,
+          378,
+          94
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          73,
+          914,
+          378,
+          94
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          653,
+          914,
+          434,
+          94
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          1323,
+          914,
+          378,
+          94
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "customers",
+        "label": "购物用户",
+        "box": [
+          650,
+          162,
+          360,
+          134
+        ],
+        "parent": null
+      },
+      {
+        "id": "load",
+        "label": "负载测试",
+        "box": [
+          1130,
+          162,
+          360,
+          134
+        ],
+        "parent": null
+      },
+      {
+        "id": "marketing",
+        "label": "营销服务",
+        "box": [
+          70,
+          490,
+          384,
+          152
+        ],
+        "parent": null
+      },
+      {
+        "id": "shop",
+        "label": "在线商城",
+        "box": [
+          650,
+          490,
+          440,
+          152
+        ],
+        "parent": null
+      },
+      {
+        "id": "stock",
+        "label": "库存履约",
+        "box": [
+          1320,
+          490,
+          384,
+          152
+        ],
+        "parent": null
+      },
+      {
+        "id": "rates",
+        "label": "外部汇率",
+        "box": [
+          70,
+          860,
+          384,
+          152
+        ],
+        "parent": null
+      },
+      {
+        "id": "finance",
+        "label": "结算服务",
+        "box": [
+          650,
+          860,
+          440,
+          152
+        ],
+        "parent": null
+      },
+      {
+        "id": "payment",
+        "label": "支付渠道",
+        "box": [
+          1320,
+          860,
+          384,
+          152
+        ],
+        "parent": null
+      }
+    ],
+    "groups": [],
+    "paths": [
+      {
+        "from": "customers",
+        "to": "shop",
+        "points": [
+          [
+            830,
+            296
+          ],
+          [
+            830,
+            393
+          ],
+          [
+            870,
+            393
+          ],
+          [
+            870,
+            490
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "load",
+        "to": "shop",
+        "points": [
+          [
+            1130,
+            229
+          ],
+          [
+            1110,
+            229
+          ],
+          [
+            1110,
+            566
+          ],
+          [
+            1090,
+            566
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "shop",
+        "to": "marketing",
+        "points": [
+          [
+            650,
+            566
+          ],
+          [
+            552,
+            566
+          ],
+          [
+            552,
+            566
+          ],
+          [
+            454,
+            566
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "shop",
+        "to": "stock",
+        "points": [
+          [
+            1090,
+            566
+          ],
+          [
+            1205,
+            566
+          ],
+          [
+            1205,
+            566
+          ],
+          [
+            1320,
+            566
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "shop",
+        "to": "finance",
+        "points": [
+          [
+            870,
+            642
+          ],
+          [
+            870,
+            751
+          ],
+          [
+            870,
+            751
+          ],
+          [
+            870,
+            860
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "finance",
+        "to": "rates",
+        "points": [
+          [
+            650,
+            936
+          ],
+          [
+            552,
+            936
+          ],
+          [
+            552,
+            936
+          ],
+          [
+            454,
+            936
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "finance",
+        "to": "payment",
+        "points": [
+          [
+            1090,
+            936
+          ],
+          [
+            1205,
+            936
+          ],
+          [
+            1205,
+            936
+          ],
+          [
+            1320,
+            936
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "IcePanel 多域系统全景",
+    "url": "https://icepanel.io/blog/system-landscape-diagrams-c4-model"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

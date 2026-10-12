@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfbfa">
+  <meta name="description" content="MuseDraw 原创架构图集。浏览 100 种构图，复制绘图提示词，下载 PNG、SVG 与可逐个编辑的 draw.io 文件。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; frame-src https://embed.diagrams.net; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>图集 · MuseDraw</title>
+  <link rel="icon" href="../../assets/brand/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="gallery.css">
+  <script type="module" src="gallery.mjs"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="MuseDraw 图集"><img src="../../assets/brand/mark.svg" width="32" height="32" alt=""><span>MuseDraw</span></a>
+    <nav aria-label="主导航"><a class="current" href="./">图集</a><a href="https://github.com/KanJieTeam/MuseDraw" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><button class="install-button" id="install">安装 Skill <span aria-hidden="true">↗</span></button></nav>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">MUSEDRAW / COLLECTION 01</p><h1 id="page-title">把复杂，画清楚。</h1><p class="intro-copy">100 张原创架构图。不同的构图、不同的表达，找到适合你的那一种。</p></div>
+      <div class="intro-note"><span>看图 · 取用 · 再创作</span><p>复制提示词交给你的智能体，<br>或用 draw.io 直接修改。</p></div>
+    </section>
+    <section class="collection" aria-label="架构图案例">
+      <div class="collection-tools">
+        <div class="filters" role="group" aria-label="按视图筛选"><button class="active" data-view="all" aria-pressed="true">全部 <span>100</span></button><button data-view="capability" aria-pressed="false">能力架构</button><button data-view="component" aria-pressed="false">组件与集成</button><button data-view="deployment" aria-pressed="false">部署与网络</button></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索主题、构图…" aria-label="搜索主题或构图"><kbd>/</kbd></label>
+      </div>
+      <div class="results-line"><span id="result-count" role="status">正在加载图集…</span><button id="favorites" aria-pressed="false">收藏的图 <span id="favorite-count">0</span></button></div>
+      <div id="load-error" class="empty" hidden><p>暂时无法加载图集。</p><button id="reload">重新加载</button></div>
+      <div class="case-grid" id="grid"></div>
+      <div class="empty" id="empty" hidden><p>没有找到匹配的图。</p><button id="reset">查看全部</button></div>
+    </section>
+    <footer><a class="brand" href="https://github.com/KanJieTeam/MuseDraw"><img src="../../assets/brand/mark.svg" width="24" height="24" alt=""><span>MuseDraw</span></a><p>图形可编辑，想法不设限。</p><span>原创图集 · Apache-2.0</span></footer>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-bar"><div><span id="detail-number" class="eyebrow"></span><h2 id="detail-title"></h2></div><div class="detail-nav"><button id="previous" aria-label="上一张">←</button><button id="next" aria-label="下一张">→</button><button class="close" id="close-detail" aria-label="关闭详情">×</button></div></div>
+    <div class="detail-body"><div class="drawing-panel"><div class="viewport" id="viewport" tabindex="0" role="region" aria-label="图纸预览，可滚轮缩放和拖动平移"><img id="detail-image" draggable="false" alt=""></div><div class="zoom-bar"><span>滚轮缩放 · 拖动平移</span><div><button id="zoom-out" aria-label="缩小">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="放大">+</button><button id="fit">全图</button><button id="fullscreen">全屏 ↗</button></div></div></div>
+      <aside class="detail-info"><p class="eyebrow">构图与表达</p><p id="detail-family" class="family-description"></p><p id="detail-theme" class="theme-description"></p><div class="download-actions"><button class="primary" id="edit">在 draw.io 中编辑 ↗</button><a id="download-drawio" class="secondary" download>下载可编辑 drawio ↓</a><div class="secondary-downloads"><a id="download-svg" download>SVG ↓</a><a id="download-png" download>PNG ↓</a></div></div><div class="prompt-section"><div><h3>试试这张图</h3><button id="copy-prompt">复制提示词</button></div><pre id="prompt"></pre><p class="note">提示词可复用；不同模型与执行环境的结果会有差异。下载文件是本页展示图的源文件。</p></div><button id="share" class="text-button">复制这张图的链接 ↗</button></aside>
+    </div>
+  </dialog>
+  <dialog id="editor" aria-label="draw.io 编辑器"><div class="editor-bar"><div><strong id="editor-title">编辑图纸</strong><span>编辑后点“保存”下载新的 drawio 文件；不会覆盖公开案例。</span></div><button id="close-editor" class="close" aria-label="关闭编辑器">×</button></div><div class="editor-loading" id="editor-loading"><p>正在打开 draw.io…</p><p class="note">在线编辑会将本案例载入 diagrams.net；也可下载文件离线编辑。</p><a id="editor-fallback" download>直接下载 drawio 文件 ↓</a></div><div id="editor-frame"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="empty">请启用 JavaScript 浏览图集。也可到 <a href="https://github.com/KanJieTeam/MuseDraw/tree/main/docs/gallery/cases">GitHub 下载源文件</a>。</p></noscript>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1210" viewBox="0 0 1760 1210" role="img" aria-labelledby="title desc"><title id="title">数据资产授权与访问架构</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":24,"referenceId":"CQ-0029","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1425,72]},{"id":"t-2","box":[346,159,638,48]},{"id":"t-3","box":[372,245,586,48]},{"id":"t-4","box":[382,314,566,46]},{"id":"t-5","box":[382,372,566,46]},{"id":"t-6","box":[382,430,566,46]},{"id":"t-7","box":[382,488,566,46]},{"id":"t-8","box":[372,583,586,48]},{"id":"t-9","box":[382,652,277,124]},{"id":"t-10","box":[671,652,277,124]},{"id":"t-11","box":[372,825,586,48]},{"id":"t-12","box":[382,894,277,100]},{"id":"t-13","box":[671,894,277,100]},{"id":"t-14","box":[382,1006,277,100]},{"id":"t-15","box":[671,1006,277,100]},{"id":"t-16","box":[43,874,254,76]},{"id":"t-17","box":[43,1062,254,76]},{"id":"t-18","box":[1076,159,638,48]},{"id":"t-19","box":[1102,245,586,48]},{"id":"t-20","box":[1112,314,277,104]},{"id":"t-21","box":[1401,314,277,104]},{"id":"t-22","box":[1112,430,277,104]},{"id":"t-23","box":[1401,430,277,104]},{"id":"t-24","box":[1102,583,586,48]},{"id":"t-25","box":[1112,652,277,124]},{"id":"t-26","box":[1401,652,277,124]},{"id":"t-27","box":[1102,825,586,48]},{"id":"t-28","box":[1112,894,277,100]},{"id":"t-29","box":[1401,894,277,100]},{"id":"t-30","box":[1112,1006,277,100]},{"id":"t-31","box":[1401,1006,277,100]}],"nodes":[{"id":"mapping-1","label":"权限登记","box":[382,314,566,46],"parent":"mapping"},{"id":"mapping-2","label":"资产映射","box":[382,372,566,46],"parent":"mapping"},{"id":"mapping-3","label":"标签识别","box":[382,430,566,46],"parent":"mapping"},{"id":"mapping-4","label":"分组关联","box":[382,488,566,46],"parent":"mapping"},{"id":"directory-1","label":"人员分组","box":[382,652,277,124],"parent":"directory"},{"id":"directory-2","label":"责任目录","box":[671,652,277,124],"parent":"directory"},{"id":"workflow-1","label":"审批流程","box":[382,894,277,100],"parent":"workflow"},{"id":"workflow-2","label":"资产申请","box":[671,894,277,100],"parent":"workflow"},{"id":"workflow-3","label":"授权回执","box":[382,1006,277,100],"parent":"workflow"},{"id":"workflow-4","label":"权限期限","box":[671,1006,277,100],"parent":"workflow"},{"id":"owner","label":"数据负责人","box":[40,820,260,134],"parent":null},{"id":"consumer","label":"数据消费者","box":[40,1008,260,134],"parent":null},{"id":"iam-1","label":"用户分组","box":[1112,314,277,104],"parent":"iam"},{"id":"iam-2","label":"策略权限","box":[1401,314,277,104],"parent":"iam"},{"id":"iam-3","label":"有效凭据","box":[1112,430,277,104],"parent":"iam"},{"id":"iam-4","label":"授权记录","box":[1401,430,277,104],"parent":"iam"},{"id":"assets-1","label":"存储访问","box":[1112,652,277,124],"parent":"assets"},{"id":"assets-2","label":"查询访问","box":[1401,652,277,124],"parent":"assets"},{"id":"catalog-1","label":"资产信息","box":[1112,894,277,100],"parent":"catalog"},{"id":"catalog-2","label":"资源标签","box":[1401,894,277,100],"parent":"catalog"},{"id":"catalog-3","label":"共享状态","box":[1112,1006,277,100],"parent":"catalog"},{"id":"catalog-4","label":"使用记录","box":[1401,1006,277,100],"parent":"catalog"}],"groups":[{"id":"application","title":"数据访问应用","box":[340,154,650,996],"headH":58},{"id":"mapping","title":"权限映射","box":[366,240,598,310],"headH":58},{"id":"directory","title":"组织目录","box":[366,578,598,214],"headH":58},{"id":"workflow","title":"访问审批","box":[366,820,598,302],"headH":58},{"id":"platform","title":"数据资源平台","box":[1070,154,650,996],"headH":58},{"id":"iam","title":"身份与访问","box":[1096,240,598,310],"headH":58},{"id":"assets","title":"资产服务","box":[1096,578,598,214],"headH":58},{"id":"catalog","title":"资产目录","box":[1096,820,598,302],"headH":58}],"paths":[{"from":"owner","to":"workflow-1","points":[[300,887],[341,887],[341,944],[382,944]],"label":"","labelBox":null},{"from":"mapping-2","to":"iam-2","points":[[948,395],[1030,395],[1030,218],[1539.5,218],[1539.5,314]],"label":"","labelBox":null},{"from":"workflow-2","to":"catalog-1","points":[[948,944],[1030,944],[1030,944],[1112,944]],"label":"","labelBox":null}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1760" height="1210" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#28323E">数据资产授权与访问架构</text>
+<g transform="translate(1492 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#326CA4"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M34,112 L1726,112" fill="none" stroke="#326CA4" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="340" y="154" width="650" height="996" rx="2" fill="#FFFFFF" stroke="#8D969F" stroke-width="1.2"/>
+<rect x="340" y="154" width="650" height="58" rx="2" fill="#4D5965" stroke="#4D5965" stroke-width="1.2"/>
+<text id="t-2" x="665" y="193.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">数据访问应用</text>
+<rect x="366" y="240" width="598" height="310" rx="2" fill="#FFFFFF" stroke="#A8AFB7" stroke-width="1.2"/>
+<text id="t-3" x="665" y="279.5" text-anchor="middle" font-size="26" font-weight="600" fill="#28323E">权限映射</text>
+<rect x="382" y="314" width="566" height="46" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-4" x="665" y="346" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">权限登记</text>
+<rect x="382" y="372" width="566" height="46" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-5" x="665" y="404" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">资产映射</text>
+<rect x="382" y="430" width="566" height="46" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-6" x="665" y="462" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">标签识别</text>
+<rect x="382" y="488" width="566" height="46" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-7" x="665" y="520" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">分组关联</text>
+<rect x="366" y="578" width="598" height="214" rx="2" fill="#FFFFFF" stroke="#A8AFB7" stroke-width="1.2"/>
+<text id="t-8" x="665" y="617.5" text-anchor="middle" font-size="26" font-weight="600" fill="#28323E">组织目录</text>
+<rect x="382" y="652" width="277" height="124" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-9" x="520.5" y="723" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">人员分组</text>
+<rect x="671" y="652" width="277" height="124" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-10" x="809.5" y="723" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">责任目录</text>
+<rect x="366" y="820" width="598" height="302" rx="2" fill="#FFFFFF" stroke="#A8AFB7" stroke-width="1.2"/>
+<text id="t-11" x="665" y="859.5" text-anchor="middle" font-size="26" font-weight="600" fill="#28323E">访问审批</text>
+<rect x="382" y="894" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-12" x="520.5" y="953" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">审批流程</text>
+<rect x="671" y="894" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-13" x="809.5" y="953" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">资产申请</text>
+<rect x="382" y="1006" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-14" x="520.5" y="1065" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">授权回执</text>
+<rect x="671" y="1006" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-15" x="809.5" y="1065" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">权限期限</text>
+<rect x="40" y="820" width="260" height="134" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<g transform="translate(152 834) scale(0.9)" fill="none" stroke="#627384" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="9" r="7"/><path d="M7,36v-8c0-13 26-13 26,0v8Z"/></g>
+<text id="t-16" x="170" y="921" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">数据负责人</text>
+<rect x="40" y="1008" width="260" height="134" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<g transform="translate(152 1022) scale(0.9)" fill="none" stroke="#627384" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="9" r="7"/><path d="M7,36v-8c0-13 26-13 26,0v8Z"/></g>
+<text id="t-17" x="170" y="1109" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">数据消费者</text>
+<rect x="1070" y="154" width="650" height="996" rx="2" fill="#FFFFFF" stroke="#326CA4" stroke-width="2"/>
+<rect x="1070" y="154" width="650" height="58" rx="2" fill="#326CA4" stroke="#326CA4" stroke-width="1.2"/>
+<text id="t-18" x="1395" y="193.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">数据资源平台</text>
+<rect x="1096" y="240" width="598" height="310" rx="2" fill="#FFFFFF" stroke="#8DA8C1" stroke-width="1.2"/>
+<text id="t-19" x="1395" y="279.5" text-anchor="middle" font-size="26" font-weight="600" fill="#326CA4">身份与访问</text>
+<rect x="1112" y="314" width="277" height="104" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-20" x="1250.5" y="375" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">用户分组</text>
+<rect x="1401" y="314" width="277" height="104" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-21" x="1539.5" y="375" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">策略权限</text>
+<rect x="1112" y="430" width="277" height="104" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-22" x="1250.5" y="491" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">有效凭据</text>
+<rect x="1401" y="430" width="277" height="104" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-23" x="1539.5" y="491" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">授权记录</text>
+<rect x="1096" y="578" width="598" height="214" rx="2" fill="#FFFFFF" stroke="#8DA8C1" stroke-width="1.2"/>
+<text id="t-24" x="1395" y="617.5" text-anchor="middle" font-size="26" font-weight="600" fill="#326CA4">资产服务</text>
+<rect x="1112" y="652" width="277" height="124" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-25" x="1250.5" y="723" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">存储访问</text>
+<rect x="1401" y="652" width="277" height="124" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-26" x="1539.5" y="723" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">查询访问</text>
+<rect x="1096" y="820" width="598" height="302" rx="2" fill="#FFFFFF" stroke="#8DA8C1" stroke-width="1.2"/>
+<text id="t-27" x="1395" y="859.5" text-anchor="middle" font-size="26" font-weight="600" fill="#326CA4">资产目录</text>
+<rect x="1112" y="894" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-28" x="1250.5" y="953" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">资产信息</text>
+<rect x="1401" y="894" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-29" x="1539.5" y="953" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">资源标签</text>
+<rect x="1112" y="1006" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-30" x="1250.5" y="1065" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">共享状态</text>
+<rect x="1401" y="1006" width="277" height="100" rx="2" fill="#FFFFFF" stroke="#AEB8C3" stroke-width="1.2"/>
+<text id="t-31" x="1539.5" y="1065" text-anchor="middle" font-size="23" font-weight="400" fill="#28323E">使用记录</text>
+<path d="M300,887 L341,887 L341,944 L382,944" fill="none" stroke="#326CA4" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M948,395 L1030,395 L1030,218 L1539.5,218 L1539.5,314" fill="none" stroke="#326CA4" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M948,944 L1030,944 L1030,944 L1112,944" fill="none" stroke="#326CA4" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/></g></svg>

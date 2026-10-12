@@ -27,7 +27,9 @@ jobs:
           node-version: '22'
           package-manager-cache: false
       - name: Offline artifacts, Python regressions and Node syntax
-        run: python scripts/check.py
+        run: |
+          python scripts/check.py
+          python scripts/check_drawio.py docs/gallery --report output/gallery-structure.json
         env:
           PYTHONDONTWRITEBYTECODE: '1'
   browser:
@@ -51,3 +53,11 @@ jobs:
         run: python scripts/check.py --playwright output/browser-deps/node_modules/playwright/index.mjs
         env:
           PYTHONDONTWRITEBYTECODE: '1'
+      - name: Check public gallery interactions and downloads
+        run: node scripts/check_gallery_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs
+      - name: Save gallery browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gallery-browser-qa
+          path: output/gallery-qa

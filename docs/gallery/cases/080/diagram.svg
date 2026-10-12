@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1520" viewBox="0 0 1800 1520" role="img" aria-labelledby="title desc"><title id="title">客户服务运营能力架构</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":80,"referenceId":"BQ-0032","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1465,72]},{"id":"t-2","box":[56,155,1688,48]},{"id":"t-3","box":[240,220,350,58]},{"id":"t-4","box":[607,220,350,58]},{"id":"t-5","box":[974,220,176.5,58]},{"id":"t-6","box":[1162.5,220,176.5,58]},{"id":"t-7","box":[1351,220,176.5,58]},{"id":"t-8","box":[1539.5,220,176.5,58]},{"id":"t-9","box":[56,331,1688,48]},{"id":"t-10","box":[238,402,355.25,58]},{"id":"t-11","box":[611.25,402,355.25,58]},{"id":"t-12","box":[984.5,402,355.25,58]},{"id":"t-13","box":[1357.75,402,355.25,58]},{"id":"t-14","box":[238,478,355.25,58]},{"id":"t-15","box":[611.25,478,355.25,58]},{"id":"t-16","box":[984.5,478,355.25,58]},{"id":"t-17","box":[1357.75,478,355.25,58]},{"id":"t-18","box":[56,587,1688,48]},{"id":"t-19","box":[220,668,230,72]},{"id":"t-20","box":[496,675,294.75,58]},{"id":"t-21","box":[802.75,675,294.75,58]},{"id":"t-22","box":[1109.5,675,294.75,58]},{"id":"t-23","box":[1416.25,675,294.75,58]},{"id":"t-24","box":[220,782,230,72]},{"id":"t-25","box":[496,789,294.75,58]},{"id":"t-26","box":[802.75,789,294.75,58]},{"id":"t-27","box":[1109.5,789,294.75,58]},{"id":"t-28","box":[1416.25,789,294.75,58]},{"id":"t-29","box":[220,896,230,72]},{"id":"t-30","box":[496,903,294.75,58]},{"id":"t-31","box":[802.75,903,294.75,58]},{"id":"t-32","box":[1109.5,903,294.75,58]},{"id":"t-33","box":[1416.25,903,294.75,58]},{"id":"t-34","box":[220,1010,230,72]},{"id":"t-35","box":[496,1017,294.75,58]},{"id":"t-36","box":[802.75,1017,294.75,58]},{"id":"t-37","box":[1109.5,1017,294.75,58]},{"id":"t-38","box":[1416.25,1017,294.75,58]},{"id":"t-39","box":[56,1173,1688,48]},{"id":"t-40","box":[237,1236,359.75,58]},{"id":"t-41","box":[608.75,1236,359.75,58]},{"id":"t-42","box":[980.5,1236,359.75,58]},{"id":"t-43","box":[1352.25,1236,359.75,58]},{"id":"t-44","box":[56,1335,1688,48]},{"id":"t-45","box":[237,1399,483.6666666666667,58]},{"id":"t-46","box":[732.6666666666667,1399,483.6666666666667,58]},{"id":"t-47","box":[1228.3333333333335,1399,483.6666666666667,58]}],"nodes":[{"id":"reach-a","label":"统一服务入口","box":[240,220,350,58],"parent":"reach"},{"id":"reach-b","label":"客户信息查询","box":[607,220,350,58],"parent":"reach"},{"id":"reach-1","label":"站内消息","box":[974,220,176.5,58],"parent":"reach"},{"id":"reach-2","label":"短信提醒","box":[1162.5,220,176.5,58],"parent":"reach"},{"id":"reach-3","label":"邮件订阅","box":[1351,220,176.5,58],"parent":"reach"},{"id":"reach-4","label":"在线客服","box":[1539.5,220,176.5,58],"parent":"reach"},{"id":"service-1","label":"服务登记","box":[238,402,355.25,58],"parent":"service"},{"id":"service-2","label":"需求归类","box":[611.25,402,355.25,58],"parent":"service"},{"id":"service-3","label":"资料校验","box":[984.5,402,355.25,58],"parent":"service"},{"id":"service-4","label":"处理指引","box":[1357.75,402,355.25,58],"parent":"service"},{"id":"service-5","label":"知识检索","box":[238,478,355.25,58],"parent":"service"},{"id":"service-6","label":"响应记录","box":[611.25,478,355.25,58],"parent":"service"},{"id":"service-7","label":"满意评价","box":[984.5,478,355.25,58],"parent":"service"},{"id":"service-8","label":"异常登记","box":[1357.75,478,355.25,58],"parent":"service"},{"id":"step-0","label":"请求受理","box":[220,668,230,72],"parent":"operate"},{"id":"operate-0-1","label":"来源识别","box":[496,675,294.75,58],"parent":"operate"},{"id":"operate-0-2","label":"需求确认","box":[802.75,675,294.75,58],"parent":"operate"},{"id":"operate-0-3","label":"信息补齐","box":[1109.5,675,294.75,58],"parent":"operate"},{"id":"operate-0-4","label":"受理编号","box":[1416.25,675,294.75,58],"parent":"operate"},{"id":"step-1","label":"任务分派","box":[220,782,230,72],"parent":"operate"},{"id":"operate-1-1","label":"队列分组","box":[496,789,294.75,58],"parent":"operate"},{"id":"operate-1-2","label":"人员匹配","box":[802.75,789,294.75,58],"parent":"operate"},{"id":"operate-1-3","label":"期限设置","box":[1109.5,789,294.75,58],"parent":"operate"},{"id":"operate-1-4","label":"任务通知","box":[1416.25,789,294.75,58],"parent":"operate"},{"id":"step-2","label":"处理跟进","box":[220,896,230,72],"parent":"operate"},{"id":"operate-2-1","label":"状态更新","box":[496,903,294.75,58],"parent":"operate"},{"id":"operate-2-2","label":"资料补充","box":[802.75,903,294.75,58],"parent":"operate"},{"id":"operate-2-3","label":"协同处理","box":[1109.5,903,294.75,58],"parent":"operate"},{"id":"operate-2-4","label":"进度提醒","box":[1416.25,903,294.75,58],"parent":"operate"},{"id":"step-3","label":"结果复核","box":[220,1010,230,72],"parent":"operate"},{"id":"operate-3-1","label":"结果检查","box":[496,1017,294.75,58],"parent":"operate"},{"id":"operate-3-2","label":"客户确认","box":[802.75,1017,294.75,58],"parent":"operate"},{"id":"operate-3-3","label":"问题追溯","box":[1109.5,1017,294.75,58],"parent":"operate"},{"id":"operate-3-4","label":"服务归档","box":[1416.25,1017,294.75,58],"parent":"operate"},{"id":"analysis-1","label":"服务统计","box":[237,1236,359.75,58],"parent":"analysis"},{"id":"analysis-2","label":"客户分析","box":[608.75,1236,359.75,58],"parent":"analysis"},{"id":"analysis-3","label":"响应分析","box":[980.5,1236,359.75,58],"parent":"analysis"},{"id":"analysis-4","label":"知识分析","box":[1352.25,1236,359.75,58],"parent":"analysis"},{"id":"data-1","label":"客户档案","box":[237,1399,483.6666666666667,58],"parent":"data"},{"id":"data-2","label":"任务记录","box":[732.6666666666667,1399,483.6666666666667,58],"parent":"data"},{"id":"data-3","label":"服务知识","box":[1228.3333333333335,1399,483.6666666666667,58],"parent":"data"}],"groups":[{"id":"reach","title":"客户触达","box":[50,150,1700,158],"headH":58},{"id":"service","title":"服务能力","box":[50,326,1700,238],"headH":58},{"id":"operate","title":"服务运营","box":[50,582,1700,568],"headH":58},{"id":"analysis","title":"运营分析","box":[50,1168,1700,144],"headH":58},{"id":"data","title":"服务数据","box":[50,1330,1700,140],"headH":58}],"paths":[{"from":"step-0","to":"step-1","points":[[335,740],[335,782]],"label":"","labelBox":null},{"from":"step-1","to":"step-2","points":[[335,854],[335,896]],"label":"","labelBox":null},{"from":"step-2","to":"step-3","points":[[335,968],[335,1010]],"label":"","labelBox":null}]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1800" height="1520" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#26394A">客户服务运营能力架构</text>
+<g transform="translate(1532 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#63557E"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<rect x="50" y="150" width="1700" height="158" rx="2" fill="#EFECFA" stroke="#D6CEE9" stroke-width="1.2"/>
+<text id="t-2" x="68" y="189.5" text-anchor="start" font-size="26" font-weight="600" fill="#63557E">客户触达</text>
+<rect x="240" y="220" width="350" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-3" x="415" y="258" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">统一服务入口</text>
+<rect x="607" y="220" width="350" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-4" x="782" y="258" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">客户信息查询</text>
+<rect x="974" y="220" width="176.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-5" x="1062.25" y="257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">站内消息</text>
+<rect x="1162.5" y="220" width="176.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-6" x="1250.75" y="257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">短信提醒</text>
+<rect x="1351" y="220" width="176.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-7" x="1439.25" y="257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">邮件订阅</text>
+<rect x="1539.5" y="220" width="176.5" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-8" x="1627.75" y="257.5" text-anchor="middle" font-size="22" font-weight="400" fill="#26394A">在线客服</text>
+<rect x="50" y="326" width="1700" height="238" rx="2" fill="#EFECFA" stroke="#D6CEE9" stroke-width="1.2"/>
+<text id="t-9" x="68" y="365.5" text-anchor="start" font-size="26" font-weight="600" fill="#63557E">服务能力</text>
+<rect x="238" y="402" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-10" x="415.625" y="440" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">服务登记</text>
+<rect x="611.25" y="402" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-11" x="788.875" y="440" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">需求归类</text>
+<rect x="984.5" y="402" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-12" x="1162.125" y="440" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">资料校验</text>
+<rect x="1357.75" y="402" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-13" x="1535.375" y="440" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">处理指引</text>
+<rect x="238" y="478" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-14" x="415.625" y="516" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">知识检索</text>
+<rect x="611.25" y="478" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-15" x="788.875" y="516" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">响应记录</text>
+<rect x="984.5" y="478" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-16" x="1162.125" y="516" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">满意评价</text>
+<rect x="1357.75" y="478" width="355.25" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-17" x="1535.375" y="516" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">异常登记</text>
+<rect x="50" y="582" width="1700" height="568" rx="2" fill="#EFECFA" stroke="#D6CEE9" stroke-width="1.2"/>
+<text id="t-18" x="68" y="621.5" text-anchor="start" font-size="26" font-weight="600" fill="#63557E">服务运营</text>
+<rect x="220" y="668" width="230" height="72" rx="2" fill="#E9DDE7" stroke="#D5A7C6" stroke-width="1.2"/>
+<text id="t-19" x="335" y="713" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">请求受理</text>
+<rect x="496" y="675" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-20" x="643.375" y="713" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">来源识别</text>
+<rect x="802.75" y="675" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-21" x="950.125" y="713" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">需求确认</text>
+<rect x="1109.5" y="675" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-22" x="1256.875" y="713" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">信息补齐</text>
+<rect x="1416.25" y="675" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-23" x="1563.625" y="713" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">受理编号</text>
+<rect x="220" y="782" width="230" height="72" rx="2" fill="#E9DDE7" stroke="#D5A7C6" stroke-width="1.2"/>
+<text id="t-24" x="335" y="827" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">任务分派</text>
+<rect x="496" y="789" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-25" x="643.375" y="827" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">队列分组</text>
+<rect x="802.75" y="789" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-26" x="950.125" y="827" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">人员匹配</text>
+<rect x="1109.5" y="789" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-27" x="1256.875" y="827" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">期限设置</text>
+<rect x="1416.25" y="789" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-28" x="1563.625" y="827" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">任务通知</text>
+<rect x="220" y="896" width="230" height="72" rx="2" fill="#E9DDE7" stroke="#D5A7C6" stroke-width="1.2"/>
+<text id="t-29" x="335" y="941" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">处理跟进</text>
+<rect x="496" y="903" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-30" x="643.375" y="941" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">状态更新</text>
+<rect x="802.75" y="903" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-31" x="950.125" y="941" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">资料补充</text>
+<rect x="1109.5" y="903" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-32" x="1256.875" y="941" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">协同处理</text>
+<rect x="1416.25" y="903" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-33" x="1563.625" y="941" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">进度提醒</text>
+<rect x="220" y="1010" width="230" height="72" rx="2" fill="#E9DDE7" stroke="#D5A7C6" stroke-width="1.2"/>
+<text id="t-34" x="335" y="1055" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">结果复核</text>
+<rect x="496" y="1017" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-35" x="643.375" y="1055" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">结果检查</text>
+<rect x="802.75" y="1017" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-36" x="950.125" y="1055" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">客户确认</text>
+<rect x="1109.5" y="1017" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-37" x="1256.875" y="1055" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">问题追溯</text>
+<rect x="1416.25" y="1017" width="294.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-38" x="1563.625" y="1055" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">服务归档</text>
+<path d="M335,740 L335,782" fill="none" stroke="#A36B96" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M335,854 L335,896" fill="none" stroke="#A36B96" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M335,968 L335,1010" fill="none" stroke="#A36B96" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="50" y="1168" width="1700" height="144" rx="2" fill="#EFECFA" stroke="#D6CEE9" stroke-width="1.2"/>
+<text id="t-39" x="68" y="1207.5" text-anchor="start" font-size="26" font-weight="600" fill="#63557E">运营分析</text>
+<rect x="237" y="1236" width="359.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-40" x="416.875" y="1274" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">服务统计</text>
+<rect x="608.75" y="1236" width="359.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-41" x="788.625" y="1274" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">客户分析</text>
+<rect x="980.5" y="1236" width="359.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-42" x="1160.375" y="1274" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">响应分析</text>
+<rect x="1352.25" y="1236" width="359.75" height="58" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-43" x="1532.125" y="1274" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">知识分析</text>
+<rect x="50" y="1330" width="1700" height="140" rx="2" fill="#EFECFA" stroke="#D6CEE9" stroke-width="1.2"/>
+<text id="t-44" x="68" y="1369.5" text-anchor="start" font-size="26" font-weight="600" fill="#63557E">服务数据</text>
+<rect x="237" y="1399" width="483.6666666666667" height="58" rx="2" fill="#F8F8FC" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-45" x="478.83333333333337" y="1437" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">客户档案</text>
+<rect x="732.6666666666667" y="1399" width="483.6666666666667" height="58" rx="2" fill="#F8F8FC" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-46" x="974.5000000000001" y="1437" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">任务记录</text>
+<rect x="1228.3333333333335" y="1399" width="483.6666666666667" height="58" rx="2" fill="#F8F8FC" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-47" x="1470.1666666666667" y="1437" text-anchor="middle" font-size="23" font-weight="400" fill="#26394A">服务知识</text></g></svg>

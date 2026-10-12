@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="0 0 1800 1320" role="img" aria-labelledby="title desc"><title id="title">应用安全控制能力架构</title><desc id="desc">MuseDraw 原创通用参考，按独立设计研究重绘；不表示来源厂商实现，不含第三方图像与标识。</desc><metadata id="layout-metadata">{"number":87,"referenceId":"EQ-1508","scope":"original-generic-reference","bounds":[{"id":"t-1","box":[34,20,1465,72]},{"id":"t-2","box":[286,268,1448,84]},{"id":"t-3","box":[61,389,191,48]},{"id":"t-4","box":[71,505,171,118]},{"id":"t-5","box":[71,671,171,118]},{"id":"t-6","box":[71,837,171,118]},{"id":"t-7","box":[71,1003,171,118]},{"id":"t-8","box":[286,389,462,50]},{"id":"t-9","box":[300,471,210,118]},{"id":"t-10","box":[524,471,210,118]},{"id":"t-11","box":[779,389,462,50]},{"id":"t-12","box":[793,471,210,118]},{"id":"t-13","box":[1017,471,210,118]},{"id":"t-14","box":[1272,389,462,50]},{"id":"t-15","box":[1286,471,210,118]},{"id":"t-16","box":[1510,471,210,118]},{"id":"t-17","box":[286,671,462,50]},{"id":"t-18","box":[300,753,210,118]},{"id":"t-19","box":[524,753,210,118]},{"id":"t-20","box":[779,671,462,50]},{"id":"t-21","box":[793,753,210,118]},{"id":"t-22","box":[1017,753,210,118]},{"id":"t-23","box":[1272,671,462,50]},{"id":"t-24","box":[1286,753,210,118]},{"id":"t-25","box":[1510,753,210,118]},{"id":"t-26","box":[286,953,462,50]},{"id":"t-27","box":[300,1035,210,118]},{"id":"t-28","box":[524,1035,210,118]},{"id":"t-29","box":[779,953,462,50]},{"id":"t-30","box":[793,1035,210,118]},{"id":"t-31","box":[1017,1035,210,118]},{"id":"t-32","box":[1272,953,462,50]},{"id":"t-33","box":[1286,1035,210,118]},{"id":"t-34","box":[1510,1035,210,118]}],"nodes":[{"id":"governance-1","label":"职责规定","box":[71,505,171,118],"parent":"governance"},{"id":"governance-2","label":"变更复核","box":[71,671,171,118],"parent":"governance"},{"id":"governance-3","label":"事件响应","box":[71,837,171,118],"parent":"governance"},{"id":"governance-4","label":"风险登记","box":[71,1003,171,118],"parent":"governance"},{"id":"identity-1","label":"账号校验","box":[300,471,210,118],"parent":"identity"},{"id":"identity-2","label":"凭据管理","box":[524,471,210,118],"parent":"identity"},{"id":"access-1","label":"权限控制","box":[793,471,210,118],"parent":"access"},{"id":"access-2","label":"会话检查","box":[1017,471,210,118],"parent":"access"},{"id":"audit-1","label":"访问审计","box":[1286,471,210,118],"parent":"audit"},{"id":"audit-2","label":"操作追溯","box":[1510,471,210,118],"parent":"audit"},{"id":"data-1","label":"分类标记","box":[300,753,210,118],"parent":"data"},{"id":"data-2","label":"敏感脱敏","box":[524,753,210,118],"parent":"data"},{"id":"api-1","label":"参数校验","box":[793,753,210,118],"parent":"api"},{"id":"api-2","label":"来源检查","box":[1017,753,210,118],"parent":"api"},{"id":"dev-1","label":"依赖检查","box":[1286,753,210,118],"parent":"dev"},{"id":"dev-2","label":"变更校验","box":[1510,753,210,118],"parent":"dev"},{"id":"host-1","label":"进程权限","box":[300,1035,210,118],"parent":"host"},{"id":"host-2","label":"文件访问","box":[524,1035,210,118],"parent":"host"},{"id":"network-1","label":"连接规则","box":[793,1035,210,118],"parent":"network"},{"id":"network-2","label":"入口限制","box":[1017,1035,210,118],"parent":"network"},{"id":"recover-1","label":"备份校验","box":[1286,1035,210,118],"parent":"recover"},{"id":"recover-2","label":"恢复核验","box":[1510,1035,210,118],"parent":"recover"}],"groups":[{"id":"cap","title":"安全控制体系","box":[280,263,1460,94],"headH":94},{"id":"governance","title":"治理制度","box":[55,384,203,838],"headH":58},{"id":"identity","title":"身份安全","box":[280,384,474,260],"headH":60},{"id":"access","title":"访问安全","box":[773,384,474,260],"headH":60},{"id":"audit","title":"审计安全","box":[1266,384,474,260],"headH":60},{"id":"data","title":"数据安全","box":[280,666,474,260],"headH":60},{"id":"api","title":"接口安全","box":[773,666,474,260],"headH":60},{"id":"dev","title":"开发安全","box":[1266,666,474,260],"headH":60},{"id":"host","title":"主机安全","box":[280,948,474,260],"headH":60},{"id":"network","title":"网络安全","box":[773,948,474,260],"headH":60},{"id":"recover","title":"恢复安全","box":[1266,948,474,260],"headH":60}],"paths":[]}</metadata><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8" fill="context-stroke"/></marker></defs><rect width="1800" height="1320" fill="#fff"/><g font-family="Microsoft YaHei, Arial, sans-serif"><text id="t-1" x="46" y="70.5" text-anchor="start" font-size="36" font-weight="700" fill="#26394A">应用安全控制能力架构</text>
+<g transform="translate(1532 39)"><path d="M0 32V0h9l13 15L35 0h9v32h-9V13L22 28 9 13v19Z" fill="#182235"/><path d="M35 0h9v32h-9V13L22 28v-13Z" fill="#2777BD"/><text x="57" y="30" fill="#182235" font-family="Arial, sans-serif" font-size="30" font-weight="700">MuseDraw</text></g>
+<path d="M280,263 L1080,145 L1740,263 Z" fill="#2C7CC3" stroke="#205F96" stroke-width="1.2"/>
+<rect x="280" y="263" width="1460" height="94" rx="2" fill="#2C7CC3" stroke="#205F96" stroke-width="1.2"/>
+<rect x="280" y="263" width="1460" height="94" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-2" x="1010" y="320.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">安全控制体系</text>
+<rect x="55" y="384" width="203" height="838" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="55" y="384" width="203" height="58" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-3" x="156.5" y="423.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">治理制度</text>
+<rect x="71" y="505" width="171" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-4" x="156.5" y="573.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">职责规定</text>
+<rect x="71" y="671" width="171" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-5" x="156.5" y="739.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">变更复核</text>
+<rect x="71" y="837" width="171" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-6" x="156.5" y="905.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">事件响应</text>
+<rect x="71" y="1003" width="171" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-7" x="156.5" y="1071.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">风险登记</text>
+<rect x="280" y="384" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="280" y="384" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-8" x="517" y="424.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">身份安全</text>
+<rect x="300" y="471" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-9" x="405" y="539.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">账号校验</text>
+<rect x="524" y="471" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-10" x="629" y="539.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">凭据管理</text>
+<rect x="773" y="384" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="773" y="384" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-11" x="1010" y="424.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">访问安全</text>
+<rect x="793" y="471" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-12" x="898" y="539.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">权限控制</text>
+<rect x="1017" y="471" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-13" x="1122" y="539.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">会话检查</text>
+<rect x="1266" y="384" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="1266" y="384" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-14" x="1503" y="424.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">审计安全</text>
+<rect x="1286" y="471" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-15" x="1391" y="539.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">访问审计</text>
+<rect x="1510" y="471" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-16" x="1615" y="539.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">操作追溯</text>
+<rect x="280" y="666" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="280" y="666" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-17" x="517" y="706.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">数据安全</text>
+<rect x="300" y="753" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-18" x="405" y="821.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">分类标记</text>
+<rect x="524" y="753" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-19" x="629" y="821.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">敏感脱敏</text>
+<rect x="773" y="666" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="773" y="666" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-20" x="1010" y="706.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">接口安全</text>
+<rect x="793" y="753" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-21" x="898" y="821.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">参数校验</text>
+<rect x="1017" y="753" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-22" x="1122" y="821.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">来源检查</text>
+<rect x="1266" y="666" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="1266" y="666" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-23" x="1503" y="706.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">开发安全</text>
+<rect x="1286" y="753" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-24" x="1391" y="821.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">依赖检查</text>
+<rect x="1510" y="753" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-25" x="1615" y="821.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">变更校验</text>
+<rect x="280" y="948" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="280" y="948" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-26" x="517" y="988.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">主机安全</text>
+<rect x="300" y="1035" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-27" x="405" y="1103.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">进程权限</text>
+<rect x="524" y="1035" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-28" x="629" y="1103.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">文件访问</text>
+<rect x="773" y="948" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="773" y="948" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-29" x="1010" y="988.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">网络安全</text>
+<rect x="793" y="1035" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-30" x="898" y="1103.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">连接规则</text>
+<rect x="1017" y="1035" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-31" x="1122" y="1103.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">入口限制</text>
+<rect x="1266" y="948" width="474" height="260" rx="2" fill="#F7FAFD" stroke="#A5BDD0" stroke-width="1.2"/>
+<rect x="1266" y="948" width="474" height="60" rx="2" fill="#2C7CC3" stroke="#2C7CC3" stroke-width="1.2"/>
+<text id="t-32" x="1503" y="988.5" text-anchor="middle" font-size="26" font-weight="600" fill="#fff">恢复安全</text>
+<rect x="1286" y="1035" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-33" x="1391" y="1103.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">备份校验</text>
+<rect x="1510" y="1035" width="210" height="118" rx="2" fill="#fff" stroke="#BCCAD8" stroke-width="1.2"/>
+<text id="t-34" x="1615" y="1103.5" text-anchor="middle" font-size="24" font-weight="400" fill="#26394A">恢复核验</text></g></svg>

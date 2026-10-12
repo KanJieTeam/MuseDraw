@@ -1,0 +1,566 @@
+{
+  "id": 17,
+  "number": "017",
+  "title": "音频内容处理与查询架构",
+  "family": "上处理链下查询通道",
+  "theme": "棕色处理链、绿色外部依赖边线与白底数据",
+  "view": "component",
+  "width": 1960,
+  "height": 1040,
+  "thumbnail": "cases/017/preview.png",
+  "svg": "cases/017/diagram.svg",
+  "png": "cases/017/diagram.png",
+  "drawio": "cases/017/diagram.drawio",
+  "prompt": "用 MuseDraw 画“音频内容处理与查询架构”。采用上处理链下查询通道，棕色处理链、绿色外部依赖边线与白底数据。分区：。模块：内容上传、原始内容、语音识别、文本转换、内容分析、内容索引、语音服务、语言服务、分析服务、共享处理结果、查询入口、内容查询、检索服务。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：棕色处理链、绿色外部依赖边线与白底数据；普通正文中性深灰，辅助模块白底细边。",
+  "geometry": {
+    "number": 17,
+    "referenceId": "CQ-0020",
+    "scope": "original-generic-reference",
+    "bounds": [
+      {
+        "id": "t-1",
+        "box": [
+          34,
+          20,
+          1625,
+          72
+        ]
+      },
+      {
+        "id": "t-2",
+        "box": [
+          43,
+          484,
+          214,
+          78
+        ]
+      },
+      {
+        "id": "t-3",
+        "box": [
+          318,
+          484,
+          230,
+          78
+        ]
+      },
+      {
+        "id": "t-4",
+        "box": [
+          613,
+          484,
+          228,
+          78
+        ]
+      },
+      {
+        "id": "t-5",
+        "box": [
+          953,
+          484,
+          228,
+          78
+        ]
+      },
+      {
+        "id": "t-6",
+        "box": [
+          1293,
+          484,
+          228,
+          78
+        ]
+      },
+      {
+        "id": "t-7",
+        "box": [
+          1638,
+          484,
+          274,
+          78
+        ]
+      },
+      {
+        "id": "t-8",
+        "box": [
+          613,
+          222,
+          228,
+          74
+        ]
+      },
+      {
+        "id": "t-9",
+        "box": [
+          953,
+          222,
+          228,
+          74
+        ]
+      },
+      {
+        "id": "t-10",
+        "box": [
+          1293,
+          222,
+          228,
+          74
+        ]
+      },
+      {
+        "id": "t-11",
+        "box": [
+          843,
+          734,
+          354,
+          74
+        ]
+      },
+      {
+        "id": "t-12",
+        "box": [
+          43,
+          914,
+          214,
+          74
+        ]
+      },
+      {
+        "id": "t-13",
+        "box": [
+          358,
+          914,
+          344,
+          74
+        ]
+      },
+      {
+        "id": "t-14",
+        "box": [
+          1353,
+          914,
+          384,
+          74
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "upload",
+        "label": "内容上传",
+        "box": [
+          40,
+          430,
+          220,
+          136
+        ],
+        "parent": null
+      },
+      {
+        "id": "raw",
+        "label": "原始内容",
+        "box": [
+          315,
+          430,
+          236,
+          136
+        ],
+        "parent": null
+      },
+      {
+        "id": "recognize",
+        "label": "语音识别",
+        "box": [
+          610,
+          430,
+          234,
+          136
+        ],
+        "parent": null
+      },
+      {
+        "id": "translate",
+        "label": "文本转换",
+        "box": [
+          950,
+          430,
+          234,
+          136
+        ],
+        "parent": null
+      },
+      {
+        "id": "analyze",
+        "label": "内容分析",
+        "box": [
+          1290,
+          430,
+          234,
+          136
+        ],
+        "parent": null
+      },
+      {
+        "id": "output",
+        "label": "内容索引",
+        "box": [
+          1635,
+          430,
+          280,
+          136
+        ],
+        "parent": null
+      },
+      {
+        "id": "speech",
+        "label": "语音服务",
+        "box": [
+          610,
+          168,
+          234,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "language",
+        "label": "语言服务",
+        "box": [
+          950,
+          168,
+          234,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "insight",
+        "label": "分析服务",
+        "box": [
+          1290,
+          168,
+          234,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "result",
+        "label": "共享处理结果",
+        "box": [
+          840,
+          680,
+          360,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "query",
+        "label": "查询入口",
+        "box": [
+          40,
+          860,
+          220,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "api",
+        "label": "内容查询",
+        "box": [
+          355,
+          860,
+          350,
+          132
+        ],
+        "parent": null
+      },
+      {
+        "id": "search",
+        "label": "检索服务",
+        "box": [
+          1350,
+          860,
+          390,
+          132
+        ],
+        "parent": null
+      }
+    ],
+    "groups": [],
+    "paths": [
+      {
+        "from": "upload",
+        "to": "raw",
+        "points": [
+          [
+            260,
+            498
+          ],
+          [
+            287.5,
+            498
+          ],
+          [
+            287.5,
+            498
+          ],
+          [
+            315,
+            498
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "raw",
+        "to": "recognize",
+        "points": [
+          [
+            551,
+            498
+          ],
+          [
+            580.5,
+            498
+          ],
+          [
+            580.5,
+            498
+          ],
+          [
+            610,
+            498
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "recognize",
+        "to": "translate",
+        "points": [
+          [
+            844,
+            498
+          ],
+          [
+            897,
+            498
+          ],
+          [
+            897,
+            498
+          ],
+          [
+            950,
+            498
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "translate",
+        "to": "analyze",
+        "points": [
+          [
+            1184,
+            498
+          ],
+          [
+            1237,
+            498
+          ],
+          [
+            1237,
+            498
+          ],
+          [
+            1290,
+            498
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "analyze",
+        "to": "output",
+        "points": [
+          [
+            1524,
+            498
+          ],
+          [
+            1579.5,
+            498
+          ],
+          [
+            1579.5,
+            498
+          ],
+          [
+            1635,
+            498
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "speech",
+        "to": "recognize",
+        "points": [
+          [
+            727,
+            300
+          ],
+          [
+            727,
+            365
+          ],
+          [
+            727,
+            365
+          ],
+          [
+            727,
+            430
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "language",
+        "to": "translate",
+        "points": [
+          [
+            1067,
+            300
+          ],
+          [
+            1067,
+            365
+          ],
+          [
+            1067,
+            365
+          ],
+          [
+            1067,
+            430
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "insight",
+        "to": "analyze",
+        "points": [
+          [
+            1407,
+            300
+          ],
+          [
+            1407,
+            365
+          ],
+          [
+            1407,
+            365
+          ],
+          [
+            1407,
+            430
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "query",
+        "to": "api",
+        "points": [
+          [
+            260,
+            926
+          ],
+          [
+            307.5,
+            926
+          ],
+          [
+            307.5,
+            926
+          ],
+          [
+            355,
+            926
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "api",
+        "to": "search",
+        "points": [
+          [
+            705,
+            926
+          ],
+          [
+            1027.5,
+            926
+          ],
+          [
+            1027.5,
+            926
+          ],
+          [
+            1350,
+            926
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      },
+      {
+        "from": "translate",
+        "to": "result",
+        "points": [
+          [
+            1067,
+            566
+          ],
+          [
+            1067,
+            623
+          ],
+          [
+            1020,
+            623
+          ],
+          [
+            1020,
+            680
+          ]
+        ],
+        "label": "",
+        "labelBox": null
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "AI-Enabled Audio Insight Processing Pipeline",
+    "url": "https://docs.aws.amazon.com/reference-architecture-diagrams/latest/ai-audio-insight-pipeline/ai-audio-insight-pipeline.html"
+  },
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}
