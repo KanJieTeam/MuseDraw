@@ -38,7 +38,7 @@ npx skills add KanJieTeam/MuseDraw
 
 Then ask your agent: **Use MuseDraw to draw an architecture diagram from this system description.** Supply the material, the figure's purpose and your visual preferences.
 
-Installation requires Node.js 18+ and an agent with file access and execution tools. Rendering and PNG export requirements are in the [usage guide](docs/usage.md).
+Installation with the command above requires Node.js 22.20+ and an agent with file access and execution tools. Rendering and PNG export requirements are in the [usage guide](docs/usage.md).
 
 ## Current capabilities
 

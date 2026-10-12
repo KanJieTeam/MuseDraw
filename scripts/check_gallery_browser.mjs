@@ -24,6 +24,16 @@ const scratch = await fs.mkdtemp(path.join(os.tmpdir(), 'musedraw-gallery-qa-'))
 const scratchReal = await fs.realpath(scratch);
 const report = { checks: [], screenshots: [], officialEditor: { status: 'not-checked', verified: false }, downloads: [], httpAssets: [], warnings: [] };
 const hash = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex');
+// Git may normalize Windows text line endings during the Pages checkout.
+// Permit that one representation difference only; downloads remain byte-exact.
+function sourceBytesMatch(actual, expected, format) {
+  if (actual.equals(expected)) return true;
+  if (!['svg', 'drawio'].includes(format)) return false;
+  try {
+    const decoder = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
+    return decoder.decode(actual).replace(/\r\n/g, '\n') === decoder.decode(expected).replace(/\r\n/g, '\n');
+  } catch { return false; }
+}
 const editorOrigin = 'https://embed.diagrams.net';
 let server, browser, page;
 
@@ -132,16 +142,30 @@ try {
   assert.deepEqual(manifest, localManifest, 'The served gallery manifest differs from the checked-out source');
   report.caseCount = items.length;
   const assets = new Map();
-  await check('all-100-published-assets-match-source-bytes', async () => {
+  await check('asset-comparison-retains-strict-content-validation', async () => {
+    const lf = Buffer.from('<mxfile>图\n</mxfile>');
+    const crlf = Buffer.from('<mxfile>图\r\n</mxfile>');
+    assert.ok(sourceBytesMatch(lf, crlf, 'drawio'));
+    assert.ok(sourceBytesMatch(lf, crlf, 'svg'));
+    assert.equal(sourceBytesMatch(lf, crlf, 'png'), false);
+    assert.equal(sourceBytesMatch(lf, crlf, 'thumbnail'), false);
+    assert.equal(sourceBytesMatch(lf, Buffer.from('<mxfile>改\n</mxfile>'), 'drawio'), false);
+    assert.equal(sourceBytesMatch(lf, Buffer.from('<mxfile>图 \n</mxfile>'), 'drawio'), false);
+    assert.equal(sourceBytesMatch(lf, Buffer.from('<mxfile>图\r</mxfile>'), 'drawio'), false);
+    assert.equal(sourceBytesMatch(lf, Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), crlf]), 'drawio'), false);
+    assert.equal(sourceBytesMatch(Buffer.from([0xff, 13, 10]), Buffer.from([0xff, 10]), 'drawio'), false);
+    return { onlyTextCrLfNormalizationAllowed: true, binaryAndContentChangesRejected: true };
+  });
+  await check('all-100-published-assets-match-source-content', async () => {
     const work = items.flatMap((item) => ['thumbnail', 'svg', 'png', 'drawio'].map((format) => ({ item, format, source: item[format] })));
     for (let first = 0; first < work.length; first += 8) {
       await Promise.all(work.slice(first, first + 8).map(async ({ item, format, source }) => {
         assert.match(source, /^cases\/\d{3}\/(preview\.png|diagram\.(svg|png|drawio))$/, 'Asset must be a public gallery-relative path');
         const remote = await fetchBytes(new URL(source, galleryUrl));
         const local = await fs.readFile(path.join(repo, 'docs/gallery', source));
-        assert.ok(remote.equals(local), `Case ${item.number} ${format}: HTTP bytes differ from source`);
+        assert.ok(sourceBytesMatch(remote, local, format), `Case ${item.number} ${format}: HTTP content differs from source`);
         assert.ok(remote.length > 0, `${source} is empty`);
-        const entry = { number: item.number, format, bytes: remote.length, sha256: hash(remote) };
+        const entry = { number: item.number, format, bytes: remote.length, sha256: hash(remote), sourceComparison: remote.equals(local) ? 'byte-exact' : 'text-crlf-to-lf-only' };
         report.httpAssets.push(entry); assets.set(`${item.id}/${format}`, entry);
       }));
     }
@@ -307,7 +331,9 @@ try {
       assert.ok(frame, 'Local protocol fixture frame is absent');
       const loaded = await frame.evaluate(() => window.received.find((message) => message.action === 'load'));
       const original = (await fs.readFile(path.join(repo, 'docs/gallery', items.find((item) => item.id === 2).drawio))).toString('utf8');
-      assert.equal(loaded.xml, original); assert.equal(loaded.title, items.find((item) => item.id === 2).title); assert.equal(loaded.autosave, 1);
+      assert.ok(sourceBytesMatch(Buffer.from(loaded.xml, 'utf8'), Buffer.from(original, 'utf8'), 'drawio'));
+      assert.equal(hash(Buffer.from(loaded.xml, 'utf8')), assets.get('2/drawio').sha256, 'Editor must receive the exact published XML bytes');
+      assert.equal(loaded.title, items.find((item) => item.id === 2).title); assert.equal(loaded.autosave, 1);
       await page.evaluate(() => {
         const source = document.querySelector('#editor-frame iframe').contentWindow;
         const save = JSON.stringify({ event: 'save', xml: '<mxfile><diagram/></mxfile>' });
@@ -322,7 +348,7 @@ try {
       assert.equal(downloadCount, 0, 'An untrusted or invalid message caused a download');
       assert.deepEqual(runtimeErrors, [], 'Malformed protocol data caused an uncaught JavaScript error');
       assert.equal(await page.locator('#editor').evaluate((element) => element.open), true);
-      return { fixture: 'local mocked protocol, not official editing', loadedSourceBytes: Buffer.byteLength(original), rejected: ['wrong-origin', 'wrong-source', 'invalid-json', 'null-or-primitive-json', 'oversized-message', 'invalid-xml-root'] };
+      return { fixture: 'local mocked protocol, not official editing', loadedSourceBytes: Buffer.byteLength(loaded.xml), exactPublishedXmlLoaded: true, rejected: ['wrong-origin', 'wrong-source', 'invalid-json', 'null-or-primitive-json', 'oversized-message', 'invalid-xml-root'] };
     } finally { page.off('download', onDownload); }
   });
   await check('local-editor-unsaved-close-cancel-and-confirm', async () => {

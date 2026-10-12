@@ -1,6 +1,6 @@
 # MuseDraw repository conventions
 
-- Keep the project positioning broad: a scientific-figure assistant. Only publish
+- Keep the project positioning broad: a professional drawing assistant. Only publish
   capabilities that have a usable workflow; architecture is the first workflow.
 - Preserve user facts and unchanged diagram content during style-only revisions.
 - Use `feat/`, `fix/`, `docs/`, `test/`, `refactor/` or `chore/` for task branches.
