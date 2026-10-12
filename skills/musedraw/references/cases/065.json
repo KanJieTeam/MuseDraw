@@ -1,0 +1,180 @@
+{
+  "id": 65,
+  "number": "065",
+  "title": "软件故障发现与恢复闭环",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "中央三层组件链＋左预测右反馈回路",
+    "colorDirection": "白底灰紫边、深紫题头与低饱和蓝图标",
+    "canvasHint": [
+      1700,
+      1480
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#5D5189",
+      "#9B93B8",
+      "#588AA8",
+      "#52606C"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "monitor",
+        "title": "软件监控"
+      },
+      {
+        "id": "prediction",
+        "title": "故障预测"
+      },
+      {
+        "id": "diagnosis",
+        "title": "故障诊断"
+      },
+      {
+        "id": "test",
+        "title": "故障复现与测试"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "monitor-1",
+        "label": "日志信号",
+        "parent": "monitor"
+      },
+      {
+        "id": "monitor-2",
+        "label": "调用链路",
+        "parent": "monitor"
+      },
+      {
+        "id": "monitor-3",
+        "label": "度量指标",
+        "parent": "monitor"
+      },
+      {
+        "id": "alarm",
+        "label": "故障发现告警",
+        "parent": "monitor"
+      },
+      {
+        "id": "prediction-1",
+        "label": "状态预测",
+        "parent": "prediction"
+      },
+      {
+        "id": "prediction-2",
+        "label": "关联规则",
+        "parent": "prediction"
+      },
+      {
+        "id": "prediction-3",
+        "label": "经验记录",
+        "parent": "prediction"
+      },
+      {
+        "id": "analysis",
+        "label": "监控数据分析",
+        "parent": "diagnosis"
+      },
+      {
+        "id": "dependency-1",
+        "label": "服务依赖",
+        "parent": null
+      },
+      {
+        "id": "dependency-2",
+        "label": "资源依赖",
+        "parent": null
+      },
+      {
+        "id": "dependency-3",
+        "label": "配置依赖",
+        "parent": null
+      },
+      {
+        "id": "root-cause",
+        "label": "根因定位",
+        "parent": "diagnosis"
+      },
+      {
+        "id": "experience",
+        "label": "人工经验",
+        "parent": "diagnosis"
+      },
+      {
+        "id": "test-1",
+        "label": "场景注入",
+        "parent": "test"
+      },
+      {
+        "id": "test-2",
+        "label": "故障调试",
+        "parent": "test"
+      },
+      {
+        "id": "test-3",
+        "label": "恢复验证",
+        "parent": "test"
+      },
+      {
+        "id": "recovery",
+        "label": "故障容错处理",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "monitor-2",
+        "to": "alarm",
+        "label": ""
+      },
+      {
+        "from": "alarm",
+        "to": "analysis",
+        "label": ""
+      },
+      {
+        "from": "analysis",
+        "to": "dependency-1",
+        "label": ""
+      },
+      {
+        "from": "analysis",
+        "to": "dependency-2",
+        "label": ""
+      },
+      {
+        "from": "analysis",
+        "to": "dependency-3",
+        "label": ""
+      },
+      {
+        "from": "dependency-2",
+        "to": "root-cause",
+        "label": ""
+      },
+      {
+        "from": "root-cause",
+        "to": "test-3",
+        "label": "复现"
+      },
+      {
+        "from": "test-3",
+        "to": "alarm",
+        "label": ""
+      },
+      {
+        "from": "test-1",
+        "to": "recovery",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/065/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

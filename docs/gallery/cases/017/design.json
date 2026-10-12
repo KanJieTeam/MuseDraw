@@ -11,7 +11,7 @@
   "svg": "cases/017/diagram.svg",
   "png": "cases/017/diagram.png",
   "drawio": "cases/017/diagram.drawio",
-  "prompt": "用 MuseDraw 画“音频内容处理与查询架构”。采用上处理链下查询通道，棕色处理链、绿色外部依赖边线与白底数据。分区：。模块：内容上传、原始内容、语音识别、文本转换、内容分析、内容索引、语音服务、语言服务、分析服务、共享处理结果、查询入口、内容查询、检索服务。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：棕色处理链、绿色外部依赖边线与白底数据；普通正文中性深灰，辅助模块白底细边。",
+  "prompt": "用 MuseDraw 画“音频内容处理与查询架构”的通用参考组件图。上传内容依次经过语音识别、文本转换、内容分析与索引，识别和分析有外部服务支撑；查询入口另经内容查询到检索服务。给产品技术沟通用，流程直观些。",
   "geometry": {
     "number": 17,
     "referenceId": "CQ-0020",
@@ -562,5 +562,7 @@
     "url": "https://docs.aws.amazon.com/reference-architecture-diagrams/latest/ai-audio-insight-pipeline/ai-audio-insight-pipeline.html"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“音频内容处理与查询架构”。采用上处理链下查询通道，棕色处理链、绿色外部依赖边线与白底数据。分区：。模块：内容上传、原始内容、语音识别、文本转换、内容分析、内容索引、语音服务、语言服务、分析服务、共享处理结果、查询入口、内容查询、检索服务。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：棕色处理链、绿色外部依赖边线与白底数据；普通正文中性深灰，辅助模块白底细边。",
+  "reference": "cases/017/design.json"
 }

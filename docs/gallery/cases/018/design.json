@@ -11,7 +11,7 @@
   "svg": "cases/018/diagram.svg",
   "png": "cases/018/diagram.png",
   "drawio": "cases/018/diagram.drawio",
-  "prompt": "用 MuseDraw 画“多租户执行与共享观测”。采用主路径加共用观测下排，实棕租户组件、白执行范围与灰色观测边界。分区：租户执行空间、日志采集、指标分析、外部观测消费。模块：分发入口、租户执行甲、租户执行乙、结果出口、日志接收、日志检索、运行指标、查询服务、运营看板、告警服务、分析平台。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：实棕租户组件、白执行范围与灰色观测边界；普通正文中性深灰，辅助模块白底细边。",
+  "prompt": "我想用 MuseDraw 说明“多租户执行与共享观测”，做一张通用参考组件图。分发入口把任务送到各租户执行空间，再汇到结果出口；同时展示共享的日志、指标和外部看板告警能力。用于讨论租户隔离与观测职责，表达清楚即可。",
   "geometry": {
     "number": 18,
     "referenceId": "CQ-0005",
@@ -435,5 +435,7 @@
     "url": "https://developers.cloudflare.com/reference-architecture/diagrams/serverless/programmable-platforms/"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“多租户执行与共享观测”。采用主路径加共用观测下排，实棕租户组件、白执行范围与灰色观测边界。分区：租户执行空间、日志采集、指标分析、外部观测消费。模块：分发入口、租户执行甲、租户执行乙、结果出口、日志接收、日志检索、运行指标、查询服务、运营看板、告警服务、分析平台。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：实棕租户组件、白执行范围与灰色观测边界；普通正文中性深灰，辅助模块白底细边。",
+  "reference": "cases/018/design.json"
 }

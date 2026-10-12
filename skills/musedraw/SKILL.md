@@ -7,9 +7,37 @@ description: Create or refine software and data-platform architecture diagrams u
 
 Make the user's architecture legible: choose an appropriate view, preserve the
 facts, and use deliberate hierarchy, spacing and color. This is the first
-workflow of MuseDraw, a scientific-figure assistant. It currently covers software
+workflow of MuseDraw, a professional drawing assistant. It currently covers software
 architecture, not experimental pipelines, organization charts or statistical
 plots.
+
+## Start from the user's words
+
+Accept a few ordinary sentences, for example:
+
+> 用 MuseDraw 画一张客户互动营销应用架构图，突出多渠道接入、活动、内容和消息服务。
+> 做成适合产品方案汇报的通用参考，简洁、层次清楚。
+
+Choose the view, composition, canvas, palette, typography and routing yourself.
+Do not ask the user for coordinates, hex colors, module IDs, a full node list or
+a production specification. Ask only for missing system facts that materially
+change a real-system diagram. For an explicitly generic reference, propose
+reasonable example content and identify that scope outside the artwork.
+
+The 100 curated gallery cases are **design references, not an allowlist or a
+fixed-template engine**. New industries, modules and structures need original
+compositions. Do not reject an unfamiliar topic, force it into a gallery case,
+or copy the case's business modules into the user's system. Arbitrary supported
+architecture topics do not require a matching reference, case number or URL.
+
+When visual inspiration would help, optionally use
+[find_reference.py](scripts/find_reference.py) to discover a few cases, then read
+only a suitable case's design card. No match means proceed with the view and
+visual guides below—not ask the user to choose a template. The helper reads the
+bundled [index](references/gallery-index.json) without loading all 100 cases into
+the conversation. A case's example content is opt-in and is never evidence of
+the user's architecture. Exact reproduction is a separate, explicit request:
+use the selected source/production reference, not a thousand-word user prompt.
 
 ## Choose the view
 
@@ -35,13 +63,18 @@ changes, read [visual-decisions](references/visual-decisions.md).
    from the brief. If a repository is supplied, inspect the relevant actual
    source/configuration before making architecture claims; a README or folder
    name alone is not evidence of runtime interactions. State what was inspected.
+   A short brief is an input to design, not a request to reproduce every detail
+   of a gallery screenshot. Preserve supplied constraints; design the rest.
 2. When the user asks for a generic example without system facts, proceed with a
    clearly marked **reference architecture**. For their actual system, ask only
    about missing facts that materially change the diagram. Do not silently add
    protocols, vendors, performance claims or deployment instances.
 3. Choose a composition by reading task, then one visual family. The default is
    a compact blue-and-white figure with white subcomponents, quiet group fields
-   and limited emphasis. A user's explicit reference takes precedence. Reference
+   and limited emphasis when no other design direction is given. Select other
+   restrained families when the content or user direction calls for them; do
+   not make every new diagram look like the same gallery case. A user's explicit
+   reference takes precedence. Reference
    images inform design decisions; do not reproduce another author's branded
    template or insert their screenshot into the deliverable.
 4. Create native SVG text and geometry, with meaningful stable element IDs and
@@ -76,6 +109,18 @@ still available:
 ```sh
 python <skill>/scripts/render_capability.py <skill>/assets/data-platform.json output/diagram.svg --theme blue
 ```
+
+Optional design-reference lookup, not a required step or a renderer:
+
+```sh
+python <skill>/scripts/find_reference.py "客户互动营销"
+python <skill>/scripts/find_reference.py --id 97
+```
+
+The first command returns a few design candidates; the second returns that
+case's composition and palette hints without its example modules. Only add
+`--include-content` for an explicit request to reuse the generic case content.
+Custom briefs remain supported when lookup returns no candidates.
 
 This is a Chinese reference brief, not the user's system. Optional JSON fields
 `portalTitle` and `foundationTitle` override the helper's two default Chinese

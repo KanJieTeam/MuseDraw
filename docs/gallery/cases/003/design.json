@@ -11,7 +11,7 @@
   "svg": "cases/003/diagram.svg",
   "png": "cases/003/diagram.png",
   "drawio": "cases/003/diagram.drawio",
-  "prompt": "用 MuseDraw 画“联网设备凭据注册与轮换”。采用三责任域＋横注册与竖安全链，绿系凭据主链、白底安全节点与低饱和红棕边界。分区：设备制造与签发域、设备域、接入与凭据服务域、凭据轮换。模块：凭据代理、离线根签发、安全存储、设备身份、设备接入、注册服务、身份策略、风险检测、事件响应、轮换作业、凭据撤销。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：绿系凭据主链、白底安全节点与低饱和红棕边界；普通正文中性深灰，辅助模块白底细边。",
+  "prompt": "帮我用 MuseDraw 画“联网设备凭据注册与轮换”的通用参考组件图。设备身份经过接入、注册和身份策略检查，风险检测连接事件响应；另有受控签发及凭据轮换、撤销。给安全方案评审用，区分制造签发、设备和凭据服务的责任。",
   "geometry": {
     "number": 3,
     "referenceId": "RQ-0022",
@@ -507,5 +507,7 @@
     "url": "https://docs.aws.amazon.com/reference-architecture-diagrams/latest/aws-connected-vehicle/aws-connected-vehicle.html"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“联网设备凭据注册与轮换”。采用三责任域＋横注册与竖安全链，绿系凭据主链、白底安全节点与低饱和红棕边界。分区：设备制造与签发域、设备域、接入与凭据服务域、凭据轮换。模块：凭据代理、离线根签发、安全存储、设备身份、设备接入、注册服务、身份策略、风险检测、事件响应、轮换作业、凭据撤销。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：绿系凭据主链、白底安全节点与低饱和红棕边界；普通正文中性深灰，辅助模块白底细边。",
+  "reference": "cases/003/design.json"
 }

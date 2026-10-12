@@ -1,0 +1,189 @@
+{
+  "id": 87,
+  "number": "087",
+  "title": "应用安全控制能力架构",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "屋顶题签和安全三乘三矩阵加左治理柱",
+    "colorDirection": "蓝色总括与题头、白色安全正文域",
+    "canvasHint": [
+      1800,
+      1320
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#2777BD",
+      "#2C7CC3",
+      "#205F96",
+      "#F7FAFD",
+      "#A5BDD0",
+      "#BCCAD8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "cap",
+        "title": "安全控制体系"
+      },
+      {
+        "id": "governance",
+        "title": "治理制度"
+      },
+      {
+        "id": "identity",
+        "title": "身份安全"
+      },
+      {
+        "id": "access",
+        "title": "访问安全"
+      },
+      {
+        "id": "audit",
+        "title": "审计安全"
+      },
+      {
+        "id": "data",
+        "title": "数据安全"
+      },
+      {
+        "id": "api",
+        "title": "接口安全"
+      },
+      {
+        "id": "dev",
+        "title": "开发安全"
+      },
+      {
+        "id": "host",
+        "title": "主机安全"
+      },
+      {
+        "id": "network",
+        "title": "网络安全"
+      },
+      {
+        "id": "recover",
+        "title": "恢复安全"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "governance-1",
+        "label": "职责规定",
+        "parent": "governance"
+      },
+      {
+        "id": "governance-2",
+        "label": "变更复核",
+        "parent": "governance"
+      },
+      {
+        "id": "governance-3",
+        "label": "事件响应",
+        "parent": "governance"
+      },
+      {
+        "id": "governance-4",
+        "label": "风险登记",
+        "parent": "governance"
+      },
+      {
+        "id": "identity-1",
+        "label": "账号校验",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-2",
+        "label": "凭据管理",
+        "parent": "identity"
+      },
+      {
+        "id": "access-1",
+        "label": "权限控制",
+        "parent": "access"
+      },
+      {
+        "id": "access-2",
+        "label": "会话检查",
+        "parent": "access"
+      },
+      {
+        "id": "audit-1",
+        "label": "访问审计",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-2",
+        "label": "操作追溯",
+        "parent": "audit"
+      },
+      {
+        "id": "data-1",
+        "label": "分类标记",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "敏感脱敏",
+        "parent": "data"
+      },
+      {
+        "id": "api-1",
+        "label": "参数校验",
+        "parent": "api"
+      },
+      {
+        "id": "api-2",
+        "label": "来源检查",
+        "parent": "api"
+      },
+      {
+        "id": "dev-1",
+        "label": "依赖检查",
+        "parent": "dev"
+      },
+      {
+        "id": "dev-2",
+        "label": "变更校验",
+        "parent": "dev"
+      },
+      {
+        "id": "host-1",
+        "label": "进程权限",
+        "parent": "host"
+      },
+      {
+        "id": "host-2",
+        "label": "文件访问",
+        "parent": "host"
+      },
+      {
+        "id": "network-1",
+        "label": "连接规则",
+        "parent": "network"
+      },
+      {
+        "id": "network-2",
+        "label": "入口限制",
+        "parent": "network"
+      },
+      {
+        "id": "recover-1",
+        "label": "备份校验",
+        "parent": "recover"
+      },
+      {
+        "id": "recover-2",
+        "label": "恢复核验",
+        "parent": "recover"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/087/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

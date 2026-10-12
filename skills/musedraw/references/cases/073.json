@@ -1,0 +1,307 @@
+{
+  "id": 73,
+  "number": "073",
+  "title": "金融服务能力分域总览",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "五业务域双行矩阵加双全局列及四水平层",
+    "colorDirection": "橙入口、蓝应用、绿支撑、青基础与双浅青侧列",
+    "canvasHint": [
+      2050,
+      1440
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#397BBF",
+      "#D6F1F2",
+      "#B7D8DC",
+      "#BCCAD8",
+      "#FFE0AB",
+      "#E1BE85",
+      "#E3E6EB",
+      "#C4CBD2",
+      "#A8D29D",
+      "#8DB681",
+      "#315E2C",
+      "#BEE5EB",
+      "#A2CCD3",
+      "#266779"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "operations",
+        "title": "运营管控"
+      },
+      {
+        "id": "assurance",
+        "title": "安全保障"
+      },
+      {
+        "id": "terminals",
+        "title": "服务入口"
+      },
+      {
+        "id": "applications",
+        "title": "应用能力范围"
+      },
+      {
+        "id": "bank",
+        "title": "账户服务"
+      },
+      {
+        "id": "securities",
+        "title": "投资服务"
+      },
+      {
+        "id": "capital",
+        "title": "资本服务"
+      },
+      {
+        "id": "fund",
+        "title": "基金服务"
+      },
+      {
+        "id": "insurance",
+        "title": "保障服务"
+      },
+      {
+        "id": "support",
+        "title": "业务支撑"
+      },
+      {
+        "id": "foundation",
+        "title": "运行基础"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "operations-1",
+        "label": "监控管理",
+        "parent": "operations"
+      },
+      {
+        "id": "operations-2",
+        "label": "运行审计",
+        "parent": "operations"
+      },
+      {
+        "id": "operations-3",
+        "label": "变更管理",
+        "parent": "operations"
+      },
+      {
+        "id": "operations-4",
+        "label": "配置管理",
+        "parent": "operations"
+      },
+      {
+        "id": "operations-5",
+        "label": "故障响应",
+        "parent": "operations"
+      },
+      {
+        "id": "assurance-1",
+        "label": "访问管理",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-2",
+        "label": "数据保护",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-3",
+        "label": "合规管理",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-4",
+        "label": "风险管理",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-5",
+        "label": "连续运行",
+        "parent": "assurance"
+      },
+      {
+        "id": "terminals-1",
+        "label": "柜面入口",
+        "parent": "terminals"
+      },
+      {
+        "id": "terminals-2",
+        "label": "移动入口",
+        "parent": "terminals"
+      },
+      {
+        "id": "terminals-3",
+        "label": "合作入口",
+        "parent": "terminals"
+      },
+      {
+        "id": "terminals-4",
+        "label": "员工入口",
+        "parent": "terminals"
+      },
+      {
+        "id": "terminals-5",
+        "label": "渠道入口",
+        "parent": "terminals"
+      },
+      {
+        "id": "terminals-6",
+        "label": "开放入口",
+        "parent": "terminals"
+      },
+      {
+        "id": "bank-1",
+        "label": "账户管理",
+        "parent": "bank"
+      },
+      {
+        "id": "bank-2",
+        "label": "存款服务",
+        "parent": "bank"
+      },
+      {
+        "id": "bank-3",
+        "label": "信贷服务",
+        "parent": "bank"
+      },
+      {
+        "id": "bank-4",
+        "label": "交易查询",
+        "parent": "bank"
+      },
+      {
+        "id": "securities-1",
+        "label": "客户管理",
+        "parent": "securities"
+      },
+      {
+        "id": "securities-2",
+        "label": "交易支持",
+        "parent": "securities"
+      },
+      {
+        "id": "securities-3",
+        "label": "产品管理",
+        "parent": "securities"
+      },
+      {
+        "id": "securities-4",
+        "label": "风险评估",
+        "parent": "securities"
+      },
+      {
+        "id": "capital-1",
+        "label": "项目管理",
+        "parent": "capital"
+      },
+      {
+        "id": "capital-2",
+        "label": "尽职记录",
+        "parent": "capital"
+      },
+      {
+        "id": "capital-3",
+        "label": "投资跟踪",
+        "parent": "capital"
+      },
+      {
+        "id": "capital-4",
+        "label": "收益核算",
+        "parent": "capital"
+      },
+      {
+        "id": "fund-1",
+        "label": "份额管理",
+        "parent": "fund"
+      },
+      {
+        "id": "fund-2",
+        "label": "估值支持",
+        "parent": "fund"
+      },
+      {
+        "id": "fund-3",
+        "label": "申购赎回",
+        "parent": "fund"
+      },
+      {
+        "id": "fund-4",
+        "label": "信息披露",
+        "parent": "fund"
+      },
+      {
+        "id": "insurance-1",
+        "label": "保单管理",
+        "parent": "insurance"
+      },
+      {
+        "id": "insurance-2",
+        "label": "理赔支持",
+        "parent": "insurance"
+      },
+      {
+        "id": "insurance-3",
+        "label": "客户服务",
+        "parent": "insurance"
+      },
+      {
+        "id": "insurance-4",
+        "label": "风险控制",
+        "parent": "insurance"
+      },
+      {
+        "id": "support-1",
+        "label": "共享规则",
+        "parent": "support"
+      },
+      {
+        "id": "support-2",
+        "label": "统一流程",
+        "parent": "support"
+      },
+      {
+        "id": "support-3",
+        "label": "消息服务",
+        "parent": "support"
+      },
+      {
+        "id": "support-4",
+        "label": "运营指标",
+        "parent": "support"
+      },
+      {
+        "id": "foundation-1",
+        "label": "计算资源",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-2",
+        "label": "数据资源",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-3",
+        "label": "网络服务",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-4",
+        "label": "安全控制",
+        "parent": "foundation"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/073/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,120 @@
+{
+  "id": 21,
+  "number": "021",
+  "title": "物联网遥测与命令架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双方向IoT控制与数据路径",
+    "colorDirection": "深青遥测核心、白底结果节点与中性命令侧",
+    "canvasHint": [
+      1920,
+      1010
+    ],
+    "palette": [
+      "#28323E",
+      "#182235",
+      "#226C85",
+      "#FFFFFF",
+      "#7898AA",
+      "#627384",
+      "#F4F5F6",
+      "#AEB8C3"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "results",
+        "title": "数据消费"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "remote",
+        "label": "远程设备",
+        "parent": null
+      },
+      {
+        "id": "field",
+        "label": "现场设备",
+        "parent": null
+      },
+      {
+        "id": "command",
+        "label": "命令管理",
+        "parent": null
+      },
+      {
+        "id": "backend",
+        "label": "业务后端",
+        "parent": null
+      },
+      {
+        "id": "field-gw",
+        "label": "现场网关",
+        "parent": null
+      },
+      {
+        "id": "cloud-gw",
+        "label": "云端网关",
+        "parent": null
+      },
+      {
+        "id": "stream",
+        "label": "流式处理",
+        "parent": null
+      },
+      {
+        "id": "results-1",
+        "label": "历史数据",
+        "parent": "results"
+      },
+      {
+        "id": "results-2",
+        "label": "实时分析",
+        "parent": "results"
+      },
+      {
+        "id": "results-3",
+        "label": "事件通知",
+        "parent": "results"
+      },
+      {
+        "id": "results-4",
+        "label": "智能分析",
+        "parent": "results"
+      }
+    ],
+    "relations": [
+      {
+        "from": "command",
+        "to": "remote",
+        "label": ""
+      },
+      {
+        "from": "backend",
+        "to": "command",
+        "label": ""
+      },
+      {
+        "from": "field",
+        "to": "field-gw",
+        "label": ""
+      },
+      {
+        "from": "field-gw",
+        "to": "cloud-gw",
+        "label": ""
+      },
+      {
+        "from": "cloud-gw",
+        "to": "stream",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/021/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

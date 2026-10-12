@@ -1,0 +1,256 @@
+{
+  "id": 49,
+  "number": "049",
+  "title": "业务应用侧车调用与事件协作",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "侧车组件与事件总线",
+    "colorDirection": "白底工程边界、紫色运行分组与蓝色事件主题",
+    "canvasHint": [
+      2350,
+      1510
+    ],
+    "palette": [
+      "#34465C",
+      "#182235",
+      "#4168A3",
+      "#4875BE",
+      "#FEFEFE",
+      "#7E8792",
+      "#5E6B7A",
+      "#FCFBFE",
+      "#8D70B5",
+      "#8464A9",
+      "#778CA5",
+      "#536C8B",
+      "#F5F7FB",
+      "#A0B1C9",
+      "#B5C2D1",
+      "#FFFFFF",
+      "#8FACCD",
+      "#253B53",
+      "#F6F3FA",
+      "#AFA1C6",
+      "#8B71AA",
+      "#35495C"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "env",
+        "title": "应用运行范围"
+      },
+      {
+        "id": "dedicated",
+        "title": "专用运行组"
+      },
+      {
+        "id": "shared",
+        "title": "共享运行组"
+      },
+      {
+        "id": "catalog",
+        "title": "目录服务"
+      },
+      {
+        "id": "order",
+        "title": "任务服务"
+      },
+      {
+        "id": "notify",
+        "title": "通知服务"
+      },
+      {
+        "id": "receipt",
+        "title": "回执服务"
+      },
+      {
+        "id": "worker",
+        "title": "执行服务"
+      },
+      {
+        "id": "audit",
+        "title": "审计服务"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "event-bus",
+        "label": "事件发布订阅主题",
+        "parent": null
+      },
+      {
+        "id": "catalog-app",
+        "label": "目录服务",
+        "parent": "catalog"
+      },
+      {
+        "id": "catalog-sidecar",
+        "label": "侧车",
+        "parent": "catalog"
+      },
+      {
+        "id": "catalog-api",
+        "label": "应用接口",
+        "parent": "catalog"
+      },
+      {
+        "id": "order-app",
+        "label": "任务服务",
+        "parent": "order"
+      },
+      {
+        "id": "order-sidecar",
+        "label": "侧车",
+        "parent": "order"
+      },
+      {
+        "id": "order-api",
+        "label": "应用接口",
+        "parent": "order"
+      },
+      {
+        "id": "notify-app",
+        "label": "通知服务",
+        "parent": "notify"
+      },
+      {
+        "id": "notify-sidecar",
+        "label": "侧车",
+        "parent": "notify"
+      },
+      {
+        "id": "notify-api",
+        "label": "应用接口",
+        "parent": "notify"
+      },
+      {
+        "id": "receipt-app",
+        "label": "回执服务",
+        "parent": "receipt"
+      },
+      {
+        "id": "receipt-sidecar",
+        "label": "侧车",
+        "parent": "receipt"
+      },
+      {
+        "id": "receipt-api",
+        "label": "应用接口",
+        "parent": "receipt"
+      },
+      {
+        "id": "worker-app",
+        "label": "执行服务",
+        "parent": "worker"
+      },
+      {
+        "id": "worker-sidecar",
+        "label": "侧车",
+        "parent": "worker"
+      },
+      {
+        "id": "worker-api",
+        "label": "应用接口",
+        "parent": "worker"
+      },
+      {
+        "id": "audit-app",
+        "label": "审计服务",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-sidecar",
+        "label": "侧车",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-api",
+        "label": "应用接口",
+        "parent": "audit"
+      },
+      {
+        "id": "client",
+        "label": "用户终端",
+        "parent": null
+      },
+      {
+        "id": "gateway",
+        "label": "请求入口",
+        "parent": null
+      },
+      {
+        "id": "ui",
+        "label": "操作界面",
+        "parent": null
+      },
+      {
+        "id": "task-db",
+        "label": "任务资料库",
+        "parent": null
+      },
+      {
+        "id": "files",
+        "label": "结果文件",
+        "parent": null
+      },
+      {
+        "id": "cache",
+        "label": "状态缓存",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "client",
+        "to": "gateway",
+        "label": ""
+      },
+      {
+        "from": "gateway",
+        "to": "ui",
+        "label": ""
+      },
+      {
+        "from": "ui",
+        "to": "order-api",
+        "label": "业务请求"
+      },
+      {
+        "from": "order-sidecar",
+        "to": "event-bus",
+        "label": "发布事件"
+      },
+      {
+        "from": "event-bus",
+        "to": "notify-sidecar",
+        "label": "订阅事件"
+      },
+      {
+        "from": "event-bus",
+        "to": "receipt-sidecar",
+        "label": "订阅事件"
+      },
+      {
+        "from": "event-bus",
+        "to": "worker-sidecar",
+        "label": "执行事件"
+      },
+      {
+        "from": "order-app",
+        "to": "task-db",
+        "label": "任务记录"
+      },
+      {
+        "from": "worker-app",
+        "to": "files",
+        "label": "存放结果"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/049/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

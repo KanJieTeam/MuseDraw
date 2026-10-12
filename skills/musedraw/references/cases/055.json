@@ -1,0 +1,182 @@
+{
+  "id": 55,
+  "number": "055",
+  "title": "媒体发布与异步处理架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "播放上传双通路＋异步媒体处理",
+    "colorDirection": "炭黑背景、灰白文字与橙绿类别图标",
+    "canvasHint": [
+      2000,
+      1580
+    ],
+    "palette": [
+      "#15191F",
+      "#E9EEF4",
+      "#90A5BA",
+      "#252B34",
+      "#536171",
+      "#DBE4ED",
+      "#7BACBD",
+      "#1D222A",
+      "#CCD7E4",
+      "#82B766",
+      "#E69A47",
+      "#B0685B",
+      "#BAC3CC",
+      "#699EC3",
+      "#60A791"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "media-platform",
+        "title": "媒体服务边界"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "viewer",
+        "label": "观看用户",
+        "parent": null
+      },
+      {
+        "id": "creator",
+        "label": "内容作者",
+        "parent": null
+      },
+      {
+        "id": "front",
+        "label": "媒体工作台",
+        "parent": null
+      },
+      {
+        "id": "processed",
+        "label": "已发布媒体",
+        "parent": "media-platform"
+      },
+      {
+        "id": "play",
+        "label": "播放服务",
+        "parent": "media-platform"
+      },
+      {
+        "id": "upload",
+        "label": "上传服务",
+        "parent": "media-platform"
+      },
+      {
+        "id": "raw",
+        "label": "原始媒体",
+        "parent": "media-platform"
+      },
+      {
+        "id": "cache",
+        "label": "播放元数据缓存",
+        "parent": "media-platform"
+      },
+      {
+        "id": "metadata",
+        "label": "媒体元数据",
+        "parent": "media-platform"
+      },
+      {
+        "id": "process",
+        "label": "处理编排",
+        "parent": "media-platform"
+      },
+      {
+        "id": "worker",
+        "label": "异步转码任务",
+        "parent": "media-platform"
+      },
+      {
+        "id": "policy",
+        "label": "内容规则校验",
+        "parent": "media-platform"
+      },
+      {
+        "id": "analysis",
+        "label": "媒体质量分析",
+        "parent": "media-platform"
+      }
+    ],
+    "relations": [
+      {
+        "from": "viewer",
+        "to": "front",
+        "label": ""
+      },
+      {
+        "from": "creator",
+        "to": "front",
+        "label": ""
+      },
+      {
+        "from": "front",
+        "to": "play",
+        "label": ""
+      },
+      {
+        "from": "front",
+        "to": "upload",
+        "label": ""
+      },
+      {
+        "from": "upload",
+        "to": "raw",
+        "label": ""
+      },
+      {
+        "from": "play",
+        "to": "metadata",
+        "label": ""
+      },
+      {
+        "from": "upload",
+        "to": "metadata",
+        "label": ""
+      },
+      {
+        "from": "play",
+        "to": "cache",
+        "label": ""
+      },
+      {
+        "from": "raw",
+        "to": "process",
+        "label": ""
+      },
+      {
+        "from": "process",
+        "to": "worker",
+        "label": ""
+      },
+      {
+        "from": "worker",
+        "to": "processed",
+        "label": ""
+      },
+      {
+        "from": "process",
+        "to": "metadata",
+        "label": ""
+      },
+      {
+        "from": "process",
+        "to": "policy",
+        "label": ""
+      },
+      {
+        "from": "process",
+        "to": "analysis",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/055/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

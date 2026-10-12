@@ -1,0 +1,340 @@
+{
+  "id": 34,
+  "number": "034",
+  "title": "项目资金台账与结算能力图",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "密集条带矩阵加右集成中心",
+    "colorDirection": "蓝白密集矩阵与绿色层签",
+    "canvasHint": [
+      2130,
+      1270
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#2473BD",
+      "#EAEFF5",
+      "#B8C9D9",
+      "#2777BD",
+      "#287BCA",
+      "#E8EDF3",
+      "#D9EAF8",
+      "#9BBADC",
+      "#2B7FC9",
+      "#FFFFFF",
+      "#8FACCD",
+      "#253B53",
+      "#F9FCFE",
+      "#A8C3DD",
+      "#83B0D6",
+      "#F8FAF8",
+      "#BBC9BC",
+      "#3D8253"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "analysis",
+        "title": "资金视图"
+      },
+      {
+        "id": "business",
+        "title": "台账与结算"
+      },
+      {
+        "id": "budget",
+        "title": "预算台账"
+      },
+      {
+        "id": "contract",
+        "title": "合同台账"
+      },
+      {
+        "id": "expense",
+        "title": "费用台账"
+      },
+      {
+        "id": "payment",
+        "title": "付款申请"
+      },
+      {
+        "id": "receipt",
+        "title": "收款记录"
+      },
+      {
+        "id": "invoice",
+        "title": "票据管理"
+      },
+      {
+        "id": "settlement",
+        "title": "结算处理"
+      },
+      {
+        "id": "engine",
+        "title": "处理引擎"
+      },
+      {
+        "id": "data",
+        "title": "共享资料"
+      },
+      {
+        "id": "integration",
+        "title": "集成中心"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "analysis-1",
+        "label": "预算执行",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-2",
+        "label": "资金占用",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-3",
+        "label": "结算进度",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-4",
+        "label": "票据统计",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-5",
+        "label": "异常核对",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-6",
+        "label": "项目汇总",
+        "parent": "analysis"
+      },
+      {
+        "id": "budget-1",
+        "label": "额度登记",
+        "parent": "budget"
+      },
+      {
+        "id": "budget-2",
+        "label": "分项分配",
+        "parent": "budget"
+      },
+      {
+        "id": "budget-3",
+        "label": "调整留痕",
+        "parent": "budget"
+      },
+      {
+        "id": "contract-1",
+        "label": "合同登记",
+        "parent": "contract"
+      },
+      {
+        "id": "contract-2",
+        "label": "节点维护",
+        "parent": "contract"
+      },
+      {
+        "id": "contract-3",
+        "label": "变更核对",
+        "parent": "contract"
+      },
+      {
+        "id": "expense-1",
+        "label": "费用归集",
+        "parent": "expense"
+      },
+      {
+        "id": "expense-2",
+        "label": "项目关联",
+        "parent": "expense"
+      },
+      {
+        "id": "expense-3",
+        "label": "凭据整理",
+        "parent": "expense"
+      },
+      {
+        "id": "payment-1",
+        "label": "申请登记",
+        "parent": "payment"
+      },
+      {
+        "id": "payment-2",
+        "label": "条件核验",
+        "parent": "payment"
+      },
+      {
+        "id": "payment-3",
+        "label": "状态跟踪",
+        "parent": "payment"
+      },
+      {
+        "id": "receipt-1",
+        "label": "回款登记",
+        "parent": "receipt"
+      },
+      {
+        "id": "receipt-2",
+        "label": "来源核对",
+        "parent": "receipt"
+      },
+      {
+        "id": "receipt-3",
+        "label": "认领匹配",
+        "parent": "receipt"
+      },
+      {
+        "id": "invoice-1",
+        "label": "票据登记",
+        "parent": "invoice"
+      },
+      {
+        "id": "invoice-2",
+        "label": "关联台账",
+        "parent": "invoice"
+      },
+      {
+        "id": "invoice-3",
+        "label": "归档检索",
+        "parent": "invoice"
+      },
+      {
+        "id": "settlement-1",
+        "label": "结算清单",
+        "parent": "settlement"
+      },
+      {
+        "id": "settlement-2",
+        "label": "差异处理",
+        "parent": "settlement"
+      },
+      {
+        "id": "settlement-3",
+        "label": "结果确认",
+        "parent": "settlement"
+      },
+      {
+        "id": "business-1",
+        "label": "核对任务",
+        "parent": "business"
+      },
+      {
+        "id": "business-2",
+        "label": "审批记录",
+        "parent": "business"
+      },
+      {
+        "id": "business-3",
+        "label": "对账清单",
+        "parent": "business"
+      },
+      {
+        "id": "business-4",
+        "label": "结算档案",
+        "parent": "business"
+      },
+      {
+        "id": "engine-1",
+        "label": "核算规则",
+        "parent": "engine"
+      },
+      {
+        "id": "engine-2",
+        "label": "分摊规则",
+        "parent": "engine"
+      },
+      {
+        "id": "engine-3",
+        "label": "匹配规则",
+        "parent": "engine"
+      },
+      {
+        "id": "engine-4",
+        "label": "任务编排",
+        "parent": "engine"
+      },
+      {
+        "id": "engine-5",
+        "label": "表单配置",
+        "parent": "engine"
+      },
+      {
+        "id": "data-1",
+        "label": "项目目录",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "单位目录",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "科目目录",
+        "parent": "data"
+      },
+      {
+        "id": "data-4",
+        "label": "账户记录",
+        "parent": "data"
+      },
+      {
+        "id": "data-5",
+        "label": "资料附件",
+        "parent": "data"
+      },
+      {
+        "id": "integration-1",
+        "label": "项目资料",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-2",
+        "label": "合同资料",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-3",
+        "label": "预算资料",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-4",
+        "label": "费用资料",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-5",
+        "label": "付款状态",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-6",
+        "label": "收款状态",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-7",
+        "label": "票据资料",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-8",
+        "label": "归档索引",
+        "parent": "integration"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/034/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

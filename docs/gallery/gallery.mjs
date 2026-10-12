@@ -70,6 +70,10 @@ function openDetail(item, focusElement, writeHash = true) {
   $('detail-image').src = item.svg; $('detail-image').alt = item.title;
   for (const format of ['drawio', 'svg', 'png']) { const a = $(`download-${format}`); a.href = item[format]; a.download = `MuseDraw-${item.number}.${format}`; }
   $('prompt').textContent = item.prompt;
+  const reference = $('download-reference');
+  reference.hidden = !item.reference;
+  if (item.reference) { reference.href = item.reference; reference.download = `MuseDraw-${item.number}-reference.json`; }
+  else reference.removeAttribute('href');
   const list = filtered(); const index = list.findIndex((x) => x.id === item.id);
   $('previous').disabled = index <= 0; $('next').disabled = index < 0 || index >= list.length - 1;
   fit();
@@ -135,7 +139,7 @@ $('close-detail').addEventListener('click', closeDetail);
 $('detail').addEventListener('cancel', (event) => { event.preventDefault(); closeDetail(); });
 $('detail').addEventListener('click', (event) => { if (event.target === $('detail')) { const box = $('detail').getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) closeDetail(); } });
 $('previous').addEventListener('click', () => navigate(-1)); $('next').addEventListener('click', () => navigate(1));
-$('copy-prompt').addEventListener('click', () => copy(current.prompt, '已复制提示词，可交给你的智能体。'));
+$('copy-prompt').addEventListener('click', () => copy(current.prompt, '已复制提示词，几句需求即可开始画图。'));
 $('share').addEventListener('click', () => copy(location.href, '已复制案例链接。'));
 $('install').addEventListener('click', () => copy('npx skills add KanJieTeam/MuseDraw', '已复制安装命令。'));
 $('zoom-out').addEventListener('click', () => zoom(1 / 1.25)); $('zoom-in').addEventListener('click', () => zoom(1.25)); $('fit').addEventListener('click', fit);
@@ -163,6 +167,6 @@ try {
   const data = await response.json();
   if (!Array.isArray(data.items) || data.items.length !== 100) throw new Error('Incomplete collection');
   const paths = ['thumbnail', 'svg', 'png', 'drawio'];
-  if (data.items.some((item) => !Number.isInteger(item.id) || !/^\d{3}$/.test(item.number) || !viewNames[item.view] || paths.some((key) => typeof item[key] !== 'string' || !/^cases\/\d{3}\/(preview\.png|diagram\.(svg|png|drawio))$/.test(item[key])))) throw new Error('Invalid collection');
+  if (data.items.some((item) => !Number.isInteger(item.id) || !/^\d{3}$/.test(item.number) || !viewNames[item.view] || typeof item.prompt !== 'string' || !item.prompt.trim() || item.prompt.length > 180 || (item.reference !== undefined && item.reference !== `cases/${item.number}/design.json`) || paths.some((key) => typeof item[key] !== 'string' || !/^cases\/\d{3}\/(preview\.png|diagram\.(svg|png|drawio))$/.test(item[key])))) throw new Error('Invalid collection');
   items = data.items; render(); hashDetail();
 } catch { $('result-count').textContent = '图集未加载'; $('load-error').hidden = false; }

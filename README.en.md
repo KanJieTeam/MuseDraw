@@ -38,6 +38,8 @@ npx skills add KanJieTeam/MuseDraw
 
 Then ask your agent: **Use MuseDraw to draw an architecture diagram from this system description.** Supply the material, the figure's purpose and your visual preferences.
 
+A few ordinary sentences are enough to start; MuseDraw handles composition, color and layout. The gallery is a design-reference collection, not a template allowlist. New subjects and structures do not require coordinates or per-module drawing parameters.
+
 Installation with the command above requires Node.js 22.20+ and an agent with file access and execution tools. Rendering and PNG export requirements are in the [usage guide](docs/usage.md).
 
 ## Current capabilities

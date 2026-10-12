@@ -1,0 +1,165 @@
+{
+  "id": 4,
+  "number": "004",
+  "title": "企业智能工作区",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "中央执行域＋右侧依赖/输出分叉",
+    "colorDirection": "白底工作区、棕橙核心题头与灰蓝外围虚线",
+    "canvasHint": [
+      2000,
+      1040
+    ],
+    "palette": [
+      "#28323E",
+      "#182235",
+      "#A46032",
+      "#FFFFFF",
+      "#98A8B9",
+      "#AEB8C3",
+      "#A58B75",
+      "#795B42"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "entry",
+        "title": "调用入口"
+      },
+      {
+        "id": "knowledge",
+        "title": "知识与规则"
+      },
+      {
+        "id": "runtime",
+        "title": "智能工作区"
+      },
+      {
+        "id": "secure",
+        "title": "安全访问"
+      },
+      {
+        "id": "providers",
+        "title": "外部依赖"
+      },
+      {
+        "id": "outputs",
+        "title": "成果输出"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "entry-1",
+        "label": "网页工作台",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-2",
+        "label": "邮件入口",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-3",
+        "label": "任务触发",
+        "parent": "entry"
+      },
+      {
+        "id": "knowledge-1",
+        "label": "组织资料",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-2",
+        "label": "技能指令",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-3",
+        "label": "项目规则",
+        "parent": "knowledge"
+      },
+      {
+        "id": "exec",
+        "label": "任务执行",
+        "parent": null
+      },
+      {
+        "id": "state",
+        "label": "任务状态",
+        "parent": null
+      },
+      {
+        "id": "interaction",
+        "label": "交互处理",
+        "parent": null
+      },
+      {
+        "id": "sandbox",
+        "label": "工具执行",
+        "parent": null
+      },
+      {
+        "id": "secure-1",
+        "label": "模型访问",
+        "parent": "secure"
+      },
+      {
+        "id": "secure-2",
+        "label": "工具授权",
+        "parent": "secure"
+      },
+      {
+        "id": "providers-1",
+        "label": "模型接口",
+        "parent": "providers"
+      },
+      {
+        "id": "providers-2",
+        "label": "业务工具",
+        "parent": "providers"
+      },
+      {
+        "id": "outputs-1",
+        "label": "文档成果",
+        "parent": "outputs"
+      },
+      {
+        "id": "outputs-2",
+        "label": "应用结果",
+        "parent": "outputs"
+      },
+      {
+        "id": "outputs-3",
+        "label": "流程回执",
+        "parent": "outputs"
+      }
+    ],
+    "relations": [
+      {
+        "from": "entry-2",
+        "to": "exec",
+        "label": ""
+      },
+      {
+        "from": "sandbox",
+        "to": "secure-2",
+        "label": ""
+      },
+      {
+        "from": "secure-1",
+        "to": "providers-1",
+        "label": ""
+      },
+      {
+        "from": "sandbox",
+        "to": "outputs-1",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/004/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

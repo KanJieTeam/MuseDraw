@@ -11,7 +11,7 @@
   "svg": "cases/011/diagram.svg",
   "png": "cases/011/diagram.png",
   "drawio": "cases/011/diagram.drawio",
-  "prompt": "用 MuseDraw 画“在线商城系统全景”。采用中心服务＋三侧外围系统，炭黑灰白。分区：。模块：购物用户、负载测试、营销服务、在线商城、库存履约、外部汇率、结算服务、支付渠道。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "prompt": "我需要 MuseDraw 的“在线商城系统全景”通用参考组件图。购物用户进入商城，商城依赖营销、库存履约和结算服务，结算再对接汇率与支付渠道。用于向业务同事介绍系统分工，用克制的灰白风格，把商城这个中心讲清楚。",
   "geometry": {
     "number": 11,
     "referenceId": "RQ-0002",
@@ -366,5 +366,7 @@
     "url": "https://icepanel.io/blog/system-landscape-diagrams-c4-model"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“在线商城系统全景”。采用中心服务＋三侧外围系统，炭黑灰白。分区：。模块：购物用户、负载测试、营销服务、在线商城、库存履约、外部汇率、结算服务、支付渠道。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "reference": "cases/011/design.json"
 }

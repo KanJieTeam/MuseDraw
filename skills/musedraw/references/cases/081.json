@@ -1,0 +1,262 @@
+{
+  "id": 81,
+  "number": "081",
+  "title": "企业知识服务能力图",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "六能力列加底部双系统域",
+    "colorDirection": "靛蓝重点题头、白色正文域、冰蓝知识桥",
+    "canvasHint": [
+      2000,
+      1300
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#354FA8",
+      "#3D55AA",
+      "#F8FAFD",
+      "#A8B6D4",
+      "#405BAD",
+      "#BCCAD8",
+      "#BBD5F1",
+      "#8CB3E0"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "goal",
+        "title": "知识服务目标"
+      },
+      {
+        "id": "pillar-0",
+        "title": "知识整理"
+      },
+      {
+        "id": "pillar-1",
+        "title": "内容共享"
+      },
+      {
+        "id": "pillar-2",
+        "title": "经验沉淀"
+      },
+      {
+        "id": "pillar-3",
+        "title": "检索服务"
+      },
+      {
+        "id": "pillar-4",
+        "title": "学习支持"
+      },
+      {
+        "id": "pillar-5",
+        "title": "知识评估"
+      },
+      {
+        "id": "knowledge",
+        "title": "共享知识层"
+      },
+      {
+        "id": "system",
+        "title": "知识服务系统"
+      },
+      {
+        "id": "manage",
+        "title": "管理系统"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "pillar-0-1",
+        "label": "来源登记",
+        "parent": "pillar-0"
+      },
+      {
+        "id": "pillar-0-2",
+        "label": "知识编目",
+        "parent": "pillar-0"
+      },
+      {
+        "id": "pillar-0-3",
+        "label": "标签管理",
+        "parent": "pillar-0"
+      },
+      {
+        "id": "pillar-1-1",
+        "label": "内容发布",
+        "parent": "pillar-1"
+      },
+      {
+        "id": "pillar-1-2",
+        "label": "权限共享",
+        "parent": "pillar-1"
+      },
+      {
+        "id": "pillar-1-3",
+        "label": "订阅通知",
+        "parent": "pillar-1"
+      },
+      {
+        "id": "pillar-2-1",
+        "label": "案例收集",
+        "parent": "pillar-2"
+      },
+      {
+        "id": "pillar-2-2",
+        "label": "经验归档",
+        "parent": "pillar-2"
+      },
+      {
+        "id": "pillar-2-3",
+        "label": "专题整理",
+        "parent": "pillar-2"
+      },
+      {
+        "id": "pillar-3-1",
+        "label": "条件检索",
+        "parent": "pillar-3"
+      },
+      {
+        "id": "pillar-3-2",
+        "label": "片段定位",
+        "parent": "pillar-3"
+      },
+      {
+        "id": "pillar-3-3",
+        "label": "结果排序",
+        "parent": "pillar-3"
+      },
+      {
+        "id": "pillar-4-1",
+        "label": "课程组织",
+        "parent": "pillar-4"
+      },
+      {
+        "id": "pillar-4-2",
+        "label": "学习记录",
+        "parent": "pillar-4"
+      },
+      {
+        "id": "pillar-4-3",
+        "label": "内容推荐",
+        "parent": "pillar-4"
+      },
+      {
+        "id": "pillar-5-1",
+        "label": "内容复核",
+        "parent": "pillar-5"
+      },
+      {
+        "id": "pillar-5-2",
+        "label": "使用统计",
+        "parent": "pillar-5"
+      },
+      {
+        "id": "pillar-5-3",
+        "label": "问题反馈",
+        "parent": "pillar-5"
+      },
+      {
+        "id": "knowledge-1",
+        "label": "制度知识",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-2",
+        "label": "产品知识",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-3",
+        "label": "业务知识",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-4",
+        "label": "项目知识",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-5",
+        "label": "问答知识",
+        "parent": "knowledge"
+      },
+      {
+        "id": "sys-0-1",
+        "label": "内容工作台",
+        "parent": "system"
+      },
+      {
+        "id": "sys-0-2",
+        "label": "知识编目",
+        "parent": "system"
+      },
+      {
+        "id": "sys-1-1",
+        "label": "知识门户",
+        "parent": "system"
+      },
+      {
+        "id": "sys-1-2",
+        "label": "内容订阅",
+        "parent": "system"
+      },
+      {
+        "id": "sys-2-1",
+        "label": "检索中心",
+        "parent": "system"
+      },
+      {
+        "id": "sys-2-2",
+        "label": "问答检索",
+        "parent": "system"
+      },
+      {
+        "id": "sys-3-1",
+        "label": "学习管理",
+        "parent": "system"
+      },
+      {
+        "id": "sys-3-2",
+        "label": "学习记录",
+        "parent": "system"
+      },
+      {
+        "id": "sys-4-1",
+        "label": "案例库",
+        "parent": "system"
+      },
+      {
+        "id": "sys-4-2",
+        "label": "专题服务",
+        "parent": "system"
+      },
+      {
+        "id": "manage-1",
+        "label": "权限管理",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-2",
+        "label": "流程配置",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-3",
+        "label": "使用分析",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-4",
+        "label": "质量复核",
+        "parent": "manage"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/081/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

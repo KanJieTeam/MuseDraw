@@ -1,0 +1,218 @@
+{
+  "id": 85,
+  "number": "085",
+  "title": "会员活动运营能力图",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "营销策略二乘二主域与权益事件系统横层",
+    "colorDirection": "蓝色层框、橙色策略、绿色权益与白共享叶",
+    "canvasHint": [
+      2000,
+      1320
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#2679B9",
+      "#F7FBFF",
+      "#A3BED3",
+      "#F39B60",
+      "#DC7D3D",
+      "#422D20",
+      "#A6D0AE",
+      "#75A781",
+      "#BCCAD8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "strategy",
+        "title": "策略能力"
+      },
+      {
+        "id": "segment",
+        "title": "受众策略"
+      },
+      {
+        "id": "plan",
+        "title": "活动计划"
+      },
+      {
+        "id": "trigger",
+        "title": "触发策略"
+      },
+      {
+        "id": "measure",
+        "title": "评估策略"
+      },
+      {
+        "id": "rights",
+        "title": "权益能力"
+      },
+      {
+        "id": "grant",
+        "title": "权益发放"
+      },
+      {
+        "id": "manage",
+        "title": "权益管理"
+      },
+      {
+        "id": "event",
+        "title": "事件能力"
+      },
+      {
+        "id": "system",
+        "title": "系统管理"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "segment-1",
+        "label": "人群筛选",
+        "parent": "segment"
+      },
+      {
+        "id": "segment-2",
+        "label": "标签匹配",
+        "parent": "segment"
+      },
+      {
+        "id": "segment-3",
+        "label": "名单管理",
+        "parent": "segment"
+      },
+      {
+        "id": "plan-1",
+        "label": "活动登记",
+        "parent": "plan"
+      },
+      {
+        "id": "plan-2",
+        "label": "时段配置",
+        "parent": "plan"
+      },
+      {
+        "id": "plan-3",
+        "label": "目标设置",
+        "parent": "plan"
+      },
+      {
+        "id": "trigger-1",
+        "label": "事件匹配",
+        "parent": "trigger"
+      },
+      {
+        "id": "trigger-2",
+        "label": "条件检查",
+        "parent": "trigger"
+      },
+      {
+        "id": "trigger-3",
+        "label": "次数限制",
+        "parent": "trigger"
+      },
+      {
+        "id": "measure-1",
+        "label": "效果统计",
+        "parent": "measure"
+      },
+      {
+        "id": "measure-2",
+        "label": "分组比较",
+        "parent": "measure"
+      },
+      {
+        "id": "measure-3",
+        "label": "结果查询",
+        "parent": "measure"
+      },
+      {
+        "id": "grant-1",
+        "label": "资格校验",
+        "parent": "grant"
+      },
+      {
+        "id": "grant-2",
+        "label": "发放登记",
+        "parent": "grant"
+      },
+      {
+        "id": "grant-3",
+        "label": "领取记录",
+        "parent": "grant"
+      },
+      {
+        "id": "manage-1",
+        "label": "权益查询",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-2",
+        "label": "失效登记",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-3",
+        "label": "退回处理",
+        "parent": "manage"
+      },
+      {
+        "id": "event-1",
+        "label": "事件登记",
+        "parent": "event"
+      },
+      {
+        "id": "event-2",
+        "label": "事件校验",
+        "parent": "event"
+      },
+      {
+        "id": "event-3",
+        "label": "订阅配置",
+        "parent": "event"
+      },
+      {
+        "id": "event-4",
+        "label": "结果记录",
+        "parent": "event"
+      },
+      {
+        "id": "event-5",
+        "label": "历史查询",
+        "parent": "event"
+      },
+      {
+        "id": "system-1",
+        "label": "用户管理",
+        "parent": "system"
+      },
+      {
+        "id": "system-2",
+        "label": "角色管理",
+        "parent": "system"
+      },
+      {
+        "id": "system-3",
+        "label": "资源管理",
+        "parent": "system"
+      },
+      {
+        "id": "system-4",
+        "label": "权限管理",
+        "parent": "system"
+      },
+      {
+        "id": "system-5",
+        "label": "字典管理",
+        "parent": "system"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/085/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

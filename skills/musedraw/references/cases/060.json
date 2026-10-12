@@ -1,0 +1,150 @@
+{
+  "id": 60,
+  "number": "060",
+  "title": "双集群逻辑服务协作",
+  "view": "deployment",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "入口服务与双集群跨服务范围",
+    "colorDirection": "中性灰集群、蓝组件与服务虚界",
+    "canvasHint": [
+      1850,
+      1360
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#4687B8",
+      "#BCCAD8",
+      "#667482",
+      "#9AA7B3",
+      "#5E9BC4",
+      "#EFF1F3",
+      "#A3ADB5",
+      "#FFFFFF",
+      "#8795A1",
+      "#66727D"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "entry-support",
+        "title": "入口支撑服务"
+      },
+      {
+        "id": "cluster-a",
+        "title": "运行集群甲"
+      },
+      {
+        "id": "cluster-b",
+        "title": "运行集群乙"
+      },
+      {
+        "id": "service-one",
+        "title": "逻辑服务一"
+      },
+      {
+        "id": "service-two",
+        "title": "逻辑服务二"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "client",
+        "label": "外部客户端",
+        "parent": null
+      },
+      {
+        "id": "dns",
+        "label": "名称解析",
+        "parent": null
+      },
+      {
+        "id": "controller",
+        "label": "网关控制器",
+        "parent": null
+      },
+      {
+        "id": "route",
+        "label": "公共流量入口",
+        "parent": null
+      },
+      {
+        "id": "entry-support-1",
+        "label": "访问防护",
+        "parent": "entry-support"
+      },
+      {
+        "id": "entry-support-2",
+        "label": "证书管理",
+        "parent": "entry-support"
+      },
+      {
+        "id": "entry-support-3",
+        "label": "静态分发",
+        "parent": "entry-support"
+      },
+      {
+        "id": "a1",
+        "label": "服务一实例甲",
+        "parent": "service-one"
+      },
+      {
+        "id": "b1",
+        "label": "服务一实例乙",
+        "parent": "service-one"
+      },
+      {
+        "id": "a2",
+        "label": "服务二实例甲",
+        "parent": "service-two"
+      },
+      {
+        "id": "b2",
+        "label": "服务二实例乙",
+        "parent": "service-two"
+      }
+    ],
+    "relations": [
+      {
+        "from": "client",
+        "to": "route",
+        "label": ""
+      },
+      {
+        "from": "dns",
+        "to": "client",
+        "label": ""
+      },
+      {
+        "from": "controller",
+        "to": "route",
+        "label": ""
+      },
+      {
+        "from": "route",
+        "to": "a1",
+        "label": ""
+      },
+      {
+        "from": "route",
+        "to": "b1",
+        "label": ""
+      },
+      {
+        "from": "a1",
+        "to": "b2",
+        "label": ""
+      },
+      {
+        "from": "b1",
+        "to": "a2",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/060/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

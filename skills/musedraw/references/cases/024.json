@@ -1,0 +1,195 @@
+{
+  "id": 24,
+  "number": "024",
+  "title": "数据资产授权与访问架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "权限映射工作流与云数据访问",
+    "colorDirection": "墨灰访问应用、主蓝资源平台与白底授权叶项",
+    "canvasHint": [
+      1760,
+      1210
+    ],
+    "palette": [
+      "#28323E",
+      "#182235",
+      "#326CA4",
+      "#FFFFFF",
+      "#8D969F",
+      "#4D5965",
+      "#A8AFB7",
+      "#AEB8C3",
+      "#627384",
+      "#8DA8C1"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "application",
+        "title": "数据访问应用"
+      },
+      {
+        "id": "mapping",
+        "title": "权限映射"
+      },
+      {
+        "id": "directory",
+        "title": "组织目录"
+      },
+      {
+        "id": "workflow",
+        "title": "访问审批"
+      },
+      {
+        "id": "platform",
+        "title": "数据资源平台"
+      },
+      {
+        "id": "iam",
+        "title": "身份与访问"
+      },
+      {
+        "id": "assets",
+        "title": "资产服务"
+      },
+      {
+        "id": "catalog",
+        "title": "资产目录"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "mapping-1",
+        "label": "权限登记",
+        "parent": "mapping"
+      },
+      {
+        "id": "mapping-2",
+        "label": "资产映射",
+        "parent": "mapping"
+      },
+      {
+        "id": "mapping-3",
+        "label": "标签识别",
+        "parent": "mapping"
+      },
+      {
+        "id": "mapping-4",
+        "label": "分组关联",
+        "parent": "mapping"
+      },
+      {
+        "id": "directory-1",
+        "label": "人员分组",
+        "parent": "directory"
+      },
+      {
+        "id": "directory-2",
+        "label": "责任目录",
+        "parent": "directory"
+      },
+      {
+        "id": "workflow-1",
+        "label": "审批流程",
+        "parent": "workflow"
+      },
+      {
+        "id": "workflow-2",
+        "label": "资产申请",
+        "parent": "workflow"
+      },
+      {
+        "id": "workflow-3",
+        "label": "授权回执",
+        "parent": "workflow"
+      },
+      {
+        "id": "workflow-4",
+        "label": "权限期限",
+        "parent": "workflow"
+      },
+      {
+        "id": "owner",
+        "label": "数据负责人",
+        "parent": null
+      },
+      {
+        "id": "consumer",
+        "label": "数据消费者",
+        "parent": null
+      },
+      {
+        "id": "iam-1",
+        "label": "用户分组",
+        "parent": "iam"
+      },
+      {
+        "id": "iam-2",
+        "label": "策略权限",
+        "parent": "iam"
+      },
+      {
+        "id": "iam-3",
+        "label": "有效凭据",
+        "parent": "iam"
+      },
+      {
+        "id": "iam-4",
+        "label": "授权记录",
+        "parent": "iam"
+      },
+      {
+        "id": "assets-1",
+        "label": "存储访问",
+        "parent": "assets"
+      },
+      {
+        "id": "assets-2",
+        "label": "查询访问",
+        "parent": "assets"
+      },
+      {
+        "id": "catalog-1",
+        "label": "资产信息",
+        "parent": "catalog"
+      },
+      {
+        "id": "catalog-2",
+        "label": "资源标签",
+        "parent": "catalog"
+      },
+      {
+        "id": "catalog-3",
+        "label": "共享状态",
+        "parent": "catalog"
+      },
+      {
+        "id": "catalog-4",
+        "label": "使用记录",
+        "parent": "catalog"
+      }
+    ],
+    "relations": [
+      {
+        "from": "owner",
+        "to": "workflow-1",
+        "label": ""
+      },
+      {
+        "from": "mapping-2",
+        "to": "iam-2",
+        "label": ""
+      },
+      {
+        "from": "workflow-2",
+        "to": "catalog-1",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/024/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,305 @@
+{
+  "id": 74,
+  "number": "074",
+  "title": "供应协同采购能力地图",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双应用行＋不等宽四域矩阵＋双底带",
+    "colorDirection": "灰紫采购叶、钢灰蓝入口、暖砂目录与蓝灰支撑",
+    "canvasHint": [
+      1800,
+      1510
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#48617A",
+      "#DDE9F2",
+      "#54728A",
+      "#F2EBE3",
+      "#EFF1F3",
+      "#D9E3ED",
+      "#F3F3F4",
+      "#E4E4E8",
+      "#596575",
+      "#E6E2ED",
+      "#F4F0E5",
+      "#DCC38C",
+      "#685B37",
+      "#E7DDBF",
+      "#DBE5E8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "portals",
+        "title": "用户入口"
+      },
+      {
+        "id": "views",
+        "title": "业务视图"
+      },
+      {
+        "id": "matrix",
+        "title": "采购协同能力"
+      },
+      {
+        "id": "supplier",
+        "title": "供应方管理"
+      },
+      {
+        "id": "demand",
+        "title": "需求管理"
+      },
+      {
+        "id": "quotation",
+        "title": "报价评审"
+      },
+      {
+        "id": "execution",
+        "title": "采购履约"
+      },
+      {
+        "id": "marketplace",
+        "title": ""
+      },
+      {
+        "id": "base",
+        "title": ""
+      }
+    ],
+    "nodes": [
+      {
+        "id": "portals-1",
+        "label": "业务入口",
+        "parent": "portals"
+      },
+      {
+        "id": "portals-2",
+        "label": "供应入口",
+        "parent": "portals"
+      },
+      {
+        "id": "portals-3",
+        "label": "协同入口",
+        "parent": "portals"
+      },
+      {
+        "id": "views-1",
+        "label": "资源视图",
+        "parent": "views"
+      },
+      {
+        "id": "views-2",
+        "label": "采购视图",
+        "parent": "views"
+      },
+      {
+        "id": "views-3",
+        "label": "履约视图",
+        "parent": "views"
+      },
+      {
+        "id": "supplier-1",
+        "label": "供应登记",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-2",
+        "label": "资质管理",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-3",
+        "label": "分类维护",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-4",
+        "label": "履约记录",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-5",
+        "label": "协作评估",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-6",
+        "label": "异常预警",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-7",
+        "label": "协议维护",
+        "parent": "supplier"
+      },
+      {
+        "id": "supplier-8",
+        "label": "档案管理",
+        "parent": "supplier"
+      },
+      {
+        "id": "demand-1",
+        "label": "需求申报",
+        "parent": "demand"
+      },
+      {
+        "id": "demand-2",
+        "label": "需求汇总",
+        "parent": "demand"
+      },
+      {
+        "id": "demand-3",
+        "label": "计划维护",
+        "parent": "demand"
+      },
+      {
+        "id": "demand-4",
+        "label": "计划执行",
+        "parent": "demand"
+      },
+      {
+        "id": "quotation-1",
+        "label": "报价申请",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-2",
+        "label": "报价汇总",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-3",
+        "label": "评审计划",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-4",
+        "label": "报价记录",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-5",
+        "label": "比价管理",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-6",
+        "label": "评审安排",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-7",
+        "label": "价格分析",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-8",
+        "label": "方案对照",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-9",
+        "label": "评审结论",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-10",
+        "label": "过程记录",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-11",
+        "label": "协作沟通",
+        "parent": "quotation"
+      },
+      {
+        "id": "quotation-12",
+        "label": "结果通知",
+        "parent": "quotation"
+      },
+      {
+        "id": "execution-1",
+        "label": "订单管理",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-2",
+        "label": "合同执行",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-3",
+        "label": "收货登记",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-4",
+        "label": "验收确认",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-5",
+        "label": "变更管理",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-6",
+        "label": "结算核对",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-7",
+        "label": "履约分析",
+        "parent": "execution"
+      },
+      {
+        "id": "execution-8",
+        "label": "问题闭环",
+        "parent": "execution"
+      },
+      {
+        "id": "marketplace-1",
+        "label": "商品目录",
+        "parent": "marketplace"
+      },
+      {
+        "id": "marketplace-2",
+        "label": "供应目录",
+        "parent": "marketplace"
+      },
+      {
+        "id": "marketplace-3",
+        "label": "协同目录",
+        "parent": "marketplace"
+      },
+      {
+        "id": "base-1",
+        "label": "访问管理",
+        "parent": "base"
+      },
+      {
+        "id": "base-2",
+        "label": "用户组织",
+        "parent": "base"
+      },
+      {
+        "id": "base-3",
+        "label": "消息服务",
+        "parent": "base"
+      },
+      {
+        "id": "base-4",
+        "label": "集成接口",
+        "parent": "base"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/074/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

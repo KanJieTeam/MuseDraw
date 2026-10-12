@@ -11,7 +11,7 @@
   "svg": "cases/021/diagram.svg",
   "png": "cases/021/diagram.png",
   "drawio": "cases/021/diagram.drawio",
-  "prompt": "用 MuseDraw 画“物联网遥测与命令架构”。采用双方向IoT控制与数据路径，深青遥测核心、白底结果节点与中性命令侧。分区：数据消费。模块：远程设备、现场设备、命令管理、业务后端、现场网关、云端网关、流式处理、历史数据、实时分析、事件通知、智能分析。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：深青遥测核心、白底结果节点与中性命令侧；普通正文中性深灰，辅助模块白底细边。",
+  "prompt": "帮我用 MuseDraw 画“物联网遥测与命令架构”的通用参考图。现场设备通过现场网关、云端网关进入流式处理，业务后端则经命令管理面向远程设备；另有历史数据和实时分析等消费能力。给方案交流用，让两个方向容易辨认。",
   "geometry": {
     "number": 21,
     "referenceId": "CQ-0010",
@@ -399,5 +399,7 @@
     "url": "https://github.com/MicrosoftDocs/architecture-center/blob/7985c456e5f73f02b7a6fa1995959292e81130f8/docs/databases/guide/big-data-architectures.md"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“物联网遥测与命令架构”。采用双方向IoT控制与数据路径，深青遥测核心、白底结果节点与中性命令侧。分区：数据消费。模块：远程设备、现场设备、命令管理、业务后端、现场网关、云端网关、流式处理、历史数据、实时分析、事件通知、智能分析。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：深青遥测核心、白底结果节点与中性命令侧；普通正文中性深灰，辅助模块白底细边。",
+  "reference": "cases/021/design.json"
 }

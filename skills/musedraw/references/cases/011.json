@@ -1,0 +1,110 @@
+{
+  "id": 11,
+  "number": "011",
+  "title": "在线商城系统全景",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "中心服务＋三侧外围系统",
+    "colorDirection": "炭黑灰白",
+    "canvasHint": [
+      1800,
+      1130
+    ],
+    "palette": [
+      "#15191F",
+      "#E8EBF0",
+      "#A2B1C3",
+      "#23282F",
+      "#39424B",
+      "#F0F2F5",
+      "#4B525B",
+      "#59616B"
+    ]
+  },
+  "exampleContent": {
+    "groups": [],
+    "nodes": [
+      {
+        "id": "customers",
+        "label": "购物用户",
+        "parent": null
+      },
+      {
+        "id": "load",
+        "label": "负载测试",
+        "parent": null
+      },
+      {
+        "id": "marketing",
+        "label": "营销服务",
+        "parent": null
+      },
+      {
+        "id": "shop",
+        "label": "在线商城",
+        "parent": null
+      },
+      {
+        "id": "stock",
+        "label": "库存履约",
+        "parent": null
+      },
+      {
+        "id": "rates",
+        "label": "外部汇率",
+        "parent": null
+      },
+      {
+        "id": "finance",
+        "label": "结算服务",
+        "parent": null
+      },
+      {
+        "id": "payment",
+        "label": "支付渠道",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "customers",
+        "to": "shop",
+        "label": ""
+      },
+      {
+        "from": "load",
+        "to": "shop",
+        "label": ""
+      },
+      {
+        "from": "shop",
+        "to": "marketing",
+        "label": ""
+      },
+      {
+        "from": "shop",
+        "to": "stock",
+        "label": ""
+      },
+      {
+        "from": "shop",
+        "to": "finance",
+        "label": ""
+      },
+      {
+        "from": "finance",
+        "to": "rates",
+        "label": ""
+      },
+      {
+        "from": "finance",
+        "to": "payment",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/011/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

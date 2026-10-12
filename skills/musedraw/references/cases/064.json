@@ -1,0 +1,284 @@
+{
+  "id": 64,
+  "number": "064",
+  "title": "物联运营平台功能地图",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "七层索引加业务矩阵与三侧域",
+    "colorDirection": "浅灰青平台、深青索引、白叶与蓝灰运维",
+    "canvasHint": [
+      2050,
+      1400
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#26606C",
+      "#EEF4F4",
+      "#266E7B",
+      "#BCCAD8",
+      "#DEE9E9",
+      "#BBCDD0",
+      "#E4EAED",
+      "#B7C9D0"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "platform",
+        "title": ""
+      },
+      {
+        "id": "business",
+        "title": "业务服务矩阵"
+      },
+      {
+        "id": "ops",
+        "title": "运维支撑"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "intelligence-1",
+        "label": "数据推断",
+        "parent": null
+      },
+      {
+        "id": "intelligence-2",
+        "label": "情景建模",
+        "parent": null
+      },
+      {
+        "id": "intelligence-3",
+        "label": "边缘协同",
+        "parent": null
+      },
+      {
+        "id": "intelligence-4",
+        "label": "智能检索",
+        "parent": null
+      },
+      {
+        "id": "intelligence-5",
+        "label": "规则识别",
+        "parent": null
+      },
+      {
+        "id": "intelligence-6",
+        "label": "策略推荐",
+        "parent": null
+      },
+      {
+        "id": "intelligence-7",
+        "label": "模型管理",
+        "parent": null
+      },
+      {
+        "id": "intelligence-8",
+        "label": "在线评估",
+        "parent": null
+      },
+      {
+        "id": "application-1",
+        "label": "运营工作台",
+        "parent": null
+      },
+      {
+        "id": "application-2",
+        "label": "移动应用",
+        "parent": null
+      },
+      {
+        "id": "application-3",
+        "label": "管理后台",
+        "parent": null
+      },
+      {
+        "id": "application-4",
+        "label": "门户入口",
+        "parent": null
+      },
+      {
+        "id": "application-5",
+        "label": "告警展示",
+        "parent": null
+      },
+      {
+        "id": "access-1",
+        "label": "连接管理",
+        "parent": null
+      },
+      {
+        "id": "access-2",
+        "label": "协议适配",
+        "parent": null
+      },
+      {
+        "id": "access-3",
+        "label": "接入监控",
+        "parent": null
+      },
+      {
+        "id": "access-4",
+        "label": "设备鉴权",
+        "parent": null
+      },
+      {
+        "id": "gateway-1",
+        "label": "动态路由",
+        "parent": null
+      },
+      {
+        "id": "gateway-2",
+        "label": "身份校验",
+        "parent": null
+      },
+      {
+        "id": "gateway-3",
+        "label": "请求过滤",
+        "parent": null
+      },
+      {
+        "id": "gateway-4",
+        "label": "服务发现",
+        "parent": null
+      },
+      {
+        "id": "gateway-5",
+        "label": "服务聚合",
+        "parent": null
+      },
+      {
+        "id": "business-1",
+        "label": "用户中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-2",
+        "label": "设备中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-3",
+        "label": "事件中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-4",
+        "label": "告警中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-5",
+        "label": "位置中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-6",
+        "label": "任务中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-7",
+        "label": "资产中心",
+        "parent": "business"
+      },
+      {
+        "id": "business-8",
+        "label": "规则中心",
+        "parent": "business"
+      },
+      {
+        "id": "open-platform",
+        "label": "开放平台",
+        "parent": "business"
+      },
+      {
+        "id": "foundation-1",
+        "label": "计算调度",
+        "parent": null
+      },
+      {
+        "id": "foundation-2",
+        "label": "消息传递",
+        "parent": null
+      },
+      {
+        "id": "foundation-3",
+        "label": "对象管理",
+        "parent": null
+      },
+      {
+        "id": "foundation-4",
+        "label": "内容管理",
+        "parent": null
+      },
+      {
+        "id": "foundation-5",
+        "label": "审计服务",
+        "parent": null
+      },
+      {
+        "id": "resources-1",
+        "label": "容量管理",
+        "parent": null
+      },
+      {
+        "id": "resources-2",
+        "label": "资源编排",
+        "parent": null
+      },
+      {
+        "id": "resources-3",
+        "label": "运行配置",
+        "parent": null
+      },
+      {
+        "id": "resources-4",
+        "label": "网络治理",
+        "parent": null
+      },
+      {
+        "id": "ops-1",
+        "label": "基础监控",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-2",
+        "label": "成本管理",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-3",
+        "label": "持续交付",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-4",
+        "label": "配置管理",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-5",
+        "label": "故障恢复",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-6",
+        "label": "变更审计",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-7",
+        "label": "应急演练",
+        "parent": "ops"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/064/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}
