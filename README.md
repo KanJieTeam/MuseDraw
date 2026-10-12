@@ -38,7 +38,7 @@ npx skills add KanJieTeam/MuseDraw
 
 安装后，直接告诉智能体：**使用 MuseDraw，根据这份系统说明绘制架构图。** 随后附上资料、图的用途和风格要求即可。
 
-需要 Node.js 18+ 安装，以及具备文件读写与工具执行能力的智能体。绘图与 PNG 导出的运行条件见[使用指南](docs/usage.zh-CN.md)。
+通过上述命令安装需要 Node.js 22.20+，以及具备文件读写与工具执行能力的智能体。绘图与 PNG 导出的运行条件见[使用指南](docs/usage.zh-CN.md)。
 
 ## 当前能力
 

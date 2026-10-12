@@ -22,7 +22,7 @@ MuseDraw 是供现有 AI 智能体使用的 Skill。智能体理解你的需求�
 
 URL 本身不是安装操作，网页摘要也不等于完整 Skill。不要默认普通聊天网页（例如豆包聊天页）具有可写的执行环境。宿主缺少所需工具时，应说明限制，不能声称已经渲染文件。
 
-也可通过 Skills CLI 安装，需要 Node.js 18+：
+也可通过 Skills CLI 安装，需要 Node.js 22.20+：
 
 ```bash
 npx skills add KanJieTeam/MuseDraw

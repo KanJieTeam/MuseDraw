@@ -22,7 +22,7 @@ Your agent needs permission and the ability to obtain the repository, read files
 
 A URL alone is not an installation, and a web-page summary is not the full Skill. Do not assume an ordinary chat page, such as a Doubao chat page, has a writable execution environment. An agent without the required tools must explain the limitation rather than claim to have rendered a file.
 
-Alternatively, use the Skills CLI with Node.js 18+:
+Alternatively, use the Skills CLI with Node.js 22.20+:
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
