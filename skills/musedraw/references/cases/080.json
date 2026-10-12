@@ -1,0 +1,278 @@
+{
+  "id": 80,
+  "number": "080",
+  "title": "客户服务运营能力架构",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "经营能力横层＋四步内嵌流程＋数据底层",
+    "colorDirection": "深灰紫题头、淡紫归属、白叶与灰粉局部步骤",
+    "canvasHint": [
+      1800,
+      1520
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#63557E",
+      "#EFECFA",
+      "#D6CEE9",
+      "#BCCAD8",
+      "#E9DDE7",
+      "#D5A7C6",
+      "#A36B96",
+      "#F8F8FC"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "reach",
+        "title": "客户触达"
+      },
+      {
+        "id": "service",
+        "title": "服务能力"
+      },
+      {
+        "id": "operate",
+        "title": "服务运营"
+      },
+      {
+        "id": "analysis",
+        "title": "运营分析"
+      },
+      {
+        "id": "data",
+        "title": "服务数据"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "reach-a",
+        "label": "统一服务入口",
+        "parent": "reach"
+      },
+      {
+        "id": "reach-b",
+        "label": "客户信息查询",
+        "parent": "reach"
+      },
+      {
+        "id": "reach-1",
+        "label": "站内消息",
+        "parent": "reach"
+      },
+      {
+        "id": "reach-2",
+        "label": "短信提醒",
+        "parent": "reach"
+      },
+      {
+        "id": "reach-3",
+        "label": "邮件订阅",
+        "parent": "reach"
+      },
+      {
+        "id": "reach-4",
+        "label": "在线客服",
+        "parent": "reach"
+      },
+      {
+        "id": "service-1",
+        "label": "服务登记",
+        "parent": "service"
+      },
+      {
+        "id": "service-2",
+        "label": "需求归类",
+        "parent": "service"
+      },
+      {
+        "id": "service-3",
+        "label": "资料校验",
+        "parent": "service"
+      },
+      {
+        "id": "service-4",
+        "label": "处理指引",
+        "parent": "service"
+      },
+      {
+        "id": "service-5",
+        "label": "知识检索",
+        "parent": "service"
+      },
+      {
+        "id": "service-6",
+        "label": "响应记录",
+        "parent": "service"
+      },
+      {
+        "id": "service-7",
+        "label": "满意评价",
+        "parent": "service"
+      },
+      {
+        "id": "service-8",
+        "label": "异常登记",
+        "parent": "service"
+      },
+      {
+        "id": "step-0",
+        "label": "请求受理",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-0-1",
+        "label": "来源识别",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-0-2",
+        "label": "需求确认",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-0-3",
+        "label": "信息补齐",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-0-4",
+        "label": "受理编号",
+        "parent": "operate"
+      },
+      {
+        "id": "step-1",
+        "label": "任务分派",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-1-1",
+        "label": "队列分组",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-1-2",
+        "label": "人员匹配",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-1-3",
+        "label": "期限设置",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-1-4",
+        "label": "任务通知",
+        "parent": "operate"
+      },
+      {
+        "id": "step-2",
+        "label": "处理跟进",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-2-1",
+        "label": "状态更新",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-2-2",
+        "label": "资料补充",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-2-3",
+        "label": "协同处理",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-2-4",
+        "label": "进度提醒",
+        "parent": "operate"
+      },
+      {
+        "id": "step-3",
+        "label": "结果复核",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-3-1",
+        "label": "结果检查",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-3-2",
+        "label": "客户确认",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-3-3",
+        "label": "问题追溯",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-3-4",
+        "label": "服务归档",
+        "parent": "operate"
+      },
+      {
+        "id": "analysis-1",
+        "label": "服务统计",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-2",
+        "label": "客户分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-3",
+        "label": "响应分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-4",
+        "label": "知识分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "data-1",
+        "label": "客户档案",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "任务记录",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "服务知识",
+        "parent": "data"
+      }
+    ],
+    "relations": [
+      {
+        "from": "step-0",
+        "to": "step-1",
+        "label": ""
+      },
+      {
+        "from": "step-1",
+        "to": "step-2",
+        "label": ""
+      },
+      {
+        "from": "step-2",
+        "to": "step-3",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/080/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -11,7 +11,7 @@
   "svg": "cases/013/diagram.svg",
   "png": "cases/013/diagram.png",
   "drawio": "cases/013/diagram.drawio",
-  "prompt": "用 MuseDraw 画“企业分析平台与交付底座”。采用纵向交付侧栏与分层平台能力，浅黄数据浅蓝应用中性灰基础。分区：受控入口、企业数据平台、持续交付、应用层、数据平台层、企业公共基础、资源设施层。模块：应用访问、源代码库、应用交付、数据交付、资源交付、基础配置、业务应用、分析门户、开放服务、数据生产、数据消费、治理服务、访问管理、基础网络、身份服务、组织策略、运行监控、资源计算、数据加密、威胁监测。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "prompt": "请用 MuseDraw 展示“企业分析平台与交付底座”，作为方案讨论用的通用参考图。包括应用入口、数据生产与消费、治理服务、企业公共基础及资源设施，持续交付覆盖应用、数据和资源。想让业务能力与交付支撑都看得明白。",
   "geometry": {
     "number": 13,
     "referenceId": "CQ-0028",
@@ -578,5 +578,7 @@
     "url": "https://docs.cloud.google.com/architecture/blueprints/deploy_enterprise_data_mesh?hl=en"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“企业分析平台与交付底座”。采用纵向交付侧栏与分层平台能力，浅黄数据浅蓝应用中性灰基础。分区：受控入口、企业数据平台、持续交付、应用层、数据平台层、企业公共基础、资源设施层。模块：应用访问、源代码库、应用交付、数据交付、资源交付、基础配置、业务应用、分析门户、开放服务、数据生产、数据消费、治理服务、访问管理、基础网络、身份服务、组织策略、运行监控、资源计算、数据加密、威胁监测。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "reference": "cases/013/design.json"
 }

@@ -1,0 +1,166 @@
+{
+  "id": 37,
+  "number": "037",
+  "title": "共享接入域与地域应用分布",
+  "view": "deployment",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双地域与跨地域网关",
+    "colorDirection": "暖灰运行范围与浅青地域",
+    "canvasHint": [
+      2020,
+      1270
+    ],
+    "palette": [
+      "#425451",
+      "#182235",
+      "#638884",
+      "#F3F3EE",
+      "#BBBDAE",
+      "#717668",
+      "#E6F1EC",
+      "#99B6A8",
+      "#5E8172",
+      "#E6E8E4",
+      "#AEB5AD",
+      "#66776C",
+      "#FCFCFA",
+      "#A8B1A9",
+      "#678F7C",
+      "#EEF6F2",
+      "#B0C7BC",
+      "#638274",
+      "#FFFFFF",
+      "#8FACCD",
+      "#253B53",
+      "#A6BCB1",
+      "#699780",
+      "#B1B6AD"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "host",
+        "title": "业务运行范围"
+      },
+      {
+        "id": "r1",
+        "title": "地域甲"
+      },
+      {
+        "id": "r2",
+        "title": "地域乙"
+      },
+      {
+        "id": "gateway",
+        "title": "共享接入责任域"
+      },
+      {
+        "id": "app-a",
+        "title": "地域甲服务"
+      },
+      {
+        "id": "app-b",
+        "title": "地域乙服务"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "gate-a",
+        "label": "甲侧接入实例",
+        "parent": "gateway"
+      },
+      {
+        "id": "gate-b",
+        "label": "乙侧接入实例",
+        "parent": "gateway"
+      },
+      {
+        "id": "cfg",
+        "label": "接入规则",
+        "parent": "gateway"
+      },
+      {
+        "id": "endpoint-a",
+        "label": "区域端点甲",
+        "parent": "app-a"
+      },
+      {
+        "id": "service-a",
+        "label": "应用实例甲",
+        "parent": "app-a"
+      },
+      {
+        "id": "endpoint-b",
+        "label": "区域端点乙",
+        "parent": "app-b"
+      },
+      {
+        "id": "service-b",
+        "label": "应用实例乙",
+        "parent": "app-b"
+      },
+      {
+        "id": "client",
+        "label": "业务客户端",
+        "parent": null
+      },
+      {
+        "id": "account-a",
+        "label": "区域账户甲",
+        "parent": "host"
+      },
+      {
+        "id": "account-b",
+        "label": "区域账户乙",
+        "parent": "host"
+      }
+    ],
+    "relations": [
+      {
+        "from": "client",
+        "to": "gate-a",
+        "label": ""
+      },
+      {
+        "from": "client",
+        "to": "gate-b",
+        "label": ""
+      },
+      {
+        "from": "gate-a",
+        "to": "endpoint-a",
+        "label": "地域路由"
+      },
+      {
+        "from": "gate-b",
+        "to": "endpoint-b",
+        "label": "地域路由"
+      },
+      {
+        "from": "endpoint-a",
+        "to": "service-a",
+        "label": ""
+      },
+      {
+        "from": "endpoint-b",
+        "to": "service-b",
+        "label": ""
+      },
+      {
+        "from": "cfg",
+        "to": "gate-a",
+        "label": ""
+      },
+      {
+        "from": "cfg",
+        "to": "gate-b",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/037/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

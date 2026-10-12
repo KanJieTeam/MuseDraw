@@ -34,6 +34,9 @@ function sourceBytesMatch(actual, expected, format) {
     return decoder.decode(actual).replace(/\r\n/g, '\n') === decoder.decode(expected).replace(/\r\n/g, '\n');
   } catch { return false; }
 }
+function assertNoProductionSpecs(text, label) {
+  for (const pattern of [/productionBrief/i, /#[\da-f]{3,8}\b/i, /\[\s*-?\d+(?:\.\d+)?\s*,\s*-?\d+(?:\.\d+)?(?:\s*,\s*-?\d+(?:\.\d+)?)*\s*\]/, /\b\d{3,5}\s*[×xX]\s*\d{3,5}\b/, /(?:坐标|画布(?:尺寸)?|精确色值)\s*[:：]?\s*(?:\d|\[)/, /\b(?:x|y|width|height)\s*[:=]\s*-?\d/i]) assert.doesNotMatch(text, pattern, `${label}: production specifications leaked into the user interface`);
+}
 const editorOrigin = 'https://embed.diagrams.net';
 let server, browser, page;
 
@@ -128,7 +131,9 @@ try {
   });
   page = await context.newPage();
   const runtimeErrors = [];
+  const referenceRequests = [];
   page.on('pageerror', (error) => runtimeErrors.push(error.message));
+  page.on('request', (request) => { if (/\/cases\/\d{3}\/design\.json(?:[?#]|$)/.test(request.url())) referenceRequests.push(request.url()); });
   await page.goto(requestedUrl, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.querySelectorAll('.case-card').length === 100);
   // Resolve the Pages root's real browser redirect before fetching relative files.
@@ -240,13 +245,41 @@ try {
     await page.waitForFunction(() => !document.fullscreenElement);
   });
   await check('prompt-and-share-use-real-clipboard', async () => {
-    const item = items.find((entry) => entry.id === 2);
-    await page.locator('#copy-prompt').click();
-    await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('已复制提示词'));
-    assert.equal(await page.evaluate(() => navigator.clipboard.readText()), item.prompt);
+    for (const item of items) {
+      assert.equal(typeof item.prompt, 'string', `Case ${item.number}: user requirement must be text`);
+      assert.ok(item.prompt.length > 0 && item.prompt.length <= 180, `Case ${item.number}: requirement must contain at most 180 characters`);
+      assert.equal(item.prompt, item.prompt.trim(), `Case ${item.number}: requirement has unexpected surrounding whitespace`);
+      assertNoProductionSpecs(item.prompt, `Case ${item.number} requirement`);
+      assert.equal(Object.hasOwn(item, 'productionBrief'), false, 'Detailed production specifications belong in design.json');
+      assert.equal(item.reference, `cases/${item.number}/design.json`);
+      const promptFile = await fs.readFile(path.join(repo, 'docs/gallery/cases', item.number, 'prompt.txt'), 'utf8');
+      assert.equal(promptFile.replace(/\r\n/g, '\n').replace(/\n$/, ''), item.prompt, `Case ${item.number}: prompt.txt differs from the copied requirement`);
+    }
+    // Inspect the rendered requirement for every case through the real detail
+    // navigation. Detailed JSON remains a download link and is never fetched.
+    await openCase(items[0]);
+    for (const [index, item] of items.entries()) {
+      assert.equal(await page.locator('#prompt').textContent(), item.prompt, `Case ${item.number}: displayed requirement differs from the catalog`);
+      assertNoProductionSpecs(await page.locator('body').innerText(), `Case ${item.number} page`);
+      assert.equal(await page.locator('#download-reference').isVisible(), true);
+      assert.equal(new URL(await page.locator('#download-reference').getAttribute('href'), galleryUrl).href, new URL(item.reference, galleryUrl).href);
+      if (index < items.length - 1) await page.locator('#next').click();
+    }
+    for (const id of [97, 2, 99]) {
+      const item = items.find((entry) => entry.id === id);
+      await openCase(item);
+      await page.evaluate((number) => navigator.clipboard.writeText(`QA before case ${number}`), item.number);
+      await page.locator('#copy-prompt').click();
+      await page.waitForFunction(async (expected) => await navigator.clipboard.readText() === expected, item.prompt);
+      assert.equal(await page.evaluate(() => navigator.clipboard.readText()), item.prompt, `Case ${item.number}: copy button must copy only the short requirement`);
+      await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('已复制提示词'));
+      assertNoProductionSpecs(await page.locator('body').innerText(), `Copied case ${item.number} page`);
+    }
     await page.locator('#share').click();
     await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('已复制案例链接'));
     assert.equal(await page.evaluate(() => navigator.clipboard.readText()), page.url());
+    assert.deepEqual(referenceRequests, [], 'The page fetched advanced production references without a download request');
+    return { shortRequirements: 100, renderedRequirements: 100, maximumCharacters: Math.max(...items.map((item) => item.prompt.length)), realClipboardCases: ['097', '002', '099'], productionReferencesFetched: 0 };
   });
   await check('real-downloads-cases-002-099-100-all-formats', async () => {
     for (const id of [2, 99, 100]) {

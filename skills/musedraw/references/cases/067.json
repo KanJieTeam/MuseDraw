@@ -1,0 +1,283 @@
+{
+  "id": 67,
+  "number": "067",
+  "title": "协同服务架构与依赖约束",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "五层微服务嵌套双业务域与右版本表及第三方",
+    "colorDirection": "浅蓝共享组件、杏黄自研域和靛色题头",
+    "canvasHint": [
+      2200,
+      1510
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#6977B8",
+      "#ECF2FD",
+      "#96A9C4",
+      "#A8B2EF",
+      "#BAD7F5",
+      "#96AED0",
+      "#BCCAD8",
+      "#FBE6BF",
+      "#C7B086",
+      "#E0EAF9",
+      "#A3B4CE",
+      "#8E99AF",
+      "#A5AEC6"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "architecture",
+        "title": "服务架构"
+      },
+      {
+        "id": "front-open",
+        "title": "共享前端"
+      },
+      {
+        "id": "front-self",
+        "title": "业务入口"
+      },
+      {
+        "id": "front-third",
+        "title": "外部接入"
+      },
+      {
+        "id": "proxy",
+        "title": "请求代理"
+      },
+      {
+        "id": "microservices",
+        "title": "微服务域"
+      },
+      {
+        "id": "governance",
+        "title": "服务治理"
+      },
+      {
+        "id": "self-business",
+        "title": "自研业务服务"
+      },
+      {
+        "id": "self-foundation",
+        "title": "自研基础服务"
+      },
+      {
+        "id": "logs",
+        "title": "日志分析"
+      },
+      {
+        "id": "storage",
+        "title": "数据存储"
+      },
+      {
+        "id": "delivery",
+        "title": "工程交付"
+      },
+      {
+        "id": "constraints",
+        "title": "依赖与兼容约束"
+      },
+      {
+        "id": "external",
+        "title": "第三方鉴权范围"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "front-open-1",
+        "label": "页面组件",
+        "parent": "front-open"
+      },
+      {
+        "id": "front-open-2",
+        "label": "交互脚本",
+        "parent": "front-open"
+      },
+      {
+        "id": "front-open-3",
+        "label": "图表渲染",
+        "parent": "front-open"
+      },
+      {
+        "id": "front-open-4",
+        "label": "资源构建",
+        "parent": "front-open"
+      },
+      {
+        "id": "front-self-1",
+        "label": "管理页面",
+        "parent": "front-self"
+      },
+      {
+        "id": "front-self-2",
+        "label": "移动页面",
+        "parent": "front-self"
+      },
+      {
+        "id": "front-self-3",
+        "label": "应用入口",
+        "parent": "front-self"
+      },
+      {
+        "id": "front-self-4",
+        "label": "协作门户",
+        "parent": "front-self"
+      },
+      {
+        "id": "third-api",
+        "label": "外部接口",
+        "parent": "front-third"
+      },
+      {
+        "id": "proxy-1",
+        "label": "反向代理",
+        "parent": "proxy"
+      },
+      {
+        "id": "proxy-2",
+        "label": "流量路由",
+        "parent": "proxy"
+      },
+      {
+        "id": "proxy-3",
+        "label": "资源分发",
+        "parent": "proxy"
+      },
+      {
+        "id": "governance-1",
+        "label": "限流熔断",
+        "parent": "governance"
+      },
+      {
+        "id": "governance-2",
+        "label": "注册配置",
+        "parent": "governance"
+      },
+      {
+        "id": "governance-3",
+        "label": "调用追踪",
+        "parent": "governance"
+      },
+      {
+        "id": "governance-4",
+        "label": "监控告警",
+        "parent": "governance"
+      },
+      {
+        "id": "self-business-1",
+        "label": "服务甲接口",
+        "parent": "self-business"
+      },
+      {
+        "id": "self-business-2",
+        "label": "服务甲客户端",
+        "parent": "self-business"
+      },
+      {
+        "id": "self-business-3",
+        "label": "服务乙接口",
+        "parent": "self-business"
+      },
+      {
+        "id": "self-business-4",
+        "label": "服务乙客户端",
+        "parent": "self-business"
+      },
+      {
+        "id": "self-foundation-1",
+        "label": "配置管理",
+        "parent": "self-foundation"
+      },
+      {
+        "id": "self-foundation-2",
+        "label": "内容存储",
+        "parent": "self-foundation"
+      },
+      {
+        "id": "self-foundation-3",
+        "label": "访问鉴权",
+        "parent": "self-foundation"
+      },
+      {
+        "id": "logs-1",
+        "label": "查询界面",
+        "parent": "logs"
+      },
+      {
+        "id": "logs-2",
+        "label": "日志索引",
+        "parent": "logs"
+      },
+      {
+        "id": "logs-3",
+        "label": "聚合处理",
+        "parent": "logs"
+      },
+      {
+        "id": "logs-4",
+        "label": "日志收集",
+        "parent": "logs"
+      },
+      {
+        "id": "storage-1",
+        "label": "关系数据",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-2",
+        "label": "对象数据",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-3",
+        "label": "缓存数据",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-4",
+        "label": "检索数据",
+        "parent": "storage"
+      },
+      {
+        "id": "delivery-1",
+        "label": "代码评审",
+        "parent": "delivery"
+      },
+      {
+        "id": "delivery-2",
+        "label": "自动构建",
+        "parent": "delivery"
+      },
+      {
+        "id": "delivery-3",
+        "label": "环境部署",
+        "parent": "delivery"
+      },
+      {
+        "id": "delivery-4",
+        "label": "容量伸缩",
+        "parent": "delivery"
+      },
+      {
+        "id": "external-1",
+        "label": "组织目录",
+        "parent": "external"
+      },
+      {
+        "id": "external-2",
+        "label": "外部认证",
+        "parent": "external"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/067/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,397 @@
+{
+  "id": 41,
+  "number": "041",
+  "title": "应用运行环境能力全景",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "云分层矩阵和四侧保障列",
+    "colorDirection": "主蓝平台列、白叶与绿色体系标签",
+    "canvasHint": [
+      2430,
+      1450
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#2077C8",
+      "#E4E7EA",
+      "#B2BCC4",
+      "#CCD4DA",
+      "#257DCA",
+      "#247DCC",
+      "#B6CDE0",
+      "#BCCAD8",
+      "#43804B"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "ops",
+        "title": "运行管理"
+      },
+      {
+        "id": "services",
+        "title": "应用支撑"
+      },
+      {
+        "id": "data",
+        "title": "数据访问"
+      },
+      {
+        "id": "message",
+        "title": "消息连接"
+      },
+      {
+        "id": "analysis",
+        "title": "分析处理"
+      },
+      {
+        "id": "runtime",
+        "title": "实例运行"
+      },
+      {
+        "id": "identity",
+        "title": "身份支撑"
+      },
+      {
+        "id": "integration",
+        "title": "接口连接"
+      },
+      {
+        "id": "resources",
+        "title": "运行资源"
+      },
+      {
+        "id": "compute",
+        "title": "计算资源"
+      },
+      {
+        "id": "storage",
+        "title": "存储资源"
+      },
+      {
+        "id": "network",
+        "title": "网络资源"
+      },
+      {
+        "id": "standards",
+        "title": "标准规范"
+      },
+      {
+        "id": "maintenance",
+        "title": "维护规则"
+      },
+      {
+        "id": "security",
+        "title": "安全控制"
+      },
+      {
+        "id": "assurance",
+        "title": "恢复保障"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "ops-1",
+        "label": "运行门户",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-2",
+        "label": "实例目录",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-3",
+        "label": "配置目录",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-4",
+        "label": "日志查询",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-5",
+        "label": "监测看板",
+        "parent": "ops"
+      },
+      {
+        "id": "ops-6",
+        "label": "告警接收",
+        "parent": "ops"
+      },
+      {
+        "id": "services-1",
+        "label": "内容服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-2",
+        "label": "通知服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-3",
+        "label": "规则服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-4",
+        "label": "检索服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-5",
+        "label": "文件服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-6",
+        "label": "任务服务",
+        "parent": "services"
+      },
+      {
+        "id": "data-1",
+        "label": "关系数据",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "文档数据",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "对象存储",
+        "parent": "data"
+      },
+      {
+        "id": "data-4",
+        "label": "缓存访问",
+        "parent": "data"
+      },
+      {
+        "id": "message-1",
+        "label": "任务队列",
+        "parent": "message"
+      },
+      {
+        "id": "message-2",
+        "label": "事件订阅",
+        "parent": "message"
+      },
+      {
+        "id": "message-3",
+        "label": "通知投递",
+        "parent": "message"
+      },
+      {
+        "id": "message-4",
+        "label": "状态回调",
+        "parent": "message"
+      },
+      {
+        "id": "analysis-1",
+        "label": "数据整理",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-2",
+        "label": "索引构建",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-3",
+        "label": "作业编排",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-4",
+        "label": "指标计算",
+        "parent": "analysis"
+      },
+      {
+        "id": "runtime-1",
+        "label": "实例管理",
+        "parent": "runtime"
+      },
+      {
+        "id": "runtime-2",
+        "label": "发布记录",
+        "parent": "runtime"
+      },
+      {
+        "id": "runtime-3",
+        "label": "配置注入",
+        "parent": "runtime"
+      },
+      {
+        "id": "runtime-4",
+        "label": "日志采集",
+        "parent": "runtime"
+      },
+      {
+        "id": "identity-1",
+        "label": "账户关联",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-2",
+        "label": "角色授权",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-3",
+        "label": "会话校验",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-4",
+        "label": "访问审计",
+        "parent": "identity"
+      },
+      {
+        "id": "integration-1",
+        "label": "接口目录",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-2",
+        "label": "请求转换",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-3",
+        "label": "错误处理",
+        "parent": "integration"
+      },
+      {
+        "id": "integration-4",
+        "label": "版本登记",
+        "parent": "integration"
+      },
+      {
+        "id": "compute-1",
+        "label": "应用实例",
+        "parent": "compute"
+      },
+      {
+        "id": "compute-2",
+        "label": "作业实例",
+        "parent": "compute"
+      },
+      {
+        "id": "storage-1",
+        "label": "文件空间",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-2",
+        "label": "备份空间",
+        "parent": "storage"
+      },
+      {
+        "id": "network-1",
+        "label": "连接接入",
+        "parent": "network"
+      },
+      {
+        "id": "network-2",
+        "label": "名称服务",
+        "parent": "network"
+      },
+      {
+        "id": "network-3",
+        "label": "访问策略",
+        "parent": "network"
+      },
+      {
+        "id": "standards-1",
+        "label": "编码规范",
+        "parent": "standards"
+      },
+      {
+        "id": "standards-2",
+        "label": "接口规范",
+        "parent": "standards"
+      },
+      {
+        "id": "standards-3",
+        "label": "资料规范",
+        "parent": "standards"
+      },
+      {
+        "id": "standards-4",
+        "label": "运行规范",
+        "parent": "standards"
+      },
+      {
+        "id": "maintenance-1",
+        "label": "发布规则",
+        "parent": "maintenance"
+      },
+      {
+        "id": "maintenance-2",
+        "label": "变更规则",
+        "parent": "maintenance"
+      },
+      {
+        "id": "maintenance-3",
+        "label": "备份规则",
+        "parent": "maintenance"
+      },
+      {
+        "id": "maintenance-4",
+        "label": "处置规则",
+        "parent": "maintenance"
+      },
+      {
+        "id": "security-1",
+        "label": "访问控制",
+        "parent": "security"
+      },
+      {
+        "id": "security-2",
+        "label": "授权核对",
+        "parent": "security"
+      },
+      {
+        "id": "security-3",
+        "label": "操作留痕",
+        "parent": "security"
+      },
+      {
+        "id": "security-4",
+        "label": "导出控制",
+        "parent": "security"
+      },
+      {
+        "id": "assurance-1",
+        "label": "副本管理",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-2",
+        "label": "恢复记录",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-3",
+        "label": "故障通报",
+        "parent": "assurance"
+      },
+      {
+        "id": "assurance-4",
+        "label": "状态核验",
+        "parent": "assurance"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/041/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

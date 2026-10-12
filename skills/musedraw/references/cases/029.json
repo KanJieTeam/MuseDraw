@@ -1,0 +1,302 @@
+{
+  "id": 29,
+  "number": "029",
+  "title": "行为特征处理技术分层",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双输入处理支路＋六列存储＋跨层右服务列",
+    "colorDirection": "黑白灰工程线稿",
+    "canvasHint": [
+      2140,
+      1690
+    ],
+    "palette": [
+      "#242424",
+      "#182235",
+      "#F0F0F0",
+      "#F4F4F4",
+      "#F1F1F1",
+      "#F8F8F8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "plate",
+        "title": "特征处理平台"
+      },
+      {
+        "id": "apps",
+        "title": "使用接口"
+      },
+      {
+        "id": "cache",
+        "title": "快速访问"
+      },
+      {
+        "id": "storage",
+        "title": "数据存储"
+      },
+      {
+        "id": "service",
+        "title": "处理服务"
+      },
+      {
+        "id": "model",
+        "title": "规则计算"
+      },
+      {
+        "id": "batch",
+        "title": "批量处理"
+      },
+      {
+        "id": "stream",
+        "title": "事件处理"
+      },
+      {
+        "id": "source",
+        "title": "数据来源"
+      },
+      {
+        "id": "govern",
+        "title": "数据管理"
+      },
+      {
+        "id": "operate",
+        "title": "运维控制"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "apps-1",
+        "label": "人群查询",
+        "parent": "apps"
+      },
+      {
+        "id": "apps-2",
+        "label": "特征检索",
+        "parent": "apps"
+      },
+      {
+        "id": "apps-3",
+        "label": "任务管理",
+        "parent": "apps"
+      },
+      {
+        "id": "apps-4",
+        "label": "统计查询",
+        "parent": "apps"
+      },
+      {
+        "id": "apps-5",
+        "label": "结果导出",
+        "parent": "apps"
+      },
+      {
+        "id": "cache-1",
+        "label": "结果缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-2",
+        "label": "会话缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-3",
+        "label": "特征缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-4",
+        "label": "索引缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-5",
+        "label": "规则缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-6",
+        "label": "热点字典",
+        "parent": "cache"
+      },
+      {
+        "id": "storage-1",
+        "label": "事件明细",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-2",
+        "label": "对象画像",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-3",
+        "label": "特征快照",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-4",
+        "label": "统计集合",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-5",
+        "label": "主题索引",
+        "parent": "storage"
+      },
+      {
+        "id": "storage-6",
+        "label": "归档副本",
+        "parent": "storage"
+      },
+      {
+        "id": "service-1",
+        "label": "字段映射",
+        "parent": "service"
+      },
+      {
+        "id": "service-2",
+        "label": "质量校验",
+        "parent": "service"
+      },
+      {
+        "id": "service-3",
+        "label": "维度关联",
+        "parent": "service"
+      },
+      {
+        "id": "service-4",
+        "label": "特征聚合",
+        "parent": "service"
+      },
+      {
+        "id": "model-1",
+        "label": "规则版本",
+        "parent": "model"
+      },
+      {
+        "id": "model-2",
+        "label": "参数配置",
+        "parent": "model"
+      },
+      {
+        "id": "batch-1",
+        "label": "文件读取",
+        "parent": "batch"
+      },
+      {
+        "id": "batch-2",
+        "label": "分区整理",
+        "parent": "batch"
+      },
+      {
+        "id": "batch-3",
+        "label": "批量聚合",
+        "parent": "batch"
+      },
+      {
+        "id": "batch-4",
+        "label": "快照生成",
+        "parent": "batch"
+      },
+      {
+        "id": "stream-1",
+        "label": "事件接收",
+        "parent": "stream"
+      },
+      {
+        "id": "stream-2",
+        "label": "状态更新",
+        "parent": "stream"
+      },
+      {
+        "id": "stream-3",
+        "label": "窗口聚合",
+        "parent": "stream"
+      },
+      {
+        "id": "stream-4",
+        "label": "增量输出",
+        "parent": "stream"
+      },
+      {
+        "id": "source-1",
+        "label": "页面事件",
+        "parent": "source"
+      },
+      {
+        "id": "source-2",
+        "label": "交易记录",
+        "parent": "source"
+      },
+      {
+        "id": "source-3",
+        "label": "服务记录",
+        "parent": "source"
+      },
+      {
+        "id": "source-4",
+        "label": "设备日志",
+        "parent": "source"
+      },
+      {
+        "id": "source-5",
+        "label": "外部文件",
+        "parent": "source"
+      },
+      {
+        "id": "govern-1",
+        "label": "目录登记",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-2",
+        "label": "口径说明",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-3",
+        "label": "质量规则",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-4",
+        "label": "版本追溯",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-5",
+        "label": "权限核对",
+        "parent": "govern"
+      },
+      {
+        "id": "operate-1",
+        "label": "任务调度",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-2",
+        "label": "状态监测",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-3",
+        "label": "错误记录",
+        "parent": "operate"
+      },
+      {
+        "id": "operate-4",
+        "label": "重试策略",
+        "parent": "operate"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/029/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,167 @@
+{
+  "id": 44,
+  "number": "044",
+  "title": "内容记录读写与缓存刷新链路",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "读写双通道与右侧数据服务",
+    "colorDirection": "绿色读取、蓝色写入与灰色范围",
+    "canvasHint": [
+      2060,
+      1380
+    ],
+    "palette": [
+      "#2D3C48",
+      "#182235",
+      "#397DAA",
+      "#FAFBFC",
+      "#98A8B5",
+      "#596D7C",
+      "#FFFFFF",
+      "#8FACCD",
+      "#253B53",
+      "#EAF0F8",
+      "#85A8CA",
+      "#EBF5EE",
+      "#87AC93",
+      "#558769",
+      "#8EAAD0",
+      "#5B7BAB",
+      "#F3F4F5",
+      "#ADB6BC",
+      "#EDF6EF",
+      "#95B39D",
+      "#568366",
+      "#ECF1FA",
+      "#9BB1D3",
+      "#537DAE",
+      "#F6F7F9",
+      "#B3BDC9",
+      "#374B5A",
+      "#4F8E64",
+      "#4C76B8",
+      "#9AA5AE"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "network",
+        "title": "应用内部连接范围"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "client",
+        "label": "内容客户端",
+        "parent": null
+      },
+      {
+        "id": "app",
+        "label": "内容应用",
+        "parent": "network"
+      },
+      {
+        "id": "cache-end",
+        "label": "缓存访问端点",
+        "parent": "network"
+      },
+      {
+        "id": "process",
+        "label": "变更处理器",
+        "parent": "network"
+      },
+      {
+        "id": "data-end",
+        "label": "记录访问端点",
+        "parent": "network"
+      },
+      {
+        "id": "cache",
+        "label": "内容缓存",
+        "parent": null
+      },
+      {
+        "id": "database",
+        "label": "内容记录库",
+        "parent": null
+      },
+      {
+        "id": "observe",
+        "label": "运行观测",
+        "parent": null
+      },
+      {
+        "id": "read-policy",
+        "label": "读取策略",
+        "parent": "network"
+      },
+      {
+        "id": "write-policy",
+        "label": "写入策略",
+        "parent": "network"
+      },
+      {
+        "id": "version",
+        "label": "版本标记",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "client",
+        "to": "app",
+        "label": "内容请求"
+      },
+      {
+        "from": "app",
+        "to": "cache-end",
+        "label": "读取缓存"
+      },
+      {
+        "from": "cache-end",
+        "to": "app",
+        "label": "命中返回"
+      },
+      {
+        "from": "cache-end",
+        "to": "cache",
+        "label": "缓存访问"
+      },
+      {
+        "from": "app",
+        "to": "data-end",
+        "label": "未命中查询"
+      },
+      {
+        "from": "app",
+        "to": "data-end",
+        "label": "写入记录"
+      },
+      {
+        "from": "data-end",
+        "to": "database",
+        "label": "持久化记录"
+      },
+      {
+        "from": "database",
+        "to": "process",
+        "label": "变更事件"
+      },
+      {
+        "from": "process",
+        "to": "cache-end",
+        "label": "更新缓存"
+      },
+      {
+        "from": "app",
+        "to": "observe",
+        "label": "日志与指标"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/044/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

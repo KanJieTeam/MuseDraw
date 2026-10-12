@@ -1,0 +1,294 @@
+{
+  "id": 75,
+  "number": "075",
+  "title": "财务共享与业务系统协同",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "财务中央双平台与左右集成系统及底共享",
+    "colorDirection": "暖灰背景、钢蓝平台与铜橙接口",
+    "canvasHint": [
+      2200,
+      1330
+    ],
+    "palette": [
+      "#334250",
+      "#182235",
+      "#597EAC",
+      "#E8E7E5",
+      "#CCC9C6",
+      "#C1C4CA",
+      "#4E5662",
+      "#A3A9B7",
+      "#CD926B",
+      "#6689B8",
+      "#C4D1E2",
+      "#B8C9E0",
+      "#BCCAD8",
+      "#AF665C"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "whole",
+        "title": "财务共享服务范围"
+      },
+      {
+        "id": "business-systems",
+        "title": "业务系统"
+      },
+      {
+        "id": "business-interface",
+        "title": ""
+      },
+      {
+        "id": "finance",
+        "title": "共享财务平台"
+      },
+      {
+        "id": "fusion",
+        "title": "业务融合平台"
+      },
+      {
+        "id": "operation",
+        "title": "共享运营平台"
+      },
+      {
+        "id": "data-center",
+        "title": "业务数据中心"
+      },
+      {
+        "id": "external-interface",
+        "title": ""
+      },
+      {
+        "id": "external-0",
+        "title": "资金协作"
+      },
+      {
+        "id": "external-1",
+        "title": "核算协作"
+      },
+      {
+        "id": "external-2",
+        "title": "税务协作"
+      },
+      {
+        "id": "interconnection",
+        "title": "互联服务"
+      },
+      {
+        "id": "foundation",
+        "title": ""
+      }
+    ],
+    "nodes": [
+      {
+        "id": "business-systems-1",
+        "label": "业务计划",
+        "parent": "business-systems"
+      },
+      {
+        "id": "business-systems-2",
+        "label": "采购业务",
+        "parent": "business-systems"
+      },
+      {
+        "id": "business-systems-3",
+        "label": "客户业务",
+        "parent": "business-systems"
+      },
+      {
+        "id": "business-systems-4",
+        "label": "资产业务",
+        "parent": "business-systems"
+      },
+      {
+        "id": "business-systems-5",
+        "label": "仓储业务",
+        "parent": "business-systems"
+      },
+      {
+        "id": "business-systems-6",
+        "label": "组织业务",
+        "parent": "business-systems"
+      },
+      {
+        "id": "fusion-1",
+        "label": "费用归集与单据",
+        "parent": "fusion"
+      },
+      {
+        "id": "fusion-2",
+        "label": "应付处理与核对",
+        "parent": "fusion"
+      },
+      {
+        "id": "fusion-3",
+        "label": "资产登记与折旧",
+        "parent": "fusion"
+      },
+      {
+        "id": "fusion-4",
+        "label": "总账汇总与分析",
+        "parent": "fusion"
+      },
+      {
+        "id": "operation-1",
+        "label": "任务管理",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-2",
+        "label": "流程规则",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-3",
+        "label": "任务分配",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-4",
+        "label": "异常处理",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-5",
+        "label": "需求工单",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-6",
+        "label": "问题工单",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-7",
+        "label": "质量管理",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-8",
+        "label": "服务标准",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-9",
+        "label": "绩效管理",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-10",
+        "label": "数据校验",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-11",
+        "label": "知识维护",
+        "parent": "operation"
+      },
+      {
+        "id": "operation-12",
+        "label": "服务咨询",
+        "parent": "operation"
+      },
+      {
+        "id": "data-center-1",
+        "label": "档案管理",
+        "parent": "data-center"
+      },
+      {
+        "id": "data-center-2",
+        "label": "经营数据",
+        "parent": "data-center"
+      },
+      {
+        "id": "data-center-3",
+        "label": "分析视图",
+        "parent": "data-center"
+      },
+      {
+        "id": "external-0-1",
+        "label": "账户查询",
+        "parent": "external-0"
+      },
+      {
+        "id": "external-0-2",
+        "label": "资金调拨",
+        "parent": "external-0"
+      },
+      {
+        "id": "external-1-1",
+        "label": "口径同步",
+        "parent": "external-1"
+      },
+      {
+        "id": "external-1-2",
+        "label": "核算记录",
+        "parent": "external-1"
+      },
+      {
+        "id": "external-2-1",
+        "label": "申报信息",
+        "parent": "external-2"
+      },
+      {
+        "id": "external-2-2",
+        "label": "校验回执",
+        "parent": "external-2"
+      },
+      {
+        "id": "interconnection-1",
+        "label": "数据交换",
+        "parent": "interconnection"
+      },
+      {
+        "id": "interconnection-2",
+        "label": "票据识别",
+        "parent": "interconnection"
+      },
+      {
+        "id": "foundation-1",
+        "label": "组织目录",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-2",
+        "label": "档案配置",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-3",
+        "label": "主数据管理",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-4",
+        "label": "流程归属",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-5",
+        "label": "角色权限",
+        "parent": "foundation"
+      }
+    ],
+    "relations": [
+      {
+        "from": "business-systems-1",
+        "to": "fusion-1",
+        "label": ""
+      },
+      {
+        "from": "fusion-2",
+        "to": "external-0-1",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/075/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

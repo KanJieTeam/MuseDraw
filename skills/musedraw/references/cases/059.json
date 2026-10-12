@@ -1,0 +1,166 @@
+{
+  "id": 59,
+  "number": "059",
+  "title": "接口运行与发布职责分离",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "上认证中调用下接口发布",
+    "colorDirection": "蓝组件、灰职责面与黑实灰虚关系",
+    "canvasHint": [
+      1800,
+      1210
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#3287B8",
+      "#BCCAD8",
+      "#97B6CE",
+      "#EDF0F2",
+      "#8F9BA7",
+      "#48515C",
+      "#89939E"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "api-platform",
+        "title": "接口平台范围"
+      },
+      {
+        "id": "runtime",
+        "title": "运行面"
+      },
+      {
+        "id": "publish",
+        "title": "开发者面"
+      },
+      {
+        "id": "backend-0",
+        "title": "内部服务"
+      },
+      {
+        "id": "backend-1",
+        "title": "共享业务服务"
+      },
+      {
+        "id": "backend-2",
+        "title": "开放服务"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "consumer",
+        "label": "接口调用方",
+        "parent": null
+      },
+      {
+        "id": "developer",
+        "label": "接口开发者",
+        "parent": null
+      },
+      {
+        "id": "auth",
+        "label": "身份服务",
+        "parent": null
+      },
+      {
+        "id": "api-gateway",
+        "label": "统一接口网关",
+        "parent": "runtime"
+      },
+      {
+        "id": "workflow",
+        "label": "业务编排",
+        "parent": "runtime"
+      },
+      {
+        "id": "portal",
+        "label": "接口发布门户",
+        "parent": "publish"
+      },
+      {
+        "id": "documentation",
+        "label": "接口说明库",
+        "parent": "publish"
+      },
+      {
+        "id": "backend-0-1",
+        "label": "数据查询",
+        "parent": "backend-0"
+      },
+      {
+        "id": "backend-0-2",
+        "label": "作业执行",
+        "parent": "backend-0"
+      },
+      {
+        "id": "backend-1-1",
+        "label": "业务办理",
+        "parent": "backend-1"
+      },
+      {
+        "id": "backend-1-2",
+        "label": "业务回执",
+        "parent": "backend-1"
+      },
+      {
+        "id": "backend-2-1",
+        "label": "公开查询",
+        "parent": "backend-2"
+      },
+      {
+        "id": "backend-2-2",
+        "label": "协议适配",
+        "parent": "backend-2"
+      }
+    ],
+    "relations": [
+      {
+        "from": "consumer",
+        "to": "api-gateway",
+        "label": "调用"
+      },
+      {
+        "from": "api-gateway",
+        "to": "workflow",
+        "label": ""
+      },
+      {
+        "from": "workflow",
+        "to": "backend-0-1",
+        "label": ""
+      },
+      {
+        "from": "workflow",
+        "to": "backend-1-1",
+        "label": ""
+      },
+      {
+        "from": "api-gateway",
+        "to": "backend-2-1",
+        "label": ""
+      },
+      {
+        "from": "auth",
+        "to": "api-gateway",
+        "label": "认证"
+      },
+      {
+        "from": "portal",
+        "to": "developer",
+        "label": "接口文档"
+      },
+      {
+        "from": "backend-2-2",
+        "to": "portal",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/059/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

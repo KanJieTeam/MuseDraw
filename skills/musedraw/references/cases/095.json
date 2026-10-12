@@ -1,0 +1,295 @@
+{
+  "id": 95,
+  "number": "095",
+  "title": "混合环境资源接入架构",
+  "view": "deployment",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "顶应用解析接入三横层及私公云镜像三层双域",
+    "colorDirection": "深蓝白字资源叶、白父域、灰实边与虚线子域",
+    "canvasHint": [
+      2200,
+      1870
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#2775B1",
+      "#B7C0C7",
+      "#2275B5",
+      "#1B659F",
+      "#A7B0B8",
+      "#555F69"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "entry",
+        "title": "应用接入"
+      },
+      {
+        "id": "resolve",
+        "title": "地址解析"
+      },
+      {
+        "id": "access",
+        "title": "请求接入"
+      },
+      {
+        "id": "local",
+        "title": "本地环境"
+      },
+      {
+        "id": "local-network",
+        "title": "网络资源"
+      },
+      {
+        "id": "local-compute",
+        "title": "计算资源"
+      },
+      {
+        "id": "local-storage",
+        "title": "存储资源"
+      },
+      {
+        "id": "shared",
+        "title": "共享环境"
+      },
+      {
+        "id": "shared-network",
+        "title": "网络资源"
+      },
+      {
+        "id": "shared-compute",
+        "title": "计算资源"
+      },
+      {
+        "id": "shared-storage",
+        "title": "存储资源"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "entry-1",
+        "label": "业务门户",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-2",
+        "label": "管理门户",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-3",
+        "label": "移动应用",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-4",
+        "label": "合作接口",
+        "parent": "entry"
+      },
+      {
+        "id": "resolve-1",
+        "label": "本地地址",
+        "parent": "resolve"
+      },
+      {
+        "id": "resolve-2",
+        "label": "域名解析",
+        "parent": "resolve"
+      },
+      {
+        "id": "resolve-3",
+        "label": "资源解析",
+        "parent": "resolve"
+      },
+      {
+        "id": "access-1",
+        "label": "访问检查",
+        "parent": "access"
+      },
+      {
+        "id": "access-2",
+        "label": "入口转发",
+        "parent": "access"
+      },
+      {
+        "id": "access-3",
+        "label": "协议转换",
+        "parent": "access"
+      },
+      {
+        "id": "access-4",
+        "label": "请求路由",
+        "parent": "access"
+      },
+      {
+        "id": "local-network-1",
+        "label": "连接规则",
+        "parent": "local-network"
+      },
+      {
+        "id": "local-network-2",
+        "label": "入口网络",
+        "parent": "local-network"
+      },
+      {
+        "id": "local-network-3",
+        "label": "地址映射",
+        "parent": "local-network"
+      },
+      {
+        "id": "local-network-4",
+        "label": "网络路由",
+        "parent": "local-network"
+      },
+      {
+        "id": "local-compute-1",
+        "label": "应用进程",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-compute-2",
+        "label": "任务进程",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-compute-3",
+        "label": "运行配置",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-compute-4",
+        "label": "进程调度",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-compute-5",
+        "label": "执行记录",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-compute-6",
+        "label": "资源监测",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-engine",
+        "label": "公共运行接口",
+        "parent": "local-compute"
+      },
+      {
+        "id": "local-storage-1",
+        "label": "业务数据",
+        "parent": "local-storage"
+      },
+      {
+        "id": "local-storage-2",
+        "label": "对象文件",
+        "parent": "local-storage"
+      },
+      {
+        "id": "local-storage-3",
+        "label": "备份文件",
+        "parent": "local-storage"
+      },
+      {
+        "id": "local-data",
+        "label": "存储访问接口",
+        "parent": "local-storage"
+      },
+      {
+        "id": "shared-network-1",
+        "label": "连接规则",
+        "parent": "shared-network"
+      },
+      {
+        "id": "shared-network-2",
+        "label": "入口网络",
+        "parent": "shared-network"
+      },
+      {
+        "id": "shared-network-3",
+        "label": "地址映射",
+        "parent": "shared-network"
+      },
+      {
+        "id": "shared-network-4",
+        "label": "网络路由",
+        "parent": "shared-network"
+      },
+      {
+        "id": "shared-compute-1",
+        "label": "应用进程",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-compute-2",
+        "label": "任务进程",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-compute-3",
+        "label": "运行配置",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-compute-4",
+        "label": "进程调度",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-compute-5",
+        "label": "执行记录",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-compute-6",
+        "label": "资源监测",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-engine",
+        "label": "公共运行接口",
+        "parent": "shared-compute"
+      },
+      {
+        "id": "shared-storage-1",
+        "label": "业务数据",
+        "parent": "shared-storage"
+      },
+      {
+        "id": "shared-storage-2",
+        "label": "对象文件",
+        "parent": "shared-storage"
+      },
+      {
+        "id": "shared-storage-3",
+        "label": "备份文件",
+        "parent": "shared-storage"
+      },
+      {
+        "id": "shared-data",
+        "label": "存储访问接口",
+        "parent": "shared-storage"
+      }
+    ],
+    "relations": [
+      {
+        "from": "local-network-4",
+        "to": "shared-network-1",
+        "label": "数据交换"
+      },
+      {
+        "from": "local-data",
+        "to": "shared-data",
+        "label": "备份交换"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/095/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

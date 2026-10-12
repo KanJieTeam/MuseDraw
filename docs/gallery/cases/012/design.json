@@ -11,7 +11,7 @@
   "svg": "cases/012/diagram.svg",
   "png": "cases/012/diagram.png",
   "drawio": "cases/012/diagram.drawio",
-  "prompt": "用 MuseDraw 画“即时通信连接与消息架构”。采用双阶段消息架构与右侧状态表，绿色连接与消息核心、白客户端与中性消息结构。分区：订阅主题、消息结构。模块：客户端甲、客户端乙、连接服务、会话状态、用户通道、群组通道、主题订阅、发送客户端、消息服务、接收客户端、消息记录、消息编号、通道标识、发送时间。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：绿色连接与消息核心、白客户端与中性消息结构；普通正文中性深灰，辅助模块白底细边。",
+  "prompt": "用 MuseDraw 画一张“即时通信连接与消息架构”的通用参考图。客户端连接由连接服务维护会话状态，发送端经过消息服务到达接收端并留下消息记录，也呈现用户和群组通道的订阅。给研发交流用，连接管理与消息传递分开看。",
   "geometry": {
     "number": 12,
     "referenceId": "CQ-0024",
@@ -521,5 +521,7 @@
     "url": "https://github.com/ByteByteGoHq/system-design-101/blob/main/data/guides/build-a-simple-chat-application.md"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“即时通信连接与消息架构”。采用双阶段消息架构与右侧状态表，绿色连接与消息核心、白客户端与中性消息结构。分区：订阅主题、消息结构。模块：客户端甲、客户端乙、连接服务、会话状态、用户通道、群组通道、主题订阅、发送客户端、消息服务、接收客户端、消息记录、消息编号、通道标识、发送时间。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。 视觉角色：绿色连接与消息核心、白客户端与中性消息结构；普通正文中性深灰，辅助模块白底细边。",
+  "reference": "cases/012/design.json"
 }

@@ -1,0 +1,144 @@
+{
+  "id": 7,
+  "number": "007",
+  "title": "存算分离分析引擎",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "上下分层与双计算组",
+    "colorDirection": "墨绿手绘",
+    "canvasHint": [
+      1660,
+      1190
+    ],
+    "palette": [
+      "#263E34",
+      "#182235",
+      "#337D5B",
+      "#557160",
+      "#BCCAD8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "meta",
+        "title": "元数据服务"
+      },
+      {
+        "id": "compute-a",
+        "title": "计算集群甲"
+      },
+      {
+        "id": "compute-b",
+        "title": "计算集群乙"
+      },
+      {
+        "id": "store",
+        "title": "共享持久存储"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "meta-1",
+        "label": "目录服务甲",
+        "parent": "meta"
+      },
+      {
+        "id": "meta-2",
+        "label": "目录服务乙",
+        "parent": "meta"
+      },
+      {
+        "id": "meta-3",
+        "label": "目录服务丙",
+        "parent": "meta"
+      },
+      {
+        "id": "metadata",
+        "label": "共享元数据接口",
+        "parent": null
+      },
+      {
+        "id": "compute-a-1",
+        "label": "计算节点一",
+        "parent": "compute-a"
+      },
+      {
+        "id": "compute-a-2",
+        "label": "计算节点二",
+        "parent": "compute-a"
+      },
+      {
+        "id": "compute-a-3",
+        "label": "计算节点三",
+        "parent": "compute-a"
+      },
+      {
+        "id": "compute-b-1",
+        "label": "计算节点四",
+        "parent": "compute-b"
+      },
+      {
+        "id": "compute-b-2",
+        "label": "计算节点五",
+        "parent": "compute-b"
+      },
+      {
+        "id": "compute-b-3",
+        "label": "计算节点六",
+        "parent": "compute-b"
+      },
+      {
+        "id": "store-1",
+        "label": "数据文件",
+        "parent": "store"
+      },
+      {
+        "id": "store-2",
+        "label": "列式分段",
+        "parent": "store"
+      },
+      {
+        "id": "store-3",
+        "label": "索引文件",
+        "parent": "store"
+      },
+      {
+        "id": "store-4",
+        "label": "快照记录",
+        "parent": "store"
+      }
+    ],
+    "relations": [
+      {
+        "from": "meta-2",
+        "to": "metadata",
+        "label": ""
+      },
+      {
+        "from": "metadata",
+        "to": "compute-a-2",
+        "label": ""
+      },
+      {
+        "from": "metadata",
+        "to": "compute-b-2",
+        "label": ""
+      },
+      {
+        "from": "compute-a-2",
+        "to": "store-2",
+        "label": ""
+      },
+      {
+        "from": "compute-b-2",
+        "to": "store-3",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/007/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

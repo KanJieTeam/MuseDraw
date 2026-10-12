@@ -1,0 +1,313 @@
+{
+  "id": 100,
+  "number": "100",
+  "title": "多通道收款能力架构",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "上方入口横带＋中央支付矩阵＋双侧约束＋对账底带",
+    "colorDirection": "深灰青题头、灰青约束、灰粉交易、蓝灰财务与白叶",
+    "canvasHint": [
+      2050,
+      1650
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#396963",
+      "#E3E5E6",
+      "#AEB6BB",
+      "#BCCAD8",
+      "#88989C",
+      "#E2ECE8",
+      "#99C6BC",
+      "#F0E7E6",
+      "#D0A6AF",
+      "#E7EEF4",
+      "#9EBDD5",
+      "#ECE3D6",
+      "#C99C90"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "entry",
+        "title": "业务入口"
+      },
+      {
+        "id": "platform",
+        "title": "收款服务平台"
+      },
+      {
+        "id": "control",
+        "title": "配置与风控"
+      },
+      {
+        "id": "member",
+        "title": "会员服务"
+      },
+      {
+        "id": "access",
+        "title": "收款接入"
+      },
+      {
+        "id": "transaction",
+        "title": "交易处理"
+      },
+      {
+        "id": "payment",
+        "title": "收款处理"
+      },
+      {
+        "id": "channel",
+        "title": "渠道接口"
+      },
+      {
+        "id": "account",
+        "title": "账务记录"
+      },
+      {
+        "id": "fund",
+        "title": "资金记录"
+      },
+      {
+        "id": "clear",
+        "title": "结算服务"
+      },
+      {
+        "id": "audit",
+        "title": "合规记录"
+      },
+      {
+        "id": "reconcile",
+        "title": "共享对账"
+      },
+      {
+        "id": "custody",
+        "title": "外部资金接口"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "entry-1",
+        "label": "会员服务",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-2",
+        "label": "商户服务",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-3",
+        "label": "业务应用",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-4",
+        "label": "合作接口",
+        "parent": "entry"
+      },
+      {
+        "id": "control-1",
+        "label": "规则配置",
+        "parent": "control"
+      },
+      {
+        "id": "control-2",
+        "label": "风险检查",
+        "parent": "control"
+      },
+      {
+        "id": "member-1",
+        "label": "会员账号",
+        "parent": "member"
+      },
+      {
+        "id": "member-2",
+        "label": "身份资料",
+        "parent": "member"
+      },
+      {
+        "id": "member-3",
+        "label": "协议查询",
+        "parent": "member"
+      },
+      {
+        "id": "member-4",
+        "label": "商户关系",
+        "parent": "member"
+      },
+      {
+        "id": "member-5",
+        "label": "会员通知",
+        "parent": "member"
+      },
+      {
+        "id": "access-1",
+        "label": "订单接收",
+        "parent": "access"
+      },
+      {
+        "id": "access-2",
+        "label": "请求映射",
+        "parent": "access"
+      },
+      {
+        "id": "access-3",
+        "label": "接口验证",
+        "parent": "access"
+      },
+      {
+        "id": "transaction-1",
+        "label": "订单登记",
+        "parent": "transaction"
+      },
+      {
+        "id": "transaction-2",
+        "label": "订单校验",
+        "parent": "transaction"
+      },
+      {
+        "id": "transaction-3",
+        "label": "费用计算",
+        "parent": "transaction"
+      },
+      {
+        "id": "transaction-4",
+        "label": "交易通知",
+        "parent": "transaction"
+      },
+      {
+        "id": "payment-1",
+        "label": "收款编排",
+        "parent": "payment"
+      },
+      {
+        "id": "payment-2",
+        "label": "工具选择",
+        "parent": "payment"
+      },
+      {
+        "id": "payment-3",
+        "label": "差错处理",
+        "parent": "payment"
+      },
+      {
+        "id": "channel-1",
+        "label": "渠道路由",
+        "parent": "channel"
+      },
+      {
+        "id": "channel-2",
+        "label": "渠道订单",
+        "parent": "channel"
+      },
+      {
+        "id": "channel-3",
+        "label": "结果接收",
+        "parent": "channel"
+      },
+      {
+        "id": "account-1",
+        "label": "分录登记",
+        "parent": "account"
+      },
+      {
+        "id": "account-2",
+        "label": "账期汇总",
+        "parent": "account"
+      },
+      {
+        "id": "account-3",
+        "label": "科目查询",
+        "parent": "account"
+      },
+      {
+        "id": "account-4",
+        "label": "规则统计",
+        "parent": "account"
+      },
+      {
+        "id": "fund-1",
+        "label": "账户查询",
+        "parent": "fund"
+      },
+      {
+        "id": "fund-2",
+        "label": "交易记账",
+        "parent": "fund"
+      },
+      {
+        "id": "fund-3",
+        "label": "异常补记",
+        "parent": "fund"
+      },
+      {
+        "id": "fund-4",
+        "label": "余额核对",
+        "parent": "fund"
+      },
+      {
+        "id": "clear-1",
+        "label": "结算登记",
+        "parent": "clear"
+      },
+      {
+        "id": "clear-2",
+        "label": "内外对账",
+        "parent": "clear"
+      },
+      {
+        "id": "clear-3",
+        "label": "划拨记录",
+        "parent": "clear"
+      },
+      {
+        "id": "audit-1",
+        "label": "报文登记",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-2",
+        "label": "规则核对",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-3",
+        "label": "凭据归档",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-4",
+        "label": "问题复核",
+        "parent": "audit"
+      },
+      {
+        "id": "reconcile-api",
+        "label": "交易与资金结果核对",
+        "parent": "reconcile"
+      },
+      {
+        "id": "custody-1",
+        "label": "收款接口",
+        "parent": "custody"
+      },
+      {
+        "id": "custody-2",
+        "label": "结算接口",
+        "parent": "custody"
+      },
+      {
+        "id": "custody-3",
+        "label": "托管接口",
+        "parent": "custody"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/100/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

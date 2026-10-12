@@ -1,0 +1,133 @@
+{
+  "id": 99,
+  "number": "099",
+  "title": "服务应用开发框架",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双子域上层与底核心横容器加右三辅助",
+    "colorDirection": "鲜明蓝题头、白色职责域、小面积墨色核心与白辅助",
+    "canvasHint": [
+      1950,
+      1270
+    ],
+    "palette": [
+      "#263445",
+      "#182235",
+      "#2B65CF",
+      "#FFFFFF",
+      "#8D9EAE",
+      "#99AFCD",
+      "#B5C3D3",
+      "#8297AD",
+      "#586C82"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "framework",
+        "title": "应用开发框架"
+      },
+      {
+        "id": "data",
+        "title": "数据访问"
+      },
+      {
+        "id": "web",
+        "title": "请求处理"
+      },
+      {
+        "id": "core",
+        "title": "运行核心"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "data-1",
+        "label": "查询接口",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "对象映射",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "事务管理",
+        "parent": "data"
+      },
+      {
+        "id": "web-1",
+        "label": "请求路由",
+        "parent": "web"
+      },
+      {
+        "id": "web-2",
+        "label": "事件连接",
+        "parent": "web"
+      },
+      {
+        "id": "web-3",
+        "label": "响应组装",
+        "parent": "web"
+      },
+      {
+        "id": "core-1",
+        "label": "组件装载",
+        "parent": "core"
+      },
+      {
+        "id": "core-2",
+        "label": "调用拦截",
+        "parent": "core"
+      },
+      {
+        "id": "core-3",
+        "label": "运行上下文",
+        "parent": "core"
+      },
+      {
+        "id": "core-4",
+        "label": "执行监测",
+        "parent": "core"
+      },
+      {
+        "id": "config",
+        "label": "自动配置",
+        "parent": null
+      },
+      {
+        "id": "observe",
+        "label": "运行观测",
+        "parent": null
+      },
+      {
+        "id": "package",
+        "label": "包件管理",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "config",
+        "to": "core-1",
+        "label": ""
+      },
+      {
+        "from": "observe",
+        "to": "core-4",
+        "label": ""
+      },
+      {
+        "from": "package",
+        "to": "core-1",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/099/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

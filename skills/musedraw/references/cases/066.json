@@ -1,0 +1,157 @@
+{
+  "id": 66,
+  "number": "066",
+  "title": "多租户环境部署管理",
+  "view": "deployment",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "上管理触发下三环境部署",
+    "colorDirection": "蓝项目面内黄绿粉环境",
+    "canvasHint": [
+      1700,
+      1370
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#2E79CF",
+      "#F0F2F3",
+      "#8E9AA5",
+      "#BCCAD8",
+      "#A8C9F1",
+      "#7DA6D7",
+      "#5F7182",
+      "#FFF0C8",
+      "#9EADB9",
+      "#438ED4",
+      "#DCEEDF",
+      "#F7D6D1"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "platform-boundary",
+        "title": "平台管理范围"
+      },
+      {
+        "id": "admin",
+        "title": "管理与触发域"
+      },
+      {
+        "id": "trigger",
+        "title": "自动触发项目"
+      },
+      {
+        "id": "environments",
+        "title": "运行平台"
+      },
+      {
+        "id": "project-0",
+        "title": "开发项目"
+      },
+      {
+        "id": "network-0",
+        "title": "开发网络"
+      },
+      {
+        "id": "project-1",
+        "title": "验证项目"
+      },
+      {
+        "id": "network-1",
+        "title": "验证网络"
+      },
+      {
+        "id": "project-2",
+        "title": "生产项目"
+      },
+      {
+        "id": "network-2",
+        "title": "生产网络"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "repositories-1",
+        "label": "范围声明仓库",
+        "parent": null
+      },
+      {
+        "id": "repositories-2",
+        "label": "共用配置仓库",
+        "parent": null
+      },
+      {
+        "id": "repositories-3",
+        "label": "平台资源仓库",
+        "parent": null
+      },
+      {
+        "id": "trigger-1",
+        "label": "范围变更触发",
+        "parent": "trigger"
+      },
+      {
+        "id": "trigger-2",
+        "label": "共用配置触发",
+        "parent": "trigger"
+      },
+      {
+        "id": "trigger-3",
+        "label": "资源构建触发",
+        "parent": "trigger"
+      },
+      {
+        "id": "network-0-1",
+        "label": "应用运行集群",
+        "parent": "network-0"
+      },
+      {
+        "id": "network-0-2",
+        "label": "访问控制",
+        "parent": "network-0"
+      },
+      {
+        "id": "network-1-1",
+        "label": "应用运行集群",
+        "parent": "network-1"
+      },
+      {
+        "id": "network-1-2",
+        "label": "访问控制",
+        "parent": "network-1"
+      },
+      {
+        "id": "network-2-1",
+        "label": "应用运行集群",
+        "parent": "network-2"
+      },
+      {
+        "id": "network-2-2",
+        "label": "访问控制",
+        "parent": "network-2"
+      }
+    ],
+    "relations": [
+      {
+        "from": "repositories-1",
+        "to": "trigger-1",
+        "label": ""
+      },
+      {
+        "from": "repositories-2",
+        "to": "trigger-2",
+        "label": ""
+      },
+      {
+        "from": "repositories-3",
+        "to": "trigger-3",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/066/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

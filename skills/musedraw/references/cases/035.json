@@ -1,0 +1,155 @@
+{
+  "id": 35,
+  "number": "035",
+  "title": "批量文件任务执行与状态回传",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "中央容器池与外环管理",
+    "colorDirection": "白底组件、棕橙执行重点与灰紫消息边线",
+    "canvasHint": [
+      1880,
+      1300
+    ],
+    "palette": [
+      "#2C3540",
+      "#182235",
+      "#A25F2D",
+      "#FFFFFF",
+      "#A9B4BF",
+      "#647789",
+      "#9A8394",
+      "#765B70",
+      "#9A9EA3"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "queue",
+        "title": "任务缓冲"
+      },
+      {
+        "id": "pool",
+        "title": "文件执行单元"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "label": "操作客户端",
+        "parent": null
+      },
+      {
+        "id": "api",
+        "label": "任务接口",
+        "parent": null
+      },
+      {
+        "id": "pending",
+        "label": "待处理队列",
+        "parent": "queue"
+      },
+      {
+        "id": "pool-1",
+        "label": "解析实例",
+        "parent": "pool"
+      },
+      {
+        "id": "pool-2",
+        "label": "转换实例",
+        "parent": "pool"
+      },
+      {
+        "id": "pool-3",
+        "label": "校验实例",
+        "parent": "pool"
+      },
+      {
+        "id": "pool-4",
+        "label": "分派控制",
+        "parent": "pool"
+      },
+      {
+        "id": "pool-5",
+        "label": "执行记录",
+        "parent": "pool"
+      },
+      {
+        "id": "state",
+        "label": "任务状态库",
+        "parent": null
+      },
+      {
+        "id": "files",
+        "label": "结果文件",
+        "parent": null
+      },
+      {
+        "id": "notify",
+        "label": "状态通知",
+        "parent": null
+      },
+      {
+        "id": "monitor",
+        "label": "执行观测",
+        "parent": null
+      },
+      {
+        "id": "config",
+        "label": "执行参数",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "user",
+        "to": "api",
+        "label": "提交文件"
+      },
+      {
+        "from": "api",
+        "to": "pending",
+        "label": "登记任务"
+      },
+      {
+        "from": "pending",
+        "to": "pool-4",
+        "label": ""
+      },
+      {
+        "from": "pool-4",
+        "to": "pool-1",
+        "label": ""
+      },
+      {
+        "from": "pool-3",
+        "to": "state",
+        "label": "更新状态"
+      },
+      {
+        "from": "pool-3",
+        "to": "files",
+        "label": ""
+      },
+      {
+        "from": "state",
+        "to": "notify",
+        "label": ""
+      },
+      {
+        "from": "pool-5",
+        "to": "monitor",
+        "label": "运行记录"
+      },
+      {
+        "from": "config",
+        "to": "pool-4",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/035/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

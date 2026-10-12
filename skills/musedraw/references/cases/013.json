@@ -1,0 +1,171 @@
+{
+  "id": 13,
+  "number": "013",
+  "title": "企业分析平台与交付底座",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "纵向交付侧栏与分层平台能力",
+    "colorDirection": "浅黄数据浅蓝应用中性灰基础",
+    "canvasHint": [
+      1600,
+      1170
+    ],
+    "palette": [
+      "#384758",
+      "#182235",
+      "#276CC1",
+      "#F0F3F6",
+      "#B7C5D2",
+      "#34485E",
+      "#BCCAD8",
+      "#EDF0F3",
+      "#AAB5BE",
+      "#596671",
+      "#EEF1F4",
+      "#B4BFC9",
+      "#536474",
+      "#FFF1CB",
+      "#CABB8E",
+      "#8D7137"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "access",
+        "title": "受控入口"
+      },
+      {
+        "id": "platform",
+        "title": "企业数据平台"
+      },
+      {
+        "id": "delivery",
+        "title": "持续交付"
+      },
+      {
+        "id": "application",
+        "title": "应用层"
+      },
+      {
+        "id": "data",
+        "title": "数据平台层"
+      },
+      {
+        "id": "enterprise",
+        "title": "企业公共基础"
+      },
+      {
+        "id": "cloud",
+        "title": "资源设施层"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "access-1",
+        "label": "应用访问",
+        "parent": "access"
+      },
+      {
+        "id": "access-2",
+        "label": "源代码库",
+        "parent": "access"
+      },
+      {
+        "id": "delivery-1",
+        "label": "应用交付",
+        "parent": "delivery"
+      },
+      {
+        "id": "delivery-2",
+        "label": "数据交付",
+        "parent": "delivery"
+      },
+      {
+        "id": "delivery-3",
+        "label": "资源交付",
+        "parent": "delivery"
+      },
+      {
+        "id": "delivery-4",
+        "label": "基础配置",
+        "parent": "delivery"
+      },
+      {
+        "id": "application-1",
+        "label": "业务应用",
+        "parent": "application"
+      },
+      {
+        "id": "application-2",
+        "label": "分析门户",
+        "parent": "application"
+      },
+      {
+        "id": "application-3",
+        "label": "开放服务",
+        "parent": "application"
+      },
+      {
+        "id": "data-1",
+        "label": "数据生产",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "数据消费",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "治理服务",
+        "parent": "data"
+      },
+      {
+        "id": "data-4",
+        "label": "访问管理",
+        "parent": "data"
+      },
+      {
+        "id": "enterprise-1",
+        "label": "基础网络",
+        "parent": "enterprise"
+      },
+      {
+        "id": "enterprise-2",
+        "label": "身份服务",
+        "parent": "enterprise"
+      },
+      {
+        "id": "enterprise-3",
+        "label": "组织策略",
+        "parent": "enterprise"
+      },
+      {
+        "id": "enterprise-4",
+        "label": "运行监控",
+        "parent": "enterprise"
+      },
+      {
+        "id": "cloud-1",
+        "label": "资源计算",
+        "parent": "cloud"
+      },
+      {
+        "id": "cloud-2",
+        "label": "数据加密",
+        "parent": "cloud"
+      },
+      {
+        "id": "cloud-3",
+        "label": "威胁监测",
+        "parent": "cloud"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/013/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,292 @@
+{
+  "id": 68,
+  "number": "068",
+  "title": "低代码应用组装能力体系",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "高密度多域能力矩阵＋集成底带",
+    "colorDirection": "浅蓝父底、白子组和深浅蓝短叶",
+    "canvasHint": [
+      1800,
+      1690
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#2479BD",
+      "#DDE8FA",
+      "#437DBB",
+      "#D0E0F3",
+      "#1595D5",
+      "#056DB1",
+      "#158DCF"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "whole",
+        "title": "低代码平台"
+      },
+      {
+        "id": "workspace",
+        "title": "统一工作区"
+      },
+      {
+        "id": "engines",
+        "title": "设计与运行引擎"
+      },
+      {
+        "id": "components",
+        "title": "应用组件"
+      },
+      {
+        "id": "identity",
+        "title": "统一身份"
+      },
+      {
+        "id": "process",
+        "title": "流程服务"
+      },
+      {
+        "id": "service",
+        "title": "数据服务"
+      },
+      {
+        "id": "portal",
+        "title": "门户服务"
+      },
+      {
+        "id": "foundation",
+        "title": "基础应用服务"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients-1",
+        "label": "网页客户端",
+        "parent": null
+      },
+      {
+        "id": "clients-2",
+        "label": "移动客户端",
+        "parent": null
+      },
+      {
+        "id": "clients-3",
+        "label": "嵌入客户端",
+        "parent": null
+      },
+      {
+        "id": "workspace-1",
+        "label": "表单编辑",
+        "parent": "workspace"
+      },
+      {
+        "id": "workspace-2",
+        "label": "流程编排",
+        "parent": "workspace"
+      },
+      {
+        "id": "workspace-3",
+        "label": "权限配置",
+        "parent": "workspace"
+      },
+      {
+        "id": "workspace-4",
+        "label": "门户组装",
+        "parent": "workspace"
+      },
+      {
+        "id": "workspace-5",
+        "label": "资源管理",
+        "parent": "workspace"
+      },
+      {
+        "id": "engines-1",
+        "label": "表单引擎",
+        "parent": "engines"
+      },
+      {
+        "id": "engines-2",
+        "label": "流程引擎",
+        "parent": "engines"
+      },
+      {
+        "id": "engines-3",
+        "label": "规则引擎",
+        "parent": "engines"
+      },
+      {
+        "id": "engines-4",
+        "label": "报表引擎",
+        "parent": "engines"
+      },
+      {
+        "id": "identity-1",
+        "label": "账户管理",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-2",
+        "label": "组织管理",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-3",
+        "label": "应用授权",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-4",
+        "label": "令牌校验",
+        "parent": "identity"
+      },
+      {
+        "id": "process-1",
+        "label": "流程定义",
+        "parent": "process"
+      },
+      {
+        "id": "process-2",
+        "label": "规则配置",
+        "parent": "process"
+      },
+      {
+        "id": "process-3",
+        "label": "待办管理",
+        "parent": "process"
+      },
+      {
+        "id": "process-4",
+        "label": "运行监测",
+        "parent": "process"
+      },
+      {
+        "id": "service-1",
+        "label": "数据建模",
+        "parent": "service"
+      },
+      {
+        "id": "service-2",
+        "label": "接口生成",
+        "parent": "service"
+      },
+      {
+        "id": "service-3",
+        "label": "接口授权",
+        "parent": "service"
+      },
+      {
+        "id": "service-4",
+        "label": "数据发布",
+        "parent": "service"
+      },
+      {
+        "id": "portal-1",
+        "label": "门户设计",
+        "parent": "portal"
+      },
+      {
+        "id": "portal-2",
+        "label": "内容配置",
+        "parent": "portal"
+      },
+      {
+        "id": "portal-3",
+        "label": "访问控制",
+        "parent": "portal"
+      },
+      {
+        "id": "portal-4",
+        "label": "门户发布",
+        "parent": "portal"
+      },
+      {
+        "id": "foundation-1",
+        "label": "系统管理",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-2",
+        "label": "角色管理",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-3",
+        "label": "统一日志",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-4",
+        "label": "统一审计",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-5",
+        "label": "任务调度",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-6",
+        "label": "个人中心",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-7",
+        "label": "字典配置",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-8",
+        "label": "组织配置",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-9",
+        "label": "请求日志",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-10",
+        "label": "变更审计",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-11",
+        "label": "任务配置",
+        "parent": "foundation"
+      },
+      {
+        "id": "foundation-12",
+        "label": "用户组织",
+        "parent": "foundation"
+      },
+      {
+        "id": "integration-1",
+        "label": "数据连接",
+        "parent": null
+      },
+      {
+        "id": "integration-2",
+        "label": "文件交换",
+        "parent": null
+      },
+      {
+        "id": "integration-3",
+        "label": "开放接口",
+        "parent": null
+      },
+      {
+        "id": "integration-4",
+        "label": "事件接入",
+        "parent": null
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/068/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

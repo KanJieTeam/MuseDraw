@@ -1,0 +1,166 @@
+{
+  "id": 28,
+  "number": "028",
+  "title": "双执行区业务应用部署",
+  "view": "deployment",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双AZ主备部署加外围运维",
+    "colorDirection": "浅蓝执行区、绿色内部范围与暖橙计算",
+    "canvasHint": [
+      2010,
+      1130
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#537F9F",
+      "#F5F6F7",
+      "#969FA6",
+      "#5C6973",
+      "#F4F9F4",
+      "#658D68",
+      "#47724B",
+      "#E9F3FA",
+      "#7DACC8",
+      "#4F7C99",
+      "#FFF0DC",
+      "#BC9565",
+      "#A57235",
+      "#FFFFFF",
+      "#8FACCD",
+      "#253B53",
+      "#EEF0F4",
+      "#99A6B4",
+      "#EEF1F4",
+      "#A4AFB8",
+      "#607689"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "env",
+        "title": "应用部署范围"
+      },
+      {
+        "id": "net",
+        "title": "内部连接范围"
+      },
+      {
+        "id": "a",
+        "title": "执行区甲"
+      },
+      {
+        "id": "b",
+        "title": "执行区乙"
+      },
+      {
+        "id": "tools",
+        "title": "共享支撑"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app-a",
+        "label": "业务应用甲",
+        "parent": "a"
+      },
+      {
+        "id": "db-a",
+        "label": "业务数据甲",
+        "parent": "a"
+      },
+      {
+        "id": "app-b",
+        "label": "业务应用乙",
+        "parent": "b"
+      },
+      {
+        "id": "db-b",
+        "label": "业务数据乙",
+        "parent": "b"
+      },
+      {
+        "id": "staff",
+        "label": "内网终端",
+        "parent": null
+      },
+      {
+        "id": "remote",
+        "label": "远程终端",
+        "parent": null
+      },
+      {
+        "id": "entry",
+        "label": "接入服务",
+        "parent": null
+      },
+      {
+        "id": "tools-1",
+        "label": "文件存储",
+        "parent": "tools"
+      },
+      {
+        "id": "tools-2",
+        "label": "运行日志",
+        "parent": "tools"
+      },
+      {
+        "id": "tools-3",
+        "label": "配置目录",
+        "parent": "tools"
+      },
+      {
+        "id": "tools-4",
+        "label": "备份副本",
+        "parent": "tools"
+      },
+      {
+        "id": "tools-5",
+        "label": "告警接收",
+        "parent": "tools"
+      }
+    ],
+    "relations": [
+      {
+        "from": "staff",
+        "to": "app-a",
+        "label": "应用访问"
+      },
+      {
+        "from": "remote",
+        "to": "entry",
+        "label": ""
+      },
+      {
+        "from": "entry",
+        "to": "app-a",
+        "label": ""
+      },
+      {
+        "from": "app-a",
+        "to": "db-a",
+        "label": "记录读写"
+      },
+      {
+        "from": "app-b",
+        "to": "db-b",
+        "label": ""
+      },
+      {
+        "from": "app-a",
+        "to": "app-b",
+        "label": "发布同步"
+      },
+      {
+        "from": "db-a",
+        "to": "db-b",
+        "label": "数据复制"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/028/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

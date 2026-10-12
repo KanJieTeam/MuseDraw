@@ -1,0 +1,248 @@
+{
+  "id": 14,
+  "number": "014",
+  "title": "数据开发与治理产品架构",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "平台四层与横向研发链",
+    "colorDirection": "明蓝侧栏灰能力白叶",
+    "canvasHint": [
+      1900,
+      1230
+    ],
+    "palette": [
+      "#445363",
+      "#182235",
+      "#2884DF",
+      "#F0F3F6",
+      "#B7C5D2",
+      "#34485E",
+      "#BCCAD8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "map",
+        "title": "数据资产与指标"
+      },
+      {
+        "id": "govern",
+        "title": "治理与运行控制"
+      },
+      {
+        "id": "integrate",
+        "title": "数据集成"
+      },
+      {
+        "id": "develop",
+        "title": "数据研发"
+      },
+      {
+        "id": "services",
+        "title": "数据服务"
+      },
+      {
+        "id": "compute",
+        "title": "计算与存储"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "layer-154",
+        "label": "资产地图",
+        "parent": null
+      },
+      {
+        "id": "layer-382",
+        "label": "全域治理",
+        "parent": null
+      },
+      {
+        "id": "layer-698",
+        "label": "全链研发",
+        "parent": null
+      },
+      {
+        "id": "layer-1054",
+        "label": "存储计算",
+        "parent": null
+      },
+      {
+        "id": "map-1",
+        "label": "数据专题",
+        "parent": "map"
+      },
+      {
+        "id": "map-2",
+        "label": "资产检索",
+        "parent": "map"
+      },
+      {
+        "id": "map-3",
+        "label": "指标字典",
+        "parent": "map"
+      },
+      {
+        "id": "map-4",
+        "label": "标签服务",
+        "parent": "map"
+      },
+      {
+        "id": "map-5",
+        "label": "服务目录",
+        "parent": "map"
+      },
+      {
+        "id": "map-6",
+        "label": "资产申请",
+        "parent": "map"
+      },
+      {
+        "id": "govern-1",
+        "label": "质量管理",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-2",
+        "label": "标准管理",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-3",
+        "label": "数据安全",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-4",
+        "label": "成本治理",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-5",
+        "label": "质量规则",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-6",
+        "label": "标准映射",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-7",
+        "label": "访问管理",
+        "parent": "govern"
+      },
+      {
+        "id": "govern-8",
+        "label": "资源计量",
+        "parent": "govern"
+      },
+      {
+        "id": "integrate-1",
+        "label": "批量同步",
+        "parent": "integrate"
+      },
+      {
+        "id": "integrate-2",
+        "label": "增量同步",
+        "parent": "integrate"
+      },
+      {
+        "id": "integrate-3",
+        "label": "实时采集",
+        "parent": "integrate"
+      },
+      {
+        "id": "integrate-4",
+        "label": "接口接入",
+        "parent": "integrate"
+      },
+      {
+        "id": "integrate-5",
+        "label": "同步校核",
+        "parent": "integrate"
+      },
+      {
+        "id": "integrate-6",
+        "label": "连接配置",
+        "parent": "integrate"
+      },
+      {
+        "id": "develop-1",
+        "label": "作业开发",
+        "parent": "develop"
+      },
+      {
+        "id": "develop-2",
+        "label": "任务调试",
+        "parent": "develop"
+      },
+      {
+        "id": "develop-3",
+        "label": "运行发布",
+        "parent": "develop"
+      },
+      {
+        "id": "develop-4",
+        "label": "依赖编排",
+        "parent": "develop"
+      },
+      {
+        "id": "develop-5",
+        "label": "成本诊断",
+        "parent": "develop"
+      },
+      {
+        "id": "develop-6",
+        "label": "协同管理",
+        "parent": "develop"
+      },
+      {
+        "id": "services-1",
+        "label": "接口服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-2",
+        "label": "查询服务",
+        "parent": "services"
+      },
+      {
+        "id": "services-3",
+        "label": "结果订阅",
+        "parent": "services"
+      },
+      {
+        "id": "services-4",
+        "label": "服务监控",
+        "parent": "services"
+      },
+      {
+        "id": "compute-1",
+        "label": "离线计算",
+        "parent": "compute"
+      },
+      {
+        "id": "compute-2",
+        "label": "流式计算",
+        "parent": "compute"
+      },
+      {
+        "id": "compute-3",
+        "label": "分析引擎",
+        "parent": "compute"
+      },
+      {
+        "id": "compute-4",
+        "label": "对象存储",
+        "parent": "compute"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/014/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

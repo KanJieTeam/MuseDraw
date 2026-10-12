@@ -1,0 +1,168 @@
+{
+  "id": 33,
+  "number": "033",
+  "title": "数据作业模板发布与项目装配",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "下配置目录上三个项目域",
+    "colorDirection": "浅灰项目范围与蓝色发布路线",
+    "canvasHint": [
+      2010,
+      1150
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#2F73B5",
+      "#FAFBFC",
+      "#5B8FC0",
+      "#2E70AA",
+      "#ECEFF2",
+      "#ABB5BE",
+      "#63788C",
+      "#FFFFFF",
+      "#8FACCD",
+      "#253B53",
+      "#E6EAEE",
+      "#A5B2BD",
+      "#899DAC"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "work",
+        "title": "作业工作空间"
+      },
+      {
+        "id": "p1",
+        "title": "统计项目"
+      },
+      {
+        "id": "p2",
+        "title": "整理项目"
+      },
+      {
+        "id": "p3",
+        "title": "交换项目"
+      },
+      {
+        "id": "catalog",
+        "title": "模板与配置目录"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "p1-1",
+        "label": "任务实例",
+        "parent": "p1"
+      },
+      {
+        "id": "p1-2",
+        "label": "参数集合",
+        "parent": "p1"
+      },
+      {
+        "id": "p1-3",
+        "label": "输出目录",
+        "parent": "p1"
+      },
+      {
+        "id": "p2-1",
+        "label": "任务实例",
+        "parent": "p2"
+      },
+      {
+        "id": "p2-2",
+        "label": "参数集合",
+        "parent": "p2"
+      },
+      {
+        "id": "p2-3",
+        "label": "输出目录",
+        "parent": "p2"
+      },
+      {
+        "id": "p3-1",
+        "label": "任务实例",
+        "parent": "p3"
+      },
+      {
+        "id": "p3-2",
+        "label": "参数集合",
+        "parent": "p3"
+      },
+      {
+        "id": "p3-3",
+        "label": "输出目录",
+        "parent": "p3"
+      },
+      {
+        "id": "publish",
+        "label": "装配发布",
+        "parent": "catalog"
+      },
+      {
+        "id": "template",
+        "label": "任务模板",
+        "parent": "catalog"
+      },
+      {
+        "id": "config",
+        "label": "参数与脚本",
+        "parent": "catalog"
+      },
+      {
+        "id": "edit",
+        "label": "编辑工作台",
+        "parent": null
+      },
+      {
+        "id": "operator",
+        "label": "维护人员",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "operator",
+        "to": "publish",
+        "label": "提交模板"
+      },
+      {
+        "from": "edit",
+        "to": "p1-1",
+        "label": ""
+      },
+      {
+        "from": "template",
+        "to": "publish",
+        "label": ""
+      },
+      {
+        "from": "config",
+        "to": "publish",
+        "label": ""
+      },
+      {
+        "from": "publish",
+        "to": "p1-1",
+        "label": "装配作业"
+      },
+      {
+        "from": "publish",
+        "to": "p2-1",
+        "label": ""
+      },
+      {
+        "from": "publish",
+        "to": "p3-1",
+        "label": "装配作业"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/033/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

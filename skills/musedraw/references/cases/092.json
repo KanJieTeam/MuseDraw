@@ -1,0 +1,290 @@
+{
+  "id": 92,
+  "number": "092",
+  "title": "数据权限治理能力框架",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "房顶总括＋安全双矩阵＋右生命周期列",
+    "colorDirection": "深蓝灰题头、浅蓝归属、白叶与浅蓝总括",
+    "canvasHint": [
+      2050,
+      1550
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#3F617F",
+      "#D3E0EB",
+      "#8DBBDD",
+      "#EFF4F8",
+      "#A7BBC9",
+      "#FFFFFF"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "policy",
+        "title": "治理规则"
+      },
+      {
+        "id": "analysis",
+        "title": "数据识别与分析"
+      },
+      {
+        "id": "rule",
+        "title": "权限策略"
+      },
+      {
+        "id": "execute",
+        "title": "执行产品能力"
+      },
+      {
+        "id": "access",
+        "title": "访问控制"
+      },
+      {
+        "id": "mask",
+        "title": "内容保护"
+      },
+      {
+        "id": "audit",
+        "title": "使用审计"
+      },
+      {
+        "id": "change",
+        "title": "变更管理"
+      },
+      {
+        "id": "range",
+        "title": "保护范围"
+      },
+      {
+        "id": "lifecycle",
+        "title": "数据生命周期"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "policy-1",
+        "label": "分类规范",
+        "parent": "policy"
+      },
+      {
+        "id": "policy-2",
+        "label": "权限规则",
+        "parent": "policy"
+      },
+      {
+        "id": "policy-3",
+        "label": "变更复核",
+        "parent": "policy"
+      },
+      {
+        "id": "policy-4",
+        "label": "责任记录",
+        "parent": "policy"
+      },
+      {
+        "id": "analysis-1",
+        "label": "资产登记",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-2",
+        "label": "来源分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-3",
+        "label": "内容识别",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-4",
+        "label": "分类标记",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-5",
+        "label": "权限盘点",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-6",
+        "label": "使用分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-7",
+        "label": "风险标注",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-8",
+        "label": "规则核对",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-9",
+        "label": "变更查询",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-10",
+        "label": "异常识别",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-11",
+        "label": "审计检索",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-12",
+        "label": "结果展示",
+        "parent": "analysis"
+      },
+      {
+        "id": "rule-1",
+        "label": "访问范围",
+        "parent": "rule"
+      },
+      {
+        "id": "rule-2",
+        "label": "使用条件",
+        "parent": "rule"
+      },
+      {
+        "id": "rule-3",
+        "label": "审批要求",
+        "parent": "rule"
+      },
+      {
+        "id": "access-1",
+        "label": "身份校验",
+        "parent": "access"
+      },
+      {
+        "id": "access-2",
+        "label": "权限判定",
+        "parent": "access"
+      },
+      {
+        "id": "access-3",
+        "label": "会话限制",
+        "parent": "access"
+      },
+      {
+        "id": "mask-1",
+        "label": "敏感脱敏",
+        "parent": "mask"
+      },
+      {
+        "id": "mask-2",
+        "label": "字段遮蔽",
+        "parent": "mask"
+      },
+      {
+        "id": "mask-3",
+        "label": "导出控制",
+        "parent": "mask"
+      },
+      {
+        "id": "audit-1",
+        "label": "访问记录",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-2",
+        "label": "操作追溯",
+        "parent": "audit"
+      },
+      {
+        "id": "audit-3",
+        "label": "异常复核",
+        "parent": "audit"
+      },
+      {
+        "id": "change-1",
+        "label": "变更申请",
+        "parent": "change"
+      },
+      {
+        "id": "change-2",
+        "label": "版本校验",
+        "parent": "change"
+      },
+      {
+        "id": "change-3",
+        "label": "审批记录",
+        "parent": "change"
+      },
+      {
+        "id": "range-1",
+        "label": "文档内容",
+        "parent": "range"
+      },
+      {
+        "id": "range-2",
+        "label": "结构数据",
+        "parent": "range"
+      },
+      {
+        "id": "range-3",
+        "label": "接口结果",
+        "parent": "range"
+      },
+      {
+        "id": "range-4",
+        "label": "导出文件",
+        "parent": "range"
+      },
+      {
+        "id": "lifecycle-1",
+        "label": "数据创建",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-2",
+        "label": "数据接收",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-3",
+        "label": "数据保存",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-4",
+        "label": "数据使用",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-5",
+        "label": "数据共享",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-6",
+        "label": "数据归档",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-extra-1",
+        "label": "范围检查",
+        "parent": "lifecycle"
+      },
+      {
+        "id": "lifecycle-extra-2",
+        "label": "期限管理",
+        "parent": "lifecycle"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/092/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,322 @@
+{
+  "id": 97,
+  "number": "097",
+  "title": "客户互动营销应用架构",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "双全局认证柱与嵌套营销能力矩阵",
+    "colorDirection": "蓝灰渠道、灰青认证、暖砂活动与白色服务叶",
+    "canvasHint": [
+      2050,
+      1800
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#49657B",
+      "#E8EEF4",
+      "#A2C7E3",
+      "#BCCAD8",
+      "#E3ECEB",
+      "#86C8CF",
+      "#FFFFFF",
+      "#9FCBC8",
+      "#F5EFE3",
+      "#D5C59A",
+      "#C4C0B4",
+      "#EDF1F4",
+      "#BAC5CF",
+      "#EFF2EF",
+      "#A8CBB0",
+      "#A4C4E1"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "entry",
+        "title": "访问渠道"
+      },
+      {
+        "id": "identity",
+        "title": "身份认证"
+      },
+      {
+        "id": "authorization",
+        "title": "访问授权"
+      },
+      {
+        "id": "application",
+        "title": "客户互动服务"
+      },
+      {
+        "id": "activity",
+        "title": "互动活动平台"
+      },
+      {
+        "id": "campaign",
+        "title": "活动服务"
+      },
+      {
+        "id": "content",
+        "title": "内容服务"
+      },
+      {
+        "id": "strategy",
+        "title": "策略服务"
+      },
+      {
+        "id": "channel",
+        "title": "渠道服务"
+      },
+      {
+        "id": "message",
+        "title": "消息服务"
+      },
+      {
+        "id": "core",
+        "title": "业务核心"
+      },
+      {
+        "id": "data",
+        "title": "共享数据"
+      },
+      {
+        "id": "base",
+        "title": "基础服务"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "entry-1",
+        "label": "服务门户",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-2",
+        "label": "移动应用",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-3",
+        "label": "工作台",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-4",
+        "label": "公众号页",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-5",
+        "label": "合作页面",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-6",
+        "label": "客服页面",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-7",
+        "label": "营销页面",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-8",
+        "label": "消息入口",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-9",
+        "label": "内容页面",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-10",
+        "label": "业务接口",
+        "parent": "entry"
+      },
+      {
+        "id": "identity-1",
+        "label": "账号认证",
+        "parent": "identity"
+      },
+      {
+        "id": "identity-2",
+        "label": "会话校验",
+        "parent": "identity"
+      },
+      {
+        "id": "authorization-1",
+        "label": "权限判定",
+        "parent": "authorization"
+      },
+      {
+        "id": "authorization-2",
+        "label": "密钥校验",
+        "parent": "authorization"
+      },
+      {
+        "id": "campaign-1",
+        "label": "活动登记",
+        "parent": "campaign"
+      },
+      {
+        "id": "campaign-2",
+        "label": "资格检查",
+        "parent": "campaign"
+      },
+      {
+        "id": "campaign-3",
+        "label": "参与记录",
+        "parent": "campaign"
+      },
+      {
+        "id": "content-1",
+        "label": "内容发布",
+        "parent": "content"
+      },
+      {
+        "id": "content-2",
+        "label": "专题配置",
+        "parent": "content"
+      },
+      {
+        "id": "content-3",
+        "label": "页面组织",
+        "parent": "content"
+      },
+      {
+        "id": "content-4",
+        "label": "素材登记",
+        "parent": "content"
+      },
+      {
+        "id": "strategy-1",
+        "label": "条件匹配",
+        "parent": "strategy"
+      },
+      {
+        "id": "strategy-2",
+        "label": "触发规则",
+        "parent": "strategy"
+      },
+      {
+        "id": "strategy-3",
+        "label": "结果记录",
+        "parent": "strategy"
+      },
+      {
+        "id": "channel-1",
+        "label": "渠道配置",
+        "parent": "channel"
+      },
+      {
+        "id": "channel-2",
+        "label": "触达记录",
+        "parent": "channel"
+      },
+      {
+        "id": "message-1",
+        "label": "通知模板",
+        "parent": "message"
+      },
+      {
+        "id": "message-2",
+        "label": "发送队列",
+        "parent": "message"
+      },
+      {
+        "id": "message-3",
+        "label": "回执查询",
+        "parent": "message"
+      },
+      {
+        "id": "message-4",
+        "label": "消息归档",
+        "parent": "message"
+      },
+      {
+        "id": "core-1",
+        "label": "客户查询",
+        "parent": "core"
+      },
+      {
+        "id": "core-2",
+        "label": "权益查询",
+        "parent": "core"
+      },
+      {
+        "id": "core-3",
+        "label": "活动查询",
+        "parent": "core"
+      },
+      {
+        "id": "data-1",
+        "label": "客户档案",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "参与记录",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "内容资料",
+        "parent": "data"
+      },
+      {
+        "id": "data-4",
+        "label": "互动事件",
+        "parent": "data"
+      },
+      {
+        "id": "data-5",
+        "label": "消息记录",
+        "parent": "data"
+      },
+      {
+        "id": "data-6",
+        "label": "活动指标",
+        "parent": "data"
+      },
+      {
+        "id": "base-1",
+        "label": "任务调度",
+        "parent": "base"
+      },
+      {
+        "id": "base-2",
+        "label": "配置管理",
+        "parent": "base"
+      },
+      {
+        "id": "base-3",
+        "label": "日志查询",
+        "parent": "base"
+      },
+      {
+        "id": "base-4",
+        "label": "检索接口",
+        "parent": "base"
+      },
+      {
+        "id": "base-5",
+        "label": "文件接口",
+        "parent": "base"
+      },
+      {
+        "id": "base-6",
+        "label": "网络接口",
+        "parent": "base"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/097/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

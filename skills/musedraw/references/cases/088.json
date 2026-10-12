@@ -1,0 +1,278 @@
+{
+  "id": 88,
+  "number": "088",
+  "title": "门店交易协同架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "中央零售核心关系＋外围集成域＋BI底带",
+    "colorDirection": "灰紫题头与关系、红灰虚边、浅蓝能力与少量紫核心",
+    "canvasHint": [
+      1950,
+      1530
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#65517D",
+      "#FFF6EC",
+      "#D6A092",
+      "#F5DAC0",
+      "#D0B199",
+      "#CB8E8E",
+      "#D5EAF6",
+      "#A8CCDF",
+      "#E4D4EF",
+      "#BDA7D1",
+      "#E8EEF3",
+      "#C4D1DD"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "supply",
+        "title": "供应协同"
+      },
+      {
+        "id": "product",
+        "title": "商品目录"
+      },
+      {
+        "id": "customer",
+        "title": "客户服务"
+      },
+      {
+        "id": "partner",
+        "title": "合作接口"
+      },
+      {
+        "id": "left",
+        "title": "外围协同"
+      },
+      {
+        "id": "pos",
+        "title": "门店操作"
+      },
+      {
+        "id": "right",
+        "title": "服务集成"
+      },
+      {
+        "id": "core",
+        "title": "交易核心协作"
+      },
+      {
+        "id": "analysis",
+        "title": "共享分析"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "supply-1",
+        "label": "采购提交",
+        "parent": "supply"
+      },
+      {
+        "id": "supply-2",
+        "label": "收货登记",
+        "parent": "supply"
+      },
+      {
+        "id": "product-1",
+        "label": "主档读取",
+        "parent": "product"
+      },
+      {
+        "id": "product-2",
+        "label": "价格查询",
+        "parent": "product"
+      },
+      {
+        "id": "customer-1",
+        "label": "会员查询",
+        "parent": "customer"
+      },
+      {
+        "id": "customer-2",
+        "label": "权益查询",
+        "parent": "customer"
+      },
+      {
+        "id": "partner-1",
+        "label": "订单接收",
+        "parent": "partner"
+      },
+      {
+        "id": "partner-2",
+        "label": "结果回执",
+        "parent": "partner"
+      },
+      {
+        "id": "left-1",
+        "label": "采购协同",
+        "parent": "left"
+      },
+      {
+        "id": "left-2",
+        "label": "库存回执",
+        "parent": "left"
+      },
+      {
+        "id": "left-3",
+        "label": "会员关联",
+        "parent": "left"
+      },
+      {
+        "id": "left-4",
+        "label": "权益登记",
+        "parent": "left"
+      },
+      {
+        "id": "left-5",
+        "label": "财务回执",
+        "parent": "left"
+      },
+      {
+        "id": "left-6",
+        "label": "资料同步",
+        "parent": "left"
+      },
+      {
+        "id": "pos-1",
+        "label": "销售登记",
+        "parent": "pos"
+      },
+      {
+        "id": "pos-2",
+        "label": "退货登记",
+        "parent": "pos"
+      },
+      {
+        "id": "pos-3",
+        "label": "商品查询",
+        "parent": "pos"
+      },
+      {
+        "id": "pos-4",
+        "label": "订单查询",
+        "parent": "pos"
+      },
+      {
+        "id": "pos-5",
+        "label": "库存查询",
+        "parent": "pos"
+      },
+      {
+        "id": "pos-6",
+        "label": "收款申请",
+        "parent": "pos"
+      },
+      {
+        "id": "right-1",
+        "label": "配送任务",
+        "parent": "right"
+      },
+      {
+        "id": "right-2",
+        "label": "配送状态",
+        "parent": "right"
+      },
+      {
+        "id": "right-3",
+        "label": "库存同步",
+        "parent": "right"
+      },
+      {
+        "id": "right-4",
+        "label": "供应查询",
+        "parent": "right"
+      },
+      {
+        "id": "right-5",
+        "label": "账单查询",
+        "parent": "right"
+      },
+      {
+        "id": "right-6",
+        "label": "结算回执",
+        "parent": "right"
+      },
+      {
+        "id": "master",
+        "label": "主档管理",
+        "parent": "core"
+      },
+      {
+        "id": "order",
+        "label": "订单处理",
+        "parent": "core"
+      },
+      {
+        "id": "stock",
+        "label": "库存处理",
+        "parent": "core"
+      },
+      {
+        "id": "collect",
+        "label": "收款处理",
+        "parent": "core"
+      },
+      {
+        "id": "fulfill",
+        "label": "履约处理",
+        "parent": "core"
+      },
+      {
+        "id": "analysis-1",
+        "label": "销售分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-2",
+        "label": "库存分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-3",
+        "label": "客户分析",
+        "parent": "analysis"
+      },
+      {
+        "id": "analysis-4",
+        "label": "订单分析",
+        "parent": "analysis"
+      }
+    ],
+    "relations": [
+      {
+        "from": "master",
+        "to": "order",
+        "label": "商品资料"
+      },
+      {
+        "from": "master",
+        "to": "stock",
+        "label": "库存主档"
+      },
+      {
+        "from": "order",
+        "to": "stock",
+        "label": "库存检查"
+      },
+      {
+        "from": "order",
+        "to": "collect",
+        "label": "收款申请"
+      },
+      {
+        "from": "stock",
+        "to": "fulfill",
+        "label": "出库任务"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/088/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

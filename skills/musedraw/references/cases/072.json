@@ -1,0 +1,321 @@
+{
+  "id": 72,
+  "number": "072",
+  "title": "园区服务平台能力全景",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "多层园区架构＋右侧文字解说",
+    "colorDirection": "单蓝长图、白资源叶与双实蓝保障柱",
+    "canvasHint": [
+      1550,
+      2050
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#2263B4",
+      "#E1ECFA",
+      "#B2C6E2",
+      "#BCCAD8",
+      "#526A84",
+      "#D5E3F6",
+      "#9FBDE3",
+      "#357ABD",
+      "#9CBCE0",
+      "#4A89C4",
+      "#B3C8E0"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "standard",
+        "title": ""
+      },
+      {
+        "id": "security",
+        "title": ""
+      },
+      {
+        "id": "users",
+        "title": "服务用户"
+      },
+      {
+        "id": "applications",
+        "title": "园区应用"
+      },
+      {
+        "id": "app-0",
+        "title": "园区经营"
+      },
+      {
+        "id": "app-1",
+        "title": "工程建设"
+      },
+      {
+        "id": "app-2",
+        "title": "招商服务"
+      },
+      {
+        "id": "app-3",
+        "title": "企业服务"
+      },
+      {
+        "id": "app-4",
+        "title": "园区协同"
+      },
+      {
+        "id": "platform",
+        "title": "智慧服务平台"
+      },
+      {
+        "id": "data",
+        "title": "园区数据资源"
+      },
+      {
+        "id": "resources",
+        "title": "运行资源"
+      },
+      {
+        "id": "network",
+        "title": "通信网络"
+      },
+      {
+        "id": "devices",
+        "title": "感知终端"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "users-1",
+        "label": "园区运营",
+        "parent": "users"
+      },
+      {
+        "id": "users-2",
+        "label": "企业用户",
+        "parent": "users"
+      },
+      {
+        "id": "users-3",
+        "label": "服务人员",
+        "parent": "users"
+      },
+      {
+        "id": "users-4",
+        "label": "访客用户",
+        "parent": "users"
+      },
+      {
+        "id": "app-0-1",
+        "label": "资源登记",
+        "parent": "app-0"
+      },
+      {
+        "id": "app-0-2",
+        "label": "空间运营",
+        "parent": "app-0"
+      },
+      {
+        "id": "app-0-3",
+        "label": "合同管理",
+        "parent": "app-0"
+      },
+      {
+        "id": "app-0-4",
+        "label": "服务评价",
+        "parent": "app-0"
+      },
+      {
+        "id": "app-1-1",
+        "label": "项目登记",
+        "parent": "app-1"
+      },
+      {
+        "id": "app-1-2",
+        "label": "计划管理",
+        "parent": "app-1"
+      },
+      {
+        "id": "app-1-3",
+        "label": "现场协作",
+        "parent": "app-1"
+      },
+      {
+        "id": "app-1-4",
+        "label": "竣工归档",
+        "parent": "app-1"
+      },
+      {
+        "id": "app-2-1",
+        "label": "线索登记",
+        "parent": "app-2"
+      },
+      {
+        "id": "app-2-2",
+        "label": "企业评审",
+        "parent": "app-2"
+      },
+      {
+        "id": "app-2-3",
+        "label": "签约管理",
+        "parent": "app-2"
+      },
+      {
+        "id": "app-2-4",
+        "label": "落地服务",
+        "parent": "app-2"
+      },
+      {
+        "id": "app-3-1",
+        "label": "企业档案",
+        "parent": "app-3"
+      },
+      {
+        "id": "app-3-2",
+        "label": "诉求管理",
+        "parent": "app-3"
+      },
+      {
+        "id": "app-3-3",
+        "label": "政策服务",
+        "parent": "app-3"
+      },
+      {
+        "id": "app-3-4",
+        "label": "共享资源",
+        "parent": "app-3"
+      },
+      {
+        "id": "app-4-1",
+        "label": "协同任务",
+        "parent": "app-4"
+      },
+      {
+        "id": "app-4-2",
+        "label": "活动管理",
+        "parent": "app-4"
+      },
+      {
+        "id": "app-4-3",
+        "label": "消息发布",
+        "parent": "app-4"
+      },
+      {
+        "id": "app-4-4",
+        "label": "运营统计",
+        "parent": "app-4"
+      },
+      {
+        "id": "platform-1",
+        "label": "协同任务",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-2",
+        "label": "消息服务",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-3",
+        "label": "接入管理",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-4",
+        "label": "开放共享",
+        "parent": "platform"
+      },
+      {
+        "id": "data-1",
+        "label": "基础数据",
+        "parent": "data"
+      },
+      {
+        "id": "data-2",
+        "label": "运营数据",
+        "parent": "data"
+      },
+      {
+        "id": "data-3",
+        "label": "设备数据",
+        "parent": "data"
+      },
+      {
+        "id": "data-4",
+        "label": "空间数据",
+        "parent": "data"
+      },
+      {
+        "id": "data-5",
+        "label": "公共数据",
+        "parent": "data"
+      },
+      {
+        "id": "resources-1",
+        "label": "通用计算",
+        "parent": "resources"
+      },
+      {
+        "id": "resources-2",
+        "label": "对象存储",
+        "parent": "resources"
+      },
+      {
+        "id": "resources-3",
+        "label": "运行监控",
+        "parent": "resources"
+      },
+      {
+        "id": "resources-4",
+        "label": "安全控制",
+        "parent": "resources"
+      },
+      {
+        "id": "network-1",
+        "label": "园区专网",
+        "parent": "network"
+      },
+      {
+        "id": "network-2",
+        "label": "设备网络",
+        "parent": "network"
+      },
+      {
+        "id": "network-3",
+        "label": "无线接入",
+        "parent": "network"
+      },
+      {
+        "id": "network-4",
+        "label": "外部互联",
+        "parent": "network"
+      },
+      {
+        "id": "devices-1",
+        "label": "环境感知",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-2",
+        "label": "视频感知",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-3",
+        "label": "位置感知",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-4",
+        "label": "控制设备",
+        "parent": "devices"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/072/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

@@ -1,0 +1,190 @@
+{
+  "id": 91,
+  "number": "091",
+  "title": "主档数据协同治理架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "业务总线存储治理横向三域",
+    "colorDirection": "靛蓝业务治理、灰紫题头、珊瑚适配与可读返回线",
+    "canvasHint": [
+      2050,
+      1260
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#596486",
+      "#384D9D",
+      "#BCCAD8",
+      "#F7DCDE",
+      "#D9A4A9",
+      "#DB7B7D",
+      "#BF5D60",
+      "#BCD2F0",
+      "#8DA6CC",
+      "#EEF2FA",
+      "#C1CAE0",
+      "#F4DCDD",
+      "#45599F",
+      "#354C95",
+      "#6D7C9E"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "systems",
+        "title": "业务系统"
+      },
+      {
+        "id": "bus",
+        "title": "数据交换适配"
+      },
+      {
+        "id": "governance",
+        "title": "主档治理"
+      },
+      {
+        "id": "quality",
+        "title": "主档管理"
+      },
+      {
+        "id": "workflow",
+        "title": "变更流程"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "systems-1",
+        "label": "采购系统",
+        "parent": "systems"
+      },
+      {
+        "id": "systems-2",
+        "label": "库存系统",
+        "parent": "systems"
+      },
+      {
+        "id": "systems-3",
+        "label": "客户系统",
+        "parent": "systems"
+      },
+      {
+        "id": "systems-4",
+        "label": "账务系统",
+        "parent": "systems"
+      },
+      {
+        "id": "adapter-0",
+        "label": "采购适配",
+        "parent": "bus"
+      },
+      {
+        "id": "adapter-1",
+        "label": "库存适配",
+        "parent": "bus"
+      },
+      {
+        "id": "adapter-2",
+        "label": "客户适配",
+        "parent": "bus"
+      },
+      {
+        "id": "adapter-3",
+        "label": "账务适配",
+        "parent": "bus"
+      },
+      {
+        "id": "master",
+        "label": "主档数据存储",
+        "parent": null
+      },
+      {
+        "id": "quality-1",
+        "label": "主档维护",
+        "parent": "quality"
+      },
+      {
+        "id": "quality-2",
+        "label": "主档查询",
+        "parent": "quality"
+      },
+      {
+        "id": "quality-3",
+        "label": "编码管理",
+        "parent": "quality"
+      },
+      {
+        "id": "quality-4",
+        "label": "版本管理",
+        "parent": "quality"
+      },
+      {
+        "id": "quality-5",
+        "label": "合并复核",
+        "parent": "quality"
+      },
+      {
+        "id": "quality-6",
+        "label": "质量检查",
+        "parent": "quality"
+      },
+      {
+        "id": "workflow-1",
+        "label": "变更申请",
+        "parent": "workflow"
+      },
+      {
+        "id": "workflow-2",
+        "label": "复核记录",
+        "parent": "workflow"
+      }
+    ],
+    "relations": [
+      {
+        "from": "systems-1",
+        "to": "adapter-0",
+        "label": ""
+      },
+      {
+        "from": "systems-3",
+        "to": "adapter-2",
+        "label": ""
+      },
+      {
+        "from": "adapter-0",
+        "to": "master",
+        "label": ""
+      },
+      {
+        "from": "adapter-2",
+        "to": "master",
+        "label": ""
+      },
+      {
+        "from": "master",
+        "to": "quality-1",
+        "label": ""
+      },
+      {
+        "from": "master",
+        "to": "quality-2",
+        "label": ""
+      },
+      {
+        "from": "quality-2",
+        "to": "systems-1",
+        "label": "主档分发"
+      },
+      {
+        "from": "workflow-2",
+        "to": "systems-4",
+        "label": "变更结果"
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/091/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

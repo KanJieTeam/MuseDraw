@@ -1,0 +1,207 @@
+{
+  "id": 76,
+  "number": "076",
+  "title": "阅读辅助服务架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "三层阅读AI平台＋内嵌三服务域",
+    "colorDirection": "深灰紫题头、淡紫服务叶、灰父域与浅蓝基础",
+    "canvasHint": [
+      1800,
+      1320
+    ],
+    "palette": [
+      "#26394A",
+      "#182235",
+      "#64557F",
+      "#F4F4F4",
+      "#FBE3DA",
+      "#F0C8B9",
+      "#F2F2F2",
+      "#E3E3E3",
+      "#EBE5F2",
+      "#DBC9EF",
+      "#E0E0E0",
+      "#D9EFF8",
+      "#B8DBEB"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "apps",
+        "title": "应用入口"
+      },
+      {
+        "id": "platform",
+        "title": "阅读服务平台"
+      },
+      {
+        "id": "manage",
+        "title": "平台管理"
+      },
+      {
+        "id": "speech",
+        "title": "语音服务"
+      },
+      {
+        "id": "knowledge",
+        "title": "知识服务"
+      },
+      {
+        "id": "document",
+        "title": "文档服务"
+      },
+      {
+        "id": "model",
+        "title": "模型接口"
+      },
+      {
+        "id": "base",
+        "title": "运行基础"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "apps-1",
+        "label": "文档朗读",
+        "parent": "apps"
+      },
+      {
+        "id": "apps-2",
+        "label": "段落问答",
+        "parent": "apps"
+      },
+      {
+        "id": "apps-3",
+        "label": "学习笔记",
+        "parent": "apps"
+      },
+      {
+        "id": "manage-1",
+        "label": "账号管理",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-2",
+        "label": "内容权限",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-3",
+        "label": "任务管理",
+        "parent": "manage"
+      },
+      {
+        "id": "manage-4",
+        "label": "模型配置",
+        "parent": "manage"
+      },
+      {
+        "id": "speech-1",
+        "label": "语音识别",
+        "parent": "speech"
+      },
+      {
+        "id": "speech-2",
+        "label": "语音合成",
+        "parent": "speech"
+      },
+      {
+        "id": "speech-3",
+        "label": "语音转写",
+        "parent": "speech"
+      },
+      {
+        "id": "speech-4",
+        "label": "播报控制",
+        "parent": "speech"
+      },
+      {
+        "id": "knowledge-1",
+        "label": "段落检索",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-2",
+        "label": "片段关联",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-3",
+        "label": "问答组装",
+        "parent": "knowledge"
+      },
+      {
+        "id": "knowledge-4",
+        "label": "引用定位",
+        "parent": "knowledge"
+      },
+      {
+        "id": "document-1",
+        "label": "页面解析",
+        "parent": "document"
+      },
+      {
+        "id": "document-2",
+        "label": "文字提取",
+        "parent": "document"
+      },
+      {
+        "id": "document-3",
+        "label": "章节切分",
+        "parent": "document"
+      },
+      {
+        "id": "document-4",
+        "label": "笔记归档",
+        "parent": "document"
+      },
+      {
+        "id": "model-1",
+        "label": "本地模型适配",
+        "parent": "model"
+      },
+      {
+        "id": "model-2",
+        "label": "外部模型适配",
+        "parent": "model"
+      },
+      {
+        "id": "base-0",
+        "label": "计算资源",
+        "parent": "base"
+      },
+      {
+        "id": "base-1",
+        "label": "文档存储",
+        "parent": "base"
+      },
+      {
+        "id": "base-2",
+        "label": "组件框架",
+        "parent": "base"
+      },
+      {
+        "id": "base-3",
+        "label": "网络接口",
+        "parent": "base"
+      },
+      {
+        "id": "base-4",
+        "label": "任务统计",
+        "parent": "base"
+      },
+      {
+        "id": "base-5",
+        "label": "设备接口",
+        "parent": "base"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/076/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

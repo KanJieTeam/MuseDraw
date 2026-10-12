@@ -11,7 +11,7 @@
   "svg": "cases/022/diagram.svg",
   "png": "cases/022/diagram.png",
   "drawio": "cases/022/diagram.drawio",
-  "prompt": "用 MuseDraw 画“媒体处理组件架构”。采用编排中心＋下部三分支组件，炭黑灰白。分区：媒体处理服务。模块：原始媒体、媒体接入、媒体元数据、媒体资源库、处理编排、任务管理、内容检查、媒体分析。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "prompt": "用 MuseDraw 介绍“媒体处理组件架构”，画一张通用参考图。原始媒体接入后进入资源库并形成元数据，接入同时交给处理编排，由它组织任务管理、内容检查和媒体分析。用于技术介绍，希望围绕编排中心讲清各组件职责。",
   "geometry": {
     "number": 22,
     "referenceId": "RQ-0017",
@@ -387,5 +387,7 @@
     "url": "https://icepanel.io/blog/design-youtube-using-icepanel"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“媒体处理组件架构”。采用编排中心＋下部三分支组件，炭黑灰白。分区：媒体处理服务。模块：原始媒体、媒体接入、媒体元数据、媒体资源库、处理编排、任务管理、内容检查、媒体分析。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "reference": "cases/022/design.json"
 }

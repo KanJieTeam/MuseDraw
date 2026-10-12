@@ -2,7 +2,25 @@
 
 [简体中文](usage.zh-CN.md) · [Back to README](../README.en.md)
 
-MuseDraw is a Skill for an existing AI agent. The agent understands your request; the Skill supplies architecture design decisions, original cases and a file-generation workflow. The first release covers software architecture only.
+MuseDraw is a Skill for an existing AI agent. The agent understands your request; the Skill supplies architecture design decisions, original cases and a file-generation workflow. The first release covers software architecture, not only the 100 subjects in the gallery.
+
+## Start with a few sentences
+
+```text
+Use MuseDraw to draw a customer-engagement marketing application architecture.
+Highlight channels, campaigns, content and messaging. Make it a clear, restrained
+generic reference for a product proposal.
+```
+
+Supply the goal, important business content and known relationships; MuseDraw
+handles composition, color, layout and connectors. Coordinates, hex palettes and
+a complete node list are not prerequisites. Clarify only missing material facts
+about a real system. A new subject does not need a matching gallery case.
+
+Gallery prompts are short example briefs, not a promise of pixel-identical output
+across models. The 100 cases teach design choices rather than define a template
+allowlist. For an explicit reproduction request, the agent may read the selected
+production reference without making the user type that specification.
 
 ## 1. Load the actual Skill
 

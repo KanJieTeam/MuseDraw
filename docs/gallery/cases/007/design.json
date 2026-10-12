@@ -11,7 +11,7 @@
   "svg": "cases/007/diagram.svg",
   "png": "cases/007/diagram.png",
   "drawio": "cases/007/diagram.drawio",
-  "prompt": "用 MuseDraw 画“存算分离分析引擎”。采用上下分层与双计算组，墨绿手绘。分区：元数据服务、计算集群甲、计算集群乙、共享持久存储。模块：目录服务甲、目录服务乙、目录服务丙、共享元数据接口、计算节点一、计算节点二、计算节点三、计算节点四、计算节点五、计算节点六、数据文件、列式分段、索引文件、快照记录。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "prompt": "用 MuseDraw 画“存算分离分析引擎”的通用参考组件图，给技术分享用。两个计算集群通过共享元数据接口获取目录信息，并访问共享持久存储中的数据分段和索引。想把计算与存储的分工讲直观，带一点克制的手绘感。",
   "geometry": {
     "number": 7,
     "referenceId": "CQ-0001",
@@ -563,5 +563,7 @@
     "url": "https://doris.apache.org/zh-CN/docs/dev/features-architecture/system-architecture/"
   },
   "license": "Apache-2.0",
-  "author": "MuseDraw contributors"
+  "author": "MuseDraw contributors",
+  "productionBrief": "用 MuseDraw 画“存算分离分析引擎”。采用上下分层与双计算组，墨绿手绘。分区：元数据服务、计算集群甲、计算集群乙、共享持久存储。模块：目录服务甲、目录服务乙、目录服务丙、共享元数据接口、计算节点一、计算节点二、计算节点三、计算节点四、计算节点五、计算节点六、数据文件、列式分段、索引文件、快照记录。保留父子归属与必要关系，图中只有标题、标签和 MuseDraw 标识，不增加说明段落。",
+  "reference": "cases/007/design.json"
 }

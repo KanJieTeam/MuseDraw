@@ -1,0 +1,119 @@
+{
+  "id": 22,
+  "number": "022",
+  "title": "媒体处理组件架构",
+  "view": "component",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "编排中心＋下部三分支组件",
+    "colorDirection": "炭黑灰白",
+    "canvasHint": [
+      1700,
+      1110
+    ],
+    "palette": [
+      "#15191F",
+      "#F0F2F5",
+      "#9FB2A9",
+      "#23282C",
+      "#49514D",
+      "#D4DDD8",
+      "#27332C",
+      "#516457",
+      "#EEF2EF",
+      "#2D3236",
+      "#59615E",
+      "#29342F"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "service",
+        "title": "媒体处理服务"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "raw",
+        "label": "原始媒体",
+        "parent": null
+      },
+      {
+        "id": "worker",
+        "label": "媒体接入",
+        "parent": null
+      },
+      {
+        "id": "metadata",
+        "label": "媒体元数据",
+        "parent": null
+      },
+      {
+        "id": "repository",
+        "label": "媒体资源库",
+        "parent": null
+      },
+      {
+        "id": "orchestrator",
+        "label": "处理编排",
+        "parent": null
+      },
+      {
+        "id": "job",
+        "label": "任务管理",
+        "parent": null
+      },
+      {
+        "id": "policy",
+        "label": "内容检查",
+        "parent": null
+      },
+      {
+        "id": "analysis",
+        "label": "媒体分析",
+        "parent": null
+      }
+    ],
+    "relations": [
+      {
+        "from": "raw",
+        "to": "worker",
+        "label": ""
+      },
+      {
+        "from": "worker",
+        "to": "repository",
+        "label": ""
+      },
+      {
+        "from": "repository",
+        "to": "metadata",
+        "label": ""
+      },
+      {
+        "from": "worker",
+        "to": "orchestrator",
+        "label": ""
+      },
+      {
+        "from": "orchestrator",
+        "to": "job",
+        "label": ""
+      },
+      {
+        "from": "orchestrator",
+        "to": "policy",
+        "label": ""
+      },
+      {
+        "from": "orchestrator",
+        "to": "analysis",
+        "label": ""
+      }
+    ]
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/022/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

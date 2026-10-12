@@ -1,0 +1,247 @@
+{
+  "id": 61,
+  "number": "061",
+  "title": "设备协同服务能力框架",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "三横层和业务域嵌套矩阵",
+    "colorDirection": "鼠尾草业务域、蓝灰数据、暖砂设备与白叶",
+    "canvasHint": [
+      1850,
+      1330
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#3F5A50",
+      "#F2F2F2",
+      "#B7B7B7",
+      "#DFE8EE",
+      "#9BBED9",
+      "#BCCAD8",
+      "#EEF1F3",
+      "#BDC5C7",
+      "#E7EEE9",
+      "#AAD0B8",
+      "#A5BDAE",
+      "#D9E4DF",
+      "#AABCB2",
+      "#48554F",
+      "#F4EFE5",
+      "#C5B59A",
+      "#A7B8D2",
+      "#D6C2A8"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "frame",
+        "title": "服务能力范围"
+      },
+      {
+        "id": "persist",
+        "title": "持久层"
+      },
+      {
+        "id": "cache",
+        "title": "高速缓存层"
+      },
+      {
+        "id": "business",
+        "title": "业务服务层"
+      },
+      {
+        "id": "entry",
+        "title": "接口接入"
+      },
+      {
+        "id": "core",
+        "title": "业务功能域"
+      },
+      {
+        "id": "shared",
+        "title": ""
+      },
+      {
+        "id": "plugins",
+        "title": "设备插件"
+      },
+      {
+        "id": "log-support",
+        "title": "运行支撑"
+      },
+      {
+        "id": "devices",
+        "title": "终端设备层"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "persist-1",
+        "label": "关系数据",
+        "parent": "persist"
+      },
+      {
+        "id": "persist-2",
+        "label": "事件归档",
+        "parent": "persist"
+      },
+      {
+        "id": "persist-3",
+        "label": "状态快照",
+        "parent": "persist"
+      },
+      {
+        "id": "cache-1",
+        "label": "设备状态",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-2",
+        "label": "会话缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-3",
+        "label": "规则缓存",
+        "parent": "cache"
+      },
+      {
+        "id": "cache-4",
+        "label": "共享字典",
+        "parent": "cache"
+      },
+      {
+        "id": "entry-1",
+        "label": "网页入口",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-2",
+        "label": "开放接口",
+        "parent": "entry"
+      },
+      {
+        "id": "entry-3",
+        "label": "设备接入",
+        "parent": "entry"
+      },
+      {
+        "id": "core-1",
+        "label": "设备管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-2",
+        "label": "任务管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-3",
+        "label": "配置管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-4",
+        "label": "告警管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-5",
+        "label": "用户管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-6",
+        "label": "位置管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-7",
+        "label": "事件管理",
+        "parent": "core"
+      },
+      {
+        "id": "core-8",
+        "label": "资产管理",
+        "parent": "core"
+      },
+      {
+        "id": "shared-1",
+        "label": "日志",
+        "parent": "shared"
+      },
+      {
+        "id": "shared-2",
+        "label": "权限",
+        "parent": "shared"
+      },
+      {
+        "id": "shared-3",
+        "label": "消息",
+        "parent": "shared"
+      },
+      {
+        "id": "shared-4",
+        "label": "调度",
+        "parent": "shared"
+      },
+      {
+        "id": "shared-5",
+        "label": "审计",
+        "parent": "shared"
+      },
+      {
+        "id": "plugins-1",
+        "label": "协议适配",
+        "parent": "plugins"
+      },
+      {
+        "id": "plugins-2",
+        "label": "采集插件",
+        "parent": "plugins"
+      },
+      {
+        "id": "plugins-3",
+        "label": "指令插件",
+        "parent": "plugins"
+      },
+      {
+        "id": "plugins-4",
+        "label": "模拟插件",
+        "parent": "plugins"
+      },
+      {
+        "id": "devices-1",
+        "label": "环境终端",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-2",
+        "label": "定位终端",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-3",
+        "label": "控制终端",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-4",
+        "label": "监测终端",
+        "parent": "devices"
+      },
+      {
+        "id": "devices-5",
+        "label": "移动终端",
+        "parent": "devices"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/061/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}

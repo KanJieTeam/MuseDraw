@@ -1,0 +1,120 @@
+{
+  "id": 58,
+  "number": "058",
+  "title": "智能助手分层能力体系",
+  "view": "capability",
+  "scope": "original-generic-reference",
+  "design": {
+    "composition": "四层横带＋三处短上行箭头",
+    "colorDirection": "深青题头与浅青白叶",
+    "canvasHint": [
+      1450,
+      1390
+    ],
+    "palette": [
+      "#273A4D",
+      "#182235",
+      "#108E7C",
+      "#D7ECE6",
+      "#F5FBF8",
+      "#DAE8E2",
+      "#486B62"
+    ]
+  },
+  "exampleContent": {
+    "groups": [
+      {
+        "id": "portal",
+        "title": "业务入口"
+      },
+      {
+        "id": "assistant",
+        "title": "助手应用"
+      },
+      {
+        "id": "platform",
+        "title": "助手平台"
+      },
+      {
+        "id": "models",
+        "title": "模型资源"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "portal-1",
+        "label": "企业门户",
+        "parent": "portal"
+      },
+      {
+        "id": "portal-2",
+        "label": "任务工作台",
+        "parent": "portal"
+      },
+      {
+        "id": "portal-3",
+        "label": "协同办公",
+        "parent": "portal"
+      },
+      {
+        "id": "assistant-1",
+        "label": "服务助手",
+        "parent": "assistant"
+      },
+      {
+        "id": "assistant-2",
+        "label": "知识助手",
+        "parent": "assistant"
+      },
+      {
+        "id": "assistant-3",
+        "label": "流程助手",
+        "parent": "assistant"
+      },
+      {
+        "id": "platform-1",
+        "label": "助手开发",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-2",
+        "label": "助手管理",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-3",
+        "label": "工具组件",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-4",
+        "label": "规则服务",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-5",
+        "label": "知识服务",
+        "parent": "platform"
+      },
+      {
+        "id": "platform-6",
+        "label": "数据服务",
+        "parent": "platform"
+      },
+      {
+        "id": "models-1",
+        "label": "自托管模型",
+        "parent": "models"
+      },
+      {
+        "id": "models-2",
+        "label": "托管模型接口",
+        "parent": "models"
+      }
+    ],
+    "relations": []
+  },
+  "previewUrl": "https://kanjieteam.github.io/MuseDraw/docs/gallery/cases/058/diagram.png",
+  "license": "Apache-2.0",
+  "author": "MuseDraw contributors"
+}
