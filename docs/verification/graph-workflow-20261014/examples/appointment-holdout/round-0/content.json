@@ -1,0 +1,78 @@
+{
+  "title": "医院预约系统（通用参考）",
+  "groups": [],
+  "nodes": [
+    {
+      "id": "patient_portal",
+      "label": "患者门户",
+      "kind": "client",
+      "parent": null,
+      "focus": false
+    },
+    {
+      "id": "appointment_service",
+      "label": "预约服务",
+      "kind": "service",
+      "parent": null,
+      "focus": false
+    },
+    {
+      "id": "schedule_store",
+      "label": "排班库",
+      "kind": "store",
+      "parent": null,
+      "focus": false
+    },
+    {
+      "id": "appointment_store",
+      "label": "预约库",
+      "kind": "store",
+      "parent": null,
+      "focus": false
+    },
+    {
+      "id": "notification_service",
+      "label": "通知服务",
+      "kind": "service",
+      "parent": null,
+      "focus": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-c9601af292a11ae6",
+      "from": "patient_portal",
+      "to": "appointment_service",
+      "label": "访问",
+      "direction": "forward"
+    },
+    {
+      "id": "e-d71bcc9997b88a2f",
+      "from": "appointment_service",
+      "to": "schedule_store",
+      "label": "查询",
+      "direction": "forward"
+    },
+    {
+      "id": "e-65b6df3570453e89",
+      "from": "appointment_service",
+      "to": "appointment_store",
+      "label": "写入",
+      "direction": "forward"
+    },
+    {
+      "id": "e-4c8f0ff725776657",
+      "from": "appointment_service",
+      "to": "notification_service",
+      "label": "调用",
+      "direction": "forward"
+    },
+    {
+      "id": "e-b8ca265f69aa5d51",
+      "from": "notification_service",
+      "to": "appointment_store",
+      "label": "读取",
+      "direction": "forward"
+    }
+  ]
+}

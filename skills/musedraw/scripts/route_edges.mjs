@@ -98,7 +98,7 @@ function simplify(points) {
   return result;
 }
 
-export function orthogonalRoute(startPort, endPort, obstacles, width, height) {
+export function orthogonalRoute(startPort, endPort, obstacles, width, height, policy = {}) {
   const start = startPort.point, end = endPort.point;
   const stub = port => port.point.map((v, i) => v + port.normal[i] * 8);
   const from = stub(startPort), to = stub(endPort);
@@ -106,8 +106,30 @@ export function orthogonalRoute(startPort, endPort, obstacles, width, height) {
   const clear = (p, q) => bounded(p) && bounded(q) && obstacles.every(o => !intersectsBox(p, q, o));
   if (!clear(start, from) || !clear(to, end)) throw Error('A relationship port has no clear exit');
   const unique = (values, max) => [...new Set(values.filter(v => v >= 4 && v <= max - 4))].sort((a, b) => a - b);
-  const xs = unique([8, width - 8, from[0], to[0], ...obstacles.flatMap(o => [o[0] - 8, o[0] + o[2] + 8])], width);
-  const ys = unique([8, height - 8, from[1], to[1], ...obstacles.flatMap(o => [o[1] - 8, o[1] + o[3] + 8])], height);
+  const prior = policy.priorPaths ?? [];
+  const priorPoints = prior.flatMap(points => points);
+  const xs = unique([8, width - 8, from[0], to[0], ...obstacles.flatMap(o => [o[0] - 8, o[0] + o[2] + 8]), ...priorPoints.flatMap(p => [p[0] - 12, p[0], p[0] + 12])], width);
+  const ys = unique([8, height - 8, from[1], to[1], ...obstacles.flatMap(o => [o[1] - 8, o[1] + o[3] + 8]), ...priorPoints.flatMap(p => [p[1] - 12, p[1], p[1] + 12])], height);
+  function interaction(p, q) {
+    let penalty = 0;
+    for (const points of prior) for (let k = 1; k < points.length; k++) {
+      const a = points[k - 1], b = points[k];
+      const horizontal = p[1] === q[1], oldHorizontal = a[1] === b[1];
+      if (horizontal === oldHorizontal) {
+        const axis = horizontal ? 0 : 1, fixed = 1 - axis;
+        if (p[fixed] === a[fixed] && Math.min(Math.max(p[axis],q[axis]),Math.max(a[axis],b[axis])) > Math.max(Math.min(p[axis],q[axis]),Math.min(a[axis],b[axis])) + .01)
+          return Infinity; // Never silently share independent relation lanes.
+      } else {
+        const x = horizontal ? a[0] : p[0], y = horizontal ? p[1] : a[1];
+        if (x >= Math.min(p[0],q[0]) && x <= Math.max(p[0],q[0]) && y >= Math.min(p[1],q[1]) && y <= Math.max(p[1],q[1]) &&
+            x >= Math.min(a[0],b[0]) && x <= Math.max(a[0],b[0]) && y >= Math.min(a[1],b[1]) && y <= Math.max(a[1],b[1])) {
+          if (Math.hypot(x-a[0],y-a[1]) < 7 || Math.hypot(x-b[0],y-b[1]) < 7) return Infinity;
+          penalty += policy.crossingCost ?? 64; // Caller must render a non-joining bridge.
+        }
+      }
+    }
+    return penalty;
+  }
   if (xs.length * ys.length > 160000) throw Error('Routing grid is too dense; split the detailed view');
   const key = (i, j, axis) => `${i},${j},${axis}`;
   const startAxis = startPort.normal[0] ? 0 : 1;
@@ -133,7 +155,7 @@ export function orthogonalRoute(startPort, endPort, obstacles, width, height) {
       const q = [xs[u], ys[v]];
       if (!clear(p, q)) continue;
       const nextKey = key(u, v, nextAxis);
-      const cost = current.cost + Math.abs(q[0] - p[0]) + Math.abs(q[1] - p[1]) + (axis === nextAxis ? 0 : 24);
+      const cost = current.cost + Math.abs(q[0] - p[0]) + Math.abs(q[1] - p[1]) + (axis === nextAxis ? 0 : 24) + interaction(p,q);
       if (cost >= (best.get(nextKey) ?? Infinity)) continue;
       best.set(nextKey, cost); previous.set(nextKey, current.key);
       queue.push({i: u, j: v, axis: nextAxis, cost, key: nextKey});

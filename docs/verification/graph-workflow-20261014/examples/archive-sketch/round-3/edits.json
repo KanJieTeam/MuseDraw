@@ -1,0 +1,8 @@
+{
+  "operations": [
+    {
+      "op": "remove_node",
+      "id": "attachment_store"
+    }
+  ]
+}

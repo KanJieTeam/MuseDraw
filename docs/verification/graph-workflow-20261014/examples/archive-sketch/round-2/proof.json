@@ -1,0 +1,48 @@
+{
+  "round": 2,
+  "prompt": "增加归档检索服务，审核端访问它，它读取档案库。其他内容和风格不变。",
+  "directory": "examples/archive-sketch/round-2",
+  "passed": true,
+  "rendered": true,
+  "nodeCount": 7,
+  "edgeCount": 8,
+  "toolName": "edit_graph",
+  "checks": {
+    "passed": true,
+    "textCount": 17,
+    "containerBoundsChecked": true,
+    "uniqueIds": true,
+    "vectorOnly": true,
+    "inputPolicy": "restricted-static-local-svg",
+    "composition": "flow",
+    "style": "native-sketch",
+    "nodeCount": 7,
+    "edgeCount": 8,
+    "contentSha256": "39b15ee48b79ef861b427c03048a9b25075f0d823b677d2d58dc3045f83b6afa",
+    "svgSha256": "36ce8766d2834b29a111a82da7c0e120218e2d7784fe983bdbff5a454c381dd6",
+    "deterministicSource": true,
+    "visualAcceptance": "pending",
+    "diagnosticCounts": {
+      "outside": 0,
+      "collisions": 0,
+      "overflow": 0,
+      "edgeTextCrossings": 0,
+      "warnings": 0
+    },
+    "scopeLimits": [
+      "Professional aesthetic acceptance pending",
+      "Other models untested",
+      "No universal topology or cross-platform font guarantee"
+    ]
+  },
+  "contentChecks": {
+    "passed": true,
+    "nodeCount": 7,
+    "edgeCount": 8
+  },
+  "usage": {
+    "prompt_tokens": 6764,
+    "completion_tokens": 133,
+    "total_tokens": 6897
+  }
+}

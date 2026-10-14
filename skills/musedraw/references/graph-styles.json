@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "styles": {
+    "手绘线稿": {
+      "id": "native-sketch",
+      "defaultComposition": "flow",
+      "canvas": "#FFFFFF",
+      "ink": "#182B25",
+      "accent": "#176849",
+      "muted": "#64796D",
+      "boundary": "#91A79B",
+      "control": "#F5F8F2",
+      "data": "#EEF6F1",
+      "domain": "#FFFFFF",
+      "textFont": "Noto Sans SC, PingFang SC, Microsoft YaHei UI, Arial, sans-serif",
+      "technicalFont": "Comic Sans MS, Segoe Print, Noto Sans SC, sans-serif",
+      "bodySize": 24,
+      "titleSize": 40,
+      "lineWidth": 2,
+      "outline": "seeded-pencil",
+      "storeTreatment": "hatched-cylinder",
+      "clientTreatment": "open-person"
+    },
+    "终端色域": {
+      "id": "terminal-fields",
+      "defaultComposition": "planes",
+      "canvas": "#FFFFFF",
+      "ink": "#182235",
+      "accent": "#235BCC",
+      "muted": "#6C6D89",
+      "boundary": "#A8ADB9",
+      "control": "#FFE3A4",
+      "data": "#E5F1FA",
+      "domain": "#F1F3F5",
+      "textFont": "Noto Sans SC, PingFang SC, Microsoft YaHei UI, Arial, sans-serif",
+      "technicalFont": "Consolas, Liberation Mono, Noto Sans Mono, monospace",
+      "bodySize": 24,
+      "titleSize": 40,
+      "lineWidth": 2,
+      "outline": "clean",
+      "storeTreatment": "open-cylinder",
+      "clientTreatment": "terminal"
+    }
+  }
+}

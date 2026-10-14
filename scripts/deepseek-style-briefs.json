@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "new-procurement",
+      "title": "企业采购系统架构",
+      "style": "enterprise-blue",
+      "view": "capability",
+      "requireNoEdges": true,
+      "prompt": "画一张“企业采购系统架构”，包括员工入口、采购审批、供应商资质与档案、订单和财务对接，用于方案汇报。墨蓝风格。",
+      "requirements": [
+        {"label": "员工入口", "anyOf": ["员工入口", "员工工作台", "员工门户"]},
+        {"label": "采购审批", "anyOf": ["采购审批", "采购审核", "审批"]},
+        {"label": "供应商资质与档案", "anyOf": ["供应商资质与档案"], "allOf": ["资质", "档案"]},
+        {"label": "订单", "anyOf": ["订单"]},
+        {"label": "财务对接", "anyOf": ["财务对接", "财务接口", "财务集成"]}
+      ]
+    },
+    {
+      "id": "new-equipment-reservation",
+      "title": "实验室设备预约系统",
+      "style": "technical-ink",
+      "view": "capability",
+      "prompt": "用石墨风格画“实验室设备预约系统”的通用参考图。面向校内项目介绍，包含设备目录、预约申请、审批、使用记录、维护日历和收费结算。只表达能力归属，不补调用线。",
+      "requirements": [
+        {"label": "设备目录", "anyOf": ["设备目录", "设备资源目录"]},
+        {"label": "预约申请", "anyOf": ["预约申请", "设备预约"]},
+        {"label": "审批", "anyOf": ["审批", "审核"]},
+        {"label": "使用记录", "anyOf": ["使用记录", "使用日志"]},
+        {"label": "维护日历", "anyOf": ["维护日历", "维保日历"]},
+        {"label": "收费结算", "anyOf": ["收费结算", "费用结算"]}
+      ],
+      "requireNoEdges": true
+    },
+    {
+      "id": "new-long-labels",
+      "title": "联合项目资料归档平台",
+      "style": "editorial-sand",
+      "view": "capability",
+      "requireNoEdges": true,
+      "prompt": "用暖砂风格画“联合项目资料归档平台”的通用参考图，用于产品方案。包含跨单位项目资料提交与版本确认、参与人员授权范围及到期撤销、档案目录、验收材料、全文检索。保留这些名称，不为排版缩短文字。",
+      "requiredLabels": ["跨单位项目资料提交与版本确认", "参与人员授权范围及到期撤销", "档案目录", "验收材料", "全文检索"]
+    },
+    {
+      "id": "context-ink-blue",
+      "title": "供应商资料协作平台",
+      "style": "enterprise-blue",
+      "prompt": "墨蓝风格。",
+      "contextScene": {
+        "title": "供应商资料协作平台",
+        "view": "component",
+        "sections": [
+          {"id": "access", "title": "协作入口", "groups": [{"id": "client", "title": "人员与客户端", "items": [{"id": "employee", "label": "员工工作台"}, {"id": "supplier", "label": "供应商资料提交页"}]}]},
+          {"id": "service", "title": "资料协作", "groups": [{"id": "review", "title": "受控审核", "items": [{"id": "qualification", "label": "供应商资质与档案"}, {"id": "approval", "label": "采购审批"}]}]}
+        ],
+        "edges": [{"from": "supplier", "to": "qualification", "direction": "forward"}]
+      }
+    },
+    {
+      "id": "context-airy",
+      "title": "项目证据归档",
+      "style": "enterprise-blue",
+      "variant": "quiet",
+      "prompt": "还是墨蓝，轻一点，内容别改。",
+      "contextScene": {
+        "title": "项目证据归档",
+        "view": "capability",
+        "sections": [{"id": "archive", "title": "归档工作", "groups": [{"id": "evidence", "title": "交付资料", "items": [{"id": "files", "label": "经审核的项目资料"}, {"id": "signatures", "label": "签字与确认记录"}, {"id": "versions", "label": "版本差异"}]}]}],
+        "edges": []
+      }
+    },
+    {
+      "id": "context-compact",
+      "title": "项目证据归档",
+      "style": "enterprise-blue",
+      "variant": "compact",
+      "density": "compact",
+      "prompt": "墨蓝风格，紧凑一些，文字不要缩小，内容不变。",
+      "contextScene": {
+        "title": "项目证据归档",
+        "view": "capability",
+        "sections": [{"id": "archive", "title": "归档工作", "groups": [{"id": "evidence", "title": "交付资料", "items": [{"id": "files", "label": "经审核的项目资料"}, {"id": "signatures", "label": "签字与确认记录"}, {"id": "versions", "label": "版本差异"}]}]}],
+        "edges": []
+      }
+    }
+  ]
+}

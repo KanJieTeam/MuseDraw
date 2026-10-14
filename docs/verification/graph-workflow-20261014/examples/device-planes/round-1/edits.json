@@ -1,0 +1,9 @@
+{
+  "operations": [
+    {
+      "op": "rename_node",
+      "id": "ops_console",
+      "label": "运维工作台"
+    }
+  ]
+}

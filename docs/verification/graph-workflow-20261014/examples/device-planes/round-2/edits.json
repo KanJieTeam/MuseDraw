@@ -1,0 +1,21 @@
+{
+  "operations": [
+    {
+      "op": "add_node",
+      "node": {
+        "id": "log_store",
+        "label": "运行日志库",
+        "kind": "store",
+        "parent": "data"
+      }
+    },
+    {
+      "op": "add_edge",
+      "edge": {
+        "from": "data_processing",
+        "to": "log_store",
+        "label": "写入"
+      }
+    }
+  ]
+}

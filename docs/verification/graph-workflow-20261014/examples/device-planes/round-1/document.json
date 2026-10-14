@@ -1,0 +1,116 @@
+{
+  "scene": {
+    "title": "设备数据平台通用参考架构",
+    "groups": [
+      {
+        "id": "control",
+        "label": "控制平面",
+        "role": "control"
+      },
+      {
+        "id": "data",
+        "label": "数据平面",
+        "role": "data"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "ops_console",
+        "label": "运维工作台",
+        "kind": "client",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "device_mgmt",
+        "label": "设备管理",
+        "kind": "service",
+        "parent": "control",
+        "focus": false
+      },
+      {
+        "id": "config_service",
+        "label": "配置服务",
+        "kind": "service",
+        "parent": "control",
+        "focus": false
+      },
+      {
+        "id": "device",
+        "label": "设备端",
+        "kind": "client",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "ingest_service",
+        "label": "接入服务",
+        "kind": "service",
+        "parent": "data",
+        "focus": false
+      },
+      {
+        "id": "data_processing",
+        "label": "数据处理",
+        "kind": "service",
+        "parent": "data",
+        "focus": false
+      },
+      {
+        "id": "ts_store",
+        "label": "时序库",
+        "kind": "store",
+        "parent": "data",
+        "focus": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "e-1a31d781db657912",
+        "from": "ops_console",
+        "to": "device_mgmt",
+        "label": "访问",
+        "direction": "forward"
+      },
+      {
+        "id": "e-6519a85d0551bc90",
+        "from": "device_mgmt",
+        "to": "config_service",
+        "label": "调用",
+        "direction": "forward"
+      },
+      {
+        "id": "e-0ea38822b9cc4a1c",
+        "from": "config_service",
+        "to": "ingest_service",
+        "label": "下发配置",
+        "direction": "forward"
+      },
+      {
+        "id": "e-9de85f6c6cc83cad",
+        "from": "device",
+        "to": "ingest_service",
+        "label": "送数据",
+        "direction": "forward"
+      },
+      {
+        "id": "e-8a808d74edf190d3",
+        "from": "ingest_service",
+        "to": "data_processing",
+        "label": "调用",
+        "direction": "forward"
+      },
+      {
+        "id": "e-6c57027339da5635",
+        "from": "data_processing",
+        "to": "ts_store",
+        "label": "写入",
+        "direction": "forward"
+      }
+    ]
+  },
+  "presentation": {
+    "style": "终端色域",
+    "composition": "planes"
+  }
+}

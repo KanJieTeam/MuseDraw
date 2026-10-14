@@ -1,0 +1,9 @@
+{
+  "operations": [
+    {
+      "op": "rename_node",
+      "id": "records_service",
+      "label": "资料接入"
+    }
+  ]
+}

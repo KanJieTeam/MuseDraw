@@ -49,6 +49,13 @@ use the selected source/production reference, not a thousand-word user prompt.
 
 ## Choose the view
 
+For component/integration requests in **手绘线稿** or **终端色域**, use
+[the semantic graph workflow](references/graph-workflow.md). The agent supplies
+components, groups, relationships and a composition choice; the installed code
+draws and checks the figure. On follow-up edits, return validated operations on
+the existing graph rather than regenerating coordinates or the whole document.
+This route is reusable across topics and is not backed by a case-specific script.
+
 - **What belongs where?** Read [capability-map](references/capability-map.md).
   Use layers, parallel domains and cross-cutting support. The bundled Python
   renderer implements one data-platform skeleton, not a general layout engine.
@@ -66,6 +73,12 @@ Deliver the view the user needs, not two alternatives by default. For style-only
 changes, read [visual-decisions](references/visual-decisions.md).
 
 ## Make the diagram
+
+For exact replay or transferring a chosen style to different content, read
+[reproducibility](references/reproducibility.md). Keep source replay, new-content
+generation, cross-model tests and human visual acceptance as separate outcomes.
+Do not promise that a short prompt will reproduce a hand-finished gallery image
+pixel-for-pixel, or that a host without file/tool execution can run this Skill.
 
 1. Extract the components or capabilities, groups, known relationships and scope
    from the brief. If a repository is supplied, inspect the relevant actual
@@ -107,6 +120,15 @@ changes, read [visual-decisions](references/visual-decisions.md).
 
 Paths below are relative to a repository checkout. When installed independently,
 use the scripts inside this skill folder and the host's existing render tools.
+
+For the semantic graph route above:
+
+```sh
+node <skill>/scripts/render_graph.mjs brief.json new-output --playwright <existing-module> --browser <existing-browser>
+```
+
+Its small scene format, two composition strategies, styles, edit operations and
+limits are documented in [graph-workflow](references/graph-workflow.md).
 
 For a content-driven grouped view, the agent writes a small semantic scene,
 not coordinates: `title`, `view`, `sections` containing `title` and `groups`,

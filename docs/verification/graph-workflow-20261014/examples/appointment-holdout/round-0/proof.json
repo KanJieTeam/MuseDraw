@@ -1,0 +1,48 @@
+{
+  "round": 0,
+  "prompt": "用 MuseDraw 手绘线稿画医院预约系统的通用参考图：患者门户访问预约服务，预约服务查询排班库并写预约库，还调用通知服务；通知服务读取预约库。",
+  "directory": "examples/appointment-holdout/round-0",
+  "passed": true,
+  "rendered": true,
+  "nodeCount": 5,
+  "edgeCount": 5,
+  "toolName": "create_graph",
+  "checks": {
+    "passed": true,
+    "textCount": 12,
+    "containerBoundsChecked": true,
+    "uniqueIds": true,
+    "vectorOnly": true,
+    "inputPolicy": "restricted-static-local-svg",
+    "composition": "flow",
+    "style": "native-sketch",
+    "nodeCount": 5,
+    "edgeCount": 5,
+    "contentSha256": "faada7c05bdd770cfe7da730e1ea8f3bd903f02594ae4e6288c4fd1a195219e4",
+    "svgSha256": "b074207e81f5b934821b63f672e355088fef0230bebb0a45a0341838af926008",
+    "deterministicSource": true,
+    "visualAcceptance": "pending",
+    "diagnosticCounts": {
+      "outside": 0,
+      "collisions": 0,
+      "overflow": 0,
+      "edgeTextCrossings": 0,
+      "warnings": 0
+    },
+    "scopeLimits": [
+      "Professional aesthetic acceptance pending",
+      "Other models untested",
+      "No universal topology or cross-platform font guarantee"
+    ]
+  },
+  "contentChecks": {
+    "passed": true,
+    "nodeCount": 5,
+    "edgeCount": 5
+  },
+  "usage": {
+    "prompt_tokens": 5131,
+    "completion_tokens": 326,
+    "total_tokens": 5457
+  }
+}

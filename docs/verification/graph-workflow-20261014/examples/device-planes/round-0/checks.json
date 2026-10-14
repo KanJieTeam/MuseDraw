@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "textCount": 17,
+  "containerBoundsChecked": true,
+  "uniqueIds": true,
+  "vectorOnly": true,
+  "inputPolicy": "restricted-static-local-svg",
+  "composition": "planes",
+  "style": "terminal-fields",
+  "nodeCount": 7,
+  "edgeCount": 6,
+  "contentSha256": "8d2be3f28d561c36ea8bde0a90e961d631d0158f99407f9a6cfa28cbb0a943b2",
+  "svgSha256": "aac814a496b2ecaf79361434da0179d7d2d869aa6dc2dfffd835fbb5cd559e08",
+  "deterministicSource": true,
+  "visualAcceptance": "pending",
+  "diagnosticCounts": {
+    "outside": 0,
+    "collisions": 0,
+    "overflow": 0,
+    "edgeTextCrossings": 0,
+    "warnings": 0
+  },
+  "scopeLimits": [
+    "Professional aesthetic acceptance pending",
+    "Other models untested",
+    "No universal topology or cross-platform font guarantee"
+  ]
+}

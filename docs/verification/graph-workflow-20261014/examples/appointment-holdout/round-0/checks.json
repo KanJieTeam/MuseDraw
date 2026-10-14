@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "textCount": 12,
+  "containerBoundsChecked": true,
+  "uniqueIds": true,
+  "vectorOnly": true,
+  "inputPolicy": "restricted-static-local-svg",
+  "composition": "flow",
+  "style": "native-sketch",
+  "nodeCount": 5,
+  "edgeCount": 5,
+  "contentSha256": "faada7c05bdd770cfe7da730e1ea8f3bd903f02594ae4e6288c4fd1a195219e4",
+  "svgSha256": "b074207e81f5b934821b63f672e355088fef0230bebb0a45a0341838af926008",
+  "deterministicSource": true,
+  "visualAcceptance": "pending",
+  "diagnosticCounts": {
+    "outside": 0,
+    "collisions": 0,
+    "overflow": 0,
+    "edgeTextCrossings": 0,
+    "warnings": 0
+  },
+  "scopeLimits": [
+    "Professional aesthetic acceptance pending",
+    "Other models untested",
+    "No universal topology or cross-platform font guarantee"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "operations": [
+    {
+      "op": "add_node",
+      "node": {
+        "id": "search_service",
+        "label": "归档检索服务",
+        "kind": "service",
+        "parent": null
+      }
+    },
+    {
+      "op": "add_edge",
+      "edge": {
+        "from": "review_portal",
+        "to": "search_service",
+        "label": "访问"
+      }
+    },
+    {
+      "op": "add_edge",
+      "edge": {
+        "from": "search_service",
+        "to": "archive_store",
+        "label": "读取档案"
+      }
+    }
+  ]
+}

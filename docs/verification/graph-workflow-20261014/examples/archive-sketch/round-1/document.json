@@ -1,0 +1,98 @@
+{
+  "scene": {
+    "title": "项目资料归档架构（通用参考）",
+    "groups": [],
+    "nodes": [
+      {
+        "id": "field_portal",
+        "label": "现场端",
+        "kind": "client",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "review_portal",
+        "label": "审核端",
+        "kind": "client",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "records_service",
+        "label": "资料接入",
+        "kind": "service",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "review_service",
+        "label": "审核服务",
+        "kind": "service",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "archive_store",
+        "label": "档案库",
+        "kind": "store",
+        "parent": null,
+        "focus": false
+      },
+      {
+        "id": "attachment_store",
+        "label": "附件库",
+        "kind": "store",
+        "parent": null,
+        "focus": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "e-24002688b9003013",
+        "from": "field_portal",
+        "to": "records_service",
+        "label": "提交资料",
+        "direction": "forward"
+      },
+      {
+        "id": "e-179c4aaa52a89de4",
+        "from": "review_portal",
+        "to": "records_service",
+        "label": "提交资料",
+        "direction": "forward"
+      },
+      {
+        "id": "e-d6d5ceae86f489fe",
+        "from": "records_service",
+        "to": "archive_store",
+        "label": "写入档案",
+        "direction": "forward"
+      },
+      {
+        "id": "e-75f2c6f001106ff2",
+        "from": "records_service",
+        "to": "attachment_store",
+        "label": "写入附件",
+        "direction": "forward"
+      },
+      {
+        "id": "e-f74d1a0078c50994",
+        "from": "review_portal",
+        "to": "review_service",
+        "label": "访问",
+        "direction": "forward"
+      },
+      {
+        "id": "e-6195d81869f41574",
+        "from": "review_service",
+        "to": "archive_store",
+        "label": "读取档案",
+        "direction": "forward"
+      }
+    ]
+  },
+  "presentation": {
+    "style": "手绘线稿",
+    "composition": "flow"
+  }
+}
