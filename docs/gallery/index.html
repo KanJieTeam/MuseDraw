@@ -2,45 +2,122 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fbfbfa">
-  <meta name="description" content="MuseDraw 原创架构图集。浏览 100 个精品参考，复制几句绘图需求，由 MuseDraw 组织构图与配色；也可绘制新的主题和结构。">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; frame-src https://embed.diagrams.net; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>图集 · MuseDraw</title>
-  <link rel="icon" href="../../assets/brand/mark.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="description" content="MuseDraw 的两种可复用画法：手绘线稿与终端色域。用几句话画自己的组件图，在对话中继续修改。">
+  <title>MuseDraw · 风格与示例</title>
   <link rel="stylesheet" href="gallery.css">
   <script type="module" src="gallery.mjs"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="MuseDraw 图集"><img src="../../assets/brand/mark.svg" width="32" height="32" alt=""><span>MuseDraw</span></a>
-    <nav aria-label="主导航"><a class="current" href="./">图集</a><a href="https://github.com/KanJieTeam/MuseDraw" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><button class="install-button" id="install">安装 Skill <span aria-hidden="true">↗</span></button></nav>
+    <a class="brand" href="https://github.com/KanJieTeam/MuseDraw" aria-label="MuseDraw GitHub 仓库"><img src="../../assets/brand/wordmark-light.svg" alt="MuseDraw" width="196" height="48"></a>
+    <nav aria-label="主导航">
+      <a href="#start">开始使用</a>
+      <a href="https://github.com/KanJieTeam/MuseDraw/blob/main/docs/usage.zh-CN.md">使用指南</a>
+      <a href="https://github.com/KanJieTeam/MuseDraw">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
+
   <main>
     <section class="intro" aria-labelledby="page-title">
-      <div><p class="eyebrow">MUSEDRAW / COLLECTION 01</p><h1 id="page-title">把复杂，画清楚。</h1><p class="intro-copy">100 张原创架构图，作为精品参考。也可以从几句话开始，画出新的主题和结构。</p></div>
-      <div class="intro-note"><span>看图 · 取用 · 再创作</span><p>几句话描述需求，<br>构图与配色交给 MuseDraw。</p></div>
+      <p class="eyebrow">专业绘图助手</p>
+      <h1 id="page-title">选一种画法，<br class="mobile-break">画你的内容。</h1>
+      <p class="intro-copy">把系统资料交给智能体，用几句话生成组件图，再在对话中修改。这里展示的两种风格，使用同一套 MuseDraw 绘图代码。</p>
     </section>
-    <section class="collection" aria-label="架构图案例">
-      <div class="collection-tools">
-        <div class="filters" role="group" aria-label="按视图筛选"><button class="active" data-view="all" aria-pressed="true">全部 <span>100</span></button><button data-view="capability" aria-pressed="false">能力架构</button><button data-view="component" aria-pressed="false">组件与集成</button><button data-view="deployment" aria-pressed="false">部署与网络</button></div>
-        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索主题、构图…" aria-label="搜索主题或构图"><kbd>/</kbd></label>
+
+    <section class="styles" aria-label="绘图风格">
+      <article class="style-card" id="sketch">
+        <button class="image-button" type="button" data-preview="sketch" aria-label="放大查看手绘线稿示例">
+          <img src="examples/sketch/preview-1200.png" alt="手绘线稿风格的项目资料归档组件图" width="1200" height="760">
+          <span class="image-action">放大查看 <span aria-hidden="true">↗</span></span>
+        </button>
+        <div class="card-content">
+          <div class="card-heading"><h2>手绘线稿</h2><span class="style-note">纸上推演</span></div>
+          <p>白纸与墨绿线条，角色图形与存储排线。让组件和关系像在纸上展开，适合方案讨论与技术说明。</p>
+          <p class="example-caption">示例：项目资料归档</p>
+          <button class="choose-button" type="button" data-copy-style="sketch">用这个风格 <span aria-hidden="true">→</span></button>
+          <div class="downloads" aria-label="下载手绘线稿示例">
+            <a href="examples/sketch/diagram.png" download>PNG</a>
+            <a href="examples/sketch/diagram.svg" download>SVG</a>
+            <a href="examples/sketch/document.json" download>语义文档</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="style-card" id="planes">
+        <button class="image-button" type="button" data-preview="planes" aria-label="放大查看终端色域示例">
+          <img src="examples/planes/preview-1200.png" alt="终端色域风格的设备数据平台组件图" width="1200" height="760">
+          <span class="image-action">放大查看 <span aria-hidden="true">↗</span></span>
+        </button>
+        <div class="card-content">
+          <div class="card-heading"><h2>终端色域</h2><span class="style-note">清晰分域</span></div>
+          <p>浅色画布、暖冷色域与清晰几何。用已知归属组织系统边界，也可直接表达没有分区的组件关系。</p>
+          <p class="example-caption">示例：设备数据平台</p>
+          <button class="choose-button" type="button" data-copy-style="planes">用这个风格 <span aria-hidden="true">→</span></button>
+          <div class="downloads" aria-label="下载终端色域示例">
+            <a href="examples/planes/diagram.png" download>PNG</a>
+            <a href="examples/planes/diagram.svg" download>SVG</a>
+            <a href="examples/planes/document.json" download>语义文档</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="getting-started" id="start" aria-labelledby="start-title">
+      <div class="section-intro">
+        <p class="eyebrow">开始使用</p>
+        <h2 id="start-title">几句话，就可以开始。</h2>
+        <p>示例展示画法。你的行业、组件名称与关系，可以完全不同。</p>
       </div>
-      <div class="results-line"><span id="result-count" role="status">正在加载图集…</span><button id="favorites" aria-pressed="false">收藏的图 <span id="favorite-count">0</span></button></div>
-      <div id="load-error" class="empty" hidden><p>暂时无法加载图集。</p><button id="reload">重新加载</button></div>
-      <div class="case-grid" id="grid"></div>
-      <div class="empty" id="empty" hidden><p>没有找到匹配的图。</p><button id="reset">查看全部</button></div>
+      <div class="instructions">
+        <div class="instruction">
+          <h3>安装到你的智能体</h3>
+          <p>按提示选择客户端，在能读写文件、执行工具的智能体中使用。</p>
+          <pre class="install-command"><code>npx skills add KanJieTeam/MuseDraw</code></pre>
+        </div>
+        <div class="instruction">
+          <h3>说主题、关系和风格</h3>
+          <p>提供已有资料；想构思通用示例时，说明“通用参考”。无需坐标、色值或绘图代码。</p>
+          <blockquote>用 MuseDraw 画一张医院预约系统组件图，使用手绘线稿。患者端提交请求到预约服务，预约服务查询排班并写入预约库。给方案说明使用。</blockquote>
+        </div>
+        <div class="instruction">
+          <h3>在对话中继续修改</h3>
+          <p>“把预约服务改名为预约管理服务，其他关系不变。”也可以新增组件、调整关系或切换风格。交付 PNG、可编辑 SVG 与语义文档。</p>
+        </div>
+      </div>
     </section>
-    <footer><a class="brand" href="https://github.com/KanJieTeam/MuseDraw"><img src="../../assets/brand/mark.svg" width="24" height="24" alt=""><span>MuseDraw</span></a><p>图形可编辑，想法不设限。</p><span>原创图集 · Apache-2.0</span></footer>
+
+    <section class="scope-note" aria-labelledby="scope-title">
+      <h2 id="scope-title">保存文档，可以重做同一张图。</h2>
+      <p>下载 <code>document.json</code>，让智能体用 MuseDraw 重渲染。同一份文档在相同绘图版本、字体与运行环境下可重复生成相同原生几何；PNG 抗锯齿可能有微小差异。让另一个模型只凭短需求重新理解与绘图，则不能保证完全相同。</p>
+      <p>PNG 需要已有 Node.js 22+、Playwright、Chromium 兼容浏览器及相应字体。MuseDraw 不额外要求模型 API key。当前支持组件、显式关系与平面归属域；嵌套域等结构尚未支持。</p>
+      <div class="scope-links"><a href="https://github.com/KanJieTeam/MuseDraw/blob/main/docs/usage.zh-CN.md">完整使用指南 <span aria-hidden="true">↗</span></a><a href="https://github.com/KanJieTeam/MuseDraw/blob/main/docs/semantic-graph.zh-CN.md">实现与边界 <span aria-hidden="true">↗</span></a><a href="https://github.com/KanJieTeam/MuseDraw/blob/main/docs/verification/graph-workflow-20261014/README.md">生成与验证记录 <span aria-hidden="true">↗</span></a></div>
+    </section>
   </main>
-  <dialog id="detail" aria-labelledby="detail-title">
-    <div class="detail-bar"><div><span id="detail-number" class="eyebrow"></span><h2 id="detail-title"></h2></div><div class="detail-nav"><button id="previous" aria-label="上一张">←</button><button id="next" aria-label="下一张">→</button><button class="close" id="close-detail" aria-label="关闭详情">×</button></div></div>
-    <div class="detail-body"><div class="drawing-panel"><div class="viewport" id="viewport" tabindex="0" role="region" aria-label="图纸预览，可滚轮缩放和拖动平移"><img id="detail-image" draggable="false" alt=""></div><div class="zoom-bar"><span>滚轮缩放 · 拖动平移</span><div><button id="zoom-out" aria-label="缩小">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="放大">+</button><button id="fit">全图</button><button id="fullscreen">全屏 ↗</button></div></div></div>
-      <aside class="detail-info"><p class="eyebrow">构图与表达</p><p id="detail-family" class="family-description"></p><p id="detail-theme" class="theme-description"></p><div class="download-actions"><button class="primary" id="edit">在 draw.io 中编辑 ↗</button><a id="download-drawio" class="secondary" download>下载可编辑 drawio ↓</a><div class="secondary-downloads"><a id="download-svg" download>SVG ↓</a><a id="download-png" download>PNG ↓</a></div></div><div class="prompt-section"><div><h3>几句话，开始画图</h3><button id="copy-prompt">复制提示词</button></div><pre id="prompt"></pre><p class="note">把需求交给智能体，MuseDraw Skill 会组织构图、配色与连线。你可以改写需求、换主题；生成结果不保证与本图逐像素一致。</p><a id="download-reference" class="reference-download" title="高级制作规格，供参考；不会加入复制的需求" download hidden>制作参考 ↓</a></div><button id="share" class="text-button">复制这张图的链接 ↗</button></aside>
+
+  <footer class="site-footer"><span>MuseDraw · 专业绘图助手</span><a href="https://github.com/KanJieTeam/MuseDraw/blob/main/LICENSE">Apache-2.0</a></footer>
+
+  <dialog id="preview" class="preview-dialog" aria-labelledby="preview-title">
+    <div class="preview-toolbar">
+      <h2 id="preview-title">图像预览</h2>
+      <div class="preview-controls">
+        <button type="button" id="zoom-out" aria-label="缩小">−</button>
+        <button type="button" id="zoom-in" aria-label="放大">+</button>
+        <button type="button" id="fit">适应窗口</button>
+        <button type="button" id="close-preview" aria-label="关闭预览">关闭</button>
+      </div>
     </div>
+    <div id="viewport" class="preview-viewport"><img id="preview-image" alt="" draggable="false"></div>
+    <p class="preview-hint">拖动查看局部 · 使用按钮缩放</p>
   </dialog>
-  <dialog id="editor" aria-label="draw.io 编辑器"><div class="editor-bar"><div><strong id="editor-title">编辑图纸</strong><span>编辑后点“保存”下载新的 drawio 文件；不会覆盖公开案例。</span></div><button id="close-editor" class="close" aria-label="关闭编辑器">×</button></div><div class="editor-loading" id="editor-loading"><p>正在打开 draw.io…</p><p class="note">在线编辑会将本案例载入 diagrams.net；也可下载文件离线编辑。</p><a id="editor-fallback" download>直接下载 drawio 文件 ↓</a></div><div id="editor-frame"></div></dialog>
-  <div id="toast" role="status" aria-live="polite"></div>
-  <noscript><p class="empty">请启用 JavaScript 浏览图集。也可到 <a href="https://github.com/KanJieTeam/MuseDraw/tree/main/docs/gallery/cases">GitHub 下载源文件</a>。</p></noscript>
+
+  <dialog id="copy-dialog" class="copy-dialog" aria-labelledby="copy-title">
+    <h2 id="copy-title">把这句话发给智能体</h2>
+    <p>替换主题与资料，即可使用这个风格。</p>
+    <textarea id="copy-text" aria-label="绘图需求示例" rows="5" readonly></textarea>
+    <button type="button" id="close-copy">关闭</button>
+  </dialog>
+  <div id="status" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

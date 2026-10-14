@@ -31,9 +31,11 @@ Separate the reusable decisions from example content:
 - Labels and connections: take these from the new request; never inherit its
   business nouns, server counts or protocols from an example.
 
-The current named-token helpers do not implement every composition. Do not pass
-a hand-edited gallery SVG off as their output. When the helper cannot represent
-the topology, use native SVG and disclose that generation method.
+The published graph route does not implement every composition. If a topology
+is rejected, retain the supplied facts and report the unsupported layout rather
+than hand-drawing a replacement and claiming it uses the reproducible route.
+Legacy grouped/token helpers are compatibility utilities, not additional
+published or model-verified styles.
 
 ## Test the promise that is actually being made
 

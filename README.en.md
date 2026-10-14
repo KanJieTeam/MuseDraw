@@ -16,7 +16,7 @@
 
 <p>
   <a href="#quick-start">Quick start</a> ·
-  <a href="https://kanjieteam.github.io/MuseDraw/">Gallery</a> ·
+  <a href="https://kanjieteam.github.io/MuseDraw/">Styles and examples</a> ·
   <a href="docs/usage.md">Usage guide</a> ·
   <a href="#contribute">Contribute</a> ·
   <a href="README.md">简体中文</a>
@@ -26,7 +26,7 @@
 
 ---
 
-MuseDraw is an open-source Skill for professional diagrams. Bring composition, color, typography and image-production workflows to the agent you already use, for technical, product and research communication. Draw and revise in the same conversation.
+MuseDraw is an open-source Skill for professional diagrams. Give your agent a short request and system facts; the agent interprets the content, and MuseDraw's drawing code handles layout, shapes, connectors and export. Continue revising in the same conversation while preserving confirmed facts and relationships.
 
 ## Quick start
 
@@ -36,25 +36,38 @@ Install the Skill and choose your client when prompted:
 npx skills add KanJieTeam/MuseDraw
 ```
 
-Then ask your agent: **Use MuseDraw to draw an architecture diagram from this system description.** Supply the material, the figure's purpose and your visual preferences.
+Then ask your agent:
 
-A few ordinary sentences are enough to start; MuseDraw handles composition, color and layout. The gallery is a design-reference collection, not a template allowlist. New subjects and structures do not require coordinates or per-module drawing parameters.
+```text
+Use MuseDraw to draw a records-archive component diagram in 手绘线稿 style.
+The portal submits records to the archive service, which writes to the records store.
+Use it in a technical proposal.
+```
+
+Replace the subject and relationships with your own. No coordinates, color codes or drawing code are required. The examples show reusable styles, not a list of supported business topics.
 
 Installation with the command above requires Node.js 22.20+ and an agent with file access and execution tools. Rendering and PNG export requirements are in the [usage guide](docs/usage.md).
 
-## Current capabilities
+## Two ready-to-use styles
 
-| View | What it communicates |
+| 手绘线稿 · Hand-drawn linework | 终端色域 · Terminal fields |
 | :--- | :--- |
-| Capability map | Functional layers, grouped capabilities and cross-cutting support |
-| Components and integration | Software components, interfaces, known interactions and system boundaries |
-| Deployment | Supplied instances, environments, networks and storage boundaries |
+| ![Hand-drawn records archive](docs/verification/graph-workflow-20261014/examples/archive-sketch/round-0/preview-1200.png) | ![Terminal-fields device platform](docs/verification/graph-workflow-20261014/examples/device-planes/round-0/preview-1200.png) |
+| White paper, ink outlines, role shapes and hatched storage for discussing components and relationships. | A light canvas, warm and cool regions, and clean geometry for supplied ownership and system boundaries. |
 
-Delivery includes **PNG images and SVG source**. Continue refining content, composition and style through conversation; preserve confirmed information and relationships during style-only changes.
+Both use the same component-diagram workflow for new industries, components and relationships. Layout can follow graph relationships or supplied flat ownership groups; 终端色域 also supports a flow without grouped regions. Ask for either style by name.
 
-[Browse 100 original architecture diagrams](https://kanjieteam.github.io/MuseDraw/): zoom in, copy a prompt, or download PNG, SVG and individually editable drawio files.
+Delivery includes **PNG, editable SVG and a semantic `document.json`**. Continue with requests such as “Rename the archive service to records service; preserve the other relationships.” The agent edits the existing document and rerenders it.
 
-The available Skill is [`musedraw`](skills/musedraw/SKILL.md). Research methods, experimental workflows, algorithm diagrams and Python/R data visualization are future directions, not released Skills.
+[Browse styles, short requests and downloadable examples](https://kanjieteam.github.io/MuseDraw/) · [Usage guide](docs/usage.md)
+
+## Reuse and replay
+
+The same semantic document, drawing-code version, fonts and runtime can reproduce the same native geometry. PNG antialiasing can vary slightly. New subjects still depend on the agent understanding the supplied facts; a short request does not guarantee identical drawings from every model.
+
+The current code supports components, explicit relationships and flat ownership groups; nested groups are not supported. PNG requires existing Node.js 22+, Playwright, a Chromium-compatible browser and appropriate fonts. The host must read and write files and execute tools. MuseDraw requires no additional model API key.
+
+The installable Skill is [`musedraw`](skills/musedraw/SKILL.md). See the [implementation and limits](docs/semantic-graph.zh-CN.md) and [real-model verification records](docs/verification/graph-workflow-20261014/README.md) for the checked scope. Research workflows and statistical plots are not released workflows.
 
 ## Design approach
 

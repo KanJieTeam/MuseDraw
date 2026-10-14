@@ -1,129 +1,96 @@
 # Using MuseDraw
 
-[简体中文](usage.zh-CN.md) · [Back to README](../README.en.md)
+[简体中文](usage.zh-CN.md) · [Back to README](../README.en.md) · [Styles and examples](https://kanjieteam.github.io/MuseDraw/)
 
-MuseDraw is a Skill for an existing AI agent. The agent understands your request; the Skill supplies architecture design decisions, original cases and a file-generation workflow. The first release covers software architecture, not only the 100 subjects in the gallery.
+MuseDraw is a professional drawing Skill for an existing AI agent. The agent interprets your request and organizes components, ownership and relationships; the installed drawing code produces native shapes, text, connectors and images. The current public workflow offers two component-diagram styles for new business subjects.
 
-## Start with a few sentences
+## Install, then start with a few sentences
 
-```text
-Use MuseDraw to draw a customer-engagement marketing application architecture.
-Highlight channels, campaigns, content and messaging. Make it a clear, restrained
-generic reference for a product proposal.
-```
-
-Supply the goal, important business content and known relationships; MuseDraw
-handles composition, color, layout and connectors. Coordinates, hex palettes and
-a complete node list are not prerequisites. Clarify only missing material facts
-about a real system. A new subject does not need a matching gallery case.
-
-Gallery prompts are short example briefs, not a promise of pixel-identical output
-across models. The 100 cases teach design choices rather than define a template
-allowlist. For an explicit reproduction request, the agent may read the selected
-production reference without making the user type that specification.
-
-## 1. Load the actual Skill
-
-Start with a natural-language request:
-
-```text
-Use https://github.com/KanJieTeam/MuseDraw to draw a data-platform architecture diagram.
-Use the facts below, return PNG and editable SVG, and identify anything not verified.
-[Your architecture brief]
-```
-
-Your agent needs permission and the ability to obtain the repository, read files, execute tools and write outputs. It should:
-
-1. Read the root [SKILL.md](../SKILL.md), which is a navigation entry, not a second installable Skill.
-2. Read [skills/musedraw/SKILL.md](../skills/musedraw/SKILL.md) in full. The installable Skill name is `musedraw`.
-3. Keep the complete `skills/musedraw/` folder available, including references and scripts. Load only the references needed for the selected view, and use helpers where they fit.
-
-A URL alone is not an installation, and a web-page summary is not the full Skill. Do not assume an ordinary chat page, such as a Doubao chat page, has a writable execution environment. An agent without the required tools must explain the limitation rather than claim to have rendered a file.
-
-Alternatively, use the Skills CLI with Node.js 22.20+:
+With Node.js 22.20+, run the installation command and choose your agent or client:
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
 ```
 
-Choose your agent/client interactively. The CLI installs instructions and resources; execution still depends on the host.
+Ask an agent that can read and write files and execute tools:
 
-## 2. Give a brief, not just a topic
+```text
+Use MuseDraw to draw a hospital appointment component diagram in 手绘线稿 style.
+The patient app sends requests to the appointment service. It queries the scheduling
+service and writes appointments to the appointment store.
+Use it in a product proposal; return PNG and editable SVG.
+```
 
-Include the intended reader, the components or capabilities, their groups, known relationships, and the desired output. Include deployment facts only when you have them. A reference image may guide visual choices, but does not supply facts about your system.
+Replace the subject and relationships with your own. You do not need a case number, coordinates, color codes or drawing code. Supply available facts for a real system; clarify only missing facts that materially affect the diagram. For an imagined example, ask for a “generic reference” so the proposed content is identified as such.
 
-Choose the view by the question it should answer:
+Installation supplies instructions, references and tools; execution depends on the host. Sending a repository URL to a plain chat page does not install it or provide an execution environment. MuseDraw requires no additional model API key, MCP server or CAD engine; the host's own access requirements still apply.
 
-| View | Reading task | Useful input |
+## Choose a style
+
+| Style | Visual treatment | What to say |
 | --- | --- | --- |
-| Capability map | What exists, and where does it belong? | Layers, groups, shared support |
-| Component/integration | How do the parts work together? | Components, interfaces, known exchanges and boundaries |
-| Deployment | Where does it run? | Instances, environments, networks and storage |
+| 手绘线稿 · Hand-drawn linework | White paper, ink/green outlines, role shapes and hatched storage | “Use 手绘线稿.” |
+| 终端色域 · Terminal fields | Light canvas, clean geometry, warm/cool fields for supplied ownership | “Use 终端色域.” |
 
-The agent should preserve the supplied facts. It should not invent protocols, instance counts, performance figures or technology choices. Without a real system brief, ask for an explicitly labeled generic reference.
+If no style is specified, the agent selects one of these two based on the content and purpose. 终端色域 uses a light canvas; its name does not request a dark terminal theme.
+
+Both styles share the same drawing mechanics and work with different subjects. Composition can follow graph relationships from left to right (`flow`) or arrange supplied flat ownership groups into regions (`planes`). You need not choose these internal settings. The agent uses the supplied facts and does not invent control/data planes or relationships from a style name.
+
+The [public examples](https://kanjieteam.github.io/MuseDraw/) include short requests, PNG, SVG and semantic documents. Records archives and device platforms are example content, not the only topics these styles can draw.
+
+## Revise in the same conversation
 
 For example:
 
 ```text
-Draw a component architecture for inspection software.
-The mobile app and dispatch web page share one API. The API accesses a work-order
-service and a field-record service. Both services write structured records to the
-business database. The field-record service stores photos in object storage.
-Work-order changes go to a message service, which a notification service subscribes
-to. An identity service validates API-call identity.
-No deployment or network facts are available. Return PNG and SVG.
+Rename the appointment service to appointment management service.
+Keep the other components and relationships unchanged.
 ```
-
-Compare the [original example](../examples/inspection-platform/diagram.png), its [brief](../examples/inspection-platform/brief.md) and [review](../examples/inspection-platform/review.md). It is a logical component view, not a deployment diagram.
-
-## 3. Generate and inspect the files
-
-The default result is PNG plus SVG with editable native text and geometry.
-
-For a brief that actually fits the fixed data-platform capability layout, the included renderer requires Python 3.10+ and uses the standard library:
-
-```bash
-python skills/musedraw/scripts/render_capability.py examples/data-platform/brief.json output/data-platform.svg --theme blue
-```
-
-Run these commands from the repository root. The renderer is not a general topology or automatic layout engine. Component, integration and deployment diagrams are designed as original SVG; do not force them into the fixed capability grid or add its default modules to the user's system.
-
-The sample has Chinese labels. Set the optional `portalTitle` and `foundationTitle` JSON fields to supply your own short headings; otherwise those two headings keep their Chinese defaults. All other content comes from the brief.
-
-For optional PNG export:
-
-```bash
-python scripts/export_png.py output/data-platform.svg output/data-platform.png
-```
-
-The wrapper uses existing Node.js 22+, Playwright and a compatible browser. It can find repository `node_modules/playwright`; provide `--playwright path/to/index.mjs` or `--browser path/to/chrome` when needed. Existing Chrome/Edge can be reused. It does not silently install missing dependencies. If the environment cannot render PNG, the agent should use another available renderer or report the missing output and checks.
-
-The exporter preserves earlier PNG and check files: choose an unused output path for each run. If only the Skill folder was installed, the repository-level wrapper may not be present; use the Skill's bundled `preview.mjs` as described in its instructions, or the host's existing render tools.
-
-The agent should inspect the preview check results, then actually look at the full image and enlarged details. Check readable labels, grouping, connector endpoints and crossings. If a container-boundary check was not performed, say so. A successful script exit is not aesthetic acceptance or proof of architecture correctness.
-
-No separate CAD engine is needed. MuseDraw itself requires no additional model API key or MCP server; your host agent's own access requirements still apply.
-
-## 4. Continue revising
-
-For visual-only changes, preserve the system content:
 
 ```text
-Keep the components and relationships unchanged.
-Use less saturated blue, tighter spacing and clearer layer headings.
-Return the updated PNG and SVG.
+Add a notification service. The appointment management service sends confirmations to it.
 ```
 
-For a content change, state the exact addition, removal or relationship change. The agent should update the relevant content and rerender; SVG is available for further editing.
-
-## Current scope and checks
-
-Research workflows and Python/R statistical plots are not implemented in this release. Deployment design guidance does not imply a universal automatic topology engine. Example review notes describe their own checks and limits, not customer validation.
-
-For the repository's validation workflow, run:
-
-```bash
-python scripts/check.py
+```text
+Keep components and relationships unchanged; switch to 终端色域.
 ```
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) before contributing changes.
+The agent edits the existing semantic document and generates a fresh output directory. Small content changes use rename, add and remove operations for nodes and relationships, preserving unaffected object identities. Reflow may move shapes without changing facts. New relationships must come from your request.
+
+## Outputs and replay
+
+Outputs include a full PNG, a 1200px preview, editable native SVG, `document.json`, separate content and presentation data, and check results. SVG text and shapes remain editable; the semantic document preserves components, groups, relationships and the style choice.
+
+To redraw the same diagram, give the downloaded `document.json` to the agent:
+
+```text
+Use MuseDraw to rerender this semantic document, preserving content and presentation.
+```
+
+The same normalized document, code version, fonts and runtime can reproduce the same native geometry. Two verified documents produced byte-identical SVG on replay; PNG antialiasing can still vary slightly. Asking another model to interpret a short request and create a new drawing is a separate task. It does not promise an identical result or 100% success from every model.
+
+[Implementation, verification scope and limits](semantic-graph.zh-CN.md) · [Actual outputs and real-model verification](verification/graph-workflow-20261014/README.md)
+
+## Host and runtime requirements
+
+The agent should read [skills/musedraw/SKILL.md](../skills/musedraw/SKILL.md) in full and retain the complete `skills/musedraw/` directory. The root [SKILL.md](../SKILL.md) is a navigation entry, not a second installable Skill. Component diagrams use the [semantic graph workflow](../skills/musedraw/references/graph-workflow.md); users need not write the tool commands below.
+
+PNG and rendered checks require existing Node.js 22+, Playwright, a Chromium-compatible browser (Chrome/Edge can be reused), and fonts covering the figure's language. Missing dependencies are not silently installed. If the runtime is unavailable, report the missing files and checks.
+
+After organizing semantic JSON, the agent runs the installed command. `<skill>` means the installed Skill directory, and the output directory must be new:
+
+```sh
+node <skill>/scripts/render_graph.mjs brief.json new-output --playwright <existing-module> --browser <existing-browser>
+```
+
+To replay a saved document:
+
+```sh
+node <skill>/scripts/render_graph.mjs current-output/document.json next-output --playwright <existing-module> --browser <existing-browser>
+```
+
+Read the check results and actually inspect the full figure and dense details, including labels, group boundaries, arrow direction, connectors and crossings. A successful process exit does not establish architecture correctness or aesthetic acceptance.
+
+The current route supports at most 80 nodes, 12 flat ownership groups and 160 explicit relationships. Nested groups, self-relations, repeated endpoint pairs and overly dense layouts can be rejected. Preserve the input and errors rather than removing facts to obtain a pass. Research workflows and statistical plots are not released workflows.
+
+Before contributing, read [CONTRIBUTING.md](../CONTRIBUTING.md) and run `python scripts/check.py`. Changes affecting figures also require actual rendering and visual inspection.

@@ -29,7 +29,7 @@ jobs:
       - name: Offline artifacts, Python regressions and Node syntax
         run: |
           python scripts/check.py
-          python scripts/check_drawio.py docs/gallery --report output/gallery-structure.json
+          python scripts/build_gallery_site.py
         env:
           PYTHONDONTWRITEBYTECODE: '1'
   browser:
@@ -53,8 +53,10 @@ jobs:
         run: python scripts/check.py --playwright output/browser-deps/node_modules/playwright/index.mjs
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-      - name: Check public gallery interactions and downloads
-        run: node scripts/check_gallery_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs
+      - name: Check current style samples, clipboard, previews and downloads
+        run: |
+          python scripts/build_gallery_site.py
+          node scripts/check_gallery_browser.mjs --site output/site --playwright output/browser-deps/node_modules/playwright/index.mjs
       - name: Save gallery browser evidence
         if: always()
         uses: actions/upload-artifact@v4

@@ -6,8 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-// No browser dependency is installed by this checker. Pass an existing Playwright
-// entry point, as with the repository's other browser checks.
+// Use an explicitly supplied, existing Playwright installation.
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const flags = process.argv.slice(2);
 const option = (name, fallback) => {
@@ -22,22 +21,8 @@ const output = path.resolve(repo, option('--output', 'output/gallery-qa'));
 await fs.mkdir(output, { recursive: true });
 const scratch = await fs.mkdtemp(path.join(os.tmpdir(), 'musedraw-gallery-qa-'));
 const scratchReal = await fs.realpath(scratch);
-const report = { checks: [], screenshots: [], officialEditor: { status: 'not-checked', verified: false }, downloads: [], httpAssets: [], warnings: [] };
-const hash = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex');
-// Git may normalize Windows text line endings during the Pages checkout.
-// Permit that one representation difference only; downloads remain byte-exact.
-function sourceBytesMatch(actual, expected, format) {
-  if (actual.equals(expected)) return true;
-  if (!['svg', 'drawio'].includes(format)) return false;
-  try {
-    const decoder = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
-    return decoder.decode(actual).replace(/\r\n/g, '\n') === decoder.decode(expected).replace(/\r\n/g, '\n');
-  } catch { return false; }
-}
-function assertNoProductionSpecs(text, label) {
-  for (const pattern of [/productionBrief/i, /#[\da-f]{3,8}\b/i, /\[\s*-?\d+(?:\.\d+)?\s*,\s*-?\d+(?:\.\d+)?(?:\s*,\s*-?\d+(?:\.\d+)?)*\s*\]/, /\b\d{3,5}\s*[×xX]\s*\d{3,5}\b/, /(?:坐标|画布(?:尺寸)?|精确色值)\s*[:：]?\s*(?:\d|\[)/, /\b(?:x|y|width|height)\s*[:=]\s*-?\d/i]) assert.doesNotMatch(text, pattern, `${label}: production specifications leaked into the user interface`);
-}
-const editorOrigin = 'https://embed.diagrams.net';
+const report = { checks: [], screenshots: [], downloads: [], httpAssets: [] };
+const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 let server, browser, page;
 
 async function check(name, fn) {
@@ -52,14 +37,15 @@ async function check(name, fn) {
 }
 
 async function serveRepository() {
-  const mime = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.drawio': 'application/xml; charset=utf-8' };
-  const repositoryReal = await fs.realpath(repo);
+  const serveRoot = path.resolve(repo, option('--site', '.'));
+  const mime = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png' };
+  const repositoryReal = await fs.realpath(serveRoot);
   server = http.createServer(async (request, response) => {
     try {
       if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405).end(); return; }
       const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-      let target = path.resolve(repo, `.${pathname}`);
-      const relative = path.relative(repo, target);
+      let target = path.resolve(serveRoot, `.${pathname}`);
+      const relative = path.relative(serveRoot, target);
       if (relative.startsWith('..') || path.isAbsolute(relative)) { response.writeHead(403).end(); return; }
       if ((await fs.stat(target)).isDirectory()) target = path.join(target, 'index.html');
       const realTarget = await fs.realpath(target);
@@ -80,8 +66,19 @@ async function fetchBytes(url) {
   return Buffer.from(await response.arrayBuffer());
 }
 
-async function noOverflow(selectors = ['html', 'body', '.site-header', '.collection-tools', '.case-grid']) {
-  const overflow = await page.evaluate((selectors) => selectors.flatMap((selector) => [...document.querySelectorAll(selector)].filter((element) => element.clientWidth && element.scrollWidth > element.clientWidth + 1).map((element) => ({ selector, width: element.clientWidth, scrollWidth: element.scrollWidth }))), selectors);
+function sourceBytesMatch(actual, expected, format) {
+  if (actual.equals(expected)) return true;
+  if (!['svg', 'scene'].includes(format)) return false;
+  try {
+    const decoder = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
+    return decoder.decode(actual).replace(/\r\n/g, '\n') === decoder.decode(expected).replace(/\r\n/g, '\n');
+  } catch { return false; }
+}
+
+async function noOverflow(selectors = ['html', 'body', '.style-card', '#preview', '#copy-dialog']) {
+  const overflow = await page.evaluate(selectors => selectors.flatMap(selector => [...document.querySelectorAll(selector)]
+    .filter(element => element.clientWidth && element.scrollWidth > element.clientWidth + 1)
+    .map(element => ({ selector, width: element.clientWidth, scrollWidth: element.scrollWidth }))), selectors);
   assert.deepEqual(overflow, [], 'Horizontal overflow');
 }
 
@@ -90,340 +87,196 @@ async function screenshot(name) {
   report.screenshots.push(name);
 }
 
-async function openCase(item) {
-  if (await page.locator('#detail').evaluate((element) => element.open)) await page.locator('#close-detail').click();
-  await page.locator(`[data-case="${item.id}"] .case-open`).click();
-  await page.waitForFunction((number) => document.querySelector('#detail').open && document.querySelector('#detail-number').textContent.endsWith(number), item.number);
-  await page.locator('#detail-image').evaluate(async (image) => { await image.decode(); if (!image.naturalWidth || !image.naturalHeight) throw new Error('Detail image has no decoded dimensions'); });
-  assert.equal(new URL(await page.locator('#detail-image').getAttribute('src'), page.url()).href, new URL(item.svg, page.url()).href);
+async function openPreview(item) {
+  await page.locator(`[data-preview="${item.id}"]`).click();
+  await page.waitForFunction(() => document.querySelector('#preview').open);
+  await page.locator('#preview-image').evaluate(async image => {
+    await image.decode();
+    if (!image.naturalWidth || !image.naturalHeight) throw new Error('Preview did not decode');
+  });
+  const source = new URL(await page.locator('#preview-image').getAttribute('src'), page.url()).href;
+  assert.ok([item.svg, item.png].some(file => new URL(file, page.url()).href === source), 'Preview must use the selected current example');
 }
 
-async function downloaded(locator, expected, expectedName, label) {
+async function download(locator, expected, label, format) {
   const [download] = await Promise.all([page.waitForEvent('download'), locator.click()]);
   assert.equal(await download.failure(), null, label);
-  assert.equal(download.suggestedFilename(), expectedName);
-  const target = path.join(scratch, `download-${report.downloads.length}-${expectedName}`);
+  assert.equal(path.extname(download.suggestedFilename()), format === 'scene' ? '.json' : `.${format}`);
+  const target = path.join(scratch, `download-${report.downloads.length}${path.extname(download.suggestedFilename())}`);
   await download.saveAs(target);
   const actual = await fs.readFile(target);
   assert.equal(hash(actual), expected.sha256, `${label}: downloaded bytes differ from the published file`);
   assert.equal(actual.length, expected.bytes);
-  report.downloads.push({ label, filename: expectedName, bytes: actual.length, sha256: hash(actual) });
+  report.downloads.push({ label, filename: download.suggestedFilename(), bytes: actual.length, sha256: hash(actual) });
 }
-
-const protocolStub = `<!doctype html><meta charset="utf-8"><title>Local draw.io protocol fixture</title><p>This is a local protocol test, not the official editor.</p><script>
-window.received=[];
-addEventListener('message',event=>{if(event.source!==parent)return;let message;try{message=JSON.parse(event.data)}catch{return}window.received.push(message);if(message.action==='load'){window.loadedXml=message.xml;parent.postMessage(JSON.stringify({event:'load'}),'*')}});
-parent.postMessage(JSON.stringify({event:'init'}),'*');
-</script>`;
 
 try {
   const requestedUrl = option('--url') || await serveRepository();
-  assert.ok(/^https?:$/.test(new URL(requestedUrl).protocol), '--url must be an HTTP or HTTPS gallery URL');
+  assert.ok(/^https?:$/.test(new URL(requestedUrl).protocol), '--url must be HTTP or HTTPS');
   const { chromium } = await import(pathToFileURL(path.resolve(playwrightPath)).href);
   browser = await chromium.launch({ headless: true, args: ['--disable-lcd-text', '--font-render-hinting=none'], ...(option('--browser') ? { executablePath: path.resolve(option('--browser')) } : {}) });
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1, acceptDownloads: true, reducedMotion: 'reduce' });
-  await context.addInitScript(() => {
-    window.__galleryQaEditorEvents = [];
-    window.addEventListener('message', (event) => {
-      if (event.origin !== 'https://embed.diagrams.net' || event.source !== document.querySelector('#editor-frame iframe')?.contentWindow || typeof event.data !== 'string') return;
-      try { const data = JSON.parse(event.data); window.__galleryQaEditorEvents.push(data.event); } catch { /* The application rejects malformed protocol messages. */ }
+  const errors = [], externalRequests = [], apiRequests = [];
+  const observe = async (context, allowedOrigin) => {
+    await context.route('**/*', async route => {
+      const request = route.request(), url = new URL(request.url());
+      if (!['http:', 'https:'].includes(url.protocol)) { await route.continue(); return; }
+      if (url.origin !== allowedOrigin) {
+        externalRequests.push(request.url());
+        await route.abort();
+      } else {
+        if (!['GET', 'HEAD'].includes(request.method()) || /\/(?:api|v1|chat|completions)(?:\/|$)/.test(url.pathname)) apiRequests.push(request.url());
+        await route.continue();
+      }
     });
-  });
+    context.on('page', opened => opened.on('pageerror', error => errors.push(error.message)));
+  };
+  await observe(context, new URL(requestedUrl).origin);
   page = await context.newPage();
-  const runtimeErrors = [];
-  const referenceRequests = [];
-  page.on('pageerror', (error) => runtimeErrors.push(error.message));
-  page.on('request', (request) => { if (/\/cases\/\d{3}\/design\.json(?:[?#]|$)/.test(request.url())) referenceRequests.push(request.url()); });
   await page.goto(requestedUrl, { waitUntil: 'networkidle' });
-  await page.waitForFunction(() => document.querySelectorAll('.case-card').length === 100);
-  // Resolve the Pages root's real browser redirect before fetching relative files.
+  await page.waitForFunction(() => document.querySelectorAll('.style-card').length === 2);
   const galleryUrl = page.url();
-  await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: new URL(galleryUrl).origin });
-  const manifestBytes = await fetchBytes(new URL('manifest.json', galleryUrl));
-  const manifest = JSON.parse(manifestBytes.toString('utf8'));
-  assert.equal(manifest.items.length, 100, 'The gallery must contain exactly 100 original cases');
-  const items = manifest.items;
+  const manifest = JSON.parse((await fetchBytes(new URL('manifest.json', galleryUrl))).toString('utf8'));
   const localManifest = JSON.parse(await fs.readFile(path.join(repo, 'docs/gallery/manifest.json'), 'utf8'));
-  assert.deepEqual(manifest, localManifest, 'The served gallery manifest differs from the checked-out source');
-  report.caseCount = items.length;
-  const assets = new Map();
-  await check('asset-comparison-retains-strict-content-validation', async () => {
-    const lf = Buffer.from('<mxfile>图\n</mxfile>');
-    const crlf = Buffer.from('<mxfile>图\r\n</mxfile>');
-    assert.ok(sourceBytesMatch(lf, crlf, 'drawio'));
-    assert.ok(sourceBytesMatch(lf, crlf, 'svg'));
-    assert.equal(sourceBytesMatch(lf, crlf, 'png'), false);
-    assert.equal(sourceBytesMatch(lf, crlf, 'thumbnail'), false);
-    assert.equal(sourceBytesMatch(lf, Buffer.from('<mxfile>改\n</mxfile>'), 'drawio'), false);
-    assert.equal(sourceBytesMatch(lf, Buffer.from('<mxfile>图 \n</mxfile>'), 'drawio'), false);
-    assert.equal(sourceBytesMatch(lf, Buffer.from('<mxfile>图\r</mxfile>'), 'drawio'), false);
-    assert.equal(sourceBytesMatch(lf, Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), crlf]), 'drawio'), false);
-    assert.equal(sourceBytesMatch(Buffer.from([0xff, 13, 10]), Buffer.from([0xff, 10]), 'drawio'), false);
-    return { onlyTextCrLfNormalizationAllowed: true, binaryAndContentChangesRejected: true };
-  });
-  await check('all-100-published-assets-match-source-content', async () => {
-    const work = items.flatMap((item) => ['thumbnail', 'svg', 'png', 'drawio'].map((format) => ({ item, format, source: item[format] })));
-    for (let first = 0; first < work.length; first += 8) {
-      await Promise.all(work.slice(first, first + 8).map(async ({ item, format, source }) => {
-        assert.match(source, /^cases\/\d{3}\/(preview\.png|diagram\.(svg|png|drawio))$/, 'Asset must be a public gallery-relative path');
-        const remote = await fetchBytes(new URL(source, galleryUrl));
-        const local = await fs.readFile(path.join(repo, 'docs/gallery', source));
-        assert.ok(sourceBytesMatch(remote, local, format), `Case ${item.number} ${format}: HTTP content differs from source`);
-        assert.ok(remote.length > 0, `${source} is empty`);
-        const entry = { number: item.number, format, bytes: remote.length, sha256: hash(remote), sourceComparison: remote.equals(local) ? 'byte-exact' : 'text-crlf-to-lf-only' };
-        report.httpAssets.push(entry); assets.set(`${item.id}/${format}`, entry);
-      }));
+  assert.deepEqual(manifest, localManifest, 'Served manifest differs from the source checkout');
+  const items = manifest.items;
+  assert.deepEqual(items.map(item => [item.id, item.name]), [['sketch', '手绘线稿'], ['planes', '终端色域']]);
+  report.styleCount = items.length;
+  const assets = new Map(), copied = new Map();
+
+  await check('two-current-examples-published-assets-match-source', async () => {
+    for (const item of items) for (const format of ['scene', 'svg', 'png', 'thumbnail']) {
+      const source = item[format];
+      assert.match(source, /^examples\/(sketch|planes)\/(document\.json|diagram\.(svg|png)|preview-1200\.png)$/);
+      const remote = await fetchBytes(new URL(source, galleryUrl));
+      const local = await fs.readFile(path.join(repo, 'docs/gallery', source));
+      assert.ok(sourceBytesMatch(remote, local, format), `${item.id}/${format}: HTTP content differs from source`);
+      assert.ok(remote.length > 0);
+      if (format === 'scene') {
+        const document = JSON.parse(remote.toString('utf8'));
+        assert.equal(document.presentation.style, item.name);
+        assert.ok(document.scene.nodes.length > 0 && document.scene.edges.length > 0);
+      }
+      const entry = { id: item.id, format, bytes: remote.length, sha256: hash(remote), sourceComparison: remote.equals(local) ? 'byte-exact' : 'text-crlf-to-lf-only' };
+      report.httpAssets.push(entry); assets.set(`${item.id}/${format}`, entry);
     }
-    report.httpAssets.sort((a, b) => a.number.localeCompare(b.number) || a.format.localeCompare(b.format));
-    return { cases: 100, files: work.length };
-  });
-  await check('desktop-layout-and-all-100-decoded-thumbnails', async () => {
-    await noOverflow();
-    for (const item of items) {
-      const image = page.locator(`[data-case="${item.id}"] .case-art img`);
-      await image.scrollIntoViewIfNeeded();
-      await image.evaluate(async (element) => { await element.decode(); if (!element.naturalWidth || !element.naturalHeight) throw new Error('Thumbnail did not decode'); });
-      assert.equal(new URL(await image.getAttribute('src'), galleryUrl).href, new URL(item.thumbnail, galleryUrl).href);
-    }
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await screenshot('desktop.png');
-    return { decodedThumbnails: 100, viewport: '1440x1000' };
-  });
-  await check('view-filters-search-and-empty-state', async () => {
-    for (const view of ['capability', 'component', 'deployment']) {
-      await page.locator(`[data-view="${view}"]`).click();
-      assert.equal(await page.locator('.case-card').count(), items.filter((item) => item.view === view).length);
-      assert.equal(await page.locator(`[data-view="${view}"]`).getAttribute('aria-pressed'), 'true');
-    }
-    await page.locator('[data-view="all"]').click();
-    await page.locator('#search').fill(items[1].title);
-    assert.ok(await page.locator('.case-card').count() > 0);
-    assert.equal(await page.locator('.case-card').count(), items.filter((item) => `${item.number} ${item.title} ${item.family} ${item.theme}`.toLocaleLowerCase().includes(items[1].title.toLocaleLowerCase())).length);
-    await page.locator('#search').fill('NO_MATCH_qa_86b231da');
-    assert.equal(await page.locator('.case-card').count(), 0);
-    assert.equal(await page.locator('#empty').isVisible(), true);
-    await page.locator('#reset').click();
-    assert.equal(await page.locator('.case-card').count(), 100);
-    await page.keyboard.press('/');
-    assert.equal(await page.locator('#search').evaluate((element) => document.activeElement === element), true);
-  });
-  await check('favorites-survive-refresh', async () => {
-    for (const id of [2, 100]) await page.locator(`[data-case="${id}"] .favorite`).click();
-    assert.equal(await page.locator('#favorite-count').textContent(), '2');
-    await page.locator('#favorites').click();
-    assert.equal(await page.locator('.case-card').count(), 2);
-    await page.reload({ waitUntil: 'networkidle' });
-    await page.waitForFunction(() => document.querySelectorAll('.case-card').length === 100);
-    assert.equal(await page.locator('#favorite-count').textContent(), '2');
-    for (const id of [2, 100]) assert.equal(await page.locator(`[data-case="${id}"] .favorite`).getAttribute('aria-pressed'), 'true');
-    await page.locator('#favorites').click();
-    await page.locator('[data-case="100"] .favorite').click();
-    assert.equal(await page.locator('.case-card').count(), 1);
-    assert.equal(await page.locator('#favorite-count').textContent(), '1');
-    await page.locator('#favorites').click();
-  });
-  await check('detail-svg-zoom-pan-fit-and-fullscreen', async () => {
-    await openCase(items.find((item) => item.id === 2));
-    await noOverflow(['#detail', '.detail-bar', '.detail-body', '.detail-info', '.zoom-bar']);
-    await screenshot('desktop-detail.png');
-    await page.locator('#zoom-in').click();
-    assert.equal(await page.locator('#zoom-value').textContent(), '125%');
-    const viewport = await page.locator('#viewport').boundingBox();
-    const x = viewport.x + viewport.width / 2, y = viewport.y + viewport.height / 2;
-    await page.mouse.move(x, y); await page.mouse.down(); await page.mouse.move(x + 55, y + 30, { steps: 5 }); await page.mouse.up();
-    const translated = await page.locator('#detail-image').evaluate((image) => { const matrix = new DOMMatrix(getComputedStyle(image).transform); return [matrix.e, matrix.f]; });
-    assert.ok(translated[0] > 40 && translated[1] > 20, 'Dragging must pan the drawing');
-    await page.locator('#fit').click();
-    assert.equal(await page.locator('#zoom-value').textContent(), '100%');
-    assert.equal(await page.locator('#detail-image').evaluate((image) => getComputedStyle(image).transform), 'matrix(1, 0, 0, 1, 0, 0)');
-    await page.mouse.move(x, y); await page.mouse.wheel(0, -200);
-    await page.waitForFunction(() => document.querySelector('#zoom-value').textContent === '112%');
-    await page.locator('#fit').click();
-    await page.locator('#fullscreen').click();
-    await page.waitForFunction(() => document.fullscreenElement?.id === 'viewport');
-    await page.evaluate(() => document.exitFullscreen());
-    await page.waitForFunction(() => !document.fullscreenElement);
-  });
-  await check('prompt-and-share-use-real-clipboard', async () => {
-    for (const item of items) {
-      assert.equal(typeof item.prompt, 'string', `Case ${item.number}: user requirement must be text`);
-      assert.ok(item.prompt.length > 0 && item.prompt.length <= 180, `Case ${item.number}: requirement must contain at most 180 characters`);
-      assert.equal(item.prompt, item.prompt.trim(), `Case ${item.number}: requirement has unexpected surrounding whitespace`);
-      assertNoProductionSpecs(item.prompt, `Case ${item.number} requirement`);
-      assert.equal(Object.hasOwn(item, 'productionBrief'), false, 'Detailed production specifications belong in design.json');
-      assert.equal(item.reference, `cases/${item.number}/design.json`);
-      const promptFile = await fs.readFile(path.join(repo, 'docs/gallery/cases', item.number, 'prompt.txt'), 'utf8');
-      assert.equal(promptFile.replace(/\r\n/g, '\n').replace(/\n$/, ''), item.prompt, `Case ${item.number}: prompt.txt differs from the copied requirement`);
-    }
-    // Inspect the rendered requirement for every case through the real detail
-    // navigation. Detailed JSON remains a download link and is never fetched.
-    await openCase(items[0]);
-    for (const [index, item] of items.entries()) {
-      assert.equal(await page.locator('#prompt').textContent(), item.prompt, `Case ${item.number}: displayed requirement differs from the catalog`);
-      assertNoProductionSpecs(await page.locator('body').innerText(), `Case ${item.number} page`);
-      assert.equal(await page.locator('#download-reference').isVisible(), true);
-      assert.equal(new URL(await page.locator('#download-reference').getAttribute('href'), galleryUrl).href, new URL(item.reference, galleryUrl).href);
-      if (index < items.length - 1) await page.locator('#next').click();
-    }
-    for (const id of [97, 2, 99]) {
-      const item = items.find((entry) => entry.id === id);
-      await openCase(item);
-      await page.evaluate((number) => navigator.clipboard.writeText(`QA before case ${number}`), item.number);
-      await page.locator('#copy-prompt').click();
-      await page.waitForFunction(async (expected) => await navigator.clipboard.readText() === expected, item.prompt);
-      assert.equal(await page.evaluate(() => navigator.clipboard.readText()), item.prompt, `Case ${item.number}: copy button must copy only the short requirement`);
-      await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('已复制提示词'));
-      assertNoProductionSpecs(await page.locator('body').innerText(), `Copied case ${item.number} page`);
-    }
-    await page.locator('#share').click();
-    await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('已复制案例链接'));
-    assert.equal(await page.evaluate(() => navigator.clipboard.readText()), page.url());
-    assert.deepEqual(referenceRequests, [], 'The page fetched advanced production references without a download request');
-    return { shortRequirements: 100, renderedRequirements: 100, maximumCharacters: Math.max(...items.map((item) => item.prompt.length)), realClipboardCases: ['097', '002', '099'], productionReferencesFetched: 0 };
-  });
-  await check('real-downloads-cases-002-099-100-all-formats', async () => {
-    for (const id of [2, 99, 100]) {
-      const item = items.find((entry) => entry.id === id); await openCase(item);
-      for (const format of ['drawio', 'svg', 'png']) await downloaded(page.locator(`#download-${format}`), assets.get(`${id}/${format}`), `MuseDraw-${item.number}.${format}`, `${item.number}/${format}`);
-    }
-    return { browserDownloads: 9, allCaseHttpByteComparisons: 400 };
-  });
-  await check('hash-deep-link-and-detail-navigation', async () => {
-    await page.goto(new URL('#case-099', galleryUrl).href, { waitUntil: 'networkidle' });
-    await page.waitForFunction(() => document.querySelector('#detail').open && document.querySelector('#detail-number').textContent.endsWith('099'));
-    await page.keyboard.press('ArrowRight');
-    assert.equal(new URL(page.url()).hash, '#case-100');
-    assert.equal(await page.locator('#next').isDisabled(), true);
-    await page.reload({ waitUntil: 'networkidle' });
-    await page.waitForFunction(() => document.querySelector('#detail').open && document.querySelector('#detail-number').textContent.endsWith('100'));
-    await page.locator('#previous').click();
-    assert.equal(new URL(page.url()).hash, '#case-099');
-    await page.locator('#close-detail').click();
-    assert.equal(new URL(page.url()).hash, '');
-  });
-  await check('mobile-layout-thumbnail-and-detail', async () => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await page.locator('.case-art img').first().evaluate((image) => image.decode());
-    await noOverflow();
-    await screenshot('mobile.png');
-    await openCase(items.find((item) => item.id === 2));
-    await noOverflow(['html', '#detail', '.detail-bar', '.detail-body', '.detail-info', '.zoom-bar', '.download-actions']);
-    await screenshot('mobile-detail.png');
-    await downloaded(page.locator('#download-svg'), assets.get('2/svg'), 'MuseDraw-002.svg', 'mobile-002/svg');
-    await page.locator('#close-detail').click();
-    await page.setViewportSize({ width: 1440, height: 1000 });
-  });
-  await check('narrow-phone-and-tablet-layout', async () => {
-    for (const width of [320, 768]) {
-      await page.setViewportSize({ width, height: 900 });
-      await noOverflow();
-      await openCase(items.find((item) => item.id === 2));
-      await noOverflow(['html', '#detail', '.detail-bar', '.detail-body', '.detail-info', '.zoom-bar', '.download-actions']);
-      await page.locator('#close-detail').click();
-    }
-    await page.setViewportSize({ width: 1440, height: 1000 });
-    return { widths: [320, 768] };
+    return { styles: 2, files: 8 };
   });
 
-  // A real request to the official embed is always attempted. Its result is
-  // reported independently: a local protocol fixture never verifies diagrams.net.
-  await openCase(items.find((item) => item.id === 2));
-  const officialResponses = [], officialFailures = [];
-  const responseListener = (response) => { if (response.url().startsWith(editorOrigin) && response.request().isNavigationRequest()) officialResponses.push(response.status()); };
-  const failureListener = (request) => { if (request.url().startsWith(editorOrigin)) officialFailures.push(request.failure()?.errorText || 'Unknown network failure'); };
-  page.on('response', responseListener); page.on('requestfailed', failureListener);
-  await page.locator('#edit').click();
-  try {
-    await page.waitForFunction(() => document.querySelector('#editor').open && document.querySelector('#editor-loading').hidden && window.__galleryQaEditorEvents.includes('init') && window.__galleryQaEditorEvents.includes('load'), null, { timeout: 20000 });
-    const frame = page.frames().find((entry) => entry.url().startsWith(editorOrigin));
-    assert.ok(frame, 'Official editor frame is absent');
-    const drawing = frame.locator('.geDiagramContainer svg').first();
-    await drawing.waitFor({ state: 'visible', timeout: 10000 });
-    assert.ok(await drawing.locator('text, foreignObject').count() > 0, 'Official editor did not render diagram labels');
-    report.officialEditor = { status: 'loaded-and-rendered', verified: true, navigationHttpStatuses: officialResponses, protocolEvents: await page.evaluate(() => window.__galleryQaEditorEvents.slice()) };
-    await screenshot('official-editor.png');
-    console.log('PASS official-diagrams-net-loaded-and-rendered');
-  } catch (error) {
-    report.officialEditor = { status: 'unverified', verified: false, reason: error.message, navigationHttpStatuses: officialResponses, requestFailures: officialFailures, protocolEvents: await page.evaluate(() => window.__galleryQaEditorEvents.slice()) };
-    report.warnings.push('The official diagrams.net editor was not verified. Local protocol checks below are a separate test, not evidence of official editing.');
-    console.log('UNVERIFIED official-diagrams-net-editor');
-  } finally {
-    page.off('response', responseListener); page.off('requestfailed', failureListener);
-  }
-  await page.locator('#close-editor').click();
-  await page.route(`${editorOrigin}/**`, (route) => route.fulfill({ status: 200, contentType: 'text/html; charset=utf-8', body: protocolStub }));
-  await check('local-editor-protocol-init-load-and-origin-guards', async () => {
-    let downloadCount = 0;
-    const onDownload = () => downloadCount++;
-    page.on('download', onDownload);
+  await check('desktop-layout-and-two-decoded-thumbnails', async () => {
+    await noOverflow();
+    for (const item of items) {
+      const image = page.locator(`.style-card img[src="${item.thumbnail}"]`);
+      assert.equal(await image.count(), 1);
+      await image.evaluate(async image => { await image.decode(); if (!image.naturalWidth || !image.naturalHeight) throw new Error('Thumbnail did not decode'); });
+    }
+    await screenshot('desktop.png');
+    return { decodedThumbnails: 2, viewport: '1440x1000' };
+  });
+
+  await check('style-briefs-copy-through-real-clipboard', async () => {
+    await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: new URL(galleryUrl).origin });
+    for (const item of items) {
+      await page.evaluate(() => navigator.clipboard.writeText('QA clipboard before copy'));
+      await page.locator(`[data-copy-style="${item.id}"]`).click();
+      await page.waitForFunction(async () => (await navigator.clipboard.readText()) !== 'QA clipboard before copy');
+      // Windows clipboard uses CRLF; textarea values use LF on every platform.
+      const text = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, '\n');
+      assert.ok(text.includes('https://github.com/KanJieTeam/MuseDraw'), 'Copied request must identify the current repository');
+      assert.ok(text.includes(item.name), 'Copied request must identify the selected style');
+      assert.ok(text.includes(item.prompt), 'Copied request must include the natural language brief');
+      assert.doesNotMatch(text, /productionBrief|api[_-]?key|\b(?:x|y|width|height)\s*[:=]\s*\d/i);
+      copied.set(item.id, text);
+    }
+    return { nativeClipboardStyles: items.map(item => item.id) };
+  });
+
+  await check('clipboard-permission-denial-opens-selectable-manual-copy', async () => {
+    const fallback = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
+    await observe(fallback, new URL(galleryUrl).origin);
+    await fallback.addInitScript(() => {
+      Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: () => Promise.reject(new DOMException('Permission denied', 'NotAllowedError')) } });
+      document.execCommand = () => false;
+    });
+    const original = page;
     try {
-      await page.locator('#edit').click();
-      await page.waitForFunction(() => document.querySelector('#editor-loading').hidden);
-      const frame = page.frames().find((entry) => entry.url().startsWith(editorOrigin));
-      assert.ok(frame, 'Local protocol fixture frame is absent');
-      const loaded = await frame.evaluate(() => window.received.find((message) => message.action === 'load'));
-      const original = (await fs.readFile(path.join(repo, 'docs/gallery', items.find((item) => item.id === 2).drawio))).toString('utf8');
-      assert.ok(sourceBytesMatch(Buffer.from(loaded.xml, 'utf8'), Buffer.from(original, 'utf8'), 'drawio'));
-      assert.equal(hash(Buffer.from(loaded.xml, 'utf8')), assets.get('2/drawio').sha256, 'Editor must receive the exact published XML bytes');
-      assert.equal(loaded.title, items.find((item) => item.id === 2).title); assert.equal(loaded.autosave, 1);
-      await page.evaluate(() => {
-        const source = document.querySelector('#editor-frame iframe').contentWindow;
-        const save = JSON.stringify({ event: 'save', xml: '<mxfile><diagram/></mxfile>' });
-        window.dispatchEvent(new MessageEvent('message', { origin: 'https://evil.invalid', source, data: save }));
-        window.dispatchEvent(new MessageEvent('message', { origin: 'https://embed.diagrams.net', source: window, data: save }));
-        window.dispatchEvent(new MessageEvent('message', { origin: 'https://embed.diagrams.net', source, data: 'malformed-json' }));
-        window.dispatchEvent(new MessageEvent('message', { origin: 'https://embed.diagrams.net', source, data: 'x'.repeat(5_000_001) }));
-        for (const data of ['null', 'false', '42', '"text"', '[]']) window.dispatchEvent(new MessageEvent('message', { origin: 'https://embed.diagrams.net', source, data }));
-      });
-      await frame.evaluate(() => parent.postMessage(JSON.stringify({ event: 'save', xml: '<html/>' }), '*'));
-      await page.waitForFunction(() => document.querySelector('#toast').textContent.includes('文件无效'));
-      assert.equal(downloadCount, 0, 'An untrusted or invalid message caused a download');
-      assert.deepEqual(runtimeErrors, [], 'Malformed protocol data caused an uncaught JavaScript error');
-      assert.equal(await page.locator('#editor').evaluate((element) => element.open), true);
-      return { fixture: 'local mocked protocol, not official editing', loadedSourceBytes: Buffer.byteLength(loaded.xml), exactPublishedXmlLoaded: true, rejected: ['wrong-origin', 'wrong-source', 'invalid-json', 'null-or-primitive-json', 'oversized-message', 'invalid-xml-root'] };
-    } finally { page.off('download', onDownload); }
+      page = await fallback.newPage();
+      await page.goto(galleryUrl, { waitUntil: 'networkidle' });
+      for (const item of items) {
+        await page.locator(`[data-copy-style="${item.id}"]`).click();
+        await page.locator('#copy-dialog').waitFor({ state: 'visible' });
+        assert.equal(await page.locator('#copy-text').inputValue(), copied.get(item.id));
+        assert.equal(await page.locator('#copy-text').evaluate(element => element.selectionEnd - element.selectionStart), copied.get(item.id).length, 'Manual request must be selected for copying');
+        await noOverflow();
+        await page.locator('#close-copy').click();
+        assert.equal(await page.locator('#copy-dialog').evaluate(element => element.open), false);
+      }
+      await page.locator('[data-copy-style="sketch"]').click();
+      await page.locator('#copy-dialog').waitFor({ state: 'visible' });
+      await page.keyboard.press('Escape');
+      assert.equal(await page.locator('#copy-dialog').evaluate(element => element.open), false);
+      return { deniedClipboardPermission: true, blockedLegacyCopy: true, exactSelectableText: true };
+    } finally { await fallback.close(); page = original; }
   });
-  await check('local-editor-unsaved-close-cancel-and-confirm', async () => {
-    const frame = page.frames().find((entry) => entry.url().startsWith(editorOrigin));
-    await frame.evaluate(() => parent.postMessage(JSON.stringify({ event: 'autosave', xml: window.loadedXml }), '*'));
-    await page.waitForFunction(() => window.__galleryQaEditorEvents.at(-1) === 'autosave');
-    const canceledDialog = page.waitForEvent('dialog');
-    const canceledClose = page.locator('#close-editor').click();
-    const canceled = await canceledDialog;
-    assert.equal(canceled.type(), 'confirm'); assert.match(canceled.message(), /尚未下载/);
-    await canceled.dismiss(); await canceledClose;
-    assert.equal(await page.locator('#editor').evaluate((element) => element.open), true);
-    assert.equal(await page.locator('#editor-frame iframe').count(), 1);
-    const acceptedDialog = page.waitForEvent('dialog');
-    const acceptedClose = page.locator('#close-editor').click();
-    const accepted = await acceptedDialog; await accepted.accept(); await acceptedClose;
-    assert.equal(await page.locator('#editor').evaluate((element) => element.open), false);
-    assert.equal(await page.locator('#editor-frame iframe').count(), 0);
-    await page.locator('#edit').click();
-    await page.waitForFunction(() => document.querySelector('#editor-loading').hidden);
-    return { fixture: 'local mocked protocol, not official editing', canceledClosePreservedFrame: true, confirmedCloseRemovedFrame: true };
+
+  await check('preview-zoom-fit-close-and-escape-for-both-styles', async () => {
+    for (const item of items) {
+      await openPreview(item);
+      const transform = () => page.locator('#preview-image').evaluate(image => getComputedStyle(image).transform);
+      const initial = await transform();
+      await page.locator('#zoom-in').click();
+      assert.notEqual(await transform(), initial, 'Zoom in must change the image transform');
+      await page.locator('#fit').click();
+      assert.equal(await transform(), initial, 'Fit must reset the preview');
+      await page.locator('#zoom-out').click();
+      assert.notEqual(await transform(), initial, 'Zoom out must change the image transform');
+      await page.locator('#fit').click();
+      await noOverflow(['html', '#preview']);
+      await screenshot(`desktop-preview-${item.id}.png`);
+      await page.locator('#close-preview').click();
+      assert.equal(await page.locator('#preview').evaluate(element => element.open), false);
+      await openPreview(item);
+      await page.keyboard.press('Escape');
+      assert.equal(await page.locator('#preview').evaluate(element => element.open), false);
+    }
+    return { previewStyles: 2, decodedImages: 2 };
   });
-  await check('local-editor-protocol-save-download-status-and-exit', async () => {
-    const frame = page.frames().find((entry) => entry.url().startsWith(editorOrigin));
-    const original = await frame.evaluate(() => window.loadedXml);
-    const modified = original.replace(/(<\/(?:mxfile|mxGraphModel)>)/, '<!-- Local protocol QA round trip -->$1');
-    assert.notEqual(modified, original, 'The protocol save fixture must change the original XML');
-    const [download] = await Promise.all([page.waitForEvent('download'), frame.evaluate((xml) => parent.postMessage(JSON.stringify({ event: 'save', xml }), '*'), modified)]);
-    assert.equal(await download.failure(), null); assert.equal(download.suggestedFilename(), 'MuseDraw-002-edited.drawio');
-    const target = path.join(scratch, 'protocol-edited.drawio'); await download.saveAs(target);
-    const saved = await fs.readFile(target); assert.equal(saved.toString('utf8'), modified);
-    report.downloads.push({ label: 'local-protocol-edited', filename: download.suggestedFilename(), bytes: saved.length, sha256: hash(saved), fixture: true });
-    await frame.waitForFunction(() => window.received.some((message) => message.action === 'status' && message.modified === false));
-    await frame.evaluate(() => parent.postMessage(JSON.stringify({ event: 'exit' }), '*'));
-    await page.waitForFunction(() => !document.querySelector('#editor').open && !document.querySelector('#editor-frame iframe'));
-    assert.equal(await page.locator('#edit').evaluate((element) => document.activeElement === element), true);
-    return { fixture: 'local mocked protocol, not official editing', bytesMatched: true };
+
+  await check('real-downloads-svg-png-and-editable-document-for-both-styles', async () => {
+    for (const item of items) for (const format of ['svg', 'png', 'scene']) {
+      const locator = page.locator(`.style-card a[download][href="${item[format]}"]`);
+      assert.equal(await locator.count(), 1, `${item.id}/${format} download must be present`);
+      await download(locator, assets.get(`${item.id}/${format}`), `${item.id}/${format}`, format);
+    }
+    return { byteExactBrowserDownloads: 6 };
   });
-  await check('no-gallery-javascript-runtime-errors', async () => assert.deepEqual(runtimeErrors, []));
-  if (flags.includes('--require-official-editor')) assert.equal(report.officialEditor.verified, true, 'The required official diagrams.net verification did not complete');
-  report.status = report.officialEditor.verified ? 'passed' : 'passed-with-unverified-official-editor';
-  console.log(`Gallery browser QA: ${report.status}; ${report.checks.length} checks, ${report.downloads.length} real browser downloads.`);
+
+  await check('mobile-390-layout-decoded-images-preview-and-copy', async () => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await noOverflow();
+    await screenshot('mobile.png');
+    for (const item of items) {
+      await openPreview(item);
+      await noOverflow(['html', '#preview']);
+      await screenshot(`mobile-preview-${item.id}.png`);
+      await page.keyboard.press('Escape');
+      await page.locator(`[data-copy-style="${item.id}"]`).click();
+      await page.waitForFunction(async expected => (await navigator.clipboard.readText()).replace(/\r\n/g, '\n') === expected, copied.get(item.id));
+      assert.equal((await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, '\n'), copied.get(item.id));
+    }
+    return { viewport: '390x844', previewStyles: 2 };
+  });
+
+  await check('static-page-has-no-external-network-api-calls-or-runtime-errors', async () => {
+    assert.deepEqual(externalRequests, []);
+    assert.deepEqual(apiRequests, []);
+    assert.deepEqual(errors, []);
+    assert.equal(await page.locator('iframe').count(), 0);
+    return { externalRequests: 0, apiRequests: 0, runtimeErrors: 0 };
+  });
+  report.status = 'passed';
+  console.log(`Gallery browser QA: passed; ${report.checks.length} checks, ${report.downloads.length} byte-exact downloads.`);
 } catch (error) {
   report.status = 'failed'; report.error = error.message;
   if (page && !page.isClosed()) await screenshot('failure.png').catch(() => {});
@@ -432,12 +285,10 @@ try {
 } finally {
   await fs.writeFile(path.join(output, 'report.json'), `${JSON.stringify(report, null, 2)}\n`);
   await browser?.close();
-  if (server) await new Promise((resolve) => server.close(resolve));
-  // Only remove the exact directory that this run created, after validating its
-  // resolved identity and containment. Repository assets and reports are retained.
+  if (server) await new Promise(resolve => server.close(resolve));
   const currentReal = await fs.realpath(scratch).catch(() => null);
   const tempReal = await fs.realpath(os.tmpdir());
-  const tempRelative = currentReal && path.relative(tempReal, currentReal);
-  assert.ok(currentReal === scratchReal && tempRelative && !tempRelative.startsWith('..') && !path.isAbsolute(tempRelative) && path.basename(scratch).startsWith('musedraw-gallery-qa-'), 'Refusing to remove an unverified scratch directory');
+  const relative = currentReal && path.relative(tempReal, currentReal);
+  assert.ok(currentReal === scratchReal && relative && !relative.startsWith('..') && !path.isAbsolute(relative) && path.basename(scratch).startsWith('musedraw-gallery-qa-'), 'Refusing an unverified scratch cleanup');
   await fs.rm(scratch, { recursive: true, force: true });
 }
