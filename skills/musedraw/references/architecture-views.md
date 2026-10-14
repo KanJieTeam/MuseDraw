@@ -29,6 +29,6 @@ Label logical components and actual instances separately. Instances belong to th
 
 The capability renderer does not fit these views. Use native SVG `rect/path/line/text`; give each meaningful node or container a stable element ID so later edits can target it. Size components according to text and hierarchy, not a fixed "three cards per row."
 
-Reuse the blue-and-white role family, but main components may use white fields with thin blue borders, and boundaries may use light fields or dashed lines. Add a short legend when dashed lines distinguish boundaries. Reserve primary emphasis for the focus of the current view rather than filling every component with blue.
+Choose a family from [visual-decisions.md](visual-decisions.md) or the explicit visual reference. An ink technical view can rely on white fields and thin neutral boundaries; a colored domain matrix or dark system view has different color-area proportions. Do not force all views into a blue-and-white card wall. Add a short legend when line styles carry meaning. Keep supplied relationships legible and avoid coloring each connector differently without a semantic reason.
 
 Check nodes, edges and labels against the input list; container ownership; endpoints and directions; wrapping of long labels; lines crossing text; and full-size and reduced previews. [preview.mjs](../scripts/preview.mjs) checks text collisions, canvas bounds and declared container bounds. It does not check architecture semantics or edge routing; those require actual visual inspection.

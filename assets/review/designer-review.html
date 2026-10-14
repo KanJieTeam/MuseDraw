@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>MuseDraw · 设计师逐图评审</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f6f7f9;color:#243347;font:15px/1.65 system-ui,"Microsoft YaHei UI","Microsoft YaHei",sans-serif}a{color:#315a80;text-underline-offset:3px}button{font:inherit;cursor:pointer}.page-head,main{width:min(1800px,calc(100% - 64px));margin:auto}.page-head{padding:42px 0 20px}.eyebrow{margin:0 0 8px;color:#627388;font-size:13px}h1{font-size:32px;line-height:1.25;margin:0 0 16px;letter-spacing:-.4px}.intro{max-width:980px;margin:0;color:#536275}.package-note{color:#718093;font-size:13px;margin:12px 0 0}.private-notice{margin:18px 0 0;border-left:3px solid #ac754b;background:#fff4e9;padding:10px 14px;color:#775133}.navigation{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0 0}.navigation span{font-size:13px;color:#66788c;margin-right:6px}.navigation a{display:block;padding:3px 10px;border:1px solid #d8e0e8;border-radius:3px;background:#fff;text-decoration:none;font-size:13px}main{padding-bottom:42px}.case{scroll-margin-top:18px;margin:22px 0;background:#fff;border:1px solid #dce3eb;padding:22px}.case-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}h2{font-size:20px;line-height:1.4;margin:0;overflow-wrap:anywhere}h2 span{font-weight:400;color:#6d7b8a;font-size:13px;margin-right:8px}.stage{white-space:nowrap;margin:0;font-size:13px;padding:3px 9px;border-radius:3px}.revised{background:#edf4fb;color:#345d83}.frozen{background:#f1f2f3;color:#626b76}.comparison{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}figure{min-width:0;margin:0}figcaption{font-size:13px;color:#637184;margin-bottom:10px}.figure-image{height:300px;padding:10px;border:1px solid #edf0f4;display:flex;align-items:center;justify-content:center;background:#fff}.figure-image img{display:block;max-width:100%;max-height:100%;object-fit:contain}.reference-note{height:300px;display:flex;flex-direction:column;justify-content:center;padding:24px;background:#fafbfc;border:1px dashed #dbe2e9;color:#68788a;overflow-wrap:anywhere}.reference-note strong{color:#3e5368;font-size:15px}.reference-note p{margin:8px 0 0}.crop{position:relative;overflow:hidden;max-height:300px;width:100%;background:white;border:1px solid #edf0f4}.crop img{position:absolute;max-width:none;height:auto}.figure-tools{margin:9px 0 0;display:flex;align-items:center;gap:14px;font-size:12px}.figure-tools button{font-size:12px;border:1px solid #d3deea;border-radius:3px;background:#fff;color:#3b5d7f;padding:4px 9px}.review-notes{margin:20px 0 0;color:#617083;font-size:13px;overflow-wrap:anywhere}details{margin-top:17px;border-top:1px solid #edf0f4;padding-top:12px;font-size:13px}summary{cursor:pointer;color:#3b5b79}.record-stage{margin:12px 0;color:#6d7c8b}.downloads{display:flex;flex-wrap:wrap;gap:10px 20px}details ul{padding-left:18px;color:#657589}.rules{padding:24px 0;border-top:1px solid #d9e1e8;margin-top:28px}.rules h2{margin-bottom:10px}.rules p,.rules ul{font-size:13px;color:#627489}.rules ul{padding-left:18px}.footer{color:#7d8997;font-size:12px;margin:0}.viewer{border:1px solid #cbd5e0;border-radius:5px;padding:0;width:94vw;max-width:1900px;height:92vh;max-height:92vh;background:#fff;overflow:hidden}.viewer[open]{display:flex;flex-direction:column}.viewer::backdrop{background:#27324490}.viewer-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #dbe2eb;background:#fff}.viewer-bar strong{margin-right:auto;font-size:14px}.viewer-bar button,.viewer-bar a{font-size:13px;border:1px solid #d2dce7;border-radius:3px;padding:5px 10px;background:#fff;color:#37536f;text-decoration:none}.viewer-view{min-height:0;flex:1;overflow:auto;padding:24px;background:#f0f3f7;text-align:center}.viewer-view img{display:block;max-width:100%;height:auto;margin:0 auto;background:white}.viewer-view.actual{text-align:left}.viewer-view.actual img{max-width:none;width:auto;height:auto;margin:0}.viewer-hint{font-size:12px;color:#718091;margin:0}.viewer-bar .viewer-hint{width:100%}@media(max-width:1100px){.page-head,main{width:calc(100% - 36px)}.comparison{gap:12px}.figure-image,.reference-note{height:240px}.crop{max-height:240px}}@media(max-width:760px){.page-head{padding-top:28px}h1{font-size:26px}.case{padding:16px}.case-head{display:block}.stage{display:inline-block;margin-top:8px}.comparison{grid-template-columns:1fr;gap:18px}.figure-image,.reference-note{height:260px}.crop{max-height:none}.viewer{width:100vw;height:100dvh;max-height:100dvh;max-width:none;border-radius:0;border:0}.viewer-bar{padding:10px 12px}.viewer-bar strong{width:100%}.viewer-view{padding:14px}.viewer-bar .viewer-hint{display:none}}
+  </style>
+  <style>
+    .comparison{--figure-height:300px}.crop{max-height:none;width:min(100%,calc((var(--figure-height) - 22px) * var(--crop-ratio)))}.crop img{max-height:none}
+    @media(max-width:1100px){.comparison{--figure-height:240px}.crop{max-height:none}}
+    @media(max-width:760px){.comparison{--figure-height:260px}}
+  </style>
+</head>
+<body>
+  <header class="page-head">
+    <p class="eyebrow">MuseDraw · 图稿评审</p>
+    <h1>12 张图，逐张评审</h1>
+    <p class="intro">__SUMMARY__</p>
+    __PRIVATE_NOTICE__
+    <nav class="navigation" aria-label="跳到指定图稿"><span>选一张开始</span>__NAVIGATION__</nav>
+  </header>
+  <main>
+    __CASES__
+    <section class="rules" id="rules">
+      <h2>绘图规则与交付说明</h2>
+      <p>规则和源码随包保留，供设计师核对内容保留、文字层级、留白与关系表达。规则说明不代表这 12 张已获认可。</p>
+      <ul>__RULES__</ul>
+      <p><a href="manifest.json" target="_blank" rel="noopener">查看文件与版本记录</a> · <a href="README.txt" target="_blank" rel="noopener">打开离线使用说明</a></p>
+    </section>
+    <p class="footer">本页面可直接离线打开。检查记录用于排查文字和几何硬伤；设计判断与实际系统事实仍需逐张核对。</p>
+  </main>
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar"><strong id="viewer-title">图稿</strong><button type="button" id="size-toggle">原尺寸</button><a id="viewer-download" download>下载图片</a><button type="button" id="viewer-close">关闭</button><p class="viewer-hint">原尺寸按图片实际像素显示；大图可在窗口内横向和纵向滚动。</p></div>
+    <div class="viewer-view" id="viewer-view"><img id="viewer-image" alt=""></div>
+  </dialog>
+  <script>
+    const dialog=document.getElementById('viewer'),view=document.getElementById('viewer-view'),image=document.getElementById('viewer-image'),toggle=document.getElementById('size-toggle');
+    function fit(){view.classList.remove('actual');toggle.textContent='原尺寸';view.scrollTop=0;view.scrollLeft=0;}
+    for(const button of document.querySelectorAll('[data-view]'))button.addEventListener('click',()=>{image.src=button.dataset.view;image.alt=button.dataset.caption;document.getElementById('viewer-title').textContent=button.dataset.caption;document.getElementById('viewer-download').href=button.dataset.view;fit();dialog.showModal();});
+    toggle.addEventListener('click',()=>{const actual=view.classList.toggle('actual');toggle.textContent=actual?'适合窗口':'原尺寸';});
+    document.getElementById('viewer-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+  </script>
+</body>
+</html>

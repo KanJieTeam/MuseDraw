@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "fonts": {
+    "text": "Inter, Noto Sans SC, PingFang SC, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif",
+    "technical": "IBM Plex Mono, SFMono-Regular, Consolas, Liberation Mono, monospace"
+  },
+  "grid": 8,
+  "typography": {"title": 44, "section": 28, "group": 18, "body": 20, "annotation": 16},
+  "stroke": {"boundary": 1, "relationship": 1.5, "focus": 2},
+  "aliases": {
+    "enterprise-blue": ["墨蓝", "墨蓝风格", "ink-blue", "blue-ink", "企业蓝白"],
+    "technical-ink": ["石墨", "石墨风格", "graphite", "墨线技术"],
+    "slate-teal": ["青灰", "青灰风格", "slate", "青灰层带"],
+    "editorial-sand": ["暖砂", "暖砂风格", "sand", "暖砂编辑"],
+    "forest": ["松绿", "松绿风格", "pine", "森绿重点"],
+    "soft-domains": ["柔彩", "柔彩风格", "soft-color", "柔色分域"],
+    "dark-system": ["夜幕", "夜幕风格", "night", "深色系统"]
+  },
+  "detailColors": {
+    "enterprise-blue": {"relationship": "#6D89A3"},
+    "technical-ink": {"relationship": "#6B7787"},
+    "slate-teal": {"relationship": "#5D7290"},
+    "editorial-sand": {"relationship": "#54687E"},
+    "forest": {"relationship": "#5E7D92"},
+    "soft-domains": {"relationship": "#8A6E43"},
+    "dark-system": {"relationship": "#9DBCAC"}
+  },
+  "variants": {
+    "quiet": {
+      "label": "轻线留白",
+      "aliases": ["轻线", "留白", "轻一点", "airy", "light"],
+      "headerTreatment": "outline",
+      "defaultDensity": "comfortable",
+      "weights": {"title": 650, "section": 600, "group": 500, "body": 400},
+      "stroke": {"boundary": 1, "relationship": 1.5, "focus": 1.5},
+      "layoutRules": {"headroom": 64, "itemGap": 16, "sectionGap": 32, "padding": 32, "minimumBody": 20, "maxColumns": 4, "radius": 4}
+    },
+    "banded": {
+      "label": "实色层带",
+      "aliases": ["层带", "层次分明", "实色", "band", "layered"],
+      "headerTreatment": "band",
+      "defaultDensity": "normal",
+      "weights": {"title": 700, "section": 650, "group": 550, "body": 400},
+      "stroke": {"boundary": 1, "relationship": 1.5, "focus": 2},
+      "layoutRules": {"headroom": 60, "itemGap": 12, "sectionGap": 24, "padding": 24, "minimumBody": 20, "maxColumns": 5, "radius": 2}
+    },
+    "compact": {
+      "label": "紧凑分区",
+      "aliases": ["紧凑", "紧凑一点", "紧凑一些", "密集", "dense"],
+      "headerTreatment": "strip",
+      "defaultDensity": "compact",
+      "weights": {"title": 650, "section": 600, "group": 550, "body": 400},
+      "stroke": {"boundary": 1, "relationship": 1.5, "focus": 1.5},
+      "layoutRules": {"headroom": 56, "itemGap": 8, "sectionGap": 16, "padding": 20, "minimumBody": 20, "maxColumns": 6, "radius": 2}
+    }
+  },
+  "viewDefaults": {"capability": "banded", "component": "quiet", "integration": "quiet", "deployment": "quiet"},
+  "styles": {
+    "enterprise-blue": {"label": "墨蓝", "canvas": "#FFFFFF", "ink": "#253545", "muted": "#416584", "surface": "#EFF3F7", "border": "#B4C7D8", "accent": "#226BAD", "secondary": "#2B4963", "focus": "#DEE7F0", "inverse": "#FFFFFF"},
+    "technical-ink": {"label": "石墨", "canvas": "#FFFFFF", "ink": "#20242A", "muted": "#666D76", "surface": "#F3F4F6", "border": "#B8BEC7", "accent": "#315C82", "secondary": "#6B7787", "focus": "#E2E7ED", "inverse": "#FFFFFF"},
+    "slate-teal": {"label": "青灰", "canvas": "#FFFFFF", "ink": "#25373D", "muted": "#62767C", "surface": "#EDF3F2", "border": "#BACCCB", "accent": "#356F77", "secondary": "#5D7290", "focus": "#DDECEA", "inverse": "#FFFFFF"},
+    "editorial-sand": {"label": "暖砂", "canvas": "#FFFEFC", "ink": "#352B24", "muted": "#786E63", "surface": "#F5EFE5", "border": "#D8CDBF", "accent": "#A46E38", "secondary": "#54687E", "focus": "#F0DFCA", "inverse": "#FFFFFF"},
+    "forest": {"label": "松绿", "canvas": "#FFFFFF", "ink": "#20352D", "muted": "#62786C", "surface": "#ECF2ED", "border": "#BBCCC1", "accent": "#426C51", "secondary": "#5E7D92", "focus": "#DEEADD", "inverse": "#FFFFFF"},
+    "soft-domains": {"label": "柔彩", "canvas": "#FFFFFF", "ink": "#28323D", "muted": "#6A7682", "surface": "#EFF2F5", "border": "#C2CCD6", "accent": "#375D8A", "secondary": "#8A6E43", "focus": "#E7EDF6", "inverse": "#FFFFFF"},
+    "dark-system": {"label": "夜幕", "canvas": "#171B20", "ink": "#EDF0F3", "muted": "#A6AEB8", "surface": "#242A32", "border": "#505965", "accent": "#8BB6DA", "secondary": "#9DBCAC", "focus": "#303D4C", "inverse": "#171B20"}
+  }
+}

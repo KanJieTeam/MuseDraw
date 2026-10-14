@@ -1,0 +1,17 @@
+{
+  "title": "企业采购系统",
+  "view": "capability",
+  "top": {"id": "entry", "title": "员工入口", "items": ["采购工作台", "移动审批", "采购进度查询"]},
+  "sections": [
+    {"id": "purchasing", "title": "采购业务", "groups": [
+      {"id": "approval", "title": "采购审批", "items": ["采购申请", "预算核对", "审批与退回"]},
+      {"id": "suppliers", "title": "供应商", "items": ["资质核验", "供应商档案（含证照）", "到期提醒"]},
+      {"id": "orders", "title": "订单", "items": ["采购订单", "交付跟踪", "收货验收"]}
+    ]},
+    {"id": "finance", "title": "财务对接", "groups": [
+      {"id": "settlement", "title": "核算与结算", "items": ["应付单", "发票匹配", "付款状态同步"]}
+    ]}
+  ],
+  "supports": [{"id": "management", "title": "管理支撑", "side": "right", "items": ["用户与权限", "审批记录", "业务日志"]}],
+  "edges": []
+}

@@ -13,7 +13,9 @@ Use containers for containment, alignment for peers, and arrows only for explici
 
 Distinguish main containers, component nodes, cross-cutting capabilities, external systems and shared foundations. They may share a color family, but position, boundaries and headings must keep their roles distinct. Nesting within a layer does not prove physical deployment; a database symbol at the bottom does not prove a product choice. When the brief includes detailed calls, add a path view rather than forcing every capability into a single chain.
 
-## Original role-based palettes
+## Optional legacy palettes
+
+The table below describes the helper's compatibility `--theme` mode, not a compulsory MuseDraw style. Use the seven named families in [visual-decisions.md](visual-decisions.md) and `--style` when appropriate. A user's visual reference takes precedence over these defaults.
 
 | Role | Blue | Cyan-blue |
 | --- | --- | --- |
@@ -24,13 +26,13 @@ Distinguish main containers, component nodes, cross-cutting capabilities, extern
 | Borders | `#ADC6ED` | `#A6D4E4` |
 | Canvas and child modules | `#FFFFFF` | `#FFFFFF` |
 
-Choose one family, not an entire community-template skin. Use light fields for groups, moderately saturated blue for the main platform and dark colors for text. Primary blue fields use white text; child modules use white fields and dark text. Use 1–1.5px borders, 2–4px corner radii and no shadows. Icons identify categories and share one outline style; do not copy vendor assets.
+Choose deliberate semantic roles. In legacy blue/cyan mode, light fields indicate groups and saturated fields use white text. Other families may use ink-only boundaries, dark surfaces or full colored domains. Preserve the reference's intended color-area proportions. Icons identify categories and share one outline style; do not copy vendor assets.
 
-For a 1920px figure: title 28–30px, platform headings 22–24px, categories 19–21px and modules 18–20px. Do not shrink text to 12px to fit; enlarge the canvas or separate the details. Keep one short concept per line, and do not wrap Chinese character by character. Use 16px padding, 8–12px between modules and 14–18px between layers. Bold only group headings.
+The legacy renderer's type scale remains unchanged for compatibility. New named-style figures start from the hierarchy in [visual-decisions.md](visual-decisions.md): title44, section28, body20, grouping18, annotation16 at roughly1920px. Measure actual glyphs and adjust to density. Keep natural names; do not force every label into a four-character abbreviation or wrap Chinese character by character.
 
 ## JSON input
 
-The current renderer implements only a data-platform skeleton, not automatic layout for all the structures above. It fixes the unified portal, two support columns, sources and platform infrastructure; groups in the same layer have equal widths. Use it only when those roles match the user's content. If the content differs, has no sidebars or needs unequal-width domains, draw native SVG using the actual groups. Do not invent modules to fit the helper. Content-dependent widths are a design requirement, not an implemented renderer feature.
+The renderer still implements one data-platform skeleton, not automatic layout for all the structures above. It fixes the portal, two support columns, sources and infrastructure. Legacy `--theme` uses equal widths; optional `--style` uses content-weighted grid widths and named role palettes. Use the helper only when those roles match the brief. If the subject needs other regions or no sidebars, design native SVG instead. Tokens and weighted widths are not a graph-layout or routing engine; do not invent modules to fit the helper.
 
 See [assets/data-platform.json](../assets/data-platform.json): `title/subtitle/note` define scope; `portal` is a short list; `left/right` use `{title,groups:[{title,items}]}` for cross-cutting support; `layers` use `{title,focus?,columns?,groups:[{title,items}]}` for main layers; `sources/foundation` hold sources and shared foundations. Items are short strings or two-line arrays.
 

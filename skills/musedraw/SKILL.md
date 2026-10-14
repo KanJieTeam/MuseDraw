@@ -24,6 +24,14 @@ a production specification. Ask only for missing system facts that materially
 change a real-system diagram. For an explicitly generic reference, propose
 reasonable example content and identify that scope outside the artwork.
 
+When the user says only **“墨蓝风格”** or **“换成墨蓝”**, use the content
+already present in the conversation. A family name is enough; do not require
+“001”, a case URL or the internal style ID. Read
+[style-families](references/style-families.md) for the named families and their
+sub-styles. Choose a sub-style from the view and content density while keeping
+the family palette stable. “轻一点” and “紧凑一些” are ordinary visual edits,
+not requests for the user to produce a new technical brief.
+
 The 100 curated gallery cases are **design references, not an allowlist or a
 fixed-template engine**. New industries, modules and structures need original
 compositions. Do not reject an unfamiliar topic, force it into a gallery case,
@@ -69,18 +77,20 @@ changes, read [visual-decisions](references/visual-decisions.md).
    clearly marked **reference architecture**. For their actual system, ask only
    about missing facts that materially change the diagram. Do not silently add
    protocols, vendors, performance claims or deployment instances.
-3. Choose a composition by reading task, then one visual family. The default is
-   a compact blue-and-white figure with white subcomponents, quiet group fields
-   and limited emphasis when no other design direction is given. Select other
-   restrained families when the content or user direction calls for them; do
-   not make every new diagram look like the same gallery case. A user's explicit
-   reference takes precedence. Reference
-   images inform design decisions; do not reproduce another author's branded
-   template or insert their screenshot into the deliverable.
+3. Choose the composition from the reading task, then a deliberate visual
+   family. Read [visual-decisions](references/visual-decisions.md). There is no
+   compulsory blue-and-white skin. A supplied reference takes precedence:
+   inspect its silhouette, density, nested structure, major color areas and
+   typographic hierarchy before drawing. A color change alone is not reference
+   fidelity. Study the visual grammar without importing third-party images,
+   trademarks or unsupported system facts.
 4. Create native SVG text and geometry, with meaningful stable element IDs and
-   a title/description. The fixed capability helper can generate repeated
-   geometry from a short JSON brief; other views are designed in SVG by the
-   agent. Preserve all requested facts even if that requires a larger canvas or
+   a title/description. For grouped content supported by the content-driven
+   helper, pass semantic groups/items and actual relations; the helper applies
+   the selected family and sub-style. Keep topology separate from style.
+   The legacy capability helper remains available for its fixed data-platform
+   skeleton. Uncovered compositions need original SVG and the same visual
+   tokens, not a forced gallery template. Preserve all requested facts even if that requires a larger canvas or
    a separate detail view. Do not load the full study catalog into the prompt.
 5. Render a PNG and inspect the full figure, a dense detail and the intended
    display size. Use the browser checker when available and read its JSON:
@@ -97,6 +107,32 @@ changes, read [visual-decisions](references/visual-decisions.md).
 
 Paths below are relative to a repository checkout. When installed independently,
 use the scripts inside this skill folder and the host's existing render tools.
+
+For a content-driven grouped view, the agent writes a small semantic scene,
+not coordinates: `title`, `view`, `sections` containing `title` and `groups`,
+each group containing `title` and `items` (strings or `{id,label}`). Optional
+`top`/`bottom` use the same group shape; `supports` adds `side: left|right`.
+Only supplied interactions become `edges: [{from,to}]`, referencing item IDs.
+Style changes reuse the same scene; no old-case text is loaded.
+
+```sh
+python <skill>/scripts/render_style.py brief.json output/new-run --style 墨蓝
+python <skill>/scripts/render_style.py brief.json output/airy-run --style 墨蓝 --variant quiet
+```
+
+This helper uses existing browser tools (or `--playwright` and `--browser`),
+measures the actual font, and writes SVG, PNG, content and checks together.
+Use a fresh output folder so previous results remain available. It handles
+grouped layers, optional side supports and explicitly supplied relations;
+complex graph topology still needs purpose-designed SVG. See
+`assets/semantic-procurement.json` for the input format, not compulsory content.
+
+Relations use facing node ports and separate obstacle-avoiding lanes, including
+return paths. Labels remain text, without a white patch over a colored domain.
+The helper routes an existing grouped layout; it does not choose the topology's
+composition. If it reports insufficient routing or label space, adjust the
+composition or draw native SVG while retaining every supplied relation. Do not
+drop a return path or leave a failed render described as a delivered diagram.
 
 ```sh
 python skills/musedraw/scripts/render_capability.py brief.json output/diagram.svg --theme blue
@@ -121,6 +157,27 @@ The first command returns a few design candidates; the second returns that
 case's composition and palette hints without its example modules. Only add
 `--include-content` for an explicit request to reuse the generic case content.
 Custom briefs remain supported when lookup returns no candidates.
+
+Optional named design tokens are available offline:
+
+```sh
+python <skill>/scripts/style_tokens.py --list
+python <skill>/scripts/style_tokens.py 墨蓝
+python <skill>/scripts/style_tokens.py 石墨 --view component --variant quiet
+```
+
+The user-facing families are 墨蓝、石墨、青灰、暖砂、松绿、柔彩 and 夜幕.
+Each includes light-outline, header-band and compact sub-styles; they share
+one role palette but change density, border treatment and weights. See
+[style-families](references/style-families.md). The existing English IDs remain
+compatible tool arguments. Families are not case IDs or a limitation on topics.
+Use semantic color roles, font stacks, hierarchy and grid; a supplied reference
+may require an explicit custom palette or density. The resolver does not
+silently substitute a different style for an unknown name.
+The fixed capability renderer also accepts `--style technical-ink` (or another
+listed family). Its legacy `--theme` mode remains available. These tokens are
+not themselves a graph-layout or connector-routing engine; unsupported
+compositions still require original SVG geometry and actual visual inspection.
 
 This is a Chinese reference brief, not the user's system. Optional JSON fields
 `portalTitle` and `foundationTitle` override the helper's two default Chinese

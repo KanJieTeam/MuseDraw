@@ -79,6 +79,36 @@ export async function validateSvg(page, source) {
   }, source);
 }
 
+export async function measureLayout(page, W, H) {
+  const checks = await page.evaluate(({W,H}) => {
+    const raw = document.querySelector('#layout-metadata')?.textContent;
+    const bounds = raw ? JSON.parse(raw).bounds : [];
+    if (!Array.isArray(bounds)) throw new Error('layout-metadata.bounds must be an array');
+    const texts = [...document.querySelectorAll('text')].map(el => {
+      const r=el.getBoundingClientRect();return {id:el.id,text:el.textContent,x:r.x,y:r.y,w:r.width,h:r.height};
+    });
+    const outside=texts.filter(t=>t.x<0 || t.y<0 || t.x+t.w>W || t.y+t.h>H);
+    const collisions=[];
+    for(let i=0;i<texts.length;i++)for(let j=i+1;j<texts.length;j++){
+      const a=texts[i],b=texts[j];
+      if(Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>2 && Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>2)collisions.push([a.id,b.id]);
+    }
+    const overflow=[];
+    for(const {id,box:[x,y,w,h]} of bounds){
+      const t=texts.find(t=>t.id===id);
+      if(!t || t.x<x+3 || t.y<y+2 || t.x+t.w>x+w-3 || t.y+t.h>y+h-2)overflow.push(t||{id,missing:true});
+    }
+    const ids=[...document.querySelectorAll('[id]')].map(el=>el.id);
+    return {textCount:texts.length,outside,collisions,overflow,containerBoundsChecked:bounds.length>0,
+      uniqueIds:ids.length===new Set(ids).size,vectorOnly:!document.querySelector('image,foreignObject,script'),
+      notChecked:['flow-line-text-intersections','semantic-relations','visual-quality','complete-security-certification'],
+      warnings:bounds.length ? [] : ['Container overflow was not checked: include non-empty layout-metadata.bounds.']};
+  }, {W,H});
+  const basicPassed=!checks.outside.length&&!checks.collisions.length&&!checks.overflow.length&&checks.uniqueIds&&checks.vectorOnly;
+  return {...checks, passed:basicPassed ? (checks.containerBoundsChecked ? true : null) : false,
+    inputPolicy:'restricted-static-local-svg'};
+}
+
 async function main() {
   const [input, output, ...options] = process.argv.slice(2);
   const option = name => {
@@ -102,35 +132,7 @@ async function main() {
     await page.setViewportSize({width:Math.ceil(W),height:Math.ceil(H)});
     await page.setContent(previewDocument(svg));
     await page.evaluate(() => document.fonts.ready);
-    const checks = await page.evaluate(({W,H}) => {
-    const raw = document.querySelector('#layout-metadata')?.textContent;
-    const bounds = raw ? JSON.parse(raw).bounds : [];
-    const containerBoundsChecked = Array.isArray(bounds) && bounds.length > 0;
-    if (!Array.isArray(bounds)) throw new Error('layout-metadata.bounds must be an array');
-    const texts = [...document.querySelectorAll('text')].map(el => {
-      const r=el.getBoundingClientRect();return {id:el.id,text:el.textContent,x:r.x,y:r.y,w:r.width,h:r.height};
-    });
-    const outside=texts.filter(t=>t.x<0 || t.y<0 || t.x+t.w>W || t.y+t.h>H);
-    const collisions=[];
-    for(let i=0;i<texts.length;i++)for(let j=i+1;j<texts.length;j++){
-      const a=texts[i],b=texts[j];
-      if(Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>2 && Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>2)collisions.push([a.id,b.id]);
-    }
-    const overflow=[];
-    for(const {id,box:[x,y,w,h]} of bounds){
-      const t=texts.find(t=>t.id===id);
-      if(!t || t.x<x+3 || t.y<y+2 || t.x+t.w>x+w-3 || t.y+t.h>y+h-2)overflow.push(t||{id,missing:true});
-    }
-    const ids=[...document.querySelectorAll('[id]')].map(el=>el.id);
-    return {textCount:texts.length,outside,collisions,overflow,containerBoundsChecked,
-      uniqueIds:ids.length===new Set(ids).size,vectorOnly:!document.querySelector('image,foreignObject,script'),
-      notChecked:['flow-line-text-intersections','semantic-relations','visual-quality'],
-      warnings:containerBoundsChecked ? [] : ['Container overflow was not checked: include non-empty layout-metadata.bounds.']};
-    },{W,H});
-    const basicPassed=!checks.outside.length&&!checks.collisions.length&&!checks.overflow.length&&checks.uniqueIds&&checks.vectorOnly;
-    checks.passed=basicPassed ? (checks.containerBoundsChecked ? true : null) : false;
-    checks.inputPolicy='restricted-static-local-svg';
-    checks.notChecked.push('complete-security-certification');
+    const checks = await measureLayout(page, W, H);
     await fs.mkdir(path.dirname(path.resolve(output)),{recursive:true});
     await page.screenshot({path:output});
     await fs.writeFile(`${output}.checks.json`,JSON.stringify(checks,null,2));
