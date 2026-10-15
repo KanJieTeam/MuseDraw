@@ -135,6 +135,20 @@ omit it when the named theme is sufficient. SVG safety checks still apply.
 
 ## Output
 
+### Exact replay of art-directed vectors
+
+Gallery cases 102–105 use `type: "vector"`, `theme`, `size` and `nativeSvg`.
+They preserve approved native text and geometry through the same render/export
+command. Static-SVG safety checks and matching width/height/viewBox are required;
+images, scripts and external resources are rejected. Graph primitives cannot be
+mixed into this format. Edit the native artwork for revisions; changing a named
+theme does not restyle fixed vector artwork. Use ordinary graph scenes for
+automatic theme switching. These four cases export editable text and shapes;
+their hand-directed connectors are vector paths, not node-attached graph edges.
+
+短需求表达设计方向；精确复刻上述案例时直接渲染其 `scene.json`。
+改内容可以编辑 draw.io 或 `nativeSvg`，不应承诺任意模型凭短提示词逐像素重画。
+
 `diagram.svg` (native text, editable), `diagram@2x.png`, `preview.jpg`
 (README-size), `checks.json` (real-glyph overflow, collisions, labels on nodes,
 off-canvas text). `passed: true` means geometry is clean, not that the design is good.

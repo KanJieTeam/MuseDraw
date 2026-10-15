@@ -404,6 +404,22 @@
     "101-procurement-vertical-enterprise": {
       "zh": "用 MuseDraw 的「商务墨蓝」风格画纵向采购审批泳道图：申请人、部门经理、采购部、财务部和供应商各占一列，流程从上向下推进。黄色表示操作，黑色菱形表示判断，保留预算退回、大额加签和付款凭证分支。",
       "en": "Use MuseDraw in the Enterprise Navy style to draw a vertical procurement swimlane: requester, department manager, procurement, finance and supplier each have a column. Read top to bottom, with yellow actions and black decision diamonds. Preserve budget rejection, large-purchase countersignature and payment-document branches."
+    },
+    "102-knowledge-platform-enterprise": {
+      "zh": "用 MuseDraw 参考图库「企业知识与内容平台」的明蓝灰底样式，画企业知识平台：包括知识门户、内容质量与权限治理、内容接入、编辑协作、分发发布、使用反馈，以及存储和检索底座。保留分层全景和紧凑模块的表达，不加厂商标识和页脚。",
+      "en": "Use MuseDraw with the bright-blue and gray layered composition of the Enterprise Knowledge and Content Platform gallery example. Include a knowledge portal, content quality and access governance, ingestion, editing, distribution, publishing, feedback, storage and search. Keep compact capability groups without vendor logos or footers."
+    },
+    "103-data-collaboration-enterprise": {
+      "zh": "用 MuseDraw 参考图库「企业数据协作与分析平台」的浅蓝集成样式画数据平台：左边是财务、人力、供应链等业务来源，中间是分析应用、统一工作台、数据集成、计算和语义模型，右边是外部数仓、查询、湖仓与对象存储。保留清晰边界与图中的连接，不加厂商标识和页脚。",
+      "en": "Use MuseDraw with the pale-blue integration composition of the Enterprise Data Collaboration and Analytics Platform gallery example. Put finance, HR and supply-chain sources on the left; analytics applications, a shared workbench, ingestion, compute and semantic models in the center; external warehouses, query engines, lakehouses and object storage on the right. Keep explicit boundaries and the shown connections without vendor logos or footers."
+    },
+    "104-procurement-services-enterprise": {
+      "zh": "用 MuseDraw 参考图库「企业采购系统架构」的粉蓝杏黄样式画采购系统：员工和供应商入口、统一网关、采购申请、订单履约、审批规则、附件与资质、身份权限、财务对接、数据存储和交付运维。按访问、接入、服务、数据和运维分层，右边放功能责任清单，不加厂商标识和页脚。",
+      "en": "Use MuseDraw with the pink-blue and apricot composition of the Enterprise Procurement System gallery example. Include employee and supplier portals, an API gateway, purchase requests, order fulfillment, approval rules, qualification documents, identity, finance integration, storage and delivery operations. Use access, gateway, service, data and operations layers with a responsibility table on the right, without vendor logos or footers."
+    },
+    "105-research-workspace-product": {
+      "zh": "用 MuseDraw 参考图库「企业研究与知识工作台」的白底橙蓝样式画企业研究工作台：任务入口和组织知识在左侧，身份校验后进入任务编排、项目上下文、资料检索分析和隔离计算环境，再通过模型与工具网关连接企业工具，输出研究简报、图表和可复用流程。不加厂商标识和页脚。",
+      "en": "Use MuseDraw with the white, orange and blue workspace composition of the Enterprise Research and Knowledge Workspace gallery example. Place task inputs and organizational knowledge on the left, followed by identity checks, orchestration, project context, retrieval and analysis, isolated computation, model and tool gateways, enterprise tools and outputs: research briefs, charts and reusable workflows. Omit vendor logos and footers."
     }
   }
 }

@@ -1293,6 +1293,54 @@
    "title": "采购审批跨部门泳道图：纵向审批",
    "subtitle": "申请人、部门经理、采购部、财务部和供应商各占一列，流程从上向下推进。黄色表示操作，黑色菱形表示判断，保留预算退回、大额加签和付款凭证分支。",
    "blocks": []
+  },
+  {
+   "id": "102",
+   "slug": "102-knowledge-platform-enterprise",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "企业知识与内容平台",
+   "subtitle": "明蓝灰底的分层能力全景，内容接入、协作、分发与治理各自清晰归属。",
+   "blocks": [],
+   "path": "gallery/102-knowledge-platform-enterprise"
+  },
+  {
+   "id": "103",
+   "slug": "103-data-collaboration-enterprise",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "企业数据协作与分析平台",
+   "subtitle": "浅蓝集成视图，把业务来源、协作分析平台与外部数据能力放在同一张图中。",
+   "blocks": [],
+   "path": "gallery/103-data-collaboration-enterprise"
+  },
+  {
+   "id": "104",
+   "slug": "104-procurement-services-enterprise",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "企业采购系统架构",
+   "subtitle": "粉蓝与杏黄区分访问、接入、业务、数据及交付运维，旁置功能责任清单。",
+   "blocks": [],
+   "path": "gallery/104-procurement-services-enterprise"
+  },
+  {
+   "id": "105",
+   "slug": "105-research-workspace-product",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "product",
+   "lang": "zh",
+   "title": "企业研究与知识工作台",
+   "subtitle": "白底橙蓝的工作空间视图，用边界、图标和路径组织入口、执行、工具与成果。",
+   "blocks": [],
+   "path": "gallery/105-research-workspace-product"
   }
  ]
 }

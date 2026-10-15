@@ -61,8 +61,13 @@
     "type": {
       "enum": [
         "graph",
-        "sequence"
+        "sequence",
+        "vector"
       ]
+    },
+    "nativeSvg": {
+      "type": "string",
+      "description": "Static native vector artwork for exact replay; no graph-theme switching."
     },
     "size": {
       "type": "array",
