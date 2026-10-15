@@ -1,6 +1,7 @@
 """Check the user-supplied catalog, safe artwork, engine and Pages boundary."""
 import json
 import base64
+import hashlib
 from pathlib import Path
 import shutil
 import subprocess
@@ -145,6 +146,10 @@ class GalleryTests(unittest.TestCase):
             historical.mkdir(parents=True)
             (historical / "old.svg").touch()
             site = build_site(root)
+            html = (site / "index.html").read_text(encoding="utf-8")
+            for filename in ("gallery.css", "gallery.mjs"):
+                version = hashlib.sha256((site / filename).read_bytes()).hexdigest()[:12]
+                self.assertIn(f'"{filename}?v={version}"', html)
             expected = set(PAGE_FILES) | {".nojekyll", "gallery/catalog.json", "gallery/prompts.json", "docs/gallery/index.html"}
             expected |= {f'{item["path"]}/{filename}' for item in self.items for filename in CASE_FILES}
             expected |= {file.relative_to(root).as_posix() for file in (root / "assets/brand").rglob("*") if file.is_file()}

@@ -1,13 +1,13 @@
 const $=id=>document.getElementById(id);
-const response=await fetch('gallery/catalog.json');
+const response=await fetch('gallery/catalog.json',{cache:'no-cache'});
 if(!response.ok)throw Error('作品目录加载失败，请刷新重试');
 const {items}=await response.json();
 const statuses={flagship:'精选',reviewed:'已审阅',preview:'待审阅',planned:'计划中'};
 const categories={engineering:'工程',research:'科研',office:'办公',teaching:'教学'};
 const themeNames={journal:'科研期刊',editorial:'纸墨编辑',newsprint:'报刊黑白',enterprise:'商务墨蓝','ink-wash':'水墨宣纸',pastel:'柔和笔记',terracotta:'暖陶',whiteboard:'白板手绘',chalkboard:'黑板教学',swiss:'瑞士海报',bauhaus:'包豪斯',metro:'地铁线路',product:'产品发布',c4:'C4 标准',blueprint:'工程蓝图',terminal:'终端暗色',observatory:'观测夜空',aurora:'极光玻璃',riso:'孔版套印',neon:'霓虹街机'};
-const styleResponse=await fetch('styles.json');if(!styleResponse.ok)throw Error('风格索引加载失败');
+const styleResponse=await fetch('styles.json',{cache:'no-cache'});if(!styleResponse.ok)throw Error('风格索引加载失败');
 const styleIndex=await styleResponse.json();
-const promptResponse=await fetch('gallery/prompts.json');if(!promptResponse.ok)throw Error('双语提示词加载失败');
+const promptResponse=await fetch('gallery/prompts.json',{cache:'no-cache'});if(!promptResponse.ok)throw Error('双语提示词加载失败');
 const localizedPrompts=(await promptResponse.json()).items;
 const styleCues={journal:'清晰、克制，面向论文',editorial:'暖纸与朱红，留白叙事',newsprint:'黑白线稿，适合印刷',enterprise:'墨蓝分层，清晰汇报','ink-wash':'宣纸墨色，典雅中文',pastel:'柔和色域，轻松阅读',terracotta:'陶色暖调，策略与旅程',whiteboard:'自然笔触，自由推演',chalkboard:'粉笔质感，直观讲解',swiss:'鲜明主次，理性编排',bauhaus:'几何与原色，鲜明角色',metro:'线路与站点，并行叙事',product:'轻盈层级，产品表达',c4:'系统边界，标准架构',blueprint:'蓝图网格，工程精度',terminal:'终端夜色，技术流程',observatory:'深空底色，数据脉络',aurora:'光晕与玻璃，层次空间',riso:'套印肌理，纸上个性',neon:'霓虹对比，实时节奏'};
 const topics={流程:'flow process pipeline workflow prisma consort',架构:'architecture rag kubernetes microservices system',计划:'roadmap gantt timeline plan strategy',审批:'procurement approval expense',科研:'study research experiment clinical literature sem mediation',教学:'lesson classroom curriculum',项目:'project roadmap milestone',思维导图:'mindmap',鱼骨:'fishbone',客户:'customer journey',风险:'risk',组织:'organization org',时间:'timeline gantt',数据:'data observability streaming'};

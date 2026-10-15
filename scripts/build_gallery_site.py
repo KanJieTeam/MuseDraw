@@ -1,5 +1,6 @@
 """Build Pages exclusively from the current catalog and original v3 artwork."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -29,6 +30,13 @@ def build_site(root, output_name="site"):
     try:
         for filename in PAGE_FILES:
             shutil.copyfile(root / "assets/gallery" / filename, staging / filename)
+        # Keep frequent gallery visitors from mixing a new page with yesterday's
+        # cached stylesheet or module after a GitHub Pages deployment.
+        html = (staging / "index.html").read_text(encoding="utf-8")
+        for filename in ("gallery.css", "gallery.mjs"):
+            version = hashlib.sha256((staging / filename).read_bytes()).hexdigest()[:12]
+            html = html.replace(f'"{filename}"', f'"{filename}?v={version}"')
+        (staging / "index.html").write_text(html, encoding="utf-8")
         (staging / "gallery").mkdir()
         shutil.copyfile(root / "gallery/catalog.json", staging / "gallery/catalog.json")
         shutil.copyfile(root / "gallery/prompts.json", staging / "gallery/prompts.json")
