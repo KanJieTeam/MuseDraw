@@ -92,6 +92,7 @@ for (const lang of ['zh', 'en']) test(`${lang} starter has valid structure and n
   assert.doesNotMatch(JSON.stringify(scene), /1024|512|900 ms|top 20|pgvector|key-rotation/);
   assert.ok(scene.edges.some((e) => e.from === 'embed-docs' && e.to === 'index'));
   assert.ok(scene.edges.some((e) => e.from === 'retrieve' && e.to === 'index'));
+  if (lang === 'en') assert.equal(scene.nodes.find((node) => node.id === 'prompt').label, 'Evidence\ngrounding', 'Keep a safe line break for wider Linux system-font glyphs');
 });
 
 test('headerless output removes page furniture and closes the top gap', async () => {

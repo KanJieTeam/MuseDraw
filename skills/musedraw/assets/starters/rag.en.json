@@ -142,7 +142,7 @@
     },
     {
       "id": "prompt",
-      "label": "Evidence grounding",
+      "label": "Evidence\ngrounding",
       "sub": "question + evidence + sources",
       "x": 652,
       "y": 850,
