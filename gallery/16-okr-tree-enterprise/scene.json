@@ -846,9 +846,9 @@
    "green": "#2F8F5B"
   },
   "fonts": {
-   "display": "Microsoft YaHei, Arial, sans-serif",
-   "body": "Microsoft YaHei, Arial, sans-serif",
-   "mono": "Microsoft YaHei, Arial, sans-serif"
+   "display": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif",
+   "body": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif",
+   "mono": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif"
   },
   "canvas": {
    "bg": "#ffffff",
