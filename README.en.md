@@ -25,8 +25,6 @@
 
 [![MuseDraw flagship gallery](assets/gallery/flagship-grid.jpg)](https://kanjieteam.github.io/MuseDraw/)
 
-<p align="center"><a href="https://kanjieteam.github.io/MuseDraw/"><strong>Explore the live gallery → Browse styles · Preview · Copy prompts · Download drawio</strong></a></p>
-
 <p align="center"><sub>Every image above comes from a single <code>scene.json</code>: grant roadmaps, PRISMA, CONSORT, model architectures, SEM, scale development, OKRs, swimlanes, PDCA, fishbone, lesson plans, system architecture.</sub></p>
 
 ## Quick start
@@ -67,7 +65,7 @@ A style is not a palette: each one has its own type, line grammar, texture, labe
 
 ## Reproduce any case
 
-Open the [live gallery](https://kanjieteam.github.io/MuseDraw/), choose a style and a diagram, switch between Chinese and English prompts, then copy the request to your agent. Download drawio to edit the diagram directly. Each case folder also holds its scene, original prompt, SVG and preview; `npm run gallery` re-renders them. [Source index](gallery/README.md) · [100-case catalog](gallery/catalog.json)
+Choose a style and a diagram, switch between Chinese and English prompts, then copy the request to your agent. Download drawio to edit the diagram directly. Each case folder also holds its scene, original prompt, SVG and preview; `npm run gallery` re-renders them. [Source index](gallery/README.md) · [100-case catalog](gallery/catalog.json)
 
 ## Design method
 
