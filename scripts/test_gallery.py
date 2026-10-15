@@ -183,6 +183,7 @@ class GalleryTests(unittest.TestCase):
                 self.assertIn(f'"{filename}?v={version}"', html)
             expected = set(PAGE_FILES) | set(DOWNLOAD_FILES) | {".nojekyll", "gallery/catalog.json", "gallery/prompts.json", "docs/gallery/index.html"}
             expected |= {f'{item["path"]}/{filename}' for item in self.items for filename in CASE_FILES}
+            expected |= {file.relative_to(root / "assets/gallery").as_posix() for file in (root / "assets/gallery/previews").glob("*.webp")}
             expected |= {file.relative_to(root).as_posix() for file in (root / "assets/brand").rglob("*") if file.is_file()}
             self.assertEqual({file.relative_to(site).as_posix() for file in site.rglob("*") if file.is_file()}, expected)
             self.assertEqual([file.relative_to(site / "docs").as_posix() for file in (site / "docs").rglob("*") if file.is_file()], ["gallery/index.html"])
@@ -195,6 +196,59 @@ class GalleryTests(unittest.TestCase):
                 for filename in CASE_FILES:
                     relative = Path(item["path"]) / filename
                     self.assertEqual((site / relative).read_bytes(), (ROOT / relative).read_bytes())
+
+    def test_small_previews_match_current_sources_and_have_a_bounded_payload(self):
+        index = json.loads((ROOT / "assets/gallery/previews.json").read_text(encoding="utf-8"))
+        self.assertEqual(set(index["items"]), {item["slug"] for item in self.items})
+        total = source_total = 0
+        expected = set()
+        for item in self.items:
+            data = index["items"][item["slug"]]
+            relative = data["thumbnail"]
+            self.assertRegex(relative, rf'^previews/{re.escape(item["slug"])}-[a-f0-9]{{12}}\.webp$')
+            expected.add(Path(relative).name)
+            content = (ROOT / "assets/gallery" / relative).read_bytes()
+            source = (ROOT / item["path"] / "preview.jpg").read_bytes()
+            self.assertEqual(hashlib.sha256(source).hexdigest(), data["sourceSha256"], "Run build_gallery_previews.py after changing a gallery preview")
+            self.assertEqual(hashlib.sha256(content).hexdigest(), data["sha256"])
+            self.assertEqual(len(content), data["bytes"])
+            self.assertEqual(content[:4], b"RIFF")
+            self.assertEqual(content[8:12], b"WEBP")
+            self.assertEqual(int.from_bytes(content[4:8], "little") + 8, len(content))
+            self.assertTrue(0 < data["thumbnailWidth"] <= 640 and 0 < data["thumbnailHeight"] <= 480)
+            total += len(content)
+            source_total += len(source)
+        self.assertEqual(expected, {file.name for file in (ROOT / "assets/gallery/previews").glob("*.webp")})
+        self.assertEqual(total, index["thumbnailBytes"])
+        self.assertEqual(source_total, index["sourceBytes"])
+        self.assertLess(total, source_total * 0.15)
+
+    def test_readme_collage_keeps_selected_cases_and_twenty_styles_in_one_image(self):
+        from build_readme_showcase import CASES, FEATURED
+        selected = ["05-mvp-whiteboard", "06-kafka-riso", "38-good-lesson-chalkboard",
+                    "03-gitops-terminal", "08-ai-agent-aurora", "17-onboarding-90-pastel",
+                    "20-customer-journey-terracotta", "42-gtd-whiteboard", "41-run-of-show-swiss"]
+        self.assertEqual(FEATURED, selected)
+        self.assertEqual(CASES[:9], selected)
+        self.assertEqual(len(CASES), 24)
+        self.assertEqual(len(set(CASES)), 24)
+        self.assertEqual(len({case["theme"] for case in self.items if case["slug"] in CASES}), 20)
+        manifest = json.loads((ROOT / "assets/gallery/readme-showcase.json").read_text())
+        self.assertEqual(manifest["featured"], selected)
+        self.assertEqual((manifest["width"], manifest["height"]), (1920, 1080))
+        self.assertEqual(manifest["layout"], "scattered-overlap")
+        self.assertEqual([case["slug"] for case in manifest["cases"]], CASES)
+        for case in manifest["cases"]:
+            source = (ROOT / "gallery" / case["slug"] / "preview.jpg").read_bytes()
+            self.assertEqual(hashlib.sha256(source).hexdigest(), case["sourceSha256"])
+        image = (ROOT / "assets/gallery/readme-showcase.jpg").read_bytes()
+        self.assertEqual(len(image), manifest["bytes"])
+        self.assertLess(len(image), 1024 * 1024)
+        self.assertEqual(hashlib.sha256(image).hexdigest(), manifest["sha256"])
+        for filename in ("README.md", "README.zh-CN.md", "README.en.md"):
+            text = (ROOT / filename).read_text(encoding="utf-8")
+            self.assertEqual(text.count("assets/gallery/readme-showcase.jpg"), 1)
+            self.assertNotIn("flagship-grid.jpg", text)
 
     def test_skill_download_is_small_complete_reproducible_and_runtime_free(self):
         with tempfile.TemporaryDirectory(prefix="musedraw-download-") as scratch:

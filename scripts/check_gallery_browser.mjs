@@ -18,7 +18,7 @@ let server,browser,page;
 async function check(name,fn){try{const detail=await fn();report.checks.push({name,status:'passed',...(detail?{detail}:{})});console.log(`PASS ${name}`);}catch(error){report.checks.push({name,status:'failed',error:error.message});throw error;}}
 async function serve(){
  const root=path.resolve(repo,option('--site','output/site')),realRoot=await fs.realpath(root);
- const mime={'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.jpg':'image/jpeg','.md':'text/plain; charset=utf-8'};
+ const mime={'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.jpg':'image/jpeg','.webp':'image/webp','.md':'text/plain; charset=utf-8'};
  server=http.createServer(async(request,response)=>{try{if(!['GET','HEAD'].includes(request.method)){response.writeHead(405).end();return;}const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname);let target=path.resolve(root,`.${pathname}`);let relative=path.relative(root,target);if(relative.startsWith('..')||path.isAbsolute(relative)){response.writeHead(403).end();return;}if((await fs.stat(target)).isDirectory())target=path.join(target,'index.html');const real=await fs.realpath(target);relative=path.relative(realRoot,real);if(relative.startsWith('..')||path.isAbsolute(relative)){response.writeHead(403).end();return;}const bytes=await fs.readFile(real);response.writeHead(200,{'Content-Type':mime[path.extname(real)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});response.end(request.method==='HEAD'?undefined:bytes);}catch{response.writeHead(404).end('Not found');}});
  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});return `http://127.0.0.1:${server.address().port}/`;
 }
@@ -35,8 +35,8 @@ try{
  const requested=option('--url')||await serve();
  const {chromium}=await import(pathToFileURL(path.resolve(playwright)).href);
  browser=await chromium.launch({headless:true,...(option('--browser')?{executablePath:path.resolve(option('--browser'))}:{})});
- const external=[],errors=[];
- async function observe(context){await context.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(url.origin!==new URL(requested).origin&&['http:','https:'].includes(url.protocol)){external.push(request.url());await route.abort();}else{assert.ok(['GET','HEAD'].includes(request.method()),'Static gallery must not call an API');await route.continue();}});context.on('page',opened=>opened.on('pageerror',error=>errors.push(error.message)));}
+ const external=[],errors=[],imageRequests=[];
+ async function observe(context){await context.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(request.resourceType()==='image')imageRequests.push(url.pathname);if(url.origin!==new URL(requested).origin&&['http:','https:'].includes(url.protocol)){external.push(request.url());await route.abort();}else{assert.ok(['GET','HEAD'].includes(request.method()),'Static gallery must not call an API');await route.continue();}});context.on('page',opened=>opened.on('pageerror',error=>errors.push(error.message)));}
  const context=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true,reducedMotion:'reduce'});await observe(context);page=await context.newPage();
  await page.goto(requested,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelectorAll('.case-card').length===100);
  const url=page.url(),catalog=JSON.parse((await fetchBytes(new URL('gallery/catalog.json',url))).toString('utf8'));
@@ -47,6 +47,17 @@ try{
  const styleIndex=JSON.parse((await fetchBytes(new URL('styles.json',url))).toString('utf8'));
  assert.deepEqual(styleIndex,JSON.parse(await fs.readFile(path.join(repo,'assets/gallery/styles.json'),'utf8')));
  report.caseCount=100;report.themeCount=20;
+ const smallPreviews=JSON.parse((await fetchBytes(new URL('previews.json',url))).toString('utf8'));
+ report.previewPayload={sourceBytes:smallPreviews.sourceBytes,thumbnailBytes:smallPreviews.thumbnailBytes};
+ await check('list-loads-small-images-with-first-row-priority',async()=>{
+  assert.equal(Object.keys(smallPreviews.items).length,100);
+  assert.ok(smallPreviews.thumbnailBytes<smallPreviews.sourceBytes*.15);
+  assert.ok(!imageRequests.some(path=>/\/gallery\/[^/]+\/(?:preview\.jpg|diagram\.svg)$/.test(path)));
+  const images=await page.locator('.case-card img').evaluateAll(nodes=>nodes.map(node=>({src:node.getAttribute('src'),loading:node.loading,priority:node.fetchPriority,decoding:node.decoding})));
+  assert.ok(images.every(image=>image.src.endsWith('.webp')&&image.decoding==='async'));
+  assert.ok(images.slice(0,4).every(image=>image.loading==='eager'&&image.priority==='high'));
+  assert.ok(images.slice(4).every(image=>image.loading==='lazy'));
+ });
  const assets=new Map(),prompts=new Map();
  await check('all-100-user-cases-published-assets-match-source',async()=>{
   const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','diagram.drawio','preview.jpg','checks.json'].map(filename=>({item,filename})));
@@ -56,7 +67,7 @@ try{
  await check('all-100-default-featured-optional-and-decoded-previews',async()=>{
   const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.map(item=>item.slug));assert.equal(await page.locator('[data-collection="all"]').getAttribute('aria-pressed'),'true');await noOverflow();await screenshot('desktop.png');
   await selectFilter('collection','flagship');assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.status==='flagship').map(item=>item.slug));await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),100);
-  for(const item of items){const image=page.locator(`[data-item="${item.slug}"] img`);await image.scrollIntoViewIfNeeded();await image.evaluate(async image=>{await image.decode();if(!image.naturalWidth||!image.naturalHeight)throw Error('Preview did not decode');});}
+  for(const item of items){const image=page.locator(`[data-item="${item.slug}"] img`);await image.scrollIntoViewIfNeeded();await image.evaluate(async image=>{await image.decode();if(!image.naturalWidth||image.naturalWidth>640||!image.naturalHeight||image.naturalHeight>480)throw Error('Invalid small preview dimensions');});}
   return {defaultCases:100,optionalFlagship:20,decodedPreviews:100};
  });
  await check('all-20-theme-filters-retain-catalog-facts',async()=>{
@@ -102,12 +113,44 @@ try{
   await page.locator('#preview-details [data-prompt-language="zh"]').click();
   await page.locator('#close-preview').click();
  });
- await check('svg-preview-zoom-fit-close-and-mobile-layout',async()=>{
+ await check('progressive-preview-zoom-fit-close-and-mobile-layout',async()=>{
   for(const width of [1440,390]){
    await page.setViewportSize({width,height:width===390?844:1000});await selectFilter('collection','flagship');await page.evaluate(()=>window.scrollTo(0,0));await noOverflow();await screenshot(width===390?'mobile.png':'desktop-flagship.png');
-   const item=items.find(item=>item.status==='flagship');await page.locator(`[data-preview="${item.slug}"]`).click();await page.locator('#preview-image').evaluate(async image=>{await image.decode();});assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/diagram.svg`,url).href);
+   const item=items.find(item=>item.status==='flagship');await page.locator(`[data-preview="${item.slug}"]`).click();await page.locator('#preview-image').evaluate(async image=>{await image.decode();});await page.waitForFunction(()=>document.querySelector('#preview-image').dataset.quality==='raster');assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/preview.jpg`,url).href);
    const transform=()=>page.locator('#preview-image').evaluate(image=>getComputedStyle(image).transform);const initial=await transform();await page.locator('#zoom-in').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();assert.equal(await transform(),initial);await page.locator('#zoom-out').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();await noOverflow();await screenshot(width===390?'mobile-preview.png':'desktop-preview.png');await page.locator('#close-preview').click();await page.locator(`[data-preview="${item.slug}"]`).click();await page.keyboard.press('Escape');assert.equal(await page.locator('#preview').evaluate(element=>element.open),false);
   }
+ });
+ await check('high-resolution-vector-is-on-demand-and-does-not-reset-zoom',async()=>{
+  const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();
+  await page.waitForFunction(()=>document.querySelector('#preview-image').dataset.quality==='raster');
+  await page.locator('#zoom-in').click();const before=await page.locator('#preview-image').evaluate(image=>image.style.transform);
+  await page.locator('#preview-hd').click();await page.waitForFunction(()=>document.querySelector('#preview-image').dataset.quality==='vector');
+  assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/diagram.svg`,url).href);
+  assert.equal(await page.locator('#preview-image').evaluate(image=>image.style.transform),before);
+  await page.locator('#close-preview').click();
+ });
+ await check('delayed-large-images-do-not-block-preview-or-overwrite-the-next-case',async()=>{
+  const slow=await browser.newContext({viewport:{width:1440,height:1000}});await observe(slow);
+  let release;const gate=new Promise(resolve=>{release=resolve;});let vectorRequests=0;
+  await slow.route('**/gallery/*/preview.jpg',async route=>{await gate;await route.continue().catch(()=>{});});
+  await slow.route('**/gallery/*/diagram.svg',async route=>{vectorRequests++;await route.abort();});
+  try{
+   const view=await slow.newPage();await view.goto(url,{waitUntil:'networkidle'});
+   const item=items[0],next=items[1];await view.locator(`[data-item="${item.slug}"] img`).evaluate(image=>image.decode());
+   await view.locator(`#gallery [data-preview="${item.slug}"]`).click();
+   await view.locator('#preview-image').evaluate(image=>image.decode());
+   assert.equal(await view.locator('#preview-image').getAttribute('data-quality'),'thumbnail');
+   assert.ok(await view.locator('#preview-image').evaluate(image=>image.naturalWidth>0));
+   await view.locator('#zoom-in').click();assert.notEqual(await view.locator('#zoom-value').textContent(),'0%');
+   await view.locator('#next').click();await view.locator('#preview-image').evaluate(image=>image.decode());
+   assert.equal(await view.locator('#preview-title').textContent(),next.title);
+   assert.equal(vectorRequests,0,'Opening cases must not request vectors');release();
+   await view.waitForFunction(()=>document.querySelector('#preview-image').dataset.quality==='raster');
+   assert.equal(new URL(await view.locator('#preview-image').getAttribute('src'),url).href,new URL(`${next.path}/preview.jpg`,url).href);
+   await view.locator('#preview-hd').click();await view.waitForFunction(()=>document.querySelector('#preview-hd').textContent==='重试高清');
+   await view.locator('#preview-image').evaluate(image=>image.decode());
+   assert.ok(await view.locator('#preview-image').evaluate(image=>image.naturalWidth>0));
+  }finally{release();await slow.close();}
  });
  await check('preview-details-retain-prompt-actions-and-downloads',async()=>{
   await selectFilter('collection','all');const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,prompts.get(item.slug));
