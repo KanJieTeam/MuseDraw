@@ -1,6 +1,6 @@
 # 使用 MuseDraw
 
-[English](usage.md) · [返回 README](../README.md) · [图库](../gallery/README.md)
+[English](usage.md) · [返回 README](../README.md) · [在线图库](https://kanjieteam.github.io/MuseDraw/)
 
 MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教学与工程图示。当前主工作流是 scene 引擎：智能体理解几句话的需求，选择构图和风格，生成场景，渲染并实际看图后默认交付 PNG 与原生可编辑 draw.io。
 
@@ -29,7 +29,7 @@ npm --prefix skills/musedraw install
 
 ## 选图和选风格
 
-[图库](../gallery/README.md)包含 100 个当前 scene 引擎案例，每个目录有一句话需求 `prompt.md`、完整来源 `scene.json`、SVG 和预览。案例可借鉴布局，不限定新题材，也不提供你的项目事实。图库区分精选、已审图与待设计审阅的预览状态，不等于全部经过同等人工验收。
+[在线图库](https://kanjieteam.github.io/MuseDraw/)包含 100 个当前 scene 引擎案例。按风格筛选，点开看大图、复制需求或下载 drawio；提示词可切换中文／English，复制与原样复刻说明会跟随语言选择。每个案例目录保留原始 `prompt.md`、完整来源 `scene.json`、SVG 和预览；双语需求见 [prompts.json](../gallery/prompts.json)。案例可借鉴布局，不限定新题材，也不提供你的项目事实。图库区分精选、已审图与待设计审阅的预览状态，不等于全部经过同等人工验收。
 
 20 种风格的字体、线条、质感与标注方式见[风格图谱](../skills/musedraw/references/style-atlas.md)。直接说中文名、英文名或 ID 即可，例如“科研期刊”“商务墨蓝”“黑板教学”或 `blueprint`。未指定时，由智能体根据用途选择。
 

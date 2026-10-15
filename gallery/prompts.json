@@ -1,0 +1,405 @@
+{
+  "version": 1,
+  "items": {
+    "01-rag-editorial": {
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Retrieval-augmented generation, end to end. Two pipelines share one vector index. Documents are chunked and embedded ahead of time; each question is embedded, matched, re-ranked and grounded before the model writes a word.",
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：端到端检索增强生成。两条流水线共享一个向量索引。文档预先分块并生成嵌入；每个问题都先经过嵌入、匹配、重排序与证据锚定，模型才开始生成文字。"
+    },
+    "02-kubernetes-blueprint": {
+      "en": "Use MuseDraw in the Blueprint style to draw: Production Kubernetes cluster across three zones. Reference deployment for a stateless web + API workload on EKS. AZ-a is drawn in full; AZ-b and AZ-c mirror it.",
+      "zh": "用 MuseDraw 的「工程蓝图」风格画一张图：跨三个可用区的生产 Kubernetes 集群。这是 EKS 上无状态 Web + API 工作负载的参考部署。完整画出 AZ-a；AZ-b 和 AZ-c 与其镜像对应。"
+    },
+    "03-gitops-terminal": {
+      "en": "Use MuseDraw in the Terminal style to draw: GitOps delivery pipeline: commit to production. GitOps delivery: CI builds and signs one image; a bot bumps the tag in the env repo; Argo CD and Argo Rollouts do the rest, gated by live metrics.",
+      "zh": "用 MuseDraw 的「终端暗色」风格画一张图：从提交到生产的 GitOps 交付流水线。CI 构建并签名一个镜像，机器人更新环境仓库中的标签，其余由 Argo CD 和 Argo Rollouts 完成，并以实时指标作为放行条件。"
+    },
+    "04-card-payment-swiss": {
+      "en": "Use MuseDraw in the Swiss Poster style to draw: How a card payment is authorized. From tap to “Paid”, only messages travel. Funds settle between banks later, in a nightly batch.",
+      "zh": "用 MuseDraw 的「瑞士海报」风格画一张图：银行卡支付如何完成授权。从刷卡到显示“已支付”，传递的只有消息。资金稍后才在银行之间通过夜间批次结算。"
+    },
+    "05-mvp-whiteboard": {
+      "en": "Use MuseDraw in the Whiteboard style to draw: MVP architecture, six-week scope. Boring tech, one region, managed everything — and a clear line around what we are NOT building yet.",
+      "zh": "用 MuseDraw 的「白板手绘」风格画一张图：六周范围内的 MVP 架构。采用成熟朴素的技术、单一区域和全面托管服务，并清楚划出目前尚不建设的部分。"
+    },
+    "06-kafka-riso": {
+      "en": "Use MuseDraw in the Riso Print style to draw: Event streaming with Kafka. Producers append to topics. Topics are split into partitions and replicated across brokers. Every consumer group reads at its own pace, from its own offset.",
+      "zh": "用 MuseDraw 的「孔版套印」风格画一张图：Kafka 事件流。生产者向主题追加消息；主题划分为分区，并在多个代理节点之间复制。每个消费者组按自己的节奏，从自己的偏移量开始读取。"
+    },
+    "07-observability-observatory": {
+      "en": "Use MuseDraw in the Observatory style to draw: OpenTelemetry observability pipeline. Apps emit metrics, logs and traces over OTLP. Collectors enrich, sample and route them, and every signal keeps its own colour from source to dashboard.",
+      "zh": "用 MuseDraw 的「观测夜空」风格画一张图：OpenTelemetry 可观测性流水线。应用通过 OTLP 发出指标、日志与链路追踪。采集器对它们进行信息补充、采样与路由，每类信号从源头到仪表盘始终保持自己的颜色。"
+    },
+    "08-ai-agent-aurora": {
+      "en": "Use MuseDraw in the Aurora Glass style to draw: Inside a tool-using AI agent. The model never touches the world directly. It plans, asks the runtime to call a tool, reads the result and decides again — inside guardrails, with memory on both sides.",
+      "zh": "用 MuseDraw 的「极光玻璃」风格画一张图：使用工具的 AI 智能体内部结构。模型不直接接触外部世界，而是制定计划、请求运行时调用工具、读取结果并再次决策；整个过程处于防护约束内，前后都有记忆支持。"
+    },
+    "09-microservices-bauhaus": {
+      "en": "Use MuseDraw in the Bauhaus style to draw: E-commerce microservices. Shape tells the role: squares answer requests, circles react to events, the diamond routes traffic. Red lines are events on the bus.",
+      "zh": "用 MuseDraw 的「包豪斯」风格画一张图：电商微服务。用形状表达角色：方形响应请求，圆形响应事件，菱形分发流量。红线表示总线上的事件。"
+    },
+    "10-postgres-failover-newsprint": {
+      "en": "Use MuseDraw in the Newsprint style to draw: PostgreSQL streaming replication and failover. Every write lands in the write-ahead log first. Standbys replay that log; a consensus store decides who leads when the primary goes quiet.",
+      "zh": "用 MuseDraw 的「报刊黑白」风格画一张图：PostgreSQL 流复制与故障切换。每次写入首先进入预写日志。备用节点重放日志；主节点失去响应时，由共识存储决定谁接任主节点。"
+    },
+    "100-submission-timeline-journal": {
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 7 | 论文投稿到出版的典型时间线。以一篇 SCI 临床研究为例，从选刊到见刊约 200 天，其中超过一半在等待审稿。天数为示例，不同期刊差异很大。",
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 7 | Typical timeline from journal submission to publication. Use an SCI clinical study as an example: about 200 days from journal selection to publication, with more than half spent waiting for peer review. Day counts are illustrative and vary greatly by journal."
+    },
+    "11-data-exchange-ink-wash": {
+      "zh": "用 MuseDraw 的「水墨宣纸」风格画一张图：城市数据共享交换平台总体架构。各委办局的数据先归集、再治理、后共享。资源统一编目，接口统一网关，每一次调用都可追溯。",
+      "en": "Use MuseDraw in the Ink Wash style to draw: Overall architecture of a city data-sharing and exchange platform. Data from government departments is collected first, governed next and shared last. Resources use a unified catalog, interfaces use a unified gateway, and every call is traceable."
+    },
+    "12-saas-tenancy-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: Multi-tenant SaaS: pooled and silo tiers. One codebase and one pipeline serve every tenant. The tier in the token decides where a request runs: shared infrastructure for Starter and Pro, a dedicated account for Enterprise.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：多租户 SaaS 的共享与独立层级。一套代码和一条流水线服务所有租户。令牌中的套餐层级决定请求在哪里运行：Starter 和 Pro 使用共享基础设施，Enterprise 使用独立账户。"
+    },
+    "13-food-delivery-c4": {
+      "en": "Use MuseDraw in the C4 Standard style to draw: Food delivery platform — Container diagram. C4 level 2. The deployable units inside the platform boundary, and how people and external systems use them.",
+      "zh": "用 MuseDraw 的「C4 标准」风格画一张图：外卖平台容器图，采用 C4 第 2 层。展示平台边界内可部署的单元，以及人员和外部系统如何使用这些单元。"
+    },
+    "14-game-backend-neon": {
+      "en": "Use MuseDraw in the Neon Arcade style to draw: Real-time multiplayer game backend. Lobby traffic is ordinary HTTPS. Gameplay is UDP through edge relays to one authoritative server pod per match; everything slow happens off the hot path.",
+      "zh": "用 MuseDraw 的「霓虹街机」风格画一张图：实时多人游戏后端。大厅流量采用普通 HTTPS；对局流量使用 UDP，经边缘中继送到每场比赛专属的一个权威服务器 Pod。所有耗时操作均放在关键实时路径之外。"
+    },
+    "15-crdt-collab-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：实时协同编辑（CRDT）架构。两个人同时改同一段文字，为什么不会互相覆盖？每个客户端都有完整副本，只交换“增量”，而合并结果与到达顺序无关。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Real-time collaborative editing architecture with CRDTs. Why do two people editing the same passage not overwrite each other? Each client holds a complete replica and exchanges only deltas; merge results do not depend on arrival order."
+    },
+    "16-okr-tree-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：2027 年度 OKR 进度。数据截至 6 月 30 日。条形为关键结果完成度，虚线为时间进度；条形停在虚线左侧，即进度落后于时间。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: 2027 annual OKR progress. Data is current as of June 30. Bars show key-result completion and dashed lines show elapsed-time progress; a bar ending to the left of the dashed line is behind schedule."
+    },
+    "17-onboarding-90-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：新员工 90 天入职计划。按天排期，三条线并行推进。橙色虚线标出第 30、60、90 天的一对一复盘，复盘标准见下方。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: A new employee's 90-day onboarding plan. Schedule by day, with three tracks running in parallel. Orange dashed lines mark one-to-one reviews on days 30, 60 and 90; show the review criteria below."
+    },
+    "18-procurement-swimlane-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：采购审批跨部门泳道图。五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: Cross-department procurement approval swimlane. Five roles, two spending thresholds and one three-way document match. Show who does what and when in a single row; amber marks the steps most likely to become bottlenecks."
+    },
+    "19-product-roadmap-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: Product roadmap FY2027. Four tracks, one calendar. Bars are committed work, the outline bar is a bet we will size in Q2, and diamonds are dates we have promised to customers.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：2027 财年产品路线图。四条工作轨道共用一份日历。实心条形表示已承诺的工作，轮廓条形表示将在第二季度评估规模的一项探索，菱形表示已向客户承诺的日期。"
+    },
+    "20-customer-journey-terracotta": {
+      "en": "Use MuseDraw in the Terracotta style to draw: Customer journey map. One customer type, six stages. The curve is how they feel; the clay cards are where a small fix removes a big dip.",
+      "zh": "用 MuseDraw 的「暖陶」风格画一张图：客户旅程地图。一类客户、六个阶段。曲线表示客户的感受；陶土色卡片指出哪些小改进能消除明显的体验低谷。"
+    },
+    "21-sales-funnel-swiss": {
+      "en": "Use MuseDraw in the Swiss Poster style to draw: Self-serve funnel, last 90 days. Every step loses people. The question is which loss is cheapest to fix — here it is activation, not traffic.",
+      "zh": "用 MuseDraw 的「瑞士海报」风格画一张图：过去 90 天的自助式转化漏斗。每一步都有用户流失。问题是修复哪一环的流失成本最低；此处应优先修复激活，而不是增加流量。"
+    },
+    "22-swot-editorial": {
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：区域连锁咖啡品牌 SWOT 分析。内部看优势与短板，外部看机会与威胁。右下角的组合最危险：把短板暴露在威胁面前。",
+      "en": "Use MuseDraw in the Editorial Ink style to draw: SWOT analysis of a regional coffee chain. Internally, examine strengths and weaknesses; externally, opportunities and threats. The bottom-right combination is the most dangerous: weaknesses exposed to threats."
+    },
+    "23-eisenhower-whiteboard": {
+      "zh": "用 MuseDraw 的「白板手绘」风格画一张图：本周任务四象限。不是所有紧急的事都重要。每周一把待办写成便签，贴进四个格子，再决定今天做哪一格。",
+      "en": "Use MuseDraw in the Whiteboard style to draw: This week's four-quadrant task matrix. Not everything urgent is important. Each Monday, write tasks on sticky notes, place them in the four quadrants and decide which quadrant to work on today."
+    },
+    "24-pdca-nursing-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：神经内科住院患者跌倒率改善。2026 年 1–9 月，每千住院日跌倒次数（‰），按 PDCA 阶段着色。目标为基线 1.8‰ 减半。数据为示例。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Reducing falls among neurology inpatients. Show falls per 1,000 inpatient days (‰) from January to September 2026, colored by PDCA phase. The target is to halve the baseline of 1.8‰. Data is illustrative."
+    },
+    "25-fishbone-falls-newsprint": {
+      "zh": "用 MuseDraw 的「报刊黑白」风格画一张图：夜间如厕跌倒根因分析。数字为该原因在 23 份事件记录中出现的次数（可重复计入）。加粗的三项出现最多，进入对策拟定。数据为示例。",
+      "en": "Use MuseDraw in the Newsprint style to draw: Root-cause analysis of falls during nighttime toileting. Numbers show how many of 23 incident records mention each cause; a record may count toward multiple causes. Bold the three most frequent causes for countermeasure planning. Data is illustrative."
+    },
+    "26-startup-org-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: Organization chart, Q3 2027. 57 people today, 9 open roles. Three product squads own outcomes end to end; platform and design are shared. Each dot is one person. Names are illustrative.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：2027 年第三季度组织架构。目前 57 人，9 个空缺岗位。三个产品小队端到端负责成果，平台与设计为共享职能。每个点代表一人，姓名为示例。"
+    },
+    "27-incident-runbook-terminal": {
+      "en": "Use MuseDraw in the Terminal style to draw: Incident response runbook. One decision decides severity; after that the order is always the same: assemble roles, mitigate, verify, then learn. Diagnosis can wait until users are safe.",
+      "zh": "用 MuseDraw 的「终端暗色」风格画一张图：故障响应操作手册。先通过一次判断确定严重程度，之后顺序固定：组织角色、缓解影响、验证恢复、最后复盘学习。根因诊断可以等到用户安全后再进行。"
+    },
+    "28-raci-swiss": {
+      "en": "Use MuseDraw in the Swiss Poster style to draw: RACI matrix: feature launch. Exactly one A per row. If a row has no R, nobody is doing it; if it has five Cs, the meeting will be long.",
+      "zh": "用 MuseDraw 的「瑞士海报」风格画一张图：功能发布 RACI 矩阵。每一行恰好有一个 A。没有 R 就意味着无人执行；有五个 C 就意味着会议会很长。"
+    },
+    "29-renovation-gantt-blueprint": {
+      "zh": "用 MuseDraw 的「工程蓝图」风格画一张图：办公楼装修工程 · 进度计划。16 周、4 个阶段、2 个验收节点。黄色竖线为当前进度（第 7 周），关键路径：管线 → 隐蔽验收 → 吊顶 → 涂料 → 竣工。",
+      "en": "Use MuseDraw in the Blueprint style to draw: Office-building renovation schedule. Sixteen weeks, four phases and two acceptance milestones. A yellow vertical line shows current progress at week 7. Critical path: utility installation → concealed-work inspection → ceiling → painting → completion."
+    },
+    "30-business-model-canvas-terracotta": {
+      "en": "Use MuseDraw in the Terracotta style to draw: Business model canvas: meal-kit service. Nine boxes, one page. Read it from the right: who the customer is, what we promise them, and only then what it costs to deliver.",
+      "zh": "用 MuseDraw 的「暖陶」风格画一张图：半成品食材配送服务的商业模式画布。九个格子放在一页上。从右侧开始阅读：客户是谁、向客户承诺什么，然后才看履行承诺需要多少成本。"
+    },
+    "31-stakeholder-map-editorial": {
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Stakeholder map: CRM migration. Plot every stakeholder by influence and interest before the first meeting. The quadrant tells you how to engage; the arrow shows where you need someone to move.",
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：CRM 迁移的利益相关者地图。在第一次会议前，按影响力和关注度标出每位利益相关者。象限决定沟通方式，箭头表示需要推动某人向哪里移动。"
+    },
+    "32-hiring-pipeline-riso": {
+      "en": "Use MuseDraw in the Riso Print style to draw: Hiring funnel: senior backend engineer. Each stage has an owner and a time limit. Candidates remember the slow stage, not the hard one — so the SLA is part of the design.",
+      "zh": "用 MuseDraw 的「孔版套印」风格画一张图：高级后端工程师招聘漏斗。每个阶段都有负责人和时限。候选人记住的是拖延的环节，而不是困难的环节，因此 SLA 也是设计的一部分。"
+    },
+    "33-expense-flow-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：费用报销审批流程。金额决定谁审批，票据决定能不能付款。大部分退回发生在财务审核这一步，且原因高度集中。数据为示例。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Expense reimbursement approval flow. The amount determines who approves; supporting receipts determine whether payment can proceed. Most returns happen during finance review, with reasons concentrated in a few categories. Data is illustrative."
+    },
+    "34-team-rhythm-bauhaus": {
+      "en": "Use MuseDraw in the Bauhaus style to draw: Team operating rhythm, one week. Meetings cluster on Monday and Friday so Tuesday and Thursday stay empty. Red blocks are the two rituals nobody skips.",
+      "zh": "用 MuseDraw 的「包豪斯」风格画一张图：团队一周运作节奏。会议集中在周一和周五，让周二和周四保持空白。红色块表示任何人都不缺席的两项固定活动。"
+    },
+    "35-launch-mindmap-whiteboard": {
+      "zh": "用 MuseDraw 的「白板手绘」风格画一张图：新品发布会筹备清单。每一项写上负责人和截止日期。红色三项是上次发布会最后一周才想起来的风险，这次提前定好预案。",
+      "en": "Use MuseDraw in the Whiteboard style to draw: New-product launch event preparation checklist. Put an owner and deadline on every item. The three red items are risks only remembered in the final week of the previous launch; prepare contingencies for them early this time."
+    },
+    "36-strategy-house-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：2027–2029 战略地图。一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: 2027–2029 strategy map. One vision, three overall goals and four pillars. Measure each pillar with just one indicator, and specify annual targets and an owner. Data is illustrative."
+    },
+    "37-annual-timeline-metro": {
+      "zh": "用 MuseDraw 的「地铁线路」风格画一张图：公司 2026 年度大事记。一条主线，八个站点。红色站点是改变公司规模的节点，其余是能力建设。",
+      "en": "Use MuseDraw in the Metro Map style to draw: The company's 2026 milestones. One main line with eight stops. Red stops mark events that changed the company's scale; the others mark capability building."
+    },
+    "38-good-lesson-chalkboard": {
+      "zh": "用 MuseDraw 的「黑板教学」风格画一张图：《沉与浮》教学流程。五个环节按时长等比例排开；上排是老师做什么，下排是孩子做什么。",
+      "en": "Use MuseDraw in the Chalkboard style to draw: Teaching flow for “Sinking and Floating.” Arrange five stages with widths proportional to their duration; the upper row shows what the teacher does and the lower row what the children do."
+    },
+    "39-curriculum-map-metro": {
+      "zh": "用 MuseDraw 的「地铁线路」风格画一张图：一年级数学一学期课程地图。四条线路 = 四个领域；站点 = 有课的周；两个换乘大站是测评。一眼看出哪几周内容最密、哪几周适合做项目。",
+      "en": "Use MuseDraw in the Metro Map style to draw: One-semester first-grade mathematics curriculum map. Four lines represent four domains; stops are weeks with lessons, and two major interchanges are assessments. Make the busiest weeks and weeks suitable for projects clear at a glance."
+    },
+    "40-risk-heatmap-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: Risk heat map, Q3 review. Likelihood × impact decides the colour; owners and mitigations live next to the grid so the picture and the plan never drift apart.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：第三季度评审风险热力图。发生可能性 × 影响程度决定颜色；负责人和应对措施放在矩阵旁，确保图与行动计划始终一致。"
+    },
+    "41-run-of-show-swiss": {
+      "en": "Use MuseDraw in the Swiss Poster style to draw: Conference run of show. The whole day on one sheet: who is on, where, and the two moments the crew cannot miss.",
+      "zh": "用 MuseDraw 的「瑞士海报」风格画一张图：会议活动执行流程表。一页展示全天安排：谁上场、在哪里，以及执行团队绝不能错过的两个时刻。"
+    },
+    "42-gtd-whiteboard": {
+      "en": "Use MuseDraw in the Whiteboard style to draw: GTD weekly workflow. Everything goes into the inbox. Every item gets exactly one decision — then it leaves.",
+      "zh": "用 MuseDraw 的「白板手绘」风格画一张图：GTD 每周工作流。所有事项先进入收集箱。每项只做一次明确决策，然后离开收集箱。"
+    },
+    "43-vendor-scoring-newsprint": {
+      "en": "Use MuseDraw in the Newsprint style to draw: Vendor scoring matrix: CRM selection. Agree the criteria and their weights first, score each vendor 1–10 against them, and let the arithmetic start the discussion — not end it.",
+      "zh": "用 MuseDraw 的「报刊黑白」风格画一张图：CRM 选型供应商评分矩阵。先确定评价标准和权重，再按各项标准给每个供应商打 1–10 分，让计算结果成为讨论的起点，而非终点。"
+    },
+    "44-adkar-terracotta": {
+      "en": "Use MuseDraw in the Terracotta style to draw: ADKAR readiness survey. Score each step and fix the first one below 3. Desire is the barrier here, so more training (Knowledge) would be wasted until people want the change. Figures are illustrative.",
+      "zh": "用 MuseDraw 的「暖陶」风格画一张图：ADKAR 变革准备度调查。给每一步评分，先修复第一个低于 3 分的环节。此处的障碍是意愿，因此在人们愿意改变之前，增加知识培训只会浪费。数字为示例。"
+    },
+    "45-document-flow-ink-wash": {
+      "zh": "用 MuseDraw 的「水墨宣纸」风格画一张图：公文办理流程。一件来文经过八道手续，正常约 10 个工作日办结。朱砂色为需要领导签批的环节，虚线为退改回路。",
+      "en": "Use MuseDraw in the Ink Wash style to draw: Official-document processing flow. An incoming document passes through eight procedures and normally closes in about 10 working days. Cinnabar marks steps requiring leadership sign-off; dashed lines show return-for-revision loops."
+    },
+    "46-outpatient-flow-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：门诊就诊流程优化。线下 9 步里有 4 步在排队。把挂号、缴费、报告搬到手机上之后，患者在院时间从 2.5 小时降到 70 分钟。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Optimizing the outpatient visit flow. Four of the nine offline steps involve queuing. Moving registration, payment and reports to mobile reduces time in hospital from 2.5 hours to 70 minutes."
+    },
+    "47-aarrr-neon": {
+      "en": "Use MuseDraw in the Neon Arcade style to draw: AARRR growth funnel and experiments. Five numbers the whole team can recite. Each stage owns exactly one live experiment; the hottest stage gets the most engineering time.",
+      "zh": "用 MuseDraw 的「霓虹街机」风格画一张图：AARRR 增长漏斗与实验。五个全团队都能背出的数字。每个阶段恰好负责一个正在进行的实验，最需要关注的阶段分配最多工程时间。"
+    },
+    "48-supply-chain-observatory": {
+      "en": "Use MuseDraw in the Observatory style to draw: Fresh-produce supply chain: goods, information, money. Amber is product moving towards the shelf, teal is demand data moving back to the farm, violet is money. A forecast is only as good as the teal lines.",
+      "zh": "用 MuseDraw 的「观测夜空」风格画一张图：生鲜供应链中的货物流、信息流与资金流。琥珀色表示向货架流动的商品，青绿色表示回传农场的需求数据，紫色表示资金。预测质量取决于青绿色线路。"
+    },
+    "49-contract-review-editorial": {
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Contract review triage. Standard paper on our template goes straight to signature. Only the exceptions — non-standard terms, high value, personal data — get human review.",
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：合同审查分流。使用我方模板的标准合同直接进入签署；只有非标准条款、高金额、涉及个人数据等例外才需要人工审查。"
+    },
+    "50-team-topologies-bauhaus": {
+      "en": "Use MuseDraw in the Bauhaus style to draw: Team Topologies: four team types. Stream-aligned teams ship to customers. Everyone else exists to make them faster — and says how: collaborate, facilitate, or offer X-as-a-service.",
+      "zh": "用 MuseDraw 的「包豪斯」风格画一张图：Team Topologies 的四种团队类型。面向价值流的团队向客户交付，其他团队的存在都是为了使它们更快，并明确通过协作、赋能或提供 X 即服务来实现。"
+    },
+    "51-support-tiers-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: Tiered customer support model. Each escalation costs roughly five times the tier before it. The goal isn't fewer tickets — it's tickets landing where they can be closed in one touch.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：分层客户支持模型。每升一级，成本约为前一级的五倍。目标不是减少工单，而是让工单落到能够一次解决的位置。"
+    },
+    "52-sales-kanban-pastel": {
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Sales pipeline board, week 41. A deal that hasn't moved in 21 days goes back to Lead with a note. The column totals are the forecast; the cards are the conversation.",
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：第 41 周销售管道看板。连续 21 天没有进展的商机退回 Lead 并附说明。列汇总用于预测，卡片用于讨论。"
+    },
+    "53-kindergarten-day-chalkboard": {
+      "zh": "用 MuseDraw 的「黑板教学」风格画一张图：幼儿园大班一日活动流程。动静交替、室内外交替。时间是骨架，不是闹钟：孩子玩得投入时，老师可以把下一环节推后十分钟。",
+      "en": "Use MuseDraw in the Chalkboard style to draw: A kindergarten senior-class daily activity flow. Alternate active and quiet periods, indoors and outdoors. Time is a framework, not an alarm: when children are absorbed in play, the teacher may delay the next activity by ten minutes."
+    },
+    "54-sipoc-handover-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：护士交接班 SIPOC。先画清楚边界：谁提供、提供什么、经过哪五步、产出什么、交给谁。改进时只动中间那一列，左右两列是约束。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: SIPOC for nursing shift handover. Define the boundaries first: who supplies what, through which five steps, producing what and for whom. Improvements change only the middle column; the columns on either side are constraints."
+    },
+    "55-value-stream-blueprint": {
+      "en": "Use MuseDraw in the Blueprint style to draw: Value stream map: bracket assembly. Current state. Material moves left to right, information right to left; the ladder at the bottom shows how little of the 14 days is actual work.",
+      "zh": "用 MuseDraw 的「工程蓝图」风格画一张图：支架装配价值流现状图。物料从左向右移动，信息从右向左传递；底部的时间阶梯显示 14 天中真正用于作业的时间少之又少。"
+    },
+    "56-prisma-journal": {
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 1 | PRISMA 2020 flow diagram. Identification of studies via databases and registers for a systematic review of exercise interventions in older adults. Counts reconcile at every step (2,454 − 704 = 1,750; 1,750 − 1,512 = 238; 238 − 11 = 227; 227 − 191 = 36 reports).",
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 1 | PRISMA 2020 流程图。针对老年人运动干预的系统综述，通过数据库与注册平台识别研究。每一步数量都要核对一致（2,454 − 704 = 1,750；1,750 − 1,512 = 238；238 − 11 = 227；227 − 191 = 36 篇报告）。"
+    },
+    "57-consort-journal": {
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 2 | CONSORT 2010 participant flow. Two-arm, parallel-group randomised trial of a nurse-led discharge programme; primary outcome 30-day readmission, intention-to-treat. Counts are illustrative.",
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 2 | CONSORT 2010 受试者流程。护士主导出院方案的双臂平行组随机试验，主要结局为 30 天再入院，采用意向性分析。数量为示例。"
+    },
+    "58-transformer-editorial": {
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Transformer architecture. Two stacks of identical blocks. The encoder turns a sentence into context-rich vectors; the decoder writes the output one token at a time while attending to them.",
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：Transformer 架构。两组由相同模块堆叠而成的结构。编码器把句子转换为富含上下文的向量；解码器关注这些向量，每次生成一个 token 来写出结果。"
+    },
+    "59-nsfc-roadmap-journal": {
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 3 | 技术路线图。示例课题：基于多组学的肝纤维化代谢重编程机制研究（国家自然科学基金面上项目申请书格式）。三条研究内容并行，最终汇聚到一个可验证的机制。",
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 3 | Technical research roadmap. Example topic: a multi-omics study of metabolic reprogramming mechanisms in liver fibrosis, formatted for a National Natural Science Foundation of China General Program application. Three research workstreams run in parallel and converge on one testable mechanism."
+    },
+    "60-mixed-methods-terracotta": {
+      "en": "Use MuseDraw in the Terracotta style to draw: Explanatory sequential mixed-methods design. Capital letters mark the dominant strand. The connecting step is where most designs go wrong: the qualitative sample must be chosen from the quantitative results, not by convenience.",
+      "zh": "用 MuseDraw 的「暖陶」风格画一张图：解释性序列混合方法研究设计。大写字母标出主导研究分支。衔接步骤是多数设计容易出错之处：定性研究样本必须依据定量结果选择，不能采用便利抽样。"
+    },
+    "61-ml-lifecycle-observatory": {
+      "en": "Use MuseDraw in the Observatory style to draw: Machine-learning model lifecycle. Every arrow is a recorded artifact: dataset hash, feature version, run ID, model version. If you cannot replay a box, it is not part of the pipeline yet.",
+      "zh": "用 MuseDraw 的「观测夜空」风格画一张图：机器学习模型生命周期。每条箭头都是有记录的产物，包括数据集哈希、特征版本、运行 ID、模型版本。如果一个步骤无法重放，就还不能算流水线的一部分。"
+    },
+    "62-crispr-workflow-journal": {
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 4 | Generating a validated CRISPR–Cas9 knockout cell line. a, Eight steps from guide design to phenotype, with typical timing for an adherent human line. b, Gates that must pass before moving on; skipping clone-level validation is the most common source of irreproducible knockouts.",
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 4 | 构建经验证的 CRISPR–Cas9 基因敲除细胞系。a，从向导设计到表型的八个步骤，标注人源贴壁细胞系的典型用时。b，进入下一步前必须通过的检查关口；跳过克隆级验证是敲除结果不可复现的最常见原因。"
+    },
+    "63-scrnaseq-terminal": {
+      "en": "Use MuseDraw in the Terminal style to draw: Single-cell RNA-seq analysis pipeline. Ten steps, three places where a bad default silently ruins the result. Thresholds shown are where we start, not what we publish — always inspect the QC plots first.",
+      "zh": "用 MuseDraw 的「终端暗色」风格画一张图：单细胞 RNA-seq 分析流水线。十个步骤，标出三个不恰当的默认设置会悄悄破坏结果的环节。所示阈值只是起点，不是最终发表标准，务必先检查质控图。"
+    },
+    "64-western-blot-pastel": {
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Western blot protocol, two-day schedule. The overnight primary incubation splits the protocol cleanly. Yellow is the cheapest check in the whole workflow — never skip the Ponceau stain.",
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：Western blot 两天实验安排。过夜一抗孵育把流程清楚地分为两部分。黄色标出整个流程中成本最低的检查，绝不跳过丽春红染色。"
+    },
+    "65-trial-phases-swiss": {
+      "en": "Use MuseDraw in the Swiss Poster style to draw: Clinical trial phases and success rates. Each phase answers one question with more people and more money. Most drugs stop at the second one.",
+      "zh": "用 MuseDraw 的「瑞士海报」风格画一张图：临床试验各阶段与成功率。每个阶段回答一个问题，受试者和资金逐步增加。大多数药物止步于第二阶段。"
+    },
+    "66-literature-review-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：文献综述写作流程。八步、约 14 周。左边是每一步占用的时间，中间是还剩多少篇文献，右边是这一步必须留下的记录。1,204 篇检索结果最终纳入 38 篇。数据为示例。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Literature review writing workflow. Eight steps over about 14 weeks. Show time spent at each step on the left, the remaining number of papers in the middle, and the records each step must leave on the right. Of 1,204 search results, 38 are ultimately included. Data is illustrative."
+    },
+    "67-thesis-structure-editorial": {
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：学位论文章节结构。答辩委员读论文时，心里问的就是这六个问题。写每一章之前，先把问题写在页首。",
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Thesis chapter structure. These six questions are what defense committee members ask themselves while reading. Before writing each chapter, put its question at the top of the page."
+    },
+    "68-sem-tam-newsprint": {
+      "en": "Use MuseDraw in the Newsprint style to draw: Structural equation model: nurses' adoption of e-charting. Ellipses are latent constructs measured by the boxed survey items. Every path coefficient is standardised; thick arrows carry the strongest effects (n = 486).",
+      "zh": "用 MuseDraw 的「报刊黑白」风格画一张图：护士采用电子护理记录的结构方程模型。椭圆表示潜在构念，由方框内的问卷条目测量。所有路径系数均为标准化系数，粗箭头表示最强效应（n = 486）。"
+    },
+    "69-scale-development-journal": {
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 2 | 量表编制与检验流程。示例：老年人智慧养老数字适应量表。右侧条形显示每一步之后保留的条目数——从 62 条到 24 条，每一次删减都有统计或专家依据。",
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 2 | Scale development and validation flow. Example: a digital adaptation scale for older adults using smart eldercare. Bars on the right show items retained after each step, from 62 to 24; every removal has a statistical or expert basis."
+    },
+    "70-fair-data-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: FAIR research data workflow. Raw data is read-only from the moment it leaves the instrument. Everything after it is produced by versioned code, so any figure can be regenerated from scratch.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：FAIR 科研数据工作流。原始数据从离开仪器起就设为只读，后续所有产物均由版本化代码生成，因此任何图都可以从头重建。"
+    },
+    "71-peer-review-editorial": {
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Journal peer-review timeline. Time runs down the page. Most of the five months are spent in the two long gaps — reviewer invitations and the author's revision — not in anyone's actual reading.",
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：期刊同行评审时间线。时间沿页面向下推进。五个月中的大部分时间花在邀请审稿人和作者修改这两个长间隔，而不是任何人实际阅读的时间。"
+    },
+    "72-diffusion-aurora": {
+      "en": "Use MuseDraw in the Aurora Glass style to draw: Denoising diffusion: training and sampling. Training adds Gaussian noise in 1,000 small steps and teaches one network to predict it. Generation runs the chain backwards, about 30–50 steps with a modern sampler, steered by the text.",
+      "zh": "用 MuseDraw 的「极光玻璃」风格画一张图：去噪扩散的训练与采样。训练通过 1,000 个小步骤加入高斯噪声，并让一个网络学习预测噪声。生成时在文本引导下逆向运行链条，现代采样器约需 30–50 步。"
+    },
+    "73-llm-eval-observatory": {
+      "en": "Use MuseDraw in the Observatory style to draw: LLM evaluation pipeline. A fixed set of cases, three kinds of graders, and a CI gate. The LLM judge is calibrated against humans on a sample every week — otherwise it quietly drifts.",
+      "zh": "用 MuseDraw 的「观测夜空」风格画一张图：LLM 评估流水线。一组固定案例、三类评分器和一道 CI 关卡。每周抽样，将 LLM 评判器与人工评分校准，否则它会悄然漂移。"
+    },
+    "74-stratified-sampling-journal": {
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 4 | 多阶段分层整群抽样设计。示例：全国老年人数字生活调查。先分层保证代表性，再整群降低成本，最后户内随机抽取一位 60 岁以上成员。括号内为样本量。",
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 4 | Multistage stratified cluster sampling design. Example: a national survey of older adults' digital lives. Stratify first for representativeness, sample clusters to reduce cost, then randomly select one household member aged 60 or older. Parentheses indicate sample sizes."
+    },
+    "75-carbon-cycle-terracotta": {
+      "en": "Use MuseDraw in the Terracotta style to draw: Global carbon cycle, annual fluxes. Boxes are stocks in billions of tonnes of carbon (GtC); arrows are yearly flows. Of the ~11 GtC humans add each year, the land and ocean take back a little more than half.",
+      "zh": "用 MuseDraw 的「暖陶」风格画一张图：全球碳循环年度通量。方框表示以十亿吨碳（GtC）计的储量，箭头表示年度流量。人类每年增加约 11 GtC，陆地和海洋重新吸收其中略多于一半。"
+    },
+    "76-factorial-design-bauhaus": {
+      "en": "Use MuseDraw in the Bauhaus style to draw: 2 × 2 factorial experimental design. Crossing two factors answers both main effects and whether they interact — with the same participants a one-factor study would need.",
+      "zh": "用 MuseDraw 的「包豪斯」风格画一张图：2 × 2 析因实验设计。交叉设置两个因素，在所需参与者数量与单因素研究相同的情况下，同时检验两个主效应及其交互作用。"
+    },
+    "77-grant-timeline-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：课题进度安排（2027–2029）。申请书里的“年度计划”画成一张图：三条研究内容错峰推进，中期检查前完成机制研究的主体实验。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: Research project schedule, 2027–2029. Turn the application’s annual plan into one diagram: stagger three research workstreams and finish the main mechanism-study experiments before the midterm review."
+    },
+    "78-moderated-mediation-journal": {
+      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 5 | Conceptual model: moderated mediation. Workload (X) increases burnout (Y) partly through sleep quality (M). Social support (W) weakens the first path. Hypotheses H1–H4 map to the labelled paths.",
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 5 | 有调节的中介概念模型。工作负荷（X）部分通过睡眠质量（M）增加职业倦怠（Y）。社会支持（W）削弱第一段路径。假设 H1–H4 对应带标签的路径。"
+    },
+    "79-r-analysis-terminal": {
+      "en": "Use MuseDraw in the Terminal style to draw: Reproducible R analysis pipeline. Each box is a function; each arrow is an object cached by {targets}. Change the cleaning rule and only the downstream boxes rerun.",
+      "zh": "用 MuseDraw 的「终端暗色」风格画一张图：可复现的 R 分析流水线。每个方框是一个函数，每条箭头是由 {targets} 缓存的对象。修改清洗规则时，只重跑下游步骤。"
+    },
+    "80-academic-poster-journal": {
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：分级夜间巡视降低老年住院患者跌倒率。作者 A，作者 B，作者 C ｜ 某三甲医院神经内科 ｜ 2026 年全国护理学术年会。数据为示例。",
+      "en": "Use MuseDraw in the Journal Figure style to draw: Tiered nighttime rounding reduces falls among older inpatients. Author A, Author B, Author C | Department of Neurology, a tertiary Grade A hospital | 2026 National Nursing Academic Conference. Data is illustrative."
+    },
+    "81-animal-study-journal": {
+      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：肝纤维化小鼠模型分组与给药方案。C57BL/6 雄性小鼠 50 只，随机分为 5 组，每组 10 只。造模 6 周，第 3 周起给药。剂量与时间点为示例。",
+      "en": "Use MuseDraw in the Journal Figure style to draw: Group allocation and dosing schedule for a mouse liver-fibrosis model. Randomize 50 male C57BL/6 mice into five groups of ten. Induce the model over six weeks and start treatment in week 3. Doses and time points are illustrative."
+    },
+    "82-network-meta-newsprint": {
+      "en": "Use MuseDraw in the Newsprint style to draw: Network of evidence for chronic insomnia treatments. 33 randomised trials, six treatments. Every line is at least one direct comparison; everything else is inferred. Counts are illustrative.",
+      "zh": "用 MuseDraw 的「报刊黑白」风格画一张图：慢性失眠治疗的证据网络。33 项随机试验、六种治疗。每条线表示至少一项直接比较，其余关系由推断得到。数量为示例。"
+    },
+    "83-graduate-milestones-metro": {
+      "zh": "用 MuseDraw 的「地铁线路」风格画一张图：研究生培养关键节点。四条线并行推进，三个换乘站是学院统一的考核节点：开题、中期、答辩。月份为示例，按本校培养方案调整。",
+      "en": "Use MuseDraw in the Metro Map style to draw: Graduate training milestones. Four tracks run in parallel, with three interchanges for the college's common assessments: proposal review, midterm review and thesis defense. Months are illustrative; adjust to the institution's training plan."
+    },
+    "84-reference-workflow-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：文献管理工作流。从检索到写作，每篇文献只录入一次。五个工具各管一步，靠同一个引用键串起来。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Reference management workflow. From search to writing, enter each reference only once. Five tools each handle one step, connected by the same citation key."
+    },
+    "85-survey-qc-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：问卷调查实施流程与质控点。琥珀色是两道质控关口：平台自动筛掉可疑问卷，质控员再随机回访 10%。共回收 1,312 份，有效 1,186 份（90.4%）。数据为示例。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: Survey implementation flow and quality-control checkpoints. Amber marks two gates: the platform automatically screens out suspicious questionnaires, and quality-control staff randomly follow up on 10%. Of 1,312 responses, 1,186 are valid (90.4%). Data is illustrative."
+    },
+    "86-qualitative-coding-editorial": {
+      "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：三级编码：从原话到核心范畴。16 位老年住院患者半结构访谈。左列是原话片段，中列是归并后的主范畴，右侧是统领全部范畴的核心解释。示例数据。",
+      "en": "Use MuseDraw in the Editorial Ink style to draw: Three levels of coding, from original statements to the core category. Semi-structured interviews with 16 older inpatients. The left column contains excerpts, the middle column groups them into main categories, and the right gives the core explanation unifying all categories. Example data."
+    },
+    "87-clinical-pathway-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：全膝关节置换术临床路径（标准住院日 6 天）。横向是住院日，纵向是谁负责。同一列读下来，就是这一天四方各自要完成的事。内容为示例，以本院路径为准。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Total knee replacement clinical pathway, with a standard six-day hospital stay. Hospital days run horizontally and responsible parties vertically. Reading one column shows what each of four parties must do that day. Content is illustrative; follow the hospital's own pathway."
+    },
+    "88-lab-chemical-safety-swiss": {
+      "en": "Use MuseDraw in the Swiss Poster style to draw: Chemicals, from order to disposal. Six steps every reagent goes through. Storage is where most incidents start, so it is the one step in red.",
+      "zh": "用 MuseDraw 的「瑞士海报」风格画一张图：化学品从订购到处置的全过程。每种试剂都经过六个步骤。大多数事故始于储存，因此只将这一步标为红色。"
+    },
+    "89-gwas-pipeline-terminal": {
+      "en": "Use MuseDraw in the Terminal style to draw: GWAS pipeline, genotypes to Manhattan plot. Each step prints what it removed. Amber steps drop data; read their counts before trusting a single hit. Numbers are illustrative.",
+      "zh": "用 MuseDraw 的「终端暗色」风格画一张图：从基因型到曼哈顿图的 GWAS 流水线。每一步输出被剔除的内容。琥珀色步骤会删除数据，在相信任何一个关联结果前先读这些数量。数字为示例。"
+    },
+    "90-federated-learning-observatory": {
+      "en": "Use MuseDraw in the Observatory style to draw: Federated learning across five hospitals. Teal arrows carry weight updates in, violet arrows carry the new global model out. Raw images stay inside each hospital. Figures are illustrative.",
+      "zh": "用 MuseDraw 的「观测夜空」风格画一张图：五家医院之间的联邦学习。青绿色箭头表示上传的权重更新，紫色箭头表示下发的新全局模型。原始图像保留在各医院内部。数字为示例。"
+    },
+    "91-action-items-pastel": {
+      "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：会议纪要与行动项。会议只产出两样东西：决议和行动项。每个行动项都有一个负责人、一个日期和一个状态，不写“相关部门”“尽快”。",
+      "en": "Use MuseDraw in the Pastel Notes style to draw: Meeting minutes and action items. A meeting produces only two things: decisions and action items. Every action item has one owner, one date and one status; do not write “relevant departments” or “as soon as possible.”"
+    },
+    "92-budget-cycle-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：2027 年度预算编制时间表。9 月启动，12 月董事会批准，1 月起执行。琥珀色两轮评审最容易延期：每拖一周，后面的审批都要顺延。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw: 2027 annual budget preparation timeline. Start in September, obtain board approval in December and implement from January. Two amber review rounds are most likely to slip: every week's delay pushes all subsequent approvals back."
+    },
+    "93-promotion-ladder-metro": {
+      "zh": "用 MuseDraw 的「地铁线路」风格画一张图：员工晋升通道：专业线与管理线。两条线在 P3 换乘：之后可以继续做专家，也可以转去带团队。同一高度的站点，薪酬区间相同。职级名称为示例。",
+      "en": "Use MuseDraw in the Metro Map style to draw: Employee career paths, specialist and management tracks. The two lines interchange at P3: employees can continue as experts or switch to leading a team. Stops at the same height share the same salary range. Grade names are illustrative."
+    },
+    "94-brand-launch-product": {
+      "en": "Use MuseDraw in the Product Clean style to draw: Brand launch, planned backwards from launch day. Start from the date and work back. Trademark clearance and the first production run are the two long poles; everything else fits around them.",
+      "zh": "用 MuseDraw 的「产品发布」风格画一张图：从发布日倒排的品牌发布计划。从日期出发向前倒推。商标核准与首批生产是两项关键长周期工作，其他事项围绕它们安排。"
+    },
+    "95-complaint-loop-terracotta": {
+      "zh": "用 MuseDraw 的「暖陶」风格画一张图：客诉处理闭环与时限。五步，每一步都有时限。处理环节最长也最容易超时；最后一步“复盘”才是闭环：同一类问题不再出现，才算真的处理完。数据为示例。",
+      "en": "Use MuseDraw in the Terracotta style to draw: Customer complaint resolution loop and time limits. Five steps, each with a deadline. Resolution takes the longest and is most likely to run over; the final retrospective closes the loop. A complaint is truly resolved only when that type of problem no longer recurs. Data is illustrative."
+    },
+    "96-store-opening-blueprint": {
+      "en": "Use MuseDraw in the Blueprint style to draw: New café opening schedule. Sixteen weeks from lease to grand opening. Critical path in yellow: fit-out, then the food safety permit, which cannot be applied for until fit-out passes fire inspection.",
+      "zh": "用 MuseDraw 的「工程蓝图」风格画一张图：新咖啡店开业计划。从签租约到正式开业共十六周。黄色标出关键路径：先装修，再申请食品安全许可，只有装修通过消防验收后才能申请。"
+    },
+    "97-status-board-bauhaus": {
+      "en": "Use MuseDraw in the Bauhaus style to draw: Cross-team weekly status. Six projects, one line each. Leadership reads the red row first; it is the only one that asks them for something.",
+      "zh": "用 MuseDraw 的「包豪斯」风格画一张图：跨团队每周状态。六个项目，每个占一行。管理层先看红色行，因为只有这一行需要他们采取行动。"
+    },
+    "98-knowledge-base-ink-wash": {
+      "zh": "用 MuseDraw 的「水墨宣纸」风格画一张图：科室知识库目录结构。一级目录按“用来做什么”分，不按部门分；文件统一以“年月日_名称_版本”命名，新人入职第一周就能自己找到。",
+      "en": "Use MuseDraw in the Ink Wash style to draw: Department knowledge-base directory structure. Organize top-level folders by purpose rather than department; name files consistently as “YYYYMMDD_Name_Version” so new employees can find what they need independently in their first week."
+    },
+    "99-home-school-chalkboard": {
+      "zh": "用 MuseDraw 的「黑板教学」风格画一张图：家园沟通四个频率。日常沟通按固定节奏走，家长知道什么时候能得到什么信息；特殊情况单独处理，不占用日常渠道。",
+      "en": "Use MuseDraw in the Chalkboard style to draw: Four frequencies of kindergarten–family communication. Follow a regular rhythm for routine communication so parents know what information to expect and when. Handle special situations separately without taking over routine channels."
+    }
+  }
+}

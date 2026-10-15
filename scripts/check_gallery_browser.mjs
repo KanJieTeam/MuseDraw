@@ -26,6 +26,7 @@ async function fetchBytes(url){const response=await fetch(url,{signal:AbortSigna
 function matches(actual,expected,format){if(actual.equals(expected))return true;if(format==='preview.jpg')return false;try{const decoder=new TextDecoder('utf-8',{fatal:true,ignoreBOM:true});return decoder.decode(actual).replace(/\r\n/g,'\n')===decoder.decode(expected).replace(/\r\n/g,'\n');}catch{return false;}}
 async function noOverflow(){assert.deepEqual(await page.evaluate(()=>['html','body','.collection-tools','.case-grid','#preview','#copy-dialog'].flatMap(selector=>[...document.querySelectorAll(selector)].filter(element=>element.clientWidth&&element.scrollWidth>element.clientWidth+1).map(element=>({selector,width:element.clientWidth,scrollWidth:element.scrollWidth})))),[],'Horizontal overflow');}
 async function screenshot(name){await page.screenshot({path:path.join(output,name),animations:'disabled'});report.screenshots.push(name);}
+async function selectFilter(key,value){const data=key==='theme'?'style':key;await page.locator(`[data-${data}="${value}"]`).click();}
 function prompt(markdown){const match=markdown.match(/(?:^|\n)>[ \t]+([^\n]+(?:\n>[ \t]+[^\n]+)*)/);assert.ok(match,'Original user prompt missing');return match[1].replace(/\n>[ \t]+/g,'\n').trim().replace(/\r\n/g,'\n');}
 async function copiedBrief(item,original){const name=await page.locator(`#theme option[value="${item.theme}"]`).textContent();return `请使用 MuseDraw 最新版（https://github.com/KanJieTeam/MuseDraw），先读取完整 Skill，采用“${name}”风格。\n${original}\n请渲染并看图检查，交付 PNG 和可逐个编辑文字、图形与连线的原生 .drawio 文件，不要把 SVG 或截图嵌入 drawio。`;}
 
@@ -40,28 +41,32 @@ try{
  const url=page.url(),catalog=JSON.parse((await fetchBytes(new URL('gallery/catalog.json',url))).toString('utf8'));
  assert.deepEqual(catalog,JSON.parse(await fs.readFile(path.join(repo,'gallery/catalog.json'),'utf8')));
  const items=catalog.items,themes=[...new Set(items.map(item=>item.theme))];assert.equal(items.length,100);assert.equal(themes.length,20);
+ const bilingual=JSON.parse((await fetchBytes(new URL('gallery/prompts.json',url))).toString('utf8'));
+ assert.deepEqual(bilingual,JSON.parse(await fs.readFile(path.join(repo,'gallery/prompts.json'),'utf8')));
+ const styleIndex=JSON.parse((await fetchBytes(new URL('styles.json',url))).toString('utf8'));
+ assert.deepEqual(styleIndex,JSON.parse(await fs.readFile(path.join(repo,'assets/gallery/styles.json'),'utf8')));
  report.caseCount=100;report.themeCount=20;
  const assets=new Map(),prompts=new Map();
  await check('all-100-user-cases-published-assets-match-source',async()=>{
   const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','diagram.drawio','preview.jpg','checks.json'].map(filename=>({item,filename})));
-  for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md')prompts.set(item.slug,prompt(remote.toString('utf8')));}));
+  for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md'){prompt(remote.toString('utf8'));prompts.set(item.slug,bilingual.items[item.slug].zh);}}));
   return {cases:100,files:600};
  });
  await check('20-flagship-default-and-all-100-decoded-previews',async()=>{
   const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.status==='flagship').map(item=>item.slug));await noOverflow();await screenshot('desktop.png');
-  await page.selectOption('#collection','all');assert.equal(await page.locator('.case-card').count(),100);
+  await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),100);
   for(const item of items){const image=page.locator(`[data-item="${item.slug}"] img`);await image.scrollIntoViewIfNeeded();await image.evaluate(async image=>{await image.decode();if(!image.naturalWidth||!image.naturalHeight)throw Error('Preview did not decode');});}
   return {defaultFlagship:20,decodedPreviews:100};
  });
  await check('all-20-theme-filters-retain-catalog-facts',async()=>{
   assert.equal(await page.locator('#theme option').count(),21);
-  for(const theme of themes){await page.selectOption('#theme',theme);const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.theme===theme).map(item=>item.slug));}
-  await page.selectOption('#theme','all');await page.selectOption('#collection','all');assert.equal(await page.locator('.case-card').count(),100);
+  for(const theme of themes){await selectFilter('theme',theme);const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.theme===theme).map(item=>item.slug));}
+  await selectFilter('theme','all');await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),100);
  });
  const samples=[items[0],items.find(item=>item.lang==='zh')??items[20],items.at(-1)];
  await check('chinese-styles-search-category-favorites-and-persistence',async()=>{
   assert.equal(await page.locator('#theme option[value="journal"]').textContent(),'科研期刊');
-  for(const category of ['research','office','teaching','engineering']){await page.selectOption('#category',category);assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.category===category).map(item=>item.slug));}
+  for(const category of ['research','office','teaching','engineering']){await selectFilter('category',category);assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.category===category).map(item=>item.slug));}
   await page.locator('#reset-filters').click();await page.locator('#search').fill('科研期刊');assert.equal(await page.locator('.case-card').count(),items.filter(item=>item.theme==='journal').length);
   await page.locator('#search').fill('没有这个图-qa');assert.equal(await page.locator('.case-card').count(),0);assert.equal(await page.locator('#empty').isVisible(),true);
   await page.locator('#reset-filters').click();const item=items[0];await page.locator(`#gallery [data-favorite="${item.slug}"]`).click();assert.equal(await page.locator('#favorite-count').textContent(),'1');await page.locator('#favorites').click();assert.equal(await page.locator('.case-card').count(),1);
@@ -86,21 +91,36 @@ try{
  });
  await check('svg-preview-zoom-fit-close-and-mobile-layout',async()=>{
   for(const width of [1440,390]){
-   await page.setViewportSize({width,height:width===390?844:1000});await page.selectOption('#collection','flagship');await page.evaluate(()=>window.scrollTo(0,0));await noOverflow();await screenshot(width===390?'mobile.png':'desktop-flagship.png');
+   await page.setViewportSize({width,height:width===390?844:1000});await selectFilter('collection','flagship');await page.evaluate(()=>window.scrollTo(0,0));await noOverflow();await screenshot(width===390?'mobile.png':'desktop-flagship.png');
    const item=items.find(item=>item.status==='flagship');await page.locator(`[data-preview="${item.slug}"]`).click();await page.locator('#preview-image').evaluate(async image=>{await image.decode();});assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/diagram.svg`,url).href);
    const transform=()=>page.locator('#preview-image').evaluate(image=>getComputedStyle(image).transform);const initial=await transform();await page.locator('#zoom-in').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();assert.equal(await transform(),initial);await page.locator('#zoom-out').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();await noOverflow();await screenshot(width===390?'mobile-preview.png':'desktop-preview.png');await page.locator('#close-preview').click();await page.locator(`[data-preview="${item.slug}"]`).click();await page.keyboard.press('Escape');assert.equal(await page.locator('#preview').evaluate(element=>element.open),false);
   }
  });
  await check('preview-details-retain-prompt-actions-and-downloads',async()=>{
-  await page.selectOption('#collection','all');const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,prompts.get(item.slug));
+  await selectFilter('collection','all');const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,prompts.get(item.slug));
   for(const filename of ['diagram.drawio','diagram.svg','scene.json'])assert.equal(await page.locator(`#preview-details a[download][href="${item.path}/${filename}"]`).count(),1);
   const expected=await copiedBrief(item,prompts.get(item.slug));await page.locator(`#preview-details [data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);
   await page.locator(`#preview-details [data-replay="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`);await page.locator('#close-preview').click();
  });
  await check('real-drawio-svg-and-scene-downloads-match-published-bytes',async()=>{
-  await page.selectOption('#collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.drawio','diagram.svg','scene.json']){
+  await selectFilter('collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.drawio','diagram.svg','scene.json']){
    const source=`${item.path}/${filename}`,locator=page.locator(`[data-item="${item.slug}"] a[download][href="${source}"]`);const [download]=await Promise.all([page.waitForEvent('download'),locator.click()]);assert.equal(await download.failure(),null);const target=path.join(scratch,`download-${report.downloads.length}-${filename}`);await download.saveAs(target);const bytes=await fs.readFile(target);assert.equal(hash(bytes),assets.get(source).sha256);report.downloads.push({source,filename:download.suggestedFilename(),bytes:bytes.length,sha256:hash(bytes)});
   }return {byteExactDownloads:6,formats:['drawio','svg','json']};
+ });
+ await check('restored-web-gallery-navigation-sharing-install-and-legacy-entry',async()=>{
+  await page.setViewportSize({width:1440,height:1000});await page.locator('#reset-filters').click();assert.equal(await page.locator('#style-options [data-style]').count(),21);
+  for(const theme of themes)assert.equal(await page.locator(`[data-style="${theme}"] .swatches i`).count(),styleIndex[theme].swatches.length);
+  await page.locator('#gallery [data-preview]').first().click();const first=await page.locator('#preview-title').textContent();await page.locator('#next').click();assert.notEqual(await page.locator('#preview-title').textContent(),first);await page.locator('#previous').click();assert.equal(await page.locator('#preview-title').textContent(),first);
+  await page.keyboard.press('ArrowRight');assert.notEqual(await page.locator('#preview-title').textContent(),first);await page.keyboard.press('ArrowLeft');assert.equal(await page.locator('#preview-title').textContent(),first);
+  await page.locator('#preview-details [data-share]').click();const shared=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(shared.includes(`#${items[0].slug}`));await page.reload({waitUntil:'networkidle'});await page.locator('#preview[open]').waitFor();assert.equal(await page.locator('#preview-title').textContent(),first);await page.locator('#close-preview').click();assert.equal(new URL(page.url()).hash,'');
+  await page.locator('#install').click();assert.equal(await page.locator('#install-dialog').evaluate(el=>el.open),true);await page.locator('#copy-install').click();assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),'npx skills add KanJieTeam/MuseDraw');await page.locator('#close-install').click();await page.keyboard.press('/');assert.equal(await page.locator('#search').evaluate(el=>el===document.activeElement),true);await page.locator('#search').blur();
+  await page.goto(new URL('docs/gallery/',url).href,{waitUntil:'networkidle'});assert.equal(new URL(page.url()).pathname,new URL(url).pathname);await page.locator('.case-card').first().waitFor();
+ });
+ await check('bilingual-prompts-preview-clipboard-replay-and-preference',async()=>{
+  const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();
+  await page.locator('#preview-details [data-prompt-language="en"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].en);const en=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(en.includes('Use the latest MuseDraw'));assert.ok(en.includes('native .drawio'));
+  await page.locator('#preview-details [data-replay]').click();await page.waitForFunction(async()=>(await navigator.clipboard.readText()).startsWith('Reproduce this MuseDraw'));await page.reload({waitUntil:'networkidle'});await page.locator('#preview[open]').waitFor();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await screenshot('english-prompt.png');
+  await page.locator('#preview-details [data-prompt-language="zh"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].zh);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].zh);assert.ok((await page.evaluate(()=>navigator.clipboard.readText())).startsWith('请使用 MuseDraw 最新版'));await page.locator('#close-preview').click();
  });
  await check('static-gallery-has-no-external-network-or-runtime-errors',async()=>{assert.deepEqual(external,[]);assert.deepEqual(errors,[]);assert.equal(await page.locator('iframe').count(),0);});
  report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 100 cases, 20 themes, 6 byte-exact downloads.`);

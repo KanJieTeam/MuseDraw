@@ -16,14 +16,16 @@
 
 <p>
   <a href="#快速开始">快速开始</a> ·
-  <a href="gallery/README.md">图库</a> ·
+  <a href="https://kanjieteam.github.io/MuseDraw/">在线图库 ↗</a> ·
   <a href="skills/musedraw/references/style-atlas.md">20 种风格</a> ·
   <a href="README.en.md">English</a>
 </p>
 
 </div>
 
-[![MuseDraw 精选 20 例](assets/gallery/flagship-grid.jpg)](gallery/README.md)
+[![MuseDraw 精选 20 例](assets/gallery/flagship-grid.jpg)](https://kanjieteam.github.io/MuseDraw/)
+
+<p align="center"><a href="https://kanjieteam.github.io/MuseDraw/"><strong>打开在线图库 → 选风格 · 看大图 · 复制提示词 · 下载 drawio</strong></a></p>
 
 <p align="center"><sub>以上每张图都只来自一个 <code>scene.json</code>：基金技术路线、PRISMA、CONSORT、模型结构、结构方程、量表编制、OKR、跨部门泳道、PDCA、鱼骨图、公文流程、课堂设计、系统架构……</sub></p>
 
@@ -71,7 +73,7 @@ node skills/musedraw/scripts/musedraw.mjs render gallery/59-nsfc-roadmap-journal
 npm run gallery        # 重新渲染全部案例
 ```
 
-想让你的智能体学会某种图？把对应 `prompt.md` 交给它即可。[图库总览](gallery/README.md) · [100 案例清单](gallery/catalog.json)
+打开[在线图库](https://kanjieteam.github.io/MuseDraw/)，选一种风格、点开喜欢的图，切换中文或 English 后复制提示词交给智能体；也可下载 drawio 直接编辑。[源文件索引](gallery/README.md) · [100 案例清单](gallery/catalog.json)
 
 ## 设计方法
 

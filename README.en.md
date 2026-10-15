@@ -16,14 +16,16 @@
 
 <p>
   <a href="#quick-start">Quick start</a> ·
-  <a href="gallery/README.md">Gallery</a> ·
+  <a href="https://kanjieteam.github.io/MuseDraw/">Live gallery ↗</a> ·
   <a href="skills/musedraw/references/style-atlas.md">20 styles</a> ·
   <a href="README.md">中文</a>
 </p>
 
 </div>
 
-[![MuseDraw flagship gallery](assets/gallery/flagship-grid.jpg)](gallery/README.md)
+[![MuseDraw flagship gallery](assets/gallery/flagship-grid.jpg)](https://kanjieteam.github.io/MuseDraw/)
+
+<p align="center"><a href="https://kanjieteam.github.io/MuseDraw/"><strong>Explore the live gallery → Browse styles · Preview · Copy prompts · Download drawio</strong></a></p>
 
 <p align="center"><sub>Every image above comes from a single <code>scene.json</code>: grant roadmaps, PRISMA, CONSORT, model architectures, SEM, scale development, OKRs, swimlanes, PDCA, fishbone, lesson plans, system architecture.</sub></p>
 
@@ -65,7 +67,7 @@ A style is not a palette: each one has its own type, line grammar, texture, labe
 
 ## Reproduce any case
 
-Each case folder holds `scene.json` (the full source), `prompt.md` (a one-line request), `diagram.drawio`, supporting SVG and `preview.jpg`. `npm run gallery` re-renders everything. [Gallery](gallery/README.md) · [100-case catalog](gallery/catalog.json)
+Open the [live gallery](https://kanjieteam.github.io/MuseDraw/), choose a style and a diagram, switch between Chinese and English prompts, then copy the request to your agent. Download drawio to edit the diagram directly. Each case folder also holds its scene, original prompt, SVG and preview; `npm run gallery` re-renders them. [Source index](gallery/README.md) · [100-case catalog](gallery/catalog.json)
 
 ## Design method
 

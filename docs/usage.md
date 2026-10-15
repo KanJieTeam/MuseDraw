@@ -1,6 +1,6 @@
 # Using MuseDraw
 
-[简体中文](usage.zh-CN.md) · [Back to README](../README.en.md) · [Gallery](../gallery/README.md)
+[简体中文](usage.zh-CN.md) · [Back to README](../README.en.md) · [Live gallery](https://kanjieteam.github.io/MuseDraw/)
 
 MuseDraw is a professional drawing Skill for AI agents working on research, office, teaching and engineering diagrams. The main workflow uses the scene engine: the agent interprets a short request, chooses composition and style, creates a scene, renders it and inspects the image before delivering PNG and native editable draw.io.
 
@@ -30,7 +30,7 @@ For a repository-URL request, the agent should reuse an installed Skill or obtai
 
 ## Choose the diagram and style
 
-The [gallery](../gallery/README.md) contains 100 current scene-engine cases. Each directory has a short `prompt.md`, complete `scene.json`, SVG and preview. Use the cases to learn composition, not to limit new subjects or supply facts about your project. Gallery states distinguish flagship cases, reviewed cases and previews awaiting design review; they do not imply equal human acceptance of every case.
+The [live gallery](https://kanjieteam.github.io/MuseDraw/) contains 100 current scene-engine cases. Filter by style, open a full-size preview, copy a prompt or download drawio. Switch between Chinese and English: the previewed prompt, copied request and reproduction instructions follow your choice. Each directory retains the original prompt, full scene, SVG and preview; [prompts.json](../gallery/prompts.json) contains the bilingual briefs. Use the cases to learn composition, not to limit new subjects or supply facts about your project. Gallery states distinguish flagship cases, reviewed cases and previews awaiting design review; they do not imply equal human acceptance of every case.
 
 The [style atlas](../skills/musedraw/references/style-atlas.md) explains the fonts, lines, textures and annotations of 20 styles. Ask by Chinese name, English name or ID, such as 科研期刊, 商务墨蓝, 黑板教学 or `blueprint`. The agent chooses based on the purpose when no style is specified.
 

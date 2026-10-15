@@ -23,6 +23,22 @@ class GalleryTests(unittest.TestCase):
         cls.catalog = json.loads((ROOT / "gallery/catalog.json").read_text(encoding="utf-8"))
         cls.items = cls.catalog["items"]
 
+    def test_gallery_is_a_linked_website_with_all_current_style_choices(self):
+        url = "https://kanjieteam.github.io/MuseDraw/"
+        for filename in ("README.md", "README.zh-CN.md", "README.en.md"):
+            text = (ROOT / filename).read_text(encoding="utf-8")
+            self.assertIn(f'href="{url}"', text)
+            self.assertIn(f']({url})', text)
+            self.assertNotIn('href="gallery/README.md"', text)
+        styles = json.loads((ROOT / "assets/gallery/styles.json").read_text(encoding="utf-8"))
+        self.assertEqual(set(styles), {item["theme"] for item in self.items})
+        for key, style in styles.items():
+            theme = json.loads((ROOT / "skills/musedraw/themes" / f"{key}.json").read_text(encoding="utf-8"))
+            self.assertEqual(style["name"], theme["nameZh"])
+            self.assertTrue(style["swatches"])
+            for color in style["swatches"]:
+                self.assertRegex(color, r"^#[0-9a-fA-F]{3,8}$")
+
     def test_current_catalog_and_original_artwork(self):
         self.assertEqual(len(self.items), 100)
         self.assertEqual(len({item["slug"] for item in self.items}), 100)
@@ -129,7 +145,7 @@ class GalleryTests(unittest.TestCase):
             historical.mkdir(parents=True)
             (historical / "old.svg").touch()
             site = build_site(root)
-            expected = set(PAGE_FILES) | {".nojekyll", "gallery/catalog.json", "docs/gallery/index.html"}
+            expected = set(PAGE_FILES) | {".nojekyll", "gallery/catalog.json", "gallery/prompts.json", "docs/gallery/index.html"}
             expected |= {f'{item["path"]}/{filename}' for item in self.items for filename in CASE_FILES}
             expected |= {file.relative_to(root).as_posix() for file in (root / "assets/brand").rglob("*") if file.is_file()}
             self.assertEqual({file.relative_to(site).as_posix() for file in site.rglob("*") if file.is_file()}, expected)

@@ -6,7 +6,7 @@ import re
 import shutil
 import tempfile
 
-PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs")
+PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json")
 CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json", "diagram.drawio")
 
 
@@ -31,6 +31,7 @@ def build_site(root, output_name="site"):
             shutil.copyfile(root / "assets/gallery" / filename, staging / filename)
         (staging / "gallery").mkdir()
         shutil.copyfile(root / "gallery/catalog.json", staging / "gallery/catalog.json")
+        shutil.copyfile(root / "gallery/prompts.json", staging / "gallery/prompts.json")
         for item in items:
             slug = item["slug"]
             if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or item["path"] != f"gallery/{slug}":

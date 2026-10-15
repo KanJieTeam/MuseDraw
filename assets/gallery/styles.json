@@ -1,0 +1,182 @@
+{
+  "editorial": {
+    "name": "纸墨编辑",
+    "swatches": [
+      "#F3EEE4",
+      "#171614",
+      "#C93C14",
+      "#FBF8F1"
+    ]
+  },
+  "blueprint": {
+    "name": "工程蓝图",
+    "swatches": [
+      "#123D6B",
+      "#EEF4FB",
+      "#FFCB5C",
+      "#17497F"
+    ]
+  },
+  "terminal": {
+    "name": "终端暗色",
+    "swatches": [
+      "#0D1117",
+      "#E6EDF3",
+      "#3FB950",
+      "#161B22"
+    ]
+  },
+  "swiss": {
+    "name": "瑞士海报",
+    "swatches": [
+      "#F2F1EC",
+      "#0B0B0B",
+      "#E3001B",
+      "#FFFFFF"
+    ]
+  },
+  "whiteboard": {
+    "name": "白板手绘",
+    "swatches": [
+      "#FBFBF8",
+      "#1E1E1E",
+      "#E03131",
+      "#5C5F66"
+    ]
+  },
+  "riso": {
+    "name": "孔版套印",
+    "swatches": [
+      "#F3ECDD",
+      "#2648B8",
+      "#FF4F93",
+      "#5B6FB8"
+    ]
+  },
+  "observatory": {
+    "name": "观测夜空",
+    "swatches": [
+      "#0E131A",
+      "#DCE4EE",
+      "#4FD1C5",
+      "#151C26"
+    ]
+  },
+  "aurora": {
+    "name": "极光玻璃",
+    "swatches": [
+      "#090A18",
+      "#F3F2FF",
+      "#A78BFA",
+      "#A3A6C9"
+    ]
+  },
+  "bauhaus": {
+    "name": "包豪斯",
+    "swatches": [
+      "#F0E8D8",
+      "#151515",
+      "#D7263D",
+      "#4A463F"
+    ]
+  },
+  "newsprint": {
+    "name": "报刊黑白",
+    "swatches": [
+      "#F2EFE7",
+      "#121212",
+      "#555249",
+      "#FAF8F3"
+    ]
+  },
+  "journal": {
+    "name": "科研期刊",
+    "swatches": [
+      "#FFFFFF",
+      "#1B1B1B",
+      "#2F6DB5",
+      "#5F6368"
+    ]
+  },
+  "ink-wash": {
+    "name": "水墨宣纸",
+    "swatches": [
+      "#F3EEE2",
+      "#1E1C19",
+      "#B3342A",
+      "#FAF7EF"
+    ]
+  },
+  "product": {
+    "name": "产品发布",
+    "swatches": [
+      "#F6F7F9",
+      "#101828",
+      "#4F46E5",
+      "#FFFFFF"
+    ]
+  },
+  "c4": {
+    "name": "C4 标准",
+    "swatches": [
+      "#FFFFFF",
+      "#1A1A1A",
+      "#1168BD",
+      "#666666"
+    ]
+  },
+  "neon": {
+    "name": "霓虹街机",
+    "swatches": [
+      "#07060D",
+      "#F2F0FF",
+      "#FF2BD6",
+      "#0E0B19"
+    ]
+  },
+  "pastel": {
+    "name": "柔和笔记",
+    "swatches": [
+      "#FFFFFF",
+      "#37352F",
+      "#D9730D",
+      "#787774"
+    ]
+  },
+  "enterprise": {
+    "name": "商务墨蓝",
+    "swatches": [
+      "#FFFFFF",
+      "#0E1B2E",
+      "#E8A33D",
+      "#5B6B80"
+    ]
+  },
+  "terracotta": {
+    "name": "暖陶",
+    "swatches": [
+      "#F3E8DA",
+      "#3A2A20",
+      "#C0583A",
+      "#FBF5EC"
+    ]
+  },
+  "metro": {
+    "name": "地铁线路",
+    "swatches": [
+      "#F7F6F2",
+      "#1D1D1F",
+      "#E4002B",
+      "#6E6E73"
+    ]
+  },
+  "chalkboard": {
+    "name": "黑板教学",
+    "swatches": [
+      "#22382E",
+      "#F3F1E7",
+      "#F6DD72",
+      "#B9C4B5"
+    ]
+  }
+}
