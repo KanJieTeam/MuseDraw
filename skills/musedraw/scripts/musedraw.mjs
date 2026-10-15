@@ -158,6 +158,7 @@ async function main() {
         }
         // Reject invalid scenes before launching a browser or writing artifacts.
         const drawing = structuredClone(scene);
+        drawing.header ??= false;
         drawing.footer ??= false;
         let svg = render(drawing, theme);
         if (fontMode === 'system') svg = withSystemFonts(svg);

@@ -134,14 +134,30 @@ test('quickstart works from a directory without the gallery or installed depende
   assert.ok(fs.readFileSync(path.join(out, 'diagram.svg'), 'utf8').includes(scene.title));
 }));
 
-test('CLI omits unsolicited theme footer while preserving explicit attribution', () => scratch((dir) => {
+for(const theme of ['editorial','terminal','blueprint'])test(`CLI keeps ${theme} metadata out of the visible diagram unless the header is enabled`,()=>scratch(dir=>{
+  const file=path.join(dir,'scene.json');
+  const scene={theme,size:[1600,1000],title:'Title metadata',subtitle:'Subtitle metadata',kicker:'Kicker metadata',figure:'Fig. 99',nodes:[{id:'a',label:'Actual content',x:64,y:400}]};
+  fs.writeFileSync(file,JSON.stringify(scene));
+  let result=invoke(dir,'render',file,'--svg-only');assert.equal(result.status,0,result.stderr);
+  let svg=fs.readFileSync(path.join(dir,'diagram.svg'),'utf8');
+  assert.match(svg,/<g id="header"><\/g>/);assert.match(svg,/<g id="footer"><\/g>/);
+  assert.match(svg,/<title id="md-title">Title metadata<\/title>/);
+  assert.ok(svg.toLowerCase().includes('actual')&&svg.toLowerCase().includes('content'));
+  assert.match(svg,/data-box="64,60,/);
+  scene.header=true;fs.writeFileSync(file,JSON.stringify(scene));
+  result=invoke(dir,'render',file,'--svg-only');assert.equal(result.status,0,result.stderr);
+  svg=fs.readFileSync(path.join(dir,'diagram.svg'),'utf8');
+  assert.doesNotMatch(svg,/<g id="header"><\/g>/);
+}));
+
+test('CLI omits unsolicited page furniture while preserving explicit opt-ins', () => scratch((dir) => {
   const file = path.join(dir, 'scene.json');
   const scene = { theme: 'editorial', title: '用户的图' };
   fs.writeFileSync(file, JSON.stringify(scene));
   let result = invoke(dir, 'render', file, '--svg-only');
   assert.equal(result.status, 0, result.stderr);
   assert.doesNotMatch(fs.readFileSync(path.join(dir, 'diagram.svg'), 'utf8'), />MuseDraw/);
-  scene.footer = '用户要求的署名'; scene.figure = '图 2';
+  scene.header = true; scene.footer = '用户要求的署名'; scene.figure = '图 2';
   fs.writeFileSync(file, JSON.stringify(scene));
   result = invoke(dir, 'render', file, '--svg-only');
   assert.equal(result.status, 0, result.stderr);

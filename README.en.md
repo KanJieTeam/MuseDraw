@@ -45,7 +45,7 @@ Use MuseDraw in the Journal Figure style to draw a CONSORT flow for a two-arm tr
 412 assessed, 172 excluded, 240 randomised 1:1, follow-up losses 7 and 9, analysed 110 and 109.
 ```
 
-The agent picks a layout, writes `scene.json`, renders, inspects and fixes, then delivers `diagram@2x.png` and native editable `diagram.drawio` by default. Keep `scene.json`, `diagram.svg` and `checks.json` as supporting source, vector and verification files.
+The agent picks a layout, writes `scene.json`, renders, checks the report and fixes warnings, then delivers `diagram@2x.png` and native editable `diagram.drawio` by default. Keep `scene.json`, `diagram.svg` and `checks.json` as supporting source, vector and verification files.
 
 PNG preserves paper textures, blur and glow. The draw.io file provides editable shapes, text and connected edges; it does not promise identical rendering of every PNG effect.
 
@@ -76,7 +76,7 @@ Choose a style and a diagram, switch between Chinese and English prompts, then c
 - **One figure, one claim.** Clarify the relationship before drawing.
 - **Specific beats generic.** Examples use real names and numbers that reconcile — never “Service A”.
 - **One focal point, a numbered path, a note on why.**
-- **Look before you ship.** `checks.json` measures real glyphs for overflow and collisions; the [anti-AI checklist](skills/musedraw/references/anti-ai-checklist.md) covers taste.
+- **Check before you ship.** `checks.json` measures real glyphs for overflow and collisions. Ordinary delivery needs no mandatory image reading, CDN upload or vision-model call; [design review](skills/musedraw/references/anti-ai-checklist.md) is optional.
 
 ## Contributing
 

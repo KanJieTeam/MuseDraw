@@ -45,7 +45,7 @@ npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts -
 科学问题是肝星状细胞代谢重编程如何驱动肝纤维化，三条研究内容是临床队列、细胞机制、动物验证，最后整合出机制与靶点。
 ```
 
-智能体会选择版式、写出 `scene.json`、渲染、看图、修正，默认交付 `diagram@2x.png` 与原生可编辑的 `diagram.drawio`。`scene.json`、`diagram.svg` 与 `checks.json` 作为编辑来源、矢量辅助与检查记录保留。
+智能体会选择版式、写出 `scene.json`、渲染、自动检查并修正警告，默认交付 `diagram@2x.png` 与原生可编辑的 `diagram.drawio`。`scene.json`、`diagram.svg` 与 `checks.json` 作为编辑来源、矢量辅助与检查记录保留。
 
 PNG 保留纸张纹理、模糊与发光等视觉效果；draw.io 提供可编辑图形、文字与关联边，不承诺所有效果与 PNG 完全一致。
 
@@ -82,7 +82,7 @@ npm run gallery        # 重新渲染全部案例
 - **一张图只证明一件事。** 先明确要表达的关系，再画图。
 - **具体胜过“通用”。** 示例也用真实名词和能对上的数字，绝不出现“服务A / 模块甲”。
 - **一个焦点，编号路径，旁注解释为什么。**
-- **看图再交付。** `checks.json` 用真实字形检查溢出、碰撞和标签压框；[去 AI 味检查表](skills/musedraw/references/anti-ai-checklist.md) 负责审美。
+- **自动检查后交付。** `checks.json` 用真实字形检查溢出、碰撞和标签压框；普通出图不强制读图、上传 CDN 或调用视觉模型。[设计审阅](skills/musedraw/references/anti-ai-checklist.md) 按需进行。
 
 ## 参与共建
 
