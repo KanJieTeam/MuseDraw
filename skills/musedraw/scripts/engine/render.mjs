@@ -10,6 +10,7 @@ import { esc, measure, wrap, applyCase, textBlock, rd } from './text.mjs';
 import { autoSides, port, orthoPoints, roundedPath, curvePath, bezierPoint, along, longestSegmentMid, shorten, f } from './route.mjs';
 import { prepareScene } from './validate.mjs';
 import { assertStaticSvg } from './safety.mjs';
+import { renderVectorScene } from './vector.mjs';
 
 const gen = rough.generator();
 
@@ -17,6 +18,7 @@ function hash(s) { let h = 2166136261; for (const c of String(s)) { h ^= c.charC
 const deepMerge = (a, b) => { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === 'object' && !Array.isArray(v) && a?.[k] && typeof a[k] === 'object' ? deepMerge(a[k], v) : v; return o; };
 
 export function render(scene, theme) {
+  if (scene?.type === 'vector') return renderVectorScene(scene, theme);
   // Scene-local art direction preserves an approved composition without adding
   // another named theme or mutating the shared theme used by later drawings.
   theme = deepMerge(theme, scene?.style ?? {});

@@ -1,0 +1,27 @@
+{
+  "size": [
+    1425,
+    587
+  ],
+  "nodes": 12,
+  "texts": 19,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "drawio": {
+    "native": true,
+    "nodes": 12,
+    "edges": 0,
+    "texts": 36,
+    "visualEffects": [
+      "paper-texture"
+    ],
+    "durationMs": 27
+  },
+  "theme": "product",
+  "editability": {
+    "text": true,
+    "vectorShapes": true,
+    "attachedConnectors": false
+  }
+}

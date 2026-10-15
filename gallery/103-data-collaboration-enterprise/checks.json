@@ -1,0 +1,25 @@
+{
+  "size": [
+    1189,
+    700
+  ],
+  "nodes": 20,
+  "texts": 20,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "drawio": {
+    "native": true,
+    "nodes": 20,
+    "edges": 0,
+    "texts": 48,
+    "visualEffects": [],
+    "durationMs": 33
+  },
+  "theme": "enterprise",
+  "editability": {
+    "text": true,
+    "vectorShapes": true,
+    "attachedConnectors": false
+  }
+}

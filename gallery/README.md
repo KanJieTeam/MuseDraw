@@ -2,9 +2,9 @@
 
 **[打开在线图库 ↗](https://kanjieteam.github.io/MuseDraw/)** · 按风格筛选、看大图、复制需求、下载可编辑 drawio。下面为源文件索引。
 
-101 个案例全部出图：**20 精选** · **28 已审图** · **53 预览**。机器可读清单：[catalog.json](catalog.json)。
+105 个案例全部出图：**20 精选** · **32 已审图** · **53 预览**。机器可读清单：[catalog.json](catalog.json)。
 
-All 101 cases are rendered. Each folder includes native editable `diagram.drawio`, `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
+All 105 cases are rendered. Each folder includes native editable `diagram.drawio`, `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
 
 ## 精选 · 科研
 
@@ -139,3 +139,10 @@ All 101 cases are rendered. Each folder includes native editable `diagram.drawio
 | 98 | [科室知识库目录结构](98-knowledge-base-ink-wash/prompt.md) | 办公 | `ink-wash` | 已审图 |
 | 99 | [家园沟通四个频率](99-home-school-chalkboard/prompt.md) | 教学 | `chalkboard` | 已审图 |
 | 101 | [采购审批跨部门泳道图：纵向审批](101-procurement-vertical-enterprise/prompt.md) | 办公 | `enterprise` | 已审图 |
+
+## 新增架构图
+
+- [企业知识与内容平台](102-knowledge-platform-enterprise/prompt.md) · `enterprise`
+- [企业数据协作与分析平台](103-data-collaboration-enterprise/prompt.md) · `enterprise`
+- [企业采购系统架构](104-procurement-services-enterprise/prompt.md) · `enterprise`
+- [企业研究与知识工作台](105-research-workspace-product/prompt.md) · `product`

@@ -22,3 +22,15 @@ for(const altered of [
  {...base,nodes:[{...base.nodes[0],shape:'" onload="probe()'}]}
 ]){let svg;try{svg=render(altered,theme);}catch{continue;}assert.doesNotMatch(svg, /\sonload="/);}
 console.log('PASS scene theme boundaries, quoted labels, generated static SVG rejection and reported injection cases');
+const vector={type:'vector',theme:'c4',size:[600,400],nativeSvg:'<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" data-theme="c4"><rect width="600" height="400" fill="white"/><text x="20" y="40">Native text</text></svg>'};
+assert.equal(render(vector,theme),vector.nativeSvg);
+for(const patch of [
+ {nativeSvg:undefined}, {nativeSvg:42}, {size:[601,400]}, {size:[9000,400]},
+ {theme:'enterprise'}, {style:{palette:{ink:'#000'}}}, {nodes:base.nodes},
+ {nativeSvg:vector.nativeSvg.replace('<text','<image href="https://invalid.example/x"/><text')},
+ {nativeSvg:vector.nativeSvg.replace('<text','<script/><text')},
+ {nativeSvg:vector.nativeSvg.replace('data-theme="c4"','data-theme="enterprise"')},
+ {nativeSvg:vector.nativeSvg.replace('0 0 600 400','1 0 600 400')},
+ {nativeSvg:vector.nativeSvg.replace('</svg>','<svg/></svg>')}
+])assert.throws(()=>render({...vector,...patch},theme));
+console.log('PASS exact vector replay, native text, canvas limits, theme boundaries and unsafe artwork rejection');
