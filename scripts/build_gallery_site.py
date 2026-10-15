@@ -2,14 +2,57 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
 import tempfile
 import time
+import zipfile
 
 PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json")
 CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json", "diagram.drawio")
+DOWNLOAD_FILES = ("downloads/musedraw-skill.zip", "downloads/musedraw-skill.json")
+
+
+def build_skill_download(root, staging):
+    """Ship the self-contained Skill, without gallery history or local runtime."""
+    source = root / "skills/musedraw"
+    if source.is_symlink() or not source.is_dir():
+        raise ValueError("Expected a local MuseDraw Skill directory")
+    files = {name: source / name for name in ("SKILL.md", "package.json", "package-lock.json")}
+    for folder in ("scripts", "references", "themes", "assets"):
+        if (source / folder).is_symlink():
+            raise ValueError("Refusing a linked Skill resource directory")
+        for directory, names, filenames in os.walk(source / folder, followlinks=False):
+            names[:] = sorted(name for name in names if name not in {"node_modules", "output", "__pycache__", ".git"})
+            for name in names + filenames:
+                if (Path(directory) / name).is_symlink():
+                    raise ValueError("Refusing a linked Skill resource")
+            for name in filenames:
+                file = Path(directory) / name
+                if file.suffix in {".md", ".json", ".mjs", ".js", ".py"} or name.endswith("LICENSE"):
+                    files[file.relative_to(source).as_posix()] = file
+    files["LICENSE"] = root / "LICENSE"
+    if (root / "NOTICE").is_file():
+        files["NOTICE"] = root / "NOTICE"
+    destination = staging / "downloads"
+    destination.mkdir()
+    archive = destination / "musedraw-skill.zip"
+    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
+        for name, file in sorted(files.items()):
+            if file.is_symlink() or not file.resolve().is_relative_to(root):
+                raise ValueError("Refusing a linked Skill file")
+            info = zipfile.ZipInfo("musedraw/" + name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            bundle.writestr(info, file.read_bytes())
+    data = archive.read_bytes()
+    manifest = {"archive": "musedraw-skill.zip", "bytes": len(data),
+                "sha256": hashlib.sha256(data).hexdigest(), "files": len(files),
+                "skillVersion": json.loads(files["package.json"].read_text(encoding="utf-8"))["version"],
+                "sourceCommit": os.environ.get("MUSEDRAW_SOURCE_COMMIT")}
+    (destination / "musedraw-skill.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def build_site(root, output_name="site"):
@@ -53,6 +96,7 @@ def build_site(root, output_name="site"):
             for filename in CASE_FILES:
                 shutil.copyfile(source / filename, target / filename)
         shutil.copytree(root / "assets/brand", staging / "assets/brand")
+        build_skill_download(root, staging)
         legacy = staging / "docs/gallery"
         legacy.mkdir(parents=True)
         (legacy / "index.html").write_text(

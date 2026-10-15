@@ -11,6 +11,29 @@ reader must understand, choose a diagram type and a style, write a
 The engine owns typography, colour, line, texture, ports and arrowheads; you own
 content, composition and emphasis.
 
+## Start here · required execution route
+
+Create or edit `scene.json`, run `scripts/musedraw.mjs`, inspect the small
+`preview.jpg` and `checks.json`, then deliver. For the shared-index RAG workflow,
+run `quickstart rag`; for other diagrams, run `render scene.json`. The commands
+below are the implementation instructions; keep them out of user-facing prompts.
+When the user says “PNG only” / “只需 PNG”, select `--no-drawio` internally.
+Both formats come from this engine. Do not handwrite draw.io XML, research its
+format, install another drawio exporter or use app.diagrams.net to render PNG.
+
+Choose one route after reading this file:
+
+- **Bundled RAG starter:** run
+  `node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --strict`
+  immediately. Use `--lang en` for English; append `--no-drawio` for PNG only.
+  Do not first read the scene schema, style atlas, theme JSON or exporter source.
+  The later custom-composition instructions do not apply to this route. Diagnose
+  a runtime failure once, fix that dependency, and retry the same command.
+- **Existing scene or exact replay:** render that scene directly, then inspect
+  the output. Read source/reference files only to resolve a concrete problem.
+- **New custom composition:** use sections 1–3 and only the relevant reference
+  fields before rendering. Do not read every theme or the exporter implementation.
+
 ## Default delivery · every drawing, every style
 
 These rules apply automatically to new drawings, replays and revisions. Users
@@ -28,13 +51,33 @@ rules or append them to copied gallery prompts.
 3. Deliver links to both primary files after inspection. Keep scene JSON, SVG
    and checks as supporting files. If rendering or inspection cannot finish,
    report the incomplete step; do not claim a finished or visually checked result.
-   Honor an explicit request for a different output format, such as SVG only.
+   Honor an explicit request for a different output format, such as PNG only
+   (`--no-drawio`) or SVG only (`--svg-only`). PNG-only still gets visual review.
+
+The pipeline is `scene.json` → SVG → PNG, with native draw.io as a parallel
+export from the same browser page. No draw.io application is required.
 
 ## Fast path · get the first image on screen
 
+If the engine files are not installed, use the
+[lightweight Skill ZIP](https://kanjieteam.github.io/MuseDraw/downloads/musedraw-skill.zip)
+and its [build/SHA-256 manifest](https://kanjieteam.github.io/MuseDraw/downloads/musedraw-skill.json).
+Extract into a dedicated Skill directory and check the archive hash. It includes
+all 20 themes, the engine, references and starters; it excludes the gallery, Git
+history, fonts and runtime. Prepare the minimal runtime only if missing.
+Do not repeatedly clone the full repository for a drawing. After one bounded
+Git failure, stop that attempt and use the lightweight download; do not leave
+parallel clone retries running, delete unrelated directories or kill all Git
+processes. If both download routes fail, report that stage instead of retrying
+indefinitely. Read this downloaded copy's complete Skill before executing it.
+
 Read this Skill once. Use an already installed current copy; do not clone or
 reinstall for every drawing. If the user requests the latest version, check
-once and reuse that checkout during the session.
+once against upstream `main` and reuse that checkout during the session. A clone
+made today is not proof of freshness. If an installed Skill has only two styles
+or lacks `quickstart`, update that copy; do not mix its legacy instructions with
+the current scene workflow. If the network prevents verification, state that
+the local version is unverified instead of calling it the latest.
 
 For the end-to-end RAG brief (documents and questions sharing a vector index),
 start with the bundled Chinese/English starter. It ships inside the Skill, so
@@ -43,6 +86,13 @@ you do not need to browse the gallery, read theme source or rewrite coordinates:
 ```sh
 node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --strict
 ```
+
+For a PNG-only request, append `--no-drawio`. For other scenes use
+`render scene.json --font-mode system --preview-first --cache --no-drawio`.
+This skips native object collection and serialization; it does not remove the
+browser or font/layout checks. Default rendering still produces both files.
+Keep any existing draw.io file untouched in PNG-only mode and do not present it
+as an updated deliverable. Switching back to the default mode exports it again.
 
 The starter is a generic RAG workflow. For different facts, names, numbers or
 relationships, edit its `scene.json` before delivering; it is not an interpreter
@@ -139,7 +189,9 @@ Names in either language, or the id, all work (`--theme 科研期刊`). Read
 
 ## 3 · Write the scene
 
-Read [scene schema](references/scene-schema.md) once per session. In short:
+For a new custom composition, read the relevant fields in the
+[scene schema](references/scene-schema.md). Bundled starters and unchanged-scene
+replays do not need this reference. In short:
 
 - `theme`, `size` (≈1600–1760 × 900–1100), `header: false`, `footer: false`.
   Titles and subtitles are optional; `header: true` enables a requested heading.
@@ -178,7 +230,16 @@ Then **open the PNG** and read `checks.json`. Fix every `text-overflow`,
 `text-collision`, `edge-label-on-node`, `node-overlap`, `outside-canvas`.
 Checks catch geometry, not taste: also run the
 [anti-AI checklist](references/anti-ai-checklist.md) on what you see.
-Two passes are normal. Deliver the PNG and native editable draw.io by default,
+One successful render and one visual pass are sufficient when no problem is
+found. Rerender only after a change, failed check or unresolved visual issue;
+do not repeat renders just to demonstrate reproducibility, transcribe all text
+through OCR or call multiple vision services for an already accepted image.
+Use `checks.drawio.native` and connected-edge checks as the export evidence;
+do not research or audit the exporter source on each drawing. For a slow task,
+compare `run.json` phase times with total task time and report them separately.
+The CLI timer excludes agent reasoning, reference reads, installation and host
+tool latency; do not attribute those minutes to draw.io serialization.
+Deliver the PNG and native editable draw.io by default,
 plus one line on what was assumed. Keep scene JSON, SVG and checks as supporting
 files. Paper textures, blur and glow are PNG visual effects; draw.io preserves
 editable shapes, text and connected edges, without promising identical rendering

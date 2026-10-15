@@ -79,6 +79,20 @@ test('renderer code changes invalidate cached results', () => scratch((dir) => {
   assert.notEqual(rendererStamp(dir), first);
 }));
 
+test('PNG-only cache needs no drawio and cannot satisfy a dual-format request', () => scratch((dir) => {
+  for(const name of ['diagram.svg','diagram@2x.png','preview.jpg'])fs.writeFileSync(path.join(dir,name),name);
+  const checks={passed:true,missingFonts:[],warnings:[],drawio:{skipped:true,reason:'requested'}};
+  fs.writeFileSync(path.join(dir,'checks.json'),JSON.stringify(checks));
+  writeRenderCache(dir,'same-key',checks,{drawio:false});
+  assert.deepEqual(readRenderCache(dir,'same-key',{drawio:false}),checks);
+  assert.equal(readRenderCache(dir,'same-key'),null);
+  fs.writeFileSync(path.join(dir,'diagram.drawio'),'edited by user');
+  assert.deepEqual(readRenderCache(dir,'same-key',{drawio:false}),checks);
+  assert.equal(fs.readFileSync(path.join(dir,'diagram.drawio'),'utf8'),'edited by user');
+  fs.appendFileSync(path.join(dir,'preview.jpg'),'changed');
+  assert.equal(readRenderCache(dir,'same-key',{drawio:false}),null);
+}));
+
 for (const lang of ['zh', 'en']) test(`${lang} starter has valid structure and no inherited example metrics`, async () => {
   const scene = JSON.parse(fs.readFileSync(path.join(root, `skills/musedraw/assets/starters/rag.${lang}.json`)));
   assert.equal(scene.bars, undefined);

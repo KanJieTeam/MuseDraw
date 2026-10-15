@@ -90,6 +90,18 @@ try{
  await check('exact-replay-copies-latest-repository-and-raw-scene',async()=>{
   const item=items[0];await page.locator(`#gallery [data-replay="${item.slug}"]`).click();const text=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(text.includes('仓库最新版'));assert.ok(text.includes(`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`));assert.ok(text.includes('直接渲染'));assert.ok(text.includes('不要要求我提供坐标'));noDeliveryBoilerplate(text);assert.ok(text.split('\n').length<=6);
  });
+ await check('PNG-only-copy-expresses-format-without-execution-details',async()=>{
+  const item=items[0],expected=(await copiedBrief(item,prompts.get(item.slug)))+'\n只需 PNG。';
+  await page.locator(`#gallery [data-fast="${item.slug}"]`).click();
+  await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);
+  assert.doesNotMatch(expected,/--no-drawio|--font-mode|npm |musedraw\.mjs/);
+  await page.locator(`#gallery [data-preview="${item.slug}"]`).click();
+  await page.locator('#preview-details [data-prompt-language="en"]').click();
+  await page.locator('#preview-details [data-fast]').click();
+  await page.waitForFunction(async text=>(await navigator.clipboard.readText()).endsWith(text),'\nPNG only.');
+  await page.locator('#preview-details [data-prompt-language="zh"]').click();
+  await page.locator('#close-preview').click();
+ });
  await check('svg-preview-zoom-fit-close-and-mobile-layout',async()=>{
   for(const width of [1440,390]){
    await page.setViewportSize({width,height:width===390?844:1000});await selectFilter('collection','flagship');await page.evaluate(()=>window.scrollTo(0,0));await noOverflow();await screenshot(width===390?'mobile.png':'desktop-flagship.png');
@@ -135,6 +147,13 @@ try{
   await page.locator('.collection-caption [data-prompt-language="en"]').click();await inspectLink('#request-style',['What would you like to draw','All examples']);await page.locator('.collection-caption [data-prompt-language="zh"]').click();
  });
  await check('static-gallery-has-no-external-network-or-runtime-errors',async()=>{assert.deepEqual(external,[]);assert.deepEqual(errors,[]);assert.equal(await page.locator('iframe').count(),0);});
+ await check('lightweight-skill-download-has-matching-manifest',async()=>{
+  const manifest=JSON.parse((await fetchBytes(new URL('downloads/musedraw-skill.json',url))).toString('utf8'));
+  const bytes=await fetchBytes(new URL('downloads/musedraw-skill.zip',url));
+  assert.equal(bytes.length,manifest.bytes);assert.equal(hash(bytes),manifest.sha256);
+  assert.ok(bytes.length<1024*1024);assert.equal(bytes.readUInt32LE(0),0x04034b50);
+  assert.equal(await page.locator('#download-skill').getAttribute('href'),'downloads/musedraw-skill.zip');
+ });
  report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 100 cases, 20 themes, 6 byte-exact downloads.`);
 }catch(error){report.status='failed';report.error=error.message;if(page&&!page.isClosed())await screenshot('failure.png').catch(()=>{});console.error(error.stack);process.exitCode=1;}
 finally{await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');await browser?.close();if(server)await new Promise(resolve=>server.close(resolve));const real=await fs.realpath(scratch).catch(()=>null),temp=await fs.realpath(os.tmpdir()),relative=real&&path.relative(temp,real);assert.ok(real===scratchReal&&relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&path.basename(scratch).startsWith('musedraw-gallery-qa-'),'Refusing an unverified scratch cleanup');await fs.rm(scratch,{recursive:true,force:true});}

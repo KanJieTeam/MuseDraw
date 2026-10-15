@@ -1,5 +1,18 @@
 # MuseDraw repository conventions
 
+## Drawing requests
+
+Read the complete [MuseDraw Skill](skills/musedraw/SKILL.md) before drawing.
+Use its bundled `skills/musedraw/scripts/musedraw.mjs` scene engine: `quickstart
+rag` for the shared-index RAG starter, or `render scene.json` for other diagrams.
+The engine produces PNG and native editable draw.io directly; do not handwrite
+draw.io XML or install third-party drawio exporters to make the PNG. A PNG-only
+request selects `--no-drawio`. Keep execution details in the Skill, not in copied
+user prompts. Inspect `preview.jpg` and checks before delivery; rerender only
+after changes or unresolved issues. Follow the Skill's runtime reuse instructions.
+
+## Contributions
+
 - Keep the project positioning broad: a professional drawing assistant for research,
   office work, teaching and engineering. Only publish capabilities with a usable workflow.
 - New gallery cases: a folder with `scene.json` and `prompt.md`; render with

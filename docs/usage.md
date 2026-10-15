@@ -24,6 +24,12 @@ of PNG plus native editable draw.io are default Skill rules; users do not need
 to repeat them, and gallery prompts omit this boilerplate. An explicit request
 for another output format takes precedence.
 
+For PNG only, say “PNG only” or use the gallery's **快速 PNG** copy button.
+The Skill selects `--no-drawio` internally; execution parameters stay out of the
+copied request. This skips native export while retaining PNG and layout checks.
+Default rendering still exports both formats. See the Skill's required execution
+route: PNG comes directly from the scene engine and needs no draw.io application.
+
 ```text
 Use MuseDraw's 科研期刊 style for a research roadmap.
 The question is how metabolic reprogramming in hepatic stellate cells drives fibrosis.
