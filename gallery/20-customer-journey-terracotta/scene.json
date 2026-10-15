@@ -1,0 +1,567 @@
+{
+ "theme": "terracotta",
+ "size": [
+  1680,
+  1040
+ ],
+ "kicker": "B2B analytics tool · mid-size finance teams",
+ "title": "Customer journey map",
+ "subtitle": "One customer type, six stages. The curve is how they feel; the clay cards are where a small fix removes a big dip.",
+ "subtitleWidth": 1100,
+ "zones": [],
+ "nodes": [
+  {
+   "id": "st0",
+   "label": "Discover",
+   "shape": "chevron",
+   "first": true,
+   "tone": "sand",
+   "x": 230,
+   "y": 232,
+   "w": 246,
+   "h": 48,
+   "align": "center",
+   "size": 16
+  },
+  {
+   "id": "tp0pod",
+   "label": "podcast",
+   "shape": "pill",
+   "tone": "default",
+   "x": 246,
+   "y": 398,
+   "w": 79,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "tp0ref",
+   "label": "referral",
+   "shape": "pill",
+   "tone": "default",
+   "x": 333.2,
+   "y": 398,
+   "w": 87,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "st1",
+   "label": "Consider",
+   "shape": "chevron",
+   "first": false,
+   "tone": "sand",
+   "x": 462,
+   "y": 232,
+   "w": 246,
+   "h": 48,
+   "align": "center",
+   "size": 16
+  },
+  {
+   "id": "tp1pri",
+   "label": "pricing page",
+   "shape": "pill",
+   "tone": "default",
+   "x": 478,
+   "y": 398,
+   "w": 117,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "tp1G2",
+   "label": "G2",
+   "shape": "pill",
+   "tone": "default",
+   "x": 603.2,
+   "y": 398,
+   "w": 41,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "op1",
+   "label": "Plan picker by team size",
+   "tone": "clay",
+   "x": 472,
+   "y": 742,
+   "w": 212,
+   "h": 84
+  },
+  {
+   "id": "st2",
+   "label": "Buy",
+   "shape": "chevron",
+   "first": false,
+   "tone": "clay",
+   "x": 694,
+   "y": 232,
+   "w": 246,
+   "h": 48,
+   "align": "center",
+   "size": 16
+  },
+  {
+   "id": "tp2che",
+   "label": "checkout",
+   "shape": "pill",
+   "tone": "default",
+   "x": 710,
+   "y": 398,
+   "w": 87,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "tp2sec",
+   "label": "security",
+   "shape": "pill",
+   "tone": "default",
+   "x": 804.8,
+   "y": 398,
+   "w": 86,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "op2",
+   "label": "Pre-filled security pack",
+   "tone": "clay",
+   "x": 704,
+   "y": 742,
+   "w": 212,
+   "h": 84
+  },
+  {
+   "id": "st3",
+   "label": "Onboard",
+   "shape": "chevron",
+   "first": false,
+   "tone": "clay",
+   "x": 926,
+   "y": 232,
+   "w": 246,
+   "h": 48,
+   "align": "center",
+   "size": 16
+  },
+  {
+   "id": "tp3set",
+   "label": "setup wizard",
+   "shape": "pill",
+   "tone": "default",
+   "x": 942,
+   "y": 398,
+   "w": 117,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "tp3ema",
+   "label": "email",
+   "shape": "pill",
+   "tone": "default",
+   "x": 1067.2,
+   "y": 398,
+   "w": 64,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "op3",
+   "label": "Guided import + sample data",
+   "tone": "clay",
+   "x": 936,
+   "y": 742,
+   "w": 212,
+   "h": 84
+  },
+  {
+   "id": "st4",
+   "label": "Use",
+   "shape": "chevron",
+   "first": false,
+   "tone": "sand",
+   "x": 1158,
+   "y": 232,
+   "w": 246,
+   "h": 48,
+   "align": "center",
+   "size": 16
+  },
+  {
+   "id": "tp4das",
+   "label": "dashboards",
+   "shape": "pill",
+   "tone": "default",
+   "x": 1174,
+   "y": 398,
+   "w": 102,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "tp4Sla",
+   "label": "Slack app",
+   "shape": "pill",
+   "tone": "default",
+   "x": 1284.0,
+   "y": 398,
+   "w": 94,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "st5",
+   "label": "Renew",
+   "shape": "chevron",
+   "first": false,
+   "tone": "sand",
+   "x": 1390,
+   "y": 232,
+   "w": 232,
+   "h": 48,
+   "align": "center",
+   "size": 16
+  },
+  {
+   "id": "tp5acc",
+   "label": "account manager",
+   "shape": "pill",
+   "tone": "default",
+   "x": 1406,
+   "y": 398,
+   "w": 140,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "tp5inv",
+   "label": "invoice",
+   "shape": "pill",
+   "tone": "default",
+   "x": 1554.0,
+   "y": 398,
+   "w": 79,
+   "h": 30,
+   "align": "center",
+   "size": 12.5,
+   "weight": 500
+  },
+  {
+   "id": "op5",
+   "label": "Usage recap before the quote",
+   "tone": "clay",
+   "x": 1400,
+   "y": 742,
+   "w": 212,
+   "h": 84
+  },
+  {
+   "id": "f0",
+   "shape": "circle",
+   "tone": "olive",
+   "x": 337,
+   "y": 530,
+   "w": 18,
+   "h": 18,
+   "label": ""
+  },
+  {
+   "id": "f1",
+   "shape": "circle",
+   "tone": "olive",
+   "x": 569,
+   "y": 549,
+   "w": 18,
+   "h": 18,
+   "label": ""
+  },
+  {
+   "id": "f2",
+   "shape": "circle",
+   "tone": "clay",
+   "x": 801,
+   "y": 632,
+   "w": 18,
+   "h": 18,
+   "label": ""
+  },
+  {
+   "id": "f3",
+   "shape": "circle",
+   "tone": "clay",
+   "x": 1033,
+   "y": 604,
+   "w": 18,
+   "h": 18,
+   "label": ""
+  },
+  {
+   "id": "f4",
+   "shape": "circle",
+   "tone": "olive",
+   "x": 1265,
+   "y": 512,
+   "w": 18,
+   "h": 18,
+   "label": ""
+  },
+  {
+   "id": "f5",
+   "shape": "circle",
+   "tone": "olive",
+   "x": 1497,
+   "y": 563,
+   "w": 18,
+   "h": 18,
+   "label": ""
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 324,
+   "text": "DOING",
+   "font": "mono",
+   "size": 11.5,
+   "weight": 600,
+   "color": "muted",
+   "letterSpacing": 1.8
+  },
+  {
+   "x": 64,
+   "y": 410,
+   "text": "TOUCHPOINTS",
+   "font": "mono",
+   "size": 11.5,
+   "weight": 600,
+   "color": "muted",
+   "letterSpacing": 1.8
+  },
+  {
+   "x": 64,
+   "y": 490,
+   "text": "FEELING",
+   "font": "mono",
+   "size": 11.5,
+   "weight": 600,
+   "color": "muted",
+   "letterSpacing": 1.8
+  },
+  {
+   "x": 64,
+   "y": 756,
+   "text": "OPPORTUNITY",
+   "font": "mono",
+   "size": 11.5,
+   "weight": 600,
+   "color": "muted",
+   "letterSpacing": 1.8
+  },
+  {
+   "x": 246,
+   "y": 322,
+   "text": "Hears about us from a colleague",
+   "size": 13.5,
+   "color": "ink",
+   "w": 196
+  },
+  {
+   "x": 478,
+   "y": 322,
+   "text": "Compares 3 tools, reads reviews",
+   "size": 13.5,
+   "color": "ink",
+   "w": 196
+  },
+  {
+   "x": 710,
+   "y": 322,
+   "text": "Starts trial, needs IT approval",
+   "size": 13.5,
+   "color": "ink",
+   "w": 196
+  },
+  {
+   "x": 942,
+   "y": 322,
+   "text": "Invites team, imports old data",
+   "size": 13.5,
+   "color": "ink",
+   "w": 196
+  },
+  {
+   "x": 1174,
+   "y": 322,
+   "text": "Weekly reports run on their own",
+   "size": 13.5,
+   "color": "ink",
+   "w": 196
+  },
+  {
+   "x": 1406,
+   "y": 322,
+   "text": "Gets the renewal quote",
+   "size": 13.5,
+   "color": "ink",
+   "w": 196
+  },
+  {
+   "x": 220,
+   "y": 494,
+   "text": "delighted",
+   "font": "mono",
+   "size": 11,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 220,
+   "y": 694,
+   "text": "frustrated",
+   "font": "mono",
+   "size": 11,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 346.0,
+   "y": 493,
+   "text": "“Looks like it fixes our reporting mess.”",
+   "font": "display",
+   "size": 13.5,
+   "italic": true,
+   "color": "ink",
+   "anchor": "middle",
+   "w": 202
+  },
+  {
+   "x": 578.0,
+   "y": 512,
+   "text": "“Which plan do we actually need?”",
+   "font": "display",
+   "size": 13.5,
+   "italic": true,
+   "color": "ink",
+   "anchor": "middle",
+   "w": 202
+  },
+  {
+   "x": 810.0,
+   "y": 679,
+   "text": "“Why does security need four weeks?”",
+   "font": "display",
+   "size": 13.5,
+   "italic": true,
+   "color": "ink",
+   "anchor": "middle",
+   "w": 202
+  },
+  {
+   "x": 1042.0,
+   "y": 651,
+   "text": "“Importing was harder than promised.”",
+   "font": "display",
+   "size": 13.5,
+   "italic": true,
+   "color": "ink",
+   "anchor": "middle",
+   "w": 202
+  },
+  {
+   "x": 1274.0,
+   "y": 475,
+   "text": "“I got my Fridays back.”",
+   "font": "display",
+   "size": 13.5,
+   "italic": true,
+   "color": "ink",
+   "anchor": "middle",
+   "w": 202
+  },
+  {
+   "x": 1506.0,
+   "y": 526,
+   "text": "“Fair price — if usage stays this high.”",
+   "font": "display",
+   "size": 13.5,
+   "italic": true,
+   "color": "ink",
+   "anchor": "middle",
+   "w": 202
+  }
+ ],
+ "paths": [
+  {
+   "d": "M346.0 539.2 C462.0 539.2 462.0 557.7 578.0 557.7 C694.0 557.7 694.0 640.8 810.0 640.8 C926.0 640.8 926.0 613.1 1042.0 613.1 C1158.0 613.1 1158.0 520.7 1274.0 520.7 C1390.0 520.7 1390.0 571.5 1506.0 571.5",
+   "stroke": "clay",
+   "width": 3.2,
+   "fill": "none"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     230,
+     590.0
+    ],
+    [
+     1622,
+     590.0
+    ]
+   ],
+   "color": "#C9B49A",
+   "width": 1,
+   "dash": "3 5"
+  }
+ ],
+ "notes": [
+  {
+   "num": "!",
+   "text": "The two lowest points are both waiting on someone else — security and data import. Neither is a product feature; both are fixable this quarter.",
+   "x": 64,
+   "y": 890,
+   "w": 900
+  }
+ ],
+ "legend": {
+  "x": 1100,
+  "y": 900,
+  "items": [
+   {
+    "tone": "olive",
+    "label": "positive moment"
+   },
+   {
+    "tone": "clay",
+    "label": "pain point"
+   }
+  ],
+  "direction": "col"
+ }
+}

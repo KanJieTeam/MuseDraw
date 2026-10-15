@@ -1,0 +1,816 @@
+{
+ "theme": "product",
+ "size": [
+  1680,
+  960
+ ],
+ "kicker": "Org design · Series B",
+ "title": "Organization chart, Q3 2027",
+ "subtitle": "57 people today, 9 open roles. Three product squads own outcomes end to end; platform and design are shared. Each dot is one person. Names are illustrative.",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "ceo",
+   "label": "Maya Chen",
+   "sub": "CEO & co-founder",
+   "tone": "accent",
+   "x": 700,
+   "y": 270,
+   "w": 240,
+   "h": 72
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 426,
+   "text": "Product & Engineering",
+   "size": 19,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 428,
+   "y": 426,
+   "text": "31",
+   "size": 19,
+   "weight": 700,
+   "color": "accent",
+   "anchor": "end"
+  },
+  {
+   "x": 64,
+   "y": 450,
+   "text": "Priya Nair, CTO",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 496,
+   "text": "Squad: Onboarding",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 428,
+   "y": 496,
+   "text": "7",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 64,
+   "y": 558,
+   "text": "Squad: Reporting",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 428,
+   "y": 558,
+   "text": "8",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 64,
+   "y": 620,
+   "text": "Squad: Integrations",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 428,
+   "y": 620,
+   "text": "6",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 64,
+   "y": 682,
+   "text": "Platform & SRE",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 428,
+   "y": 682,
+   "text": "9",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 64,
+   "y": 744,
+   "text": "Staff engineer",
+   "size": 14.5,
+   "color": "muted",
+   "weight": 400
+  },
+  {
+   "x": 428,
+   "y": 744,
+   "text": "hiring",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 464,
+   "y": 426,
+   "text": "Design",
+   "size": 19,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 828,
+   "y": 426,
+   "text": "5",
+   "size": 19,
+   "weight": 700,
+   "color": "accent",
+   "anchor": "end"
+  },
+  {
+   "x": 464,
+   "y": 450,
+   "text": "Tom Okafor, Head of Design",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 464,
+   "y": 496,
+   "text": "Product design",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 828,
+   "y": 496,
+   "text": "4",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 464,
+   "y": 558,
+   "text": "Research lead",
+   "size": 14.5,
+   "color": "muted",
+   "weight": 400
+  },
+  {
+   "x": 828,
+   "y": 558,
+   "text": "hiring",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 864,
+   "y": 426,
+   "text": "Go-to-market",
+   "size": 19,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1228,
+   "y": 426,
+   "text": "15",
+   "size": 19,
+   "weight": 700,
+   "color": "accent",
+   "anchor": "end"
+  },
+  {
+   "x": 864,
+   "y": 450,
+   "text": "Lena Vogel, CRO",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 864,
+   "y": 496,
+   "text": "Sales",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 1228,
+   "y": 496,
+   "text": "6",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 864,
+   "y": 558,
+   "text": "Customer success",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 1228,
+   "y": 558,
+   "text": "5",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 864,
+   "y": 620,
+   "text": "Marketing",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 1228,
+   "y": 620,
+   "text": "3",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 1264,
+   "y": 426,
+   "text": "Operations",
+   "size": 19,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1628,
+   "y": 426,
+   "text": "5",
+   "size": 19,
+   "weight": 700,
+   "color": "accent",
+   "anchor": "end"
+  },
+  {
+   "x": 1264,
+   "y": 450,
+   "text": "Sam Ito, COO",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 1264,
+   "y": 496,
+   "text": "Finance",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 1628,
+   "y": 496,
+   "text": "2",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 1264,
+   "y": 558,
+   "text": "People",
+   "size": 14.5,
+   "color": "ink",
+   "weight": 600
+  },
+  {
+   "x": 1628,
+   "y": 558,
+   "text": "2",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 1264,
+   "y": 620,
+   "text": "Legal counsel",
+   "size": 14.5,
+   "color": "muted",
+   "weight": 400
+  },
+  {
+   "x": 1628,
+   "y": 620,
+   "text": "hiring",
+   "size": 13,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 64,
+   "y": 860,
+   "text": "Solid dot: filled role.  Dashed dot: open role, budgeted for H1.",
+   "size": 13,
+   "color": "muted"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     820,
+     342
+    ],
+    [
+     820,
+     372
+    ]
+   ],
+   "color": "#98A2B3",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     84,
+     372
+    ],
+    [
+     1284,
+     372
+    ]
+   ],
+   "color": "#98A2B3",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     84,
+     372
+    ],
+    [
+     84,
+     400
+    ]
+   ],
+   "color": "#98A2B3",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     64,
+     466
+    ],
+    [
+     428,
+     466
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     484,
+     372
+    ],
+    [
+     484,
+     400
+    ]
+   ],
+   "color": "#98A2B3",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     464,
+     466
+    ],
+    [
+     828,
+     466
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     884,
+     372
+    ],
+    [
+     884,
+     400
+    ]
+   ],
+   "color": "#98A2B3",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     864,
+     466
+    ],
+    [
+     1228,
+     466
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     1284,
+     372
+    ],
+    [
+     1284,
+     400
+    ]
+   ],
+   "color": "#98A2B3",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     1264,
+     466
+    ],
+    [
+     1628,
+     466
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  }
+ ],
+ "paths": [
+  {
+   "d": "M64 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M81 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M98 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M115 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M132 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M149 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M166 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M64 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M81 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M98 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M115 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M132 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M149 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M166 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M183 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M64 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M81 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M98 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M115 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M132 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M149 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M166 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M64 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M81 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M98 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M115 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M132 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M149 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M166 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M183 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M200 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M217 700a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M64 762a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M464 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M481 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M498 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M515 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M532 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M464 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M864 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M881 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M898 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M915 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M932 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M949 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M966 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M983 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M864 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M881 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M898 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M915 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M932 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M864 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M881 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M898 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M915 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  },
+  {
+   "d": "M1264 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M1281 514a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M1264 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M1281 576a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "#4F46E5",
+   "stroke": "none"
+  },
+  {
+   "d": "M1264 638a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
+   "fill": "none",
+   "stroke": "#4F46E5",
+   "width": 1.3,
+   "dash": "2 2"
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "theme": "swiss",
+ "size": [
+  1640,
+  1060
+ ],
+ "kicker": "Self-serve funnel · last 90 days",
+ "title": "Self-serve funnel,\nlast 90 days",
+ "subtitle": "Every step loses people. The question is which loss is cheapest to fix — here it is activation, not traffic.",
+ "subtitleWidth": 640,
+ "figure": "Growth / 03",
+ "blocks": [
+  {
+   "type": "funnel",
+   "x": 64,
+   "y": 420,
+   "w": 1100,
+   "funnelW": 640,
+   "stageH": 92,
+   "gap": 10,
+   "minRatio": 0.3,
+   "convX": 230,
+   "tones": [
+    "ink",
+    "ink",
+    "accent",
+    "ink",
+    "ink"
+   ],
+   "stages": [
+    {
+     "label": "Visitors",
+     "value": 120000,
+     "valueText": "120,000",
+     "sub": "organic 61% · paid 22% · referral 17%"
+    },
+    {
+     "label": "Sign-ups",
+     "value": 9600,
+     "valueText": "9,600",
+     "sub": "email or Google, no card"
+    },
+    {
+     "label": "Activated",
+     "value": 4300,
+     "valueText": "4,300",
+     "sub": "created a first report within 7 days"
+    },
+    {
+     "label": "Paid",
+     "value": 1050,
+     "valueText": "1,050",
+     "sub": "converted after the 14-day trial"
+    },
+    {
+     "label": "Expanded",
+     "value": 310,
+     "valueText": "310",
+     "sub": "added seats within 90 days"
+    }
+   ]
+  }
+ ],
+ "zones": [
+  {
+   "id": "rule",
+   "label": "Stage · count · step conversion",
+   "x": 64,
+   "y": 384,
+   "w": 1512,
+   "h": 1
+  }
+ ],
+ "notes": [
+  {
+   "num": "→",
+   "text": "Activation loses 55% of sign-ups. Most never connect a data source; a sample dataset on first login is the cheapest experiment on this page.",
+   "x": 1220,
+   "y": 600,
+   "w": 340
+  },
+  {
+   "num": "→",
+   "text": "Paid conversion of activated users is 24%, in line with benchmarks. Don't touch pricing yet.",
+   "x": 1220,
+   "y": 760,
+   "w": 340
+  }
+ ]
+}

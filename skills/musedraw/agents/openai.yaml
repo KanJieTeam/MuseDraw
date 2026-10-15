@@ -1,4 +1,4 @@
 interface:
   display_name: "MuseDraw"
-  short_description: "Professional architecture figures for your AI agent"
-  default_prompt: "Use $musedraw to design a data-platform architecture diagram, preserve the supplied facts and check the rendered layout."
+  short_description: "Journal- and boardroom-grade diagrams in 20 styles"
+  default_prompt: "Use $musedraw to draw a research roadmap, flow or architecture diagram from my description, render it, inspect the PNG and fix any layout warnings."

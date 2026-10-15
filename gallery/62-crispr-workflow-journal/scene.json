@@ -1,0 +1,266 @@
+{
+ "theme": "journal",
+ "size": [
+  1640,
+  640
+ ],
+ "title": "Fig. 4 | Generating a validated CRISPR–Cas9 knockout cell line",
+ "subtitle": "a, Eight steps from guide design to phenotype, with typical timing for an adherent human line. b, Gates that must pass before moving on; skipping clone-level validation is the most common source of irreproducible knockouts.",
+ "nodes": [
+  {
+   "id": "s0",
+   "label": "Design",
+   "sub": "sgRNA × 3",
+   "shape": "chevron",
+   "first": true,
+   "tone": "blue",
+   "x": 64,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s1",
+   "label": "Clone",
+   "sub": "into lentiCRISPRv2",
+   "shape": "chevron",
+   "first": false,
+   "tone": "blue",
+   "x": 252,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s2",
+   "label": "Transduce",
+   "sub": "MOI 0.3",
+   "shape": "chevron",
+   "first": false,
+   "tone": "orange",
+   "x": 440,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s3",
+   "label": "Select",
+   "sub": "puromycin 2 µg/mL",
+   "shape": "chevron",
+   "first": false,
+   "tone": "orange",
+   "x": 628,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s4",
+   "label": "Single-cell clone",
+   "sub": "limiting dilution",
+   "shape": "chevron",
+   "first": false,
+   "tone": "purple",
+   "x": 816,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s5",
+   "label": "Genotype",
+   "sub": "Sanger + TIDE",
+   "shape": "chevron",
+   "first": false,
+   "tone": "green",
+   "x": 1004,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s6",
+   "label": "Validate",
+   "sub": "Western blot",
+   "shape": "chevron",
+   "first": false,
+   "tone": "green",
+   "x": 1192,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "s7",
+   "label": "Phenotype",
+   "sub": "proliferation, migration",
+   "shape": "chevron",
+   "first": false,
+   "tone": "red",
+   "x": 1380,
+   "y": 260,
+   "w": 196,
+   "h": 96,
+   "size": 14.5,
+   "align": "center"
+  },
+  {
+   "id": "c0",
+   "label": "QC 1",
+   "sub": "Guide efficiency in pool > 60% indels (TIDE) before cloning out",
+   "tone": "gray",
+   "x": 64,
+   "y": 460,
+   "w": 356,
+   "h": 96,
+   "align": "left",
+   "size": 14,
+   "tag": "after step 3"
+  },
+  {
+   "id": "c1",
+   "label": "QC 2",
+   "sub": "Both alleles frameshifted; no in-frame deletions",
+   "tone": "gray",
+   "x": 446,
+   "y": 460,
+   "w": 356,
+   "h": 96,
+   "align": "left",
+   "size": 14,
+   "tag": "after step 6"
+  },
+  {
+   "id": "c2",
+   "label": "QC 3",
+   "sub": "Protein absent in ≥ 2 independent clones",
+   "tone": "gray",
+   "x": 828,
+   "y": 460,
+   "w": 356,
+   "h": 96,
+   "align": "left",
+   "size": 14,
+   "tag": "after step 7"
+  },
+  {
+   "id": "c3",
+   "label": "Control",
+   "sub": "Non-targeting guide + parental line in every assay",
+   "tone": "gray",
+   "x": 1210,
+   "y": 460,
+   "w": 356,
+   "h": 96,
+   "align": "left",
+   "size": 14,
+   "tag": "step 8"
+  }
+ ],
+ "edges": [],
+ "texts": [
+  {
+   "x": 162,
+   "y": 388,
+   "text": "day 0",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 350,
+   "y": 388,
+   "text": "day 1–4",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 538,
+   "y": 388,
+   "text": "day 5",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 726,
+   "y": 388,
+   "text": "day 6–10",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 914,
+   "y": 388,
+   "text": "day 11–24",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1102,
+   "y": 388,
+   "text": "day 25–28",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1290,
+   "y": 388,
+   "text": "day 29–31",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1478,
+   "y": 388,
+   "text": "day 32+",
+   "size": 12.5,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 440,
+   "text": "b   Quality gates",
+   "size": 15,
+   "weight": 800,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 240,
+   "text": "a   Workflow (≈ 5 weeks)",
+   "size": 15,
+   "weight": 800,
+   "color": "ink"
+  }
+ ]
+}

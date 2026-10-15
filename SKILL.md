@@ -1,35 +1,29 @@
 # Use MuseDraw
 
-MuseDraw is a professional drawing assistant delivered as an Agent Skill. Its first
-public workflow produces component diagrams in **手绘线稿** and **终端色域**.
+MuseDraw is a professional drawing skill for AI agents: research figures,
+office diagrams, teaching visuals and system architecture, in 20 visual styles.
 
 To use this repository for a drawing task, read
-[the MuseDraw skill](skills/musedraw/SKILL.md), then load only the references and
-helpers relevant to the request. Keep the complete `skills/musedraw/` directory
-available; the entrypoint alone is not the whole workflow.
+[the MuseDraw skill](skills/musedraw/SKILL.md) and keep the whole
+`skills/musedraw/` directory available (engine, themes, fonts manifest,
+references). The fastest way to learn the scene format is to copy the closest
+case in [gallery/](gallery/README.md); each case has `scene.json` and a
+one-line `prompt.md`.
 
-Short natural-language requests are sufficient to start; the agent handles
-composition, palette and layout. The two public styles share installed drawing
-code and accept new subjects, components and relationships; the showcased topics
-do not limit the workflow.
+The user's words decide the content. Gallery examples are references, not facts
+about the user's project; numbers in them are illustrative. Creating a diagram
+is not permission to change the user's application, publish their data or
+install unrelated software. First-time setup (`npm install` in the skill folder)
+installs open-source fonts and Playwright and attempts to download Chromium.
+It requires the corresponding network access and installation permission.
 
-For these diagrams, read the [semantic graph workflow](skills/musedraw/references/graph-workflow.md).
-The agent writes semantic content and invokes the installed renderer; it does
-not ask the user for coordinates or draw a case-specific replacement SVG.
-Follow-up content edits operate on the existing document. Deliver PNG, native
-editable SVG and `document.json`, with the checks actually completed.
+Use `scripts/musedraw.mjs render scene.json` in the installed skill for new work;
+`scripts/musedraw.mjs themes` lists the 20 styles. Deliver PNG and editable SVG,
+retain the scene for follow-up edits, open the PNG and address `checks.json`
+warnings. With `--svg-only`, state that PNG and browser checks are incomplete.
 
-Replaying a saved semantic document with the same drawing version and fonts
-is distinct from generating a new diagram from a short request. Preserve that
-distinction; neither the examples nor their verification guarantee identical
-output from every model. See [implementation and limits](docs/semantic-graph.zh-CN.md).
-
-The user's brief determines the content. Repository examples are generic
-references, not facts about their system. Creating or updating a diagram is not
-permission to change the user's application, publish their data, or install
-unrelated software.
-
-For installation and host requirements, see [中文使用指南](docs/usage.zh-CN.md)
-or [English usage](docs/usage.md). The host needs file access and tool execution;
-PNG uses existing Node.js 22+, Playwright, Chromium-compatible browser and fonts.
-MuseDraw itself requires no additional model API key.
+Replaying an existing scene in the same engine, theme, font and rendering
+environment is distinct from a model interpreting a new request. Do not promise
+pixel-identical output or universal model success from a short prompt. Old small
+component-graph tools remain compatibility routes, not the main gallery engine.
+See [usage](docs/usage.md) or [中文使用指南](docs/usage.zh-CN.md).

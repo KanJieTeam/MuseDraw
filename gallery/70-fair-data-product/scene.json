@@ -1,0 +1,175 @@
+{
+ "theme": "product",
+ "size": [
+  1700,
+  880
+ ],
+ "kicker": "Research data management",
+ "title": "FAIR research data workflow",
+ "subtitle": "Raw data is read-only from the moment it leaves the instrument. Everything after it is produced by versioned code, so any figure can be regenerated from scratch.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "inst",
+   "label": "Instrument",
+   "tag": "capture",
+   "sub": "plate reader, sequencer",
+   "icon": "cpu",
+   "x": 64,
+   "y": 300,
+   "w": 230,
+   "h": 100
+  },
+  {
+   "id": "raw",
+   "label": "Raw data",
+   "tag": "read-only",
+   "sub": "checksummed on arrival",
+   "icon": "lock",
+   "tone": "indigo",
+   "x": 344,
+   "y": 300,
+   "w": 230,
+   "h": 100
+  },
+  {
+   "id": "code",
+   "label": "Processing code",
+   "tag": "git, tagged",
+   "sub": "one script per step",
+   "icon": "git",
+   "x": 624,
+   "y": 300,
+   "w": 230,
+   "h": 100
+  },
+  {
+   "id": "der",
+   "label": "Derived data",
+   "tag": "reproducible",
+   "sub": "never edited by hand",
+   "icon": "table",
+   "tone": "indigo",
+   "x": 904,
+   "y": 300,
+   "w": 230,
+   "h": 100
+  },
+  {
+   "id": "fig",
+   "label": "Figures & stats",
+   "tag": "notebook",
+   "sub": "knitted from code",
+   "icon": "chart",
+   "x": 1184,
+   "y": 300,
+   "w": 230,
+   "h": 100
+  },
+  {
+   "id": "repo",
+   "label": "Public repository",
+   "tag": "Zenodo / Dryad",
+   "sub": "DOI, licence, README",
+   "icon": "globe",
+   "tone": "accent",
+   "x": 1440,
+   "y": 300,
+   "w": 200,
+   "h": 100
+  }
+ ],
+ "edges": [
+  {
+   "from": "inst",
+   "to": "raw",
+   "kind": "primary"
+  },
+  {
+   "from": "raw",
+   "to": "code",
+   "kind": "primary"
+  },
+  {
+   "from": "code",
+   "to": "der",
+   "kind": "primary"
+  },
+  {
+   "from": "der",
+   "to": "fig",
+   "kind": "primary"
+  },
+  {
+   "from": "fig",
+   "to": "repo",
+   "kind": "primary"
+  }
+ ],
+ "zones": [
+  {
+   "id": "f",
+   "label": "F · Findable",
+   "sub": "DOI for every dataset; rich metadata; ORCID for every author",
+   "tone": "indigo",
+   "x": 64,
+   "y": 500,
+   "w": 380,
+   "h": 170,
+   "labelSize": 22,
+   "subSize": 15
+  },
+  {
+   "id": "a",
+   "label": "A · Accessible",
+   "sub": "open protocol (HTTPS); metadata stays even if data is restricted",
+   "tone": "indigo",
+   "x": 464,
+   "y": 500,
+   "w": 380,
+   "h": 170,
+   "labelSize": 22,
+   "subSize": 15
+  },
+  {
+   "id": "i",
+   "label": "I · Interoperable",
+   "sub": "open formats (CSV, HDF5, FASTQ); community vocabularies",
+   "tone": "teal",
+   "x": 864,
+   "y": 500,
+   "w": 380,
+   "h": 170,
+   "labelSize": 22,
+   "subSize": 15
+  },
+  {
+   "id": "r",
+   "label": "R · Reusable",
+   "sub": "licence (CC-BY), provenance, README with units and codes",
+   "tone": "teal",
+   "x": 1264,
+   "y": 500,
+   "w": 376,
+   "h": 170,
+   "labelSize": 22,
+   "subSize": 15
+  }
+ ],
+ "notes": [
+  {
+   "title": "Folder rule",
+   "text": "data/raw · data/derived · code · results · docs — and a README at the top that someone else could follow without asking you.",
+   "x": 64,
+   "y": 720,
+   "w": 760
+  },
+  {
+   "title": "Before you submit",
+   "text": "Delete your local derived/ folder and regenerate it from raw/ with one command. If that fails, the paper is not reproducible yet.",
+   "x": 864,
+   "y": 720,
+   "w": 776
+  }
+ ]
+}

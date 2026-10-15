@@ -1,0 +1,239 @@
+{
+ "theme": "product",
+ "size": [
+  1680,
+  940
+ ],
+ "kicker": "Customer support · tiered model",
+ "title": "Tiered customer support model",
+ "subtitle": "Each escalation costs roughly five times the tier before it. The goal isn't fewer tickets — it's tickets landing where they can be closed in one touch.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "L0",
+   "label": "Self-serve",
+   "tag": "L0",
+   "sub": "Help centre, in-app guides, AI answers",
+   "tone": "accent",
+   "x": 64,
+   "y": 330,
+   "w": 350,
+   "h": 124,
+   "size": 19,
+   "subSize": 14
+  },
+  {
+   "id": "L1",
+   "label": "Support agents",
+   "tag": "L1",
+   "sub": "Chat + email, 24/5, macros",
+   "tone": "indigo",
+   "x": 462,
+   "y": 330,
+   "w": 350,
+   "h": 124,
+   "size": 19,
+   "subSize": 14
+  },
+  {
+   "id": "L2",
+   "label": "Product specialists",
+   "tag": "L2",
+   "sub": "Repro, workarounds, account fixes",
+   "tone": "indigo",
+   "x": 860,
+   "y": 330,
+   "w": 350,
+   "h": 124,
+   "size": 19,
+   "subSize": 14
+  },
+  {
+   "id": "L3",
+   "label": "Engineering on-call",
+   "tag": "L3",
+   "sub": "Bugs and incidents only",
+   "tone": "amber",
+   "x": 1258,
+   "y": 330,
+   "w": 350,
+   "h": 124,
+   "size": 19,
+   "subSize": 14
+  }
+ ],
+ "edges": [
+  {
+   "from": "L0",
+   "to": "L1",
+   "kind": "primary",
+   "label": "escalate"
+  },
+  {
+   "from": "L1",
+   "to": "L2",
+   "kind": "primary",
+   "label": "escalate"
+  },
+  {
+   "from": "L2",
+   "to": "L3",
+   "kind": "primary",
+   "label": "escalate"
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 540,
+   "text": "62%",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 572,
+   "text": "of all tickets resolved here",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 630,
+   "text": "SLA",
+   "font": "mono",
+   "size": 11,
+   "weight": 700,
+   "color": "accent",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 64,
+   "y": 656,
+   "text": "instant",
+   "size": 17,
+   "weight": 600,
+   "color": "ink"
+  },
+  {
+   "x": 462,
+   "y": 540,
+   "text": "28%",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "ink"
+  },
+  {
+   "x": 462,
+   "y": 572,
+   "text": "of all tickets resolved here",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 462,
+   "y": 630,
+   "text": "SLA",
+   "font": "mono",
+   "size": 11,
+   "weight": 700,
+   "color": "accent",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 462,
+   "y": 656,
+   "text": "< 2 h first reply",
+   "size": 17,
+   "weight": 600,
+   "color": "ink"
+  },
+  {
+   "x": 860,
+   "y": 540,
+   "text": "8%",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "ink"
+  },
+  {
+   "x": 860,
+   "y": 572,
+   "text": "of all tickets resolved here",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 860,
+   "y": 630,
+   "text": "SLA",
+   "font": "mono",
+   "size": 11,
+   "weight": 700,
+   "color": "accent",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 860,
+   "y": 656,
+   "text": "< 1 business day",
+   "size": 17,
+   "weight": 600,
+   "color": "ink"
+  },
+  {
+   "x": 1258,
+   "y": 540,
+   "text": "2%",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "ink"
+  },
+  {
+   "x": 1258,
+   "y": 572,
+   "text": "of all tickets resolved here",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 1258,
+   "y": 630,
+   "text": "SLA",
+   "font": "mono",
+   "size": 11,
+   "weight": 700,
+   "color": "accent",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 1258,
+   "y": 656,
+   "text": "per severity SLA",
+   "size": 17,
+   "weight": 600,
+   "color": "ink"
+  }
+ ],
+ "notes": [
+  {
+   "title": "Feedback loop",
+   "text": "Every L2/L3 ticket ends with one question: could L0 have answered this? If yes, the specialist writes the article before closing.",
+   "x": 64,
+   "y": 730,
+   "w": 760
+  },
+  {
+   "title": "What we measure",
+   "text": "First-contact resolution, time to first reply, and escalation rate per tier — not ticket volume.",
+   "x": 860,
+   "y": 730,
+   "w": 756
+  }
+ ]
+}

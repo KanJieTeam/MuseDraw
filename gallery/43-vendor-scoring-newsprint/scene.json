@@ -1,0 +1,138 @@
+{
+ "theme": "newsprint",
+ "size": [
+  1640,
+  900
+ ],
+ "kicker": "Procurement · choosing a CRM",
+ "title": "Vendor scoring matrix: CRM selection",
+ "subtitle": "Agree the criteria and their weights first, score each vendor 1–10 against them, and let the arithmetic start the discussion — not end it.",
+ "subtitleWidth": 1100,
+ "figure": "Table 2",
+ "blocks": [
+  {
+   "type": "table",
+   "x": 64,
+   "y": 320,
+   "rowH": 62,
+   "headH": 52,
+   "headFont": "mono",
+   "cellSize": 17,
+   "columns": [
+    {
+     "label": "Criterion",
+     "w": 440
+    },
+    {
+     "label": "Weight",
+     "w": 160,
+     "align": "center"
+    },
+    {
+     "label": "Alder",
+     "w": 200,
+     "align": "center"
+    },
+    {
+     "label": "Birch",
+     "w": 200,
+     "align": "center"
+    },
+    {
+     "label": "Cedar",
+     "w": 200,
+     "align": "center"
+    }
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Total cost, 3 years",
+      "30%",
+      "7",
+      "9",
+      "6"
+     ]
+    },
+    {
+     "cells": [
+      "Security & compliance",
+      "25%",
+      "9",
+      "6",
+      "8"
+     ]
+    },
+    {
+     "cells": [
+      "Fit to our workflow",
+      "20%",
+      "6",
+      "7",
+      "9"
+     ]
+    },
+    {
+     "cells": [
+      "Implementation effort",
+      "15%",
+      "7",
+      "8",
+      "7"
+     ]
+    },
+    {
+     "cells": [
+      "Vendor viability",
+      "10%",
+      "7",
+      "6",
+      "9"
+     ]
+    },
+    {
+     "cells": [
+      "Weighted score",
+      "",
+      {
+       "text": "7.30",
+       "tone": "default",
+       "chipW": 96,
+       "size": 16
+      },
+      {
+       "text": "7.40",
+       "tone": "default",
+       "chipW": 96,
+       "size": 16
+      },
+      {
+       "text": "7.55",
+       "tone": "ink",
+       "chipW": 96,
+       "size": 16
+      }
+     ],
+     "tone": null
+    }
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "Cedar wins by 0.15 — inside the noise of our scoring. Run a two-week pilot with Cedar and Birch before signing.",
+   "x": 1300,
+   "y": 330,
+   "w": 280,
+   "target": null
+  },
+  {
+   "num": "2",
+   "text": "Birch is cheapest but weakest on security. If compliance weight dropped below 15%, Birch would win — say that out loud.",
+   "x": 1300,
+   "y": 560,
+   "w": 280
+  }
+ ]
+}

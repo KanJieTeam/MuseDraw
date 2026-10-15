@@ -1,0 +1,267 @@
+{
+ "theme": "neon",
+ "size": [
+  1700,
+  1000
+ ],
+ "kicker": "Real-time multiplayer · 64 players per match",
+ "title": "Real-time multiplayer game backend",
+ "subtitle": "Lobby traffic is ordinary HTTPS. Gameplay is UDP through edge relays to one authoritative server pod per match; everything slow happens off the hot path.",
+ "subtitleWidth": 1120,
+ "figure": "Level 14",
+ "zones": [
+  {
+   "id": "hot",
+   "label": "Hot path · < 50 ms round trip",
+   "tone": "magenta",
+   "x": 300,
+   "y": 486,
+   "w": 1080,
+   "h": 190
+  },
+  {
+   "id": "cold",
+   "label": "Off the hot path · async",
+   "x": 560,
+   "y": 712,
+   "w": 1076,
+   "h": 200
+  }
+ ],
+ "nodes": [
+  {
+   "id": "players",
+   "label": "Players",
+   "tag": "client",
+   "sub": "PC, console, mobile",
+   "icon": "gamepad",
+   "tone": "magenta",
+   "x": 64,
+   "y": 520,
+   "w": 200,
+   "h": 120
+  },
+  {
+   "id": "api",
+   "label": "Platform API",
+   "tag": "HTTPS",
+   "sub": "login, store, friends",
+   "x": 330,
+   "y": 290,
+   "w": 210,
+   "h": 104
+  },
+  {
+   "id": "mm",
+   "label": "Matchmaker",
+   "tag": "Open Match",
+   "sub": "skill + region + ping",
+   "x": 620,
+   "y": 290,
+   "w": 210,
+   "h": 104
+  },
+  {
+   "id": "alloc",
+   "label": "Fleet allocator",
+   "tag": "Agones",
+   "sub": "warm pods per region",
+   "x": 910,
+   "y": 290,
+   "w": 210,
+   "h": 104
+  },
+  {
+   "id": "relay",
+   "label": "Edge relay",
+   "tag": "anycast UDP",
+   "sub": "DDoS shield, 20+ PoPs",
+   "tone": "magenta",
+   "x": 330,
+   "y": 540,
+   "w": 210,
+   "h": 104
+  },
+  {
+   "id": "gs",
+   "label": "Game server pod",
+   "tag": "authoritative sim, 60 Hz",
+   "sub": "one pod per match; validates every input",
+   "icon": "cpu",
+   "tone": "hot",
+   "x": 620,
+   "y": 530,
+   "w": 500,
+   "h": 120
+  },
+  {
+   "id": "anticheat",
+   "label": "Anti-cheat",
+   "tag": "server-side",
+   "sub": "replays suspect inputs",
+   "icon": "shield",
+   "tone": "yellow",
+   "x": 1426,
+   "y": 530,
+   "w": 210,
+   "h": 120
+  },
+  {
+   "id": "session",
+   "label": "Session state",
+   "tag": "Redis",
+   "sub": "reconnect within 30 s",
+   "tone": "dim",
+   "x": 590,
+   "y": 776,
+   "w": 230,
+   "h": 104
+  },
+  {
+   "id": "profiles",
+   "label": "Profiles",
+   "tag": "Postgres",
+   "sub": "XP, inventory, purchases",
+   "tone": "dim",
+   "x": 850,
+   "y": 776,
+   "w": 230,
+   "h": 104
+  },
+  {
+   "id": "boards",
+   "label": "Leaderboards",
+   "tag": "Redis ZSET",
+   "sub": "global + friends",
+   "tone": "dim",
+   "x": 1110,
+   "y": 776,
+   "w": 230,
+   "h": 104
+  },
+  {
+   "id": "telemetry",
+   "label": "Telemetry",
+   "tag": "ClickHouse",
+   "sub": "every tick, sampled",
+   "tone": "dim",
+   "x": 1376,
+   "y": 776,
+   "w": 230,
+   "h": 104
+  }
+ ],
+ "edges": [
+  {
+   "from": "players",
+   "to": "api",
+   "kind": "http",
+   "fromSide": "t",
+   "toSide": "l",
+   "label": "HTTPS"
+  },
+  {
+   "from": "api",
+   "to": "mm",
+   "kind": "http",
+   "label": "queue"
+  },
+  {
+   "from": "mm",
+   "to": "alloc",
+   "kind": "http",
+   "label": "allocate"
+  },
+  {
+   "from": "alloc",
+   "to": "gs",
+   "kind": "http",
+   "fromSide": "b",
+   "toSide": "t",
+   "toAt": 0.8,
+   "label": "IP:port"
+  },
+  {
+   "from": "players",
+   "to": "relay",
+   "kind": "udp",
+   "labelPlacement": "above"
+  },
+  {
+   "from": "relay",
+   "to": "gs",
+   "kind": "udp",
+   "both": true,
+   "label": "snapshots",
+   "labelPlacement": "above"
+  },
+  {
+   "from": "gs",
+   "to": "anticheat",
+   "kind": "event",
+   "label": "suspect replays"
+  },
+  {
+   "from": "gs",
+   "to": "session",
+   "kind": "event",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.5,
+   "mid": 694
+  },
+  {
+   "from": "gs",
+   "to": "profiles",
+   "kind": "event",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.5,
+   "mid": 694
+  },
+  {
+   "from": "gs",
+   "to": "boards",
+   "kind": "event",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.5,
+   "mid": 694
+  },
+  {
+   "from": "gs",
+   "to": "telemetry",
+   "kind": "event",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.5,
+   "mid": 694
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 948,
+  "items": [
+   {
+    "kind": "udp",
+    "label": "UDP gameplay"
+   },
+   {
+    "kind": "http",
+    "label": "HTTPS control"
+   },
+   {
+    "kind": "event",
+    "label": "async events"
+   }
+  ]
+ },
+ "notes": [
+  {
+   "text": "match result, XP and kills are written after the round — never inside a tick",
+   "x": 64,
+   "y": 800,
+   "w": 460
+  }
+ ]
+}

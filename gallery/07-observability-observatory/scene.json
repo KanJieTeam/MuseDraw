@@ -1,0 +1,250 @@
+{
+ "theme": "observatory",
+ "size": [
+  1700,
+  940
+ ],
+ "kicker": "OpenTelemetry · reference pipeline",
+ "title": "OpenTelemetry observability pipeline",
+ "subtitle": "Apps emit metrics, logs and traces over OTLP. Collectors enrich, sample and route them, and every signal keeps its own colour from source to dashboard.",
+ "subtitleWidth": 1080,
+ "figure": "obs / 07",
+ "zones": [
+  {
+   "id": "ns",
+   "label": "namespace · shop",
+   "x": 48,
+   "y": 300,
+   "w": 268,
+   "h": 420
+  },
+  {
+   "id": "backends",
+   "label": "storage · object-backed",
+   "x": 932,
+   "y": 260,
+   "w": 288,
+   "h": 500
+  }
+ ],
+ "nodes": [
+  {
+   "id": "checkout",
+   "label": "checkout",
+   "tag": "OTel SDK, Go",
+   "sub": "1.2k req/s",
+   "x": 68,
+   "y": 350,
+   "w": 228,
+   "h": 84
+  },
+  {
+   "id": "cart",
+   "label": "cart",
+   "tag": "OTel SDK, Java",
+   "sub": "auto-instrumented",
+   "x": 68,
+   "y": 470,
+   "w": 228,
+   "h": 84
+  },
+  {
+   "id": "payment",
+   "label": "payment",
+   "tag": "OTel SDK, Node",
+   "sub": "custom spans",
+   "x": 68,
+   "y": 590,
+   "w": 228,
+   "h": 84
+  },
+  {
+   "id": "agent",
+   "label": "Collector agent",
+   "tag": "DaemonSet",
+   "sub": "k8s attributes, batch",
+   "tone": "hub",
+   "x": 376,
+   "y": 452,
+   "w": 226,
+   "h": 120
+  },
+  {
+   "id": "gateway",
+   "label": "Collector gateway",
+   "tag": "Deployment × 3",
+   "sub": "tail sampling: keep errors + slow, 10 % of rest",
+   "tone": "hub",
+   "x": 652,
+   "y": 452,
+   "w": 240,
+   "h": 120
+  },
+  {
+   "id": "mimir",
+   "label": "Mimir",
+   "tag": "metrics",
+   "sub": "Prometheus-compatible",
+   "icon": "chart",
+   "tone": "teal",
+   "x": 956,
+   "y": 320,
+   "w": 240,
+   "h": 96
+  },
+  {
+   "id": "loki",
+   "label": "Loki",
+   "tag": "logs",
+   "sub": "indexed by labels only",
+   "icon": "doc",
+   "tone": "amber",
+   "x": 956,
+   "y": 464,
+   "w": 240,
+   "h": 96
+  },
+  {
+   "id": "tempo",
+   "label": "Tempo",
+   "tag": "traces",
+   "sub": "lookup by trace ID",
+   "icon": "search",
+   "tone": "violet",
+   "x": 956,
+   "y": 608,
+   "w": 240,
+   "h": 96
+  },
+  {
+   "id": "grafana",
+   "label": "Grafana",
+   "tag": "dashboards, explore",
+   "sub": "jump metric → trace → log",
+   "icon": "eye",
+   "tone": "hub",
+   "x": 1290,
+   "y": 452,
+   "w": 250,
+   "h": 120
+  },
+  {
+   "id": "oncall",
+   "label": "On-call",
+   "tag": "alerting",
+   "sub": "SLO burn-rate pages",
+   "icon": "alert",
+   "tone": "coral",
+   "x": 1290,
+   "y": 660,
+   "w": 250,
+   "h": 92
+  }
+ ],
+ "edges": [
+  {
+   "from": "checkout",
+   "to": "agent",
+   "kind": "otlp",
+   "mid": 336
+  },
+  {
+   "from": "cart",
+   "to": "agent",
+   "kind": "otlp",
+   "label": "OTLP"
+  },
+  {
+   "from": "payment",
+   "to": "agent",
+   "kind": "otlp",
+   "mid": 336
+  },
+  {
+   "from": "agent",
+   "to": "gateway",
+   "kind": "otlp",
+   "width": 3.4
+  },
+  {
+   "from": "gateway",
+   "to": "mimir",
+   "kind": "metrics",
+   "mid": 912
+  },
+  {
+   "from": "gateway",
+   "to": "loki",
+   "kind": "logs"
+  },
+  {
+   "from": "gateway",
+   "to": "tempo",
+   "kind": "traces",
+   "mid": 912
+  },
+  {
+   "from": "mimir",
+   "to": "grafana",
+   "kind": "metrics",
+   "mid": 1250
+  },
+  {
+   "from": "loki",
+   "to": "grafana",
+   "kind": "logs"
+  },
+  {
+   "from": "tempo",
+   "to": "grafana",
+   "kind": "traces",
+   "mid": 1250
+  },
+  {
+   "from": "grafana",
+   "to": "oncall",
+   "kind": "alert",
+   "label": "page"
+  }
+ ],
+ "notes": [
+  {
+   "text": "// tail sampling waits for the whole trace, so the slow and the failed are never dropped",
+   "x": 376,
+   "y": 640,
+   "w": 500
+  },
+  {
+   "text": "// exemplars put a trace ID on a latency spike; logs carry the same trace ID",
+   "x": 376,
+   "y": 700,
+   "w": 500
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 872,
+  "items": [
+   {
+    "kind": "otlp",
+    "label": "OTLP · all signals"
+   },
+   {
+    "kind": "metrics",
+    "label": "metrics"
+   },
+   {
+    "kind": "logs",
+    "label": "logs"
+   },
+   {
+    "kind": "traces",
+    "label": "traces"
+   },
+   {
+    "kind": "alert",
+    "label": "alerts"
+   }
+  ]
+ }
+}

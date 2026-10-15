@@ -1,0 +1,296 @@
+{
+ "theme": "pastel",
+ "size": [
+  1640,
+  1040
+ ],
+ "kicker": "行政流程，费用报销",
+ "title": "费用报销审批流程",
+ "subtitle": "金额决定谁审批，票据决定能不能付款。大部分退回发生在财务审核这一步，且原因高度集中。数据为示例。",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "start",
+   "label": "提交报销单",
+   "sub": "OA 系统，附发票照片",
+   "tone": "blue",
+   "x": 60,
+   "y": 400,
+   "w": 220,
+   "h": 84,
+   "step": 1
+  },
+  {
+   "id": "amt",
+   "label": "≤ 2000 元？",
+   "shape": "diamond",
+   "tone": "yellow",
+   "x": 330,
+   "y": 382,
+   "w": 180,
+   "h": 120
+  },
+  {
+   "id": "lead",
+   "label": "直属主管审批",
+   "sub": "约 1 个工作日",
+   "tone": "white",
+   "x": 570,
+   "y": 290,
+   "w": 220,
+   "h": 80,
+   "step": 2
+  },
+  {
+   "id": "head",
+   "label": "部门负责人审批",
+   "sub": "约 2 个工作日",
+   "tone": "white",
+   "x": 570,
+   "y": 514,
+   "w": 220,
+   "h": 80,
+   "step": 2
+  },
+  {
+   "id": "fin",
+   "label": "财务审核",
+   "sub": "抬头、税号、金额一致",
+   "tone": "purple",
+   "x": 850,
+   "y": 400,
+   "w": 220,
+   "h": 84,
+   "step": 3
+  },
+  {
+   "id": "ok",
+   "label": "票据合规？",
+   "shape": "diamond",
+   "tone": "yellow",
+   "x": 1120,
+   "y": 382,
+   "w": 180,
+   "h": 120
+  },
+  {
+   "id": "pay",
+   "label": "出纳付款",
+   "sub": "每周二、周五批量",
+   "tone": "green",
+   "x": 1360,
+   "y": 400,
+   "w": 220,
+   "h": 84,
+   "step": 4
+  },
+  {
+   "id": "back",
+   "label": "退回补充",
+   "sub": "附说明后重新提交",
+   "tone": "red",
+   "x": 1100,
+   "y": 586,
+   "w": 220,
+   "h": 80
+  }
+ ],
+ "edges": [
+  {
+   "from": "start",
+   "to": "amt",
+   "kind": "primary"
+  },
+  {
+   "from": "amt",
+   "to": "lead",
+   "fromSide": "t",
+   "toSide": "l",
+   "label": "是"
+  },
+  {
+   "from": "amt",
+   "to": "head",
+   "fromSide": "b",
+   "toSide": "l",
+   "label": "否"
+  },
+  {
+   "from": "lead",
+   "to": "fin",
+   "fromSide": "r",
+   "toSide": "t"
+  },
+  {
+   "from": "head",
+   "to": "fin",
+   "fromSide": "r",
+   "toSide": "b"
+  },
+  {
+   "from": "fin",
+   "to": "ok",
+   "kind": "primary"
+  },
+  {
+   "from": "ok",
+   "to": "pay",
+   "kind": "primary",
+   "label": "是"
+  },
+  {
+   "from": "ok",
+   "to": "back",
+   "kind": "orange",
+   "label": "否"
+  },
+  {
+   "from": "back",
+   "to": "start",
+   "kind": "soft",
+   "fromSide": "b",
+   "toSide": "b",
+   "mid": 706,
+   "label": "重新提交，平均多花 3.4 天"
+  }
+ ],
+ "texts": [
+  {
+   "x": 60,
+   "y": 790,
+   "text": "上季度退回 214 单，原因构成",
+   "size": 15,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 829,
+   "text": "发票抬头写成简称",
+   "size": 14,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 863,
+   "text": "缺少税号",
+   "size": 14,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 897,
+   "text": "连号发票未附明细",
+   "size": 14,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 931,
+   "text": "超标准未附说明",
+   "size": 14,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 965,
+   "text": "其他",
+   "size": 14,
+   "color": "ink"
+  },
+  {
+   "x": 960,
+   "y": 829,
+   "text": "前三项合计 177 单，占 83%，都能在提交前自查。",
+   "size": 14.5,
+   "color": "ink",
+   "w": 560
+  },
+  {
+   "x": 960,
+   "y": 863,
+   "text": "下一步：OA 提交页增加抬头与税号校验。",
+   "size": 14.5,
+   "color": "muted",
+   "w": 560
+  }
+ ],
+ "bars": [
+  {
+   "x": 260,
+   "y": 816,
+   "w": 600,
+   "h": 18,
+   "value": 82,
+   "max": 82,
+   "fill": "accent",
+   "track": false,
+   "radius": 3,
+   "text": "82",
+   "textPos": "right",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 260,
+   "y": 850,
+   "w": 600,
+   "h": 18,
+   "value": 57,
+   "max": 82,
+   "fill": "accent",
+   "track": false,
+   "radius": 3,
+   "text": "57",
+   "textPos": "right",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 260,
+   "y": 884,
+   "w": 600,
+   "h": 18,
+   "value": 38,
+   "max": 82,
+   "fill": "accent",
+   "track": false,
+   "radius": 3,
+   "text": "38",
+   "textPos": "right",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 260,
+   "y": 918,
+   "w": 600,
+   "h": 18,
+   "value": 22,
+   "max": 82,
+   "fill": "#C9C8C4",
+   "track": false,
+   "radius": 3,
+   "text": "22",
+   "textPos": "right",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 260,
+   "y": 952,
+   "w": 600,
+   "h": 18,
+   "value": 15,
+   "max": 82,
+   "fill": "#C9C8C4",
+   "track": false,
+   "radius": 3,
+   "text": "15",
+   "textPos": "right",
+   "textColor": "ink",
+   "size": 13
+  }
+ ],
+ "lines": []
+}

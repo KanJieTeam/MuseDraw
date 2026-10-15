@@ -1,0 +1,26 @@
+{
+  "id": "bauhaus",
+  "name": "Bauhaus",
+  "nameZh": "包豪斯",
+  "aliases": ["bauhaus", "包豪斯", "geometric"],
+  "summary": "Primary colours, hard shadows, and shape that carries meaning — circle, square, diamond. For explaining a system's roles at a glance.",
+  "palette": { "bg": "#F0E8D8", "ink": "#151515", "muted": "#4A463F", "red": "#D7263D", "blue": "#1D4FB8", "yellow": "#F2B705", "white": "#FFFBF2", "accent": "#D7263D" },
+  "fonts": { "display": "Archivo, Noto Sans SC, sans-serif", "body": "Archivo, Noto Sans SC, sans-serif", "mono": "Space Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64 },
+  "header": { "layout": "poster", "titleFont": "display", "titleSize": 68, "titleWeight": 900, "titleCase": "upper", "titleLetterSpacing": -1, "titleLineHeight": 0.95, "kickerFont": "mono", "kickerSize": 13, "kickerColor": "red", "kickerWeight": 700, "kickerLetterSpacing": 1, "subFont": "body", "subSize": 18, "subColor": "ink", "figureColor": "ink" },
+  "node": { "font": "display", "size": 17, "weight": 800, "case": "upper", "subFont": "body", "subSize": 13, "tagFont": "mono", "tagSize": 10.5, "tagCase": "upper", "tagWeight": 700, "tagPos": "above", "radius": 0, "stroke": 3, "padding": 14, "align": "center", "shadow": "hard", "shadowOffset": [7, 7], "shadowColor": "ink", "lineHeight": 1.05, "gap": 5 },
+  "tones": {
+    "default": { "fill": "white", "stroke": "ink", "text": "ink", "sub": "muted", "tag": "red" },
+    "red": { "fill": "red", "stroke": "ink", "text": "#FFFFFF", "sub": "#FFE3E6", "tag": "#FFFFFF" },
+    "blue": { "fill": "blue", "stroke": "ink", "text": "#FFFFFF", "sub": "#DCE6FF", "tag": "yellow" },
+    "yellow": { "fill": "yellow", "stroke": "ink", "text": "ink", "sub": "#3E3104", "tag": "ink" },
+    "ink": { "fill": "ink", "stroke": "ink", "text": "#FFFFFF", "sub": "#D2CCBE", "tag": "yellow", "shadow": "none" }
+  },
+  "zone": { "style": "rule", "stroke": 1, "labelFont": "mono", "labelSize": 12, "labelCase": "upper", "letterSpacing": 1, "labelWeight": 700, "labelPad": 0, "ruleWidth": 4, "tones": { "default": { "stroke": "ink", "text": "ink" } } },
+  "edge": { "color": "ink", "width": 3, "radius": 0, "arrow": "triangle", "arrowSize": 12, "gap": 6, "labelFont": "mono", "labelSize": 11.5, "labelWeight": 700, "labelColor": "ink", "labelCase": "upper", "labelPlacement": "on", "labelStyle": "chip", "labelBg": "bg",
+    "kinds": { "event": { "color": "red", "width": 3 }, "sync": { "color": "ink", "width": 3 }, "reply": { "color": "blue", "width": 2.5, "dash": "8 6" } } },
+  "step": { "shape": "circle", "fill": "red", "text": "#FFFFFF", "size": 30, "font": "display", "weight": 900, "fontSize": 17 },
+  "note": { "style": "margin", "font": "body", "size": 15, "color": "ink", "numFont": "display", "numColor": "red", "lineHeight": 1.35 },
+  "legend": { "font": "mono", "size": 12, "color": "ink", "titleColor": "ink", "titleCase": "upper" },
+  "footer": { "text": "MUSEDRAW / BAUHAUS", "font": "mono", "size": 11, "color": "ink", "letterSpacing": 1 }
+}

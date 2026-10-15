@@ -1,0 +1,134 @@
+{
+ "theme": "ink-wash",
+ "size": [
+  1700,
+  1260
+ ],
+ "seal": "档",
+ "kicker": "五类目录 · 一处存放 · 统一命名",
+ "title": "科室知识库目录结构",
+ "subtitle": "一级目录按“用来做什么”分，不按部门分；文件统一以“年月日_名称_版本”命名，新人入职第一周就能自己找到。",
+ "subtitleWidth": 1300,
+ "blocks": [
+  {
+   "type": "tree",
+   "x": 64,
+   "y": 300,
+   "w": 1560,
+   "direction": "right",
+   "nodeW": [
+    220,
+    240,
+    520
+   ],
+   "nodeH": [
+    70,
+    58,
+    54
+   ],
+   "levelGap": 110,
+   "siblingGap": 10,
+   "root": {
+    "label": "科室知识库",
+    "tone": "accent",
+    "children": [
+     {
+      "label": "01 制度与规范",
+      "children": [
+       {
+        "label": "核心制度十八项",
+        "sub": "20260115_核心制度十八项_v3.pdf",
+        "align": "left"
+       },
+       {
+        "label": "护理操作规范",
+        "sub": "20251201_护理操作规范_v5.pdf",
+        "align": "left"
+       },
+       {
+        "label": "院感防控手册",
+        "sub": "20260301_院感防控手册_v2.pdf",
+        "align": "left"
+       }
+      ]
+     },
+     {
+      "label": "02 流程与表单",
+      "children": [
+       {
+        "label": "入院至出院流程",
+        "sub": "20260210_入出院流程_v4.vsdx",
+        "align": "left"
+       },
+       {
+        "label": "交接班记录模板",
+        "sub": "20250901_交接班模板_v2.docx",
+        "align": "left"
+       },
+       {
+        "label": "不良事件上报单",
+        "sub": "20260105_不良事件上报单_v1.docx",
+        "align": "left"
+       }
+      ]
+     },
+     {
+      "label": "03 培训与考核",
+      "children": [
+       {
+        "label": "新人 90 天计划",
+        "sub": "20260801_新人90天计划_v1.pdf",
+        "align": "left"
+       },
+       {
+        "label": "年度培训课表",
+        "sub": "20260101_年度培训课表_v1.xlsx",
+        "align": "left"
+       },
+       {
+        "label": "操作考核评分表",
+        "sub": "20260320_操作考核评分表_v2.xlsx",
+        "align": "left"
+       }
+      ]
+     },
+     {
+      "label": "04 质量改进",
+      "children": [
+       {
+        "label": "品管圈项目档案",
+        "sub": "2026_跌倒品管圈/  （按项目建子文件夹）",
+        "align": "left"
+       },
+       {
+        "label": "月度指标看板",
+        "sub": "202609_护理质量指标.xlsx",
+        "align": "left"
+       },
+       {
+        "label": "根因分析报告",
+        "sub": "20260612_RCA_夜间跌倒_v1.docx",
+        "align": "left"
+       }
+      ]
+     },
+     {
+      "label": "05 会议与决议",
+      "children": [
+       {
+        "label": "周会纪要（按年归档）",
+        "sub": "2026/  20261014_周会纪要.docx",
+        "align": "left"
+       },
+       {
+        "label": "决议与行动项台账",
+        "sub": "决议与行动项台账.xlsx（单文件，持续更新）",
+        "align": "left"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

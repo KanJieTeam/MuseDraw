@@ -1,0 +1,209 @@
+{
+  "id": "riso",
+  "name": "Riso Print",
+  "nameZh": "孔版套印",
+  "aliases": [
+    "riso",
+    "risograph",
+    "套印"
+  ],
+  "summary": "Two fluorescent inks on cream stock: halftone fills, slightly misregistered outlines, multiply blending. For talks, zines and posters with personality.",
+  "palette": {
+    "paper": "#F3ECDD",
+    "blue": "#2648B8",
+    "pink": "#FF4F93",
+    "ink": "#2648B8",
+    "muted": "#5B6FB8",
+    "accent": "#FF4F93"
+  },
+  "fonts": {
+    "display": "Space Grotesk, Noto Sans SC, sans-serif",
+    "body": "Space Grotesk, Noto Sans SC, sans-serif",
+    "mono": "Space Mono, Noto Sans SC, monospace"
+  },
+  "canvas": {
+    "bg": "paper",
+    "margin": 64,
+    "grain": {
+      "opacity": 0.28,
+      "frequency": 1.1,
+      "r": 0.25,
+      "g": 0.2,
+      "b": 0.15,
+      "alpha": 0.55
+    }
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 60,
+    "titleWeight": 700,
+    "titleLetterSpacing": -1.5,
+    "titleColor": "blue",
+    "kickerFont": "mono",
+    "kickerSize": 13,
+    "kickerColor": "pink",
+    "kickerLetterSpacing": 1.5,
+    "kickerWeight": 700,
+    "subFont": "body",
+    "subSize": 18,
+    "subColor": "blue",
+    "figureColor": "pink"
+  },
+  "node": {
+    "font": "display",
+    "size": 18,
+    "weight": 700,
+    "subFont": "mono",
+    "subSize": 11.5,
+    "tagFont": "mono",
+    "tagSize": 10.5,
+    "tagCase": "upper",
+    "tagWeight": 700,
+    "tagLetterSpacing": 1,
+    "tagPos": "above",
+    "radius": 3,
+    "stroke": 2,
+    "padding": 16,
+    "align": "left",
+    "shadow": "offset",
+    "shadowOffset": [
+      4,
+      3
+    ],
+    "shadowColor": "pink",
+    "iconSize": 22,
+    "iconStroke": 2
+  },
+  "tones": {
+    "default": {
+      "fill": "paper",
+      "stroke": "blue",
+      "text": "blue",
+      "sub": "blue",
+      "tag": "pink",
+      "icon": "blue"
+    },
+    "accent": {
+      "fill": "#FF4F93",
+      "stroke": "blue",
+      "text": "blue",
+      "sub": "blue",
+      "tag": "paper",
+      "icon": "blue"
+    },
+    "blue": {
+      "fill": "blue",
+      "stroke": "blue",
+      "text": "paper",
+      "sub": "#D9DEF5",
+      "tag": "pink",
+      "icon": "paper",
+      "shadow": "offset"
+    },
+    "topic": {
+      "pattern": {
+        "type": "hatch",
+        "color": "#2648B8",
+        "gap": 6,
+        "size": 1,
+        "angle": 45,
+        "bg": "#F3ECDD"
+      },
+      "stroke": "blue",
+      "text": "blue",
+      "sub": "blue",
+      "tag": "pink"
+    }
+  },
+  "zone": {
+    "style": "fill",
+    "radius": 6,
+    "stroke": 2,
+    "labelFont": "mono",
+    "labelSize": 12,
+    "labelCase": "upper",
+    "letterSpacing": 1.5,
+    "labelWeight": 700,
+    "labelPad": 18,
+    "tones": {
+      "default": {
+        "pattern": {
+          "type": "dots",
+          "color": "#FF4F93",
+          "gap": 9,
+          "size": 1.05,
+          "angle": 15,
+          "bg": "#F3ECDD"
+        },
+        "stroke": "pink",
+        "text": "pink"
+      },
+      "plain": {
+        "fill": "none",
+        "stroke": "blue",
+        "dash": "2 6",
+        "text": "blue"
+      }
+    }
+  },
+  "edge": {
+    "color": "blue",
+    "width": 2.2,
+    "radius": 14,
+    "arrow": "triangle",
+    "arrowSize": 9,
+    "gap": 4,
+    "labelFont": "mono",
+    "labelSize": 11.5,
+    "labelWeight": 700,
+    "labelColor": "blue",
+    "labelPlacement": "on",
+    "labelStyle": "chip",
+    "labelBg": "paper",
+    "kinds": {
+      "primary": {
+        "color": "pink",
+        "width": 3.2
+      },
+      "read": {
+        "color": "blue",
+        "width": 2.2
+      },
+      "meta": {
+        "color": "blue",
+        "dash": "2 5",
+        "width": 1.6
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "pink",
+    "text": "#F3ECDD",
+    "size": 24,
+    "font": "mono",
+    "weight": 700
+  },
+  "note": {
+    "style": "margin",
+    "font": "body",
+    "size": 15,
+    "color": "blue",
+    "numFont": "display",
+    "numColor": "pink",
+    "lineHeight": 1.38
+  },
+  "legend": {
+    "font": "mono",
+    "size": 11.5,
+    "color": "blue"
+  },
+  "footer": {
+    "text": "MuseDraw · printed in pink + blue",
+    "font": "mono",
+    "size": 11,
+    "color": "pink",
+    "letterSpacing": 1
+  }
+}

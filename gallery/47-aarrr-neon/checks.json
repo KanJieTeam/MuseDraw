@@ -1,0 +1,12 @@
+{
+  "size": [
+    1700,
+    928
+  ],
+  "nodes": 10,
+  "texts": 20,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "theme": "neon"
+}

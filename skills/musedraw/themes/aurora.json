@@ -1,0 +1,309 @@
+{
+  "id": "aurora",
+  "name": "Aurora Glass",
+  "nameZh": "极光玻璃",
+  "aliases": [
+    "aurora",
+    "glass",
+    "glassmorphism",
+    "极光"
+  ],
+  "summary": "Midnight canvas with aurora glows, frosted cards and luminous curved links. For AI products, launches and keynote slides.",
+  "palette": {
+    "bg": "#090A18",
+    "ink": "#F3F2FF",
+    "muted": "#A3A6C9",
+    "violet": "#A78BFA",
+    "cyan": "#22D3EE",
+    "pink": "#F472B6",
+    "accent": "#A78BFA",
+    "glass": "#FFFFFF0F",
+    "edge": "#FFFFFF33"
+  },
+  "fonts": {
+    "display": "Space Grotesk, Noto Sans SC, sans-serif",
+    "body": "Inter, Noto Sans SC, sans-serif",
+    "mono": "JetBrains Mono, Noto Sans SC, monospace"
+  },
+  "canvas": {
+    "bg": "bg",
+    "margin": 64,
+    "glows": [
+      {
+        "x": 0.18,
+        "y": 0.22,
+        "r": 0.34,
+        "color": "#6D28D9",
+        "opacity": 0.55
+      },
+      {
+        "x": 0.86,
+        "y": 0.78,
+        "r": 0.36,
+        "color": "#0891B2",
+        "opacity": 0.5
+      },
+      {
+        "x": 0.62,
+        "y": 0.05,
+        "r": 0.22,
+        "color": "#DB2777",
+        "opacity": 0.35
+      }
+    ],
+    "grain": {
+      "opacity": 0.1,
+      "frequency": 0.9,
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "alpha": 0.4
+    }
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 52,
+    "titleWeight": 700,
+    "titleLetterSpacing": -1.5,
+    "kickerFont": "mono",
+    "kickerSize": 12,
+    "kickerColor": "cyan",
+    "kickerLetterSpacing": 2.2,
+    "subFont": "body",
+    "subSize": 17,
+    "subColor": "muted",
+    "figureColor": "muted"
+  },
+  "node": {
+    "font": "display",
+    "size": 17,
+    "weight": 600,
+    "subFont": "body",
+    "subSize": 13,
+    "tagFont": "mono",
+    "tagSize": 10,
+    "tagCase": "upper",
+    "tagLetterSpacing": 1.5,
+    "tagWeight": 500,
+    "tagPos": "above",
+    "radius": 16,
+    "stroke": 1,
+    "padding": 18,
+    "align": "left",
+    "iconSize": 22,
+    "iconStroke": 1.5,
+    "gap": 5
+  },
+  "tones": {
+    "default": {
+      "fill": "glass",
+      "stroke": "edge",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "cyan",
+      "icon": "#C7C9F0"
+    },
+    "accent": {
+      "gradient": [
+        "#7C3AED",
+        "#0E7490"
+      ],
+      "stroke": "#FFFFFF55",
+      "text": "#FFFFFF",
+      "sub": "#E2DEFF",
+      "tag": "#BDF4FF",
+      "icon": "#FFFFFF",
+      "glow": 10
+    },
+    "violet": {
+      "fill": "#A78BFA1F",
+      "stroke": "#A78BFA88",
+      "text": "ink",
+      "sub": "#CFC4FB",
+      "tag": "violet",
+      "icon": "violet"
+    },
+    "cyan": {
+      "fill": "#22D3EE14",
+      "stroke": "#22D3EE77",
+      "text": "ink",
+      "sub": "#A6E9F5",
+      "tag": "cyan",
+      "icon": "cyan"
+    },
+    "pink": {
+      "fill": "#F472B614",
+      "stroke": "#F472B688",
+      "text": "ink",
+      "sub": "#F6B8D6",
+      "tag": "pink",
+      "icon": "pink"
+    },
+    "ghost": {
+      "fill": "none",
+      "stroke": "#FFFFFF2A",
+      "dash": "4 5",
+      "text": "muted",
+      "sub": "muted",
+      "tag": "muted"
+    },
+    "noise1": {
+      "pattern": {
+        "type": "dots",
+        "color": "#E9E6FF",
+        "gap": 9,
+        "size": 0.6,
+        "angle": 17,
+        "bg": "#1A1838"
+      },
+      "stroke": "#FFFFFF44",
+      "text": "#FFFFFF",
+      "sub": "#C7C9F0",
+      "tag": "cyan",
+      "plate": "#0E0D22"
+    },
+    "noise2": {
+      "pattern": {
+        "type": "dots",
+        "color": "#E9E6FF",
+        "gap": 6,
+        "size": 1.0,
+        "angle": 28,
+        "bg": "#1A1838"
+      },
+      "stroke": "#FFFFFF44",
+      "text": "#FFFFFF",
+      "sub": "#C7C9F0",
+      "tag": "cyan",
+      "plate": "#0E0D22"
+    },
+    "noise3": {
+      "pattern": {
+        "type": "dots",
+        "color": "#E9E6FF",
+        "gap": 4.5,
+        "size": 1.3,
+        "angle": 39,
+        "bg": "#1A1838"
+      },
+      "stroke": "#FFFFFF44",
+      "text": "#FFFFFF",
+      "sub": "#C7C9F0",
+      "tag": "cyan",
+      "plate": "#0E0D22"
+    },
+    "noise4": {
+      "pattern": {
+        "type": "dots",
+        "color": "#E9E6FF",
+        "gap": 3.5,
+        "size": 1.6,
+        "angle": 50,
+        "bg": "#1A1838"
+      },
+      "stroke": "#FFFFFF44",
+      "text": "#FFFFFF",
+      "sub": "#C7C9F0",
+      "tag": "cyan",
+      "plate": "#0E0D22"
+    },
+    "clean": {
+      "gradient": [
+        "#F472B6",
+        "#22D3EE"
+      ],
+      "stroke": "#FFFFFF66",
+      "text": "#0B0B1A",
+      "sub": "#1A1A2A",
+      "tag": "#0B0B1A"
+    }
+  },
+  "zone": {
+    "style": "outline",
+    "radius": 24,
+    "stroke": 1,
+    "labelFont": "mono",
+    "labelSize": 11,
+    "labelCase": "upper",
+    "letterSpacing": 2,
+    "labelWeight": 500,
+    "labelPad": 20,
+    "tones": {
+      "default": {
+        "fill": "#FFFFFF08",
+        "stroke": "#FFFFFF1F",
+        "text": "muted"
+      },
+      "dashed": {
+        "fill": "none",
+        "stroke": "#FFFFFF26",
+        "dash": "4 6",
+        "text": "muted"
+      }
+    }
+  },
+  "edge": {
+    "color": "#C4C6EA88",
+    "width": 1.6,
+    "route": "curve",
+    "arrow": "triangle",
+    "arrowSize": 7,
+    "gap": 4,
+    "labelFont": "mono",
+    "labelSize": 11,
+    "labelColor": "muted",
+    "labelPlacement": "on",
+    "labelStyle": "chip",
+    "labelBg": "#11132A",
+    "labelRadius": 10,
+    "kinds": {
+      "primary": {
+        "color": "violet",
+        "width": 2.2,
+        "glow": 3
+      },
+      "tool": {
+        "color": "cyan",
+        "width": 1.8
+      },
+      "memory": {
+        "color": "pink",
+        "width": 1.8,
+        "dash": "5 5"
+      },
+      "guard": {
+        "color": "#FFFFFF66",
+        "dash": "2 5"
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "#FFFFFF",
+    "text": "#090A18",
+    "size": 22,
+    "font": "mono",
+    "weight": 700
+  },
+  "note": {
+    "style": "comment",
+    "font": "body",
+    "size": 13.5,
+    "color": "muted",
+    "prefix": "",
+    "lineHeight": 1.5
+  },
+  "legend": {
+    "font": "mono",
+    "size": 11,
+    "color": "muted"
+  },
+  "footer": {
+    "text": "MuseDraw · Aurora Glass",
+    "font": "mono",
+    "size": 10.5,
+    "color": "#5D6088",
+    "letterSpacing": 1.5
+  }
+}

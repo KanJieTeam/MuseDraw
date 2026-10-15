@@ -1,0 +1,181 @@
+{
+ "theme": "product",
+ "size": [
+  1680,
+  1030
+ ],
+ "kicker": "Product roadmap · FY2027",
+ "title": "Product roadmap FY2027",
+ "subtitle": "Four tracks, one calendar. Bars are committed work, the outline bar is a bet we will size in Q2, and diamonds are dates we have promised to customers.",
+ "subtitleWidth": 1140,
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 64,
+   "y": 258,
+   "w": 1552,
+   "labelW": 260,
+   "rowH": 46,
+   "groupH": 34,
+   "columns": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+   ],
+   "barRadius": 8,
+   "today": 3.4,
+   "todayLabel": "today · Apr 12",
+   "groupColor": "accent",
+   "tasks": [
+    {
+     "group": "Platform",
+     "label": "Usage-based billing",
+     "start": 0,
+     "end": 3,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "Platform",
+     "label": "EU data residency",
+     "start": 2,
+     "end": 6,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "Platform",
+     "label": "SSO + SCIM for everyone",
+     "start": 5,
+     "end": 7.5,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "Mobile",
+     "label": "Offline mode",
+     "start": 1,
+     "end": 4.5,
+     "tone": "tealBar"
+    },
+    {
+     "group": "Mobile",
+     "label": "Mobile 3.0 GA",
+     "start": 5,
+     "milestone": true,
+     "tone": "accent",
+     "note": "promised to 3 enterprise accounts"
+    },
+    {
+     "group": "Growth",
+     "label": "Self-serve onboarding v2",
+     "start": 3,
+     "end": 6,
+     "tone": "amberBar"
+    },
+    {
+     "group": "Growth",
+     "label": "Template gallery",
+     "start": 6,
+     "end": 8,
+     "tone": "amberBar"
+    },
+    {
+     "group": "Growth",
+     "label": "Partner marketplace",
+     "start": 8,
+     "end": 11.5,
+     "tone": "ghost",
+     "note": "bet"
+    },
+    {
+     "group": "AI",
+     "label": "Assistant in editor",
+     "start": 4,
+     "end": 7,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "AI",
+     "label": "Workflow agents (beta)",
+     "start": 7,
+     "end": 10,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "AI",
+     "label": "Annual conference launch",
+     "start": 9.5,
+     "milestone": true,
+     "tone": "accent"
+    }
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "x": 324,
+   "y": 236,
+   "text": "Q1",
+   "font": "display",
+   "size": 14,
+   "weight": 700,
+   "color": "muted"
+  },
+  {
+   "x": 712,
+   "y": 236,
+   "text": "Q2",
+   "font": "display",
+   "size": 14,
+   "weight": 700,
+   "color": "muted"
+  },
+  {
+   "x": 1100,
+   "y": 236,
+   "text": "Q3",
+   "font": "display",
+   "size": 14,
+   "weight": 700,
+   "color": "muted"
+  },
+  {
+   "x": 1488,
+   "y": 236,
+   "text": "Q4",
+   "font": "display",
+   "size": 14,
+   "weight": 700,
+   "color": "muted"
+  }
+ ],
+ "legend": {
+  "x": 1000,
+  "y": 980,
+  "items": [
+   {
+    "tone": "indigoBar",
+    "label": "platform & AI"
+   },
+   {
+    "tone": "tealBar",
+    "label": "mobile"
+   },
+   {
+    "tone": "amberBar",
+    "label": "growth"
+   },
+   {
+    "tone": "ghost",
+    "label": "unsized bet"
+   }
+  ]
+ }
+}

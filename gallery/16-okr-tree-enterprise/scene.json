@@ -1,0 +1,693 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1680,
+  980
+ ],
+ "kicker": "新业务部 · 第二季度复盘",
+ "title": "2027 年度 OKR 进度",
+ "subtitle": "数据截至 6 月 30 日。条形为关键结果完成度，虚线为时间进度；条形停在虚线左侧，即进度落后于时间。",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "st1",
+   "label": "风险",
+   "shape": "pill",
+   "tone": "amber",
+   "x": 1236,
+   "y": 346,
+   "w": 64,
+   "h": 30,
+   "size": 14
+  },
+  {
+   "id": "st2",
+   "label": "落后",
+   "shape": "pill",
+   "tone": "red",
+   "x": 1236,
+   "y": 474,
+   "w": 64,
+   "h": 30,
+   "size": 14
+  },
+  {
+   "id": "st3",
+   "label": "正常",
+   "shape": "pill",
+   "tone": "green",
+   "x": 1236,
+   "y": 602,
+   "w": 64,
+   "h": 30,
+   "size": 14
+  },
+  {
+   "id": "st4",
+   "label": "风险",
+   "shape": "pill",
+   "tone": "amber",
+   "x": 1236,
+   "y": 730,
+   "w": 64,
+   "h": 30,
+   "size": 14
+  }
+ ],
+ "texts": [
+  {
+   "x": 560,
+   "y": 276,
+   "text": "关键结果",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 900,
+   "y": 276,
+   "text": "完成度",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 1236,
+   "y": 276,
+   "text": "状态",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 1330,
+   "y": 276,
+   "text": "关键举措",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 1620,
+   "y": 276,
+   "text": "负责团队",
+   "size": 13,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 336,
+   "text": "KR1",
+   "size": 14,
+   "color": "blue",
+   "weight": 900,
+   "letterSpacing": 1
+  },
+  {
+   "x": 560,
+   "y": 368,
+   "text": "新签客户 120 家",
+   "size": 22,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 560,
+   "y": 396,
+   "text": "去年 72 家",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 900,
+   "y": 340,
+   "text": "46 / 120",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 1200,
+   "y": 340,
+   "text": "38%",
+   "size": 15,
+   "color": "#E8A33D",
+   "weight": 900,
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 338,
+   "text": "行业标杆客户攻坚",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 338,
+   "text": "销售一部",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 366,
+   "text": "渠道伙伴计划",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 366,
+   "text": "生态部",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 394,
+   "text": "线索评分模型上线",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 394,
+   "text": "市场部",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 464,
+   "text": "KR2",
+   "size": 14,
+   "color": "blue",
+   "weight": 900,
+   "letterSpacing": 1
+  },
+  {
+   "x": 560,
+   "y": 496,
+   "text": "客单价提升 30%",
+   "size": 22,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 560,
+   "y": 524,
+   "text": "基线 18.6 万元",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 900,
+   "y": 468,
+   "text": "+9% / +30%",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 1200,
+   "y": 468,
+   "text": "30%",
+   "size": 15,
+   "color": "#C2412D",
+   "weight": 900,
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 466,
+   "text": "高级版功能打包",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 466,
+   "text": "产品部",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 494,
+   "text": "年付折扣策略",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 494,
+   "text": "定价组",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 522,
+   "text": "增购提醒自动化",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 522,
+   "text": "客户成功",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 592,
+   "text": "KR3",
+   "size": 14,
+   "color": "blue",
+   "weight": 900,
+   "letterSpacing": 1
+  },
+  {
+   "x": 560,
+   "y": 624,
+   "text": "续约率达到 92%",
+   "size": 22,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 560,
+   "y": 652,
+   "text": "基线 88%",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 900,
+   "y": 596,
+   "text": "90.5%",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 1200,
+   "y": 596,
+   "text": "62%",
+   "size": 15,
+   "color": "#2F8F5B",
+   "weight": 900,
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 594,
+   "text": "客户健康度预警",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 594,
+   "text": "客户成功",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 622,
+   "text": "季度业务回顾",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 622,
+   "text": "大客户部",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 720,
+   "text": "KR4",
+   "size": 14,
+   "color": "blue",
+   "weight": 900,
+   "letterSpacing": 1
+  },
+  {
+   "x": 560,
+   "y": 752,
+   "text": "交付周期缩短到 21 天",
+   "size": 22,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 560,
+   "y": 780,
+   "text": "基线 45 天",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 900,
+   "y": 724,
+   "text": "36 天",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 1200,
+   "y": 724,
+   "text": "38%",
+   "size": 15,
+   "color": "#E8A33D",
+   "weight": 900,
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 722,
+   "text": "标准化实施模板",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 722,
+   "text": "交付中心",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 750,
+   "text": "配置化替代定制",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 750,
+   "text": "研发",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1330,
+   "y": 778,
+   "text": "伙伴认证交付",
+   "size": 14.5,
+   "color": "ink"
+  },
+  {
+   "x": 1620,
+   "y": 778,
+   "text": "生态部",
+   "size": 13.5,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1050,
+   "y": 834,
+   "text": "时间进度 50%",
+   "size": 12.5,
+   "color": "navy",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 60,
+   "y": 276,
+   "text": "年度目标",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 60,
+   "y": 330,
+   "text": "新业务收入",
+   "size": 34,
+   "color": "navy",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 376,
+   "text": "1.2 亿 → 2.4 亿元",
+   "size": 34,
+   "color": "navy",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 486,
+   "text": "1.62 亿",
+   "size": 72,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 522,
+   "text": "上半年累计新业务收入",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 594,
+   "text": "完成 35%",
+   "size": 15,
+   "color": "accent",
+   "weight": 900
+  },
+  {
+   "x": 260,
+   "y": 594,
+   "text": "时间 50%",
+   "size": 13,
+   "color": "navy",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 60,
+   "y": 664,
+   "text": "负责人",
+   "size": 13,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 690,
+   "text": "新业务总经理",
+   "size": 16,
+   "color": "ink",
+   "weight": 700
+  },
+  {
+   "x": 60,
+   "y": 760,
+   "text": "四个关键结果中两个处于风险、一个落后。",
+   "size": 14,
+   "color": "ink",
+   "w": 420
+  },
+  {
+   "x": 60,
+   "y": 786,
+   "text": "最大缺口在客单价。",
+   "size": 14,
+   "color": "ink",
+   "w": 420
+  }
+ ],
+ "bars": [
+  {
+   "x": 900,
+   "y": 356,
+   "w": 300,
+   "h": 14,
+   "value": 0.38333333333333336,
+   "fill": "#E8A33D",
+   "track": "pale",
+   "radius": 3
+  },
+  {
+   "x": 900,
+   "y": 484,
+   "w": 300,
+   "h": 14,
+   "value": 0.3,
+   "fill": "#C2412D",
+   "track": "pale",
+   "radius": 3
+  },
+  {
+   "x": 900,
+   "y": 612,
+   "w": 300,
+   "h": 14,
+   "value": 0.625,
+   "fill": "#2F8F5B",
+   "track": "pale",
+   "radius": 3
+  },
+  {
+   "x": 900,
+   "y": 740,
+   "w": 300,
+   "h": 14,
+   "value": 0.375,
+   "fill": "#E8A33D",
+   "track": "pale",
+   "radius": 3
+  },
+  {
+   "x": 60,
+   "y": 548,
+   "w": 400,
+   "h": 18,
+   "value": 0.35,
+   "fill": "accent",
+   "track": "pale",
+   "radius": 3
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     560,
+     290
+    ],
+    [
+     1620,
+     290
+    ]
+   ],
+   "color": "navy",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     560,
+     428
+    ],
+    [
+     1620,
+     428
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     556
+    ],
+    [
+     1620,
+     556
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     684
+    ],
+    [
+     1620,
+     684
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     812
+    ],
+    [
+     1620,
+     812
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1050,
+     308
+    ],
+    [
+     1050,
+     804
+    ]
+   ],
+   "color": "navy",
+   "width": 1.2,
+   "dash": "4 4"
+  },
+  {
+   "points": [
+    [
+     260,
+     540
+    ],
+    [
+     260,
+     574
+    ]
+   ],
+   "color": "navy",
+   "width": 1.5,
+   "dash": "3 3"
+  },
+  {
+   "points": [
+    [
+     510,
+     276
+    ],
+    [
+     510,
+     812
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  }
+ ]
+}

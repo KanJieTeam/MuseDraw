@@ -1,0 +1,224 @@
+{
+ "theme": "swiss",
+ "size": [
+  1640,
+  820
+ ],
+ "kicker": "Lab safety · chemical lifecycle",
+ "figure": "EHS / 02",
+ "title": "Chemicals, from\norder to disposal",
+ "subtitle": "Six steps every reagent goes through. Storage is where most incidents start, so it is the one step in red.",
+ "subtitleWidth": 820,
+ "nodes": [
+  {
+   "id": "s0",
+   "label": "Order",
+   "sub": "Check SDS before buying; smallest pack that works",
+   "tone": "default",
+   "x": 64,
+   "y": 340,
+   "w": 228,
+   "h": 150,
+   "step": 1,
+   "valign": "top"
+  },
+  {
+   "id": "s1",
+   "label": "Receive",
+   "sub": "Log lot number and expiry in the inventory",
+   "tone": "default",
+   "x": 320,
+   "y": 340,
+   "w": 228,
+   "h": 150,
+   "step": 2,
+   "valign": "top"
+  },
+  {
+   "id": "s2",
+   "label": "Store",
+   "sub": "Segregate by hazard class, not alphabet",
+   "tone": "accent",
+   "x": 576,
+   "y": 340,
+   "w": 228,
+   "h": 150,
+   "step": 3,
+   "valign": "top"
+  },
+  {
+   "id": "s3",
+   "label": "Use",
+   "sub": "Fume hood for volatiles; label every secondary container",
+   "tone": "default",
+   "x": 832,
+   "y": 340,
+   "w": 228,
+   "h": 150,
+   "step": 4,
+   "valign": "top"
+  },
+  {
+   "id": "s4",
+   "label": "Waste",
+   "sub": "Separate halogenated from non-halogenated",
+   "tone": "default",
+   "x": 1088,
+   "y": 340,
+   "w": 228,
+   "h": 150,
+   "step": 5,
+   "valign": "top"
+  },
+  {
+   "id": "s5",
+   "label": "Dispose",
+   "sub": "Collected by the EHS contractor every Friday",
+   "tone": "default",
+   "x": 1344,
+   "y": 340,
+   "w": 228,
+   "h": 150,
+   "step": 6,
+   "valign": "top"
+  }
+ ],
+ "edges": [
+  {
+   "from": "s0",
+   "to": "s1",
+   "kind": "primary"
+  },
+  {
+   "from": "s1",
+   "to": "s2",
+   "kind": "primary"
+  },
+  {
+   "from": "s2",
+   "to": "s3",
+   "kind": "primary"
+  },
+  {
+   "from": "s3",
+   "to": "s4",
+   "kind": "primary"
+  },
+  {
+   "from": "s4",
+   "to": "s5",
+   "kind": "primary"
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 580,
+   "text": "NEVER STORE TOGETHER",
+   "size": 13,
+   "weight": 700,
+   "color": "accent",
+   "font": "mono"
+  },
+  {
+   "x": 64,
+   "y": 632,
+   "text": "Oxidisers",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 64,
+   "y": 662,
+   "text": "×  Flammables",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 64,
+   "y": 692,
+   "text": "→ fire",
+   "size": 15,
+   "color": "muted"
+  },
+  {
+   "x": 454,
+   "y": 632,
+   "text": "Acids",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 454,
+   "y": 662,
+   "text": "×  Bases",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 454,
+   "y": 692,
+   "text": "→ heat",
+   "size": 15,
+   "color": "muted"
+  },
+  {
+   "x": 844,
+   "y": 632,
+   "text": "Acids",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 844,
+   "y": 662,
+   "text": "×  Cyanides",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 844,
+   "y": 692,
+   "text": "→ HCN gas",
+   "size": 15,
+   "color": "muted"
+  },
+  {
+   "x": 1234,
+   "y": 632,
+   "text": "Water-reactive",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 1234,
+   "y": 662,
+   "text": "×  Aqueous",
+   "size": 22,
+   "weight": 800,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 1234,
+   "y": 692,
+   "text": "→ H₂ / fire",
+   "size": 15,
+   "color": "muted"
+  }
+ ]
+}

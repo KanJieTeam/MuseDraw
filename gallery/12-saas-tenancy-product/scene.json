@@ -1,0 +1,310 @@
+{
+ "theme": "product",
+ "size": [
+  1680,
+  1000
+ ],
+ "kicker": "Multi-tenant SaaS on AWS",
+ "title": "Multi-tenant SaaS: pooled and silo tiers",
+ "subtitle": "One codebase and one pipeline serve every tenant. The tier in the token decides where a request runs: shared infrastructure for Starter and Pro, a dedicated account for Enterprise.",
+ "subtitleWidth": 1100,
+ "zones": [
+  {
+   "id": "control",
+   "label": "Control plane",
+   "sub": "shared by every tenant",
+   "x": 820,
+   "y": 262,
+   "w": 796,
+   "h": 198
+  },
+  {
+   "id": "pooled",
+   "label": "Application plane · pooled",
+   "sub": "Starter + Pro share compute and one database",
+   "tone": "indigo",
+   "x": 820,
+   "y": 488,
+   "w": 796,
+   "h": 210
+  },
+  {
+   "id": "silo",
+   "label": "Application plane · silo",
+   "sub": "Enterprise tenants get their own AWS account",
+   "tone": "teal",
+   "x": 820,
+   "y": 726,
+   "w": 796,
+   "h": 210
+  }
+ ],
+ "nodes": [
+  {
+   "id": "acme",
+   "label": "Acme",
+   "tag": "Starter",
+   "x": 64,
+   "y": 300,
+   "w": 200,
+   "h": 72,
+   "tone": "indigo"
+  },
+  {
+   "id": "globex",
+   "label": "Globex",
+   "tag": "Pro",
+   "x": 64,
+   "y": 410,
+   "w": 200,
+   "h": 72,
+   "tone": "indigo"
+  },
+  {
+   "id": "initech",
+   "label": "Initech",
+   "tag": "Enterprise",
+   "x": 64,
+   "y": 600,
+   "w": 200,
+   "h": 72,
+   "tone": "teal"
+  },
+  {
+   "id": "edge",
+   "label": "CloudFront + WAF",
+   "tag": "edge",
+   "sub": "TLS, bot rules",
+   "icon": "shield",
+   "x": 316,
+   "y": 452,
+   "w": 206,
+   "h": 92
+  },
+  {
+   "id": "apigw",
+   "label": "API Gateway",
+   "tag": "routing",
+   "sub": "JWT authorizer, usage plan per tier",
+   "icon": "key",
+   "tone": "accent",
+   "x": 566,
+   "y": 446,
+   "w": 214,
+   "h": 104
+  },
+  {
+   "id": "onboard",
+   "label": "Onboarding",
+   "tag": "workflow",
+   "sub": "provisions per tier",
+   "x": 844,
+   "y": 330,
+   "w": 176,
+   "h": 104
+  },
+  {
+   "id": "registry",
+   "label": "Tenant registry",
+   "tag": "DynamoDB",
+   "sub": "tier, region, limits",
+   "x": 1036,
+   "y": 330,
+   "w": 176,
+   "h": 104
+  },
+  {
+   "id": "identity",
+   "label": "Identity",
+   "tag": "Cognito",
+   "sub": "tenant_id in every token",
+   "x": 1228,
+   "y": 330,
+   "w": 176,
+   "h": 104
+  },
+  {
+   "id": "billing",
+   "label": "Metering",
+   "tag": "billing",
+   "sub": "usage events → Stripe",
+   "x": 1420,
+   "y": 330,
+   "w": 172,
+   "h": 104
+  },
+  {
+   "id": "p-svc",
+   "label": "App services",
+   "tag": "ECS Fargate",
+   "sub": "stateless, tenant-aware",
+   "icon": "layers",
+   "x": 844,
+   "y": 560,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "p-db",
+   "label": "Aurora Postgres",
+   "tag": "shared",
+   "sub": "row-level security on tenant_id",
+   "shape": "cylinder",
+   "x": 1100,
+   "y": 554,
+   "w": 236,
+   "h": 122
+  },
+  {
+   "id": "p-cache",
+   "label": "Redis",
+   "tag": "shared",
+   "sub": "keys prefixed by tenant",
+   "x": 1362,
+   "y": 560,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "s-svc",
+   "label": "App services",
+   "tag": "dedicated",
+   "sub": "same image, own cluster",
+   "icon": "layers",
+   "tone": "teal",
+   "x": 844,
+   "y": 798,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "s-db",
+   "label": "Aurora Postgres",
+   "tag": "dedicated",
+   "sub": "own instance, own backups",
+   "shape": "cylinder",
+   "tone": "teal",
+   "x": 1100,
+   "y": 792,
+   "w": 236,
+   "h": 122
+  },
+  {
+   "id": "s-kms",
+   "label": "KMS key",
+   "tag": "customer-managed",
+   "sub": "BYOK, revocable",
+   "icon": "lock",
+   "tone": "teal",
+   "x": 1362,
+   "y": 798,
+   "w": 230,
+   "h": 110
+  }
+ ],
+ "edges": [
+  {
+   "from": "acme",
+   "to": "edge",
+   "mid": 290,
+   "toAt": 0.5
+  },
+  {
+   "from": "globex",
+   "to": "edge",
+   "mid": 290,
+   "toAt": 0.5
+  },
+  {
+   "from": "initech",
+   "to": "edge",
+   "mid": 290,
+   "toAt": 0.5
+  },
+  {
+   "from": "edge",
+   "to": "apigw"
+  },
+  {
+   "from": "apigw",
+   "to": "identity",
+   "fromSide": "t",
+   "toSide": "b",
+   "mid": 440,
+   "kind": "async",
+   "label": "verify token",
+   "labelAt": [
+    1040,
+    440
+   ]
+  },
+  {
+   "from": "apigw",
+   "to": "p-svc",
+   "kind": "primary",
+   "fromAt": 0.62,
+   "mid": 800,
+   "label": "Starter · Pro"
+  },
+  {
+   "from": "apigw",
+   "to": "s-svc",
+   "kind": "teal",
+   "fromSide": "b",
+   "toSide": "l",
+   "label": "Enterprise",
+   "labelAt": [
+    673,
+    760
+   ]
+  },
+  {
+   "from": "p-svc",
+   "to": "p-db"
+  },
+  {
+   "from": "p-db",
+   "to": "p-cache",
+   "direction": "none",
+   "arrow": "none",
+   "dash": "3 4"
+  },
+  {
+   "from": "s-svc",
+   "to": "s-db",
+   "kind": "teal"
+  },
+  {
+   "from": "s-db",
+   "to": "s-kms",
+   "kind": "teal"
+  }
+ ],
+ "notes": [
+  {
+   "title": "Why two planes?",
+   "text": "Pooled tenants are cheap to serve; silo tenants buy isolation and their own keys. The control plane stays single, so onboarding, billing and identity never fork.",
+   "x": 64,
+   "y": 760,
+   "w": 520
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 950,
+  "items": [
+   {
+    "tone": "indigo",
+    "label": "pooled tier"
+   },
+   {
+    "tone": "teal",
+    "label": "silo tier"
+   },
+   {
+    "kind": "async",
+    "label": "check"
+   }
+  ]
+ }
+}

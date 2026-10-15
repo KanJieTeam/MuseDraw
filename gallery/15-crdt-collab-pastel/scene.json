@@ -1,0 +1,188 @@
+{
+ "theme": "pastel",
+ "size": [
+  1600,
+  900
+ ],
+ "kicker": "CRDT · 以 Yjs 为例",
+ "title": "实时协同编辑（CRDT）架构",
+ "subtitle": "两个人同时改同一段文字，为什么不会互相覆盖？每个客户端都有完整副本，只交换“增量”，而合并结果与到达顺序无关。",
+ "subtitleWidth": 1200,
+ "nodes": [
+  {
+   "id": "a",
+   "label": "客户端 A",
+   "tag": "浏览器，本地副本",
+   "sub": "Y.Doc 绑定编辑器",
+   "icon": "browser",
+   "tone": "blue",
+   "x": 72,
+   "y": 290,
+   "w": 260,
+   "h": 112,
+   "step": 1
+  },
+  {
+   "id": "b",
+   "label": "客户端 B",
+   "tag": "App，可离线",
+   "sub": "断网照常编辑",
+   "icon": "phone",
+   "tone": "purple",
+   "x": 72,
+   "y": 500,
+   "w": 260,
+   "h": 112,
+   "step": 4
+  },
+  {
+   "id": "gw",
+   "label": "WebSocket 网关",
+   "tag": "连接层",
+   "sub": "按文档 ID 分房间",
+   "icon": "globe",
+   "x": 452,
+   "y": 392,
+   "w": 250,
+   "h": 120
+  },
+  {
+   "id": "collab",
+   "label": "协同服务",
+   "tag": "房间",
+   "sub": "转发增量，维护在线列表",
+   "icon": "users",
+   "tone": "orange",
+   "x": 812,
+   "y": 392,
+   "w": 260,
+   "h": 120,
+   "step": 3
+  },
+  {
+   "id": "aware",
+   "label": "在线感知",
+   "tag": "Awareness，不落库",
+   "sub": "光标、选区、谁在线",
+   "icon": "eye",
+   "tone": "yellow",
+   "x": 812,
+   "y": 600,
+   "w": 260,
+   "h": 100
+  },
+  {
+   "id": "log",
+   "label": "增量日志",
+   "tag": "追加写入",
+   "sub": "每条 update 可回放",
+   "icon": "doc",
+   "tone": "green",
+   "x": 1192,
+   "y": 300,
+   "w": 260,
+   "h": 104
+  },
+  {
+   "id": "snap",
+   "label": "定时快照",
+   "tag": "Postgres / S3",
+   "sub": "压缩历史，加速首屏",
+   "icon": "layers",
+   "tone": "green",
+   "x": 1192,
+   "y": 500,
+   "w": 260,
+   "h": 104,
+   "step": 5
+  }
+ ],
+ "edges": [
+  {
+   "from": "a",
+   "to": "gw",
+   "kind": "primary",
+   "both": true,
+   "label": "增量 update",
+   "step": 2
+  },
+  {
+   "from": "b",
+   "to": "gw",
+   "kind": "primary",
+   "both": true
+  },
+  {
+   "from": "gw",
+   "to": "collab",
+   "kind": "primary",
+   "both": true
+  },
+  {
+   "from": "collab",
+   "to": "aware",
+   "kind": "soft",
+   "both": true
+  },
+  {
+   "from": "collab",
+   "to": "log",
+   "kind": "orange",
+   "label": "持久化"
+  },
+  {
+   "from": "log",
+   "to": "snap",
+   "kind": "orange",
+   "label": "合并压缩"
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "本地先改。界面不等服务器，零延迟。",
+   "x": 72,
+   "y": 770,
+   "w": 260
+  },
+  {
+   "num": "2",
+   "text": "只发送增量，通常几十个字节，而不是整篇文档。",
+   "x": 372,
+   "y": 770,
+   "w": 260
+  },
+  {
+   "num": "3",
+   "text": "服务端不做冲突判断，只把增量转发给同房间的人。",
+   "x": 672,
+   "y": 770,
+   "w": 260
+  },
+  {
+   "num": "4",
+   "text": "各端用 CRDT 合并，先到后到结果都一样。",
+   "x": 972,
+   "y": 770,
+   "w": 260
+  },
+  {
+   "num": "5",
+   "text": "定期把日志压成快照，新加入的人秒开。",
+   "x": 1272,
+   "y": 770,
+   "w": 260
+  }
+ ],
+ "zones": [
+  {
+   "id": "notes-rule",
+   "label": "",
+   "x": 72,
+   "y": 730,
+   "w": 1460,
+   "h": 1,
+   "style": "rule"
+  }
+ ]
+}

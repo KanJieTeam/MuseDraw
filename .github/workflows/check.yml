@@ -49,11 +49,25 @@ jobs:
         run: npm install --no-save --prefix output/browser-deps playwright@1.63.0
       - name: Install Chromium for browser fixtures
         run: node output/browser-deps/node_modules/playwright/cli.js install --with-deps chromium
-      - name: Unified checks including real layout and rejected-input fixtures
-        run: python scripts/check.py --playwright output/browser-deps/node_modules/playwright/index.mjs
+      - name: Install locked scene-engine fonts without lifecycle scripts
+        run: npm ci --prefix skills/musedraw --ignore-scripts
+      - name: Unified offline checks including all 100 current SVG scenes
+        run: python scripts/check.py
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-      - name: Check current style samples, clipboard, previews and downloads
+      - name: Render four current themes with bundled fonts and Chromium
+        shell: python
+        run: |
+          import json, pathlib, subprocess
+          root = pathlib.Path.cwd()
+          items = json.loads((root / 'gallery/catalog.json').read_text(encoding='utf-8'))['items']
+          for theme in ('editorial', 'blueprint', 'ink-wash', 'chalkboard'):
+              item = next(item for item in items if item['theme'] == theme)
+              output = root / 'output/engine-browser' / item['slug']
+              subprocess.run(['node', 'skills/musedraw/scripts/musedraw.mjs', 'render', str(root / item['path'] / 'scene.json'), '--out', str(output), '--playwright', str(root / 'output/browser-deps/node_modules/playwright/index.mjs'), '--fonts', str(root / 'skills/musedraw/node_modules')], check=True)
+              checks = json.loads((output / 'checks.json').read_text(encoding='utf-8'))
+              assert checks['passed'] and not checks['warnings'] and not checks['missingFonts'], checks
+      - name: Check current catalog, copied prompts, theme filters and downloads
         run: |
           python scripts/build_gallery_site.py
           node scripts/check_gallery_browser.mjs --site output/site --playwright output/browser-deps/node_modules/playwright/index.mjs
@@ -62,4 +76,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: gallery-browser-qa
-          path: output/gallery-qa
+          path: |
+            output/gallery-qa
+            output/engine-browser

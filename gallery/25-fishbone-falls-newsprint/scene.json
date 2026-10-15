@@ -1,0 +1,147 @@
+{
+ "theme": "newsprint",
+ "size": [
+  1680,
+  980
+ ],
+ "kicker": "神经内科 · 2026 年 1–6 月 · 23 起跌倒事件",
+ "title": "夜间如厕跌倒根因分析",
+ "subtitle": "数字为该原因在 23 份事件记录中出现的次数（可重复计入）。加粗的三项出现最多，进入对策拟定。数据为示例。",
+ "subtitleWidth": 1200,
+ "figure": "Fig. 25",
+ "blocks": [
+  {
+   "type": "fishbone",
+   "x": 64,
+   "y": 300,
+   "w": 1552,
+   "h": 560,
+   "headW": 230,
+   "headH": 120,
+   "slope": 0.5,
+   "causeLen": 190,
+   "causeSize": 14,
+   "head": {
+    "label": "夜间如厕跌倒",
+    "sub": "占全部跌倒 74%",
+    "tone": "ink"
+   },
+   "categories": [
+    {
+     "label": "患者",
+     "causes": [
+      {
+       "text": "高龄 + 利尿剂",
+       "count": 8,
+       "key": false
+      },
+      {
+       "text": "不愿麻烦护士",
+       "count": 5,
+       "key": false
+      },
+      {
+       "text": "起身过快致头晕",
+       "count": 11,
+       "key": true
+      }
+     ]
+    },
+    {
+     "label": "护士",
+     "causes": [
+      {
+       "text": "夜班人力 1:18",
+       "count": 6,
+       "key": false
+      },
+      {
+       "text": "交班未提示高危",
+       "count": 4,
+       "key": false
+      },
+      {
+       "text": "巡视间隔过长",
+       "count": 13,
+       "key": true
+      }
+     ]
+    },
+    {
+     "label": "设备",
+     "causes": [
+      {
+       "text": "呼叫铃够不着",
+       "count": 7,
+       "key": false
+      },
+      {
+       "text": "床栏未拉起",
+       "count": 3,
+       "key": false
+      }
+     ]
+    },
+    {
+     "label": "物品",
+     "causes": [
+      {
+       "text": "拖鞋不防滑",
+       "count": 5,
+       "key": false
+      },
+      {
+       "text": "地面清洁后湿滑",
+       "count": 2,
+       "key": false
+      }
+     ]
+    },
+    {
+     "label": "流程",
+     "causes": [
+      {
+       "text": "评估只在入院时做",
+       "count": 6,
+       "key": false
+      },
+      {
+       "text": "宣教无回授确认",
+       "count": 4,
+       "key": false
+      }
+     ]
+    },
+    {
+     "label": "环境",
+     "causes": [
+      {
+       "text": "夜间照明不足",
+       "count": 9,
+       "key": true
+      },
+      {
+       "text": "卫生间无扶手",
+       "count": 3,
+       "key": false
+      },
+      {
+       "text": "床旁杂物",
+       "count": 2,
+       "key": false
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 930,
+   "text": "下一步：针对巡视间隔、起身头晕、夜间照明拟定对策，效果追踪见 PDCA 图（第 24 例）。",
+   "size": 14,
+   "color": "muted"
+  }
+ ]
+}

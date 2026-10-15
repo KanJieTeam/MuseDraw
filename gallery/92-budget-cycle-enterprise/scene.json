@@ -1,0 +1,102 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1700,
+  1180
+ ],
+ "kicker": "财务管理 · 年度预算",
+ "title": "2027 年度预算编制时间表",
+ "subtitle": "9 月启动，12 月董事会批准，1 月起执行。琥珀色两轮评审最容易延期：每拖一周，后面的审批都要顺延。",
+ "subtitleWidth": 1300,
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 60,
+   "y": 250,
+   "w": 1600,
+   "labelW": 340,
+   "rowH": 50,
+   "groupH": 38,
+   "barRatio": 0.56,
+   "columns": [
+    "9 月",
+    "10 月",
+    "11 月",
+    "12 月",
+    "1 月"
+   ],
+   "colSize": 15,
+   "labelSize": 15.5,
+   "groupColor": "blue",
+   "groupCase": "none",
+   "groupFont": "body",
+   "groupSize": 14,
+   "milestoneTone": "accent",
+   "today": 1.45,
+   "todayLabel": "今天 10/14",
+   "tasks": [
+    {
+     "group": "战略与目标",
+     "label": "下发预算编制通知与总目标",
+     "start": 0,
+     "end": 0.3,
+     "tone": "navy"
+    },
+    {
+     "group": "战略与目标",
+     "label": "各事业部提交业务计划",
+     "start": 0.3,
+     "end": 1.0,
+     "tone": "blue"
+    },
+    {
+     "group": "编制",
+     "label": "部门编制人力与费用预算",
+     "start": 0.8,
+     "end": 1.6,
+     "tone": "blue"
+    },
+    {
+     "group": "编制",
+     "label": "财务汇总、口径校验",
+     "start": 1.5,
+     "end": 2.0,
+     "tone": "blue"
+    },
+    {
+     "group": "评审",
+     "label": "一轮评审：业务合理性",
+     "start": 2.0,
+     "end": 2.5,
+     "tone": "accent"
+    },
+    {
+     "group": "评审",
+     "label": "二轮评审：总额平衡",
+     "start": 2.6,
+     "end": 3.1,
+     "tone": "accent"
+    },
+    {
+     "group": "审批",
+     "label": "总经理办公会",
+     "start": 3.2,
+     "milestone": true
+    },
+    {
+     "group": "审批",
+     "label": "董事会批准",
+     "start": 3.8,
+     "milestone": true
+    },
+    {
+     "group": "下达",
+     "label": "预算下达与系统维护",
+     "start": 3.9,
+     "end": 4.6,
+     "tone": "navy"
+    }
+   ]
+  }
+ ]
+}

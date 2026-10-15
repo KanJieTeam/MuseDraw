@@ -1,8 +1,12 @@
 # MuseDraw repository conventions
 
-- Keep the project positioning broad: a professional drawing assistant. Only publish
-  capabilities that have a usable workflow; architecture is the first workflow.
+- Keep the project positioning broad: a professional drawing assistant for research,
+  office work, teaching and engineering. Only publish capabilities with a usable workflow.
+- New gallery cases: a folder with `scene.json` and `prompt.md`; render with
+  `npm run gallery`, open the PNG, and fix every `checks.json` warning before review.
 - Preserve user facts and unchanged diagram content during style-only revisions.
+- Use the project's configured contributor identity for commits. Do not add
+  model names, generated-by signatures or model co-author trailers to code or commits.
 - Use `feat/`, `fix/`, `docs/`, `test/`, `refactor/` or `chore/` for task branches.
   Branch names must not contain `codex`, case-insensitively. This does not prohibit
   accurate documentation of the actual Codex client.

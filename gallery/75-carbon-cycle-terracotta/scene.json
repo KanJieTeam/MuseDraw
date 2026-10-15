@@ -1,0 +1,146 @@
+{
+ "theme": "terracotta",
+ "size": [
+  1680,
+  1000
+ ],
+ "kicker": "Earth system · global carbon budget",
+ "title": "Global carbon cycle, annual fluxes",
+ "subtitle": "Boxes are stocks in billions of tonnes of carbon (GtC); arrows are yearly flows. Of the ~11 GtC humans add each year, the land and ocean take back a little more than half.",
+ "subtitleWidth": 1150,
+ "figure": "Fig. 75",
+ "nodes": [
+  {
+   "id": "atm",
+   "label": "Atmosphere",
+   "tag": "≈ 875 GtC",
+   "sub": "+5 GtC every year",
+   "tone": "clay",
+   "x": 620,
+   "y": 290,
+   "w": 420,
+   "h": 110,
+   "align": "center",
+   "size": 24
+  },
+  {
+   "id": "veg",
+   "label": "Vegetation",
+   "tag": "≈ 450 GtC",
+   "tone": "olive",
+   "x": 120,
+   "y": 560,
+   "w": 280,
+   "h": 100
+  },
+  {
+   "id": "soil",
+   "label": "Soils",
+   "tag": "≈ 1,700 GtC",
+   "sub": "+ permafrost ≈ 1,400",
+   "tone": "sand",
+   "x": 120,
+   "y": 780,
+   "w": 280,
+   "h": 110
+  },
+  {
+   "id": "ocean",
+   "label": "Ocean",
+   "tag": "≈ 38,000 GtC",
+   "sub": "mostly deep, dissolved",
+   "tone": "sky",
+   "x": 1260,
+   "y": 560,
+   "w": 320,
+   "h": 130
+  },
+  {
+   "id": "fossil",
+   "label": "Fossil fuels",
+   "tag": "geological",
+   "sub": "coal, oil, gas",
+   "tone": "default",
+   "x": 690,
+   "y": 780,
+   "w": 280,
+   "h": 110
+  }
+ ],
+ "edges": [
+  {
+   "from": "veg",
+   "to": "atm",
+   "fromSide": "t",
+   "toSide": "l",
+   "kind": "olive",
+   "label": "respiration ≈ 119",
+   "fromAt": 0.35,
+   "toAt": 0.4
+  },
+  {
+   "from": "atm",
+   "to": "veg",
+   "fromSide": "l",
+   "toSide": "t",
+   "kind": "olive",
+   "label": "photosynthesis ≈ 123",
+   "fromAt": 0.75,
+   "toAt": 0.75
+  },
+  {
+   "from": "veg",
+   "to": "soil",
+   "kind": "soft",
+   "label": "litter"
+  },
+  {
+   "from": "atm",
+   "to": "ocean",
+   "fromSide": "r",
+   "toSide": "t",
+   "kind": "primary",
+   "label": "uptake ≈ 80",
+   "fromAt": 0.3,
+   "toAt": 0.25,
+   "route": "ortho",
+   "labelAt": [
+    1180,
+    320
+   ]
+  },
+  {
+   "from": "ocean",
+   "to": "atm",
+   "fromSide": "t",
+   "toSide": "r",
+   "kind": "soft",
+   "label": "release ≈ 77",
+   "fromAt": 0.75,
+   "toAt": 0.7,
+   "labelAt": [
+    1180,
+    380
+   ]
+  },
+  {
+   "from": "fossil",
+   "to": "atm",
+   "fromSide": "t",
+   "toSide": "b",
+   "kind": "primary",
+   "label": "fossil emissions ≈ 10",
+   "width": 4
+  }
+ ],
+ "notes": [
+  {
+   "num": "",
+   "title": "Net, per year (GCB 2023, approx.)",
+   "text": "Added: fossil ≈ 9.9 + land-use change ≈ 1.1. Removed: land sink ≈ 3.3, ocean sink ≈ 2.9. Stays in the air: ≈ 5.1 GtC.",
+   "x": 1150,
+   "y": 760,
+   "w": 460
+  }
+ ]
+}

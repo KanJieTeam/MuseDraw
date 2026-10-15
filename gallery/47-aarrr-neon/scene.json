@@ -1,0 +1,122 @@
+{
+ "theme": "neon",
+ "size": [
+  1700,
+  1000
+ ],
+ "kicker": "Growth model · pirate metrics",
+ "title": "AARRR growth funnel and experiments",
+ "subtitle": "Five numbers the whole team can recite. Each stage owns exactly one live experiment; the hottest stage gets the most engineering time.",
+ "subtitleWidth": 1150,
+ "figure": "Level 47",
+ "blocks": [
+  {
+   "type": "funnel",
+   "x": 64,
+   "y": 300,
+   "w": 1000,
+   "funnelW": 560,
+   "stageH": 100,
+   "gap": 12,
+   "minRatio": 0.36,
+   "convX": 240,
+   "valueSize": 34,
+   "tones": [
+    "default",
+    "default",
+    "hot",
+    "magenta",
+    "yellow"
+   ],
+   "stages": [
+    {
+     "label": "ACQUISITION",
+     "value": 48000,
+     "valueText": "48,000",
+     "sub": "visitors / month"
+    },
+    {
+     "label": "ACTIVATION",
+     "value": 7200,
+     "valueText": "7,200",
+     "sub": "finished the first level"
+    },
+    {
+     "label": "RETENTION",
+     "value": 2900,
+     "valueText": "2,900",
+     "sub": "played again on day 7"
+    },
+    {
+     "label": "REFERRAL",
+     "value": 640,
+     "valueText": "640",
+     "sub": "invited a friend"
+    },
+    {
+     "label": "REVENUE",
+     "value": 410,
+     "valueText": "410",
+     "sub": "bought the season pass"
+    }
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "id": "x1",
+   "label": "Short-form clips",
+   "tag": "exp, acquisition",
+   "sub": "3 clips/day, auto-cut from top plays",
+   "tone": "default",
+   "x": 1150,
+   "y": 300,
+   "w": 486,
+   "h": 100
+  },
+  {
+   "id": "x2",
+   "label": "Skip the tutorial",
+   "tag": "exp, activation",
+   "sub": "tutorial becomes level 1",
+   "tone": "default",
+   "x": 1150,
+   "y": 412,
+   "w": 486,
+   "h": 100
+  },
+  {
+   "id": "x3",
+   "label": "Daily quest streaks",
+   "tag": "exp, retention — focus",
+   "sub": "biggest drop: 60% lost before day 7",
+   "tone": "hot",
+   "x": 1150,
+   "y": 524,
+   "w": 486,
+   "h": 100
+  },
+  {
+   "id": "x4",
+   "label": "Duo rewards",
+   "tag": "exp, referral",
+   "sub": "both players unlock a skin",
+   "tone": "magenta",
+   "x": 1150,
+   "y": 636,
+   "w": 486,
+   "h": 100
+  },
+  {
+   "id": "x5",
+   "label": "Pass preview",
+   "tag": "exp, revenue",
+   "sub": "first 5 tiers free",
+   "tone": "yellow",
+   "x": 1150,
+   "y": 748,
+   "w": 486,
+   "h": 100
+  }
+ ]
+}

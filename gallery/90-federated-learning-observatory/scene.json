@@ -1,0 +1,229 @@
+{
+ "theme": "observatory",
+ "size": [
+  1660,
+  1000
+ ],
+ "kicker": "Medical imaging · privacy-preserving training",
+ "figure": "fig / 90",
+ "title": "Federated learning across five hospitals",
+ "subtitle": "Teal arrows carry weight updates in, violet arrows carry the new global model out. Raw images stay inside each hospital. Figures are illustrative.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "agg",
+   "label": "Aggregation server",
+   "sub": "FedAvg, weighted by local n",
+   "tag": "coordinator",
+   "icon": "layers",
+   "tone": "hub",
+   "x": 680,
+   "y": 520,
+   "w": 300,
+   "h": 110
+  },
+  {
+   "id": "h0",
+   "label": "Hospital A",
+   "sub": "n = 18,200 CT scans",
+   "tone": "teal",
+   "icon": "db",
+   "x": 140,
+   "y": 300,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "h1",
+   "label": "Hospital B",
+   "sub": "n = 9,400",
+   "tone": "teal",
+   "icon": "db",
+   "x": 140,
+   "y": 560,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "h2",
+   "label": "Hospital C",
+   "sub": "n = 22,700",
+   "tone": "teal",
+   "icon": "db",
+   "x": 140,
+   "y": 820,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "h3",
+   "label": "Hospital D",
+   "sub": "n = 6,100",
+   "tone": "teal",
+   "icon": "db",
+   "x": 1240,
+   "y": 330,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "h4",
+   "label": "Hospital E",
+   "sub": "n = 12,800",
+   "tone": "teal",
+   "icon": "db",
+   "x": 1240,
+   "y": 760,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "dp",
+   "label": "Secure aggregation + DP",
+   "sub": "server sees only the sum; ε = 3",
+   "tone": "amber",
+   "icon": "lock",
+   "x": 680,
+   "y": 700,
+   "w": 300,
+   "h": 80
+  }
+ ],
+ "edges": [
+  {
+   "from": "h0",
+   "to": "agg",
+   "kind": "metrics",
+   "route": "curve",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.38,
+   "toAt": 0.2
+  },
+  {
+   "from": "agg",
+   "to": "h0",
+   "kind": "traces",
+   "route": "curve",
+   "fromSide": "l",
+   "toSide": "r",
+   "fromAt": 0.3,
+   "toAt": 0.66
+  },
+  {
+   "from": "h1",
+   "to": "agg",
+   "kind": "metrics",
+   "route": "curve",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.38,
+   "toAt": 0.5
+  },
+  {
+   "from": "agg",
+   "to": "h1",
+   "kind": "traces",
+   "route": "curve",
+   "fromSide": "l",
+   "toSide": "r",
+   "fromAt": 0.6,
+   "toAt": 0.66
+  },
+  {
+   "from": "h2",
+   "to": "agg",
+   "kind": "metrics",
+   "route": "curve",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.38,
+   "toAt": 0.8
+  },
+  {
+   "from": "agg",
+   "to": "h2",
+   "kind": "traces",
+   "route": "curve",
+   "fromSide": "l",
+   "toSide": "r",
+   "fromAt": 0.9,
+   "toAt": 0.66
+  },
+  {
+   "from": "h3",
+   "to": "agg",
+   "kind": "metrics",
+   "route": "curve",
+   "fromSide": "l",
+   "toSide": "r",
+   "fromAt": 0.38,
+   "toAt": 0.25
+  },
+  {
+   "from": "agg",
+   "to": "h3",
+   "kind": "traces",
+   "route": "curve",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.35,
+   "toAt": 0.66
+  },
+  {
+   "from": "h4",
+   "to": "agg",
+   "kind": "metrics",
+   "route": "curve",
+   "fromSide": "l",
+   "toSide": "r",
+   "fromAt": 0.38,
+   "toAt": 0.75
+  },
+  {
+   "from": "agg",
+   "to": "h4",
+   "kind": "traces",
+   "route": "curve",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.85,
+   "toAt": 0.66
+  },
+  {
+   "from": "agg",
+   "to": "dp",
+   "kind": "link",
+   "fromSide": "b",
+   "toSide": "t"
+  }
+ ],
+ "notes": [
+  {
+   "text": "// one round: send global weights → 5 local epochs at each site → upload weight deltas → average. 120 rounds to converge.",
+   "x": 600,
+   "y": 300,
+   "w": 460
+  },
+  {
+   "text": "// pooled AUC 0.91 vs 0.86 for the best single-site model; no patient image ever crossed a hospital firewall",
+   "x": 600,
+   "y": 860,
+   "w": 460
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 960,
+  "items": [
+   {
+    "kind": "metrics",
+    "label": "weight deltas"
+   },
+   {
+    "kind": "traces",
+    "label": "global model"
+   }
+  ]
+ }
+}

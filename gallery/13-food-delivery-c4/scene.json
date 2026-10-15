@@ -1,0 +1,283 @@
+{
+  "theme": "c4",
+  "size": [
+    1640,
+    1170
+  ],
+  "title": "Food delivery platform — Container diagram",
+  "subtitle": "C4 level 2. The deployable units inside the platform boundary, and how people and external systems use them.",
+  "zones": [
+    {
+      "id": "boundary",
+      "label": "Food Delivery Platform",
+      "sub": "[Software System]",
+      "x": 64,
+      "y": 400,
+      "w": 1260,
+      "h": 680
+    }
+  ],
+  "nodes": [
+    {
+      "id": "customer",
+      "label": "Customer",
+      "sub": "Orders food and tracks delivery",
+      "shape": "person",
+      "tone": "person",
+      "x": 160,
+      "y": 150,
+      "w": 160,
+      "h": 170
+    },
+    {
+      "id": "courier",
+      "label": "Courier",
+      "sub": "Picks up and delivers orders",
+      "shape": "person",
+      "tone": "person",
+      "x": 560,
+      "y": 150,
+      "w": 160,
+      "h": 170
+    },
+    {
+      "id": "staff",
+      "label": "Restaurant staff",
+      "sub": "Manages menu and incoming orders",
+      "shape": "person",
+      "tone": "person",
+      "x": 960,
+      "y": 150,
+      "w": 160,
+      "h": 170
+    },
+    {
+      "id": "app-c",
+      "label": "Customer app",
+      "tag": "[Container: React Native]",
+      "sub": "Browse menus, pay, follow the courier live",
+      "x": 120,
+      "y": 460,
+      "w": 240,
+      "h": 128
+    },
+    {
+      "id": "app-r",
+      "label": "Courier app",
+      "tag": "[Container: Kotlin]",
+      "sub": "Accept jobs, stream GPS, confirm drop-off",
+      "x": 520,
+      "y": 460,
+      "w": 240,
+      "h": 128
+    },
+    {
+      "id": "web-s",
+      "label": "Restaurant portal",
+      "tag": "[Container: Next.js]",
+      "sub": "Menu editor and order queue",
+      "x": 920,
+      "y": 460,
+      "w": 240,
+      "h": 128
+    },
+    {
+      "id": "api",
+      "label": "API application",
+      "tag": "[Container: Go]",
+      "sub": "Orders, menus, accounts, payments; exposes the JSON/HTTPS API",
+      "x": 180,
+      "y": 680,
+      "w": 920,
+      "h": 110
+    },
+    {
+      "id": "dispatch",
+      "label": "Dispatch engine",
+      "tag": "[Container: Python, OR-Tools]",
+      "sub": "Matches couriers to orders every 5 s",
+      "x": 1030,
+      "y": 900,
+      "w": 250,
+      "h": 128
+    },
+    {
+      "id": "db",
+      "label": "Orders database",
+      "tag": "[Container: PostgreSQL]",
+      "sub": "Orders, menus, accounts",
+      "shape": "cylinder",
+      "tone": "db",
+      "x": 120,
+      "y": 900,
+      "w": 240,
+      "h": 130
+    },
+    {
+      "id": "geo",
+      "label": "Location store",
+      "tag": "[Container: Redis]",
+      "sub": "Live courier positions (GEO)",
+      "shape": "cylinder",
+      "tone": "db",
+      "x": 420,
+      "y": 900,
+      "w": 240,
+      "h": 130
+    },
+    {
+      "id": "bus",
+      "label": "Event stream",
+      "tag": "[Container: Kafka]",
+      "sub": "OrderPlaced, OrderReady, …",
+      "shape": "queue",
+      "tone": "db",
+      "x": 700,
+      "y": 910,
+      "w": 220,
+      "h": 110
+    },
+    {
+      "id": "psp",
+      "label": "Payment provider",
+      "tag": "[Software System]",
+      "sub": "Cards and wallets",
+      "tone": "external",
+      "x": 1380,
+      "y": 460,
+      "w": 210,
+      "h": 120
+    },
+    {
+      "id": "maps",
+      "label": "Maps API",
+      "tag": "[Software System]",
+      "sub": "Routing and ETAs",
+      "tone": "external",
+      "x": 1380,
+      "y": 690,
+      "w": 210,
+      "h": 120
+    },
+    {
+      "id": "push",
+      "label": "Push service",
+      "tag": "[Software System]",
+      "sub": "APNs / FCM",
+      "tone": "external",
+      "x": 1380,
+      "y": 910,
+      "w": 210,
+      "h": 110
+    }
+  ],
+  "edges": [
+    {
+      "from": "customer",
+      "to": "app-c",
+      "label": "Orders food using"
+    },
+    {
+      "from": "courier",
+      "to": "app-r",
+      "label": "Delivers using"
+    },
+    {
+      "from": "staff",
+      "to": "web-s",
+      "label": "Manages orders using"
+    },
+    {
+      "from": "app-c",
+      "to": "api",
+      "label": "API calls\n[JSON/HTTPS]"
+    },
+    {
+      "from": "app-r",
+      "to": "api",
+      "label": "Status, GPS\n[gRPC]"
+    },
+    {
+      "from": "web-s",
+      "to": "api",
+      "label": "Menus, orders\n[JSON/HTTPS]"
+    },
+    {
+      "from": "api",
+      "to": "db",
+      "label": "Reads, writes\n[SQL]"
+    },
+    {
+      "from": "api",
+      "to": "geo",
+      "label": "Writes positions"
+    },
+    {
+      "from": "api",
+      "to": "bus",
+      "kind": "async",
+      "label": "Publishes events"
+    },
+    {
+      "from": "bus",
+      "to": "dispatch",
+      "kind": "async",
+      "label": "Consumes"
+    },
+    {
+      "from": "dispatch",
+      "to": "geo",
+      "fromSide": "b",
+      "toSide": "b",
+      "mid": 1056,
+      "label": "Reads positions"
+    },
+    {
+      "from": "api",
+      "to": "psp",
+      "fromSide": "r",
+      "toSide": "l",
+      "mid": 1240,
+      "label": "Charges\n[HTTPS]"
+    },
+    {
+      "from": "dispatch",
+      "to": "maps",
+      "fromSide": "r",
+      "toSide": "l",
+      "mid": 1320,
+      "fromAt": 0.3,
+      "label": "ETAs\n[HTTPS]"
+    },
+    {
+      "from": "dispatch",
+      "to": "push",
+      "fromSide": "r",
+      "toSide": "l",
+      "fromAt": 0.75,
+      "label": "Notifies\n[HTTPS]",
+      "labelAt": [
+        1352,
+        960
+      ]
+    }
+  ],
+  "legend": {
+    "x": 64,
+    "y": 1112,
+    "items": [
+      {
+        "tone": "person",
+        "label": "Person"
+      },
+      {
+        "tone": "default",
+        "label": "Container"
+      },
+      {
+        "tone": "external",
+        "label": "External"
+      }
+    ]
+  }
+}

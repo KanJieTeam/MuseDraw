@@ -1,0 +1,289 @@
+{
+ "theme": "riso",
+ "size": [
+  1700,
+  940
+ ],
+ "kicker": "Recruiting · senior backend engineer",
+ "title": "Hiring funnel: senior backend engineer",
+ "subtitle": "Each stage has an owner and a time limit. Candidates remember the slow stage, not the hard one — so the SLA is part of the design.",
+ "subtitleWidth": 1100,
+ "nodes": [
+  {
+   "id": "s1",
+   "label": "Applied",
+   "shape": "chevron",
+   "first": true,
+   "tone": "default",
+   "x": 64,
+   "y": 380,
+   "w": 270,
+   "h": 110,
+   "align": "center",
+   "size": 17
+  },
+  {
+   "id": "s2",
+   "label": "Recruiter screen",
+   "shape": "chevron",
+   "tone": "default",
+   "x": 326,
+   "y": 380,
+   "w": 270,
+   "h": 110,
+   "align": "center",
+   "size": 17
+  },
+  {
+   "id": "s3",
+   "label": "Hiring manager",
+   "shape": "chevron",
+   "tone": "default",
+   "x": 588,
+   "y": 380,
+   "w": 270,
+   "h": 110,
+   "align": "center",
+   "size": 17
+  },
+  {
+   "id": "s4",
+   "label": "Take-home + review",
+   "shape": "chevron",
+   "tone": "accent",
+   "x": 850,
+   "y": 380,
+   "w": 270,
+   "h": 110,
+   "align": "center",
+   "size": 17
+  },
+  {
+   "id": "s5",
+   "label": "Onsite loop",
+   "shape": "chevron",
+   "tone": "default",
+   "x": 1112,
+   "y": 380,
+   "w": 270,
+   "h": 110,
+   "align": "center",
+   "size": 17
+  },
+  {
+   "id": "s6",
+   "label": "Offer → hired",
+   "shape": "chevron",
+   "tone": "blue",
+   "x": 1374,
+   "y": 380,
+   "w": 262,
+   "h": 110,
+   "align": "center",
+   "size": 17
+  }
+ ],
+ "texts": [
+  {
+   "x": 84,
+   "y": 542,
+   "text": "OWNER",
+   "font": "mono",
+   "size": 11,
+   "weight": 700,
+   "color": "pink",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 84,
+   "y": 568,
+   "text": "ATS auto-filter + recruiter",
+   "size": 15,
+   "w": 230
+  },
+  {
+   "x": 346,
+   "y": 568,
+   "text": "Recruiter · 30 min call",
+   "size": 15,
+   "w": 230
+  },
+  {
+   "x": 608,
+   "y": 568,
+   "text": "Hiring manager · 45 min",
+   "size": 15,
+   "w": 230
+  },
+  {
+   "x": 870,
+   "y": 568,
+   "text": "2 engineers grade blind",
+   "size": 15,
+   "w": 230
+  },
+  {
+   "x": 1132,
+   "y": 568,
+   "text": "4 interviews, one day",
+   "size": 15,
+   "w": 230
+  },
+  {
+   "x": 1394,
+   "y": 568,
+   "text": "Manager + HR",
+   "size": 15,
+   "w": 230
+  },
+  {
+   "x": 84,
+   "y": 640,
+   "text": "SLA",
+   "font": "mono",
+   "size": 11,
+   "weight": 700,
+   "color": "pink",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 84,
+   "y": 678,
+   "text": "2 days",
+   "font": "display",
+   "size": 34,
+   "weight": 700
+  },
+  {
+   "x": 346,
+   "y": 678,
+   "text": "3 days",
+   "font": "display",
+   "size": 34,
+   "weight": 700
+  },
+  {
+   "x": 608,
+   "y": 678,
+   "text": "5 days",
+   "font": "display",
+   "size": 34,
+   "weight": 700
+  },
+  {
+   "x": 870,
+   "y": 678,
+   "text": "7 days",
+   "font": "display",
+   "size": 34,
+   "weight": 700,
+   "color": "pink"
+  },
+  {
+   "x": 1132,
+   "y": 678,
+   "text": "5 days",
+   "font": "display",
+   "size": 34,
+   "weight": 700
+  },
+  {
+   "x": 1394,
+   "y": 678,
+   "text": "3 days",
+   "font": "display",
+   "size": 34,
+   "weight": 700
+  },
+  {
+   "x": 1636,
+   "y": 96,
+   "text": "Time to hire",
+   "font": "mono",
+   "size": 12,
+   "weight": 700,
+   "color": "pink",
+   "letterSpacing": 1.5,
+   "anchor": "end"
+  },
+  {
+   "x": 1636,
+   "y": 170,
+   "text": "25 days",
+   "font": "display",
+   "size": 64,
+   "weight": 700,
+   "anchor": "end"
+  },
+  {
+   "x": 84,
+   "y": 360,
+   "text": "640",
+   "font": "display",
+   "size": 44,
+   "weight": 700,
+   "color": "blue"
+  },
+  {
+   "x": 346,
+   "y": 360,
+   "text": "180",
+   "font": "display",
+   "size": 44,
+   "weight": 700,
+   "color": "blue"
+  },
+  {
+   "x": 608,
+   "y": 360,
+   "text": "64",
+   "font": "display",
+   "size": 44,
+   "weight": 700,
+   "color": "blue"
+  },
+  {
+   "x": 870,
+   "y": 360,
+   "text": "22",
+   "font": "display",
+   "size": 44,
+   "weight": 700,
+   "color": "blue"
+  },
+  {
+   "x": 1132,
+   "y": 360,
+   "text": "9",
+   "font": "display",
+   "size": 44,
+   "weight": 700,
+   "color": "blue"
+  },
+  {
+   "x": 1394,
+   "y": 360,
+   "text": "2 → 1",
+   "font": "display",
+   "size": 44,
+   "weight": 700,
+   "color": "blue"
+  }
+ ],
+ "notes": [
+  {
+   "num": "!",
+   "text": "The take-home loses the most strong candidates. Paid, capped at 3 hours, graded against a rubric shared in advance.",
+   "x": 64,
+   "y": 800,
+   "w": 470
+  },
+  {
+   "num": "✓",
+   "text": "Rejections go out within 48 h of any stage, with one specific line of feedback.",
+   "x": 700,
+   "y": 800,
+   "w": 470
+  }
+ ]
+}

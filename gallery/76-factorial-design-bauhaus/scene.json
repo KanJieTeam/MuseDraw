@@ -1,0 +1,110 @@
+{
+ "theme": "bauhaus",
+ "size": [
+  1640,
+  1000
+ ],
+ "kicker": "Experimental design · 2 × 2 factorial",
+ "title": "2 × 2 factorial experimental design",
+ "subtitle": "Crossing two factors answers both main effects and whether they interact — with the same participants a one-factor study would need.",
+ "subtitleWidth": 760,
+ "figure": "No. 76",
+ "blocks": [
+  {
+   "type": "matrix",
+   "x": 100,
+   "y": 380,
+   "w": 900,
+   "h": 520,
+   "gap": 14,
+   "quadStyle": "fill",
+   "titleFont": "display",
+   "titleSize": 22,
+   "titleCase": "upper",
+   "itemSize": 20,
+   "itemTop": 110,
+   "xAxis": [
+    "no feedback",
+    "feedback",
+    "FACTOR B · FEEDBACK"
+   ],
+   "yAxis": [
+    "self-paced",
+    "coached",
+    "FACTOR A · COACHING"
+   ],
+   "quadrants": [
+    {
+     "title": "A1 · B0",
+     "sub": "coached, no feedback",
+     "tone": "default",
+     "items": [
+      "n = 60",
+      "mean score 71"
+     ]
+    },
+    {
+     "title": "A1 · B1",
+     "sub": "coached + feedback",
+     "tone": "default",
+     "items": [
+      "n = 60",
+      "mean score 84"
+     ]
+    },
+    {
+     "title": "A0 · B0",
+     "sub": "control",
+     "tone": "default",
+     "items": [
+      "n = 60",
+      "mean score 62"
+     ]
+    },
+    {
+     "title": "A0 · B1",
+     "sub": "feedback only",
+     "tone": "default",
+     "items": [
+      "n = 60",
+      "mean score 68"
+     ]
+    }
+   ],
+   "itemGap": 34
+  }
+ ],
+ "notes": [
+  {
+   "num": "A",
+   "text": "Main effect of coaching: (71 + 84)/2 − (62 + 68)/2 = 12.5 points.",
+   "x": 1080,
+   "y": 420,
+   "w": 480
+  },
+  {
+   "num": "B",
+   "text": "Main effect of feedback: (84 + 68)/2 − (71 + 62)/2 = 9.5 points.",
+   "x": 1080,
+   "y": 540,
+   "w": 480
+  },
+  {
+   "num": "×",
+   "text": "Interaction: feedback adds 13 points with coaching but only 6 without. The two work better together than apart.",
+   "x": 1080,
+   "y": 660,
+   "w": 480
+  }
+ ],
+ "texts": [
+  {
+   "x": 1080,
+   "y": 880,
+   "text": "Randomise 240 participants to four cells; analyse with two-way ANOVA. Illustrative numbers.",
+   "size": 13,
+   "color": "muted",
+   "w": 480
+  }
+ ]
+}

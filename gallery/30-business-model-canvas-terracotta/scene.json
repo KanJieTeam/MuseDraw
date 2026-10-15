@@ -1,0 +1,318 @@
+{
+ "theme": "terracotta",
+ "size": [
+  1700,
+  1100
+ ],
+ "kicker": "Business Model Canvas",
+ "title": "Business model canvas: meal-kit service",
+ "subtitle": "Nine boxes, one page. Read it from the right: who the customer is, what we promise them, and only then what it costs to deliver.",
+ "subtitleWidth": 1100,
+ "zones": [
+  {
+   "id": "kp",
+   "label": "Key partners",
+   "tone": "card",
+   "x": 64,
+   "y": 250,
+   "w": 304,
+   "h": 520,
+   "labelSize": 12.5
+  },
+  {
+   "id": "ka",
+   "label": "Key activities",
+   "tone": "card",
+   "x": 378,
+   "y": 250,
+   "w": 304,
+   "h": 255,
+   "labelSize": 12.5
+  },
+  {
+   "id": "kr",
+   "label": "Key resources",
+   "tone": "card",
+   "x": 378,
+   "y": 515,
+   "w": 304,
+   "h": 255,
+   "labelSize": 12.5
+  },
+  {
+   "id": "vp",
+   "label": "Value proposition",
+   "tone": "clay",
+   "x": 693,
+   "y": 250,
+   "w": 304,
+   "h": 520,
+   "labelSize": 12.5
+  },
+  {
+   "id": "cr",
+   "label": "Customer relationships",
+   "tone": "card",
+   "x": 1007,
+   "y": 250,
+   "w": 304,
+   "h": 255,
+   "labelSize": 12.5
+  },
+  {
+   "id": "ch",
+   "label": "Channels",
+   "tone": "card",
+   "x": 1007,
+   "y": 515,
+   "w": 304,
+   "h": 255,
+   "labelSize": 12.5
+  },
+  {
+   "id": "cs",
+   "label": "Customer segments",
+   "tone": "olive",
+   "x": 1322,
+   "y": 250,
+   "w": 304,
+   "h": 520,
+   "labelSize": 12.5
+  },
+  {
+   "id": "cost",
+   "label": "Cost structure",
+   "tone": "card",
+   "x": 64,
+   "y": 780,
+   "w": 776,
+   "h": 210,
+   "labelSize": 12.5
+  },
+  {
+   "id": "rev",
+   "label": "Revenue streams",
+   "tone": "card",
+   "x": 850,
+   "y": 780,
+   "w": 776,
+   "h": 210,
+   "labelSize": 12.5
+  }
+ ],
+ "texts": [
+  {
+   "x": 84,
+   "y": 326,
+   "text": "Regional farms (weekly harvest)",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 84,
+   "y": 384,
+   "text": "Cold-chain courier",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 84,
+   "y": 442,
+   "text": "Recipe developers on retainer",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 398,
+   "y": 326,
+   "text": "Menu planning 6 weeks out",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 398,
+   "y": 384,
+   "text": "Portioning & packing",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 398,
+   "y": 591,
+   "text": "Packing kitchen",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 398,
+   "y": 649,
+   "text": "Recipe library (900+)",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 713,
+   "y": 334,
+   "text": "Dinner for four in 25 minutes",
+   "size": 21,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "display",
+   "weight": 600
+  },
+  {
+   "x": 713,
+   "y": 410,
+   "text": "Kids actually eat it — rated by kids",
+   "size": 21,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "display",
+   "weight": 600
+  },
+  {
+   "x": 713,
+   "y": 486,
+   "text": "No planning, no shopping, no waste",
+   "size": 21,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "display",
+   "weight": 600
+  },
+  {
+   "x": 1027,
+   "y": 326,
+   "text": "Swap or skip any week",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 1027,
+   "y": 384,
+   "text": "Family taste profile",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 1027,
+   "y": 591,
+   "text": "School-gate referrals",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 1027,
+   "y": 649,
+   "text": "Instagram cooking reels",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 1342,
+   "y": 326,
+   "text": "Two working parents, kids 4–12",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 1342,
+   "y": 384,
+   "text": "Suburban, cooks 4+ nights a week",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 1342,
+   "y": 442,
+   "text": "Values time over price",
+   "size": 17.5,
+   "color": "ink",
+   "w": 264,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 84,
+   "y": 856,
+   "text": "Ingredients 38% · packaging 9% · delivery 14%",
+   "size": 17.5,
+   "color": "ink",
+   "w": 736,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 84,
+   "y": 914,
+   "text": "Kitchen & staff 17% · acquisition 12%",
+   "size": 17.5,
+   "color": "ink",
+   "w": 736,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 870,
+   "y": 856,
+   "text": "Weekly subscription €69 (4 meals × 4)",
+   "size": 17.5,
+   "color": "ink",
+   "w": 736,
+   "lineHeight": 1.3,
+   "font": "body"
+  },
+  {
+   "x": 870,
+   "y": 914,
+   "text": "Add-ons: breakfast, desserts — 18% attach rate",
+   "size": 17.5,
+   "color": "ink",
+   "w": 736,
+   "lineHeight": 1.3,
+   "font": "body"
+  }
+ ]
+}

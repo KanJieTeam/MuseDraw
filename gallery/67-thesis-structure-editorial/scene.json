@@ -1,0 +1,145 @@
+{
+ "theme": "editorial",
+ "size": [
+  1720,
+  860
+ ],
+ "kicker": "学位论文 · 写作结构",
+ "title": "学位论文章节结构",
+ "subtitle": "答辩委员读论文时，心里问的就是这六个问题。写每一章之前，先把问题写在页首。",
+ "subtitleWidth": 1100,
+ "figure": "Fig. 67",
+ "blocks": [
+  {
+   "type": "tree",
+   "x": 64,
+   "y": 270,
+   "w": 1592,
+   "nodeW": [
+    460,
+    255,
+    235
+   ],
+   "nodeH": [
+    84,
+    110,
+    54
+   ],
+   "levelGap": 52,
+   "siblingGap": 18,
+   "stackGap": 8,
+   "stackIndent": 20,
+   "sizes": [
+    24,
+    19,
+    16
+   ],
+   "root": {
+    "label": "学位论文",
+    "tag": "约 3–5 万字",
+    "tone": "accent",
+    "children": [
+     {
+      "label": "第一章 绪论",
+      "tag": "为什么要做？",
+      "stack": true,
+      "children": [
+       {
+        "label": "研究背景"
+       },
+       {
+        "label": "问题与目标"
+       },
+       {
+        "label": "意义与创新点"
+       }
+      ]
+     },
+     {
+      "label": "第二章 文献综述",
+      "tag": "别人做到哪了？",
+      "stack": true,
+      "children": [
+       {
+        "label": "核心概念"
+       },
+       {
+        "label": "研究现状"
+       },
+       {
+        "label": "研究空白"
+       }
+      ]
+     },
+     {
+      "label": "第三章 研究方法",
+      "tag": "你打算怎么做？",
+      "stack": true,
+      "children": [
+       {
+        "label": "研究设计"
+       },
+       {
+        "label": "对象与抽样"
+       },
+       {
+        "label": "工具与分析"
+       }
+      ]
+     },
+     {
+      "label": "第四章 结果",
+      "tag": "你发现了什么？",
+      "stack": true,
+      "children": [
+       {
+        "label": "描述性结果"
+       },
+       {
+        "label": "假设检验"
+       }
+      ]
+     },
+     {
+      "label": "第五章 讨论",
+      "tag": "这意味着什么？",
+      "stack": true,
+      "children": [
+       {
+        "label": "与已有研究对话"
+       },
+       {
+        "label": "理论与实践启示"
+       },
+       {
+        "label": "局限性"
+       }
+      ]
+     },
+     {
+      "label": "第六章 结论",
+      "tag": "一句话总结？",
+      "stack": true,
+      "children": [
+       {
+        "label": "主要结论"
+       },
+       {
+        "label": "未来方向"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "notes": [
+  {
+   "num": "※",
+   "text": "结果只写“是什么”，讨论才写“为什么”。两章混写是盲审最常见的扣分点。",
+   "x": 64,
+   "y": 760,
+   "w": 1100
+  }
+ ]
+}

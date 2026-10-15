@@ -1,0 +1,1288 @@
+{
+ "version": 1,
+ "description": "MuseDraw gallery plan: 100 cases. flagship = curated front-page set; reviewed = inspected at full size; preview = rendered, passes layout checks, awaiting review; planned = not yet drawn.",
+ "summary": {
+  "engineering": {
+   "flagship": 3,
+   "preview": 12,
+   "reviewed": 4
+  },
+  "research": {
+   "flagship": 8,
+   "reviewed": 6,
+   "preview": 16
+  },
+  "office": {
+   "flagship": 8,
+   "preview": 23,
+   "reviewed": 16
+  },
+  "teaching": {
+   "flagship": 1,
+   "preview": 2,
+   "reviewed": 1
+  }
+ },
+ "items": [
+  {
+   "id": "01",
+   "slug": "01-rag-editorial",
+   "status": "flagship",
+   "category": "engineering",
+   "theme": "editorial",
+   "lang": "en",
+   "title": "Retrieval-augmented generation, end to end",
+   "subtitle": "Two pipelines share one vector index. Documents are chunked and embedded ahead of time; each question is embedded, matched, re-ranked and grounded before the model writes a word.",
+   "blocks": [],
+   "path": "gallery/01-rag-editorial"
+  },
+  {
+   "id": "02",
+   "slug": "02-kubernetes-blueprint",
+   "status": "flagship",
+   "category": "engineering",
+   "theme": "blueprint",
+   "lang": "en",
+   "title": "Production Kubernetes cluster across three zones",
+   "subtitle": "Reference deployment for a stateless web + API workload on EKS. AZ-a is drawn in full; AZ-b and AZ-c mirror it.",
+   "blocks": [],
+   "path": "gallery/02-kubernetes-blueprint"
+  },
+  {
+   "id": "03",
+   "slug": "03-gitops-terminal",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "terminal",
+   "lang": "en",
+   "title": "GitOps delivery pipeline: commit to production",
+   "subtitle": "GitOps delivery: CI builds and signs one image; a bot bumps the tag in the env repo; Argo CD and Argo Rollouts do the rest, gated by live metrics.",
+   "blocks": [],
+   "path": "gallery/03-gitops-terminal"
+  },
+  {
+   "id": "04",
+   "slug": "04-card-payment-swiss",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "swiss",
+   "lang": "en",
+   "title": "How a card payment is authorized",
+   "subtitle": "From tap to “Paid”, only messages travel. Funds settle between banks later, in a nightly batch.",
+   "blocks": [],
+   "path": "gallery/04-card-payment-swiss"
+  },
+  {
+   "id": "05",
+   "slug": "05-mvp-whiteboard",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "whiteboard",
+   "lang": "en",
+   "title": "MVP architecture, six-week scope",
+   "subtitle": "Boring tech, one region, managed everything — and a clear line around what we are NOT building yet.",
+   "blocks": [],
+   "path": "gallery/05-mvp-whiteboard"
+  },
+  {
+   "id": "06",
+   "slug": "06-kafka-riso",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "riso",
+   "lang": "en",
+   "title": "Event streaming with Kafka",
+   "subtitle": "Producers append to topics. Topics are split into partitions and replicated across brokers. Every consumer group reads at its own pace, from its own offset.",
+   "blocks": [],
+   "path": "gallery/06-kafka-riso"
+  },
+  {
+   "id": "07",
+   "slug": "07-observability-observatory",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "observatory",
+   "lang": "en",
+   "title": "OpenTelemetry observability pipeline",
+   "subtitle": "Apps emit metrics, logs and traces over OTLP. Collectors enrich, sample and route them, and every signal keeps its own colour from source to dashboard.",
+   "blocks": [],
+   "path": "gallery/07-observability-observatory"
+  },
+  {
+   "id": "08",
+   "slug": "08-ai-agent-aurora",
+   "status": "flagship",
+   "category": "engineering",
+   "theme": "aurora",
+   "lang": "en",
+   "title": "Inside a tool-using AI agent",
+   "subtitle": "The model never touches the world directly. It plans, asks the runtime to call a tool, reads the result and decides again — inside guardrails, with memory on both sides.",
+   "blocks": [],
+   "path": "gallery/08-ai-agent-aurora"
+  },
+  {
+   "id": "09",
+   "slug": "09-microservices-bauhaus",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "bauhaus",
+   "lang": "en",
+   "title": "E-commerce microservices",
+   "subtitle": "Shape tells the role: squares answer requests, circles react to events, the diamond routes traffic. Red lines are events on the bus.",
+   "blocks": [],
+   "path": "gallery/09-microservices-bauhaus"
+  },
+  {
+   "id": "10",
+   "slug": "10-postgres-failover-newsprint",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "newsprint",
+   "lang": "en",
+   "title": "PostgreSQL streaming replication and failover",
+   "subtitle": "Every write lands in the write-ahead log first. Standbys replay that log; a consensus store decides who leads when the primary goes quiet.",
+   "blocks": [],
+   "path": "gallery/10-postgres-failover-newsprint"
+  },
+  {
+   "id": "100",
+   "slug": "100-submission-timeline-journal",
+   "status": "flagship",
+   "category": "research",
+   "theme": "journal",
+   "lang": "zh",
+   "title": "图 7 | 论文投稿到出版的典型时间线",
+   "subtitle": "以一篇 SCI 临床研究为例，从选刊到见刊约 200 天，其中超过一半在等待审稿。天数为示例，不同期刊差异很大。",
+   "blocks": [],
+   "path": "gallery/100-submission-timeline-journal"
+  },
+  {
+   "id": "11",
+   "slug": "11-data-exchange-ink-wash",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "ink-wash",
+   "lang": "zh",
+   "title": "城市数据共享交换平台总体架构",
+   "subtitle": "各委办局的数据先归集、再治理、后共享。资源统一编目，接口统一网关，每一次调用都可追溯。",
+   "blocks": [],
+   "path": "gallery/11-data-exchange-ink-wash"
+  },
+  {
+   "id": "12",
+   "slug": "12-saas-tenancy-product",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "product",
+   "lang": "en",
+   "title": "Multi-tenant SaaS: pooled and silo tiers",
+   "subtitle": "One codebase and one pipeline serve every tenant. The tier in the token decides where a request runs: shared infrastructure for Starter and Pro, a dedicated account for Enterprise.",
+   "blocks": [],
+   "path": "gallery/12-saas-tenancy-product"
+  },
+  {
+   "id": "13",
+   "slug": "13-food-delivery-c4",
+   "status": "reviewed",
+   "category": "engineering",
+   "theme": "c4",
+   "lang": "en",
+   "title": "Food delivery platform — Container diagram",
+   "subtitle": "C4 level 2. The deployable units inside the platform boundary, and how people and external systems use them.",
+   "blocks": [],
+   "path": "gallery/13-food-delivery-c4"
+  },
+  {
+   "id": "14",
+   "slug": "14-game-backend-neon",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "neon",
+   "lang": "en",
+   "title": "Real-time multiplayer game backend",
+   "subtitle": "Lobby traffic is ordinary HTTPS. Gameplay is UDP through edge relays to one authoritative server pod per match; everything slow happens off the hot path.",
+   "blocks": [],
+   "path": "gallery/14-game-backend-neon"
+  },
+  {
+   "id": "15",
+   "slug": "15-crdt-collab-pastel",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "实时协同编辑（CRDT）架构",
+   "subtitle": "两个人同时改同一段文字，为什么不会互相覆盖？每个客户端都有完整副本，只交换“增量”，而合并结果与到达顺序无关。",
+   "blocks": [],
+   "path": "gallery/15-crdt-collab-pastel"
+  },
+  {
+   "id": "16",
+   "slug": "16-okr-tree-enterprise",
+   "status": "flagship",
+   "category": "office",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "2027 年度 OKR 进度",
+   "subtitle": "数据截至 6 月 30 日。条形为关键结果完成度，虚线为时间进度；条形停在虚线左侧，即进度落后于时间。",
+   "blocks": [],
+   "path": "gallery/16-okr-tree-enterprise"
+  },
+  {
+   "id": "17",
+   "slug": "17-onboarding-90-pastel",
+   "status": "flagship",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "新员工 90 天入职计划",
+   "subtitle": "按天排期，三条线并行推进。橙色虚线标出第 30、60、90 天的一对一复盘，复盘标准见下方。",
+   "blocks": [],
+   "path": "gallery/17-onboarding-90-pastel"
+  },
+  {
+   "id": "18",
+   "slug": "18-procurement-swimlane-enterprise",
+   "status": "flagship",
+   "category": "office",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "采购审批跨部门泳道图",
+   "subtitle": "五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。",
+   "blocks": [
+    "swimlane"
+   ],
+   "path": "gallery/18-procurement-swimlane-enterprise"
+  },
+  {
+   "id": "19",
+   "slug": "19-product-roadmap-product",
+   "status": "preview",
+   "category": "office",
+   "theme": "product",
+   "lang": "en",
+   "title": "Product roadmap FY2027",
+   "subtitle": "Four tracks, one calendar. Bars are committed work, the outline bar is a bet we will size in Q2, and diamonds are dates we have promised to customers.",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/19-product-roadmap-product"
+  },
+  {
+   "id": "20",
+   "slug": "20-customer-journey-terracotta",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "terracotta",
+   "lang": "en",
+   "title": "Customer journey map",
+   "subtitle": "One customer type, six stages. The curve is how they feel; the clay cards are where a small fix removes a big dip.",
+   "blocks": [],
+   "path": "gallery/20-customer-journey-terracotta"
+  },
+  {
+   "id": "21",
+   "slug": "21-sales-funnel-swiss",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "swiss",
+   "lang": "en",
+   "title": "Self-serve funnel, last 90 days",
+   "subtitle": "Every step loses people. The question is which loss is cheapest to fix — here it is activation, not traffic.",
+   "blocks": [
+    "funnel"
+   ],
+   "path": "gallery/21-sales-funnel-swiss"
+  },
+  {
+   "id": "22",
+   "slug": "22-swot-editorial",
+   "status": "preview",
+   "category": "office",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "区域连锁咖啡品牌 SWOT 分析",
+   "subtitle": "内部看优势与短板，外部看机会与威胁。右下角的组合最危险：把短板暴露在威胁面前。",
+   "blocks": [
+    "matrix"
+   ],
+   "path": "gallery/22-swot-editorial"
+  },
+  {
+   "id": "23",
+   "slug": "23-eisenhower-whiteboard",
+   "status": "preview",
+   "category": "office",
+   "theme": "whiteboard",
+   "lang": "zh",
+   "title": "本周任务四象限",
+   "subtitle": "不是所有紧急的事都重要。每周一把待办写成便签，贴进四个格子，再决定今天做哪一格。",
+   "blocks": [
+    "matrix"
+   ],
+   "path": "gallery/23-eisenhower-whiteboard"
+  },
+  {
+   "id": "24",
+   "slug": "24-pdca-nursing-pastel",
+   "status": "flagship",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "神经内科住院患者跌倒率改善",
+   "subtitle": "2026 年 1–9 月，每千住院日跌倒次数（‰），按 PDCA 阶段着色。目标为基线 1.8‰ 减半。数据为示例。",
+   "blocks": [],
+   "path": "gallery/24-pdca-nursing-pastel"
+  },
+  {
+   "id": "25",
+   "slug": "25-fishbone-falls-newsprint",
+   "status": "flagship",
+   "category": "office",
+   "theme": "newsprint",
+   "lang": "zh",
+   "title": "夜间如厕跌倒根因分析",
+   "subtitle": "数字为该原因在 23 份事件记录中出现的次数（可重复计入）。加粗的三项出现最多，进入对策拟定。数据为示例。",
+   "blocks": [
+    "fishbone"
+   ],
+   "path": "gallery/25-fishbone-falls-newsprint"
+  },
+  {
+   "id": "26",
+   "slug": "26-startup-org-product",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "product",
+   "lang": "en",
+   "title": "Organization chart, Q3 2027",
+   "subtitle": "57 people today, 9 open roles. Three product squads own outcomes end to end; platform and design are shared. Each dot is one person. Names are illustrative.",
+   "blocks": [],
+   "path": "gallery/26-startup-org-product"
+  },
+  {
+   "id": "27",
+   "slug": "27-incident-runbook-terminal",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "terminal",
+   "lang": "en",
+   "title": "Incident response runbook",
+   "subtitle": "One decision decides severity; after that the order is always the same: assemble roles, mitigate, verify, then learn. Diagnosis can wait until users are safe.",
+   "blocks": [],
+   "path": "gallery/27-incident-runbook-terminal"
+  },
+  {
+   "id": "28",
+   "slug": "28-raci-swiss",
+   "status": "preview",
+   "category": "office",
+   "theme": "swiss",
+   "lang": "en",
+   "title": "RACI matrix: feature launch",
+   "subtitle": "Exactly one A per row. If a row has no R, nobody is doing it; if it has five Cs, the meeting will be long.",
+   "blocks": [
+    "table"
+   ],
+   "path": "gallery/28-raci-swiss"
+  },
+  {
+   "id": "29",
+   "slug": "29-renovation-gantt-blueprint",
+   "status": "preview",
+   "category": "office",
+   "theme": "blueprint",
+   "lang": "zh",
+   "title": "办公楼装修工程 · 进度计划",
+   "subtitle": "16 周、4 个阶段、2 个验收节点。黄色竖线为当前进度（第 7 周），关键路径：管线 → 隐蔽验收 → 吊顶 → 涂料 → 竣工。",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/29-renovation-gantt-blueprint"
+  },
+  {
+   "id": "30",
+   "slug": "30-business-model-canvas-terracotta",
+   "status": "preview",
+   "category": "office",
+   "theme": "terracotta",
+   "lang": "en",
+   "title": "Business model canvas: meal-kit service",
+   "subtitle": "Nine boxes, one page. Read it from the right: who the customer is, what we promise them, and only then what it costs to deliver.",
+   "blocks": [],
+   "path": "gallery/30-business-model-canvas-terracotta"
+  },
+  {
+   "id": "31",
+   "slug": "31-stakeholder-map-editorial",
+   "status": "preview",
+   "category": "office",
+   "theme": "editorial",
+   "lang": "en",
+   "title": "Stakeholder map: CRM migration",
+   "subtitle": "Plot every stakeholder by influence and interest before the first meeting. The quadrant tells you how to engage; the arrow shows where you need someone to move.",
+   "blocks": [
+    "matrix"
+   ],
+   "path": "gallery/31-stakeholder-map-editorial"
+  },
+  {
+   "id": "32",
+   "slug": "32-hiring-pipeline-riso",
+   "status": "preview",
+   "category": "office",
+   "theme": "riso",
+   "lang": "en",
+   "title": "Hiring funnel: senior backend engineer",
+   "subtitle": "Each stage has an owner and a time limit. Candidates remember the slow stage, not the hard one — so the SLA is part of the design.",
+   "blocks": [],
+   "path": "gallery/32-hiring-pipeline-riso"
+  },
+  {
+   "id": "33",
+   "slug": "33-expense-flow-pastel",
+   "status": "flagship",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "费用报销审批流程",
+   "subtitle": "金额决定谁审批，票据决定能不能付款。大部分退回发生在财务审核这一步，且原因高度集中。数据为示例。",
+   "blocks": [],
+   "path": "gallery/33-expense-flow-pastel"
+  },
+  {
+   "id": "34",
+   "slug": "34-team-rhythm-bauhaus",
+   "status": "preview",
+   "category": "office",
+   "theme": "bauhaus",
+   "lang": "en",
+   "title": "Team operating rhythm, one week",
+   "subtitle": "Meetings cluster on Monday and Friday so Tuesday and Thursday stay empty. Red blocks are the two rituals nobody skips.",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/34-team-rhythm-bauhaus"
+  },
+  {
+   "id": "35",
+   "slug": "35-launch-mindmap-whiteboard",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "whiteboard",
+   "lang": "zh",
+   "title": "新品发布会筹备清单",
+   "subtitle": "每一项写上负责人和截止日期。红色三项是上次发布会最后一周才想起来的风险，这次提前定好预案。",
+   "blocks": [
+    "mindmap"
+   ],
+   "path": "gallery/35-launch-mindmap-whiteboard"
+  },
+  {
+   "id": "36",
+   "slug": "36-strategy-house-enterprise",
+   "status": "flagship",
+   "category": "office",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "2027–2029 战略地图",
+   "subtitle": "一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。",
+   "blocks": [],
+   "path": "gallery/36-strategy-house-enterprise"
+  },
+  {
+   "id": "37",
+   "slug": "37-annual-timeline-metro",
+   "status": "preview",
+   "category": "office",
+   "theme": "metro",
+   "lang": "zh",
+   "title": "公司 2026 年度大事记",
+   "subtitle": "一条主线，八个站点。红色站点是改变公司规模的节点，其余是能力建设。",
+   "blocks": [
+    "timeline"
+   ],
+   "path": "gallery/37-annual-timeline-metro"
+  },
+  {
+   "id": "38",
+   "slug": "38-good-lesson-chalkboard",
+   "status": "flagship",
+   "category": "teaching",
+   "theme": "chalkboard",
+   "lang": "zh",
+   "title": "《沉与浮》教学流程",
+   "subtitle": "五个环节按时长等比例排开；上排是老师做什么，下排是孩子做什么。",
+   "blocks": [],
+   "path": "gallery/38-good-lesson-chalkboard"
+  },
+  {
+   "id": "39",
+   "slug": "39-curriculum-map-metro",
+   "status": "preview",
+   "category": "teaching",
+   "theme": "metro",
+   "lang": "zh",
+   "title": "一年级数学一学期课程地图",
+   "subtitle": "四条线路 = 四个领域；站点 = 有课的周；两个换乘大站是测评。一眼看出哪几周内容最密、哪几周适合做项目。",
+   "blocks": [],
+   "path": "gallery/39-curriculum-map-metro"
+  },
+  {
+   "id": "40",
+   "slug": "40-risk-heatmap-product",
+   "status": "preview",
+   "category": "office",
+   "theme": "product",
+   "lang": "en",
+   "title": "Risk heat map, Q3 review",
+   "subtitle": "Likelihood × impact decides the colour; owners and mitigations live next to the grid so the picture and the plan never drift apart.",
+   "blocks": [
+    "table"
+   ],
+   "path": "gallery/40-risk-heatmap-product"
+  },
+  {
+   "id": "41",
+   "slug": "41-run-of-show-swiss",
+   "status": "preview",
+   "category": "office",
+   "theme": "swiss",
+   "lang": "en",
+   "title": "Conference run of show",
+   "subtitle": "The whole day on one sheet: who is on, where, and the two moments the crew cannot miss.",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/41-run-of-show-swiss"
+  },
+  {
+   "id": "42",
+   "slug": "42-gtd-whiteboard",
+   "status": "preview",
+   "category": "office",
+   "theme": "whiteboard",
+   "lang": "en",
+   "title": "GTD weekly workflow",
+   "subtitle": "Everything goes into the inbox. Every item gets exactly one decision — then it leaves.",
+   "blocks": [],
+   "path": "gallery/42-gtd-whiteboard"
+  },
+  {
+   "id": "43",
+   "slug": "43-vendor-scoring-newsprint",
+   "status": "preview",
+   "category": "office",
+   "theme": "newsprint",
+   "lang": "en",
+   "title": "Vendor scoring matrix: CRM selection",
+   "subtitle": "Agree the criteria and their weights first, score each vendor 1–10 against them, and let the arithmetic start the discussion — not end it.",
+   "blocks": [
+    "table"
+   ],
+   "path": "gallery/43-vendor-scoring-newsprint"
+  },
+  {
+   "id": "44",
+   "slug": "44-adkar-terracotta",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "terracotta",
+   "lang": "en",
+   "title": "ADKAR readiness survey",
+   "subtitle": "Score each step and fix the first one below 3. Desire is the barrier here, so more training (Knowledge) would be wasted until people want the change. Figures are illustrative.",
+   "blocks": [],
+   "path": "gallery/44-adkar-terracotta"
+  },
+  {
+   "id": "45",
+   "slug": "45-document-flow-ink-wash",
+   "status": "flagship",
+   "category": "office",
+   "theme": "ink-wash",
+   "lang": "zh",
+   "title": "公文办理流程",
+   "subtitle": "一件来文经过八道手续，正常约 10 个工作日办结。朱砂色为需要领导签批的环节，虚线为退改回路。",
+   "blocks": [],
+   "path": "gallery/45-document-flow-ink-wash"
+  },
+  {
+   "id": "46",
+   "slug": "46-outpatient-flow-pastel",
+   "status": "preview",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "门诊就诊流程优化",
+   "subtitle": "线下 9 步里有 4 步在排队。把挂号、缴费、报告搬到手机上之后，患者在院时间从 2.5 小时降到 70 分钟。",
+   "blocks": [],
+   "path": "gallery/46-outpatient-flow-pastel"
+  },
+  {
+   "id": "47",
+   "slug": "47-aarrr-neon",
+   "status": "preview",
+   "category": "office",
+   "theme": "neon",
+   "lang": "en",
+   "title": "AARRR growth funnel and experiments",
+   "subtitle": "Five numbers the whole team can recite. Each stage owns exactly one live experiment; the hottest stage gets the most engineering time.",
+   "blocks": [
+    "funnel"
+   ],
+   "path": "gallery/47-aarrr-neon"
+  },
+  {
+   "id": "48",
+   "slug": "48-supply-chain-observatory",
+   "status": "preview",
+   "category": "office",
+   "theme": "observatory",
+   "lang": "en",
+   "title": "Fresh-produce supply chain: goods, information, money",
+   "subtitle": "Amber is product moving towards the shelf, teal is demand data moving back to the farm, violet is money. A forecast is only as good as the teal lines.",
+   "blocks": [],
+   "path": "gallery/48-supply-chain-observatory"
+  },
+  {
+   "id": "49",
+   "slug": "49-contract-review-editorial",
+   "status": "preview",
+   "category": "office",
+   "theme": "editorial",
+   "lang": "en",
+   "title": "Contract review triage",
+   "subtitle": "Standard paper on our template goes straight to signature. Only the exceptions — non-standard terms, high value, personal data — get human review.",
+   "blocks": [],
+   "path": "gallery/49-contract-review-editorial"
+  },
+  {
+   "id": "50",
+   "slug": "50-team-topologies-bauhaus",
+   "status": "preview",
+   "category": "office",
+   "theme": "bauhaus",
+   "lang": "en",
+   "title": "Team Topologies: four team types",
+   "subtitle": "Stream-aligned teams ship to customers. Everyone else exists to make them faster — and says how: collaborate, facilitate, or offer X-as-a-service.",
+   "blocks": [],
+   "path": "gallery/50-team-topologies-bauhaus"
+  },
+  {
+   "id": "51",
+   "slug": "51-support-tiers-product",
+   "status": "preview",
+   "category": "office",
+   "theme": "product",
+   "lang": "en",
+   "title": "Tiered customer support model",
+   "subtitle": "Each escalation costs roughly five times the tier before it. The goal isn't fewer tickets — it's tickets landing where they can be closed in one touch.",
+   "blocks": [],
+   "path": "gallery/51-support-tiers-product"
+  },
+  {
+   "id": "52",
+   "slug": "52-sales-kanban-pastel",
+   "status": "preview",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "en",
+   "title": "Sales pipeline board, week 41",
+   "subtitle": "A deal that hasn't moved in 21 days goes back to Lead with a note. The column totals are the forecast; the cards are the conversation.",
+   "blocks": [],
+   "path": "gallery/52-sales-kanban-pastel"
+  },
+  {
+   "id": "53",
+   "slug": "53-kindergarten-day-chalkboard",
+   "status": "preview",
+   "category": "teaching",
+   "theme": "chalkboard",
+   "lang": "zh",
+   "title": "幼儿园大班一日活动流程",
+   "subtitle": "动静交替、室内外交替。时间是骨架，不是闹钟：孩子玩得投入时，老师可以把下一环节推后十分钟。",
+   "blocks": [
+    "timeline"
+   ],
+   "path": "gallery/53-kindergarten-day-chalkboard"
+  },
+  {
+   "id": "54",
+   "slug": "54-sipoc-handover-enterprise",
+   "status": "preview",
+   "category": "office",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "护士交接班 SIPOC",
+   "subtitle": "先画清楚边界：谁提供、提供什么、经过哪五步、产出什么、交给谁。改进时只动中间那一列，左右两列是约束。",
+   "blocks": [],
+   "path": "gallery/54-sipoc-handover-enterprise"
+  },
+  {
+   "id": "55",
+   "slug": "55-value-stream-blueprint",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "blueprint",
+   "lang": "en",
+   "title": "Value stream map: bracket assembly",
+   "subtitle": "Current state. Material moves left to right, information right to left; the ladder at the bottom shows how little of the 14 days is actual work.",
+   "blocks": [],
+   "path": "gallery/55-value-stream-blueprint"
+  },
+  {
+   "id": "56",
+   "slug": "56-prisma-journal",
+   "status": "flagship",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "Fig. 1 | PRISMA 2020 flow diagram",
+   "subtitle": "Identification of studies via databases and registers for a systematic review of exercise interventions in older adults. Counts reconcile at every step (2,454 − 704 = 1,750; 1,750 − 1,512 = 238; 238 − 11 = 227; 227 − 191 = 36 reports).",
+   "blocks": [],
+   "path": "gallery/56-prisma-journal"
+  },
+  {
+   "id": "57",
+   "slug": "57-consort-journal",
+   "status": "flagship",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "Fig. 2 | CONSORT 2010 participant flow",
+   "subtitle": "Two-arm, parallel-group randomised trial of a nurse-led discharge programme; primary outcome 30-day readmission, intention-to-treat. Counts are illustrative.",
+   "blocks": [],
+   "path": "gallery/57-consort-journal"
+  },
+  {
+   "id": "58",
+   "slug": "58-transformer-editorial",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "editorial",
+   "lang": "en",
+   "title": "Transformer architecture",
+   "subtitle": "Two stacks of identical blocks. The encoder turns a sentence into context-rich vectors; the decoder writes the output one token at a time while attending to them.",
+   "blocks": [],
+   "path": "gallery/58-transformer-editorial"
+  },
+  {
+   "id": "59",
+   "slug": "59-nsfc-roadmap-journal",
+   "status": "flagship",
+   "category": "research",
+   "theme": "journal",
+   "lang": "zh",
+   "title": "图 3 | 技术路线图",
+   "subtitle": "示例课题：基于多组学的肝纤维化代谢重编程机制研究（国家自然科学基金面上项目申请书格式）。三条研究内容并行，最终汇聚到一个可验证的机制。",
+   "blocks": [],
+   "path": "gallery/59-nsfc-roadmap-journal"
+  },
+  {
+   "id": "60",
+   "slug": "60-mixed-methods-terracotta",
+   "status": "preview",
+   "category": "research",
+   "theme": "terracotta",
+   "lang": "en",
+   "title": "Explanatory sequential mixed-methods design",
+   "subtitle": "Capital letters mark the dominant strand. The connecting step is where most designs go wrong: the qualitative sample must be chosen from the quantitative results, not by convenience.",
+   "blocks": [],
+   "path": "gallery/60-mixed-methods-terracotta"
+  },
+  {
+   "id": "61",
+   "slug": "61-ml-lifecycle-observatory",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "observatory",
+   "lang": "en",
+   "title": "Machine-learning model lifecycle",
+   "subtitle": "Every arrow is a recorded artifact: dataset hash, feature version, run ID, model version. If you cannot replay a box, it is not part of the pipeline yet.",
+   "blocks": [],
+   "path": "gallery/61-ml-lifecycle-observatory"
+  },
+  {
+   "id": "62",
+   "slug": "62-crispr-workflow-journal",
+   "status": "preview",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "Fig. 4 | Generating a validated CRISPR–Cas9 knockout cell line",
+   "subtitle": "a, Eight steps from guide design to phenotype, with typical timing for an adherent human line. b, Gates that must pass before moving on; skipping clone-level validation is the most common source of irreproducible knockouts.",
+   "blocks": [],
+   "path": "gallery/62-crispr-workflow-journal"
+  },
+  {
+   "id": "63",
+   "slug": "63-scrnaseq-terminal",
+   "status": "preview",
+   "category": "research",
+   "theme": "terminal",
+   "lang": "en",
+   "title": "Single-cell RNA-seq analysis pipeline",
+   "subtitle": "Ten steps, three places where a bad default silently ruins the result. Thresholds shown are where we start, not what we publish — always inspect the QC plots first.",
+   "blocks": [],
+   "path": "gallery/63-scrnaseq-terminal"
+  },
+  {
+   "id": "64",
+   "slug": "64-western-blot-pastel",
+   "status": "preview",
+   "category": "research",
+   "theme": "pastel",
+   "lang": "en",
+   "title": "Western blot protocol, two-day schedule",
+   "subtitle": "The overnight primary incubation splits the protocol cleanly. Yellow is the cheapest check in the whole workflow — never skip the Ponceau stain.",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/64-western-blot-pastel"
+  },
+  {
+   "id": "65",
+   "slug": "65-trial-phases-swiss",
+   "status": "preview",
+   "category": "research",
+   "theme": "swiss",
+   "lang": "en",
+   "title": "Clinical trial phases and success rates",
+   "subtitle": "Each phase answers one question with more people and more money. Most drugs stop at the second one.",
+   "blocks": [],
+   "path": "gallery/65-trial-phases-swiss"
+  },
+  {
+   "id": "66",
+   "slug": "66-literature-review-pastel",
+   "status": "flagship",
+   "category": "research",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "文献综述写作流程",
+   "subtitle": "八步、约 14 周。左边是每一步占用的时间，中间是还剩多少篇文献，右边是这一步必须留下的记录。1,204 篇检索结果最终纳入 38 篇。数据为示例。",
+   "blocks": [],
+   "path": "gallery/66-literature-review-pastel"
+  },
+  {
+   "id": "67",
+   "slug": "67-thesis-structure-editorial",
+   "status": "preview",
+   "category": "research",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "学位论文章节结构",
+   "subtitle": "答辩委员读论文时，心里问的就是这六个问题。写每一章之前，先把问题写在页首。",
+   "blocks": [
+    "tree"
+   ],
+   "path": "gallery/67-thesis-structure-editorial"
+  },
+  {
+   "id": "68",
+   "slug": "68-sem-tam-newsprint",
+   "status": "flagship",
+   "category": "research",
+   "theme": "newsprint",
+   "lang": "en",
+   "title": "Structural equation model: nurses' adoption of e-charting",
+   "subtitle": "Ellipses are latent constructs measured by the boxed survey items. Every path coefficient is standardised; thick arrows carry the strongest effects (n = 486).",
+   "blocks": [],
+   "path": "gallery/68-sem-tam-newsprint"
+  },
+  {
+   "id": "69",
+   "slug": "69-scale-development-journal",
+   "status": "preview",
+   "category": "research",
+   "theme": "journal",
+   "lang": "zh",
+   "title": "图 2 | 量表编制与检验流程",
+   "subtitle": "示例：老年人智慧养老数字适应量表。右侧条形显示每一步之后保留的条目数——从 62 条到 24 条，每一次删减都有统计或专家依据。",
+   "blocks": [],
+   "path": "gallery/69-scale-development-journal"
+  },
+  {
+   "id": "70",
+   "slug": "70-fair-data-product",
+   "status": "preview",
+   "category": "research",
+   "theme": "product",
+   "lang": "en",
+   "title": "FAIR research data workflow",
+   "subtitle": "Raw data is read-only from the moment it leaves the instrument. Everything after it is produced by versioned code, so any figure can be regenerated from scratch.",
+   "blocks": [],
+   "path": "gallery/70-fair-data-product"
+  },
+  {
+   "id": "71",
+   "slug": "71-peer-review-editorial",
+   "status": "preview",
+   "category": "research",
+   "theme": "editorial",
+   "lang": "en",
+   "title": "Journal peer-review timeline",
+   "subtitle": "Time runs down the page. Most of the five months are spent in the two long gaps — reviewer invitations and the author's revision — not in anyone's actual reading.",
+   "blocks": [
+    "sequence"
+   ],
+   "path": "gallery/71-peer-review-editorial"
+  },
+  {
+   "id": "72",
+   "slug": "72-diffusion-aurora",
+   "status": "preview",
+   "category": "research",
+   "theme": "aurora",
+   "lang": "en",
+   "title": "Denoising diffusion: training and sampling",
+   "subtitle": "Training adds Gaussian noise in 1,000 small steps and teaches one network to predict it. Generation runs the chain backwards, about 30–50 steps with a modern sampler, steered by the text.",
+   "blocks": [],
+   "path": "gallery/72-diffusion-aurora"
+  },
+  {
+   "id": "73",
+   "slug": "73-llm-eval-observatory",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "observatory",
+   "lang": "en",
+   "title": "LLM evaluation pipeline",
+   "subtitle": "A fixed set of cases, three kinds of graders, and a CI gate. The LLM judge is calibrated against humans on a sample every week — otherwise it quietly drifts.",
+   "blocks": [],
+   "path": "gallery/73-llm-eval-observatory"
+  },
+  {
+   "id": "74",
+   "slug": "74-stratified-sampling-journal",
+   "status": "preview",
+   "category": "research",
+   "theme": "journal",
+   "lang": "zh",
+   "title": "图 4 | 多阶段分层整群抽样设计",
+   "subtitle": "示例：全国老年人数字生活调查。先分层保证代表性，再整群降低成本，最后户内随机抽取一位 60 岁以上成员。括号内为样本量。",
+   "blocks": [
+    "tree"
+   ],
+   "path": "gallery/74-stratified-sampling-journal"
+  },
+  {
+   "id": "75",
+   "slug": "75-carbon-cycle-terracotta",
+   "status": "preview",
+   "category": "research",
+   "theme": "terracotta",
+   "lang": "en",
+   "title": "Global carbon cycle, annual fluxes",
+   "subtitle": "Boxes are stocks in billions of tonnes of carbon (GtC); arrows are yearly flows. Of the ~11 GtC humans add each year, the land and ocean take back a little more than half.",
+   "blocks": [],
+   "path": "gallery/75-carbon-cycle-terracotta"
+  },
+  {
+   "id": "76",
+   "slug": "76-factorial-design-bauhaus",
+   "status": "preview",
+   "category": "research",
+   "theme": "bauhaus",
+   "lang": "en",
+   "title": "2 × 2 factorial experimental design",
+   "subtitle": "Crossing two factors answers both main effects and whether they interact — with the same participants a one-factor study would need.",
+   "blocks": [
+    "matrix"
+   ],
+   "path": "gallery/76-factorial-design-bauhaus"
+  },
+  {
+   "id": "77",
+   "slug": "77-grant-timeline-enterprise",
+   "status": "preview",
+   "category": "research",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "课题进度安排（2027–2029）",
+   "subtitle": "申请书里的“年度计划”画成一张图：三条研究内容错峰推进，中期检查前完成机制研究的主体实验。",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/77-grant-timeline-enterprise"
+  },
+  {
+   "id": "78",
+   "slug": "78-moderated-mediation-journal",
+   "status": "preview",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "Fig. 5 | Conceptual model: moderated mediation",
+   "subtitle": "Workload (X) increases burnout (Y) partly through sleep quality (M). Social support (W) weakens the first path. Hypotheses H1–H4 map to the labelled paths.",
+   "blocks": [],
+   "path": "gallery/78-moderated-mediation-journal"
+  },
+  {
+   "id": "79",
+   "slug": "79-r-analysis-terminal",
+   "status": "preview",
+   "category": "research",
+   "theme": "terminal",
+   "lang": "en",
+   "title": "Reproducible R analysis pipeline",
+   "subtitle": "Each box is a function; each arrow is an object cached by {targets}. Change the cleaning rule and only the downstream boxes rerun.",
+   "blocks": [],
+   "path": "gallery/79-r-analysis-terminal"
+  },
+  {
+   "id": "80",
+   "slug": "80-academic-poster-journal",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "journal",
+   "lang": "zh",
+   "title": "分级夜间巡视降低老年住院患者跌倒率",
+   "subtitle": "作者 A，作者 B，作者 C ｜ 某三甲医院神经内科 ｜ 2026 年全国护理学术年会。数据为示例。",
+   "blocks": [],
+   "path": "gallery/80-academic-poster-journal"
+  },
+  {
+   "id": "81",
+   "slug": "81-animal-study-journal",
+   "status": "flagship",
+   "category": "research",
+   "theme": "journal",
+   "lang": "zh",
+   "title": "肝纤维化小鼠模型分组与给药方案",
+   "subtitle": "C57BL/6 雄性小鼠 50 只，随机分为 5 组，每组 10 只。造模 6 周，第 3 周起给药。剂量与时间点为示例。",
+   "blocks": [],
+   "path": "gallery/81-animal-study-journal"
+  },
+  {
+   "id": "82",
+   "slug": "82-network-meta-newsprint",
+   "status": "flagship",
+   "category": "research",
+   "theme": "newsprint",
+   "lang": "en",
+   "title": "Network of evidence for chronic insomnia treatments",
+   "subtitle": "33 randomised trials, six treatments. Every line is at least one direct comparison; everything else is inferred. Counts are illustrative.",
+   "blocks": [],
+   "path": "gallery/82-network-meta-newsprint"
+  },
+  {
+   "id": "83",
+   "slug": "83-graduate-milestones-metro",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "metro",
+   "lang": "zh",
+   "title": "研究生培养关键节点",
+   "subtitle": "四条线并行推进，三个换乘站是学院统一的考核节点：开题、中期、答辩。月份为示例，按本校培养方案调整。",
+   "blocks": [],
+   "path": "gallery/83-graduate-milestones-metro"
+  },
+  {
+   "id": "84",
+   "slug": "84-reference-workflow-pastel",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "文献管理工作流",
+   "subtitle": "从检索到写作，每篇文献只录入一次。五个工具各管一步，靠同一个引用键串起来。",
+   "blocks": [],
+   "path": "gallery/84-reference-workflow-pastel"
+  },
+  {
+   "id": "85",
+   "slug": "85-survey-qc-enterprise",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "问卷调查实施流程与质控点",
+   "subtitle": "琥珀色是两道质控关口：平台自动筛掉可疑问卷，质控员再随机回访 10%。共回收 1,312 份，有效 1,186 份（90.4%）。数据为示例。",
+   "blocks": [
+    "swimlane"
+   ],
+   "path": "gallery/85-survey-qc-enterprise"
+  },
+  {
+   "id": "86",
+   "slug": "86-qualitative-coding-editorial",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "三级编码：从原话到核心范畴",
+   "subtitle": "16 位老年住院患者半结构访谈。左列是原话片段，中列是归并后的主范畴，右侧是统领全部范畴的核心解释。示例数据。",
+   "blocks": [],
+   "path": "gallery/86-qualitative-coding-editorial"
+  },
+  {
+   "id": "87",
+   "slug": "87-clinical-pathway-pastel",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "全膝关节置换术临床路径（标准住院日 6 天）",
+   "subtitle": "横向是住院日，纵向是谁负责。同一列读下来，就是这一天四方各自要完成的事。内容为示例，以本院路径为准。",
+   "blocks": [],
+   "path": "gallery/87-clinical-pathway-pastel"
+  },
+  {
+   "id": "88",
+   "slug": "88-lab-chemical-safety-swiss",
+   "status": "preview",
+   "category": "office",
+   "theme": "swiss",
+   "lang": "en",
+   "title": "Chemicals, from order to disposal",
+   "subtitle": "Six steps every reagent goes through. Storage is where most incidents start, so it is the one step in red.",
+   "blocks": [],
+   "path": "gallery/88-lab-chemical-safety-swiss"
+  },
+  {
+   "id": "89",
+   "slug": "89-gwas-pipeline-terminal",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "terminal",
+   "lang": "en",
+   "title": "GWAS pipeline, genotypes to Manhattan plot",
+   "subtitle": "Each step prints what it removed. Amber steps drop data; read their counts before trusting a single hit. Numbers are illustrative.",
+   "blocks": [],
+   "path": "gallery/89-gwas-pipeline-terminal"
+  },
+  {
+   "id": "90",
+   "slug": "90-federated-learning-observatory",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "observatory",
+   "lang": "en",
+   "title": "Federated learning across five hospitals",
+   "subtitle": "Teal arrows carry weight updates in, violet arrows carry the new global model out. Raw images stay inside each hospital. Figures are illustrative.",
+   "blocks": [],
+   "path": "gallery/90-federated-learning-observatory"
+  },
+  {
+   "id": "91",
+   "slug": "91-action-items-pastel",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "pastel",
+   "lang": "zh",
+   "title": "会议纪要与行动项",
+   "subtitle": "会议只产出两样东西：决议和行动项。每个行动项都有一个负责人、一个日期和一个状态，不写“相关部门”“尽快”。",
+   "blocks": [
+    "table"
+   ],
+   "path": "gallery/91-action-items-pastel"
+  },
+  {
+   "id": "92",
+   "slug": "92-budget-cycle-enterprise",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "enterprise",
+   "lang": "zh",
+   "title": "2027 年度预算编制时间表",
+   "subtitle": "9 月启动，12 月董事会批准，1 月起执行。琥珀色两轮评审最容易延期：每拖一周，后面的审批都要顺延。",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/92-budget-cycle-enterprise"
+  },
+  {
+   "id": "93",
+   "slug": "93-promotion-ladder-metro",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "metro",
+   "lang": "zh",
+   "title": "员工晋升通道：专业线与管理线",
+   "subtitle": "两条线在 P3 换乘：之后可以继续做专家，也可以转去带团队。同一高度的站点，薪酬区间相同。职级名称为示例。",
+   "blocks": [],
+   "path": "gallery/93-promotion-ladder-metro"
+  },
+  {
+   "id": "94",
+   "slug": "94-brand-launch-product",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "product",
+   "lang": "en",
+   "title": "Brand launch, planned backwards from launch day",
+   "subtitle": "Start from the date and work back. Trademark clearance and the first production run are the two long poles; everything else fits around them.",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/94-brand-launch-product"
+  },
+  {
+   "id": "95",
+   "slug": "95-complaint-loop-terracotta",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "terracotta",
+   "lang": "zh",
+   "title": "客诉处理闭环与时限",
+   "subtitle": "五步，每一步都有时限。处理环节最长也最容易超时；最后一步“复盘”才是闭环：同一类问题不再出现，才算真的处理完。数据为示例。",
+   "blocks": [],
+   "path": "gallery/95-complaint-loop-terracotta"
+  },
+  {
+   "id": "96",
+   "slug": "96-store-opening-blueprint",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "blueprint",
+   "lang": "en",
+   "title": "New café opening schedule",
+   "subtitle": "Sixteen weeks from lease to grand opening. Critical path in yellow: fit-out, then the food safety permit, which cannot be applied for until fit-out passes fire inspection.",
+   "blocks": [
+    "gantt"
+   ],
+   "path": "gallery/96-store-opening-blueprint"
+  },
+  {
+   "id": "97",
+   "slug": "97-status-board-bauhaus",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "bauhaus",
+   "lang": "en",
+   "title": "Cross-team weekly status",
+   "subtitle": "Six projects, one line each. Leadership reads the red row first; it is the only one that asks them for something.",
+   "blocks": [
+    "table"
+   ],
+   "path": "gallery/97-status-board-bauhaus"
+  },
+  {
+   "id": "98",
+   "slug": "98-knowledge-base-ink-wash",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "ink-wash",
+   "lang": "zh",
+   "title": "科室知识库目录结构",
+   "subtitle": "一级目录按“用来做什么”分，不按部门分；文件统一以“年月日_名称_版本”命名，新人入职第一周就能自己找到。",
+   "blocks": [
+    "tree"
+   ],
+   "path": "gallery/98-knowledge-base-ink-wash"
+  },
+  {
+   "id": "99",
+   "slug": "99-home-school-chalkboard",
+   "status": "reviewed",
+   "category": "teaching",
+   "theme": "chalkboard",
+   "lang": "zh",
+   "title": "家园沟通四个频率",
+   "subtitle": "日常沟通按固定节奏走，家长知道什么时候能得到什么信息；特殊情况单独处理，不占用日常渠道。",
+   "blocks": [],
+   "path": "gallery/99-home-school-chalkboard"
+  }
+ ]
+}

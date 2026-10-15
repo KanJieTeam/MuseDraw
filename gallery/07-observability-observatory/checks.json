@@ -1,0 +1,12 @@
+{
+  "size": [
+    1700,
+    940
+  ],
+  "nodes": 10,
+  "texts": 36,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "theme": "observatory"
+}

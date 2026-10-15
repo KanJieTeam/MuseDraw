@@ -1,0 +1,441 @@
+{
+ "theme": "blueprint",
+ "size": [
+  1700,
+  1120
+ ],
+ "title": "Production Kubernetes cluster across three zones",
+ "shortTitle": "Prod K8s · 3 AZ",
+ "subtitle": "Reference deployment for a stateless web + API workload on EKS. AZ-a is drawn in full; AZ-b and AZ-c mirror it.",
+ "meta": {
+  "dwg": "MD-K8S-002",
+  "rev": "C",
+  "scale": "NTS",
+  "date": "2026-10",
+  "by": "MuseDraw"
+ },
+ "zones": [
+  {
+   "id": "region",
+   "label": "Region · eu-west-1",
+   "tone": "strong",
+   "x": 270,
+   "y": 196,
+   "w": 1370,
+   "h": 800
+  },
+  {
+   "id": "cluster",
+   "label": "EKS cluster · prod · v1.30",
+   "x": 300,
+   "y": 236,
+   "w": 930,
+   "h": 730
+  },
+  {
+   "id": "cp",
+   "label": "Control plane · managed",
+   "x": 324,
+   "y": 268,
+   "w": 882,
+   "h": 92
+  },
+  {
+   "id": "az-a",
+   "label": "AZ-a",
+   "tone": "accent",
+   "x": 540,
+   "y": 392,
+   "w": 666,
+   "h": 128
+  },
+  {
+   "id": "az-b",
+   "label": "AZ-b",
+   "x": 540,
+   "y": 538,
+   "w": 666,
+   "h": 128
+  },
+  {
+   "id": "az-c",
+   "label": "AZ-c",
+   "x": 540,
+   "y": 684,
+   "w": 666,
+   "h": 128
+  },
+  {
+   "id": "pool",
+   "label": "Platform & jobs · spot node pool",
+   "x": 324,
+   "y": 836,
+   "w": 882,
+   "h": 110
+  },
+  {
+   "id": "data",
+   "label": "Managed data · multi-AZ",
+   "x": 1290,
+   "y": 236,
+   "w": 320,
+   "h": 730
+  }
+ ],
+ "nodes": [
+  {
+   "id": "users",
+   "label": "Users",
+   "sub": "web + mobile",
+   "shape": "person",
+   "x": 84,
+   "y": 214,
+   "w": 130,
+   "h": 128
+  },
+  {
+   "id": "cdn",
+   "label": "CDN + WAF",
+   "sub": "TLS, cache, rate limits",
+   "x": 64,
+   "y": 380,
+   "w": 176,
+   "h": 76,
+   "icon": "shield"
+  },
+  {
+   "id": "alb",
+   "label": "Load balancer",
+   "tag": "L7, multi-AZ",
+   "sub": "ALB health checks",
+   "x": 64,
+   "y": 520,
+   "w": 176,
+   "h": 76
+  },
+  {
+   "id": "git",
+   "label": "Config repo",
+   "sub": "Helm + Kustomize",
+   "icon": "git",
+   "x": 64,
+   "y": 858,
+   "w": 176,
+   "h": 76
+  },
+  {
+   "id": "apiserver",
+   "label": "API server",
+   "tone": "ghost",
+   "x": 348,
+   "y": 296,
+   "w": 190,
+   "h": 46
+  },
+  {
+   "id": "etcd",
+   "label": "etcd",
+   "tone": "ghost",
+   "x": 556,
+   "y": 296,
+   "w": 150,
+   "h": 46
+  },
+  {
+   "id": "scheduler",
+   "label": "Scheduler",
+   "tone": "ghost",
+   "x": 724,
+   "y": 296,
+   "w": 190,
+   "h": 46
+  },
+  {
+   "id": "controllers",
+   "label": "Controllers",
+   "tone": "ghost",
+   "x": 932,
+   "y": 296,
+   "w": 210,
+   "h": 46
+  },
+  {
+   "id": "ingress",
+   "label": "ingress-nginx",
+   "sub": "TLS → Service",
+   "tone": "accent",
+   "x": 330,
+   "y": 562,
+   "w": 176,
+   "h": 80
+  },
+  {
+   "id": "web-a",
+   "label": "web",
+   "sub": "3 pods, HPA 3–12",
+   "shape": "stack",
+   "x": 576,
+   "y": 426,
+   "w": 210,
+   "h": 74
+  },
+  {
+   "id": "api-a",
+   "label": "api",
+   "sub": "4 pods, HPA 4–30",
+   "shape": "stack",
+   "x": 862,
+   "y": 426,
+   "w": 210,
+   "h": 74
+  },
+  {
+   "id": "web-b",
+   "label": "web",
+   "sub": "3 pods",
+   "tone": "ghost",
+   "x": 576,
+   "y": 576,
+   "w": 210,
+   "h": 62
+  },
+  {
+   "id": "api-b",
+   "label": "api",
+   "sub": "4 pods",
+   "tone": "ghost",
+   "x": 862,
+   "y": 576,
+   "w": 210,
+   "h": 62
+  },
+  {
+   "id": "web-c",
+   "label": "web",
+   "sub": "3 pods",
+   "tone": "ghost",
+   "x": 576,
+   "y": 722,
+   "w": 210,
+   "h": 62
+  },
+  {
+   "id": "api-c",
+   "label": "api",
+   "sub": "4 pods",
+   "tone": "ghost",
+   "x": 862,
+   "y": 722,
+   "w": 210,
+   "h": 62
+  },
+  {
+   "id": "argocd",
+   "label": "Argo CD",
+   "sub": "syncs manifests",
+   "x": 348,
+   "y": 862,
+   "w": 180,
+   "h": 68
+  },
+  {
+   "id": "prom",
+   "label": "Prometheus",
+   "sub": "feeds HPA + KEDA",
+   "x": 576,
+   "y": 862,
+   "w": 210,
+   "h": 68
+  },
+  {
+   "id": "worker",
+   "label": "worker",
+   "sub": "KEDA 0–40 pods",
+   "shape": "stack",
+   "x": 862,
+   "y": 866,
+   "w": 210,
+   "h": 64
+  },
+  {
+   "id": "aurora-w",
+   "label": "Aurora Postgres",
+   "tag": "writer, AZ-a",
+   "sub": "r7g.xlarge",
+   "shape": "cylinder",
+   "x": 1320,
+   "y": 296,
+   "w": 262,
+   "h": 96,
+   "tone": "solid"
+  },
+  {
+   "id": "aurora-r",
+   "label": "Read replica",
+   "tag": "AZ-b, async",
+   "sub": "< 20 ms lag",
+   "shape": "cylinder",
+   "x": 1320,
+   "y": 430,
+   "w": 262,
+   "h": 96
+  },
+  {
+   "id": "redis",
+   "label": "Redis",
+   "tag": "cache, sessions",
+   "sub": "cluster mode, 2 shards",
+   "x": 1320,
+   "y": 568,
+   "w": 262,
+   "h": 76
+  },
+  {
+   "id": "sqs",
+   "label": "Jobs queue",
+   "tag": "SQS",
+   "sub": "DLQ after 5 tries",
+   "shape": "queue",
+   "x": 1320,
+   "y": 690,
+   "w": 262,
+   "h": 72
+  },
+  {
+   "id": "s3",
+   "label": "Object storage",
+   "tag": "S3",
+   "sub": "media, exports",
+   "icon": "box",
+   "x": 1320,
+   "y": 838,
+   "w": 262,
+   "h": 76
+  }
+ ],
+ "edges": [
+  {
+   "from": "users",
+   "to": "cdn",
+   "kind": "primary",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "cdn",
+   "to": "alb",
+   "kind": "primary"
+  },
+  {
+   "from": "alb",
+   "to": "ingress",
+   "kind": "primary",
+   "mid": 284,
+   "label": "443"
+  },
+  {
+   "from": "ingress",
+   "to": "web-a",
+   "kind": "primary",
+   "fromSide": "r",
+   "toSide": "l",
+   "mid": 540
+  },
+  {
+   "from": "ingress",
+   "to": "web-b",
+   "kind": "control",
+   "fromSide": "r",
+   "toSide": "l",
+   "mid": 540
+  },
+  {
+   "from": "ingress",
+   "to": "web-c",
+   "kind": "control",
+   "fromSide": "r",
+   "toSide": "l",
+   "mid": 540
+  },
+  {
+   "from": "web-a",
+   "to": "api-a",
+   "kind": "primary",
+   "label": "gRPC"
+  },
+  {
+   "from": "api-a",
+   "to": "aurora-w",
+   "kind": "data",
+   "mid": 1246
+  },
+  {
+   "from": "api-a",
+   "to": "aurora-r",
+   "kind": "data",
+   "mid": 1254
+  },
+  {
+   "from": "api-a",
+   "to": "redis",
+   "kind": "data",
+   "mid": 1262
+  },
+  {
+   "from": "api-a",
+   "to": "sqs",
+   "kind": "data",
+   "mid": 1270
+  },
+  {
+   "from": "sqs",
+   "to": "worker",
+   "kind": "data",
+   "fromSide": "l",
+   "toSide": "r",
+   "mid": 1280,
+   "toAt": 0.35,
+   "label": "poll"
+  },
+  {
+   "from": "worker",
+   "to": "s3",
+   "kind": "data",
+   "toAt": 0.5,
+   "fromAt": 0.75,
+   "mid": 1288
+  },
+  {
+   "from": "git",
+   "to": "argocd",
+   "kind": "control",
+   "label": "pull / 3 min"
+  }
+ ],
+ "notes": [
+  {
+   "text": "replica promoted if writer AZ fails (~30 s)",
+   "x": 1320,
+   "y": 248,
+   "w": 280
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 1046,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "request path"
+   },
+   {
+    "kind": "data",
+    "label": "data access"
+   },
+   {
+    "kind": "control",
+    "label": "mirrored / control"
+   }
+  ]
+ }
+}

@@ -1,0 +1,535 @@
+{
+ "theme": "journal",
+ "size": [
+  1680,
+  900
+ ],
+ "kicker": "Fig. 6 | 动物实验设计",
+ "title": "肝纤维化小鼠模型分组与给药方案",
+ "subtitle": "C57BL/6 雄性小鼠 50 只，随机分为 5 组，每组 10 只。造模 6 周，第 3 周起给药。剂量与时间点为示例。",
+ "subtitleWidth": 1400,
+ "nodes": [
+  {
+   "id": "m0",
+   "shape": "diamond",
+   "tone": "accent",
+   "x": 351.0,
+   "y": 748,
+   "w": 18,
+   "h": 18
+  },
+  {
+   "id": "m14",
+   "shape": "diamond",
+   "tone": "accent",
+   "x": 764.3333333333334,
+   "y": 748,
+   "w": 18,
+   "h": 18
+  },
+  {
+   "id": "m28",
+   "shape": "diamond",
+   "tone": "accent",
+   "x": 1177.6666666666667,
+   "y": 748,
+   "w": 18,
+   "h": 18
+  },
+  {
+   "id": "m42",
+   "shape": "diamond",
+   "tone": "accent",
+   "x": 1591.0,
+   "y": 748,
+   "w": 18,
+   "h": 18
+  }
+ ],
+ "texts": [
+  {
+   "x": 360.0,
+   "y": 282,
+   "text": "第 0 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 566.6666666666667,
+   "y": 282,
+   "text": "第 7 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 773.3333333333334,
+   "y": 282,
+   "text": "第 14 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 980.0,
+   "y": 282,
+   "text": "第 21 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1186.6666666666667,
+   "y": 282,
+   "text": "第 28 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1393.3333333333335,
+   "y": 282,
+   "text": "第 35 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1600.0,
+   "y": 282,
+   "text": "第 42 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 60,
+   "y": 334,
+   "text": "对照组",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 358,
+   "text": "生理盐水 ip，每周 2 次",
+   "size": 13,
+   "color": "muted",
+   "w": 280
+  },
+  {
+   "x": 1620,
+   "y": 340,
+   "text": "n = 10",
+   "size": 13,
+   "color": "muted",
+   "font": "mono"
+  },
+  {
+   "x": 60,
+   "y": 420,
+   "text": "模型组",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 444,
+   "text": "CCl₄ 1 ml/kg ip，每周 2 次",
+   "size": 13,
+   "color": "muted",
+   "w": 280
+  },
+  {
+   "x": 1620,
+   "y": 426,
+   "text": "n = 10",
+   "size": 13,
+   "color": "muted",
+   "font": "mono"
+  },
+  {
+   "x": 60,
+   "y": 506,
+   "text": "低剂量组",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 530,
+   "text": "CCl₄ + 药物 10 mg/kg 灌胃，每日",
+   "size": 13,
+   "color": "muted",
+   "w": 280
+  },
+  {
+   "x": 1620,
+   "y": 512,
+   "text": "n = 10",
+   "size": 13,
+   "color": "muted",
+   "font": "mono"
+  },
+  {
+   "x": 60,
+   "y": 592,
+   "text": "高剂量组",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 616,
+   "text": "CCl₄ + 药物 30 mg/kg 灌胃，每日",
+   "size": 13,
+   "color": "muted",
+   "w": 280
+  },
+  {
+   "x": 1620,
+   "y": 598,
+   "text": "n = 10",
+   "size": 13,
+   "color": "muted",
+   "font": "mono"
+  },
+  {
+   "x": 60,
+   "y": 678,
+   "text": "阳性对照",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 702,
+   "text": "CCl₄ + 秋水仙碱 0.1 mg/kg，每日",
+   "size": 13,
+   "color": "muted",
+   "w": 280
+  },
+  {
+   "x": 1620,
+   "y": 684,
+   "text": "n = 10",
+   "size": 13,
+   "color": "muted",
+   "font": "mono"
+  },
+  {
+   "x": 360.0,
+   "y": 800,
+   "text": "适应 7 天后开始",
+   "size": 13.5,
+   "color": "ink",
+   "anchor": "start"
+  },
+  {
+   "x": 773.3333333333334,
+   "y": 800,
+   "text": "开始给药",
+   "size": 13.5,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1186.6666666666667,
+   "y": 800,
+   "text": "取血 ALT/AST",
+   "size": 13.5,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1600.0,
+   "y": 800,
+   "text": "处死：肝组织、血清",
+   "size": 13.5,
+   "color": "ink",
+   "anchor": "end"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     360.0,
+     292
+    ],
+    [
+     360.0,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     566.6666666666667,
+     292
+    ],
+    [
+     566.6666666666667,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     773.3333333333334,
+     292
+    ],
+    [
+     773.3333333333334,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     980.0,
+     292
+    ],
+    [
+     980.0,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1186.6666666666667,
+     292
+    ],
+    [
+     1186.6666666666667,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1393.3333333333335,
+     292
+    ],
+    [
+     1393.3333333333335,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1600.0,
+     292
+    ],
+    [
+     1600.0,
+     760
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     388
+    ],
+    [
+     1600,
+     388
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     474
+    ],
+    [
+     1600,
+     474
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     560
+    ],
+    [
+     1600,
+     560
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     646
+    ],
+    [
+     1600,
+     646
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     732
+    ],
+    [
+     1600,
+     732
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  }
+ ],
+ "bars": [
+  {
+   "x": 360,
+   "y": 322,
+   "w": 1240.0,
+   "h": 14,
+   "value": 1,
+   "fill": "#E3E7EC",
+   "track": false,
+   "radius": 2,
+   "text": "生理盐水",
+   "textColor": "#4A5868",
+   "size": 11
+  },
+  {
+   "x": 360,
+   "y": 408,
+   "w": 1240.0,
+   "h": 14,
+   "value": 1,
+   "fill": "#E3E7EC",
+   "track": false,
+   "radius": 2,
+   "text": "CCl₄ 造模",
+   "textColor": "#4A5868",
+   "size": 11
+  },
+  {
+   "x": 360,
+   "y": 494,
+   "w": 1240.0,
+   "h": 14,
+   "value": 1,
+   "fill": "#E3E7EC",
+   "track": false,
+   "radius": 2,
+   "text": "CCl₄ 造模",
+   "textColor": "#4A5868",
+   "size": 11
+  },
+  {
+   "x": 773.3333333333334,
+   "y": 514,
+   "w": 826.6666666666667,
+   "h": 14,
+   "value": 1,
+   "fill": "#3B6EA8",
+   "track": false,
+   "radius": 2,
+   "text": "给药",
+   "textColor": "#FFFFFF",
+   "size": 11
+  },
+  {
+   "x": 360,
+   "y": 580,
+   "w": 1240.0,
+   "h": 14,
+   "value": 1,
+   "fill": "#E3E7EC",
+   "track": false,
+   "radius": 2,
+   "text": "CCl₄ 造模",
+   "textColor": "#4A5868",
+   "size": 11
+  },
+  {
+   "x": 773.3333333333334,
+   "y": 600,
+   "w": 826.6666666666667,
+   "h": 14,
+   "value": 1,
+   "fill": "#173F6B",
+   "track": false,
+   "radius": 2,
+   "text": "给药",
+   "textColor": "#FFFFFF",
+   "size": 11
+  },
+  {
+   "x": 360,
+   "y": 666,
+   "w": 1240.0,
+   "h": 14,
+   "value": 1,
+   "fill": "#E3E7EC",
+   "track": false,
+   "radius": 2,
+   "text": "CCl₄ 造模",
+   "textColor": "#4A5868",
+   "size": 11
+  },
+  {
+   "x": 773.3333333333334,
+   "y": 686,
+   "w": 826.6666666666667,
+   "h": 14,
+   "value": 1,
+   "fill": "#C77B2B",
+   "track": false,
+   "radius": 2,
+   "text": "给药",
+   "textColor": "#FFFFFF",
+   "size": 11
+  }
+ ]
+}

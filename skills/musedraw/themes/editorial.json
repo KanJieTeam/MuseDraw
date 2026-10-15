@@ -1,0 +1,25 @@
+{
+  "id": "editorial",
+  "name": "Editorial Ink",
+  "nameZh": "纸墨编辑",
+  "aliases": ["editorial", "纸墨", "编辑"],
+  "summary": "Warm paper, black ink, one vermilion accent, serif headline and margin notes. For essays, blog posts and design docs that explain why.",
+  "palette": { "paper": "#F3EEE4", "card": "#FBF8F1", "ink": "#171614", "muted": "#6E685D", "accent": "#C93C14", "soft": "#E7DFCF", "line": "#2A2724" },
+  "fonts": { "display": "Fraunces, Noto Serif SC, serif", "body": "Inter, Noto Sans SC, sans-serif", "mono": "JetBrains Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "paper", "margin": 64, "grain": { "opacity": 0.22, "frequency": 0.85, "r": 0.35, "g": 0.3, "b": 0.22, "alpha": 0.5 } },
+  "header": { "layout": "editorial", "titleFont": "display", "titleSize": 54, "titleWeight": 600, "titleLetterSpacing": -0.8, "kickerFont": "mono", "kickerSize": 12, "kickerColor": "accent", "kickerLetterSpacing": 2.2, "subFont": "body", "subSize": 17, "subColor": "muted", "rule": "ink", "ruleWidth": 1.2, "figureColor": "muted" },
+  "node": { "font": "body", "size": 17, "weight": 600, "subFont": "mono", "subSize": 11.5, "tagFont": "mono", "tagSize": 10, "tagCase": "upper", "tagLetterSpacing": 1.6, "tagWeight": 600, "tagPos": "above", "radius": 0, "stroke": 1.2, "padding": 16, "align": "left", "iconSize": 20, "gap": 6 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "ink", "text": "ink", "sub": "muted", "tag": "accent", "icon": "ink" },
+    "accent": { "fill": "ink", "stroke": "ink", "text": "#F7F1E6", "sub": "#C9C0AF", "tag": "#F08A62", "icon": "#F7F1E6" },
+    "soft": { "fill": "soft", "stroke": "soft", "text": "ink", "sub": "muted", "tag": "accent" },
+    "ghost": { "fill": "none", "stroke": "muted", "dash": "3 4", "text": "muted", "sub": "muted" }
+  },
+  "zone": { "style": "rule", "radius": 0, "stroke": 1, "labelFont": "mono", "labelSize": 11, "labelCase": "upper", "letterSpacing": 2, "labelWeight": 600, "labelPad": 0, "ruleWidth": 1.2, "tones": { "default": { "stroke": "ink", "text": "ink" }, "muted": { "stroke": "#B9B0A0", "text": "muted" } } },
+  "edge": { "color": "ink", "width": 1.3, "radius": 6, "arrow": "triangle", "arrowSize": 9, "route": "ortho", "gap": 3, "labelFont": "display", "labelSize": 14, "labelItalic": true, "labelColor": "#3A362F", "labelPlacement": "above", "labelStyle": "plain",
+    "kinds": { "primary": { "color": "accent", "width": 2 }, "offline": { "color": "ink", "dash": "1.5 5", "width": 1.6 }, "return": { "color": "muted", "dash": "5 4" } } },
+  "step": { "shape": "circle", "fill": "accent", "text": "#FBF8F1", "size": 24, "font": "mono", "weight": 700 },
+  "note": { "style": "margin", "font": "display", "size": 15.5, "italic": true, "color": "#36322C", "numFont": "display", "numColor": "accent", "lineHeight": 1.42 },
+  "legend": { "font": "mono", "size": 11, "color": "muted", "titleColor": "ink", "titleCase": "upper", "letterSpacing": 1.5 },
+  "footer": { "text": "MuseDraw · Editorial Ink", "font": "mono", "size": 10.5, "color": "muted", "letterSpacing": 1.5 }
+}

@@ -1,0 +1,155 @@
+{
+ "theme": "editorial",
+ "size": [
+  1640,
+  1000
+ ],
+ "kicker": "Legal ops · contract intake",
+ "title": "Contract review triage",
+ "subtitle": "Standard paper on our template goes straight to signature. Only the exceptions — non-standard terms, high value, personal data — get human review.",
+ "subtitleWidth": 1100,
+ "figure": "Fig. 49",
+ "nodes": [
+  {
+   "id": "req",
+   "label": "Request",
+   "tag": "sales or procurement",
+   "sub": "intake form, 6 fields",
+   "x": 64,
+   "y": 330,
+   "w": 230,
+   "h": 96,
+   "step": 1
+  },
+  {
+   "id": "q1",
+   "label": "Our template?",
+   "shape": "diamond",
+   "x": 350,
+   "y": 318,
+   "w": 220,
+   "h": 120
+  },
+  {
+   "id": "q2",
+   "label": "> $250k or personal data?",
+   "shape": "diamond",
+   "x": 640,
+   "y": 318,
+   "w": 250,
+   "h": 120
+  },
+  {
+   "id": "self",
+   "label": "Self-serve signature",
+   "tag": "72% of contracts",
+   "sub": "e-sign, same day",
+   "tone": "accent",
+   "x": 960,
+   "y": 330,
+   "w": 260,
+   "h": 96,
+   "step": 2
+  },
+  {
+   "id": "review",
+   "label": "Legal review",
+   "tag": "third-party paper",
+   "sub": "playbook: 14 clause positions",
+   "x": 350,
+   "y": 560,
+   "w": 240,
+   "h": 96,
+   "step": 3
+  },
+  {
+   "id": "risk",
+   "label": "Risk & privacy",
+   "tag": "DPA, security annex",
+   "sub": "CISO sign-off",
+   "x": 640,
+   "y": 560,
+   "w": 250,
+   "h": 96,
+   "step": 4
+  },
+  {
+   "id": "neg",
+   "label": "Negotiate",
+   "tag": "redlines",
+   "sub": "max 2 rounds before escalation",
+   "x": 960,
+   "y": 560,
+   "w": 260,
+   "h": 96
+  },
+  {
+   "id": "sign",
+   "label": "Sign & store",
+   "tag": "repository",
+   "sub": "renewal date tracked",
+   "x": 1300,
+   "y": 440,
+   "w": 250,
+   "h": 96,
+   "step": 5
+  }
+ ],
+ "edges": [
+  {
+   "from": "req",
+   "to": "q1"
+  },
+  {
+   "from": "q1",
+   "to": "q2",
+   "label": "yes"
+  },
+  {
+   "from": "q1",
+   "to": "review",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "no"
+  },
+  {
+   "from": "q2",
+   "to": "self",
+   "kind": "primary",
+   "label": "no"
+  },
+  {
+   "from": "q2",
+   "to": "risk",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "yes"
+  },
+  {
+   "from": "review",
+   "to": "risk"
+  },
+  {
+   "from": "risk",
+   "to": "neg"
+  },
+  {
+   "from": "self",
+   "to": "sign",
+   "kind": "primary"
+  },
+  {
+   "from": "neg",
+   "to": "sign"
+  }
+ ],
+ "notes": [
+  {
+   "num": "↳",
+   "text": "Median cycle time fell from 19 days to 3 for standard deals once the template path stopped queueing behind redlines.",
+   "x": 64,
+   "y": 760,
+   "w": 700
+  }
+ ]
+}

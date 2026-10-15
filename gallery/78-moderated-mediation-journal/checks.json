@@ -1,0 +1,12 @@
+{
+  "size": [
+    1500,
+    800
+  ],
+  "nodes": 5,
+  "texts": 12,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "theme": "journal"
+}

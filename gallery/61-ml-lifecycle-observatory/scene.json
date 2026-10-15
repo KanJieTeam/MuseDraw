@@ -1,0 +1,231 @@
+{
+ "theme": "observatory",
+ "size": [
+  1760,
+  800
+ ],
+ "kicker": "ML engineering · model lifecycle",
+ "title": "Machine-learning model lifecycle",
+ "subtitle": "Every arrow is a recorded artifact: dataset hash, feature version, run ID, model version. If you cannot replay a box, it is not part of the pipeline yet.",
+ "subtitleWidth": 1150,
+ "figure": "mlops / 61",
+ "nodes": [
+  {
+   "id": "src",
+   "label": "Raw sources",
+   "tag": "data",
+   "sub": "events, labels, CRM",
+   "icon": "db",
+   "x": 64,
+   "y": 330,
+   "w": 220,
+   "h": 104
+  },
+  {
+   "id": "ds",
+   "label": "Versioned dataset",
+   "tag": "DVC, hash a3f9",
+   "sub": "train / val / test frozen",
+   "icon": "layers",
+   "tone": "amber",
+   "x": 334,
+   "y": 330,
+   "w": 240,
+   "h": 104
+  },
+  {
+   "id": "feat",
+   "label": "Feature pipeline",
+   "tag": "online = offline",
+   "sub": "no training-serving skew",
+   "icon": "gear",
+   "tone": "amber",
+   "x": 624,
+   "y": 330,
+   "w": 250,
+   "h": 104
+  },
+  {
+   "id": "train",
+   "label": "Train + sweep",
+   "tag": "run 412",
+   "sub": "48 trials, Bayesian search",
+   "icon": "cpu",
+   "tone": "violet",
+   "x": 924,
+   "y": 330,
+   "w": 240,
+   "h": 104
+  },
+  {
+   "id": "eval",
+   "label": "Evaluate",
+   "tag": "gate",
+   "sub": "AUC ≥ 0.86 and no slice < 0.80",
+   "icon": "check",
+   "tone": "violet",
+   "x": 1214,
+   "y": 330,
+   "w": 250,
+   "h": 104
+  },
+  {
+   "id": "reg",
+   "label": "Model registry",
+   "tag": "v17, staging",
+   "sub": "card, metrics, lineage",
+   "icon": "box",
+   "tone": "hub",
+   "x": 1214,
+   "y": 540,
+   "w": 250,
+   "h": 104
+  },
+  {
+   "id": "shadow",
+   "label": "Shadow deploy",
+   "tag": "7 days",
+   "sub": "scores logged, not served",
+   "icon": "eye",
+   "tone": "teal",
+   "x": 924,
+   "y": 540,
+   "w": 240,
+   "h": 104
+  },
+  {
+   "id": "serve",
+   "label": "Serve",
+   "tag": "canary 5% → 100%",
+   "sub": "p99 < 40 ms",
+   "icon": "bolt",
+   "tone": "teal",
+   "x": 624,
+   "y": 540,
+   "w": 250,
+   "h": 104
+  },
+  {
+   "id": "mon",
+   "label": "Monitor",
+   "tag": "drift",
+   "sub": "PSI > 0.2 on 3 features → alert",
+   "icon": "chart",
+   "tone": "coral",
+   "x": 334,
+   "y": 540,
+   "w": 240,
+   "h": 104
+  }
+ ],
+ "edges": [
+  {
+   "from": "src",
+   "to": "ds",
+   "kind": "logs"
+  },
+  {
+   "from": "ds",
+   "to": "feat",
+   "kind": "logs"
+  },
+  {
+   "from": "feat",
+   "to": "train",
+   "kind": "traces"
+  },
+  {
+   "from": "train",
+   "to": "eval",
+   "kind": "traces"
+  },
+  {
+   "from": "eval",
+   "to": "reg",
+   "kind": "traces",
+   "label": "pass"
+  },
+  {
+   "from": "reg",
+   "to": "shadow",
+   "kind": "metrics"
+  },
+  {
+   "from": "shadow",
+   "to": "serve",
+   "kind": "metrics",
+   "label": "promote"
+  },
+  {
+   "from": "serve",
+   "to": "mon",
+   "kind": "metrics"
+  },
+  {
+   "from": "mon",
+   "to": "ds",
+   "kind": "alert",
+   "fromSide": "l",
+   "toSide": "l",
+   "via": [
+    [
+     300,
+     592
+    ],
+    [
+     300,
+     382
+    ]
+   ],
+   "label": "retrain"
+  },
+  {
+   "from": "eval",
+   "to": "train",
+   "kind": "link",
+   "fromSide": "t",
+   "toSide": "t",
+   "via": [
+    [
+     1339,
+     300
+    ],
+    [
+     1044,
+     300
+    ]
+   ],
+   "label": "fail → iterate"
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 740,
+  "items": [
+   {
+    "kind": "logs",
+    "label": "data"
+   },
+   {
+    "kind": "traces",
+    "label": "training"
+   },
+   {
+    "kind": "metrics",
+    "label": "deployment"
+   },
+   {
+    "kind": "alert",
+    "label": "feedback"
+   }
+  ]
+ },
+ "notes": [
+  {
+   "text": "// the retrain loop is the product; the first model is just its first output",
+   "x": 64,
+   "y": 680,
+   "w": 900
+  }
+ ]
+}

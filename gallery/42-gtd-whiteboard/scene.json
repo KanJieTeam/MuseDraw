@@ -1,0 +1,221 @@
+{
+ "theme": "whiteboard",
+ "size": [
+  1700,
+  1040
+ ],
+ "kicker": "personal productivity",
+ "title": "GTD weekly workflow",
+ "subtitle": "Everything goes into the inbox. Every item gets exactly one decision — then it leaves.",
+ "subtitleWidth": 1400,
+ "nodes": [
+  {
+   "id": "inbox",
+   "label": "Inbox",
+   "sub": "email, notes, ideas",
+   "tone": "yellow",
+   "x": 80,
+   "y": 420,
+   "w": 200,
+   "h": 110
+  },
+  {
+   "id": "q1",
+   "label": "actionable?",
+   "shape": "diamond",
+   "tone": "default",
+   "x": 350,
+   "y": 405,
+   "w": 210,
+   "h": 140
+  },
+  {
+   "id": "trash",
+   "label": "Trash",
+   "tone": "ghost",
+   "x": 360,
+   "y": 250,
+   "w": 190,
+   "h": 80
+  },
+  {
+   "id": "someday",
+   "label": "Someday / maybe",
+   "tone": "ghost",
+   "x": 340,
+   "y": 640,
+   "w": 230,
+   "h": 80
+  },
+  {
+   "id": "ref",
+   "label": "Reference",
+   "tone": "ghost",
+   "x": 340,
+   "y": 760,
+   "w": 230,
+   "h": 80
+  },
+  {
+   "id": "q2",
+   "label": "< 2 minutes?",
+   "shape": "diamond",
+   "tone": "default",
+   "x": 650,
+   "y": 405,
+   "w": 210,
+   "h": 140
+  },
+  {
+   "id": "do",
+   "label": "Do it now",
+   "tone": "green",
+   "x": 660,
+   "y": 230,
+   "w": 190,
+   "h": 90
+  },
+  {
+   "id": "q3",
+   "label": "mine to do?",
+   "shape": "diamond",
+   "tone": "default",
+   "x": 950,
+   "y": 405,
+   "w": 210,
+   "h": 140
+  },
+  {
+   "id": "wait",
+   "label": "Delegate",
+   "sub": "→ waiting-for list",
+   "tone": "violet",
+   "x": 950,
+   "y": 640,
+   "w": 210,
+   "h": 100
+  },
+  {
+   "id": "cal",
+   "label": "Calendar",
+   "sub": "has a date",
+   "tone": "blue",
+   "x": 1260,
+   "y": 330,
+   "w": 200,
+   "h": 96
+  },
+  {
+   "id": "next",
+   "label": "Next actions",
+   "sub": "by context: @desk, @phone",
+   "tone": "blue",
+   "x": 1260,
+   "y": 520,
+   "w": 250,
+   "h": 110
+  },
+  {
+   "id": "review",
+   "label": "Weekly review",
+   "sub": "Friday, 45 min",
+   "tone": "red",
+   "x": 1260,
+   "y": 760,
+   "w": 230,
+   "h": 100
+  }
+ ],
+ "edges": [
+  {
+   "from": "inbox",
+   "to": "q1",
+   "kind": "primary"
+  },
+  {
+   "from": "q1",
+   "to": "trash",
+   "fromSide": "t",
+   "toSide": "b",
+   "label": "no"
+  },
+  {
+   "from": "q1",
+   "to": "someday",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "later"
+  },
+  {
+   "from": "someday",
+   "to": "ref",
+   "kind": "later"
+  },
+  {
+   "from": "q1",
+   "to": "q2",
+   "kind": "primary",
+   "label": "yes"
+  },
+  {
+   "from": "q2",
+   "to": "do",
+   "fromSide": "t",
+   "toSide": "b",
+   "kind": "money",
+   "label": "yes"
+  },
+  {
+   "from": "q2",
+   "to": "q3",
+   "kind": "primary",
+   "label": "no"
+  },
+  {
+   "from": "q3",
+   "to": "wait",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "no"
+  },
+  {
+   "from": "q3",
+   "to": "cal",
+   "fromSide": "r",
+   "toSide": "l",
+   "label": "dated"
+  },
+  {
+   "from": "q3",
+   "to": "next",
+   "fromSide": "r",
+   "toSide": "l",
+   "label": "asap"
+  },
+  {
+   "from": "next",
+   "to": "review",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "danger"
+  },
+  {
+   "from": "review",
+   "to": "inbox",
+   "fromSide": "b",
+   "toSide": "b",
+   "kind": "danger",
+   "label": "empty the inbox again",
+   "route": "ortho",
+   "mid": 930
+  }
+ ],
+ "notes": [
+  {
+   "text": "the system only works if you trust it — that's what the weekly review is for",
+   "x": 1420,
+   "y": 170,
+   "w": 230
+  }
+ ]
+}

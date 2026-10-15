@@ -1,0 +1,25 @@
+{
+  "id": "c4",
+  "name": "C4 Standard",
+  "nameZh": "C4 标准",
+  "aliases": ["c4", "c4 model", "c4模型"],
+  "summary": "Faithful C4-model notation: people, containers and external systems in the familiar blues and greys, every box typed, every arrow labelled with intent and protocol.",
+  "palette": { "bg": "#FFFFFF", "ink": "#1A1A1A", "muted": "#666666", "person": "#08427B", "container": "#438DD5", "system": "#1168BD", "external": "#999999", "accent": "#1168BD" },
+  "fonts": { "display": "Inter, Noto Sans SC, sans-serif", "body": "Inter, Noto Sans SC, sans-serif", "mono": "Inter, Noto Sans SC, sans-serif" },
+  "canvas": { "bg": "bg", "margin": 56 },
+  "header": { "layout": "minimal", "titleFont": "display", "titleSize": 30, "titleWeight": 700, "subFont": "body", "subSize": 15, "subColor": "muted" },
+  "node": { "font": "body", "size": 16, "weight": 700, "subFont": "body", "subSize": 12, "tagFont": "body", "tagSize": 11.5, "tagWeight": 400, "tagPos": "below", "radius": 8, "stroke": 1.2, "padding": 12, "align": "center", "lineHeight": 1.2, "gap": 4 },
+  "tones": {
+    "default": { "fill": "container", "stroke": "#3C7FC0", "text": "#FFFFFF", "sub": "#FFFFFF", "tag": "#E6F0FA" },
+    "person": { "fill": "person", "stroke": "#073B6F", "text": "#FFFFFF", "sub": "#FFFFFF", "tag": "#E6F0FA", "labelOut": "ink", "subOut": "muted" },
+    "external": { "fill": "external", "stroke": "#8A8A8A", "text": "#FFFFFF", "sub": "#FFFFFF", "tag": "#F2F2F2" },
+    "db": { "fill": "container", "stroke": "#3C7FC0", "text": "#FFFFFF", "sub": "#FFFFFF", "tag": "#E6F0FA" }
+  },
+  "zone": { "style": "dashed", "radius": 4, "stroke": 1.2, "dash": "7 5", "labelFont": "body", "labelSize": 15, "labelWeight": 700, "labelPad": 14, "subSize": 12,
+    "tones": { "default": { "fill": "none", "stroke": "#444444", "text": "ink", "sub": "muted" } } },
+  "edge": { "color": "#707070", "width": 1.3, "radius": 0, "arrow": "triangle", "arrowSize": 9, "gap": 2, "labelFont": "body", "labelSize": 11.5, "labelColor": "#444444", "labelPlacement": "on", "labelStyle": "chip", "labelBg": "bg", "kinds": { "async": { "dash": "6 4" } } },
+  "step": { "shape": "circle", "fill": "system", "text": "#FFFFFF", "size": 20, "font": "body", "weight": 700 },
+  "note": { "style": "callout", "font": "body", "size": 12, "color": "muted", "fill": "#FFFFFF", "stroke": "#BBBBBB", "radius": 4 },
+  "legend": { "font": "body", "size": 12, "color": "ink", "titleColor": "ink" },
+  "footer": { "text": "C4 container view · drawn with MuseDraw", "font": "body", "size": 11, "color": "#999999", "letterSpacing": 0 }
+}

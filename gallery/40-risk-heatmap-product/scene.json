@@ -1,0 +1,692 @@
+{
+ "theme": "product",
+ "size": [
+  1680,
+  1000
+ ],
+ "kicker": "Risk register · Q3 review",
+ "title": "Risk heat map, Q3 review",
+ "subtitle": "Likelihood × impact decides the colour; owners and mitigations live next to the grid so the picture and the plan never drift apart.",
+ "subtitleWidth": 1100,
+ "nodes": [
+  {
+   "id": "c11",
+   "shape": "box",
+   "x": 200,
+   "y": 748,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#CDEBD6",
+   "stroke": "none"
+  },
+  {
+   "id": "c12",
+   "shape": "box",
+   "x": 312,
+   "y": 748,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#CDEBD6",
+   "stroke": "none"
+  },
+  {
+   "id": "c13",
+   "shape": "box",
+   "x": 424,
+   "y": 748,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#CDEBD6",
+   "stroke": "none"
+  },
+  {
+   "id": "c14",
+   "shape": "box",
+   "x": 536,
+   "y": 748,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c15",
+   "shape": "box",
+   "x": 648,
+   "y": 748,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c21",
+   "shape": "box",
+   "x": 200,
+   "y": 636,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#CDEBD6",
+   "stroke": "none"
+  },
+  {
+   "id": "c22",
+   "shape": "box",
+   "x": 312,
+   "y": 636,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c23",
+   "shape": "box",
+   "x": 424,
+   "y": 636,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c24",
+   "shape": "box",
+   "x": 536,
+   "y": 636,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F9C98F",
+   "stroke": "none"
+  },
+  {
+   "id": "c25",
+   "shape": "box",
+   "x": 648,
+   "y": 636,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F9C98F",
+   "stroke": "none"
+  },
+  {
+   "id": "c31",
+   "shape": "box",
+   "x": 200,
+   "y": 524,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#CDEBD6",
+   "stroke": "none"
+  },
+  {
+   "id": "c32",
+   "shape": "box",
+   "x": 312,
+   "y": 524,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c33",
+   "shape": "box",
+   "x": 424,
+   "y": 524,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F9C98F",
+   "stroke": "none"
+  },
+  {
+   "id": "c34",
+   "shape": "box",
+   "x": 536,
+   "y": 524,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F3A79E",
+   "stroke": "none"
+  },
+  {
+   "id": "c35",
+   "shape": "box",
+   "x": 648,
+   "y": 524,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#E5675B",
+   "stroke": "none"
+  },
+  {
+   "id": "c41",
+   "shape": "box",
+   "x": 200,
+   "y": 412,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c42",
+   "shape": "box",
+   "x": 312,
+   "y": 412,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F9C98F",
+   "stroke": "none"
+  },
+  {
+   "id": "c43",
+   "shape": "box",
+   "x": 424,
+   "y": 412,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F3A79E",
+   "stroke": "none"
+  },
+  {
+   "id": "c44",
+   "shape": "box",
+   "x": 536,
+   "y": 412,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#E5675B",
+   "stroke": "none"
+  },
+  {
+   "id": "c45",
+   "shape": "box",
+   "x": 648,
+   "y": 412,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#E5675B",
+   "stroke": "none"
+  },
+  {
+   "id": "c51",
+   "shape": "box",
+   "x": 200,
+   "y": 300,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#FCE7B2",
+   "stroke": "none"
+  },
+  {
+   "id": "c52",
+   "shape": "box",
+   "x": 312,
+   "y": 300,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#F9C98F",
+   "stroke": "none"
+  },
+  {
+   "id": "c53",
+   "shape": "box",
+   "x": 424,
+   "y": 300,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#E5675B",
+   "stroke": "none"
+  },
+  {
+   "id": "c54",
+   "shape": "box",
+   "x": 536,
+   "y": 300,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#E5675B",
+   "stroke": "none"
+  },
+  {
+   "id": "c55",
+   "shape": "box",
+   "x": 648,
+   "y": 300,
+   "w": 106,
+   "h": 106,
+   "radius": 10,
+   "label": "",
+   "tone": "ghost",
+   "fill": "#E5675B",
+   "stroke": "none"
+  },
+  {
+   "id": "R1",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 567.0,
+   "y": 443.0,
+   "w": 44,
+   "h": 44,
+   "label": "R1",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  },
+  {
+   "id": "R2",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 567.0,
+   "y": 555.0,
+   "w": 44,
+   "h": 44,
+   "label": "R2",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  },
+  {
+   "id": "R3",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 679.0,
+   "y": 667.0,
+   "w": 44,
+   "h": 44,
+   "label": "R3",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  },
+  {
+   "id": "R4",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 455.0,
+   "y": 443.0,
+   "w": 44,
+   "h": 44,
+   "label": "R4",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  },
+  {
+   "id": "R5",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 679.0,
+   "y": 779.0,
+   "w": 44,
+   "h": 44,
+   "label": "R5",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  },
+  {
+   "id": "R6",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 455.0,
+   "y": 667.0,
+   "w": 44,
+   "h": 44,
+   "label": "R6",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  },
+  {
+   "id": "R7",
+   "shape": "circle",
+   "tone": "accent",
+   "x": 231.0,
+   "y": 555.0,
+   "w": 44,
+   "h": 44,
+   "label": "R7",
+   "align": "center",
+   "size": 14,
+   "overlap": true,
+   "fill": "#101828",
+   "stroke": "#FFFFFF",
+   "textColor": "#FFFFFF"
+  }
+ ],
+ "texts": [
+  {
+   "x": 253.0,
+   "y": 884,
+   "text": "1",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 180,
+   "y": 806.0,
+   "text": "1",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 365.0,
+   "y": 884,
+   "text": "2",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 180,
+   "y": 694.0,
+   "text": "2",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 477.0,
+   "y": 884,
+   "text": "3",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 180,
+   "y": 582.0,
+   "text": "3",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 589.0,
+   "y": 884,
+   "text": "4",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 180,
+   "y": 470.0,
+   "text": "4",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 701.0,
+   "y": 884,
+   "text": "5",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 180,
+   "y": 358.0,
+   "text": "5",
+   "font": "mono",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 480.0,
+   "y": 916,
+   "text": "IMPACT →",
+   "font": "mono",
+   "size": 12,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle",
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 142,
+   "y": 658.4000000000001,
+   "text": "LIKELIHOOD →",
+   "font": "mono",
+   "size": 12,
+   "weight": 700,
+   "color": "ink",
+   "rotate": -90,
+   "letterSpacing": 1.5
+  }
+ ],
+ "blocks": [
+  {
+   "type": "table",
+   "x": 830,
+   "y": 300,
+   "rowH": 72,
+   "headH": 44,
+   "headFont": "body",
+   "cellSize": 14.5,
+   "headCase": "upper",
+   "columns": [
+    {
+     "label": "ID",
+     "w": 60
+    },
+    {
+     "label": "Risk",
+     "w": 230
+    },
+    {
+     "label": "Owner",
+     "w": 90
+    },
+    {
+     "label": "Mitigation",
+     "w": 300
+    },
+    {
+     "label": "Score",
+     "w": 80,
+     "align": "center"
+    }
+   ],
+   "rows": [
+    {
+     "cells": [
+      "R1",
+      "Key engineer leaves",
+      "CTO",
+      "Pair on critical services; doc the runbooks",
+      {
+       "text": "16",
+       "tone": "accent",
+       "chipW": 44
+      }
+     ]
+    },
+    {
+     "cells": [
+      "R2",
+      "Vendor API price doubles",
+      "CFO",
+      "Second provider behind a flag",
+      {
+       "text": "12",
+       "tone": "amber",
+       "chipW": 44
+      }
+     ]
+    },
+    {
+     "cells": [
+      "R4",
+      "Launch slips a quarter",
+      "PM",
+      "Cut scope to the 3 must-have flows",
+      {
+       "text": "12",
+       "tone": "amber",
+       "chipW": 44
+      }
+     ]
+    },
+    {
+     "cells": [
+      "R3",
+      "Data breach",
+      "CISO",
+      "Pen test in May; SOC 2 controls",
+      {
+       "text": "10",
+       "tone": "amber",
+       "chipW": 44
+      }
+     ]
+    },
+    {
+     "cells": [
+      "R5",
+      "Cloud region outage",
+      "SRE",
+      "Warm standby in 2nd region",
+      {
+       "text": "5",
+       "tone": "teal",
+       "chipW": 44
+      }
+     ]
+    },
+    {
+     "cells": [
+      "R6",
+      "Regulation changes",
+      "Legal",
+      "Quarterly review with counsel",
+      {
+       "text": "6",
+       "tone": "teal",
+       "chipW": 44
+      }
+     ]
+    },
+    {
+     "cells": [
+      "R7",
+      "Office move delays",
+      "Ops",
+      "Remote-first fallback",
+      {
+       "text": "3",
+       "tone": "teal",
+       "chipW": 44
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

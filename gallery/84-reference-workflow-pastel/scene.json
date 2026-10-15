@@ -1,0 +1,279 @@
+{
+ "theme": "pastel",
+ "size": [
+  1660,
+  860
+ ],
+ "kicker": "研究生工具箱 · 文献管理",
+ "title": "文献管理工作流",
+ "subtitle": "从检索到写作，每篇文献只录入一次。五个工具各管一步，靠同一个引用键串起来。",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "s0",
+   "label": "检索",
+   "tag": "PubMed / CNKI / Web of Science",
+   "sub": "保存检索式与日期",
+   "tone": "blue",
+   "x": 60,
+   "y": 300,
+   "w": 280,
+   "h": 110,
+   "step": 1
+  },
+  {
+   "id": "s1",
+   "label": "导入",
+   "tag": "Zotero",
+   "sub": "RIS / BibTeX，一键入库",
+   "tone": "purple",
+   "x": 378,
+   "y": 300,
+   "w": 280,
+   "h": 110,
+   "step": 2
+  },
+  {
+   "id": "s2",
+   "label": "阅读",
+   "tag": "Zotero 阅读器",
+   "sub": "高亮颜色固定含义",
+   "tone": "yellow",
+   "x": 696,
+   "y": 300,
+   "w": 280,
+   "h": 110,
+   "step": 3
+  },
+  {
+   "id": "s3",
+   "label": "笔记",
+   "tag": "Obsidian",
+   "sub": "一篇文献一条笔记，带引用键",
+   "tone": "green",
+   "x": 1014,
+   "y": 300,
+   "w": 280,
+   "h": 110,
+   "step": 4
+  },
+  {
+   "id": "s4",
+   "label": "写作",
+   "tag": "Word + Zotero 插件",
+   "sub": "引用自动编号",
+   "tone": "orange",
+   "x": 1332,
+   "y": 300,
+   "w": 280,
+   "h": 110,
+   "step": 5
+  },
+  {
+   "id": "card",
+   "label": "",
+   "tone": "white",
+   "x": 700,
+   "y": 512,
+   "w": 560,
+   "h": 230,
+   "shape": "box"
+  }
+ ],
+ "edges": [
+  {
+   "from": "s0",
+   "to": "s1",
+   "kind": "primary"
+  },
+  {
+   "from": "s1",
+   "to": "s2",
+   "kind": "primary"
+  },
+  {
+   "from": "s2",
+   "to": "s3",
+   "kind": "primary"
+  },
+  {
+   "from": "s3",
+   "to": "s4",
+   "kind": "primary"
+  }
+ ],
+ "texts": [
+  {
+   "x": 60,
+   "y": 500,
+   "text": "高亮颜色约定",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 132,
+   "y": 548,
+   "text": "黄色：研究问题与结论",
+   "size": 15,
+   "color": "ink"
+  },
+  {
+   "x": 132,
+   "y": 592,
+   "text": "绿色：方法与样本",
+   "size": 15,
+   "color": "ink"
+  },
+  {
+   "x": 132,
+   "y": 636,
+   "text": "红色：局限与矛盾",
+   "size": 15,
+   "color": "ink"
+  },
+  {
+   "x": 132,
+   "y": 680,
+   "text": "蓝色：可引用的原句",
+   "size": 15,
+   "color": "ink"
+  },
+  {
+   "x": 700,
+   "y": 500,
+   "text": "一条文献笔记的固定结构",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 720,
+   "y": 540,
+   "text": "# @zhang2024fall",
+   "size": 15,
+   "color": "accent",
+   "font": "mono"
+  },
+  {
+   "x": 720,
+   "y": 574,
+   "text": "问题：夜间巡视频率与跌倒的关系",
+   "size": 15,
+   "color": "ink",
+   "font": "mono"
+  },
+  {
+   "x": 720,
+   "y": 608,
+   "text": "方法：前后对照，n = 412",
+   "size": 15,
+   "color": "ink",
+   "font": "mono"
+  },
+  {
+   "x": 720,
+   "y": 642,
+   "text": "结论：每 2 小时巡视，跌倒率 −50%",
+   "size": 15,
+   "color": "ink",
+   "font": "mono"
+  },
+  {
+   "x": 720,
+   "y": 676,
+   "text": "我的看法：未控制季节因素",
+   "size": 15,
+   "color": "ink",
+   "font": "mono"
+  },
+  {
+   "x": 720,
+   "y": 710,
+   "text": "可用于：第 2 章 2.3 节",
+   "size": 15,
+   "color": "ink",
+   "font": "mono"
+  },
+  {
+   "x": 1320,
+   "y": 540,
+   "text": "文件命名",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1320,
+   "y": 574,
+   "text": "作者年份_关键词.pdf",
+   "size": 15,
+   "color": "ink",
+   "font": "mono"
+  },
+  {
+   "x": 1320,
+   "y": 606,
+   "text": "zhang2024_fall.pdf",
+   "size": 14,
+   "color": "muted",
+   "font": "mono"
+  },
+  {
+   "x": 1320,
+   "y": 660,
+   "text": "引用键与文件名一致，",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 1320,
+   "y": 686,
+   "text": "笔记、PDF、正文三处能互相找到。",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "bars": [
+  {
+   "x": 60,
+   "y": 530,
+   "w": 56,
+   "h": 24,
+   "value": 1,
+   "fill": "#FBE38E",
+   "track": false,
+   "radius": 3
+  },
+  {
+   "x": 60,
+   "y": 574,
+   "w": 56,
+   "h": 24,
+   "value": 1,
+   "fill": "#C8E6C9",
+   "track": false,
+   "radius": 3
+  },
+  {
+   "x": 60,
+   "y": 618,
+   "w": 56,
+   "h": 24,
+   "value": 1,
+   "fill": "#F8C8C8",
+   "track": false,
+   "radius": 3
+  },
+  {
+   "x": 60,
+   "y": 662,
+   "w": 56,
+   "h": 24,
+   "value": 1,
+   "fill": "#C9DDF2",
+   "track": false,
+   "radius": 3
+  }
+ ]
+}

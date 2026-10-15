@@ -1,0 +1,227 @@
+{
+  "id": "newsprint",
+  "name": "Newsprint",
+  "nameZh": "报刊黑白",
+  "aliases": [
+    "newsprint",
+    "报纸",
+    "黑白",
+    "monochrome"
+  ],
+  "summary": "Pure black on newsprint: hatching instead of colour, numbered callouts with leader lines, a serif headline and a figure caption. Prints perfectly in grayscale.",
+  "palette": {
+    "paper": "#F2EFE7",
+    "ink": "#121212",
+    "muted": "#555249",
+    "accent": "#121212",
+    "card": "#FAF8F3"
+  },
+  "fonts": {
+    "display": "Instrument Serif, Noto Serif SC, serif",
+    "body": "Inter, Noto Sans SC, sans-serif",
+    "mono": "IBM Plex Mono, Noto Sans SC, monospace"
+  },
+  "canvas": {
+    "bg": "paper",
+    "margin": 64,
+    "grain": {
+      "opacity": 0.2,
+      "frequency": 1.2,
+      "r": 0.1,
+      "g": 0.1,
+      "b": 0.1,
+      "alpha": 0.5
+    }
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 64,
+    "titleWeight": 400,
+    "titleLetterSpacing": -0.5,
+    "kickerFont": "mono",
+    "kickerSize": 12,
+    "kickerColor": "ink",
+    "kickerLetterSpacing": 2,
+    "kickerWeight": 600,
+    "subFont": "body",
+    "subSize": 16,
+    "subColor": "muted",
+    "rule": "ink",
+    "ruleWidth": 3,
+    "figureColor": "ink"
+  },
+  "node": {
+    "font": "body",
+    "size": 16,
+    "weight": 700,
+    "subFont": "mono",
+    "subSize": 11.5,
+    "tagFont": "mono",
+    "tagSize": 10,
+    "tagCase": "upper",
+    "tagLetterSpacing": 1.5,
+    "tagWeight": 600,
+    "tagPos": "above",
+    "radius": 0,
+    "stroke": 1.5,
+    "padding": 14,
+    "align": "left",
+    "iconSize": 20,
+    "gap": 5
+  },
+  "tones": {
+    "default": {
+      "fill": "card",
+      "stroke": "ink",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "muted",
+      "icon": "ink"
+    },
+    "hatch": {
+      "pattern": {
+        "type": "hatch",
+        "color": "#121212",
+        "gap": 5,
+        "size": 0.9,
+        "angle": 45,
+        "bg": "#FAF8F3"
+      },
+      "stroke": "ink",
+      "strokeWidth": 2,
+      "text": "ink",
+      "sub": "ink",
+      "tag": "ink",
+      "icon": "ink",
+      "plate": "card"
+    },
+    "ink": {
+      "fill": "ink",
+      "stroke": "ink",
+      "text": "#FAF8F3",
+      "sub": "#C9C5BB",
+      "tag": "#C9C5BB",
+      "icon": "#FAF8F3"
+    },
+    "dots": {
+      "pattern": {
+        "type": "dots",
+        "color": "#121212",
+        "gap": 5,
+        "size": 0.9,
+        "angle": 0,
+        "bg": "#FAF8F3"
+      },
+      "stroke": "ink",
+      "text": "ink",
+      "sub": "ink",
+      "tag": "ink",
+      "plate": "card"
+    },
+    "ghost": {
+      "fill": "none",
+      "stroke": "ink",
+      "dash": "4 4",
+      "text": "muted",
+      "sub": "muted",
+      "tag": "muted"
+    },
+    "bold": {
+      "fill": "card",
+      "stroke": "ink",
+      "strokeWidth": 3,
+      "text": "ink",
+      "sub": "muted",
+      "tag": "muted"
+    }
+  },
+  "zone": {
+    "style": "outline",
+    "radius": 0,
+    "stroke": 1,
+    "labelFont": "mono",
+    "labelSize": 11,
+    "labelCase": "upper",
+    "letterSpacing": 1.8,
+    "labelWeight": 600,
+    "labelStyle": "notch",
+    "labelPad": 16,
+    "tones": {
+      "default": {
+        "stroke": "ink",
+        "text": "ink"
+      },
+      "light": {
+        "stroke": "#8C887D",
+        "dash": "2 4",
+        "text": "muted"
+      }
+    }
+  },
+  "edge": {
+    "color": "ink",
+    "width": 1.6,
+    "radius": 0,
+    "arrow": "triangle",
+    "arrowSize": 9,
+    "gap": 3,
+    "labelFont": "display",
+    "labelSize": 17,
+    "labelColor": "ink",
+    "labelItalic": true,
+    "labelPlacement": "above",
+    "labelStyle": "plain",
+    "kinds": {
+      "wal": {
+        "color": "ink",
+        "width": 3.5
+      },
+      "async": {
+        "color": "ink",
+        "width": 1.6,
+        "dash": "7 5"
+      },
+      "control": {
+        "color": "muted",
+        "width": 1.2,
+        "dash": "1.5 4"
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "ink",
+    "text": "#F2EFE7",
+    "size": 24,
+    "font": "display",
+    "weight": 400,
+    "fontSize": 17
+  },
+  "note": {
+    "style": "margin",
+    "font": "body",
+    "size": 13.5,
+    "color": "ink",
+    "numFont": "display",
+    "numColor": "ink",
+    "lineHeight": 1.45,
+    "leader": "ink",
+    "leaderWidth": 0.8
+  },
+  "legend": {
+    "font": "mono",
+    "size": 11,
+    "color": "ink",
+    "titleColor": "ink",
+    "titleCase": "upper",
+    "letterSpacing": 1
+  },
+  "footer": {
+    "text": "MuseDraw · Newsprint",
+    "font": "mono",
+    "size": 10.5,
+    "color": "muted",
+    "letterSpacing": 1.5
+  }
+}

@@ -5,9 +5,9 @@
   <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
 </picture>
 
-<h3>专业绘图助手</h3>
+<h3>给 AI 智能体的专业绘图 Skill</h3>
 
-<p>把专业配图的设计方法，带进你的 AI 工作流。</p>
+<p>一句话需求 → 期刊级、汇报级的原生 SVG / PNG。20 套视觉风格，100 个办公与科研案例，全部可复刻。</p>
 
 <p>
   <a href="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml"><img src="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml/badge.svg" alt="Repository checks"></a>
@@ -16,74 +16,80 @@
 
 <p>
   <a href="#快速开始">快速开始</a> ·
-  <a href="https://kanjieteam.github.io/MuseDraw/">风格与示例</a> ·
-  <a href="docs/usage.zh-CN.md">使用指南</a> ·
-  <a href="#参与共建">参与共建</a> ·
+  <a href="gallery/README.md">图库</a> ·
+  <a href="skills/musedraw/references/style-atlas.md">20 种风格</a> ·
   <a href="README.en.md">English</a>
 </p>
 
 </div>
 
----
+[![MuseDraw 精选 20 例](assets/gallery/flagship-grid.jpg)](gallery/README.md)
 
-MuseDraw 是一个开源专业绘图 Skill。你提供几句话和系统资料，智能体理解内容，MuseDraw 的绘图代码完成排版、图形、连线与导出。在原有对话中继续修改，保留已确认的信息与关系。
+<p align="center"><sub>以上每张图都只来自一个 <code>scene.json</code>：基金技术路线、PRISMA、CONSORT、模型结构、结构方程、量表编制、OKR、跨部门泳道、PDCA、鱼骨图、公文流程、课堂设计、系统架构……</sub></p>
 
 ## 快速开始
 
-安装 Skill，按提示选择你的客户端：
-
 ```bash
-npx skills add KanJieTeam/MuseDraw
+npx skills add KanJieTeam/MuseDraw          # 安装 Skill 到你的智能体
+npm --prefix skills/musedraw install        # 首次：安装开源字体与 Playwright（跨平台渲染一致）
 ```
 
-安装后，直接告诉智能体：
+然后在 Codex、Cursor 等能执行命令的智能体里说：
 
 ```text
-用 MuseDraw 画一张资料归档系统的组件图，使用手绘线稿风格。
-门户提交资料到归档服务，归档服务写入资料库。给方案说明使用。
+用 MuseDraw 的「科研期刊」风格画国自然技术路线图：
+科学问题是肝星状细胞代谢重编程如何驱动肝纤维化，三条研究内容是临床队列、细胞机制、动物验证，最后整合出机制与靶点。
 ```
 
-换成你的主题与已知关系即可。无需提供坐标、色值或绘图代码；示例展示风格，不限定业务题材。
+智能体会选择版式、写出 `scene.json`、渲染、看图、修正，交付 `diagram.svg`（可编辑）、`diagram@2x.png` 和 `checks.json`。
 
-通过上述命令安装需要 Node.js 22.20+，以及具备文件读写与工具执行能力的智能体。绘图与 PNG 导出的运行条件见[使用指南](docs/usage.zh-CN.md)。
+## 为科研与日常办公而做
 
-## 两种可直接使用的风格
+| 科研 | 办公 | 教学 | 工程 |
+| --- | --- | --- | --- |
+| 技术路线图 · PRISMA · CONSORT · 模型结构 · 结构方程 · 量表编制 · 实验流程 · 课题甘特 · 中介/调节模型 | OKR 拆解 · 泳道审批 · PDCA · 鱼骨图 · 客户旅程 · 思维导图 · 公文流转 · RACI · 风险热力图 · 路线图 | 课堂五环节 · 课程地图 · 一日流程 | RAG · Kubernetes · 支付链路 · AI Agent · C4 · 可观测性 |
 
-| 手绘线稿 | 终端色域 |
-| :--- | :--- |
-| ![手绘线稿：资料归档组件图](docs/verification/graph-workflow-20261014/examples/archive-sketch/round-0/preview-1200.png) | ![终端色域：设备数据平台](docs/verification/graph-workflow-20261014/examples/device-planes/round-0/preview-1200.png) |
-| 白纸、线稿、角色图形与存储排线，适合讨论组件与关系。 | 浅色画布、暖冷分区与清晰几何，适合表达已知归属和系统边界。 |
+10 种布局块（树、思维导图、时间线、甘特、矩阵、漏斗、循环、鱼骨、泳道、表格）+ 时序图 + 自由图元。结构交给布局块，美感交给风格，事实留给你。
 
-两种风格共用同一套组件图工作流，可用于新的行业、组件与关系。构图可按关系分层，也可按已提供的归属域分区；终端色域也可用于没有分区的关系图。选择时说“手绘线稿”或“终端色域”即可。
+## 20 种风格，一行切换
 
-交付 **PNG、可编辑 SVG 与语义文档 `document.json`**。例如继续说：“把归档服务改名为资料服务，其他关系保持不变。”智能体修改已有文档并重新渲染。
+`科研期刊` `纸墨编辑` `报刊黑白` `商务墨蓝` `水墨宣纸` `柔和笔记` `暖陶` `白板手绘` `黑板教学` `瑞士海报` `包豪斯` `地铁线路` `产品发布` `C4 标准` `工程蓝图` `终端暗色` `观测夜空` `极光玻璃` `孔版套印` `霓虹街机`
 
-[查看风格、短需求与可下载示例](https://kanjieteam.github.io/MuseDraw/) · [使用指南](docs/usage.zh-CN.md)
+```bash
+node skills/musedraw/scripts/musedraw.mjs render gallery/59-nsfc-roadmap-journal/scene.json --theme 水墨宣纸 --out output/ink
+```
 
-## 可复用，也可重渲染
+风格不是换色：每套风格有自己的字体、线条语法、质感、标注方式和版式。见 [风格图谱](skills/musedraw/references/style-atlas.md)。
 
-同一份语义文档在相同绘图版本、字体与运行环境下可重渲染相同原生几何；PNG 的抗锯齿可能有微小差异。新主题仍需要智能体正确理解资料，短需求不保证任意模型都能生成完全相同的图。
+## 复刻任何一个案例
 
-当前代码支持组件、显式关系与平面归属域；嵌套域等结构尚未支持。PNG 需要已有 Node.js 22+、Playwright、Chromium 兼容浏览器及相应字体，宿主必须能读写文件并执行工具。MuseDraw 不额外要求模型 API key。
+每个案例目录都有 `scene.json`（完整来源）、`prompt.md`（一句话需求）、`diagram.svg` 与 `preview.jpg`：
 
-可安装技能为 [`musedraw`](skills/musedraw/SKILL.md)。[实现与边界](docs/semantic-graph.zh-CN.md)及[真实模型验证记录](docs/verification/graph-workflow-20261014/README.md)说明已检查的范围。科研流程与统计图尚未作为工作流发布。
+```bash
+npm run gallery        # 重新渲染全部案例
+```
+
+想让你的智能体学会某种图？把对应 `prompt.md` 交给它即可。[图库总览](gallery/README.md) · [100 案例清单](gallery/catalog.json)
 
 ## 设计方法
 
-- **信息优先。** 先确定读者、内容与关系，再选择视图和构图。
-- **克制表达。** 用层级、留白与有限的强调色组织信息。
-- **看图再交付。** 渲染后检查文字、边界和连线，不只检查生成代码。
+- **一张图只证明一件事。** 先写副标题，再画图。
+- **具体胜过“通用”。** 示例也用真实名词和能对上的数字，绝不出现“服务A / 模块甲”。
+- **一个焦点，编号路径，旁注解释为什么。**
+- **看图再交付。** `checks.json` 用真实字形检查溢出、碰撞和标签压框；[去 AI 味检查表](skills/musedraw/references/anti-ai-checklist.md) 负责审美。
 
 ## 参与共建
 
-欢迎工程师、科研工作者、产品人员、设计师与开发者参与。可以改进设计规则、完善制作工具，或贡献一个从输入到图片交付的专业绘图工作流。
+欢迎贡献新案例、新风格和新的布局块：复制一个 `gallery/` 目录，改内容，渲染，看图，提交 `scene.json` + `prompt.md`。提交前运行 `python scripts/check.py`。[贡献指南](CONTRIBUTING.zh-CN.md) · [提出问题](https://github.com/KanJieTeam/MuseDraw/issues)
 
-[阅读贡献指南](CONTRIBUTING.zh-CN.md) · [提出问题与建议](https://github.com/KanJieTeam/MuseDraw/issues)
+## 限制
 
-首次贡献可以使用中文或英文。提交前运行 `python scripts/check.py`；涉及图的修改还需要实际看图。
+- 需要能读写文件、执行命令的智能体；纯聊天网页无法运行渲染。
+- PNG 需要 Node.js 22+ 与 Chromium（`npm install` 自动安装）；无浏览器时可用 `--svg-only`。
+- 不是统计绘图工具：柱状图、散点图请用 matplotlib / ggplot。
+- 案例中的数字为说明用途；真实项目以你提供的事实为准。
+- 旧版自动布局路线（`render_graph.mjs`）仍保留，见 [语义图说明](docs/semantic-graph.zh-CN.md)。
 
 ## 开源许可
 
-[Apache-2.0](LICENSE) · [品牌标识](assets/brand/README.md)
-
-引入第三方素材时，请确认授权并注明来源。
+[Apache-2.0](LICENSE) · 字体均为 SIL OFL 开源字体 · [品牌标识](assets/brand/README.md)

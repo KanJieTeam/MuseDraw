@@ -1,0 +1,143 @@
+{
+ "theme": "editorial",
+ "type": "sequence",
+ "size": [
+  1600,
+  1180
+ ],
+ "kicker": "Scholarly publishing · one manuscript",
+ "title": "Journal peer-review timeline",
+ "subtitle": "Time runs down the page. Most of the five months are spent in the two long gaps — reviewer invitations and the author's revision — not in anyone's actual reading.",
+ "subtitleWidth": 1100,
+ "figure": "Fig. 71",
+ "top": 300,
+ "left": 120,
+ "right": 1180,
+ "headWidth": 200,
+ "rowGap": 62,
+ "participants": [
+  {
+   "id": "au",
+   "label": "Author",
+   "tag": "corresponding"
+  },
+  {
+   "id": "ed",
+   "label": "Handling editor",
+   "tag": "journal"
+  },
+  {
+   "id": "r1",
+   "label": "Reviewer 1",
+   "tag": "methods"
+  },
+  {
+   "id": "r2",
+   "label": "Reviewer 2",
+   "tag": "domain"
+  }
+ ],
+ "messages": [
+  {
+   "from": "au",
+   "to": "ed",
+   "label": "submit manuscript",
+   "kind": "primary",
+   "step": 1
+  },
+  {
+   "from": "ed",
+   "to": "ed",
+   "label": "desk check · scope, ethics",
+   "labelWidth": 100
+  },
+  {
+   "from": "ed",
+   "to": "r1",
+   "label": "invite (3 decline first)",
+   "gapBefore": 20,
+   "step": 2
+  },
+  {
+   "from": "ed",
+   "to": "r2",
+   "label": "invite"
+  },
+  {
+   "from": "r1",
+   "to": "ed",
+   "label": "report · minor issues",
+   "gapBefore": 30,
+   "kind": "return",
+   "step": 3
+  },
+  {
+   "from": "r2",
+   "to": "ed",
+   "label": "report · major concerns",
+   "kind": "return"
+  },
+  {
+   "from": "ed",
+   "to": "au",
+   "label": "decision: major revision",
+   "kind": "primary",
+   "step": 4
+  },
+  {
+   "from": "au",
+   "to": "ed",
+   "label": "revision + response letter",
+   "gapBefore": 40,
+   "step": 5
+  },
+  {
+   "from": "ed",
+   "to": "r2",
+   "label": "re-review"
+  },
+  {
+   "from": "r2",
+   "to": "ed",
+   "label": "satisfied",
+   "kind": "return"
+  },
+  {
+   "from": "ed",
+   "to": "au",
+   "label": "accept → proofs",
+   "kind": "primary",
+   "step": 6
+  }
+ ],
+ "notes": [
+  {
+   "num": "",
+   "text": "≈ 3 weeks",
+   "x": 1220,
+   "row": 3,
+   "w": 200
+  },
+  {
+   "num": "",
+   "text": "≈ 6 weeks",
+   "x": 1220,
+   "row": 5,
+   "w": 200
+  },
+  {
+   "num": "",
+   "text": "≈ 8 weeks",
+   "x": 1220,
+   "row": 8,
+   "w": 200
+  },
+  {
+   "num": "",
+   "text": "Tip: the response letter is read before the manuscript. Quote each comment, answer it, and give the page and line of the change.",
+   "x": 1220,
+   "row": 9,
+   "w": 320
+  }
+ ]
+}

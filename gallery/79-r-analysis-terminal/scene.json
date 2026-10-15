@@ -1,0 +1,172 @@
+{
+ "theme": "terminal",
+ "size": [
+  1760,
+  860
+ ],
+ "kicker": "Rscript -e 'targets::tar_make()'",
+ "title": "Reproducible R analysis pipeline",
+ "subtitle": "Each box is a function; each arrow is an object cached by {targets}. Change the cleaning rule and only the downstream boxes rerun.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "raw",
+   "x": 64,
+   "y": 300,
+   "w": 296,
+   "h": 110,
+   "label": "read_raw()",
+   "tag": "data/raw/*.csv",
+   "sub": "never modified"
+  },
+  {
+   "id": "clean",
+   "x": 400,
+   "y": 300,
+   "w": 296,
+   "h": 110,
+   "label": "clean()",
+   "tag": "rules in R/clean.R",
+   "sub": "recode, exclusions"
+  },
+  {
+   "id": "miss",
+   "x": 736,
+   "y": 300,
+   "w": 296,
+   "h": 110,
+   "label": "impute()",
+   "tag": "mice, m = 20",
+   "sub": "MAR assumed"
+  },
+  {
+   "id": "desc",
+   "x": 1072,
+   "y": 300,
+   "w": 296,
+   "h": 110,
+   "label": "describe()",
+   "tag": "gtsummary",
+   "sub": "Table 1"
+  },
+  {
+   "id": "model",
+   "x": 1408,
+   "y": 300,
+   "w": 296,
+   "h": 110,
+   "label": "fit_models()",
+   "tag": "lme4",
+   "sub": "random intercept: site"
+  },
+  {
+   "id": "diag",
+   "x": 400,
+   "y": 520,
+   "w": 296,
+   "h": 110,
+   "label": "diagnose()",
+   "tag": "DHARMa",
+   "sub": "residual checks"
+  },
+  {
+   "id": "tab",
+   "x": 736,
+   "y": 520,
+   "w": 296,
+   "h": 110,
+   "label": "tables()",
+   "tag": "modelsummary",
+   "sub": "pooled estimates"
+  },
+  {
+   "id": "fig",
+   "x": 1072,
+   "y": 520,
+   "w": 296,
+   "h": 110,
+   "label": "figures()",
+   "tag": "ggplot2",
+   "sub": "300 dpi, colour-safe"
+  },
+  {
+   "id": "rep",
+   "x": 1408,
+   "y": 520,
+   "w": 296,
+   "h": 110,
+   "label": "report.qmd",
+   "tag": "quarto",
+   "sub": "knit → docx / pdf",
+   "tone": "accent"
+  }
+ ],
+ "edges": [
+  {
+   "from": "raw",
+   "to": "clean",
+   "kind": "primary"
+  },
+  {
+   "from": "clean",
+   "to": "miss",
+   "kind": "primary"
+  },
+  {
+   "from": "miss",
+   "to": "desc",
+   "kind": "primary"
+  },
+  {
+   "from": "desc",
+   "to": "model",
+   "kind": "primary"
+  },
+  {
+   "from": "model",
+   "to": "diag",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "deploy",
+   "mid": 470
+  },
+  {
+   "from": "model",
+   "to": "tab",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "deploy",
+   "mid": 470
+  },
+  {
+   "from": "model",
+   "to": "fig",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "deploy",
+   "mid": 470
+  },
+  {
+   "from": "fig",
+   "to": "rep",
+   "kind": "deploy"
+  },
+  {
+   "from": "desc",
+   "to": "rep",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "deploy",
+   "toAt": 0.5,
+   "mid": 455
+  }
+ ],
+ "notes": [
+  {
+   "text": "renv.lock pins every package version · sessionInfo() goes in the appendix",
+   "x": 64,
+   "y": 700,
+   "w": 900
+  }
+ ]
+}

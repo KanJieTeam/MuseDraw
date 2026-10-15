@@ -1,0 +1,440 @@
+{
+ "theme": "ink-wash",
+ "size": [
+  1760,
+  1000
+ ],
+ "title": "城市数据共享交换平台总体架构",
+ "seal": "墨图",
+ "kicker": "政务数据 · 一数一源 · 按需共享",
+ "subtitle": "各委办局的数据先归集、再治理、后共享。资源统一编目，接口统一网关，每一次调用都可追溯。",
+ "subtitleWidth": 1200,
+ "zones": [
+  {
+   "id": "z1",
+   "label": "提供方",
+   "x": 64,
+   "y": 232,
+   "w": 232,
+   "h": 600
+  },
+  {
+   "id": "z2",
+   "label": "归集",
+   "x": 318,
+   "y": 232,
+   "w": 252,
+   "h": 600
+  },
+  {
+   "id": "z3",
+   "label": "治理",
+   "x": 592,
+   "y": 232,
+   "w": 252,
+   "h": 600
+  },
+  {
+   "id": "z4",
+   "label": "资源",
+   "tone": "accent",
+   "x": 866,
+   "y": 232,
+   "w": 272,
+   "h": 600
+  },
+  {
+   "id": "z5",
+   "label": "共享",
+   "x": 1160,
+   "y": 232,
+   "w": 252,
+   "h": 600
+  },
+  {
+   "id": "z6",
+   "label": "使用方",
+   "x": 1434,
+   "y": 232,
+   "w": 262,
+   "h": 600
+  }
+ ],
+ "nodes": [
+  {
+   "id": "ga",
+   "label": "公安局",
+   "tag": "人口户籍",
+   "x": 124,
+   "y": 300,
+   "w": 156,
+   "h": 84
+  },
+  {
+   "id": "rs",
+   "label": "人社局",
+   "tag": "社保就业",
+   "x": 124,
+   "y": 430,
+   "w": 156,
+   "h": 84
+  },
+  {
+   "id": "sj",
+   "label": "市场监管局",
+   "tag": "企业登记",
+   "x": 124,
+   "y": 560,
+   "w": 156,
+   "h": 84
+  },
+  {
+   "id": "wj",
+   "label": "卫健委",
+   "tag": "出生医学",
+   "x": 124,
+   "y": 690,
+   "w": 156,
+   "h": 84
+  },
+  {
+   "id": "front",
+   "label": "前置交换库",
+   "tag": "部署在各委办局",
+   "shape": "cylinder",
+   "x": 378,
+   "y": 300,
+   "w": 176,
+   "h": 110
+  },
+  {
+   "id": "etl",
+   "label": "批量归集",
+   "tag": "ETL，每日",
+   "x": 378,
+   "y": 470,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "cdc",
+   "label": "实时同步",
+   "tag": "CDC，秒级",
+   "x": 378,
+   "y": 620,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "std",
+   "label": "数据标准",
+   "tag": "元数据，代码表",
+   "x": 652,
+   "y": 300,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "qc",
+   "label": "质量稽核",
+   "tag": "完整，一致，及时",
+   "x": 652,
+   "y": 420,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "grade",
+   "label": "分级脱敏",
+   "tag": "核心 / 重要 / 一般",
+   "x": 652,
+   "y": 540,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "mdm",
+   "label": "主数据融合",
+   "tag": "一人一档，一企一档",
+   "tone": "accent",
+   "x": 652,
+   "y": 660,
+   "w": 176,
+   "h": 92
+  },
+  {
+   "id": "pop",
+   "label": "人口库",
+   "tag": "身份，户籍，婚育",
+   "shape": "cylinder",
+   "tone": "wash",
+   "x": 926,
+   "y": 296,
+   "w": 196,
+   "h": 104
+  },
+  {
+   "id": "corp",
+   "label": "法人库",
+   "tag": "登记，年报，信用",
+   "shape": "cylinder",
+   "tone": "wash",
+   "x": 926,
+   "y": 428,
+   "w": 196,
+   "h": 104
+  },
+  {
+   "id": "cert",
+   "label": "电子证照库",
+   "tag": "身份证，执照，不动产",
+   "shape": "cylinder",
+   "tone": "wash",
+   "x": 926,
+   "y": 560,
+   "w": 196,
+   "h": 104
+  },
+  {
+   "id": "geo",
+   "label": "空间地理库",
+   "tag": "地址，网格，影像",
+   "shape": "cylinder",
+   "tone": "wash",
+   "x": 926,
+   "y": 692,
+   "w": 196,
+   "h": 104
+  },
+  {
+   "id": "catalog",
+   "label": "资源目录",
+   "tag": "统一编目，按需申请",
+   "x": 1220,
+   "y": 300,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "gw",
+   "label": "接口网关",
+   "tag": "鉴权，限流，留痕",
+   "tone": "accent",
+   "x": 1220,
+   "y": 450,
+   "w": 176,
+   "h": 92
+  },
+  {
+   "id": "file",
+   "label": "文件交换",
+   "tag": "大批量，离线",
+   "x": 1220,
+   "y": 620,
+   "w": 176,
+   "h": 84
+  },
+  {
+   "id": "ywtb",
+   "label": "一网通办",
+   "tag": "办事少填少报",
+   "x": 1496,
+   "y": 300,
+   "w": 184,
+   "h": 84
+  },
+  {
+   "id": "brain",
+   "label": "城市运行中心",
+   "tag": "运行体征监测",
+   "x": 1496,
+   "y": 454,
+   "w": 184,
+   "h": 84
+  },
+  {
+   "id": "biz",
+   "label": "部门业务系统",
+   "tag": "按授权调用",
+   "x": 1496,
+   "y": 620,
+   "w": 184,
+   "h": 84
+  },
+  {
+   "id": "audit",
+   "label": "安全与审计贯穿全链路　　授权审批 · 调用留痕 · 异常告警 · 定期评估",
+   "tone": "seal",
+   "x": 64,
+   "y": 862,
+   "w": 1632,
+   "h": 56
+  }
+ ],
+ "edges": [
+  {
+   "from": "ga",
+   "to": "front",
+   "mid": 302,
+   "toAt": 0.5
+  },
+  {
+   "from": "rs",
+   "to": "front",
+   "mid": 302,
+   "toAt": 0.5
+  },
+  {
+   "from": "sj",
+   "to": "front",
+   "mid": 302,
+   "toAt": 0.5
+  },
+  {
+   "from": "wj",
+   "to": "cdc",
+   "kind": "soft",
+   "mid": 340,
+   "label": "变更日志",
+   "labelAt": [
+    340,
+    700
+   ]
+  },
+  {
+   "from": "front",
+   "to": "etl"
+  },
+  {
+   "from": "etl",
+   "to": "qc",
+   "mid": 600
+  },
+  {
+   "from": "cdc",
+   "to": "qc",
+   "mid": 616
+  },
+  {
+   "from": "std",
+   "to": "qc",
+   "kind": "soft"
+  },
+  {
+   "from": "qc",
+   "to": "grade"
+  },
+  {
+   "from": "grade",
+   "to": "mdm"
+  },
+  {
+   "from": "mdm",
+   "to": "pop",
+   "kind": "primary",
+   "mid": 852,
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.5
+  },
+  {
+   "from": "mdm",
+   "to": "corp",
+   "kind": "primary",
+   "mid": 852,
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.5
+  },
+  {
+   "from": "mdm",
+   "to": "cert",
+   "kind": "primary",
+   "mid": 852,
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.5
+  },
+  {
+   "from": "mdm",
+   "to": "geo",
+   "kind": "primary",
+   "mid": 852,
+   "fromSide": "r",
+   "toSide": "l",
+   "fromAt": 0.5
+  },
+  {
+   "from": "pop",
+   "to": "gw",
+   "mid": 1150,
+   "toAt": 0.5
+  },
+  {
+   "from": "corp",
+   "to": "gw",
+   "mid": 1150,
+   "toAt": 0.5
+  },
+  {
+   "from": "cert",
+   "to": "gw",
+   "mid": 1150,
+   "toAt": 0.5
+  },
+  {
+   "from": "geo",
+   "to": "file",
+   "mid": 1150
+  },
+  {
+   "from": "catalog",
+   "to": "gw",
+   "kind": "soft",
+   "label": "申请授权"
+  },
+  {
+   "from": "gw",
+   "to": "ywtb",
+   "kind": "primary",
+   "mid": 1422,
+   "fromAt": 0.5
+  },
+  {
+   "from": "gw",
+   "to": "brain",
+   "kind": "primary",
+   "fromAt": 0.5
+  },
+  {
+   "from": "gw",
+   "to": "biz",
+   "kind": "primary",
+   "mid": 1422,
+   "fromAt": 0.5
+  },
+  {
+   "from": "file",
+   "to": "biz",
+   "kind": "soft"
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 948,
+  "items": [
+   {
+    "kind": "default",
+    "label": "数据流转"
+   },
+   {
+    "kind": "primary",
+    "label": "对外共享"
+   },
+   {
+    "kind": "soft",
+    "label": "约束 / 申请"
+   }
+  ]
+ }
+}

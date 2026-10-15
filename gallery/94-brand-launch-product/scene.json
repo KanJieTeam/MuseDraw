@@ -1,0 +1,108 @@
+{
+ "theme": "product",
+ "size": [
+  1700,
+  1080
+ ],
+ "kicker": "Marketing plan · consumer brand",
+ "title": "Brand launch, planned backwards from launch day",
+ "subtitle": "Start from the date and work back. Trademark clearance and the first production run are the two long poles; everything else fits around them.",
+ "subtitleWidth": 1250,
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 64,
+   "y": 250,
+   "w": 1570,
+   "labelW": 340,
+   "rowH": 50,
+   "groupH": 38,
+   "barRatio": 0.5,
+   "columns": [
+    "W−12",
+    "W−10",
+    "W−8",
+    "W−6",
+    "W−4",
+    "W−2",
+    "Launch"
+   ],
+   "colSize": 14,
+   "labelSize": 15,
+   "groupCase": "none",
+   "groupFont": "body",
+   "groupSize": 14,
+   "milestoneTone": "accent",
+   "tasks": [
+    {
+     "group": "Brand",
+     "label": "Positioning and naming locked",
+     "start": 0,
+     "end": 1.2,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "Brand",
+     "label": "Identity system and guidelines",
+     "start": 1,
+     "end": 3,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "Brand",
+     "label": "Trademark filings cleared",
+     "start": 0.5,
+     "end": 4,
+     "tone": "indigoBar"
+    },
+    {
+     "group": "Product",
+     "label": "Packaging final artwork",
+     "start": 2.5,
+     "end": 4,
+     "tone": "tealBar"
+    },
+    {
+     "group": "Product",
+     "label": "First production run",
+     "start": 4,
+     "end": 5.5,
+     "tone": "tealBar"
+    },
+    {
+     "group": "Channels",
+     "label": "Website and store pages",
+     "start": 3,
+     "end": 5.6,
+     "tone": "amberBar"
+    },
+    {
+     "group": "Channels",
+     "label": "Press kit to 40 outlets",
+     "start": 4.5,
+     "end": 5.5,
+     "tone": "amberBar"
+    },
+    {
+     "group": "Channels",
+     "label": "Creator seeding, 25 boxes",
+     "start": 4.8,
+     "end": 5.8,
+     "tone": "amberBar"
+    },
+    {
+     "group": "Launch",
+     "label": "Go / no-go review",
+     "start": 5.5,
+     "milestone": true
+    },
+    {
+     "group": "Launch",
+     "label": "Launch day",
+     "start": 6,
+     "milestone": true
+    }
+   ]
+  }
+ ]
+}

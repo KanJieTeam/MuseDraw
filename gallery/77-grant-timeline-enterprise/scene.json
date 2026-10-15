@@ -1,0 +1,109 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1720,
+  1010
+ ],
+ "kicker": "科研项目管理 · 三年进度",
+ "title": "课题进度安排（2027–2029）",
+ "subtitle": "申请书里的“年度计划”画成一张图：三条研究内容错峰推进，中期检查前完成机制研究的主体实验。",
+ "subtitleWidth": 1250,
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 60,
+   "y": 250,
+   "w": 1600,
+   "labelW": 300,
+   "rowH": 48,
+   "groupH": 38,
+   "barRatio": 0.6,
+   "columns": [
+    "2027年上",
+    "2027年下",
+    "2028年上",
+    "2028年下",
+    "2029年上",
+    "2029年下"
+   ],
+   "colSize": 14,
+   "labelSize": 15,
+   "groupColor": "blue",
+   "groupCase": "none",
+   "groupFont": "body",
+   "groupSize": 14,
+   "milestoneTone": "accent",
+   "tasks": [
+    {
+     "group": "研究内容一 · 临床队列",
+     "label": "伦理审批与入组",
+     "start": 0,
+     "end": 1,
+     "tone": "blue"
+    },
+    {
+     "group": "研究内容一 · 临床队列",
+     "label": "随访与样本采集",
+     "start": 0.5,
+     "end": 3,
+     "tone": "blue"
+    },
+    {
+     "group": "研究内容一 · 临床队列",
+     "label": "多组学检测",
+     "start": 2,
+     "end": 3.5,
+     "tone": "blue"
+    },
+    {
+     "group": "研究内容二 · 机制研究",
+     "label": "细胞模型构建",
+     "start": 1,
+     "end": 2.5,
+     "tone": "navy"
+    },
+    {
+     "group": "研究内容二 · 机制研究",
+     "label": "靶点功能验证",
+     "start": 2.5,
+     "end": 4.5,
+     "tone": "navy"
+    },
+    {
+     "group": "研究内容三 · 动物实验",
+     "label": "模型建立与干预",
+     "start": 3,
+     "end": 5,
+     "tone": "blue"
+    },
+    {
+     "group": "研究内容三 · 动物实验",
+     "label": "病理与数据分析",
+     "start": 4.5,
+     "end": 5.5,
+     "tone": "blue"
+    },
+    {
+     "group": "成果与考核",
+     "label": "中期检查",
+     "start": 3,
+     "milestone": true,
+     "note": "第 18 个月"
+    },
+    {
+     "group": "成果与考核",
+     "label": "论文撰写与投稿",
+     "start": 3.5,
+     "end": 6,
+     "tone": "accent"
+    },
+    {
+     "group": "成果与考核",
+     "label": "结题验收",
+     "start": 5.9,
+     "milestone": true
+    }
+   ]
+  }
+ ]
+}

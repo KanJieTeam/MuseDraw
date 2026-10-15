@@ -6,289 +6,80 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-// Use an explicitly supplied, existing Playwright installation.
-const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const flags = process.argv.slice(2);
-const option = (name, fallback) => {
-  const index = flags.indexOf(name);
-  if (index === -1) return fallback;
-  assert.ok(flags[index + 1] && !flags[index + 1].startsWith('--'), `${name} requires a value`);
-  return flags[index + 1];
-};
-const playwrightPath = option('--playwright');
-assert.ok(playwrightPath, 'Pass --playwright path/to/existing/playwright/index.mjs');
-const output = path.resolve(repo, option('--output', 'output/gallery-qa'));
-await fs.mkdir(output, { recursive: true });
-const scratch = await fs.mkdtemp(path.join(os.tmpdir(), 'musedraw-gallery-qa-'));
-const scratchReal = await fs.realpath(scratch);
-const report = { checks: [], screenshots: [], downloads: [], httpAssets: [] };
-const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
-let server, browser, page;
+const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const flags=process.argv.slice(2);
+function option(name,fallback){const index=flags.indexOf(name);if(index===-1)return fallback;assert.ok(flags[index+1]&&!flags[index+1].startsWith('--'),`${name} requires a value`);return flags[index+1];}
+const playwright=option('--playwright');assert.ok(playwright,'Pass --playwright path/to/existing/playwright/index.mjs');
+const output=path.resolve(repo,option('--output','output/gallery-qa'));await fs.mkdir(output,{recursive:true});
+const scratch=await fs.mkdtemp(path.join(os.tmpdir(),'musedraw-gallery-qa-')),scratchReal=await fs.realpath(scratch);
+const report={checks:[],screenshots:[],downloads:[],httpAssets:[]};
+const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+let server,browser,page;
+async function check(name,fn){try{const detail=await fn();report.checks.push({name,status:'passed',...(detail?{detail}:{})});console.log(`PASS ${name}`);}catch(error){report.checks.push({name,status:'failed',error:error.message});throw error;}}
+async function serve(){
+ const root=path.resolve(repo,option('--site','output/site')),realRoot=await fs.realpath(root);
+ const mime={'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.jpg':'image/jpeg','.md':'text/plain; charset=utf-8'};
+ server=http.createServer(async(request,response)=>{try{if(!['GET','HEAD'].includes(request.method)){response.writeHead(405).end();return;}const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname);let target=path.resolve(root,`.${pathname}`);let relative=path.relative(root,target);if(relative.startsWith('..')||path.isAbsolute(relative)){response.writeHead(403).end();return;}if((await fs.stat(target)).isDirectory())target=path.join(target,'index.html');const real=await fs.realpath(target);relative=path.relative(realRoot,real);if(relative.startsWith('..')||path.isAbsolute(relative)){response.writeHead(403).end();return;}const bytes=await fs.readFile(real);response.writeHead(200,{'Content-Type':mime[path.extname(real)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});response.end(request.method==='HEAD'?undefined:bytes);}catch{response.writeHead(404).end('Not found');}});
+ await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});return `http://127.0.0.1:${server.address().port}/`;
+}
+async function fetchBytes(url){const response=await fetch(url,{signal:AbortSignal.timeout(30000)});assert.equal(response.status,200,`${url}: HTTP ${response.status}`);return Buffer.from(await response.arrayBuffer());}
+function matches(actual,expected,format){if(actual.equals(expected))return true;if(format==='preview.jpg')return false;try{const decoder=new TextDecoder('utf-8',{fatal:true,ignoreBOM:true});return decoder.decode(actual).replace(/\r\n/g,'\n')===decoder.decode(expected).replace(/\r\n/g,'\n');}catch{return false;}}
+async function noOverflow(){assert.deepEqual(await page.evaluate(()=>['html','body','.collection-tools','.case-grid','#preview','#copy-dialog'].flatMap(selector=>[...document.querySelectorAll(selector)].filter(element=>element.clientWidth&&element.scrollWidth>element.clientWidth+1).map(element=>({selector,width:element.clientWidth,scrollWidth:element.scrollWidth})))),[],'Horizontal overflow');}
+async function screenshot(name){await page.screenshot({path:path.join(output,name),animations:'disabled'});report.screenshots.push(name);}
+function prompt(markdown){const match=markdown.match(/(?:^|\n)>[ \t]+([^\n]+(?:\n>[ \t]+[^\n]+)*)/);assert.ok(match,'Original user prompt missing');return match[1].replace(/\n>[ \t]+/g,'\n').trim().replace(/\r\n/g,'\n');}
 
-async function check(name, fn) {
-  try {
-    const detail = await fn();
-    report.checks.push({ name, status: 'passed', ...(detail ? { detail } : {}) });
-    console.log(`PASS ${name}`);
-  } catch (error) {
-    report.checks.push({ name, status: 'failed', error: error.message });
-    throw error;
+try{
+ const requested=option('--url')||await serve();
+ const {chromium}=await import(pathToFileURL(path.resolve(playwright)).href);
+ browser=await chromium.launch({headless:true,...(option('--browser')?{executablePath:path.resolve(option('--browser'))}:{})});
+ const external=[],errors=[];
+ async function observe(context){await context.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(url.origin!==new URL(requested).origin&&['http:','https:'].includes(url.protocol)){external.push(request.url());await route.abort();}else{assert.ok(['GET','HEAD'].includes(request.method()),'Static gallery must not call an API');await route.continue();}});context.on('page',opened=>opened.on('pageerror',error=>errors.push(error.message)));}
+ const context=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true,reducedMotion:'reduce'});await observe(context);page=await context.newPage();
+ await page.goto(requested,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelectorAll('.case-card').length===20);
+ const url=page.url(),catalog=JSON.parse((await fetchBytes(new URL('gallery/catalog.json',url))).toString('utf8'));
+ assert.deepEqual(catalog,JSON.parse(await fs.readFile(path.join(repo,'gallery/catalog.json'),'utf8')));
+ const items=catalog.items,themes=[...new Set(items.map(item=>item.theme))];assert.equal(items.length,100);assert.equal(themes.length,20);
+ report.caseCount=100;report.themeCount=20;
+ const assets=new Map(),prompts=new Map();
+ await check('all-100-user-cases-published-assets-match-source',async()=>{
+  const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','preview.jpg','checks.json'].map(filename=>({item,filename})));
+  for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md')prompts.set(item.slug,prompt(remote.toString('utf8')));}));
+  return {cases:100,files:500};
+ });
+ await check('20-flagship-default-and-all-100-decoded-previews',async()=>{
+  const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.status==='flagship').map(item=>item.slug));await noOverflow();await screenshot('desktop.png');
+  await page.selectOption('#collection','all');assert.equal(await page.locator('.case-card').count(),100);
+  for(const item of items){const image=page.locator(`[data-item="${item.slug}"] img`);await image.scrollIntoViewIfNeeded();await image.evaluate(async image=>{await image.decode();if(!image.naturalWidth||!image.naturalHeight)throw Error('Preview did not decode');});}
+  return {defaultFlagship:20,decodedPreviews:100};
+ });
+ await check('all-20-theme-filters-retain-catalog-facts',async()=>{
+  assert.equal(await page.locator('#theme option').count(),21);
+  for(const theme of themes){await page.selectOption('#theme',theme);const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.theme===theme).map(item=>item.slug));}
+  await page.selectOption('#theme','all');await page.selectOption('#collection','all');assert.equal(await page.locator('.case-card').count(),100);
+ });
+ const samples=[items[0],items.find(item=>item.lang==='zh')??items[20],items.at(-1)];
+ await check('native-clipboard-copies-original-user-prompts',async()=>{
+  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(url).origin});
+  for(const item of samples){await page.evaluate(()=>navigator.clipboard.writeText('QA clipboard marker'));await page.locator(`[data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,prompts.get(item.slug));}
+  return {copiedOriginalPrompts:samples.map(item=>item.slug)};
+ });
+ await check('denied-clipboard-uses-selected-manual-fallback',async()=>{
+  const fallback=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});await observe(fallback);await fallback.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:()=>Promise.reject(new DOMException('Permission denied','NotAllowedError'))}});document.execCommand=()=>false;});const original=page;
+  try{page=await fallback.newPage();await page.goto(url,{waitUntil:'networkidle'});const item=items.find(item=>item.status==='flagship');await page.locator(`[data-copy="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#copy-text').inputValue(),prompts.get(item.slug));assert.equal(await page.locator('#copy-text').evaluate(element=>element.selectionEnd-element.selectionStart),prompts.get(item.slug).length);await noOverflow();await screenshot('mobile-copy-fallback.png');await page.locator('#close-copy').click();await page.locator(`[data-copy="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});await page.keyboard.press('Escape');assert.equal(await page.locator('#copy-dialog').evaluate(element=>element.open),false);}finally{await fallback.close();page=original;}
+ });
+ await check('svg-preview-zoom-fit-close-and-mobile-layout',async()=>{
+  for(const width of [1440,390]){
+   await page.setViewportSize({width,height:width===390?844:1000});await page.selectOption('#collection','flagship');await page.evaluate(()=>window.scrollTo(0,0));await noOverflow();await screenshot(width===390?'mobile.png':'desktop-flagship.png');
+   const item=items.find(item=>item.status==='flagship');await page.locator(`[data-preview="${item.slug}"]`).click();await page.locator('#preview-image').evaluate(async image=>{await image.decode();});assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/diagram.svg`,url).href);
+   const transform=()=>page.locator('#preview-image').evaluate(image=>getComputedStyle(image).transform);const initial=await transform();await page.locator('#zoom-in').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();assert.equal(await transform(),initial);await page.locator('#zoom-out').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();await noOverflow();await screenshot(width===390?'mobile-preview.png':'desktop-preview.png');await page.locator('#close-preview').click();await page.locator(`[data-preview="${item.slug}"]`).click();await page.keyboard.press('Escape');assert.equal(await page.locator('#preview').evaluate(element=>element.open),false);
   }
-}
-
-async function serveRepository() {
-  const serveRoot = path.resolve(repo, option('--site', '.'));
-  const mime = { '.html': 'text/html; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png' };
-  const repositoryReal = await fs.realpath(serveRoot);
-  server = http.createServer(async (request, response) => {
-    try {
-      if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405).end(); return; }
-      const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-      let target = path.resolve(serveRoot, `.${pathname}`);
-      const relative = path.relative(serveRoot, target);
-      if (relative.startsWith('..') || path.isAbsolute(relative)) { response.writeHead(403).end(); return; }
-      if ((await fs.stat(target)).isDirectory()) target = path.join(target, 'index.html');
-      const realTarget = await fs.realpath(target);
-      const realRelative = path.relative(repositoryReal, realTarget);
-      if (realRelative.startsWith('..') || path.isAbsolute(realRelative)) { response.writeHead(403).end(); return; }
-      const bytes = await fs.readFile(realTarget);
-      response.writeHead(200, { 'Content-Type': mime[path.extname(target)] || 'application/octet-stream', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
-      response.end(request.method === 'HEAD' ? undefined : bytes);
-    } catch { response.writeHead(404).end('Not found'); }
-  });
-  await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
-  return `http://127.0.0.1:${server.address().port}/docs/gallery/`;
-}
-
-async function fetchBytes(url) {
-  const response = await fetch(url, { signal: AbortSignal.timeout(30000) });
-  assert.equal(response.status, 200, `${url}: HTTP ${response.status}`);
-  return Buffer.from(await response.arrayBuffer());
-}
-
-function sourceBytesMatch(actual, expected, format) {
-  if (actual.equals(expected)) return true;
-  if (!['svg', 'scene'].includes(format)) return false;
-  try {
-    const decoder = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
-    return decoder.decode(actual).replace(/\r\n/g, '\n') === decoder.decode(expected).replace(/\r\n/g, '\n');
-  } catch { return false; }
-}
-
-async function noOverflow(selectors = ['html', 'body', '.style-card', '#preview', '#copy-dialog']) {
-  const overflow = await page.evaluate(selectors => selectors.flatMap(selector => [...document.querySelectorAll(selector)]
-    .filter(element => element.clientWidth && element.scrollWidth > element.clientWidth + 1)
-    .map(element => ({ selector, width: element.clientWidth, scrollWidth: element.scrollWidth }))), selectors);
-  assert.deepEqual(overflow, [], 'Horizontal overflow');
-}
-
-async function screenshot(name) {
-  await page.screenshot({ path: path.join(output, name), animations: 'disabled' });
-  report.screenshots.push(name);
-}
-
-async function openPreview(item) {
-  await page.locator(`[data-preview="${item.id}"]`).click();
-  await page.waitForFunction(() => document.querySelector('#preview').open);
-  await page.locator('#preview-image').evaluate(async image => {
-    await image.decode();
-    if (!image.naturalWidth || !image.naturalHeight) throw new Error('Preview did not decode');
-  });
-  const source = new URL(await page.locator('#preview-image').getAttribute('src'), page.url()).href;
-  assert.ok([item.svg, item.png].some(file => new URL(file, page.url()).href === source), 'Preview must use the selected current example');
-}
-
-async function download(locator, expected, label, format) {
-  const [download] = await Promise.all([page.waitForEvent('download'), locator.click()]);
-  assert.equal(await download.failure(), null, label);
-  assert.equal(path.extname(download.suggestedFilename()), format === 'scene' ? '.json' : `.${format}`);
-  const target = path.join(scratch, `download-${report.downloads.length}${path.extname(download.suggestedFilename())}`);
-  await download.saveAs(target);
-  const actual = await fs.readFile(target);
-  assert.equal(hash(actual), expected.sha256, `${label}: downloaded bytes differ from the published file`);
-  assert.equal(actual.length, expected.bytes);
-  report.downloads.push({ label, filename: download.suggestedFilename(), bytes: actual.length, sha256: hash(actual) });
-}
-
-try {
-  const requestedUrl = option('--url') || await serveRepository();
-  assert.ok(/^https?:$/.test(new URL(requestedUrl).protocol), '--url must be HTTP or HTTPS');
-  const { chromium } = await import(pathToFileURL(path.resolve(playwrightPath)).href);
-  browser = await chromium.launch({ headless: true, args: ['--disable-lcd-text', '--font-render-hinting=none'], ...(option('--browser') ? { executablePath: path.resolve(option('--browser')) } : {}) });
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1, acceptDownloads: true, reducedMotion: 'reduce' });
-  const errors = [], externalRequests = [], apiRequests = [];
-  const observe = async (context, allowedOrigin) => {
-    await context.route('**/*', async route => {
-      const request = route.request(), url = new URL(request.url());
-      if (!['http:', 'https:'].includes(url.protocol)) { await route.continue(); return; }
-      if (url.origin !== allowedOrigin) {
-        externalRequests.push(request.url());
-        await route.abort();
-      } else {
-        if (!['GET', 'HEAD'].includes(request.method()) || /\/(?:api|v1|chat|completions)(?:\/|$)/.test(url.pathname)) apiRequests.push(request.url());
-        await route.continue();
-      }
-    });
-    context.on('page', opened => opened.on('pageerror', error => errors.push(error.message)));
-  };
-  await observe(context, new URL(requestedUrl).origin);
-  page = await context.newPage();
-  await page.goto(requestedUrl, { waitUntil: 'networkidle' });
-  await page.waitForFunction(() => document.querySelectorAll('.style-card').length === 2);
-  const galleryUrl = page.url();
-  const manifest = JSON.parse((await fetchBytes(new URL('manifest.json', galleryUrl))).toString('utf8'));
-  const localManifest = JSON.parse(await fs.readFile(path.join(repo, 'docs/gallery/manifest.json'), 'utf8'));
-  assert.deepEqual(manifest, localManifest, 'Served manifest differs from the source checkout');
-  const items = manifest.items;
-  assert.deepEqual(items.map(item => [item.id, item.name]), [['sketch', '手绘线稿'], ['planes', '终端色域']]);
-  report.styleCount = items.length;
-  const assets = new Map(), copied = new Map();
-
-  await check('two-current-examples-published-assets-match-source', async () => {
-    for (const item of items) for (const format of ['scene', 'svg', 'png', 'thumbnail']) {
-      const source = item[format];
-      assert.match(source, /^examples\/(sketch|planes)\/(document\.json|diagram\.(svg|png)|preview-1200\.png)$/);
-      const remote = await fetchBytes(new URL(source, galleryUrl));
-      const local = await fs.readFile(path.join(repo, 'docs/gallery', source));
-      assert.ok(sourceBytesMatch(remote, local, format), `${item.id}/${format}: HTTP content differs from source`);
-      assert.ok(remote.length > 0);
-      if (format === 'scene') {
-        const document = JSON.parse(remote.toString('utf8'));
-        assert.equal(document.presentation.style, item.name);
-        assert.ok(document.scene.nodes.length > 0 && document.scene.edges.length > 0);
-      }
-      const entry = { id: item.id, format, bytes: remote.length, sha256: hash(remote), sourceComparison: remote.equals(local) ? 'byte-exact' : 'text-crlf-to-lf-only' };
-      report.httpAssets.push(entry); assets.set(`${item.id}/${format}`, entry);
-    }
-    return { styles: 2, files: 8 };
-  });
-
-  await check('desktop-layout-and-two-decoded-thumbnails', async () => {
-    await noOverflow();
-    for (const item of items) {
-      const image = page.locator(`.style-card img[src="${item.thumbnail}"]`);
-      assert.equal(await image.count(), 1);
-      await image.evaluate(async image => { await image.decode(); if (!image.naturalWidth || !image.naturalHeight) throw new Error('Thumbnail did not decode'); });
-    }
-    await screenshot('desktop.png');
-    return { decodedThumbnails: 2, viewport: '1440x1000' };
-  });
-
-  await check('style-briefs-copy-through-real-clipboard', async () => {
-    await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: new URL(galleryUrl).origin });
-    for (const item of items) {
-      await page.evaluate(() => navigator.clipboard.writeText('QA clipboard before copy'));
-      await page.locator(`[data-copy-style="${item.id}"]`).click();
-      await page.waitForFunction(async () => (await navigator.clipboard.readText()) !== 'QA clipboard before copy');
-      // Windows clipboard uses CRLF; textarea values use LF on every platform.
-      const text = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, '\n');
-      assert.ok(text.includes('https://github.com/KanJieTeam/MuseDraw'), 'Copied request must identify the current repository');
-      assert.ok(text.includes(item.name), 'Copied request must identify the selected style');
-      assert.ok(text.includes(item.prompt), 'Copied request must include the natural language brief');
-      assert.doesNotMatch(text, /productionBrief|api[_-]?key|\b(?:x|y|width|height)\s*[:=]\s*\d/i);
-      copied.set(item.id, text);
-    }
-    return { nativeClipboardStyles: items.map(item => item.id) };
-  });
-
-  await check('clipboard-permission-denial-opens-selectable-manual-copy', async () => {
-    const fallback = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
-    await observe(fallback, new URL(galleryUrl).origin);
-    await fallback.addInitScript(() => {
-      Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: () => Promise.reject(new DOMException('Permission denied', 'NotAllowedError')) } });
-      document.execCommand = () => false;
-    });
-    const original = page;
-    try {
-      page = await fallback.newPage();
-      await page.goto(galleryUrl, { waitUntil: 'networkidle' });
-      for (const item of items) {
-        await page.locator(`[data-copy-style="${item.id}"]`).click();
-        await page.locator('#copy-dialog').waitFor({ state: 'visible' });
-        assert.equal(await page.locator('#copy-text').inputValue(), copied.get(item.id));
-        assert.equal(await page.locator('#copy-text').evaluate(element => element.selectionEnd - element.selectionStart), copied.get(item.id).length, 'Manual request must be selected for copying');
-        await noOverflow();
-        await page.locator('#close-copy').click();
-        assert.equal(await page.locator('#copy-dialog').evaluate(element => element.open), false);
-      }
-      await page.locator('[data-copy-style="sketch"]').click();
-      await page.locator('#copy-dialog').waitFor({ state: 'visible' });
-      await page.keyboard.press('Escape');
-      assert.equal(await page.locator('#copy-dialog').evaluate(element => element.open), false);
-      return { deniedClipboardPermission: true, blockedLegacyCopy: true, exactSelectableText: true };
-    } finally { await fallback.close(); page = original; }
-  });
-
-  await check('preview-zoom-fit-close-and-escape-for-both-styles', async () => {
-    for (const item of items) {
-      await openPreview(item);
-      const transform = () => page.locator('#preview-image').evaluate(image => getComputedStyle(image).transform);
-      const initial = await transform();
-      await page.locator('#zoom-in').click();
-      assert.notEqual(await transform(), initial, 'Zoom in must change the image transform');
-      await page.locator('#fit').click();
-      assert.equal(await transform(), initial, 'Fit must reset the preview');
-      await page.locator('#zoom-out').click();
-      assert.notEqual(await transform(), initial, 'Zoom out must change the image transform');
-      await page.locator('#fit').click();
-      await noOverflow(['html', '#preview']);
-      await screenshot(`desktop-preview-${item.id}.png`);
-      await page.locator('#close-preview').click();
-      assert.equal(await page.locator('#preview').evaluate(element => element.open), false);
-      await openPreview(item);
-      await page.keyboard.press('Escape');
-      assert.equal(await page.locator('#preview').evaluate(element => element.open), false);
-    }
-    return { previewStyles: 2, decodedImages: 2 };
-  });
-
-  await check('real-downloads-svg-png-and-editable-document-for-both-styles', async () => {
-    for (const item of items) for (const format of ['svg', 'png', 'scene']) {
-      const locator = page.locator(`.style-card a[download][href="${item[format]}"]`);
-      assert.equal(await locator.count(), 1, `${item.id}/${format} download must be present`);
-      await download(locator, assets.get(`${item.id}/${format}`), `${item.id}/${format}`, format);
-    }
-    return { byteExactBrowserDownloads: 6 };
-  });
-
-  await check('mobile-390-layout-decoded-images-preview-and-copy', async () => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await noOverflow();
-    await screenshot('mobile.png');
-    for (const item of items) {
-      await openPreview(item);
-      await noOverflow(['html', '#preview']);
-      await screenshot(`mobile-preview-${item.id}.png`);
-      await page.keyboard.press('Escape');
-      await page.locator(`[data-copy-style="${item.id}"]`).click();
-      await page.waitForFunction(async expected => (await navigator.clipboard.readText()).replace(/\r\n/g, '\n') === expected, copied.get(item.id));
-      assert.equal((await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, '\n'), copied.get(item.id));
-    }
-    return { viewport: '390x844', previewStyles: 2 };
-  });
-
-  await check('static-page-has-no-external-network-api-calls-or-runtime-errors', async () => {
-    assert.deepEqual(externalRequests, []);
-    assert.deepEqual(apiRequests, []);
-    assert.deepEqual(errors, []);
-    assert.equal(await page.locator('iframe').count(), 0);
-    return { externalRequests: 0, apiRequests: 0, runtimeErrors: 0 };
-  });
-  report.status = 'passed';
-  console.log(`Gallery browser QA: passed; ${report.checks.length} checks, ${report.downloads.length} byte-exact downloads.`);
-} catch (error) {
-  report.status = 'failed'; report.error = error.message;
-  if (page && !page.isClosed()) await screenshot('failure.png').catch(() => {});
-  console.error(`Gallery browser QA failed: ${error.message}`);
-  process.exitCode = 1;
-} finally {
-  await fs.writeFile(path.join(output, 'report.json'), `${JSON.stringify(report, null, 2)}\n`);
-  await browser?.close();
-  if (server) await new Promise(resolve => server.close(resolve));
-  const currentReal = await fs.realpath(scratch).catch(() => null);
-  const tempReal = await fs.realpath(os.tmpdir());
-  const relative = currentReal && path.relative(tempReal, currentReal);
-  assert.ok(currentReal === scratchReal && relative && !relative.startsWith('..') && !path.isAbsolute(relative) && path.basename(scratch).startsWith('musedraw-gallery-qa-'), 'Refusing an unverified scratch cleanup');
-  await fs.rm(scratch, { recursive: true, force: true });
-}
+ });
+ await check('real-svg-and-scene-downloads-match-published-bytes',async()=>{
+  await page.selectOption('#collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.svg','scene.json']){
+   const source=`${item.path}/${filename}`,locator=page.locator(`[data-item="${item.slug}"] a[download][href="${source}"]`);const [download]=await Promise.all([page.waitForEvent('download'),locator.click()]);assert.equal(await download.failure(),null);const target=path.join(scratch,`download-${report.downloads.length}-${filename}`);await download.saveAs(target);const bytes=await fs.readFile(target);assert.equal(hash(bytes),assets.get(source).sha256);report.downloads.push({source,filename:download.suggestedFilename(),bytes:bytes.length,sha256:hash(bytes)});
+  }return {byteExactDownloads:4,formats:['svg','json']};
+ });
+ await check('static-gallery-has-no-external-network-or-runtime-errors',async()=>{assert.deepEqual(external,[]);assert.deepEqual(errors,[]);assert.equal(await page.locator('iframe').count(),0);});
+ report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 100 cases, 20 themes, 4 byte-exact downloads.`);
+}catch(error){report.status='failed';report.error=error.message;if(page&&!page.isClosed())await screenshot('failure.png').catch(()=>{});console.error(error.stack);process.exitCode=1;}
+finally{await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');await browser?.close();if(server)await new Promise(resolve=>server.close(resolve));const real=await fs.realpath(scratch).catch(()=>null),temp=await fs.realpath(os.tmpdir()),relative=real&&path.relative(temp,real);assert.ok(real===scratchReal&&relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&path.basename(scratch).startsWith('musedraw-gallery-qa-'),'Refusing an unverified scratch cleanup');await fs.rm(scratch,{recursive:true,force:true});}

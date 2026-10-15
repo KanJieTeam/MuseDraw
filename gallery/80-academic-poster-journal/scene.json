@@ -1,0 +1,360 @@
+{
+ "theme": "journal",
+ "size": [
+  1680,
+  940
+ ],
+ "kicker": "学术会议海报 · 横版四栏",
+ "title": "分级夜间巡视降低老年住院患者跌倒率",
+ "subtitle": "作者 A，作者 B，作者 C ｜ 某三甲医院神经内科 ｜ 2026 年全国护理学术年会。数据为示例。",
+ "subtitleWidth": 1400,
+ "nodes": [
+  {
+   "id": "h0",
+   "label": "背景与问题",
+   "tone": "gray",
+   "x": 60,
+   "y": 270,
+   "w": 360,
+   "h": 52,
+   "align": "left",
+   "size": 18
+  },
+  {
+   "id": "h1",
+   "label": "方法",
+   "tone": "gray",
+   "x": 460,
+   "y": 270,
+   "w": 360,
+   "h": 52,
+   "align": "left",
+   "size": 18
+  },
+  {
+   "id": "h2",
+   "label": "结果",
+   "tone": "ink",
+   "x": 860,
+   "y": 270,
+   "w": 360,
+   "h": 52,
+   "align": "left",
+   "size": 18
+  },
+  {
+   "id": "h3",
+   "label": "结论",
+   "tone": "gray",
+   "x": 1260,
+   "y": 270,
+   "w": 360,
+   "h": 52,
+   "align": "left",
+   "size": 18
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 370,
+   "text": "1",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 104,
+   "y": 356,
+   "text": "我国 60 岁以上住院患者跌倒发生率 0.5–1.8‰",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 64,
+   "y": 462,
+   "text": "2",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 104,
+   "y": 448,
+   "text": "夜间如厕跌倒占 60% 以上",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 64,
+   "y": 554,
+   "text": "3",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 104,
+   "y": 540,
+   "text": "现有巡视制度缺少分级",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 464,
+   "y": 370,
+   "text": "1",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 504,
+   "y": 356,
+   "text": "前后对照研究，2026 年 1–9 月",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 464,
+   "y": 462,
+   "text": "2",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 504,
+   "y": 448,
+   "text": "干预：Morse ≥ 45 分夜间每 2 小时巡视",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 464,
+   "y": 554,
+   "text": "3",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 504,
+   "y": 540,
+   "text": "主要结局：每千住院日跌倒次数",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 1264,
+   "y": 370,
+   "text": "1",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 1304,
+   "y": 356,
+   "text": "分级巡视可将夜间跌倒减半",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 1264,
+   "y": 462,
+   "text": "2",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 1304,
+   "y": 448,
+   "text": "护理工时增加 6%，可接受",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 1264,
+   "y": 554,
+   "text": "3",
+   "size": 30,
+   "weight": 700,
+   "color": "accent",
+   "font": "display"
+  },
+  {
+   "x": 1304,
+   "y": 540,
+   "text": "建议纳入科室标准",
+   "size": 16,
+   "color": "ink",
+   "w": 310,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 970,
+   "y": 400.0,
+   "text": "1.8‰",
+   "size": 22,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 970,
+   "y": 708,
+   "text": "干预前",
+   "size": 15,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1120,
+   "y": 535.0,
+   "text": "0.9‰",
+   "size": 22,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1120,
+   "y": 708,
+   "text": "干预后",
+   "size": 15,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 860,
+   "y": 360,
+   "text": "每千住院日跌倒次数",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 860,
+   "y": 750,
+   "text": "P = 0.004，率比 0.50（95% CI 0.31–0.81）",
+   "size": 14,
+   "color": "ink",
+   "w": 360
+  },
+  {
+   "x": 60,
+   "y": 860,
+   "text": "一张学术海报只讲一个结论：四栏从左到右读，结果栏用深色标题突出，其余文字不超过三条。",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 690,
+   "text": "23 起",
+   "size": 64,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 726,
+   "text": "干预前半年的跌倒事件",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 460,
+   "y": 690,
+   "text": "412 例",
+   "size": 64,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 460,
+   "y": 726,
+   "text": "纳入分析的高危患者",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 1260,
+   "y": 690,
+   "text": "−50%",
+   "size": 64,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1260,
+   "y": 726,
+   "text": "夜间跌倒率下降",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     890,
+     680
+    ],
+    [
+     1200,
+     680
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  }
+ ],
+ "bars": [
+  {
+   "x": 920,
+   "y": 410.0,
+   "w": 100,
+   "h": 270.0,
+   "value": 1,
+   "fill": "#B9C3CF",
+   "track": false,
+   "radius": 2
+  },
+  {
+   "x": 1070,
+   "y": 545.0,
+   "w": 100,
+   "h": 135.0,
+   "value": 1,
+   "fill": "accent",
+   "track": false,
+   "radius": 2
+  }
+ ]
+}

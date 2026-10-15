@@ -1,0 +1,119 @@
+{
+ "theme": "journal",
+ "size": [
+  1500,
+  800
+ ],
+ "title": "Fig. 5 | Conceptual model: moderated mediation",
+ "subtitle": "Workload (X) increases burnout (Y) partly through sleep quality (M). Social support (W) weakens the first path. Hypotheses H1–H4 map to the labelled paths.",
+ "nodes": [
+  {
+   "id": "X",
+   "label": "Workload",
+   "tag": "X",
+   "tone": "blue",
+   "x": 120,
+   "y": 560,
+   "w": 260,
+   "h": 96,
+   "size": 18
+  },
+  {
+   "id": "M",
+   "label": "Sleep quality",
+   "tag": "M, mediator",
+   "tone": "orange",
+   "x": 630,
+   "y": 330,
+   "w": 260,
+   "h": 96,
+   "size": 18
+  },
+  {
+   "id": "Y",
+   "label": "Burnout",
+   "tag": "Y",
+   "tone": "red",
+   "x": 1140,
+   "y": 560,
+   "w": 260,
+   "h": 96,
+   "size": 18
+  },
+  {
+   "id": "W",
+   "label": "Social support",
+   "tag": "W, moderator",
+   "tone": "green",
+   "x": 330,
+   "y": 200,
+   "w": 220,
+   "h": 80,
+   "size": 17
+  },
+  {
+   "id": "dot",
+   "shape": "circle",
+   "label": "",
+   "tone": "ink",
+   "x": 434,
+   "y": 372,
+   "w": 12,
+   "h": 12
+  }
+ ],
+ "edges": [
+  {
+   "from": "X",
+   "to": "Y",
+   "label": "H1  c′ (direct)",
+   "kind": "primary"
+  },
+  {
+   "from": "X",
+   "to": "M",
+   "fromSide": "t",
+   "toSide": "l",
+   "label": "H2  a",
+   "kind": "orange",
+   "labelAt": [
+    560,
+    378
+   ]
+  },
+  {
+   "from": "M",
+   "to": "Y",
+   "fromSide": "r",
+   "toSide": "t",
+   "label": "H3  b",
+   "kind": "orange",
+   "labelAt": [
+    1270,
+    450
+   ]
+  },
+  {
+   "from": "W",
+   "to": "dot",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "green",
+   "label": "H4  a × W",
+   "labelAt": [
+    520,
+    326
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "x": 120,
+   "y": 730,
+   "text": "Index of moderated mediation tested with PROCESS Model 7, 5,000 bootstrap samples. Conditional indirect effects reported at W = mean ± 1 SD.",
+   "size": 14,
+   "color": "muted",
+   "w": 1260
+  }
+ ]
+}

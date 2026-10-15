@@ -1,0 +1,27 @@
+{
+  "id": "blueprint",
+  "name": "Blueprint",
+  "nameZh": "工程蓝图",
+  "aliases": ["蓝图", "工程蓝图"],
+  "summary": "Cyanotype sheet with grid, title block and knocked-out labels. For infrastructure and deployment views that should read like an engineering drawing.",
+  "palette": { "bg": "#123D6B", "card": "#17497F", "ink": "#EEF4FB", "muted": "#9DB9D9", "accent": "#FFCB5C", "cyan": "#86D5FF", "deep": "#0E3259" },
+  "fonts": { "display": "IBM Plex Mono, Noto Sans SC, monospace", "body": "IBM Plex Mono, Noto Sans SC, monospace", "mono": "IBM Plex Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64, "texture": "grid", "textureGap": 20, "textureColor": "#FFFFFF", "textureOpacity": 0.07, "frame": "sheet", "frameInset": 24, "frameColor": "#CFE0F3", "vignette": 0.25 },
+  "header": { "layout": "titleblock", "titleFont": "display", "titleSize": 34, "titleWeight": 600, "titleCase": "upper", "subFont": "body", "subSize": 13, "subColor": "muted", "blockWidth": 430 },
+  "node": { "font": "mono", "size": 13.5, "weight": 600, "case": "upper", "letterSpacing": 0.8, "subFont": "mono", "subSize": 11, "tagFont": "mono", "tagSize": 9.5, "tagCase": "upper", "tagLetterSpacing": 1.4, "tagPos": "above", "radius": 0, "stroke": 1.3, "padding": 12, "align": "left", "iconSize": 18, "iconStroke": 1.4 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "ink", "text": "ink", "sub": "muted", "tag": "cyan", "icon": "ink" },
+    "accent": { "fill": "deep", "stroke": "accent", "strokeWidth": 2, "text": "accent", "sub": "#F4DFA9", "tag": "accent", "icon": "accent" },
+    "ghost": { "fill": "none", "stroke": "muted", "dash": "4 3", "text": "muted", "sub": "muted", "tag": "muted", "icon": "muted" },
+    "solid": { "fill": "ink", "stroke": "ink", "text": "bg", "sub": "#3C628E", "tag": "#2A5487", "icon": "bg" }
+  },
+  "zone": { "style": "dashed", "radius": 0, "stroke": 1.1, "dash": "9 6", "labelFont": "mono", "labelSize": 11, "labelCase": "upper", "letterSpacing": 2, "labelWeight": 600, "labelStyle": "notch", "labelPad": 18,
+    "tones": { "default": { "stroke": "muted", "text": "muted" }, "strong": { "stroke": "ink", "text": "ink" }, "accent": { "stroke": "accent", "text": "accent" }, "fill": { "fill": "#164473", "stroke": "#6F93BC", "text": "ink" } } },
+  "edge": { "color": "ink", "width": 1.3, "radius": 0, "arrow": "open", "arrowSize": 9, "gap": 2, "labelFont": "mono", "labelSize": 10.5, "labelCase": "upper", "labelLetterSpacing": 1, "labelColor": "cyan", "labelPlacement": "on", "labelStyle": "chip", "labelBg": "bg",
+    "kinds": { "primary": { "color": "accent", "width": 1.8 }, "data": { "color": "cyan", "dash": "6 4" }, "control": { "color": "muted", "dash": "2 4" } } },
+  "step": { "shape": "outline", "fill": "accent", "size": 22, "font": "mono", "weight": 700 },
+  "note": { "style": "comment", "font": "mono", "size": 11.5, "color": "muted", "prefix": "* ", "lineHeight": 1.45, "leader": "muted", "leaderDash": "2 3" },
+  "legend": { "font": "mono", "size": 10.5, "color": "muted", "titleColor": "ink", "titleCase": "upper", "letterSpacing": 1.5 },
+  "lines": { "default": { "color": "muted", "width": 1 } },
+  "footer": null
+}

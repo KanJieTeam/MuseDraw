@@ -1,0 +1,255 @@
+{
+ "theme": "aurora",
+ "size": [
+  1700,
+  1040
+ ],
+ "kicker": "Generative models · diffusion",
+ "title": "Denoising diffusion: training and sampling",
+ "subtitle": "Training adds Gaussian noise in 1,000 small steps and teaches one network to predict it. Generation runs the chain backwards, about 30–50 steps with a modern sampler, steered by the text.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "f0",
+   "label": "x₀",
+   "sub": "clean image",
+   "tone": "clean",
+   "x": 150,
+   "y": 300,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "r0",
+   "label": "x₀",
+   "tone": "clean",
+   "x": 150,
+   "y": 640,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "f1",
+   "label": "x₁",
+   "sub": "",
+   "tone": "noise1",
+   "x": 450,
+   "y": 300,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "r1",
+   "label": "x₁",
+   "tone": "noise1",
+   "x": 450,
+   "y": 640,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "f2",
+   "label": "x₂₅₀",
+   "sub": "",
+   "tone": "noise2",
+   "x": 750,
+   "y": 300,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "r2",
+   "label": "x₂₅₀",
+   "tone": "noise2",
+   "x": 750,
+   "y": 640,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "f3",
+   "label": "x₅₀₀",
+   "sub": "",
+   "tone": "noise3",
+   "x": 1050,
+   "y": 300,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "r3",
+   "label": "x₅₀₀",
+   "tone": "noise3",
+   "x": 1050,
+   "y": 640,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "f4",
+   "label": "x₁₀₀₀",
+   "sub": "pure noise",
+   "tone": "noise4",
+   "x": 1350,
+   "y": 300,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "r4",
+   "label": "x₁₀₀₀",
+   "tone": "noise4",
+   "x": 1350,
+   "y": 640,
+   "w": 150,
+   "h": 150,
+   "align": "center",
+   "size": 20
+  },
+  {
+   "id": "unet",
+   "label": "U-Net predicts the noise ε",
+   "tag": "same network, every step",
+   "sub": "input: xₜ, timestep t, text embedding",
+   "tone": "accent",
+   "x": 420,
+   "y": 860,
+   "w": 560,
+   "h": 100,
+   "icon": "brain"
+  },
+  {
+   "id": "txt",
+   "label": "Text encoder",
+   "tag": "conditioning",
+   "sub": "“a lighthouse in a storm, watercolor”",
+   "tone": "cyan",
+   "x": 1100,
+   "y": 860,
+   "w": 380,
+   "h": 100,
+   "icon": "doc"
+  }
+ ],
+ "edges": [
+  {
+   "from": "f0",
+   "to": "f1",
+   "kind": "memory",
+   "label": "+ noise",
+   "route": "ortho"
+  },
+  {
+   "from": "r1",
+   "to": "r0",
+   "kind": "primary",
+   "label": "",
+   "route": "ortho"
+  },
+  {
+   "from": "f1",
+   "to": "f2",
+   "kind": "memory",
+   "label": "",
+   "route": "ortho"
+  },
+  {
+   "from": "r2",
+   "to": "r1",
+   "kind": "primary",
+   "label": "",
+   "route": "ortho"
+  },
+  {
+   "from": "f2",
+   "to": "f3",
+   "kind": "memory",
+   "label": "",
+   "route": "ortho"
+  },
+  {
+   "from": "r3",
+   "to": "r2",
+   "kind": "primary",
+   "label": "",
+   "route": "ortho"
+  },
+  {
+   "from": "f3",
+   "to": "f4",
+   "kind": "memory",
+   "label": "",
+   "route": "ortho"
+  },
+  {
+   "from": "r4",
+   "to": "r3",
+   "kind": "primary",
+   "label": "denoise",
+   "route": "ortho"
+  },
+  {
+   "from": "f4",
+   "to": "r4",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "guard",
+   "route": "ortho",
+   "label": "start here at inference"
+  },
+  {
+   "from": "txt",
+   "to": "unet",
+   "kind": "tool",
+   "route": "ortho",
+   "label": "cross-attention"
+  },
+  {
+   "from": "unet",
+   "to": "r2",
+   "fromSide": "t",
+   "toSide": "b",
+   "kind": "primary",
+   "route": "ortho",
+   "toAt": 0.5
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 284,
+   "text": "FORWARD · training only",
+   "font": "mono",
+   "size": 12,
+   "color": "pink",
+   "letterSpacing": 2
+  },
+  {
+   "x": 64,
+   "y": 624,
+   "text": "REVERSE · generation",
+   "font": "mono",
+   "size": 12,
+   "color": "violet",
+   "letterSpacing": 2
+  }
+ ]
+}

@@ -1,0 +1,221 @@
+{
+ "theme": "swiss",
+ "size": [
+  1640,
+  830
+ ],
+ "kicker": "Drug development · 10–15 years",
+ "title": "Clinical trial phases and success rates",
+ "subtitle": "Each phase answers one question with more people and more money. Most drugs stop at the second one.",
+ "subtitleWidth": 700,
+ "figure": "Clinical / 65",
+ "nodes": [
+  {
+   "id": "p0",
+   "label": "Pre-clinical",
+   "tag": "lab + animal",
+   "sub": "3–6 yrs",
+   "tone": "default",
+   "x": 64,
+   "y": 340,
+   "w": 236,
+   "h": 140,
+   "size": 22
+  },
+  {
+   "id": "p1",
+   "label": "Phase I",
+   "tag": "20–80 people",
+   "sub": "safety, dose",
+   "tone": "default",
+   "x": 320,
+   "y": 340,
+   "w": 236,
+   "h": 140,
+   "size": 22
+  },
+  {
+   "id": "p2",
+   "label": "Phase II",
+   "tag": "100–300 patients",
+   "sub": "does it work?",
+   "tone": "accent",
+   "x": 576,
+   "y": 340,
+   "w": 236,
+   "h": 140,
+   "size": 22
+  },
+  {
+   "id": "p3",
+   "label": "Phase III",
+   "tag": "1,000–3,000",
+   "sub": "better than standard?",
+   "tone": "default",
+   "x": 832,
+   "y": 340,
+   "w": 236,
+   "h": 140,
+   "size": 22
+  },
+  {
+   "id": "p4",
+   "label": "Review",
+   "tag": "regulator",
+   "sub": "approve or not",
+   "tone": "ink",
+   "x": 1088,
+   "y": 340,
+   "w": 236,
+   "h": 140,
+   "size": 22
+  },
+  {
+   "id": "p5",
+   "label": "Phase IV",
+   "tag": "everyone",
+   "sub": "long-term safety",
+   "tone": "default",
+   "x": 1344,
+   "y": 340,
+   "w": 236,
+   "h": 140,
+   "size": 22
+  }
+ ],
+ "texts": [
+  {
+   "x": 438,
+   "y": 600,
+   "text": "52%",
+   "font": "display",
+   "size": 64,
+   "weight": 800,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 438,
+   "y": 630,
+   "text": "move on to the next stage",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 694,
+   "y": 600,
+   "text": "29%",
+   "font": "display",
+   "size": 64,
+   "weight": 800,
+   "color": "accent",
+   "anchor": "middle"
+  },
+  {
+   "x": 694,
+   "y": 630,
+   "text": "move on to the next stage",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 950,
+   "y": 600,
+   "text": "58%",
+   "font": "display",
+   "size": 64,
+   "weight": 800,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 950,
+   "y": 630,
+   "text": "move on to the next stage",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1206,
+   "y": 600,
+   "text": "91%",
+   "font": "display",
+   "size": 64,
+   "weight": 800,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1206,
+   "y": 630,
+   "text": "move on to the next stage",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 530,
+   "text": "Chance of moving on",
+   "font": "mono",
+   "size": 12,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 710,
+   "text": "≈ 1 in 13 drugs entering Phase I reach approval. Phase II is the valley of death: most candidates are safe enough, but not effective enough.",
+   "size": 16,
+   "color": "ink",
+   "w": 1300
+  },
+  {
+   "x": 64,
+   "y": 760,
+   "text": "Transition rates approximate, BIO / Informa / QLS clinical development success rates 2011–2020, all indications.",
+   "size": 12,
+   "color": "muted"
+  }
+ ],
+ "edges": [
+  {
+   "from": "p0",
+   "to": "p1",
+   "kind": "default"
+  },
+  {
+   "from": "p1",
+   "to": "p2",
+   "kind": "primary"
+  },
+  {
+   "from": "p2",
+   "to": "p3",
+   "kind": "default"
+  },
+  {
+   "from": "p3",
+   "to": "p4",
+   "kind": "default"
+  },
+  {
+   "from": "p4",
+   "to": "p5",
+   "kind": "default"
+  }
+ ],
+ "zones": [
+  {
+   "id": "r",
+   "label": "",
+   "x": 64,
+   "y": 310,
+   "w": 1512,
+   "h": 1
+  }
+ ]
+}

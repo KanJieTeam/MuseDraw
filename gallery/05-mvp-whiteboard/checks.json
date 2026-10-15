@@ -1,0 +1,12 @@
+{
+  "size": [
+    1600,
+    1000
+  ],
+  "nodes": 12,
+  "texts": 36,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "theme": "whiteboard"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "neon",
+  "name": "Neon Arcade",
+  "nameZh": "霓虹街机",
+  "aliases": ["neon", "cyber", "cyberpunk", "霓虹", "赛博"],
+  "summary": "Black arcade cabinet, glowing tubes in cyan, magenta and yellow, a perspective-free synth grid. For games, real-time systems and conference talks that need energy.",
+  "palette": { "bg": "#07060D", "card": "#0E0B19", "ink": "#F2F0FF", "muted": "#8D87B0", "cyan": "#00E5FF", "magenta": "#FF2BD6", "yellow": "#F5F749", "accent": "#FF2BD6" },
+  "fonts": { "display": "Space Grotesk, Noto Sans SC, sans-serif", "body": "Space Grotesk, Noto Sans SC, sans-serif", "mono": "Space Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64, "texture": "grid", "textureGap": 32, "textureColor": "#FF2BD6", "textureOpacity": 0.07, "glows": [ { "x": 0.5, "y": 1.05, "r": 0.5, "ry": 0.22, "color": "#FF2BD6", "opacity": 0.35 }, { "x": 0.08, "y": 0.1, "r": 0.25, "color": "#00E5FF", "opacity": 0.18 } ], "vignette": 0.45 },
+  "header": { "layout": "editorial", "titleFont": "display", "titleSize": 54, "titleWeight": 700, "titleLetterSpacing": -1, "titleColor": "#FFFFFF", "kickerFont": "mono", "kickerSize": 13, "kickerColor": "yellow", "kickerLetterSpacing": 3, "kickerWeight": 700, "subFont": "body", "subSize": 17, "subColor": "muted", "figureColor": "cyan" },
+  "node": { "font": "display", "size": 17, "weight": 700, "subFont": "mono", "subSize": 11.5, "tagFont": "mono", "tagSize": 10.5, "tagCase": "upper", "tagLetterSpacing": 1.6, "tagWeight": 700, "tagPos": "above", "radius": 6, "stroke": 1.6, "padding": 16, "align": "left", "iconSize": 22, "iconStroke": 1.6, "gap": 5 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "cyan", "text": "ink", "sub": "muted", "tag": "cyan", "icon": "cyan", "glow": 3 },
+    "magenta": { "fill": "#170A1D", "stroke": "magenta", "text": "ink", "sub": "#D59BCB", "tag": "magenta", "icon": "magenta", "glow": 4 },
+    "yellow": { "fill": "#14140A", "stroke": "yellow", "text": "ink", "sub": "#C9CA8A", "tag": "yellow", "icon": "yellow", "glow": 3 },
+    "hot": { "fill": "magenta", "stroke": "#FF8BEA", "text": "#0B0013", "sub": "#3A0A33", "tag": "#0B0013", "icon": "#0B0013", "glow": 8 },
+    "dim": { "fill": "card", "stroke": "#3A3460", "text": "ink", "sub": "muted", "tag": "muted", "icon": "muted" }
+  },
+  "zone": { "style": "dashed", "radius": 10, "stroke": 1, "dash": "2 6", "labelFont": "mono", "labelSize": 11, "labelCase": "upper", "letterSpacing": 2.5, "labelWeight": 700, "labelPad": 16,
+    "tones": { "default": { "fill": "#0B0915", "stroke": "#4B3F7A", "text": "#B5ACE0" }, "magenta": { "fill": "#120818", "stroke": "#7A2A6F", "text": "magenta" } } },
+  "edge": { "color": "cyan", "width": 1.8, "radius": 8, "arrow": "triangle", "arrowSize": 8, "gap": 4, "glow": 2.5, "labelFont": "mono", "labelSize": 11, "labelCase": "upper", "labelLetterSpacing": 1, "labelColor": "ink", "labelPlacement": "on", "labelStyle": "tag", "labelBg": "bg", "labelRadius": 3,
+    "kinds": { "udp": { "color": "magenta", "width": 2.4, "glow": 3.5 }, "http": { "color": "cyan" }, "event": { "color": "yellow", "dash": "6 5", "glow": 2 } } },
+  "step": { "shape": "square", "fill": "yellow", "text": "#07060D", "size": 22, "font": "mono", "weight": 700 },
+  "note": { "style": "comment", "font": "mono", "size": 12, "color": "muted", "prefix": "> ", "lineHeight": 1.5 },
+  "legend": { "font": "mono", "size": 11.5, "color": "muted" },
+  "footer": { "text": "INSERT COIN · MUSEDRAW", "font": "mono", "size": 11, "color": "#5B5480", "letterSpacing": 3 }
+}

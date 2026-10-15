@@ -1,0 +1,232 @@
+{
+ "theme": "terminal",
+ "size": [
+  1700,
+  960
+ ],
+ "kicker": "cat runbooks/incident-response.md",
+ "title": "Incident response runbook",
+ "subtitle": "One decision decides severity; after that the order is always the same: assemble roles, mitigate, verify, then learn. Diagnosis can wait until users are safe.",
+ "nodes": [
+  {
+   "id": "alert",
+   "label": "alert fires",
+   "tag": "pagerduty",
+   "sub": "SLO burn-rate > 10×",
+   "icon": "alert",
+   "tone": "danger",
+   "x": 64,
+   "y": 300,
+   "w": 236,
+   "h": 92
+  },
+  {
+   "id": "q1",
+   "label": "customer-facing?",
+   "shape": "diamond",
+   "tone": "warn",
+   "x": 364,
+   "y": 282,
+   "w": 240,
+   "h": 128,
+   "align": "center"
+  },
+  {
+   "id": "declare",
+   "label": "declare incident",
+   "tag": "sev2 by default",
+   "sub": "/incident open → #inc-0412",
+   "tone": "info",
+   "x": 680,
+   "y": 300,
+   "w": 248,
+   "h": 92
+  },
+  {
+   "id": "roles",
+   "label": "assign roles",
+   "tag": "within 5 min",
+   "sub": "IC, comms, ops lead",
+   "icon": "users",
+   "tone": "info",
+   "x": 1000,
+   "y": 300,
+   "w": 248,
+   "h": 92
+  },
+  {
+   "id": "mitigate",
+   "label": "mitigate first",
+   "tag": "stop the bleeding",
+   "sub": "rollback, failover, flag off",
+   "icon": "refresh",
+   "tone": "accent",
+   "x": 1320,
+   "y": 300,
+   "w": 300,
+   "h": 92
+  },
+  {
+   "id": "q2",
+   "label": "recovered?",
+   "shape": "diamond",
+   "tone": "warn",
+   "x": 1350,
+   "y": 486,
+   "w": 240,
+   "h": 128,
+   "align": "center"
+  },
+  {
+   "id": "escalate",
+   "label": "escalate to sev1",
+   "tag": "page leadership",
+   "sub": "status page every 30 min",
+   "tone": "danger",
+   "x": 1320,
+   "y": 712,
+   "w": 300,
+   "h": 92
+  },
+  {
+   "id": "monitor",
+   "label": "monitor 30 min",
+   "tag": "verify",
+   "sub": "error rate, latency, queues",
+   "tone": "default",
+   "x": 1000,
+   "y": 504,
+   "w": 248,
+   "h": 92
+  },
+  {
+   "id": "pm",
+   "label": "postmortem",
+   "tag": "within 5 days",
+   "sub": "blameless, action items owned",
+   "icon": "doc",
+   "tone": "violet",
+   "x": 680,
+   "y": 504,
+   "w": 248,
+   "h": 92
+  },
+  {
+   "id": "ticket",
+   "label": "file a ticket",
+   "tag": "owning team",
+   "sub": "fix in business hours",
+   "tone": "default",
+   "x": 364,
+   "y": 504,
+   "w": 240,
+   "h": 92
+  }
+ ],
+ "edges": [
+  {
+   "from": "alert",
+   "to": "q1",
+   "kind": "fail"
+  },
+  {
+   "from": "q1",
+   "to": "declare",
+   "kind": "primary",
+   "label": "yes"
+  },
+  {
+   "from": "q1",
+   "to": "ticket",
+   "label": "no"
+  },
+  {
+   "from": "declare",
+   "to": "roles",
+   "kind": "deploy"
+  },
+  {
+   "from": "roles",
+   "to": "mitigate",
+   "kind": "deploy"
+  },
+  {
+   "from": "mitigate",
+   "to": "q2",
+   "kind": "primary"
+  },
+  {
+   "from": "q2",
+   "to": "monitor",
+   "kind": "primary",
+   "label": "yes"
+  },
+  {
+   "from": "q2",
+   "to": "escalate",
+   "kind": "fail",
+   "label": "no"
+  },
+  {
+   "from": "escalate",
+   "to": "mitigate",
+   "kind": "fail",
+   "fromSide": "r",
+   "toSide": "r",
+   "via": [
+    [
+     1652,
+     758
+    ],
+    [
+     1652,
+     346
+    ]
+   ],
+   "label": "retry"
+  },
+  {
+   "from": "monitor",
+   "to": "pm",
+   "kind": "primary"
+  }
+ ],
+ "notes": [
+  {
+   "text": "rule 1: mitigate before you diagnose",
+   "x": 64,
+   "y": 680,
+   "w": 520
+  },
+  {
+   "text": "rule 2: the IC does not debug — they coordinate",
+   "x": 64,
+   "y": 716,
+   "w": 520
+  },
+  {
+   "text": "rule 3: if in doubt, declare; downgrading is free",
+   "x": 64,
+   "y": 752,
+   "w": 520
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 900,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "happy path"
+   },
+   {
+    "kind": "deploy",
+    "label": "response setup"
+   },
+   {
+    "kind": "fail",
+    "label": "escalation"
+   }
+  ]
+ }
+}

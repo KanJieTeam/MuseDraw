@@ -1,0 +1,162 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1720,
+  900
+ ],
+ "kicker": "横断面调查 · 现场实施",
+ "title": "问卷调查实施流程与质控点",
+ "subtitle": "琥珀色是两道质控关口：平台自动筛掉可疑问卷，质控员再随机回访 10%。共回收 1,312 份，有效 1,186 份（90.4%）。数据为示例。",
+ "subtitleWidth": 1300,
+ "blocks": [
+  {
+   "type": "swimlane",
+   "x": 60,
+   "y": 262,
+   "w": 1600,
+   "laneH": 118,
+   "labelW": 116,
+   "cols": 8,
+   "stepW": 168,
+   "stepH": 70,
+   "lanes": [
+    {
+     "id": "pi",
+     "label": "课题组"
+    },
+    {
+     "id": "inv",
+     "label": "调查员"
+    },
+    {
+     "id": "sys",
+     "label": "问卷平台"
+    },
+    {
+     "id": "qc",
+     "label": "质控员"
+    }
+   ],
+   "steps": [
+    {
+     "id": "a",
+     "lane": "pi",
+     "col": 0,
+     "label": "问卷定稿",
+     "sub": "预调查 n = 30",
+     "tone": "white"
+    },
+    {
+     "id": "b",
+     "lane": "inv",
+     "col": 1,
+     "label": "调查员培训",
+     "sub": "考核 ≥ 90 分上岗",
+     "tone": "white"
+    },
+    {
+     "id": "c",
+     "lane": "sys",
+     "col": 2,
+     "label": "逻辑跳转与必答",
+     "sub": "上线前双人测试",
+     "tone": "white"
+    },
+    {
+     "id": "d",
+     "lane": "inv",
+     "col": 3,
+     "label": "现场发放",
+     "sub": "每日 ≤ 25 份 / 人",
+     "tone": "white"
+    },
+    {
+     "id": "e",
+     "lane": "sys",
+     "col": 4,
+     "label": "自动筛查",
+     "sub": "过快或直线作答",
+     "tone": "amber"
+    },
+    {
+     "id": "f",
+     "lane": "qc",
+     "col": 5,
+     "label": "10% 电话回访",
+     "sub": "核对 3 个关键题",
+     "tone": "amber"
+    },
+    {
+     "id": "g",
+     "lane": "qc",
+     "col": 6,
+     "label": "合格？",
+     "shape": "diamond",
+     "tone": "white",
+     "w": 120,
+     "h": 80
+    },
+    {
+     "id": "h",
+     "lane": "pi",
+     "col": 7,
+     "label": "入库分析",
+     "sub": "有效问卷 1,186 份",
+     "tone": "navy"
+    }
+   ],
+   "flows": [
+    {
+     "from": "a",
+     "to": "b",
+     "fromSide": "b",
+     "toSide": "l"
+    },
+    {
+     "from": "b",
+     "to": "c",
+     "fromSide": "b",
+     "toSide": "l"
+    },
+    {
+     "from": "c",
+     "to": "d",
+     "fromSide": "t",
+     "toSide": "l"
+    },
+    {
+     "from": "d",
+     "to": "e",
+     "fromSide": "b",
+     "toSide": "l"
+    },
+    {
+     "from": "e",
+     "to": "f",
+     "fromSide": "b",
+     "toSide": "l"
+    },
+    {
+     "from": "f",
+     "to": "g"
+    },
+    {
+     "from": "g",
+     "to": "h",
+     "fromSide": "t",
+     "toSide": "b",
+     "label": "是"
+    },
+    {
+     "from": "g",
+     "to": "d",
+     "fromSide": "b",
+     "toSide": "b",
+     "kind": "soft",
+     "label": "否：退回调查员补录",
+     "mid": 760
+    }
+   ]
+  }
+ ]
+}

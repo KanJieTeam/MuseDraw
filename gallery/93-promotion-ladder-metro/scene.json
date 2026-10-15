@@ -1,0 +1,382 @@
+{
+ "theme": "metro",
+ "size": [
+  1700,
+  880
+ ],
+ "kicker": "人力资源 · 技术序列",
+ "title": "员工晋升通道：专业线与管理线",
+ "subtitle": "两条线在 P3 换乘：之后可以继续做专家，也可以转去带团队。同一高度的站点，薪酬区间相同。职级名称为示例。",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "P1",
+   "shape": "circle",
+   "tone": "default",
+   "x": 186,
+   "y": 506,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "P2",
+   "shape": "circle",
+   "tone": "default",
+   "x": 426,
+   "y": 506,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "P3",
+   "shape": "circle",
+   "tone": "interchange",
+   "x": 666,
+   "y": 506,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "P4",
+   "shape": "circle",
+   "tone": "default",
+   "x": 906,
+   "y": 506,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "P5",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1146,
+   "y": 506,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "P6",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1386,
+   "y": 506,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "M1",
+   "shape": "circle",
+   "tone": "default",
+   "x": 906,
+   "y": 346,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "M2",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1146,
+   "y": 346,
+   "w": 28,
+   "h": 28
+  },
+  {
+   "id": "M3",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1386,
+   "y": 346,
+   "w": 28,
+   "h": 28
+  }
+ ],
+ "texts": [
+  {
+   "x": 200,
+   "y": 572,
+   "text": "P1",
+   "size": 20,
+   "weight": 700,
+   "color": "blue",
+   "anchor": "middle"
+  },
+  {
+   "x": 200,
+   "y": 598,
+   "text": "助理工程师",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 440,
+   "y": 572,
+   "text": "P2",
+   "size": 20,
+   "weight": 700,
+   "color": "blue",
+   "anchor": "middle"
+  },
+  {
+   "x": 440,
+   "y": 598,
+   "text": "工程师",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 680,
+   "y": 572,
+   "text": "P3",
+   "size": 20,
+   "weight": 700,
+   "color": "blue",
+   "anchor": "middle"
+  },
+  {
+   "x": 680,
+   "y": 598,
+   "text": "高级工程师",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 920,
+   "y": 572,
+   "text": "P4",
+   "size": 20,
+   "weight": 700,
+   "color": "blue",
+   "anchor": "middle"
+  },
+  {
+   "x": 920,
+   "y": 598,
+   "text": "资深工程师",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1160,
+   "y": 572,
+   "text": "P5",
+   "size": 20,
+   "weight": 700,
+   "color": "blue",
+   "anchor": "middle"
+  },
+  {
+   "x": 1160,
+   "y": 598,
+   "text": "专家",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1400,
+   "y": 572,
+   "text": "P6",
+   "size": 20,
+   "weight": 700,
+   "color": "blue",
+   "anchor": "middle"
+  },
+  {
+   "x": 1400,
+   "y": 598,
+   "text": "首席专家",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 920,
+   "y": 310,
+   "text": "M1",
+   "size": 20,
+   "weight": 700,
+   "color": "red",
+   "anchor": "middle"
+  },
+  {
+   "x": 920,
+   "y": 334,
+   "text": "组长",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1160,
+   "y": 310,
+   "text": "M2",
+   "size": 20,
+   "weight": 700,
+   "color": "red",
+   "anchor": "middle"
+  },
+  {
+   "x": 1160,
+   "y": 334,
+   "text": "经理",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1400,
+   "y": 310,
+   "text": "M3",
+   "size": 20,
+   "weight": 700,
+   "color": "red",
+   "anchor": "middle"
+  },
+  {
+   "x": 1400,
+   "y": 334,
+   "text": "总监",
+   "size": 15,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 526,
+   "text": "专业线",
+   "size": 17,
+   "weight": 700,
+   "color": "blue"
+  },
+  {
+   "x": 64,
+   "y": 366,
+   "text": "管理线",
+   "size": 17,
+   "weight": 700,
+   "color": "red"
+  },
+  {
+   "x": 64,
+   "y": 740,
+   "text": "每级最短任期",
+   "size": 15,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 768,
+   "text": "P1–P2 1 年，P2–P3 2 年，之后 3 年",
+   "size": 14,
+   "color": "muted",
+   "w": 360
+  },
+  {
+   "x": 464,
+   "y": 740,
+   "text": "晋升窗口",
+   "size": 15,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 464,
+   "y": 768,
+   "text": "每年 3 月、9 月两次，提前一个月提交材料",
+   "size": 14,
+   "color": "muted",
+   "w": 360
+  },
+  {
+   "x": 864,
+   "y": 740,
+   "text": "评审方式",
+   "size": 15,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 864,
+   "y": 768,
+   "text": "答辩 + 同级 3 人评议 + 上级述评",
+   "size": 14,
+   "color": "muted",
+   "w": 360
+  },
+  {
+   "x": 1264,
+   "y": 740,
+   "text": "换线",
+   "size": 15,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1264,
+   "y": 768,
+   "text": "P3 起可申请转管理线，两年内可转回一次",
+   "size": 14,
+   "color": "muted",
+   "w": 360
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     680,
+     520
+    ],
+    [
+     740,
+     520
+    ],
+    [
+     860,
+     360
+    ],
+    [
+     1400,
+     360
+    ]
+   ],
+   "color": "red",
+   "width": 14,
+   "radius": 40
+  },
+  {
+   "points": [
+    [
+     200,
+     520
+    ],
+    [
+     1400,
+     520
+    ]
+   ],
+   "color": "blue",
+   "width": 14
+  },
+  {
+   "points": [
+    [
+     64,
+     700
+    ],
+    [
+     1640,
+     700
+    ]
+   ],
+   "color": "#C9C9C9",
+   "width": 1
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "terracotta",
+  "name": "Terracotta",
+  "nameZh": "暖陶",
+  "aliases": ["terracotta", "earth", "warm", "暖陶", "大地"],
+  "summary": "Warm clay, olive and sand with a soft serif voice. Rounded, human, calm. For strategy canvases, customer journeys, sustainability and workshops.",
+  "palette": { "bg": "#F3E8DA", "card": "#FBF5EC", "ink": "#3A2A20", "muted": "#7D6A5B", "accent": "#C0583A", "clay": "#C0583A", "olive": "#6E7B3B", "sand": "#E4CDAA", "sky": "#6E8FA6", "plum": "#8A5068" },
+  "fonts": { "display": "Fraunces, Noto Serif SC, serif", "body": "Inter, Noto Sans SC, sans-serif", "mono": "IBM Plex Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64, "grain": { "opacity": 0.18, "frequency": 0.8, "r": 0.45, "g": 0.3, "b": 0.2, "alpha": 0.5 } },
+  "header": { "layout": "editorial", "titleFont": "display", "titleSize": 52, "titleWeight": 600, "titleLetterSpacing": -1, "kickerFont": "mono", "kickerSize": 12, "kickerColor": "clay", "kickerLetterSpacing": 2, "subFont": "body", "subSize": 17, "subColor": "muted", "figureColor": "muted" },
+  "node": { "font": "display", "size": 18, "weight": 600, "subFont": "body", "subSize": 13, "tagFont": "mono", "tagSize": 10.5, "tagCase": "upper", "tagLetterSpacing": 1.3, "tagWeight": 600, "tagPos": "above", "radius": 16, "stroke": 1.2, "padding": 16, "align": "left", "gap": 5, "iconSize": 22 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "#D8C3A8", "text": "ink", "sub": "muted", "tag": "clay", "icon": "clay" },
+    "clay": { "fill": "clay", "stroke": "clay", "text": "#FFF6EC", "sub": "#F6D2C3", "tag": "#FFE3D3", "icon": "#FFF6EC" },
+    "olive": { "fill": "olive", "stroke": "olive", "text": "#FAF6E8", "sub": "#DDE3C2", "tag": "#EEF2D9", "icon": "#FAF6E8" },
+    "sand": { "fill": "sand", "stroke": "sand", "text": "ink", "sub": "#6B5644", "tag": "clay" },
+    "sky": { "fill": "#DCE6EC", "stroke": "#B7C9D5", "text": "#25394A", "sub": "#4D6577", "tag": "sky" },
+    "plum": { "fill": "#EBD9DF", "stroke": "#D5B6C1", "text": "#4A2333", "sub": "#7A4E5F", "tag": "plum" },
+    "accent": { "fill": "clay", "stroke": "clay", "text": "#FFF6EC", "sub": "#F6D2C3", "tag": "#FFE3D3" }
+  },
+  "zone": { "style": "fill", "radius": 22, "stroke": 1, "labelFont": "mono", "labelSize": 11.5, "labelCase": "upper", "letterSpacing": 1.8, "labelWeight": 600, "labelPad": 20, "subSize": 12.5,
+    "tones": { "default": { "fill": "#EFE1CF", "stroke": "none", "text": "muted", "sub": "muted" }, "clay": { "fill": "#F1DACD", "stroke": "none", "text": "clay" }, "olive": { "fill": "#E5E5CB", "stroke": "none", "text": "olive" }, "sky": { "fill": "#E3E7E6", "stroke": "none", "text": "sky" }, "card": { "fill": "card", "stroke": "#E1CDB3", "text": "ink" } } },
+  "edge": { "color": "#8C7461", "width": 1.6, "radius": 16, "arrow": "triangle", "arrowSize": 8, "gap": 4, "labelFont": "display", "labelSize": 14, "labelItalic": true, "labelColor": "muted", "labelPlacement": "above", "labelStyle": "plain",
+    "kinds": { "primary": { "color": "clay", "width": 2.2 }, "olive": { "color": "olive", "width": 2 }, "soft": { "dash": "4 5" }, "curve": { "route": "curve", "color": "clay", "width": 2 } } },
+  "step": { "shape": "circle", "fill": "clay", "text": "#FFF6EC", "size": 26, "font": "display", "weight": 700 },
+  "note": { "style": "margin", "font": "display", "size": 15, "italic": true, "color": "ink", "numFont": "display", "numColor": "clay", "lineHeight": 1.45 },
+  "legend": { "font": "mono", "size": 11.5, "color": "muted" },
+  "lines": { "axis": { "color": "ink", "width": 2 } },
+  "footer": { "text": "MuseDraw · Terracotta", "font": "mono", "size": 10.5, "color": "muted", "letterSpacing": 1.5 }
+}

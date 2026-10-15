@@ -1,0 +1,453 @@
+{
+ "theme": "swiss",
+ "size": [
+  1640,
+  1070
+ ],
+ "kicker": "Card-present and online payments · 8 steps · about 1.6 seconds",
+ "title": "How a card payment\nis authorized",
+ "subtitle": "From tap to “Paid”, only messages travel. Funds settle between banks later, in a nightly batch.",
+ "subtitleWidth": 700,
+ "figure": "Payments / 01",
+ "zones": [
+  {
+   "id": "rule-auth",
+   "label": "Authorization · real time",
+   "tone": "red",
+   "x": 64,
+   "y": 330,
+   "w": 1512,
+   "h": 1
+  },
+  {
+   "id": "rule-steps",
+   "label": "What happens at each step",
+   "x": 64,
+   "y": 700,
+   "w": 1512,
+   "h": 1
+  }
+ ],
+ "nodes": [
+  {
+   "id": "holder",
+   "label": "Cardholder",
+   "sub": "taps a card or types the number",
+   "icon": "user",
+   "tone": "ink",
+   "x": 64,
+   "y": 392,
+   "w": 196,
+   "h": 150
+  },
+  {
+   "id": "merchant",
+   "label": "Merchant checkout",
+   "sub": "never stores the card number",
+   "x": 327,
+   "y": 392,
+   "w": 196,
+   "h": 150
+  },
+  {
+   "id": "gateway",
+   "label": "Payment gateway",
+   "sub": "tokenizes, adds 3-D Secure",
+   "x": 590,
+   "y": 392,
+   "w": 196,
+   "h": 150
+  },
+  {
+   "id": "acquirer",
+   "label": "Acquiring bank",
+   "sub": "builds ISO 8583 message",
+   "x": 853,
+   "y": 392,
+   "w": 196,
+   "h": 150
+  },
+  {
+   "id": "network",
+   "label": "Card network",
+   "sub": "routes by BIN, applies rules",
+   "x": 1116,
+   "y": 392,
+   "w": 196,
+   "h": 150
+  },
+  {
+   "id": "issuer",
+   "label": "Issuing bank",
+   "sub": "decides: approve or decline",
+   "tone": "accent",
+   "x": 1380,
+   "y": 392,
+   "w": 196,
+   "h": 150,
+   "step": 5,
+   "stepAt": [
+    196,
+    0
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "holder",
+   "to": "merchant",
+   "kind": "primary",
+   "fromAt": 0.3,
+   "toAt": 0.3,
+   "step": 1,
+   "labelAt": [
+    293,
+    437
+   ]
+  },
+  {
+   "from": "merchant",
+   "to": "gateway",
+   "kind": "primary",
+   "fromAt": 0.3,
+   "toAt": 0.3,
+   "step": 2,
+   "labelAt": [
+    556,
+    437
+   ]
+  },
+  {
+   "from": "gateway",
+   "to": "acquirer",
+   "kind": "primary",
+   "fromAt": 0.3,
+   "toAt": 0.3,
+   "step": 3,
+   "labelAt": [
+    819,
+    437
+   ]
+  },
+  {
+   "from": "acquirer",
+   "to": "network",
+   "kind": "primary",
+   "fromAt": 0.3,
+   "toAt": 0.3,
+   "step": 4,
+   "labelAt": [
+    1082,
+    437
+   ]
+  },
+  {
+   "from": "network",
+   "to": "issuer",
+   "kind": "primary",
+   "fromAt": 0.3,
+   "toAt": 0.3,
+   "labelAt": [
+    1346,
+    437
+   ]
+  },
+  {
+   "from": "issuer",
+   "to": "network",
+   "kind": "reply",
+   "fromAt": 0.72,
+   "toAt": 0.72
+  },
+  {
+   "from": "network",
+   "to": "acquirer",
+   "kind": "reply",
+   "fromAt": 0.72,
+   "toAt": 0.72
+  },
+  {
+   "from": "acquirer",
+   "to": "gateway",
+   "kind": "reply",
+   "fromAt": 0.72,
+   "toAt": 0.72,
+   "step": 6,
+   "labelAt": [
+    819,
+    500
+   ]
+  },
+  {
+   "from": "gateway",
+   "to": "merchant",
+   "kind": "reply",
+   "fromAt": 0.72,
+   "toAt": 0.72
+  },
+  {
+   "from": "merchant",
+   "to": "holder",
+   "kind": "reply",
+   "fromAt": 0.72,
+   "toAt": 0.72
+  },
+  {
+   "from": "issuer",
+   "to": "network",
+   "kind": "later",
+   "fromSide": "b",
+   "toSide": "b",
+   "mid": 610,
+   "step": 8,
+   "stepTone": "ghost",
+   "label": "funds · T+1",
+   "labelAt": [
+    1346,
+    620
+   ]
+  },
+  {
+   "from": "network",
+   "to": "acquirer",
+   "kind": "later",
+   "fromSide": "b",
+   "toSide": "b",
+   "mid": 610
+  },
+  {
+   "from": "acquirer",
+   "to": "merchant",
+   "kind": "later",
+   "fromSide": "b",
+   "toSide": "b",
+   "mid": 640,
+   "fromAt": 0.35,
+   "label": "payout, less fees",
+   "labelAt": [
+    688,
+    650
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 790,
+   "text": "1",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 120,
+   "y": 760,
+   "text": "Card data",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 120,
+   "y": 784,
+   "w": 240,
+   "text": "Chip, tap or typed number reaches checkout, encrypted at the terminal.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 448,
+   "y": 790,
+   "text": "2",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 504,
+   "y": 760,
+   "text": "Tokenize",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 504,
+   "y": 784,
+   "w": 240,
+   "text": "The gateway swaps the number for a token and adds 3-D Secure data when needed.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 832,
+   "y": 790,
+   "text": "3",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 888,
+   "y": 760,
+   "text": "Authorize",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 888,
+   "y": 784,
+   "w": 240,
+   "text": "The acquirer sends an ISO 8583 0100 request to the network.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 1216,
+   "y": 790,
+   "text": "4",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 1272,
+   "y": 760,
+   "text": "Route",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 1272,
+   "y": 784,
+   "w": 260,
+   "text": "The network reads the BIN — the first 6–8 digits — to find the issuer.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 904,
+   "text": "5",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 120,
+   "y": 874,
+   "text": "Decide",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 120,
+   "y": 898,
+   "w": 240,
+   "text": "Fraud score, available funds, a hold on the amount. Roughly 200 ms.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 448,
+   "y": 904,
+   "text": "6",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 504,
+   "y": 874,
+   "text": "Respond",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 504,
+   "y": 898,
+   "w": 240,
+   "text": "The approval code retraces the path. The customer sees “Paid”.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 832,
+   "y": 904,
+   "text": "7",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 888,
+   "y": 874,
+   "text": "Clear",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 888,
+   "y": 898,
+   "w": 240,
+   "text": "At day end the acquirer submits captured transactions as a batch.",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 1216,
+   "y": 904,
+   "text": "8",
+   "font": "display",
+   "size": 56,
+   "weight": 800,
+   "color": "accent"
+  },
+  {
+   "x": 1272,
+   "y": 874,
+   "text": "Settle",
+   "font": "display",
+   "size": 18,
+   "weight": 800
+  },
+  {
+   "x": 1272,
+   "y": 898,
+   "w": 260,
+   "text": "Networks net positions; money moves bank to bank. Merchant paid in 1–2 days.",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 1000,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "request"
+   },
+   {
+    "kind": "reply",
+    "label": "response"
+   },
+   {
+    "kind": "later",
+    "label": "settlement, next day"
+   }
+  ]
+ }
+}

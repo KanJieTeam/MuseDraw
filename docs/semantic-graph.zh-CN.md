@@ -1,61 +1,22 @@
-# 模型理解，MuseDraw 执行
+# Scene 主工作流与旧组件图兼容
 
-公开入口现在只展示[手绘线稿与终端色域](https://kanjieteam.github.io/MuseDraw/)，
-每种风格一张示例、短需求和可重渲染文档。旧100案例及内部评审页面已从当前公开版本撤下。
-安装、选择风格、绘制新主题及继续修改见[使用指南](usage.zh-CN.md)。
+MuseDraw 当前面向科研、办公、教学与工程，主入口为 [Skill](../skills/musedraw/SKILL.md) 和 [100 案例图库](../gallery/README.md)。使用方法见[使用指南](usage.zh-CN.md)。新图使用 scene 引擎，不再以旧两种组件风格定义当前能力。
 
-入口精简后再次调用 `deepseek-flash`：两组四状态 8/8，另两个题材 2/2，
-全部首次通过。两张公开示例还从下载的文档重新生成，SVG 字节一致。
-这些记录与此前的历史验证分开保留，不覆盖原证据。
+## 当前场景引擎
 
-MuseDraw 的案例应当来自别人能运行的同一套绘图能力，而不是另一条人工精修路径。
-本次先打通组件图的“短需求 → 模型工具调用 → 原生图 → 对话修改”。
+[musedraw.mjs](../skills/musedraw/scripts/musedraw.mjs) 读取 `scene.json`，结合 20 种主题生成原生 SVG、2× PNG、预览与版面检查。智能体负责理解事实、选择图型、构图与强调；引擎负责字体、颜色、线条、质感和图形渲染。
 
-## 不为每个案例写一个脚本
+场景可以组合布局块、时序图和自由图元。[场景格式](../skills/musedraw/references/scene-schema.md)与[风格图谱](../skills/musedraw/references/style-atlas.md)说明可用字段和风格；图库中的每个案例都提供场景与短需求，不需要为每个业务另写绘图脚本。
 
-共用的基础处理字体测量、图形角色、稳定 ID、端口、避障连线、非连接跨线桥、
-原生 SVG、PNG 导出与检查。构图策略目前是关系分层 `flow` 和实际归属域 `planes`。
-风格配置目前是手绘线稿与终端色域，不是七套同形卡片换色。
+```sh
+node skills/musedraw/scripts/musedraw.mjs render gallery/59-nsfc-roadmap-journal/scene.json --out output/roadmap
+node skills/musedraw/scripts/musedraw.mjs themes
+```
 
-新增案例主要增加语义内容 JSON 与短需求；新增风格优先调整风格数据及已有图形处理。
-确实需要新的图形语言或布局方法时，增加一个可复用策略，而不是为业务案例写坐标。
-这不保证两种策略已经能处理所有架构图。
+同一份场景、引擎版本、主题、字体与渲染环境可重渲染。案例场景的重做，不等于任意模型只凭短需求都会推理出相同构图。版面检查也不证明研究结论、业务事实或审美已验收。
 
-## 使用与修改
+## 旧组件图路线
 
-用户提供资料和几句话。智能体读取 [Skill](../skills/musedraw/SKILL.md)，使用
-[图工作流](../skills/musedraw/references/graph-workflow.md) 整理组件、归属和已有关系。
-不要求用户写坐标、色值、编号或选择模型厂商。
+[render_graph.mjs](../skills/musedraw/scripts/render_graph.mjs) 仅为已有小型组件图用户保留，具体格式与限制见[旧图工作流](../skills/musedraw/references/graph-workflow.md)。其 `document.json`、`flow` / `planes` 和两种旧风格属于该兼容接口，不能直接当作新引擎的 scene 格式或 20 种主题。
 
-主实现：[render_graph.mjs](../skills/musedraw/scripts/render_graph.mjs)。
-只有 `create_graph` 和 `edit_graph` 的测试宿主映射到现有函数，不执行模型生成的程序。
-改名、增删节点和关系使用原子操作；失败时输入不变。不变的事实与 ID 保留，
-必要的布局重排不意味着内容改变。
-
-同一份 `document.json`、绘图版本和字体环境可重渲染；新内容的理解与设计质量则需
-真实模型和人工验收。保存原图再复制出来，不算模型复现。
-
-## 本次验收范围
-
-真实 DeepSeek 工具调用测试与自动回归是不同项目：
-
-- 两种表达，各首次绘图与三轮修改：资料归档、设备数据平台。
-- 两组另外保留的新题材：医院预约、内容发布。
-- 本地检查：事实清单与方向、指定归属、修改后的稳定身份、真实文字边界与连线穿字。
-- 重渲染：从文档数据重新生成，不复制 SVG 或 PNG。
-
-2026-10-14 使用 `deepseek-flash` 实测：两组四状态对话 **8/8**、
-两个新题材 **2/2** 首次通过，共 10 次模型响应。
-独立审查后补充了归属框误包、箭头方向和未修改关系身份的反例，再重新调用模型验收。
-该成绩不是十轮编辑或所有模型验收。两份语义文档的重渲染 SVG 字节一致；
-其中一张 PNG 有极小抗锯齿差异，不能据此承诺 PNG 像素一致。
-
-[查看真实输出、短需求和版本证据](verification/graph-workflow-20261014/README.md)。
-
-实测脚本：[test_deepseek_graph.mjs](../scripts/test_deepseek_graph.mjs)。默认不调用模型，
-必须显式 `--execute`；凭证来自私有本地配置，不随包发布。需求、代码哈希、
-请求、响应、工具结果、用量与失败样本留在本地新目录，原始失败不覆盖。
-
-当前边界：80 个节点、12 个平面归属域、160 条显式关系；不支持嵌套域、
-自连接或同端点重复关系，不声称任意拓扑、任意模型或顶级审美均已通过。
-后续案例门面只采用这条真实生成路径的作品，视觉验收另行进行。
+旧路线的节点改名、增删组件和关系等操作仍面向已有文档。新图、图库案例及新风格选择均使用 scene 引擎；旧验证结果不自动构成新引擎或全部新案例的模型验收结果。

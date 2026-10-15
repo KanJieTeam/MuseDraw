@@ -1,85 +1,105 @@
 ---
 name: musedraw
-description: Draw and edit software component and integration diagrams from short natural-language briefs with the installed semantic graph renderer. Offers hand-drawn linework, light control/data fields, native SVG/PNG, stable identities and document replay. Requires a file/tool-capable agent; not statistical plots or a universal topology engine.
+description: Draw publication-quality diagrams for office work, research and engineering from a few sentences — research roadmaps, PRISMA/CONSORT flows, model architectures, OKR trees, swimlanes, Gantt plans, fishbone/PDCA, customer journeys, system architecture. 20 named visual styles, native SVG + 2× PNG, reproducible from a scene.json. Not for statistical charts of raw data.
 ---
 
 # MuseDraw
 
-The user describes the system; you prepare semantic content; the installed code
-draws and checks it. Use the same renderer for examples and new topics.
+You are the art director. The user gives a few sentences; you decide what the
+reader must understand, choose a diagram type and a style, write a
+`scene.json`, render it with the bundled engine, look at the PNG and fix it.
+The engine owns typography, colour, line, texture, ports and arrowheads; you own
+content, composition and emphasis.
 
-## Start with ordinary words
+## 1 · Read the request like an editor
 
-A user can say “画一个采购系统架构图，手绘线稿，员工提采购，经过审批后
-生成订单，并对接财务”. Do not ask for coordinates, hex values, IDs or an example
-number. For an actual system, use supplied facts and ask only about missing facts
-that materially change the result. For an explicitly generic reference, propose
-appropriate components without claiming they describe a deployed system.
+1. **Who reads it, where?** Grant reviewer, journal, a team meeting, a README,
+   a printed handout. This picks the style (see table) and the density.
+2. **What is the one sentence the figure must prove?** Write it as the
+   `subtitle`. If you cannot write it, ask one question or choose the most
+   useful reading and say so.
+3. **Which diagram type carries that sentence?** See
+   [composition patterns](references/composition-patterns.md). A sequence of
+   steps is a flow, not a grid of boxes; ownership is a nested map, not a flow.
+4. **Show, don't label.** Numbers that can be compared go on a scale (the
+   `bars` primitive, a day axis, proportional widths), not into tiny text.
+   Titles name the figure plainly; no slogan titles, no “A · B” strings, no
+   micro-label stacked on every box.
+5. **Facts.** Use the user's names, numbers and relationships exactly. For a
+   generic reference, use *specific, realistic* example content (real tool
+   names, plausible counts that reconcile) and mark it as an example in the
+   subtitle — never “服务A / 模块甲 / 业务系统”.
 
-The two published styles are:
+## 2 · Pick a style by its job
 
-| User choice | Visual treatment | Useful when |
+| Use for | Style id | 中文名 |
 | --- | --- | --- |
-| 手绘线稿 | White paper, repeatable ink/green outlines, open client figures, hatched storage | Explaining components and their connections |
-| 终端色域 | Light canvas, warm control fields, cool data fields, clean role shapes | Separating supplied ownership domains and external endpoints |
+| Papers, theses, 基金申请书 figures | `journal` | 科研期刊 |
+| Essays, design docs, explainer posts | `editorial` | 纸墨编辑 |
+| Grayscale print, replication / mechanism figures | `newsprint` | 报刊黑白 |
+| 中文汇报、OKR、组织、流程、项目计划 | `enterprise` | 商务墨蓝 |
+| 政务、公文、文化、典雅中文报告 | `ink-wash` | 水墨宣纸 |
+| Onboarding, wikis, nursing / clinical QI, teaching notes | `pastel` | 柔和笔记 |
+| Strategy canvases, journeys, workshops | `terracotta` | 暖陶 |
+| Brainstorms, early design, retros | `whiteboard` | 白板手绘 |
+| Lessons, classroom explanations | `chalkboard` | 黑板教学 |
+| Step-by-step processes people must remember | `swiss` | 瑞士海报 |
+| Roles shown by shape, team structures | `bauhaus` | 包豪斯 |
+| Roadmaps, lineage, curricula, parallel journeys | `metro` | 地铁线路 |
+| SaaS docs, product pages, investor decks | `product` | 产品发布 |
+| C4 model, formal architecture review | `c4` | C4 标准 |
+| Deployment / infrastructure drawings | `blueprint` | 工程蓝图 |
+| Pipelines, CLIs, data/bioinformatics workflows | `terminal` | 终端暗色 |
+| Typed data streams, observability, ML ops | `observatory` | 观测夜空 |
+| AI products, keynotes | `aurora` | 极光玻璃 |
+| Talks, zines, posters with personality | `riso` | 孔版套印 |
+| Games, real-time systems, energetic talks | `neon` | 霓虹街机 |
 
-If the user gives no style, use 手绘线稿. They may pick either style for a new
-topic, not only the demonstration systems. Do not route to the retired
-hundred-case catalog or offer old families as verified workflows.
+Names in either language, or the id, all work (`--theme 科研期刊`). Read
+[style atlas](references/style-atlas.md) only when choosing between two.
 
-## Draw with the installed tool
+## 3 · Write the scene
 
-Read [graph-workflow](references/graph-workflow.md) for the semantic schema,
-composition choices and edit operations. Prepare `{scene,presentation}` JSON:
-nodes with stable IDs and supplied roles, optional flat ownership groups, and
-explicit relationships. `flow` follows graph ranks; `planes` lays out actual
-domains. Do not invent control/data groups solely to fit the visual style.
+Read [scene schema](references/scene-schema.md) once per session. In short:
+
+- `theme`, `size` (≈1600–1760 × 900–1100), `kicker`, `title`, `subtitle`.
+- **Blocks** for structured diagrams — `tree`, `mindmap`, `timeline`, `gantt`,
+  `matrix`, `funnel`, `cycle`, `fishbone`, `swimlane`, `table` — give content
+  and a bounding box; the block computes positions.
+- `type: "sequence"` for time-ordered messages between participants.
+- **Primitives** for everything else: `zones`, `nodes` (`label`, `tag`, `sub`,
+  `shape`, `tone`, `icon`, `step`), `edges` (`kind`, `label`, `step`, sides,
+  `mid`, `via`), `notes`, `texts`, `legend`. Coordinates are canvas pixels.
+  Leave ~60 px under the header; the engine closes any larger gap itself.
+- Copy the closest file in `gallery/` (in the repo, or fetch it from
+  github.com/KanJieTeam/MuseDraw/tree/main/gallery) and change content — every gallery
+  case is a working scene for an agent to imitate.
+
+## 4 · Render and look
 
 ```sh
-node <skill>/scripts/render_graph.mjs brief.json new-output --playwright <existing-module> --browser <existing-browser>
+node <skill>/scripts/musedraw.mjs render path/to/scene.json        # → diagram.svg, diagram@2x.png, preview.jpg, checks.json
+node <skill>/scripts/musedraw.mjs render scene.json --theme journal --out restyled/   # same content, another style
+node <skill>/scripts/musedraw.mjs themes
 ```
 
-Resolve the host's available Node.js 22+, Playwright, Chromium and language fonts;
-do not require user coordinates or a separate model API key. If dependencies are
-unavailable, explain the concrete runtime gap. A text-only chatbot cannot execute
-this workflow; installing missing dependencies requires appropriate authorization.
+First run: `npm install` inside the skill folder (fonts, Playwright). No
+browser available → add `--svg-only` and say the PNG was not checked.
 
-Deliver PNG, SVG and `document.json`. Inspect the full figure and dense detail,
-and read `checks.json`: technical checks do not establish architectural truth or
-professional aesthetic acceptance. Native drawio export is not a verified
-graph-route deliverable. Preserve facts if a layout is rejected; do not bypass
-this route by hand-drawing SVG and claiming identical reproducibility.
+Then **open the PNG** and read `checks.json`. Fix every `text-overflow`,
+`text-collision`, `edge-label-on-node`, `node-overlap`, `outside-canvas`.
+Checks catch geometry, not taste: also run the
+[anti-AI checklist](references/anti-ai-checklist.md) on what you see.
+Two passes are normal. Deliver the PNG, the SVG and the scene, plus one line on
+what was assumed.
 
-## Continue the conversation
+## 5 · Edits in conversation
 
-“把审批服务改成采购审批”, “增加供应商档案库”, or “让订单服务对接财务”
-are ordinary edits. Read the current document and use the documented operation
-list; do not regenerate unrelated facts, IDs or the full scene for a small edit.
+Edit the existing `scene.json`; never regenerate unrelated content. Style
+changes swap `theme` only. Keep ids stable so diffs stay readable.
 
-```sh
-node <skill>/scripts/render_graph.mjs current/document.json next-output --operations edits.json --playwright <existing-module> --browser <existing-browser>
-```
+## Legacy routes
 
-Operations are validated atomically. Retain the current document on failure.
-Removing a node removes its incident relationships; unrelated nodes and edges
-remain. Reflow may move objects without changing their facts. When changing
-style only, reuse the scene and change presentation, not labels or relationships.
-
-## Repeat an example, or draw a new subject
-
-For exact native-source replay, retrieve the selected published `document.json`
-and use the same renderer version, presentation and fonts without reinterpreting
-it. The page assets are at `docs/gallery/examples/sketch/document.json` and
-`docs/gallery/examples/planes/document.json` in the repository. Fetch just the
-selected document when installed independently; do not load old gallery content.
-Generate into a fresh directory, not by copying the stored image.
-
-SVG geometry is repeatable under the tested conditions; PNG anti-aliasing and
-fonts may change pixels. Read [reproducibility](references/reproducibility.md)
-when evaluating this distinction. For a new topic use its components and
-relationships with the chosen treatment, not the example business labels.
-Model interpretation of new content is not a 100% or cross-model guarantee.
-Supported scope: 80 nodes, 12 flat groups, 160 relations. Nested domains,
-self-loops, repeated endpoint pairs and some dense layouts are rejected rather
-than silently simplified. Capability matrices, scientific plots and arbitrary
-deployment topology are not currently published as verified workflows.
+`scripts/render_graph.mjs` (automatic layout for small component graphs, two
+styles) and `scripts/render_style.py` remain for existing users; see
+[graph workflow](references/graph-workflow.md). New work uses the scene engine.

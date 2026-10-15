@@ -1,0 +1,260 @@
+{
+  "id": "enterprise",
+  "name": "Enterprise Navy",
+  "nameZh": "商务墨蓝",
+  "aliases": [
+    "enterprise",
+    "墨蓝",
+    "商务",
+    "企业蓝白",
+    "navy"
+  ],
+  "summary": "The Chinese corporate deck done properly: deep-navy header bands, white modules, one amber highlight for what matters, strong hierarchy and generous type. For strategy, org and capability maps.",
+  "palette": {
+    "bg": "#FFFFFF",
+    "ink": "#0E1B2E",
+    "muted": "#5B6B80",
+    "navy": "#0B2A4A",
+    "blue": "#1F5FA8",
+    "pale": "#EEF3F9",
+    "line": "#C9D5E3",
+    "accent": "#E8A33D",
+    "amberPale": "#FDF4E6",
+    "red": "#C2412D",
+    "green": "#2F8F5B"
+  },
+  "fonts": {
+    "display": "Noto Sans SC, Inter, sans-serif",
+    "body": "Noto Sans SC, Inter, sans-serif",
+    "mono": "Noto Sans SC, Inter, sans-serif"
+  },
+  "canvas": {
+    "bg": "bg",
+    "margin": 60
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 40,
+    "titleWeight": 900,
+    "kickerFont": "body",
+    "kickerSize": 14,
+    "kickerColor": "blue",
+    "kickerLetterSpacing": 3,
+    "kickerCase": "none",
+    "kickerWeight": 700,
+    "subFont": "body",
+    "subSize": 15.5,
+    "subColor": "muted",
+    "rule": "navy",
+    "ruleWidth": 3
+  },
+  "node": {
+    "font": "body",
+    "size": 16,
+    "weight": 700,
+    "subFont": "body",
+    "subSize": 12.5,
+    "tagFont": "body",
+    "tagSize": 11.5,
+    "tagWeight": 700,
+    "tagPos": "above",
+    "radius": 4,
+    "stroke": 1,
+    "padding": 12,
+    "align": "center",
+    "lineHeight": 1.25,
+    "gap": 3,
+    "iconSize": 20
+  },
+  "tones": {
+    "default": {
+      "fill": "pale",
+      "stroke": "none",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "blue",
+      "icon": "blue"
+    },
+    "white": {
+      "fill": "#FFFFFF",
+      "stroke": "line",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "blue",
+      "icon": "blue"
+    },
+    "navy": {
+      "fill": "navy",
+      "stroke": "navy",
+      "text": "#FFFFFF",
+      "sub": "#B9C8DC",
+      "tag": "accent",
+      "icon": "#FFFFFF"
+    },
+    "blue": {
+      "fill": "blue",
+      "stroke": "blue",
+      "text": "#FFFFFF",
+      "sub": "#D4E2F4",
+      "tag": "#FFE3B5",
+      "icon": "#FFFFFF"
+    },
+    "accent": {
+      "fill": "accent",
+      "stroke": "accent",
+      "text": "#2B1A00",
+      "sub": "#5C3A05",
+      "tag": "#5C3A05",
+      "icon": "#2B1A00"
+    },
+    "amber": {
+      "fill": "amberPale",
+      "stroke": "accent",
+      "strokeWidth": 1.5,
+      "text": "#5C3A05",
+      "sub": "#8A5A12",
+      "tag": "#B4741A"
+    },
+    "ghost": {
+      "fill": "#FFFFFF",
+      "stroke": "line",
+      "dash": "4 3",
+      "text": "muted",
+      "sub": "muted"
+    },
+    "lane": {
+      "fill": "#FFFFFF"
+    },
+    "laneAlt": {
+      "fill": "#F6F8FB"
+    },
+    "laneHead": {
+      "fill": "navy",
+      "stroke": "navy",
+      "text": "#FFFFFF",
+      "sub": "#B9C8DC"
+    },
+    "red": {
+      "fill": "#FBEDEA",
+      "stroke": "#C2412D",
+      "text": "#8E2414",
+      "sub": "#8E2414",
+      "tag": "#C2412D"
+    },
+    "green": {
+      "fill": "#E8F4EC",
+      "stroke": "#2F8F5B",
+      "text": "#1E5E3B",
+      "sub": "#1E5E3B",
+      "tag": "#2F8F5B"
+    }
+  },
+  "zone": {
+    "style": "band",
+    "radius": 4,
+    "stroke": 1,
+    "bandHeight": 36,
+    "labelFont": "body",
+    "labelSize": 15,
+    "labelWeight": 700,
+    "letterSpacing": 2,
+    "labelPad": 16,
+    "subSize": 12,
+    "tones": {
+      "default": {
+        "fill": "#FFFFFF",
+        "stroke": "line",
+        "band": "navy",
+        "bandText": "#FFFFFF",
+        "text": "navy",
+        "sub": "muted"
+      },
+      "blue": {
+        "fill": "#FFFFFF",
+        "stroke": "#9DB8D8",
+        "band": "blue",
+        "bandText": "#FFFFFF"
+      },
+      "accent": {
+        "fill": "#FFFCF6",
+        "stroke": "accent",
+        "band": "accent",
+        "bandText": "#2B1A00"
+      },
+      "lane": {
+        "fill": "#FFFFFF",
+        "stroke": "line"
+      },
+      "laneAlt": {
+        "fill": "#F6F8FB",
+        "stroke": "line"
+      },
+      "plain": {
+        "fill": "pale",
+        "stroke": "none",
+        "band": "pale",
+        "bandText": "navy"
+      }
+    }
+  },
+  "edge": {
+    "color": "#4D6684",
+    "width": 1.5,
+    "radius": 4,
+    "arrow": "triangle",
+    "arrowSize": 8,
+    "gap": 2,
+    "labelFont": "body",
+    "labelSize": 12,
+    "labelColor": "muted",
+    "labelPlacement": "on",
+    "labelStyle": "chip",
+    "labelBg": "bg",
+    "kinds": {
+      "primary": {
+        "color": "blue",
+        "width": 2
+      },
+      "accent": {
+        "color": "accent",
+        "width": 2.2
+      },
+      "soft": {
+        "color": "#9DB0C8",
+        "dash": "4 4"
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "accent",
+    "text": "#2B1A00",
+    "size": 24,
+    "font": "body",
+    "weight": 900
+  },
+  "note": {
+    "style": "callout",
+    "font": "body",
+    "size": 13,
+    "color": "muted",
+    "fill": "#FFFFFF",
+    "stroke": "line",
+    "radius": 4,
+    "lineHeight": 1.55,
+    "titleColor": "navy"
+  },
+  "legend": {
+    "font": "body",
+    "size": 12.5,
+    "color": "muted"
+  },
+  "footer": {
+    "text": "MuseDraw · 商务墨蓝",
+    "font": "body",
+    "size": 11,
+    "color": "#9AA9BC",
+    "letterSpacing": 2
+  }
+}

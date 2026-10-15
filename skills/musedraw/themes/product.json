@@ -1,0 +1,240 @@
+{
+  "id": "product",
+  "name": "Product Clean",
+  "nameZh": "产品发布",
+  "aliases": [
+    "product",
+    "clean",
+    "saas",
+    "产品"
+  ],
+  "summary": "The polished SaaS-docs look: white cards with soft shadows, generous radius, one indigo accent and tidy pill labels. For docs sites, landing pages and investor decks.",
+  "palette": {
+    "bg": "#F6F7F9",
+    "card": "#FFFFFF",
+    "ink": "#101828",
+    "muted": "#667085",
+    "line": "#D0D5DD",
+    "accent": "#4F46E5",
+    "teal": "#0E9384",
+    "amber": "#DC6803"
+  },
+  "fonts": {
+    "display": "Inter, Noto Sans SC, sans-serif",
+    "body": "Inter, Noto Sans SC, sans-serif",
+    "mono": "JetBrains Mono, Noto Sans SC, monospace"
+  },
+  "canvas": {
+    "bg": "bg",
+    "margin": 64,
+    "texture": "dots",
+    "textureGap": 20,
+    "textureColor": "#D0D5DD",
+    "textureOpacity": 0.55
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 44,
+    "titleWeight": 700,
+    "titleLetterSpacing": -1.2,
+    "kickerFont": "body",
+    "kickerSize": 13,
+    "kickerColor": "accent",
+    "kickerLetterSpacing": 0.2,
+    "kickerCase": "none",
+    "kickerWeight": 600,
+    "subFont": "body",
+    "subSize": 17,
+    "subColor": "muted"
+  },
+  "node": {
+    "font": "body",
+    "size": 15.5,
+    "weight": 600,
+    "subFont": "body",
+    "subSize": 12.5,
+    "tagFont": "body",
+    "tagSize": 11,
+    "tagWeight": 600,
+    "tagPos": "above",
+    "radius": 12,
+    "stroke": 1,
+    "padding": 16,
+    "align": "left",
+    "shadow": "soft",
+    "softShadow": {
+      "dy": 4,
+      "blur": 8,
+      "opacity": 0.07,
+      "color": "#101828"
+    },
+    "iconSize": 20,
+    "iconStroke": 1.6,
+    "gap": 4
+  },
+  "tones": {
+    "default": {
+      "fill": "card",
+      "stroke": "#E4E7EC",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "muted",
+      "icon": "#475467"
+    },
+    "accent": {
+      "fill": "accent",
+      "stroke": "accent",
+      "text": "#FFFFFF",
+      "sub": "#C7D2FE",
+      "tag": "#E0E7FF",
+      "icon": "#FFFFFF"
+    },
+    "indigo": {
+      "fill": "#EEF2FF",
+      "stroke": "#C7D2FE",
+      "text": "#312E81",
+      "sub": "#4F46E5",
+      "tag": "accent",
+      "icon": "accent",
+      "shadow": "none"
+    },
+    "teal": {
+      "fill": "#F0FDF9",
+      "stroke": "#99F6E0",
+      "text": "#134E48",
+      "sub": "#0E9384",
+      "tag": "teal",
+      "icon": "teal",
+      "shadow": "none"
+    },
+    "amber": {
+      "fill": "#FFFAEB",
+      "stroke": "#FEDF89",
+      "text": "#7A2E0E",
+      "sub": "#B54708",
+      "tag": "amber",
+      "icon": "amber",
+      "shadow": "none"
+    },
+    "ghost": {
+      "fill": "none",
+      "stroke": "line",
+      "dash": "4 4",
+      "text": "muted",
+      "sub": "muted",
+      "tag": "muted",
+      "shadow": "none"
+    },
+    "indigoBar": {
+      "fill": "#6366F1",
+      "stroke": "#6366F1",
+      "text": "#FFFFFF",
+      "shadow": "none"
+    },
+    "tealBar": {
+      "fill": "#14B8A6",
+      "stroke": "#14B8A6",
+      "text": "#FFFFFF",
+      "shadow": "none"
+    },
+    "amberBar": {
+      "fill": "#F59E0B",
+      "stroke": "#F59E0B",
+      "text": "#FFFFFF",
+      "shadow": "none"
+    }
+  },
+  "zone": {
+    "style": "fill",
+    "radius": 18,
+    "stroke": 1,
+    "labelFont": "body",
+    "labelSize": 13,
+    "labelWeight": 700,
+    "letterSpacing": 0,
+    "labelPad": 20,
+    "subSize": 12.5,
+    "tones": {
+      "default": {
+        "fill": "#FFFFFF",
+        "stroke": "#EAECF0",
+        "text": "ink",
+        "sub": "muted"
+      },
+      "indigo": {
+        "fill": "#F5F6FF",
+        "stroke": "#E0E4FF",
+        "text": "#3730A3",
+        "sub": "#6366F1"
+      },
+      "teal": {
+        "fill": "#F2FBF9",
+        "stroke": "#CCF2EA",
+        "text": "#115E59",
+        "sub": "#0E9384"
+      }
+    }
+  },
+  "edge": {
+    "color": "#98A2B3",
+    "width": 1.5,
+    "radius": 12,
+    "arrow": "triangle",
+    "arrowSize": 7,
+    "gap": 4,
+    "labelFont": "body",
+    "labelSize": 11.5,
+    "labelWeight": 600,
+    "labelColor": "#475467",
+    "labelPlacement": "on",
+    "labelStyle": "tag",
+    "labelBg": "card",
+    "labelBorder": "#EAECF0",
+    "labelRadius": 10,
+    "kinds": {
+      "primary": {
+        "color": "accent",
+        "width": 2
+      },
+      "teal": {
+        "color": "teal",
+        "width": 2
+      },
+      "async": {
+        "dash": "5 4"
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "accent",
+    "text": "#FFFFFF",
+    "size": 22,
+    "font": "body",
+    "weight": 700
+  },
+  "note": {
+    "style": "callout",
+    "font": "body",
+    "size": 13,
+    "color": "muted",
+    "fill": "card",
+    "stroke": "#EAECF0",
+    "radius": 10,
+    "lineHeight": 1.5,
+    "titleColor": "ink"
+  },
+  "legend": {
+    "font": "body",
+    "size": 12,
+    "color": "muted"
+  },
+  "footer": {
+    "text": "MuseDraw · Product Clean",
+    "font": "body",
+    "size": 11,
+    "color": "#98A2B3",
+    "letterSpacing": 0.3
+  }
+}

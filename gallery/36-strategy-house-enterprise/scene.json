@@ -1,0 +1,666 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1700,
+  960
+ ],
+ "kicker": "社区健康服务集团 · 三年战略",
+ "title": "2027–2029 战略地图",
+ "subtitle": "一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。",
+ "subtitleWidth": 1300,
+ "texts": [
+  {
+   "x": 60,
+   "y": 288,
+   "text": "愿景",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 60,
+   "y": 336,
+   "text": "成为长三角最受信赖的",
+   "size": 30,
+   "color": "navy",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 378,
+   "text": "社区健康服务品牌",
+   "size": 30,
+   "color": "navy",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 460,
+   "text": "服务家庭",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 500,
+   "text": "50 万户",
+   "size": 34,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 556,
+   "text": "营收",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 596,
+   "text": "30 亿元",
+   "size": 34,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 652,
+   "text": "NPS",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 692,
+   "text": "≥ 60",
+   "size": 34,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 60,
+   "y": 420,
+   "text": "2029 年总目标",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 560,
+   "y": 290,
+   "text": "战略支柱 / 衡量指标",
+   "size": 13,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 880,
+   "y": 290,
+   "text": "2026 基线",
+   "size": 13,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1080,
+   "y": 290,
+   "text": "2027",
+   "size": 13,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1280,
+   "y": 290,
+   "text": "2028",
+   "size": 13,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1480,
+   "y": 290,
+   "text": "2029 目标",
+   "size": 13,
+   "color": "navy",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1640,
+   "y": 290,
+   "text": "负责人",
+   "size": 13,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 360,
+   "text": "1",
+   "size": 30,
+   "color": "accent",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 358,
+   "text": "网点密度",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 386,
+   "text": "15 分钟服务圈覆盖率",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 880,
+   "y": 364,
+   "text": "41%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1080,
+   "y": 364,
+   "text": "55%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1280,
+   "y": 364,
+   "text": "68%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1480,
+   "y": 364,
+   "text": "80%",
+   "size": 20,
+   "color": "ink",
+   "weight": 900,
+   "anchor": "middle"
+  },
+  {
+   "x": 1640,
+   "y": 364,
+   "text": "运营副总",
+   "size": 14,
+   "color": "ink",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 490,
+   "text": "2",
+   "size": 30,
+   "color": "accent",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 488,
+   "text": "数字化服务",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 516,
+   "text": "线上收入占比",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 880,
+   "y": 494,
+   "text": "6%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1080,
+   "y": 494,
+   "text": "12%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1280,
+   "y": 494,
+   "text": "19%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1480,
+   "y": 494,
+   "text": "25%",
+   "size": 20,
+   "color": "ink",
+   "weight": 900,
+   "anchor": "middle"
+  },
+  {
+   "x": 1640,
+   "y": 494,
+   "text": "CIO",
+   "size": 14,
+   "color": "ink",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 620,
+   "text": "3",
+   "size": 30,
+   "color": "accent",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 618,
+   "text": "专业人才",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 646,
+   "text": "护士长内部晋升比例",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 880,
+   "y": 624,
+   "text": "35%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1080,
+   "y": 624,
+   "text": "50%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1280,
+   "y": 624,
+   "text": "62%",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1480,
+   "y": 624,
+   "text": "70%",
+   "size": 20,
+   "color": "ink",
+   "weight": 900,
+   "anchor": "middle"
+  },
+  {
+   "x": 1640,
+   "y": 624,
+   "text": "HR 总监",
+   "size": 14,
+   "color": "ink",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 750,
+   "text": "4",
+   "size": 30,
+   "color": "accent",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 748,
+   "text": "医保与合作",
+   "size": 20,
+   "color": "ink",
+   "weight": 900
+  },
+  {
+   "x": 600,
+   "y": 776,
+   "text": "接入医保的城市数",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 880,
+   "y": 754,
+   "text": "1 城",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1080,
+   "y": 754,
+   "text": "3 城",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1280,
+   "y": 754,
+   "text": "5 城",
+   "size": 17,
+   "color": "muted",
+   "weight": 700,
+   "anchor": "middle"
+  },
+  {
+   "x": 1480,
+   "y": 754,
+   "text": "6 城",
+   "size": 20,
+   "color": "ink",
+   "weight": 900,
+   "anchor": "middle"
+  },
+  {
+   "x": 1640,
+   "y": 754,
+   "text": "战略合作部",
+   "size": 14,
+   "color": "ink",
+   "anchor": "end"
+  },
+  {
+   "x": 560,
+   "y": 880,
+   "text": "支撑：区域合伙制 · 数据中台 · 质量与合规体系。每年 1 月复盘一次，指标不变，只调整举措。",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     470,
+     276
+    ],
+    [
+     470,
+     860
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     304
+    ],
+    [
+     1640,
+     304
+    ]
+   ],
+   "color": "navy",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     560,
+     440
+    ],
+    [
+     1640,
+     440
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     570
+    ],
+    [
+     1640,
+     570
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     700
+    ],
+    [
+     1640,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     560,
+     830
+    ],
+    [
+     1640,
+     830
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  }
+ ],
+ "bars": [
+  {
+   "x": 810,
+   "y": 380,
+   "w": 140,
+   "h": 10,
+   "value": 0.41,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1010,
+   "y": 380,
+   "w": 140,
+   "h": 10,
+   "value": 0.55,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1210,
+   "y": 380,
+   "w": 140,
+   "h": 10,
+   "value": 0.68,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1410,
+   "y": 380,
+   "w": 140,
+   "h": 10,
+   "value": 0.8,
+   "fill": "navy",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 810,
+   "y": 510,
+   "w": 140,
+   "h": 10,
+   "value": 0.2,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1010,
+   "y": 510,
+   "w": 140,
+   "h": 10,
+   "value": 0.4,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1210,
+   "y": 510,
+   "w": 140,
+   "h": 10,
+   "value": 0.6333333333333334,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1410,
+   "y": 510,
+   "w": 140,
+   "h": 10,
+   "value": 0.8333333333333334,
+   "fill": "navy",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 810,
+   "y": 640,
+   "w": 140,
+   "h": 10,
+   "value": 0.35,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1010,
+   "y": 640,
+   "w": 140,
+   "h": 10,
+   "value": 0.5,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1210,
+   "y": 640,
+   "w": 140,
+   "h": 10,
+   "value": 0.62,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1410,
+   "y": 640,
+   "w": 140,
+   "h": 10,
+   "value": 0.7,
+   "fill": "navy",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 810,
+   "y": 770,
+   "w": 140,
+   "h": 10,
+   "value": 0.16666666666666666,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1010,
+   "y": 770,
+   "w": 140,
+   "h": 10,
+   "value": 0.5,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1210,
+   "y": 770,
+   "w": 140,
+   "h": 10,
+   "value": 0.8333333333333334,
+   "fill": "blue",
+   "track": "pale",
+   "radius": 2
+  },
+  {
+   "x": 1410,
+   "y": 770,
+   "w": 140,
+   "h": 10,
+   "value": 1,
+   "fill": "navy",
+   "track": "pale",
+   "radius": 2
+  }
+ ],
+ "nodes": []
+}

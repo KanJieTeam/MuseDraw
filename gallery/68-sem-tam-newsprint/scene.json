@@ -1,0 +1,289 @@
+{
+ "theme": "newsprint",
+ "size": [
+  1640,
+  900
+ ],
+ "kicker": "Structural equation model · technology acceptance",
+ "title": "Structural equation model: nurses' adoption of e-charting",
+ "subtitle": "Ellipses are latent constructs measured by the boxed survey items. Every path coefficient is standardised; thick arrows carry the strongest effects (n = 486).",
+ "subtitleWidth": 1150,
+ "figure": "Fig. 68",
+ "nodes": [
+  {
+   "id": "PEOU",
+   "label": "Perceived ease of use",
+   "tag": "PEOU",
+   "shape": "circle",
+   "tone": "default",
+   "x": 250,
+   "y": 558,
+   "w": 220,
+   "h": 124,
+   "size": 16,
+   "align": "center"
+  },
+  {
+   "id": "PU",
+   "label": "Perceived usefulness",
+   "tag": "PU",
+   "shape": "circle",
+   "tone": "default",
+   "x": 250,
+   "y": 268,
+   "w": 220,
+   "h": 124,
+   "size": 16,
+   "align": "center"
+  },
+  {
+   "id": "ATT",
+   "label": "Attitude",
+   "tag": "ATT",
+   "shape": "circle",
+   "tone": "default",
+   "x": 650,
+   "y": 408,
+   "w": 220,
+   "h": 124,
+   "size": 16,
+   "align": "center"
+  },
+  {
+   "id": "BI",
+   "label": "Intention to use",
+   "tag": "BI",
+   "shape": "circle",
+   "tone": "hatch",
+   "x": 990,
+   "y": 408,
+   "w": 220,
+   "h": 124,
+   "size": 16,
+   "align": "center"
+  },
+  {
+   "id": "USE",
+   "label": "Actual use",
+   "tag": "USE",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1320,
+   "y": 408,
+   "w": 220,
+   "h": 124,
+   "size": 16,
+   "align": "center"
+  },
+  {
+   "id": "PU1",
+   "label": "PU1",
+   "x": 80,
+   "y": 260,
+   "w": 80,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "PU2",
+   "label": "PU2",
+   "x": 80,
+   "y": 315,
+   "w": 80,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "PU3",
+   "label": "PU3",
+   "x": 80,
+   "y": 370,
+   "w": 80,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "EU1",
+   "label": "EU1",
+   "x": 80,
+   "y": 550,
+   "w": 80,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "EU2",
+   "label": "EU2",
+   "x": 80,
+   "y": 605,
+   "w": 80,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "EU3",
+   "label": "EU3",
+   "x": 80,
+   "y": 660,
+   "w": 80,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "U1",
+   "label": "U1",
+   "x": 1340,
+   "y": 600,
+   "w": 70,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "U2",
+   "label": "U2",
+   "x": 1450,
+   "y": 600,
+   "w": 70,
+   "h": 40,
+   "size": 13
+  },
+  {
+   "id": "fit",
+   "label": "Model fit",
+   "sub": "χ²/df = 2.14, CFI = 0.962, TLI = 0.951\nRMSEA = 0.048 [0.039, 0.057], SRMR = 0.041",
+   "tone": "default",
+   "x": 900,
+   "y": 740,
+   "w": 620,
+   "h": 90,
+   "align": "left"
+  }
+ ],
+ "edges": [
+  {
+   "from": "PU",
+   "to": "PU1",
+   "fromSide": "l",
+   "toSide": "r",
+   "width": 1
+  },
+  {
+   "from": "PU",
+   "to": "PU2",
+   "fromSide": "l",
+   "toSide": "r",
+   "width": 1
+  },
+  {
+   "from": "PU",
+   "to": "PU3",
+   "fromSide": "l",
+   "toSide": "r",
+   "width": 1
+  },
+  {
+   "from": "PEOU",
+   "to": "EU1",
+   "fromSide": "l",
+   "toSide": "r",
+   "width": 1
+  },
+  {
+   "from": "PEOU",
+   "to": "EU2",
+   "fromSide": "l",
+   "toSide": "r",
+   "width": 1
+  },
+  {
+   "from": "PEOU",
+   "to": "EU3",
+   "fromSide": "l",
+   "toSide": "r",
+   "width": 1
+  },
+  {
+   "from": "USE",
+   "to": "U1",
+   "fromSide": "b",
+   "toSide": "t",
+   "width": 1
+  },
+  {
+   "from": "USE",
+   "to": "U2",
+   "fromSide": "b",
+   "toSide": "t",
+   "width": 1
+  },
+  {
+   "from": "PEOU",
+   "to": "PU",
+   "kind": "default",
+   "label": "β = 0.48***",
+   "route": "ortho",
+   "width": 2,
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "PU",
+   "to": "ATT",
+   "kind": "default",
+   "label": "β = 0.39***",
+   "route": "curve",
+   "width": 2,
+   "fromSide": "r",
+   "toSide": "t"
+  },
+  {
+   "from": "PEOU",
+   "to": "ATT",
+   "kind": "default",
+   "label": "β = 0.27**",
+   "route": "curve",
+   "width": 2,
+   "fromSide": "r",
+   "toSide": "b"
+  },
+  {
+   "from": "ATT",
+   "to": "BI",
+   "kind": "wal",
+   "label": "β = 0.52***",
+   "route": "curve",
+   "width": 2
+  },
+  {
+   "from": "PU",
+   "to": "BI",
+   "kind": "default",
+   "label": "β = 0.31***",
+   "route": "ortho",
+   "width": 2,
+   "fromSide": "r",
+   "toSide": "t",
+   "labelAt": [
+    800,
+    330
+   ]
+  },
+  {
+   "from": "BI",
+   "to": "USE",
+   "kind": "wal",
+   "label": "β = 0.44***",
+   "route": "curve",
+   "width": 2
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 860,
+   "text": "** p < .01   *** p < .001. Example values for illustration.",
+   "size": 12,
+   "color": "muted"
+  }
+ ]
+}

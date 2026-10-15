@@ -2,52 +2,46 @@
 
 [简体中文](CONTRIBUTING.zh-CN.md)
 
-MuseDraw is a research-figure assistant. This first release focuses on software architecture figures; broader research workflows are a direction to develop, not a capability already shipped. You can contribute design rules, examples, documentation and workflows without being a programmer.
+MuseDraw is a professional drawing assistant for research, office work, teaching and engineering. Contributions can improve scenes, styles, layout blocks, design guidance or documentation. You need not be a programmer to contribute an original example or clearer instructions.
 
-## Start in three steps
+## Start with a focused change
 
-1. Choose one concrete improvement: a clearer rule, an original example, a useful workflow or a documentation correction. An issue is useful for larger proposals, but is not required for a small fix.
-2. Make a focused change. For a new example, add the four files below; for a design-rule change, show a small example or before/after evidence. A typo fix does not need a new figure.
-3. Run `python scripts/check.py`, inspect the affected figure, and open a pull request explaining what changed, what stayed fixed and what you checked. Your first contribution may be in English or Chinese; a bilingual first PR is not required.
+Choose a concrete improvement. Small fixes need no prior issue; discuss larger engine or workflow changes when useful. Read the [Skill](skills/musedraw/SKILL.md), [scene schema](skills/musedraw/references/scene-schema.md) and [gallery](gallery/README.md) for the current scene-engine workflow.
+
+For a new case, copy a suitable gallery directory and supply:
 
 ```text
-skills/musedraw/             # implemented instructions, rules and tools
-examples/<case>/
-  brief.md                  # question, facts, relationships and unknowns
-  diagram.svg               # original editable figure
-  diagram.png               # rendered preview
-  review.md                 # design choices, checks and limits
-scripts/check.py            # standard-library local checks
+gallery/<case>/
+  scene.json       # complete, editable source
+  prompt.md        # short natural-language request and necessary facts
+  diagram.svg     # rendered native vector output
+  preview.jpg     # rendered gallery preview
 ```
 
-A machine-readable brief such as `brief.json` may accompany these files; it does not replace the readable brief. Start from [data-platform](examples/data-platform/brief.md) or [inspection-platform](examples/inspection-platform/brief.md).
+Render with the main engine; the full PNG and `checks.json` support local review. Do not substitute a hand-edited image that cannot be reproduced from the scene. Keep content specific and mark illustrative data as example data. Gallery review states distinguish previews from cases that have received individual visual review.
 
-## Useful contribution directions
+## Render, inspect and check
 
-- Architecture: capability ownership, component/integration relationships, and deployment views supported by actual inputs. Small client or framework diagrams need not become enterprise platform matrices.
-- Figure quality: readable labels, restrained emphasis, useful density, clear boundaries and connections that reach the right objects.
-- Reproducible examples: an explicit brief, original SVG, usable preview and an honest review, including failures or unverified details.
-- Workflow and documentation: clearer handoffs, language improvements and tested client instructions. Keep real Codex client references when relevant; its name is not prohibited in documentation.
-- Future research figures: propose a concrete task and a working route from input to checked output. Publish a new Skill workflow only after its capability, example and verification actually exist; do not add an empty placeholder Skill.
-
-## Review and acceptance
-
-The common local command is:
+With Node.js 22+, install the skill's fonts and Playwright once. Setup also attempts a Chromium download; use an environment with the necessary network access and installation permission:
 
 ```sh
+npm --prefix skills/musedraw install
+node skills/musedraw/scripts/musedraw.mjs render gallery/<case>/scene.json
 python scripts/check.py
 ```
 
-It is not a browser, font, architecture or aesthetic certification. The normal check does not require Playwright. For browser preview checks, follow the explicit command and prerequisites in the [usage guide](docs/usage.md); state when that optional step was not run. Do not silently install dependencies or use paid services for a contribution.
+Use `npm run gallery` when the change affects the whole gallery, such as a shared engine or theme change. Rendering writes the case's generated outputs; retain any earlier version you need before rerendering. `node skills/musedraw/scripts/musedraw.mjs themes` lists available styles.
 
-For figure changes, inspect the full preview, a dense area and the intended reduced viewing size. Check labels, containment, connector endpoints and line/text intersections. Compare the input facts and relationships with the SVG. When a user asks only for a style change, keep the content and relationships unchanged. A program passing does not establish that a user has approved the design.
+Open the full PNG, a dense area and the intended reduced viewing size. Read `checks.json` and fix every warning before review, including text overflow, collision, edge labels on nodes, node overlap and objects outside the canvas. Check facts, numeric consistency, connector endpoints and the [visual checklist](skills/musedraw/references/anti-ai-checklist.md). Preserve facts and relationships during style-only revisions. Process success is not aesthetic acceptance.
 
-The current capability renderer has a fixed data-platform skeleton and equal-width groups. Use it only when those roles fit the brief. Other structures use original SVG; do not invent modules, technology choices or deployment instances to fit the renderer. Unknown direction stays unknown. References and clearly labelled generic examples are not project facts.
+The offline Python check is separate from browser rendering. If using `--svg-only`, explicitly state that PNG and browser checks were not completed; that is not full figure verification. Do not invoke paid services just to contribute.
 
-## Original work and contribution boundaries
+## Review and contribution boundaries
 
-Contribute work you created and have the right to license under the project's [Apache-2.0 license](LICENSE). Public community pages may inform abstract design observations, but being publicly viewable is not a redistribution license. Do not copy community templates, screenshots, proprietary figure layouts, author prose or vendor assets into the repository without an explicit applicable permission and attribution. Prefer links and original text/geometric figures.
+Explain the problem, resulting behavior and checks in your pull request. First contributions may be in English or Chinese; bilingual submissions are not required. Add new workflows only with a working route, examples and appropriate verification. Existing small-graph tools are compatibility routes; new gallery work uses the scene engine.
 
-Keep private data, credentials and local machine paths out of briefs and assets. Describe missing facts instead of guessing them. No fair token benchmark has been completed: do not promise a percentage saving, superiority over other tools or journals, or compatibility with every client. Report the checks and environments you actually used.
+Contribute original work you can license under [Apache-2.0](LICENSE). Public visibility is not permission to redistribute templates, screenshots, proprietary assets or author prose. Include applicable permission and attribution for third-party material. Keep private data, credentials and local absolute paths out of scenes, prompts and assets.
 
-Use branch prefixes such as `feat/`, `fix/`, `docs/`, `test/`, `refactor/` or `chore/`. Branch names must not contain `codex`, case-insensitively. This is a branch-naming rule, not a ban on explaining the Codex client.
+Distinguish rerendering a supplied scene from a model interpreting a new request. Neither proves universal model accuracy, identical pixels across platforms, token savings or superiority over other tools. Report the actual environment and completed checks.
+
+Use branch prefixes such as `feat/`, `fix/`, `docs/`, `test/`, `refactor/` or `chore/`. Branch names must not contain `codex`, case-insensitively. This restricts branch names, not accurate documentation of the Codex client.

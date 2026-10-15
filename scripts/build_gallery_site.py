@@ -1,53 +1,49 @@
-"""Build the public style page from an explicit allowlist, replacing stale output."""
-import json
+"""Build Pages exclusively from the current catalog and original v3 artwork."""
 import argparse
-import re
+import json
 from pathlib import Path
+import re
 import shutil
 import tempfile
 
-PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "manifest.json", "README.md")
-EXAMPLE_FILES = ("document.json", "diagram.svg", "diagram.png", "preview-1200.png")
-STYLE_IDS = ("sketch", "planes")
+PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs")
+CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json")
 
 
 def build_site(root, output_name="site"):
     root = Path(root).resolve()
-    gallery = root / "docs" / "gallery"
-    manifest = json.loads((gallery / "manifest.json").read_text(encoding="utf-8"))
-    if [item["id"] for item in manifest["items"]] != list(STYLE_IDS):
-        raise ValueError("The public page must contain the two current styles")
+    catalog = json.loads((root / "gallery/catalog.json").read_text(encoding="utf-8"))
+    items = catalog["items"]
+    if len(items) != 100 or len({item["slug"] for item in items}) != 100:
+        raise ValueError("Expected the 100 unique current catalog cases")
     output = root / "output"
     if output.is_symlink():
-        raise ValueError("Refusing a symlinked output directory")
+        raise ValueError("Refusing a linked output directory")
     output.mkdir(exist_ok=True)
     if not re.fullmatch(r"[a-z][a-z0-9-]{0,63}", output_name):
         raise ValueError("Use a contained generated site directory name")
     destination = output / output_name
-    if destination.is_symlink() or destination.resolve() != root / "output" / output_name:
+    if destination.is_symlink() or destination.resolve() != output / output_name:
         raise ValueError("Refusing an unexpected generated site destination")
     staging = Path(tempfile.mkdtemp(prefix="site-build-", dir=output))
     try:
-        public = staging / "docs" / "gallery"
-        public.mkdir(parents=True)
         for filename in PAGE_FILES:
-            shutil.copyfile(gallery / filename, public / filename)
-        for identifier in STYLE_IDS:
-            source = gallery / "examples" / identifier
-            target = public / "examples" / identifier
-            target.mkdir(parents=True)
-            for filename in EXAMPLE_FILES:
+            shutil.copyfile(root / "assets/gallery" / filename, staging / filename)
+        (staging / "gallery").mkdir()
+        shutil.copyfile(root / "gallery/catalog.json", staging / "gallery/catalog.json")
+        for item in items:
+            slug = item["slug"]
+            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or item["path"] != f"gallery/{slug}":
+                raise ValueError("Expected a portable current gallery case path")
+            source = root / "gallery" / slug
+            if source.is_symlink() or not source.resolve().is_relative_to(root / "gallery"):
+                raise ValueError("Refusing a linked gallery case")
+            target = staging / "gallery" / slug
+            target.mkdir()
+            for filename in CASE_FILES:
                 shutil.copyfile(source / filename, target / filename)
-        shutil.copytree(root / "assets" / "brand", staging / "assets" / "brand")
-        (staging / "index.html").write_text(
-            '<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
-            '<meta name="viewport" content="width=device-width,initial-scale=1">'
-            '<meta http-equiv="refresh" content="0;url=docs/gallery/">'
-            '<title>MuseDraw 风格样例</title><a href="docs/gallery/">打开 MuseDraw 风格样例</a></html>\n',
-            encoding="utf-8",
-        )
+        shutil.copytree(root / "assets/brand", staging / "assets/brand")
         (staging / ".nojekyll").touch()
-        # This fixed, generated directory is replaced only after staging succeeds.
         if destination.exists():
             shutil.rmtree(destination)
         staging.replace(destination)
@@ -61,7 +57,7 @@ def build_site(root, output_name="site"):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-name", default="site", help="Named child of output; default matches Pages upload")
+    parser.add_argument("--output-name", default="site")
     args = parser.parse_args()
     build_site(Path(__file__).resolve().parents[1], args.output_name)
-    print("Public style page artifact ready: output/" + args.output_name)
+    print("Current gallery artifact ready: output/" + args.output_name)

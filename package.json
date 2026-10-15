@@ -1,0 +1,13 @@
+{
+  "name": "musedraw",
+  "private": true,
+  "description": "MuseDraw — art-directed diagrams for AI agents.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "setup": "npm --prefix skills/musedraw install",
+    "gallery": "node scripts/render_gallery.mjs",
+    "themes": "node skills/musedraw/scripts/musedraw.mjs themes",
+    "check": "python scripts/check.py"
+  }
+}

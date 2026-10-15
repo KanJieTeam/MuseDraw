@@ -1,0 +1,28 @@
+{
+  "id": "metro",
+  "name": "Metro Map",
+  "nameZh": "地铁线路",
+  "aliases": ["metro", "subway", "transit", "地铁", "线路图"],
+  "summary": "Transit-map grammar: thick coloured lines at 0°/45°/90°, white stations, interchanges where tracks meet. For roadmaps, lineage, curricula and anything with parallel journeys.",
+  "palette": { "bg": "#F7F6F2", "ink": "#1D1D1F", "muted": "#6E6E73", "accent": "#E4002B", "red": "#E4002B", "blue": "#0072CE", "green": "#00A04B", "yellow": "#F2B100", "purple": "#7D3F98", "orange": "#F47B20", "teal": "#00A3A1", "gray": "#9A9A9A", "white": "#FFFFFF" },
+  "fonts": { "display": "Inter, Noto Sans SC, sans-serif", "body": "Inter, Noto Sans SC, sans-serif", "mono": "JetBrains Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64 },
+  "header": { "layout": "banner", "titleFont": "display", "titleSize": 36, "titleWeight": 800, "titleLetterSpacing": -0.5, "band": "ink", "bandText": "#FFFFFF", "bandHeight": 104, "kickerFont": "mono", "kickerSize": 12, "kickerColor": "#FFFFFF", "bandMuted": "#BDBDC2", "kickerLetterSpacing": 1.5, "subFont": "body", "subSize": 16, "subColor": "muted" },
+  "node": { "font": "body", "size": 15, "weight": 700, "subFont": "body", "subSize": 12, "tagFont": "mono", "tagSize": 10.5, "radius": 6, "stroke": 3.5, "padding": 12, "align": "left", "gap": 2 },
+  "tones": {
+    "default": { "fill": "white", "stroke": "ink", "text": "ink", "sub": "muted", "tag": "muted", "labelOut": "ink", "subOut": "muted" },
+    "red": { "fill": "white", "stroke": "red", "labelOut": "ink" }, "blue": { "fill": "white", "stroke": "blue", "labelOut": "ink" }, "green": { "fill": "white", "stroke": "green", "labelOut": "ink" },
+    "yellow": { "fill": "white", "stroke": "yellow", "labelOut": "ink" }, "purple": { "fill": "white", "stroke": "purple", "labelOut": "ink" }, "orange": { "fill": "white", "stroke": "orange", "labelOut": "ink" }, "teal": { "fill": "white", "stroke": "teal", "labelOut": "ink" },
+    "interchange": { "fill": "white", "stroke": "ink", "strokeWidth": 3.5, "text": "ink", "labelOut": "ink" },
+    "terminus": { "fill": "ink", "stroke": "ink", "text": "#FFFFFF", "labelOut": "ink" },
+    "card": { "fill": "white", "stroke": "#D2D2D7", "strokeWidth": 1, "text": "ink", "sub": "muted", "tag": "muted" }
+  },
+  "zone": { "style": "fill", "radius": 16, "stroke": 1, "labelFont": "mono", "labelSize": 11, "labelCase": "upper", "letterSpacing": 1.5, "labelWeight": 700, "labelPad": 16, "tones": { "default": { "fill": "#EFEDE6", "stroke": "none", "text": "muted" } } },
+  "edge": { "color": "ink", "width": 10, "radius": 22, "route": "straight", "arrow": "none", "gap": -3, "cap": "round", "labelFont": "mono", "labelSize": 11, "labelWeight": 700, "labelColor": "ink", "labelPlacement": "on", "labelStyle": "chip", "labelBg": "bg",
+    "kinds": { "red": { "color": "red" }, "blue": { "color": "blue" }, "green": { "color": "green" }, "yellow": { "color": "yellow" }, "purple": { "color": "purple" }, "orange": { "color": "orange" }, "teal": { "color": "teal" }, "gray": { "color": "gray", "dash": "1 16", "width": 10 }, "thin": { "width": 2, "color": "muted", "dash": "4 4", "arrow": "triangle" } } },
+  "step": { "shape": "circle", "fill": "ink", "text": "#FFFFFF", "size": 26, "font": "body", "weight": 800 },
+  "note": { "style": "callout", "font": "body", "size": 13, "color": "ink", "fill": "white", "stroke": "#D2D2D7", "radius": 10, "lineHeight": 1.45 },
+  "legend": { "font": "body", "size": 13, "color": "ink" },
+  "lines": { "axis": { "color": "ink", "width": 3 } },
+  "footer": { "text": "MuseDraw · Metro Map", "font": "mono", "size": 10.5, "color": "muted", "letterSpacing": 1 }
+}

@@ -1,0 +1,134 @@
+{
+ "theme": "blueprint",
+ "size": [
+  1720,
+  1080
+ ],
+ "title": "办公楼装修工程 · 进度计划",
+ "shortTitle": "装修进度计划",
+ "subtitle": "16 周、4 个阶段、2 个验收节点。黄色竖线为当前进度（第 7 周），关键路径：管线 → 隐蔽验收 → 吊顶 → 涂料 → 竣工。",
+ "meta": {
+  "dwg": "ZS-PL-016",
+  "rev": "B",
+  "scale": "周",
+  "date": "2026-10",
+  "by": "MuseDraw"
+ },
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 64,
+   "y": 190,
+   "w": 1592,
+   "labelW": 250,
+   "rowH": 46,
+   "groupH": 34,
+   "columns": [
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "W5",
+    "W6",
+    "W7",
+    "W8",
+    "W9",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W15",
+    "W16"
+   ],
+   "today": 6.4,
+   "todayLabel": "当前 · 第 7 周",
+   "todayColor": "accent",
+   "gridColor": "#FFFFFF22",
+   "ruleColor": "ink",
+   "groupColor": "cyan",
+   "groupCase": "none",
+   "milestoneTone": "accent",
+   "tasks": [
+    {
+     "group": "准备阶段",
+     "label": "图纸会审与深化",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "group": "准备阶段",
+     "label": "材料封样与采购",
+     "start": 1,
+     "end": 4
+    },
+    {
+     "group": "拆除与水电",
+     "label": "拆除与清运",
+     "start": 2,
+     "end": 3.5
+    },
+    {
+     "group": "拆除与水电",
+     "label": "强弱电管线",
+     "start": 3,
+     "end": 6,
+     "tone": "accent"
+    },
+    {
+     "group": "拆除与水电",
+     "label": "给排水与消防",
+     "start": 3.5,
+     "end": 6.5
+    },
+    {
+     "group": "拆除与水电",
+     "label": "隐蔽工程验收",
+     "start": 6.5,
+     "milestone": true,
+     "note": "监理 + 业主联合验收"
+    },
+    {
+     "group": "装饰施工",
+     "label": "吊顶龙骨与封板",
+     "start": 6.5,
+     "end": 9.5,
+     "tone": "accent"
+    },
+    {
+     "group": "装饰施工",
+     "label": "墙面基层与涂料",
+     "start": 8,
+     "end": 12,
+     "tone": "accent"
+    },
+    {
+     "group": "装饰施工",
+     "label": "地面铺装",
+     "start": 10,
+     "end": 13
+    },
+    {
+     "group": "装饰施工",
+     "label": "门窗与固定家具",
+     "start": 11,
+     "end": 14
+    },
+    {
+     "group": "收尾验收",
+     "label": "保洁与空气检测",
+     "start": 14,
+     "end": 15,
+     "tone": "accent"
+    },
+    {
+     "group": "收尾验收",
+     "label": "竣工验收",
+     "start": 15.5,
+     "milestone": true,
+     "note": "交付使用"
+    }
+   ]
+  }
+ ]
+}

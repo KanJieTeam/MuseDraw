@@ -1,0 +1,417 @@
+{
+ "theme": "terracotta",
+ "size": [
+  1700,
+  960
+ ],
+ "kicker": "客户服务 · 客诉闭环",
+ "title": "客诉处理闭环与时限",
+ "subtitle": "五步，每一步都有时限。处理环节最长也最容易超时；最后一步“复盘”才是闭环：同一类问题不再出现，才算真的处理完。数据为示例。",
+ "subtitleWidth": 1300,
+ "texts": [
+  {
+   "x": 360.0,
+   "y": 290,
+   "text": "0",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 540.0,
+   "y": 290,
+   "text": "第 1 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 720.0,
+   "y": 290,
+   "text": "第 2 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 900.0,
+   "y": 290,
+   "text": "第 3 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1080.0,
+   "y": 290,
+   "text": "第 4 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1260.0,
+   "y": 290,
+   "text": "第 5 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1440.0,
+   "y": 290,
+   "text": "第 6 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1620.0,
+   "y": 290,
+   "text": "第 7 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 340,
+   "text": "1  受理",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 96,
+   "y": 364,
+   "text": "客服当场登记，生成工单",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 424,
+   "text": "2  分级",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 96,
+   "y": 448,
+   "text": "按影响范围分 A / B / C 级",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 508,
+   "text": "3  处理",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 96,
+   "y": 532,
+   "text": "责任部门给出方案并联系客户",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 592,
+   "text": "4  回访",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 96,
+   "y": 616,
+   "text": "客服电话确认是否满意",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 676,
+   "text": "5  复盘",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 96,
+   "y": 700,
+   "text": "同类问题月度汇总，改流程",
+   "size": 13.5,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 840,
+   "text": "312",
+   "size": 44,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 64,
+   "y": 872,
+   "text": "上季度客诉",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 464,
+   "y": 840,
+   "text": "91%",
+   "size": 44,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 464,
+   "y": 872,
+   "text": "按时结案",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 864,
+   "y": 840,
+   "text": "4.6 / 5",
+   "size": 44,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 864,
+   "y": 872,
+   "text": "回访满意度",
+   "size": 14,
+   "color": "muted"
+  },
+  {
+   "x": 1264,
+   "y": 840,
+   "text": "7 项",
+   "size": 44,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 1264,
+   "y": 872,
+   "text": "因复盘修改的流程",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "bars": [
+  {
+   "x": 360.0,
+   "y": 326,
+   "w": 90.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4,
+   "text": "2 小时内",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 450.0,
+   "y": 410,
+   "w": 90.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4,
+   "text": "4 小时内",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 540.0,
+   "y": 494,
+   "w": 540.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#B5523B",
+   "track": false,
+   "radius": 4,
+   "text": "A 级 24 小时、B 级 3 天",
+   "textColor": "#FFFFFF",
+   "size": 13
+  },
+  {
+   "x": 1080.0,
+   "y": 578,
+   "w": 180.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4,
+   "text": "结案后 1 天",
+   "textColor": "ink",
+   "size": 13
+  },
+  {
+   "x": 1260.0,
+   "y": 662,
+   "w": 360.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4,
+   "text": "每月第一周",
+   "textColor": "ink",
+   "size": 13
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     360.0,
+     300
+    ],
+    [
+     360.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     540.0,
+     300
+    ],
+    [
+     540.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     720.0,
+     300
+    ],
+    [
+     720.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     900.0,
+     300
+    ],
+    [
+     900.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1080.0,
+     300
+    ],
+    [
+     1080.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1260.0,
+     300
+    ],
+    [
+     1260.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1440.0,
+     300
+    ],
+    [
+     1440.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1620.0,
+     300
+    ],
+    [
+     1620.0,
+     720
+    ]
+   ],
+   "color": "#E3D5BF",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     64,
+     770
+    ],
+    [
+     1620,
+     770
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  }
+ ],
+ "nodes": []
+}

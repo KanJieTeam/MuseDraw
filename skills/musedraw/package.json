@@ -1,0 +1,31 @@
+{
+  "name": "musedraw-skill",
+  "private": true,
+  "version": "0.3.0",
+  "description": "MuseDraw scene engine: scene.json -> native SVG + 2x PNG in 20 visual styles.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "postinstall": "playwright install chromium || echo 'Install Chromium later with: npx playwright install chromium'",
+    "themes": "node scripts/musedraw.mjs themes"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "5.3.0",
+    "@fontsource/caveat": "5.3.0",
+    "@fontsource/fraunces": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "@fontsource/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/ma-shan-zheng": "5.3.1",
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@fontsource/noto-serif-sc": "5.3.1",
+    "@fontsource/space-grotesk": "5.3.0",
+    "@fontsource/space-mono": "5.3.0",
+    "lxgw-wenkai-webfont": "1.7.0",
+    "playwright": "1.56.0"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "swiss",
+  "name": "Swiss Poster",
+  "nameZh": "瑞士海报",
+  "aliases": [
+    "瑞士",
+    "swiss",
+    "international"
+  ],
+  "summary": "Grotesk type at poster scale, a strict column grid, black and one signal red. For step-by-step flows people should remember.",
+  "palette": {
+    "bg": "#F2F1EC",
+    "card": "#FFFFFF",
+    "ink": "#0B0B0B",
+    "muted": "#5E5E5A",
+    "accent": "#E3001B",
+    "rule": "#0B0B0B",
+    "light": "#DCDAD2"
+  },
+  "fonts": {
+    "display": "Archivo, Noto Sans SC, sans-serif",
+    "body": "Archivo, Noto Sans SC, sans-serif",
+    "mono": "Space Mono, Noto Sans SC, monospace"
+  },
+  "canvas": {
+    "bg": "bg",
+    "margin": 64
+  },
+  "header": {
+    "layout": "poster",
+    "titleFont": "display",
+    "titleSize": 80,
+    "titleWeight": 800,
+    "titleLetterSpacing": -2.5,
+    "titleLineHeight": 0.95,
+    "kickerFont": "mono",
+    "kickerSize": 13,
+    "kickerColor": "accent",
+    "kickerLetterSpacing": 1,
+    "kickerWeight": 700,
+    "subFont": "body",
+    "subSize": 18,
+    "subColor": "ink",
+    "figureColor": "ink"
+  },
+  "node": {
+    "font": "display",
+    "size": 19,
+    "weight": 800,
+    "subFont": "body",
+    "subSize": 13.5,
+    "tagFont": "mono",
+    "tagSize": 11,
+    "tagCase": "upper",
+    "tagWeight": 700,
+    "tagPos": "above",
+    "radius": 0,
+    "stroke": 0,
+    "padding": 16,
+    "align": "left",
+    "lineHeight": 1.1,
+    "gap": 6,
+    "iconSize": 22
+  },
+  "tones": {
+    "default": {
+      "fill": "card",
+      "stroke": "none",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "accent",
+      "topBar": "ink",
+      "topBarHeight": 5,
+      "icon": "ink"
+    },
+    "accent": {
+      "fill": "accent",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFD9DD",
+      "tag": "#FFFFFF",
+      "icon": "#FFFFFF",
+      "topBar": null
+    },
+    "ink": {
+      "fill": "ink",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#BDBDB8",
+      "tag": "accent",
+      "icon": "#FFFFFF",
+      "topBar": null
+    },
+    "ghost": {
+      "fill": "none",
+      "stroke": "ink",
+      "strokeWidth": 1.5,
+      "text": "ink",
+      "sub": "muted",
+      "tag": "muted",
+      "topBar": null
+    },
+    "chipR": {
+      "fill": "accent",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "topBar": null
+    },
+    "chipA": {
+      "fill": "ink",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "topBar": null
+    },
+    "chipC": {
+      "fill": "none",
+      "stroke": "ink",
+      "strokeWidth": 1.5,
+      "text": "ink",
+      "topBar": null
+    },
+    "chipI": {
+      "fill": "light",
+      "stroke": "none",
+      "text": "ink",
+      "topBar": null
+    }
+  },
+  "zone": {
+    "style": "rule",
+    "stroke": 1,
+    "labelFont": "mono",
+    "labelSize": 12,
+    "labelCase": "upper",
+    "letterSpacing": 1,
+    "labelWeight": 700,
+    "labelPad": 0,
+    "ruleWidth": 3,
+    "ruleGap": 14,
+    "tones": {
+      "default": {
+        "stroke": "ink",
+        "text": "ink"
+      },
+      "red": {
+        "stroke": "accent",
+        "text": "accent"
+      },
+      "thin": {
+        "stroke": "#A9A79E",
+        "text": "muted"
+      }
+    }
+  },
+  "edge": {
+    "color": "ink",
+    "width": 2,
+    "radius": 0,
+    "arrow": "triangle",
+    "arrowSize": 11,
+    "gap": 4,
+    "labelFont": "mono",
+    "labelSize": 11.5,
+    "labelWeight": 700,
+    "labelColor": "ink",
+    "labelPlacement": "above",
+    "labelCase": "upper",
+    "kinds": {
+      "primary": {
+        "color": "accent",
+        "width": 3.5
+      },
+      "reply": {
+        "color": "ink",
+        "width": 2,
+        "dash": "1 6",
+        "cap": "round"
+      },
+      "later": {
+        "color": "muted",
+        "width": 1.5,
+        "dash": "6 5"
+      }
+    }
+  },
+  "step": {
+    "shape": "square",
+    "fill": "ink",
+    "text": "#FFFFFF",
+    "size": 26,
+    "font": "display",
+    "weight": 800
+  },
+  "note": {
+    "style": "margin",
+    "font": "body",
+    "size": 14,
+    "color": "ink",
+    "numFont": "display",
+    "numColor": "accent",
+    "lineHeight": 1.38
+  },
+  "legend": {
+    "font": "mono",
+    "size": 11,
+    "color": "ink",
+    "titleColor": "ink"
+  },
+  "footer": {
+    "text": "MuseDraw / Swiss Poster",
+    "font": "mono",
+    "size": 11,
+    "color": "ink",
+    "letterSpacing": 0
+  }
+}

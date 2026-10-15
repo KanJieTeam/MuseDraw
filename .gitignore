@@ -9,3 +9,7 @@ output/
 Thumbs.db
 *.log
 # Keep committed native SVG and PNG examples; do not ignore images globally.
+
+# Large renders: regenerate with `npm run gallery` (preview.jpg and diagram.svg are committed)
+gallery/*/diagram@2x.png
+skills/musedraw/node_modules

@@ -1,0 +1,248 @@
+{
+ "theme": "terminal",
+ "size": [
+  1760,
+  860
+ ],
+ "kicker": "nextflow run scrna-pipeline -profile slurm",
+ "title": "Single-cell RNA-seq analysis pipeline",
+ "subtitle": "Ten steps, three places where a bad default silently ruins the result. Thresholds shown are where we start, not what we publish — always inspect the QC plots first.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "fq",
+   "label": "FASTQ",
+   "tag": "input",
+   "sub": "10x 3' v3, 8 samples",
+   "x": 64,
+   "y": 300,
+   "w": 200,
+   "h": 90
+  },
+  {
+   "id": "cr",
+   "label": "cellranger count",
+   "tag": "align + UMI",
+   "sub": "GRCh38-2024-A",
+   "x": 314,
+   "y": 300,
+   "w": 230,
+   "h": 90,
+   "tone": "info"
+  },
+  {
+   "id": "amb",
+   "label": "ambient RNA",
+   "tag": "CellBender",
+   "sub": "remove soup",
+   "x": 594,
+   "y": 300,
+   "w": 220,
+   "h": 90,
+   "tone": "info"
+  },
+  {
+   "id": "qc",
+   "label": "QC filter",
+   "tag": "⚠ check plots",
+   "sub": "genes 200–6000, mito < 15%",
+   "x": 864,
+   "y": 300,
+   "w": 250,
+   "h": 90,
+   "tone": "warn"
+  },
+  {
+   "id": "dbl",
+   "label": "doublets",
+   "tag": "scDblFinder",
+   "sub": "~0.8% per 1k cells",
+   "x": 1164,
+   "y": 300,
+   "w": 220,
+   "h": 90,
+   "tone": "warn"
+  },
+  {
+   "id": "norm",
+   "label": "normalize",
+   "tag": "SCTransform v2",
+   "sub": "regress mito %",
+   "x": 1434,
+   "y": 300,
+   "w": 260,
+   "h": 90,
+   "tone": "accent"
+  },
+  {
+   "id": "pca",
+   "label": "PCA",
+   "tag": "30 PCs",
+   "sub": "elbow + JackStraw",
+   "x": 1434,
+   "y": 470,
+   "w": 260,
+   "h": 90,
+   "tone": "accent"
+  },
+  {
+   "id": "int",
+   "label": "integrate",
+   "tag": "⚠ batch vs biology",
+   "sub": "Harmony on sample",
+   "x": 1164,
+   "y": 470,
+   "w": 220,
+   "h": 90,
+   "tone": "warn"
+  },
+  {
+   "id": "clu",
+   "label": "cluster",
+   "tag": "Leiden",
+   "sub": "res 0.4 → 0.8 sweep",
+   "x": 864,
+   "y": 470,
+   "w": 250,
+   "h": 90,
+   "tone": "accent"
+  },
+  {
+   "id": "umap",
+   "label": "UMAP",
+   "tag": "view only",
+   "sub": "never cluster on it",
+   "x": 594,
+   "y": 470,
+   "w": 220,
+   "h": 90
+  },
+  {
+   "id": "ann",
+   "label": "annotate",
+   "tag": "markers + reference",
+   "sub": "Azimuth, then manual",
+   "x": 314,
+   "y": 470,
+   "w": 230,
+   "h": 90,
+   "tone": "violet"
+  },
+  {
+   "id": "de",
+   "label": "pseudobulk DE",
+   "tag": "⚠ not per-cell",
+   "sub": "DESeq2 by donor",
+   "x": 64,
+   "y": 640,
+   "w": 250,
+   "h": 90,
+   "tone": "violet"
+  },
+  {
+   "id": "traj",
+   "label": "trajectory",
+   "tag": "optional",
+   "sub": "Slingshot / scVelo",
+   "x": 364,
+   "y": 640,
+   "w": 250,
+   "h": 90,
+   "tone": "violet"
+  }
+ ],
+ "edges": [
+  {
+   "from": "fq",
+   "to": "cr",
+   "kind": "primary"
+  },
+  {
+   "from": "cr",
+   "to": "amb",
+   "kind": "primary"
+  },
+  {
+   "from": "amb",
+   "to": "qc",
+   "kind": "primary"
+  },
+  {
+   "from": "qc",
+   "to": "dbl",
+   "kind": "primary"
+  },
+  {
+   "from": "dbl",
+   "to": "norm",
+   "kind": "primary"
+  },
+  {
+   "from": "norm",
+   "to": "pca",
+   "kind": "primary"
+  },
+  {
+   "from": "pca",
+   "to": "int",
+   "kind": "primary"
+  },
+  {
+   "from": "int",
+   "to": "clu",
+   "kind": "primary"
+  },
+  {
+   "from": "clu",
+   "to": "umap",
+   "kind": "primary"
+  },
+  {
+   "from": "umap",
+   "to": "ann",
+   "kind": "primary"
+  },
+  {
+   "from": "ann",
+   "to": "de",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "deploy"
+  },
+  {
+   "from": "ann",
+   "to": "traj",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "deploy"
+  }
+ ],
+ "notes": [
+  {
+   "text": "⚠ amber = steps where defaults silently change biology. per-cell DE inflates p-values; aggregate to donor level.",
+   "x": 700,
+   "y": 650,
+   "w": 980
+  },
+  {
+   "text": "outputs: seurat.rds · qc_report.html · markers.csv · session_info.txt",
+   "x": 700,
+   "y": 720,
+   "w": 980
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 800,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "core pipeline"
+   },
+   {
+    "kind": "deploy",
+    "label": "downstream analysis"
+   }
+  ]
+ }
+}

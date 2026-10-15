@@ -1,0 +1,403 @@
+{
+ "theme": "journal",
+ "size": [
+  1680,
+  920
+ ],
+ "title": "图 7 | 论文投稿到出版的典型时间线",
+ "subtitle": "以一篇 SCI 临床研究为例，从选刊到见刊约 200 天，其中超过一半在等待审稿。天数为示例，不同期刊差异很大。",
+ "subtitleWidth": 1400,
+ "texts": [
+  {
+   "x": 340.0,
+   "y": 284,
+   "text": "第 0 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 532.0,
+   "y": 284,
+   "text": "第 30 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 724.0,
+   "y": 284,
+   "text": "第 60 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 916.0,
+   "y": 284,
+   "text": "第 90 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1108.0,
+   "y": 284,
+   "text": "第 120 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1300.0,
+   "y": 284,
+   "text": "第 150 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1492.0,
+   "y": 284,
+   "text": "第 180 天",
+   "size": 12.5,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 60,
+   "y": 326,
+   "text": "选刊",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 348,
+   "text": "对照范围、影响因子、审稿周期",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 388,
+   "text": "投稿准备",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 410,
+   "text": "按作者须知改格式、写 cover letter",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 450,
+   "text": "编辑初审",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 472,
+   "text": "决定是否送审",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 512,
+   "text": "外审",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 534,
+   "text": "通常 2–3 位审稿人",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 574,
+   "text": "大修",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 596,
+   "text": "逐条回复审稿意见",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 636,
+   "text": "二审",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 658,
+   "text": "审稿人确认修改",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 698,
+   "text": "接收",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 720,
+   "text": "签署版权协议",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 760,
+   "text": "校样与出版",
+   "size": 16,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 782,
+   "text": "48 小时内返回校样",
+   "size": 12.5,
+   "color": "muted"
+  },
+  {
+   "x": 60,
+   "y": 840,
+   "text": "灰色是等待时间，作者无法控制；蓝色和橙色是自己能缩短的部分。返修时逐条回复，每条写明“修改位置：第几页第几行”。",
+   "size": 14,
+   "color": "ink",
+   "w": 1500
+  }
+ ],
+ "bars": [
+  {
+   "x": 340.0,
+   "y": 316,
+   "w": 89.60000000000001,
+   "h": 26,
+   "value": 1,
+   "fill": "#2E6DB4",
+   "track": false,
+   "radius": 3,
+   "text": "14 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 429.6,
+   "y": 378,
+   "w": 89.60000000000001,
+   "h": 26,
+   "value": 1,
+   "fill": "#2E6DB4",
+   "track": false,
+   "radius": 3,
+   "text": "14 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 519.2,
+   "y": 440,
+   "w": 89.60000000000001,
+   "h": 26,
+   "value": 1,
+   "fill": "#B8BFC9",
+   "track": false,
+   "radius": 3,
+   "text": "14 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 608.8,
+   "y": 502,
+   "w": 448.0,
+   "h": 26,
+   "value": 1,
+   "fill": "#B8BFC9",
+   "track": false,
+   "radius": 3,
+   "text": "70 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 1056.8000000000002,
+   "y": 564,
+   "w": 192.0,
+   "h": 26,
+   "value": 1,
+   "fill": "#D9822B",
+   "track": false,
+   "radius": 3,
+   "text": "30 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 1248.8000000000002,
+   "y": 626,
+   "w": 179.20000000000002,
+   "h": 26,
+   "value": 1,
+   "fill": "#B8BFC9",
+   "track": false,
+   "radius": 3,
+   "text": "28 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 1428.0,
+   "y": 688,
+   "w": 25.6,
+   "h": 26,
+   "value": 1,
+   "fill": "#3A8F5C",
+   "track": false,
+   "radius": 3,
+   "text": "",
+   "textColor": "#FFFFFF",
+   "size": 12
+  },
+  {
+   "x": 1453.6000000000001,
+   "y": 750,
+   "w": 166.4,
+   "h": 26,
+   "value": 1,
+   "fill": "#3A8F5C",
+   "track": false,
+   "radius": 3,
+   "text": "26 天",
+   "textColor": "#FFFFFF",
+   "size": 12
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     340.0,
+     296
+    ],
+    [
+     340.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     532.0,
+     296
+    ],
+    [
+     532.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     724.0,
+     296
+    ],
+    [
+     724.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     916.0,
+     296
+    ],
+    [
+     916.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1108.0,
+     296
+    ],
+    [
+     1108.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1300.0,
+     296
+    ],
+    [
+     1300.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1492.0,
+     296
+    ],
+    [
+     1492.0,
+     792
+    ]
+   ],
+   "color": "#E5E7EB",
+   "width": 1
+  }
+ ],
+ "nodes": []
+}

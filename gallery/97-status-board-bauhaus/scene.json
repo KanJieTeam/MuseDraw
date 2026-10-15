@@ -1,0 +1,144 @@
+{
+ "theme": "bauhaus",
+ "size": [
+  1700,
+  900
+ ],
+ "kicker": "Engineering · week 42",
+ "figure": "No. 97",
+ "title": "Cross-team\nweekly status",
+ "subtitle": "Six projects, one line each. Leadership reads the red row first; it is the only one that asks them for something.",
+ "subtitleWidth": 900,
+ "blocks": [
+  {
+   "type": "table",
+   "x": 64,
+   "y": 400,
+   "rowH": 64,
+   "headH": 48,
+   "cellSize": 15.5,
+   "headFont": "mono",
+   "columns": [
+    {
+     "label": "Project",
+     "w": 330
+    },
+    {
+     "label": "Team",
+     "w": 200
+    },
+    {
+     "label": "Status",
+     "w": 170,
+     "align": "center"
+    },
+    {
+     "label": "This week",
+     "w": 660
+    },
+    {
+     "label": "Due",
+     "w": 200
+    }
+   ],
+   "rows": [
+    {
+     "cells": [
+      {
+       "text": "Checkout redesign",
+       "bold": true
+      },
+      "Payments",
+      {
+       "text": "ON TRACK",
+       "tone": "blue",
+       "chipW": 120
+      },
+      "On track; A/B test starts Monday",
+      "Oct 28"
+     ]
+    },
+    {
+     "cells": [
+      {
+       "text": "Mobile 3.0",
+       "bold": true
+      },
+      "Apps",
+      {
+       "text": "AT RISK",
+       "tone": "yellow",
+       "chipW": 120
+      },
+      "iOS review slower than planned; +4 days",
+      "Nov 11"
+     ]
+    },
+    {
+     "cells": [
+      {
+       "text": "Data warehouse move",
+       "bold": true
+      },
+      "Platform",
+      {
+       "text": "BLOCKED",
+       "tone": "red",
+       "chipW": 120
+      },
+      "Two pipelines still on old cluster; need 1 more engineer",
+      "Nov 04"
+     ]
+    },
+    {
+     "cells": [
+      {
+       "text": "Partner API v2",
+       "bold": true
+      },
+      "Integrations",
+      {
+       "text": "ON TRACK",
+       "tone": "blue",
+       "chipW": 120
+      },
+      "Docs published; 3 partners in sandbox",
+      "Oct 21"
+     ]
+    },
+    {
+     "cells": [
+      {
+       "text": "Pricing page test",
+       "bold": true
+      },
+      "Growth",
+      {
+       "text": "AT RISK",
+       "tone": "yellow",
+       "chipW": 120
+      },
+      "Legal review of copy pending",
+      "Oct 25"
+     ]
+    },
+    {
+     "cells": [
+      {
+       "text": "SOC 2 evidence",
+       "bold": true
+      },
+      "Security",
+      {
+       "text": "ON TRACK",
+       "tone": "blue",
+       "chipW": 120
+      },
+      "62 of 80 controls collected",
+      "Dec 01"
+     ]
+    }
+   ]
+  }
+ ]
+}

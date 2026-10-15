@@ -5,9 +5,9 @@
   <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
 </picture>
 
-<h3>A professional drawing assistant</h3>
+<h3>The diagram skill for AI agents</h3>
 
-<p>Bring figure-design practice to your AI workflow.</p>
+<p>One sentence in, a journal-grade or boardroom-grade SVG/PNG out. 20 visual styles, 100 cases, every one reproducible.</p>
 
 <p>
   <a href="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml"><img src="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml/badge.svg" alt="Repository checks"></a>
@@ -16,75 +16,70 @@
 
 <p>
   <a href="#quick-start">Quick start</a> ·
-  <a href="https://kanjieteam.github.io/MuseDraw/">Styles and examples</a> ·
-  <a href="docs/usage.md">Usage guide</a> ·
-  <a href="#contribute">Contribute</a> ·
-  <a href="README.md">简体中文</a>
+  <a href="gallery/README.md">Gallery</a> ·
+  <a href="skills/musedraw/references/style-atlas.md">20 styles</a> ·
+  <a href="README.md">中文</a>
 </p>
 
 </div>
 
----
+[![MuseDraw flagship gallery](assets/gallery/flagship-grid.jpg)](gallery/README.md)
 
-MuseDraw is an open-source Skill for professional diagrams. Give your agent a short request and system facts; the agent interprets the content, and MuseDraw's drawing code handles layout, shapes, connectors and export. Continue revising in the same conversation while preserving confirmed facts and relationships.
+<p align="center"><sub>Every image above comes from a single <code>scene.json</code>: grant roadmaps, PRISMA, CONSORT, model architectures, SEM, scale development, OKRs, swimlanes, PDCA, fishbone, lesson plans, system architecture.</sub></p>
 
 ## Quick start
 
-Install the Skill and choose your client when prompted:
-
 ```bash
 npx skills add KanJieTeam/MuseDraw
+npm --prefix skills/musedraw install     # open-source fonts + Playwright, identical renders on every OS
 ```
 
-Then ask your agent:
+Then ask your agent (Codex, Cursor, …):
 
 ```text
-Use MuseDraw to draw a records-archive component diagram in 手绘线稿 style.
-The portal submits records to the archive service, which writes to the records store.
-Use it in a technical proposal.
+Use MuseDraw in the Journal Figure style to draw a CONSORT flow for a two-arm trial:
+412 assessed, 172 excluded, 240 randomised 1:1, follow-up losses 7 and 9, analysed 110 and 109.
 ```
 
-Replace the subject and relationships with your own. No coordinates, color codes or drawing code are required. The examples show reusable styles, not a list of supported business topics.
+The agent picks a layout, writes `scene.json`, renders, inspects and fixes, then hands you an editable `diagram.svg`, a `diagram@2x.png` and `checks.json`.
 
-Installation with the command above requires Node.js 22.20+ and an agent with file access and execution tools. Rendering and PNG export requirements are in the [usage guide](docs/usage.md).
+## Built for research and everyday office work
 
-## Two ready-to-use styles
+| Research | Office | Teaching | Engineering |
+| --- | --- | --- | --- |
+| Grant roadmaps · PRISMA · CONSORT · model architectures · SEM · scale development · lab workflows · project Gantt · moderated mediation | OKR trees · approval swimlanes · PDCA · fishbone · customer journeys · mind maps · RACI · risk heat maps · roadmaps | Lesson flow · curriculum maps · a day plan | RAG · Kubernetes · payments · AI agents · C4 · observability |
 
-| 手绘线稿 · Hand-drawn linework | 终端色域 · Terminal fields |
-| :--- | :--- |
-| ![Hand-drawn records archive](docs/verification/graph-workflow-20261014/examples/archive-sketch/round-0/preview-1200.png) | ![Terminal-fields device platform](docs/verification/graph-workflow-20261014/examples/device-planes/round-0/preview-1200.png) |
-| White paper, ink outlines, role shapes and hatched storage for discussing components and relationships. | A light canvas, warm and cool regions, and clean geometry for supplied ownership and system boundaries. |
+Ten layout blocks (tree, mind map, timeline, Gantt, matrix, funnel, cycle, fishbone, swimlane, table), sequence diagrams and free primitives. Blocks own structure, themes own beauty, you own the facts.
 
-Both use the same component-diagram workflow for new industries, components and relationships. Layout can follow graph relationships or supplied flat ownership groups; 终端色域 also supports a flow without grouped regions. Ask for either style by name.
+## Twenty styles, one flag
 
-Delivery includes **PNG, editable SVG and a semantic `document.json`**. Continue with requests such as “Rename the archive service to records service; preserve the other relationships.” The agent edits the existing document and rerenders it.
+`journal` `editorial` `newsprint` `enterprise` `ink-wash` `pastel` `terracotta` `whiteboard` `chalkboard` `swiss` `bauhaus` `metro` `product` `c4` `blueprint` `terminal` `observatory` `aurora` `riso` `neon`
 
-[Browse styles, short requests and downloadable examples](https://kanjieteam.github.io/MuseDraw/) · [Usage guide](docs/usage.md)
+```bash
+node skills/musedraw/scripts/musedraw.mjs render gallery/57-consort-journal/scene.json --theme newsprint --out output/print
+```
 
-## Reuse and replay
+A style is not a palette: each one has its own type, line grammar, texture, labelling and page layout. See the [style atlas](skills/musedraw/references/style-atlas.md).
 
-The same semantic document, drawing-code version, fonts and runtime can reproduce the same native geometry. PNG antialiasing can vary slightly. New subjects still depend on the agent understanding the supplied facts; a short request does not guarantee identical drawings from every model.
+## Reproduce any case
 
-The current code supports components, explicit relationships and flat ownership groups; nested groups are not supported. PNG requires existing Node.js 22+, Playwright, a Chromium-compatible browser and appropriate fonts. The host must read and write files and execute tools. MuseDraw requires no additional model API key.
+Each case folder holds `scene.json` (the full source), `prompt.md` (a one-line request), `diagram.svg` and `preview.jpg`. `npm run gallery` re-renders everything. [Gallery](gallery/README.md) · [100-case catalog](gallery/catalog.json)
 
-The installable Skill is [`musedraw`](skills/musedraw/SKILL.md). See the [implementation and limits](docs/semantic-graph.zh-CN.md) and [real-model verification records](docs/verification/graph-workflow-20261014/README.md) for the checked scope. Research workflows and statistical plots are not released workflows.
+## Design method
 
-## Design approach
+- **One figure, one claim.** Write the subtitle first.
+- **Specific beats generic.** Examples use real names and numbers that reconcile — never “Service A”.
+- **One focal point, a numbered path, a note on why.**
+- **Look before you ship.** `checks.json` measures real glyphs for overflow and collisions; the [anti-AI checklist](skills/musedraw/references/anti-ai-checklist.md) covers taste.
 
-- **Information first.** Identify the audience, content and relationships before choosing a view and composition.
-- **Restrained expression.** Organize information through hierarchy, space and limited accent colors.
-- **Inspect before delivery.** Render and check the text, boundaries and connectors, not just the generated code.
+## Contributing
 
-## Contribute
+Copy a `gallery/` folder, change the content, render, look, and submit `scene.json` + `prompt.md`. Run `python scripts/check.py` first. [Contributing](CONTRIBUTING.md) · [Issues](https://github.com/KanJieTeam/MuseDraw/issues)
 
-Engineers, researchers, product teams, designers and developers are welcome. Improve design guidance and production tools, or contribute a professional-diagram workflow that goes from input to image delivery.
+## Limits
 
-[Contribution guide](CONTRIBUTING.md) · [Problems and suggestions](https://github.com/KanJieTeam/MuseDraw/issues)
-
-Your first contribution may be in English or Chinese. Run `python scripts/check.py` before submitting; changes affecting figures also need visual inspection.
+Needs an agent that can run commands. PNG export needs Node.js 22+ and Chromium (installed by `npm install`); `--svg-only` otherwise. Not a statistical charting tool. Numbers in examples are illustrative. The legacy auto-layout route (`render_graph.mjs`) is kept for existing users.
 
 ## License
 
-[Apache-2.0](LICENSE) · [Brand assets](assets/brand/README.md)
-
-Check permissions and credit sources when introducing third-party material.
+[Apache-2.0](LICENSE) · all bundled fonts are SIL OFL · [brand](assets/brand/README.md)

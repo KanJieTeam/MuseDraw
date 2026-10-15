@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "purpose": "two-published-graph-styles",
-  "items": [
-    {"id":"sketch","name":"手绘线稿","prompt":"用 MuseDraw 手绘线稿画采购系统：员工提交采购，审批服务生成订单，订单服务对接财务。","scene":"examples/sketch/document.json","svg":"examples/sketch/diagram.svg","png":"examples/sketch/diagram.png","thumbnail":"examples/sketch/preview-1200.png"},
-    {"id":"planes","name":"终端色域","prompt":"用 MuseDraw 终端色域画内容发布系统：控制平面有发布审核和发布配置，处理平面有构建服务和内容库。编辑台提交到审核，审核调用配置，配置触发构建，构建写内容库。","scene":"examples/planes/document.json","svg":"examples/planes/diagram.svg","png":"examples/planes/diagram.png","thumbnail":"examples/planes/preview-1200.png"}
-  ]
-}

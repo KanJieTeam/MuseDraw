@@ -1,0 +1,395 @@
+{
+ "theme": "terracotta",
+ "size": [
+  1700,
+  1020
+ ],
+ "kicker": "Change management · new ticketing system",
+ "title": "ADKAR readiness survey",
+ "subtitle": "Score each step and fix the first one below 3. Desire is the barrier here, so more training (Knowledge) would be wasted until people want the change. Figures are illustrative.",
+ "subtitleWidth": 1250,
+ "texts": [
+  {
+   "x": 66,
+   "y": 693.0,
+   "text": "1",
+   "size": 12,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 66,
+   "y": 621.0,
+   "text": "2",
+   "size": 12,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 66,
+   "y": 549.0,
+   "text": "3",
+   "size": 12,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 66,
+   "y": 477.0,
+   "text": "4",
+   "size": 12,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 66,
+   "y": 405.0,
+   "text": "5",
+   "size": 12,
+   "color": "muted",
+   "anchor": "end",
+   "font": "mono"
+  },
+  {
+   "x": 1580,
+   "y": 530,
+   "text": "barrier line: 3.0",
+   "size": 12.5,
+   "color": "ink",
+   "anchor": "end"
+  },
+  {
+   "x": 246.0,
+   "y": 436.4,
+   "text": "4.3",
+   "size": 24,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle",
+   "font": "display"
+  },
+  {
+   "x": 136,
+   "y": 794,
+   "text": "1  Awareness",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 136,
+   "y": 818,
+   "text": "Why change?",
+   "size": 14,
+   "color": "muted",
+   "italic": true
+  },
+  {
+   "x": 136,
+   "y": 848,
+   "text": "Town hall on the cost of the old tool; done in week 1",
+   "size": 13.5,
+   "color": "ink",
+   "w": 240,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 546.0,
+   "y": 614.8,
+   "text": "2.6",
+   "size": 24,
+   "weight": 700,
+   "color": "#FFFFFF",
+   "anchor": "middle",
+   "font": "display"
+  },
+  {
+   "x": 436,
+   "y": 794,
+   "text": "2  Desire",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 436,
+   "y": 818,
+   "text": "Why me?",
+   "size": 14,
+   "color": "muted",
+   "italic": true
+  },
+  {
+   "x": 436,
+   "y": 848,
+   "text": "Each team lead explains their own reason; pilot volunteers first",
+   "size": 13.5,
+   "color": "ink",
+   "w": 240,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 846.0,
+   "y": 465.2,
+   "text": "3.9",
+   "size": 24,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle",
+   "font": "display"
+  },
+  {
+   "x": 736,
+   "y": 794,
+   "text": "3  Knowledge",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 736,
+   "y": 818,
+   "text": "How?",
+   "size": 14,
+   "color": "muted",
+   "italic": true
+  },
+  {
+   "x": 736,
+   "y": 848,
+   "text": "Two-hour training, recorded; quick-reference card",
+   "size": 13.5,
+   "color": "ink",
+   "w": 240,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 1146.0,
+   "y": 522.8,
+   "text": "3.1",
+   "size": 24,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle",
+   "font": "display"
+  },
+  {
+   "x": 1036,
+   "y": 794,
+   "text": "4  Ability",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 1036,
+   "y": 818,
+   "text": "Can I do it?",
+   "size": 14,
+   "color": "muted",
+   "italic": true
+  },
+  {
+   "x": 1036,
+   "y": 848,
+   "text": "Coaches sit with teams for two weeks after go-live",
+   "size": 13.5,
+   "color": "ink",
+   "w": 240,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 1446.0,
+   "y": 740,
+   "text": "measured on day 60",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1336,
+   "y": 794,
+   "text": "5  Reinforcement",
+   "size": 19,
+   "weight": 700,
+   "color": "ink",
+   "font": "display"
+  },
+  {
+   "x": 1336,
+   "y": 818,
+   "text": "Will it stick?",
+   "size": 14,
+   "color": "muted",
+   "italic": true
+  },
+  {
+   "x": 1336,
+   "y": 848,
+   "text": "Retire the old tool on day 60; share early wins",
+   "size": 13.5,
+   "color": "ink",
+   "w": 240,
+   "lineHeight": 1.45
+  },
+  {
+   "x": 96,
+   "y": 370,
+   "text": "Average score from 142 staff, 1 = not at all, 5 = fully",
+   "size": 13,
+   "color": "muted"
+  }
+ ],
+ "bars": [
+  {
+   "x": 136,
+   "y": 450.4,
+   "w": 220,
+   "h": 309.6,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4
+  },
+  {
+   "x": 436,
+   "y": 572.8,
+   "w": 220,
+   "h": 187.2,
+   "value": 1,
+   "fill": "#B5523B",
+   "track": false,
+   "radius": 4
+  },
+  {
+   "x": 736,
+   "y": 479.2,
+   "w": 220,
+   "h": 280.8,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4
+  },
+  {
+   "x": 1036,
+   "y": 536.8,
+   "w": 220,
+   "h": 223.2,
+   "value": 1,
+   "fill": "#C9B79A",
+   "track": false,
+   "radius": 4
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     76,
+     688.0
+    ],
+    [
+     1596,
+     688.0
+    ]
+   ],
+   "color": "#D8CBB6",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     76,
+     616.0
+    ],
+    [
+     1596,
+     616.0
+    ]
+   ],
+   "color": "#D8CBB6",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     76,
+     544.0
+    ],
+    [
+     1596,
+     544.0
+    ]
+   ],
+   "color": "#D8CBB6",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     76,
+     472.0
+    ],
+    [
+     1596,
+     472.0
+    ]
+   ],
+   "color": "#D8CBB6",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     76,
+     400.0
+    ],
+    [
+     1596,
+     400.0
+    ]
+   ],
+   "color": "#D8CBB6",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     76,
+     544.0
+    ],
+    [
+     1596,
+     544.0
+    ]
+   ],
+   "color": "ink",
+   "width": 1.2,
+   "dash": "5 4"
+  },
+  {
+   "points": [
+    [
+     76,
+     760
+    ],
+    [
+     1596,
+     760
+    ]
+   ],
+   "color": "ink",
+   "width": 1.6
+  }
+ ],
+ "nodes": []
+}

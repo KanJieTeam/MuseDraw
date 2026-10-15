@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="description" content="MuseDraw 绘图作品：20 种视觉主题，100 个科研、办公、教学与工程示例。浏览精选，复制需求，用自己的内容继续创作。">
+  <title>MuseDraw · 绘图作品</title>
+  <link rel="icon" href="assets/brand/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="gallery.css">
+  <script type="module" src="gallery.mjs"></script>
+</head>
+<body>
+  <header class="site-header"><a href="https://github.com/KanJieTeam/MuseDraw" class="brand"><img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="196" height="48"></a><nav aria-label="主导航"><a href="https://github.com/KanJieTeam/MuseDraw#readme">开始使用</a><a href="https://github.com/KanJieTeam/MuseDraw">GitHub ↗</a></nav></header>
+  <main>
+    <section class="intro"><p class="eyebrow">DIAGRAMS WITH A POINT OF VIEW</p><h1>让想法，有自己的样子。</h1><p>科研、办公、教学与工程。20 种视觉主题，100 个绘图示例。<br>选一种表达，复制需求，再换成你的内容。</p></section>
+    <section aria-label="浏览作品">
+      <div class="collection-tools"><div class="filters"><label>作品集<select id="collection"><option value="flagship">精选作品</option><option value="all">全部作品</option></select></label><label>视觉主题<select id="theme"><option value="all">全部主题</option></select></label></div><p id="count" role="status">正在加载作品…</p></div>
+      <div id="gallery" class="case-grid" aria-live="polite"></div>
+      <p id="empty" hidden>这个筛选下还没有作品。</p>
+    </section>
+    <section class="usage"><h2>从一个示例，开始你的创作。</h2><p>将需求交给已安装 MuseDraw 的智能体，用自己的内容、关系和视觉主题继续创作。下载 SVG 可编辑图形，下载 scene.json 可重渲染同一份场景。每张作品附有原始提示与复刻说明。</p><a href="https://github.com/KanJieTeam/MuseDraw#readme">安装与使用指南 ↗</a><p class="status-note">精选、已审阅与待审阅状态均来自图集目录；待审阅作品的自动检查不代表人工视觉验收。</p></section>
+  </main>
+  <footer class="site-footer"><span>MuseDraw · 把内容画清楚</span><a href="https://github.com/KanJieTeam/MuseDraw/blob/main/LICENSE">Apache-2.0</a></footer>
+  <dialog id="preview" aria-labelledby="preview-title"><div class="preview-toolbar"><h2 id="preview-title">图像预览</h2><div class="preview-controls"><button id="zoom-out" aria-label="缩小">−</button><button id="zoom-in" aria-label="放大">+</button><button id="fit">适应窗口</button><button id="close-preview">关闭</button></div></div><div id="viewport"><img id="preview-image" alt="" draggable="false"></div><p class="preview-hint">拖动查看局部 · 滚轮或按钮缩放</p></dialog>
+  <dialog id="copy-dialog" aria-labelledby="copy-title"><h2 id="copy-title">复制绘图需求</h2><p>选中下面的文字，复制给你的智能体。</p><textarea id="copy-text" rows="7" readonly aria-label="原始绘图需求"></textarea><button id="close-copy">关闭</button></dialog>
+  <div id="status" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+{
+ "theme": "journal",
+ "size": [
+  1480,
+  1000
+ ],
+ "title": "Fig. 2 | CONSORT 2010 participant flow",
+ "subtitle": "Two-arm, parallel-group randomised trial of a nurse-led discharge programme; primary outcome 30-day readmission, intention-to-treat. Counts are illustrative.",
+ "nodes": [
+  {
+   "id": "elig",
+   "label": "Assessed for eligibility (n = 412)",
+   "x": 490,
+   "y": 240,
+   "w": 420,
+   "h": 56,
+   "tone": "default",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "exc",
+   "label": "Excluded (n = 172)\n· Not meeting inclusion criteria (n = 118)\n· Declined to participate (n = 41)\n· Other reasons (n = 13)",
+   "x": 1000,
+   "y": 300,
+   "w": 400,
+   "h": 116,
+   "tone": "gray",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "rand",
+   "label": "Randomised (n = 240)",
+   "x": 490,
+   "y": 440,
+   "w": 420,
+   "h": 56,
+   "tone": "blue",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "a1",
+   "label": "Allocated to intervention (n = 120)\n· Received allocated intervention (n = 116)\n· Did not receive (n = 4; withdrew before start)",
+   "x": 180,
+   "y": 560,
+   "w": 500,
+   "h": 100,
+   "tone": "default",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "a2",
+   "label": "Allocated to usual care (n = 120)\n· Received allocated intervention (n = 120)",
+   "x": 780,
+   "y": 560,
+   "w": 500,
+   "h": 100,
+   "tone": "default",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "f1",
+   "label": "Lost to follow-up (n = 7; moved away 4, unreachable 3)\nDiscontinued intervention (n = 3; adverse event 1, time 2)",
+   "x": 180,
+   "y": 720,
+   "w": 500,
+   "h": 84,
+   "tone": "default",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "f2",
+   "label": "Lost to follow-up (n = 9; unreachable 9)\nDiscontinued intervention (n = 2)",
+   "x": 780,
+   "y": 720,
+   "w": 500,
+   "h": 84,
+   "tone": "default",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "n1",
+   "label": "Analysed (n = 113)\n· Excluded from analysis (n = 7; no outcome data)",
+   "x": 180,
+   "y": 870,
+   "w": 500,
+   "h": 70,
+   "tone": "green",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "n2",
+   "label": "Analysed (n = 111)\n· Excluded from analysis (n = 9; no outcome data)",
+   "x": 780,
+   "y": 870,
+   "w": 500,
+   "h": 70,
+   "tone": "green",
+   "align": "left",
+   "size": 14,
+   "weight": 500
+  },
+  {
+   "id": "tEnrolment",
+   "label": "Enrolment",
+   "tone": "accent",
+   "x": 24,
+   "y": 252,
+   "w": 112,
+   "h": 30,
+   "radius": 15,
+   "size": 13
+  },
+  {
+   "id": "tAllocation",
+   "label": "Allocation",
+   "tone": "accent",
+   "x": 24,
+   "y": 572,
+   "w": 112,
+   "h": 30,
+   "radius": 15,
+   "size": 13
+  },
+  {
+   "id": "tFollow-up",
+   "label": "Follow-up",
+   "tone": "accent",
+   "x": 24,
+   "y": 732,
+   "w": 112,
+   "h": 30,
+   "radius": 15,
+   "size": 13
+  },
+  {
+   "id": "tAnalysis",
+   "label": "Analysis",
+   "tone": "accent",
+   "x": 24,
+   "y": 882,
+   "w": 112,
+   "h": 30,
+   "radius": 15,
+   "size": 13
+  }
+ ],
+ "edges": [
+  {
+   "from": "elig",
+   "to": "rand"
+  },
+  {
+   "from": "elig",
+   "to": "exc",
+   "fromSide": "b",
+   "toSide": "l",
+   "fromAt": 0.5,
+   "via": [
+    [
+     680,
+     358
+    ]
+   ]
+  },
+  {
+   "from": "rand",
+   "to": "a1",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "rand",
+   "to": "a2",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "a1",
+   "to": "f1"
+  },
+  {
+   "from": "a2",
+   "to": "f2"
+  },
+  {
+   "from": "f1",
+   "to": "n1"
+  },
+  {
+   "from": "f2",
+   "to": "n2"
+  }
+ ]
+}

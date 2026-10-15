@@ -1,0 +1,346 @@
+{
+ "theme": "swiss",
+ "size": [
+  1640,
+  1060
+ ],
+ "kicker": "Project roles · feature launch",
+ "title": "RACI matrix: feature launch",
+ "subtitle": "Exactly one A per row. If a row has no R, nobody is doing it; if it has five Cs, the meeting will be long.",
+ "subtitleWidth": 700,
+ "figure": "Ops / 28",
+ "blocks": [
+  {
+   "type": "table",
+   "x": 64,
+   "y": 390,
+   "rowH": 52,
+   "headH": 48,
+   "headFont": "mono",
+   "cellSize": 16,
+   "columns": [
+    {
+     "label": "Activity",
+     "w": 470
+    },
+    {
+     "label": "Product",
+     "w": 168,
+     "align": "center"
+    },
+    {
+     "label": "Eng lead",
+     "w": 168,
+     "align": "center"
+    },
+    {
+     "label": "Design",
+     "w": 168,
+     "align": "center"
+    },
+    {
+     "label": "QA",
+     "w": 168,
+     "align": "center"
+    },
+    {
+     "label": "Marketing",
+     "w": 168,
+     "align": "center"
+    },
+    {
+     "label": "Legal",
+     "w": 168,
+     "align": "center"
+    }
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Define scope & success metric",
+      {
+       "text": "A",
+       "tone": "chipA",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      ""
+     ]
+    },
+    {
+     "cells": [
+      "Write the PRD",
+      {
+       "text": "R",
+       "tone": "chipR",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      ""
+     ]
+    },
+    {
+     "cells": [
+      "UX research & flows",
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "R",
+       "tone": "chipR",
+       "chipW": 40
+      },
+      "",
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      ""
+     ]
+    },
+    {
+     "cells": [
+      "Technical design",
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "A",
+       "tone": "chipA",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      "",
+      ""
+     ]
+    },
+    {
+     "cells": [
+      "Build",
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "A",
+       "tone": "chipA",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      "",
+      ""
+     ]
+    },
+    {
+     "cells": [
+      "Test plan & QA",
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "R",
+       "tone": "chipR",
+       "chipW": 40
+      },
+      "",
+      ""
+     ]
+    },
+    {
+     "cells": [
+      "Privacy & terms review",
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      "",
+      "",
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "R",
+       "tone": "chipR",
+       "chipW": 40
+      }
+     ]
+    },
+    {
+     "cells": [
+      "Launch messaging",
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "I",
+       "tone": "chipI",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      "",
+      {
+       "text": "R",
+       "tone": "chipR",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      }
+     ]
+    },
+    {
+     "cells": [
+      "Go / no-go decision",
+      {
+       "text": "A",
+       "tone": "chipA",
+       "chipW": 40
+      },
+      {
+       "text": "R",
+       "tone": "chipR",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      },
+      {
+       "text": "C",
+       "tone": "chipC",
+       "chipW": 40
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 1000,
+  "items": [
+   {
+    "tone": "chipR",
+    "label": "R  responsible — does the work"
+   },
+   {
+    "tone": "chipA",
+    "label": "A  accountable — signs off"
+   },
+   {
+    "tone": "chipC",
+    "label": "C  consulted"
+   },
+   {
+    "tone": "chipI",
+    "label": "I  informed"
+   }
+  ]
+ }
+}

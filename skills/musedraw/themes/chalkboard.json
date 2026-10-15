@@ -1,0 +1,232 @@
+{
+  "id": "chalkboard",
+  "name": "Chalkboard",
+  "nameZh": "黑板教学",
+  "aliases": [
+    "chalkboard",
+    "blackboard",
+    "黑板",
+    "教学",
+    "粉笔"
+  ],
+  "summary": "Green slate, chalk handwriting, rough strokes and coloured chalk for emphasis. For teaching, lesson plans and explaining an idea to a room.",
+  "palette": {
+    "bg": "#22382E",
+    "ink": "#F3F1E7",
+    "muted": "#B9C4B5",
+    "accent": "#F6DD72",
+    "yellow": "#F6DD72",
+    "pink": "#F4A6BE",
+    "blue": "#9DD3F2",
+    "green": "#B5E3A1",
+    "orange": "#F6B97A"
+  },
+  "fonts": {
+    "display": "LXGW WenKai, Caveat, cursive",
+    "body": "LXGW WenKai, Caveat, cursive",
+    "mono": "LXGW WenKai, Caveat, cursive"
+  },
+  "canvas": {
+    "bg": "bg",
+    "margin": 64,
+    "grain": {
+      "opacity": 0.35,
+      "frequency": 0.65,
+      "r": 0.9,
+      "g": 0.95,
+      "b": 0.9,
+      "alpha": 0.25
+    },
+    "vignette": 0.45,
+    "frame": "border",
+    "frameInset": 14,
+    "frameWidth": 10,
+    "frameColor": "#7A5A3A"
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 50,
+    "titleWeight": 700,
+    "titleColor": "ink",
+    "kickerFont": "body",
+    "kickerSize": 18,
+    "kickerColor": "yellow",
+    "kickerLetterSpacing": 1,
+    "kickerCase": "none",
+    "kickerWeight": 400,
+    "kickerGap": 12,
+    "subFont": "body",
+    "subSize": 19,
+    "subColor": "muted"
+  },
+  "node": {
+    "font": "body",
+    "size": 20,
+    "weight": 700,
+    "subFont": "body",
+    "subSize": 17.5,
+    "tagFont": "body",
+    "tagSize": 15,
+    "tagPos": "above",
+    "radius": 6,
+    "stroke": 2,
+    "sketch": 1.6,
+    "bowing": 1.4,
+    "padding": 14,
+    "align": "center",
+    "lineHeight": 1.2,
+    "gap": 3,
+    "iconSize": 24,
+    "iconStroke": 2
+  },
+  "tones": {
+    "default": {
+      "fill": "none",
+      "stroke": "ink",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "yellow",
+      "icon": "ink"
+    },
+    "yellow": {
+      "fill": "none",
+      "stroke": "yellow",
+      "strokeWidth": 2.6,
+      "text": "yellow",
+      "sub": "ink",
+      "tag": "muted",
+      "icon": "yellow"
+    },
+    "pink": {
+      "fill": "none",
+      "stroke": "pink",
+      "strokeWidth": 2.6,
+      "text": "pink",
+      "sub": "ink",
+      "tag": "muted",
+      "icon": "pink"
+    },
+    "blue": {
+      "fill": "none",
+      "stroke": "blue",
+      "strokeWidth": 2.6,
+      "text": "blue",
+      "sub": "ink",
+      "tag": "muted",
+      "icon": "blue"
+    },
+    "green": {
+      "fill": "none",
+      "stroke": "green",
+      "strokeWidth": 2.6,
+      "text": "green",
+      "sub": "ink",
+      "tag": "muted",
+      "icon": "green"
+    },
+    "orange": {
+      "fill": "none",
+      "stroke": "orange",
+      "strokeWidth": 2.6,
+      "text": "orange",
+      "sub": "ink",
+      "tag": "muted",
+      "icon": "orange"
+    },
+    "ghost": {
+      "fill": "none",
+      "stroke": "#7F9384",
+      "text": "muted",
+      "sub": "muted",
+      "tag": "muted"
+    }
+  },
+  "zone": {
+    "style": "dashed",
+    "radius": 14,
+    "stroke": 1.6,
+    "labelFont": "body",
+    "labelSize": 20,
+    "labelWeight": 700,
+    "labelPad": 16,
+    "tones": {
+      "default": {
+        "stroke": "#8FA494",
+        "text": "yellow"
+      },
+      "pink": {
+        "stroke": "pink",
+        "text": "pink"
+      }
+    }
+  },
+  "edge": {
+    "color": "ink",
+    "width": 2,
+    "route": "curve",
+    "arrow": "open",
+    "arrowSize": 12,
+    "gap": 6,
+    "sketch": 1.3,
+    "labelFont": "body",
+    "labelSize": 16,
+    "labelColor": "muted",
+    "labelPlacement": "above",
+    "labelStyle": "plain",
+    "kinds": {
+      "primary": {
+        "color": "yellow",
+        "width": 2.4
+      },
+      "pink": {
+        "color": "pink",
+        "width": 2.2
+      },
+      "blue": {
+        "color": "blue",
+        "width": 2.2
+      },
+      "soft": {
+        "color": "muted",
+        "dash": "7 7"
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "yellow",
+    "text": "#22382E",
+    "size": 30,
+    "font": "body",
+    "weight": 700,
+    "fontSize": 19
+  },
+  "note": {
+    "style": "margin",
+    "font": "body",
+    "size": 16,
+    "color": "ink",
+    "numFont": "body",
+    "numColor": "yellow",
+    "lineHeight": 1.45
+  },
+  "legend": {
+    "font": "body",
+    "size": 16,
+    "color": "muted"
+  },
+  "lines": {
+    "axis": {
+      "color": "ink",
+      "width": 2.5
+    }
+  },
+  "footer": {
+    "text": "MuseDraw · 黑板教学",
+    "font": "body",
+    "size": 15,
+    "color": "#7F9384",
+    "letterSpacing": 1
+  }
+}

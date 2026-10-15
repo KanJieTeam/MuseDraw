@@ -1,0 +1,436 @@
+{
+ "theme": "metro",
+ "size": [
+  1660,
+  880
+ ],
+ "kicker": "学术型硕士 · 3 年",
+ "title": "研究生培养关键节点",
+ "subtitle": "四条线并行推进，三个换乘站是学院统一的考核节点：开题、中期、答辩。月份为示例，按本校培养方案调整。",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "课程0",
+   "shape": "circle",
+   "tone": "default",
+   "x": 189.0,
+   "y": 409,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "课程4",
+   "shape": "circle",
+   "tone": "default",
+   "x": 342.33333333333337,
+   "y": 409,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "课程10",
+   "shape": "circle",
+   "tone": "default",
+   "x": 572.3333333333334,
+   "y": 409,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "研究3",
+   "shape": "circle",
+   "tone": "default",
+   "x": 304.0,
+   "y": 509,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "研究16",
+   "shape": "circle",
+   "tone": "default",
+   "x": 802.3333333333334,
+   "y": 509,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "研究30",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1339.0,
+   "y": 509,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "论文14",
+   "shape": "circle",
+   "tone": "default",
+   "x": 725.6666666666667,
+   "y": 609,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "论文22",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1032.3333333333335,
+   "y": 609,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "论文30",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1339.0,
+   "y": 609,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "论文34",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1492.3333333333335,
+   "y": 609,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "实践8",
+   "shape": "circle",
+   "tone": "default",
+   "x": 495.6666666666667,
+   "y": 709,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "实践18",
+   "shape": "circle",
+   "tone": "default",
+   "x": 879.0,
+   "y": 709,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "实践26",
+   "shape": "circle",
+   "tone": "default",
+   "x": 1185.6666666666667,
+   "y": 709,
+   "w": 22,
+   "h": 22
+  },
+  {
+   "id": "x9",
+   "shape": "pill",
+   "tone": "interchange",
+   "x": 529.0,
+   "y": 400,
+   "w": 32,
+   "h": 340
+  },
+  {
+   "id": "x24",
+   "shape": "pill",
+   "tone": "interchange",
+   "x": 1104.0,
+   "y": 400,
+   "w": 32,
+   "h": 340
+  },
+  {
+   "id": "x36",
+   "shape": "pill",
+   "tone": "interchange",
+   "x": 1564.0,
+   "y": 400,
+   "w": 32,
+   "h": 340
+  }
+ ],
+ "texts": [
+  {
+   "x": 200.0,
+   "y": 360,
+   "text": "入学",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 430.0,
+   "y": 360,
+   "text": "第 6 月",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 660.0,
+   "y": 360,
+   "text": "第 1 年",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 890.0,
+   "y": 360,
+   "text": "第 18 月",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1120.0,
+   "y": 360,
+   "text": "第 2 年",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1350.0,
+   "y": 360,
+   "text": "第 30 月",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1580.0,
+   "y": 360,
+   "text": "第 3 年",
+   "size": 13,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 426,
+   "text": "课程",
+   "size": 18,
+   "weight": 700,
+   "color": "#E3342F"
+  },
+  {
+   "x": 200.0,
+   "y": 396,
+   "text": "开学",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 353.33333333333337,
+   "y": 460,
+   "text": "专业课",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 583.3333333333334,
+   "y": 396,
+   "text": "学分修满",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 526,
+   "text": "研究",
+   "size": 18,
+   "weight": 700,
+   "color": "#1F6FD1"
+  },
+  {
+   "x": 315.0,
+   "y": 496,
+   "text": "选题",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 813.3333333333334,
+   "y": 496,
+   "text": "实验",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1350.0,
+   "y": 496,
+   "text": "数据完成",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 626,
+   "text": "论文",
+   "size": 18,
+   "weight": 700,
+   "color": "#2E9E5B"
+  },
+  {
+   "x": 736.6666666666667,
+   "y": 596,
+   "text": "首篇投稿",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1043.3333333333335,
+   "y": 660,
+   "text": "首篇接收",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1350.0,
+   "y": 596,
+   "text": "学位论文初稿",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1503.3333333333335,
+   "y": 660,
+   "text": "预答辩",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 64,
+   "y": 726,
+   "text": "实践",
+   "size": 18,
+   "weight": 700,
+   "color": "#E58A1F"
+  },
+  {
+   "x": 506.6666666666667,
+   "y": 696,
+   "text": "助教",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 890.0,
+   "y": 760,
+   "text": "学术会议",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1196.6666666666667,
+   "y": 696,
+   "text": "实习",
+   "size": 14,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 545.0,
+   "y": 782,
+   "text": "开题",
+   "size": 14,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1120.0,
+   "y": 782,
+   "text": "中期",
+   "size": 14,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1580.0,
+   "y": 782,
+   "text": "答辩",
+   "size": 14,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     200.0,
+     420
+    ],
+    [
+     660.0,
+     420
+    ]
+   ],
+   "color": "#E3342F",
+   "width": 12
+  },
+  {
+   "points": [
+    [
+     315.0,
+     520
+    ],
+    [
+     1426.6666666666667,
+     520
+    ]
+   ],
+   "color": "#1F6FD1",
+   "width": 12
+  },
+  {
+   "points": [
+    [
+     736.6666666666667,
+     620
+    ],
+    [
+     1503.3333333333335,
+     620
+    ]
+   ],
+   "color": "#2E9E5B",
+   "width": 12
+  },
+  {
+   "points": [
+    [
+     506.6666666666667,
+     720
+    ],
+    [
+     1273.3333333333335,
+     720
+    ]
+   ],
+   "color": "#E58A1F",
+   "width": 12
+  }
+ ]
+}

@@ -1,0 +1,211 @@
+{
+ "theme": "pastel",
+ "size": [
+  1720,
+  800
+ ],
+ "kicker": "Sales · pipeline board, week 41",
+ "title": "Sales pipeline board, week 41",
+ "subtitle": "A deal that hasn't moved in 21 days goes back to Lead with a note. The column totals are the forecast; the cards are the conversation.",
+ "subtitleWidth": 1250,
+ "zones": [
+  {
+   "id": "c0",
+   "label": "Lead  ·  3",
+   "x": 72,
+   "y": 290,
+   "w": 304,
+   "h": 400
+  },
+  {
+   "id": "c1",
+   "label": "Qualified  ·  2",
+   "x": 392,
+   "y": 290,
+   "w": 304,
+   "h": 400
+  },
+  {
+   "id": "c2",
+   "label": "Proposal  ·  2",
+   "x": 712,
+   "y": 290,
+   "w": 304,
+   "h": 400
+  },
+  {
+   "id": "c3",
+   "label": "Negotiation  ·  1",
+   "x": 1032,
+   "y": 290,
+   "w": 304,
+   "h": 400
+  },
+  {
+   "id": "c4",
+   "label": "Won  ·  2",
+   "x": 1352,
+   "y": 290,
+   "w": 304,
+   "h": 400
+  }
+ ],
+ "nodes": [
+  {
+   "id": "d00",
+   "label": "Northwind",
+   "sub": "$18k, inbound",
+   "tone": "gray",
+   "x": 86,
+   "y": 348,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d01",
+   "label": "Kestrel Labs",
+   "sub": "$40k, event",
+   "tone": "gray",
+   "x": 86,
+   "y": 452,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d02",
+   "label": "Orbit Foods",
+   "sub": "$9k, referral",
+   "tone": "gray",
+   "x": 86,
+   "y": 556,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d10",
+   "label": "Halcyon",
+   "sub": "$65k, 3 seats → 40",
+   "tone": "blue",
+   "x": 406,
+   "y": 348,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d11",
+   "label": "Juniper Health",
+   "sub": "$120k, security review",
+   "tone": "blue",
+   "x": 406,
+   "y": 452,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d20",
+   "label": "Atlas Freight",
+   "sub": "$85k, sent Tue",
+   "tone": "purple",
+   "x": 726,
+   "y": 348,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d21",
+   "label": "Larkspur",
+   "sub": "$32k, pricing Q",
+   "tone": "purple",
+   "x": 726,
+   "y": 452,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d30",
+   "label": "Meridian Bank",
+   "sub": "$240k, legal redlines",
+   "tone": "orange",
+   "x": 1046,
+   "y": 348,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d40",
+   "label": "Pinecrest",
+   "sub": "$56k, signed 3 Oct",
+   "tone": "green",
+   "x": 1366,
+   "y": 348,
+   "w": 276,
+   "h": 88
+  },
+  {
+   "id": "d41",
+   "label": "Solace",
+   "sub": "$22k, signed 7 Oct",
+   "tone": "green",
+   "x": 1366,
+   "y": 452,
+   "w": 276,
+   "h": 88
+  }
+ ],
+ "texts": [
+  {
+   "x": 360,
+   "y": 318,
+   "text": "$67k",
+   "size": 13,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 680,
+   "y": 318,
+   "text": "$185k",
+   "size": 13,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1000,
+   "y": 318,
+   "text": "$117k",
+   "size": 13,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1320,
+   "y": 318,
+   "text": "$240k",
+   "size": 13,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 1640,
+   "y": 318,
+   "text": "$78k",
+   "size": 13,
+   "weight": 700,
+   "color": "muted",
+   "anchor": "end"
+  }
+ ],
+ "notes": [
+  {
+   "num": "!",
+   "text": "Meridian Bank is 49% of open pipeline. One deal should never be the quarter — two more need to reach Proposal by week 44.",
+   "x": 72,
+   "y": 720,
+   "w": 1100
+  }
+ ]
+}

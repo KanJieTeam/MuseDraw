@@ -1,0 +1,86 @@
+{
+ "theme": "metro",
+ "size": [
+  1760,
+  800
+ ],
+ "kicker": "2026 · A YEAR IN REVIEW",
+ "title": "公司 2026 年度大事记",
+ "subtitle": "一条主线，八个站点。红色站点是改变公司规模的节点，其余是能力建设。",
+ "blocks": [
+  {
+   "type": "timeline",
+   "x": 64,
+   "y": 460,
+   "w": 1632,
+   "pad": 90,
+   "itemW": 200,
+   "gap": 70,
+   "color": "red",
+   "axisWidth": 12,
+   "labelFont": "body",
+   "labelSize": 22,
+   "subSize": 15,
+   "dateColor": "red",
+   "items": [
+    {
+     "date": "1 月",
+     "label": "年度战略会",
+     "sub": "确定三大重点",
+     "tone": "interchange",
+     "big": false
+    },
+    {
+     "date": "3 月",
+     "label": "华东新仓投用",
+     "sub": "配送时效 −18%",
+     "tone": "red",
+     "big": true
+    },
+    {
+     "date": "4 月",
+     "label": "APP 3.0 上线",
+     "sub": "月活突破 200 万",
+     "tone": "interchange",
+     "big": false
+    },
+    {
+     "date": "6 月",
+     "label": "B 轮融资",
+     "sub": "3 亿元",
+     "tone": "red",
+     "big": true
+    },
+    {
+     "date": "8 月",
+     "label": "第 100 家门店",
+     "sub": "进入 12 座城市",
+     "tone": "red",
+     "big": true
+    },
+    {
+     "date": "9 月",
+     "label": "ISO 27001 认证",
+     "sub": "信息安全体系",
+     "tone": "interchange",
+     "big": false
+    },
+    {
+     "date": "11 月",
+     "label": "双 11 峰值",
+     "sub": "单日订单 46 万",
+     "tone": "interchange",
+     "big": false
+    },
+    {
+     "date": "12 月",
+     "label": "年度客户大会",
+     "sub": "发布 2027 计划",
+     "tone": "interchange",
+     "big": false
+    }
+   ],
+   "dateSize": 15
+  }
+ ]
+}

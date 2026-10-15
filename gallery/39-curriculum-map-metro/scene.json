@@ -1,0 +1,735 @@
+{
+ "theme": "metro",
+ "size": [
+  1760,
+  1000
+ ],
+ "kicker": "四年级数学 · 秋季学期",
+ "title": "一年级数学一学期课程地图",
+ "subtitle": "四条线路 = 四个领域；站点 = 有课的周；两个换乘大站是测评。一眼看出哪几周内容最密、哪几周适合做项目。",
+ "nodes": [
+  {
+   "id": "red1",
+   "shape": "station",
+   "tone": "red",
+   "x": 189,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red2",
+   "shape": "station",
+   "tone": "red",
+   "x": 281,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red3",
+   "shape": "station",
+   "tone": "red",
+   "x": 373,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red4",
+   "shape": "station",
+   "tone": "red",
+   "x": 465,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red6",
+   "shape": "station",
+   "tone": "red",
+   "x": 649,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red7",
+   "shape": "station",
+   "tone": "red",
+   "x": 741,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red9",
+   "shape": "station",
+   "tone": "red",
+   "x": 925,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "red10",
+   "shape": "station",
+   "tone": "red",
+   "x": 1017,
+   "y": 369,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue3",
+   "shape": "station",
+   "tone": "blue",
+   "x": 373,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue4",
+   "shape": "station",
+   "tone": "blue",
+   "x": 465,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue5",
+   "shape": "station",
+   "tone": "blue",
+   "x": 557,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue8",
+   "shape": "station",
+   "tone": "blue",
+   "x": 833,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue9",
+   "shape": "station",
+   "tone": "blue",
+   "x": 925,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue12",
+   "shape": "station",
+   "tone": "blue",
+   "x": 1201,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "blue13",
+   "shape": "station",
+   "tone": "blue",
+   "x": 1293,
+   "y": 489,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "green6",
+   "shape": "station",
+   "tone": "green",
+   "x": 649,
+   "y": 609,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "green7",
+   "shape": "station",
+   "tone": "green",
+   "x": 741,
+   "y": 609,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "green11",
+   "shape": "station",
+   "tone": "green",
+   "x": 1109,
+   "y": 609,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "green12",
+   "shape": "station",
+   "tone": "green",
+   "x": 1201,
+   "y": 609,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "green14",
+   "shape": "station",
+   "tone": "green",
+   "x": 1385,
+   "y": 609,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "orange5",
+   "shape": "station",
+   "tone": "orange",
+   "x": 557,
+   "y": 729,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "orange10",
+   "shape": "station",
+   "tone": "orange",
+   "x": 1017,
+   "y": 729,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "orange15",
+   "shape": "station",
+   "tone": "orange",
+   "x": 1477,
+   "y": 729,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "orange16",
+   "shape": "station",
+   "tone": "orange",
+   "x": 1569,
+   "y": 729,
+   "w": 22,
+   "h": 22,
+   "label": "",
+   "labelPos": "none"
+  },
+  {
+   "id": "ex8",
+   "shape": "pill",
+   "tone": "interchange",
+   "x": 818,
+   "y": 356,
+   "w": 52,
+   "h": 408,
+   "label": "",
+   "overlap": true
+  },
+  {
+   "id": "ex16",
+   "shape": "pill",
+   "tone": "interchange",
+   "x": 1554,
+   "y": 356,
+   "w": 52,
+   "h": 408,
+   "label": "",
+   "overlap": true
+  }
+ ],
+ "edges": [
+  {
+   "from": "red1",
+   "to": "red2",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "red2",
+   "to": "red3",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "red3",
+   "to": "red4",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "red4",
+   "to": "red6",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "red6",
+   "to": "red7",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "red7",
+   "to": "red9",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "red9",
+   "to": "red10",
+   "kind": "red",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "blue3",
+   "to": "blue4",
+   "kind": "blue",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "blue4",
+   "to": "blue5",
+   "kind": "blue",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "blue5",
+   "to": "blue8",
+   "kind": "blue",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "blue8",
+   "to": "blue9",
+   "kind": "blue",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "blue9",
+   "to": "blue12",
+   "kind": "blue",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "blue12",
+   "to": "blue13",
+   "kind": "blue",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "green6",
+   "to": "green7",
+   "kind": "green",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "green7",
+   "to": "green11",
+   "kind": "green",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "green11",
+   "to": "green12",
+   "kind": "green",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "green12",
+   "to": "green14",
+   "kind": "green",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "orange5",
+   "to": "orange10",
+   "kind": "orange",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "orange10",
+   "to": "orange15",
+   "kind": "orange",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  },
+  {
+   "from": "orange15",
+   "to": "orange16",
+   "kind": "orange",
+   "fromSide": "r",
+   "toSide": "l",
+   "fromGap": -3,
+   "toGap": -3
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 386,
+   "text": "数与代数",
+   "font": "body",
+   "size": 16,
+   "weight": 800,
+   "color": "red"
+  },
+  {
+   "x": 64,
+   "y": 506,
+   "text": "图形与几何",
+   "font": "body",
+   "size": 16,
+   "weight": 800,
+   "color": "blue"
+  },
+  {
+   "x": 64,
+   "y": 626,
+   "text": "统计与概率",
+   "font": "body",
+   "size": 16,
+   "weight": 800,
+   "color": "green"
+  },
+  {
+   "x": 64,
+   "y": 746,
+   "text": "综合实践",
+   "font": "body",
+   "size": 16,
+   "weight": 800,
+   "color": "orange"
+  },
+  {
+   "x": 200,
+   "y": 320,
+   "text": "1",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 292,
+   "y": 320,
+   "text": "2",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 384,
+   "y": 320,
+   "text": "3",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 476,
+   "y": 320,
+   "text": "4",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 568,
+   "y": 320,
+   "text": "5",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 660,
+   "y": 320,
+   "text": "6",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 752,
+   "y": 320,
+   "text": "7",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 844,
+   "y": 320,
+   "text": "8",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 936,
+   "y": 320,
+   "text": "9",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1028,
+   "y": 320,
+   "text": "10",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1120,
+   "y": 320,
+   "text": "11",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1212,
+   "y": 320,
+   "text": "12",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1304,
+   "y": 320,
+   "text": "13",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1396,
+   "y": 320,
+   "text": "14",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1488,
+   "y": 320,
+   "text": "15",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1580,
+   "y": 320,
+   "text": "16",
+   "font": "mono",
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 186,
+   "y": 296,
+   "text": "周次",
+   "font": "body",
+   "size": 12,
+   "color": "muted",
+   "weight": 700
+  },
+  {
+   "x": 844,
+   "y": 800,
+   "text": "期中测评",
+   "font": "body",
+   "size": 15,
+   "weight": 800,
+   "anchor": "middle"
+  },
+  {
+   "x": 1580,
+   "y": 800,
+   "text": "期末展示",
+   "font": "body",
+   "size": 15,
+   "weight": 800,
+   "anchor": "middle"
+  },
+  {
+   "x": 568,
+   "y": 712,
+   "text": "测量校园",
+   "size": 13,
+   "anchor": "middle",
+   "color": "muted"
+  },
+  {
+   "x": 1028,
+   "y": 712,
+   "text": "班级小超市",
+   "size": 13,
+   "anchor": "middle",
+   "color": "muted"
+  },
+  {
+   "x": 1488,
+   "y": 712,
+   "text": "数学小报",
+   "size": 13,
+   "anchor": "middle",
+   "color": "muted"
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 900,
+  "items": [
+   {
+    "kind": "red",
+    "label": "数与代数"
+   },
+   {
+    "kind": "blue",
+    "label": "图形与几何"
+   },
+   {
+    "kind": "green",
+    "label": "统计与概率"
+   },
+   {
+    "kind": "orange",
+    "label": "综合实践"
+   }
+  ]
+ }
+}

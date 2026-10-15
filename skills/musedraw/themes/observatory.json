@@ -1,0 +1,27 @@
+{
+  "id": "observatory",
+  "name": "Observatory",
+  "nameZh": "观测夜空",
+  "aliases": ["observatory", "dark", "观测"],
+  "summary": "Deep night canvas where colour is data: each signal or traffic class keeps one hue end to end. For observability, data flow and anything with typed streams.",
+  "palette": { "bg": "#0E131A", "card": "#151C26", "line": "#2A3646", "ink": "#DCE4EE", "muted": "#7E8DA0", "teal": "#4FD1C5", "amber": "#F6C177", "violet": "#B4A7F5", "coral": "#FF7A85", "accent": "#4FD1C5" },
+  "fonts": { "display": "Inter, Noto Sans SC, sans-serif", "body": "Inter, Noto Sans SC, sans-serif", "mono": "JetBrains Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64, "glows": [ { "x": 0.78, "y": 0.18, "r": 0.32, "color": "#1E3A52", "opacity": 0.55 }, { "x": 0.1, "y": 0.95, "r": 0.3, "color": "#2B2347", "opacity": 0.5 } ] },
+  "header": { "layout": "editorial", "titleFont": "display", "titleSize": 46, "titleWeight": 700, "titleLetterSpacing": -1.2, "kickerFont": "mono", "kickerSize": 12, "kickerColor": "teal", "kickerLetterSpacing": 2, "subFont": "body", "subSize": 16.5, "subColor": "muted", "figureColor": "muted" },
+  "node": { "font": "body", "size": 16, "weight": 650, "subFont": "mono", "subSize": 11.5, "tagFont": "mono", "tagSize": 10.5, "tagCase": "upper", "tagLetterSpacing": 1.2, "tagWeight": 600, "tagPos": "above", "radius": 10, "stroke": 1.2, "padding": 16, "align": "left", "iconSize": 20, "gap": 5 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "line", "text": "ink", "sub": "muted", "tag": "muted", "icon": "muted" },
+    "teal": { "fill": "#10262A", "stroke": "teal", "text": "ink", "sub": "#8FC9C2", "tag": "teal", "icon": "teal" },
+    "amber": { "fill": "#2A2216", "stroke": "amber", "text": "ink", "sub": "#D4B48A", "tag": "amber", "icon": "amber" },
+    "violet": { "fill": "#1D1A33", "stroke": "violet", "text": "ink", "sub": "#B9B1E0", "tag": "violet", "icon": "violet" },
+    "coral": { "fill": "#2C171C", "stroke": "coral", "text": "ink", "sub": "#E2A5AB", "tag": "coral", "icon": "coral" },
+    "hub": { "fill": "#1A2431", "stroke": "#9FB3C8", "strokeWidth": 1.6, "text": "#FFFFFF", "sub": "#A9B8C9", "tag": "#FFFFFF", "icon": "#FFFFFF" }
+  },
+  "zone": { "style": "outline", "radius": 14, "stroke": 1, "labelFont": "mono", "labelSize": 11, "labelCase": "upper", "letterSpacing": 1.8, "labelWeight": 600, "labelPad": 16, "tones": { "default": { "fill": "#121923", "stroke": "line", "text": "muted" } } },
+  "edge": { "color": "#5B6B80", "width": 1.6, "radius": 14, "arrow": "triangle", "arrowSize": 7.5, "gap": 3, "labelFont": "mono", "labelSize": 11, "labelColor": "muted", "labelPlacement": "on", "labelStyle": "chip", "labelBg": "bg",
+    "kinds": { "otlp": { "color": "#C9D4E0", "width": 2.4 }, "metrics": { "color": "teal", "width": 2 }, "logs": { "color": "amber", "width": 2 }, "traces": { "color": "violet", "width": 2 }, "alert": { "color": "coral", "width": 2 }, "link": { "color": "muted", "dash": "3 4", "width": 1.3, "arrow": "none" } } },
+  "step": { "shape": "circle", "fill": "teal", "text": "#0E131A", "size": 22, "font": "mono", "weight": 700 },
+  "note": { "style": "comment", "font": "mono", "size": 12, "color": "muted", "prefix": "", "lineHeight": 1.5 },
+  "legend": { "font": "mono", "size": 11.5, "color": "muted" },
+  "footer": { "text": "MuseDraw · Observatory", "font": "mono", "size": 10.5, "color": "#4A5869", "letterSpacing": 1.5 }
+}

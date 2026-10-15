@@ -1,0 +1,300 @@
+{
+ "theme": "aurora",
+ "size": [
+  1700,
+  1060
+ ],
+ "kicker": "LLM agents · the loop inside",
+ "title": "Inside a tool-using AI agent",
+ "subtitle": "The model never touches the world directly. It plans, asks the runtime to call a tool, reads the result and decides again — inside guardrails, with memory on both sides.",
+ "subtitleWidth": 1060,
+ "zones": [
+  {
+   "id": "runtime",
+   "label": "agent runtime · loop until done or budget spent",
+   "x": 560,
+   "y": 300,
+   "w": 600,
+   "h": 500
+  },
+  {
+   "id": "tools",
+   "label": "tools · via MCP",
+   "tone": "dashed",
+   "x": 1218,
+   "y": 424,
+   "w": 436,
+   "h": 250
+  }
+ ],
+ "nodes": [
+  {
+   "id": "user",
+   "label": "User",
+   "sub": "“Book a room for Thursday’s review”",
+   "icon": "user",
+   "x": 64,
+   "y": 500,
+   "w": 228,
+   "h": 110
+  },
+  {
+   "id": "guard-in",
+   "label": "Input guard",
+   "sub": "PII + injection filters",
+   "icon": "shield",
+   "tone": "ghost",
+   "x": 330,
+   "y": 380,
+   "w": 196,
+   "h": 100
+  },
+  {
+   "id": "guard-out",
+   "label": "Output guard",
+   "sub": "policy + citations",
+   "icon": "shield",
+   "tone": "ghost",
+   "x": 330,
+   "y": 630,
+   "w": 196,
+   "h": 100
+  },
+  {
+   "id": "plan",
+   "label": "Plan",
+   "sub": "goal + context → next step",
+   "tone": "violet",
+   "x": 750,
+   "y": 360,
+   "w": 220,
+   "h": 100
+  },
+  {
+   "id": "act",
+   "label": "Act",
+   "sub": "structured JSON args",
+   "tone": "cyan",
+   "x": 900,
+   "y": 610,
+   "w": 220,
+   "h": 100
+  },
+  {
+   "id": "observe",
+   "label": "Observe",
+   "sub": "append to context",
+   "tone": "pink",
+   "x": 600,
+   "y": 610,
+   "w": 220,
+   "h": 100
+  },
+  {
+   "id": "model",
+   "label": "Foundation model",
+   "sub": "tools declared as JSON schema",
+   "icon": "spark",
+   "tone": "accent",
+   "x": 1236,
+   "y": 300,
+   "w": 400,
+   "h": 104
+  },
+  {
+   "id": "search",
+   "label": "Web search",
+   "icon": "search",
+   "x": 1236,
+   "y": 470,
+   "w": 192,
+   "h": 84,
+   "sub": "MCP server"
+  },
+  {
+   "id": "code",
+   "label": "Code sandbox",
+   "icon": "cpu",
+   "x": 1444,
+   "y": 470,
+   "w": 192,
+   "h": 84,
+   "sub": "Python, 30 s limit"
+  },
+  {
+   "id": "sql",
+   "label": "Analytics DB",
+   "icon": "db",
+   "x": 1236,
+   "y": 572,
+   "w": 192,
+   "h": 84,
+   "sub": "read-only SQL"
+  },
+  {
+   "id": "calendar",
+   "label": "Calendar",
+   "icon": "clock",
+   "x": 1444,
+   "y": 572,
+   "w": 192,
+   "h": 84,
+   "sub": "write, needs approval"
+  },
+  {
+   "id": "approval",
+   "label": "Human approval",
+   "sub": "send, pay, delete, book",
+   "icon": "check",
+   "tone": "ghost",
+   "x": 1236,
+   "y": 700,
+   "w": 400,
+   "h": 90
+  },
+  {
+   "id": "memory",
+   "label": "Long-term memory",
+   "sub": "past sessions, preferences",
+   "icon": "brain",
+   "tone": "pink",
+   "x": 600,
+   "y": 860,
+   "w": 260,
+   "h": 100
+  },
+  {
+   "id": "traces",
+   "label": "Traces & evals",
+   "sub": "every step replayable",
+   "icon": "eye",
+   "tone": "ghost",
+   "x": 900,
+   "y": 860,
+   "w": 260,
+   "h": 100
+  }
+ ],
+ "edges": [
+  {
+   "from": "user",
+   "to": "guard-in",
+   "kind": "primary",
+   "fromAt": 0.3
+  },
+  {
+   "from": "guard-in",
+   "to": "plan",
+   "kind": "primary",
+   "toAt": 0.2
+  },
+  {
+   "from": "plan",
+   "to": "model",
+   "kind": "primary",
+   "both": true,
+   "label": "messages",
+   "toAt": 0.6
+  },
+  {
+   "from": "plan",
+   "to": "act",
+   "kind": "primary",
+   "fromSide": "r",
+   "toSide": "t",
+   "fromAt": 0.75,
+   "label": "call tool"
+  },
+  {
+   "from": "act",
+   "to": "search",
+   "kind": "tool",
+   "fromAt": 0.3,
+   "toSide": "l"
+  },
+  {
+   "from": "act",
+   "to": "sql",
+   "kind": "tool",
+   "fromAt": 0.6,
+   "toSide": "l"
+  },
+  {
+   "from": "act",
+   "to": "approval",
+   "kind": "guard",
+   "fromAt": 0.85,
+   "toSide": "l",
+   "label": "if it writes"
+  },
+  {
+   "from": "act",
+   "to": "observe",
+   "kind": "tool",
+   "label": "result"
+  },
+  {
+   "from": "observe",
+   "to": "plan",
+   "kind": "primary",
+   "fromSide": "t",
+   "toSide": "b",
+   "label": "loop",
+   "toAt": 0.22
+  },
+  {
+   "from": "observe",
+   "to": "memory",
+   "kind": "memory",
+   "both": true,
+   "label": "recall / write"
+  },
+  {
+   "from": "plan",
+   "to": "guard-out",
+   "kind": "primary",
+   "fromSide": "l",
+   "toSide": "t",
+   "fromAt": 0.7,
+   "label": "final answer",
+   "labelAt": 0.35
+  },
+  {
+   "from": "guard-out",
+   "to": "user",
+   "kind": "primary",
+   "toAt": 0.75,
+   "toSide": "r"
+  }
+ ],
+ "notes": [
+  {
+   "text": "Tools are just functions with a schema. The runtime executes them; the model only proposes.",
+   "x": 1236,
+   "y": 830,
+   "w": 400
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 996,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "reasoning loop"
+   },
+   {
+    "kind": "tool",
+    "label": "tool I/O"
+   },
+   {
+    "kind": "memory",
+    "label": "memory"
+   },
+   {
+    "kind": "guard",
+    "label": "control"
+   }
+  ]
+ }
+}

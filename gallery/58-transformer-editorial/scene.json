@@ -1,0 +1,467 @@
+{
+ "theme": "editorial",
+ "size": [
+  1600,
+  1110
+ ],
+ "kicker": "Machine learning · Vaswani et al., 2017",
+ "title": "Transformer architecture",
+ "subtitle": "Two stacks of identical blocks. The encoder turns a sentence into context-rich vectors; the decoder writes the output one token at a time while attending to them.",
+ "subtitleWidth": 1100,
+ "figure": "Fig. 58",
+ "nodes": [
+  {
+   "id": "e_in",
+   "label": "Input embedding",
+   "x": 180,
+   "y": 980,
+   "w": 240,
+   "h": 52,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "e_pos",
+   "label": "+ positional encoding",
+   "x": 180,
+   "y": 920,
+   "w": 240,
+   "h": 40,
+   "tone": "ghost",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "e_mha",
+   "label": "Multi-head self-attention",
+   "x": 180,
+   "y": 800,
+   "w": 240,
+   "h": 52,
+   "tone": "default",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "e_an1",
+   "label": "Add & norm",
+   "x": 180,
+   "y": 740,
+   "w": 240,
+   "h": 40,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "e_ff",
+   "label": "Feed-forward",
+   "x": 180,
+   "y": 660,
+   "w": 240,
+   "h": 52,
+   "tone": "default",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "e_an2",
+   "label": "Add & norm",
+   "x": 180,
+   "y": 600,
+   "w": 240,
+   "h": 40,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_in",
+   "label": "Output embedding",
+   "x": 620,
+   "y": 980,
+   "w": 240,
+   "h": 52,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_pos",
+   "label": "+ positional encoding",
+   "x": 620,
+   "y": 920,
+   "w": 240,
+   "h": 40,
+   "tone": "ghost",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_mmha",
+   "label": "Masked self-attention",
+   "x": 620,
+   "y": 800,
+   "w": 240,
+   "h": 52,
+   "tone": "default",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_an1",
+   "label": "Add & norm",
+   "x": 620,
+   "y": 740,
+   "w": 240,
+   "h": 40,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_xa",
+   "label": "Cross-attention",
+   "x": 620,
+   "y": 648,
+   "w": 240,
+   "h": 64,
+   "tone": "accent",
+   "align": "center",
+   "size": 15,
+   "sub": "queries from decoder, keys/values from encoder"
+  },
+  {
+   "id": "d_an2",
+   "label": "Add & norm",
+   "x": 620,
+   "y": 588,
+   "w": 240,
+   "h": 40,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_ff",
+   "label": "Feed-forward",
+   "x": 620,
+   "y": 512,
+   "w": 240,
+   "h": 52,
+   "tone": "default",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "d_an3",
+   "label": "Add & norm",
+   "x": 620,
+   "y": 452,
+   "w": 240,
+   "h": 40,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "lin",
+   "label": "Linear",
+   "x": 620,
+   "y": 362,
+   "w": 240,
+   "h": 40,
+   "tone": "soft",
+   "align": "center",
+   "size": 15
+  },
+  {
+   "id": "sm",
+   "label": "Softmax → next-token probabilities",
+   "x": 590,
+   "y": 296,
+   "w": 300,
+   "h": 48,
+   "tone": "accent",
+   "align": "center",
+   "size": 15
+  }
+ ],
+ "edges": [
+  {
+   "from": "e_in",
+   "to": "e_pos",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "e_pos",
+   "to": "e_mha",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "e_mha",
+   "to": "e_an1",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "e_an1",
+   "to": "e_ff",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "e_ff",
+   "to": "e_an2",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_in",
+   "to": "d_pos",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_pos",
+   "to": "d_mmha",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_mmha",
+   "to": "d_an1",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_an1",
+   "to": "d_xa",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_xa",
+   "to": "d_an2",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_an2",
+   "to": "d_ff",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_ff",
+   "to": "d_an3",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "d_an3",
+   "to": "lin",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "lin",
+   "to": "sm",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "e_an2",
+   "to": "d_xa",
+   "fromSide": "t",
+   "toSide": "l",
+   "kind": "primary",
+   "via": [
+    [
+     300,
+     540
+    ],
+    [
+     520,
+     540
+    ],
+    [
+     520,
+     680
+    ]
+   ],
+   "label": "memory",
+   "labelAt": [
+    410,
+    540
+   ]
+  },
+  {
+   "from": "e_pos",
+   "to": "e_an1",
+   "fromSide": "l",
+   "toSide": "l",
+   "kind": "offline",
+   "via": [
+    [
+     160,
+     940.0
+    ],
+    [
+     160,
+     760.0
+    ]
+   ],
+   "arrow": "triangle"
+  },
+  {
+   "from": "e_an1",
+   "to": "e_an2",
+   "fromSide": "l",
+   "toSide": "l",
+   "kind": "offline",
+   "via": [
+    [
+     160,
+     760.0
+    ],
+    [
+     160,
+     620.0
+    ]
+   ],
+   "arrow": "triangle"
+  },
+  {
+   "from": "d_pos",
+   "to": "d_an1",
+   "fromSide": "l",
+   "toSide": "l",
+   "kind": "offline",
+   "via": [
+    [
+     600,
+     940.0
+    ],
+    [
+     600,
+     760.0
+    ]
+   ],
+   "arrow": "triangle"
+  },
+  {
+   "from": "d_an1",
+   "to": "d_an2",
+   "fromSide": "l",
+   "toSide": "l",
+   "kind": "offline",
+   "via": [
+    [
+     600,
+     760.0
+    ],
+    [
+     600,
+     608.0
+    ]
+   ],
+   "arrow": "triangle"
+  },
+  {
+   "from": "d_an2",
+   "to": "d_an3",
+   "fromSide": "l",
+   "toSide": "l",
+   "kind": "offline",
+   "via": [
+    [
+     600,
+     608.0
+    ],
+    [
+     600,
+     472.0
+    ]
+   ],
+   "arrow": "triangle"
+  }
+ ],
+ "zones": [
+  {
+   "id": "enc",
+   "label": "Encoder  ×6",
+   "x": 140,
+   "y": 556,
+   "w": 320,
+   "h": 314,
+   "style": "outline",
+   "pad": 12
+  },
+  {
+   "id": "dec",
+   "label": "Decoder  ×6",
+   "x": 580,
+   "y": 408,
+   "w": 320,
+   "h": 462,
+   "style": "outline",
+   "pad": 12
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "Attention(Q, K, V) = softmax(QKᵀ / √dₖ) V. Each token looks at every other token and takes a weighted average.",
+   "x": 1040,
+   "y": 360,
+   "w": 480
+  },
+  {
+   "num": "2",
+   "text": "Multi-head: 8 heads of 64 dimensions run in parallel, each free to learn a different relation — syntax, coreference, position.",
+   "x": 1040,
+   "y": 510,
+   "w": 480
+  },
+  {
+   "num": "3",
+   "text": "Masking stops the decoder from peeking at future tokens, so training and generation see the same thing.",
+   "x": 1040,
+   "y": 660,
+   "w": 480
+  },
+  {
+   "num": "4",
+   "text": "Dotted lines are residual connections: every sub-layer only learns a correction to its input.",
+   "x": 1040,
+   "y": 800,
+   "w": 480
+  }
+ ],
+ "texts": [
+  {
+   "x": 300,
+   "y": 1072,
+   "text": "source tokens",
+   "font": "display",
+   "italic": true,
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 740,
+   "y": 1072,
+   "text": "target tokens, shifted right",
+   "font": "display",
+   "italic": true,
+   "size": 14,
+   "color": "muted",
+   "anchor": "middle"
+  }
+ ]
+}

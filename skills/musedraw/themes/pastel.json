@@ -1,0 +1,263 @@
+{
+  "id": "pastel",
+  "name": "Pastel Notes",
+  "nameZh": "柔和笔记",
+  "aliases": [
+    "pastel",
+    "notion",
+    "柔和",
+    "笔记"
+  ],
+  "summary": "A calm notes-app page: white space, soft colour blocks, numbered steps and friendly explanations. For onboarding docs, wikis and teaching.",
+  "palette": {
+    "bg": "#FFFFFF",
+    "ink": "#37352F",
+    "muted": "#787774",
+    "line": "#E9E9E7",
+    "accent": "#D9730D",
+    "yellow": "#FBF3DB",
+    "green": "#EDF3EC",
+    "blue": "#E7F3F8",
+    "purple": "#F6F3F9",
+    "orange": "#FBECDD",
+    "red": "#FDEBEC",
+    "gray": "#F1F1EF"
+  },
+  "fonts": {
+    "display": "Noto Sans SC, Inter, sans-serif",
+    "body": "Noto Sans SC, Inter, sans-serif",
+    "mono": "JetBrains Mono, Noto Sans SC, monospace"
+  },
+  "canvas": {
+    "bg": "bg",
+    "margin": 72
+  },
+  "header": {
+    "layout": "editorial",
+    "titleFont": "display",
+    "titleSize": 42,
+    "titleWeight": 700,
+    "kickerFont": "body",
+    "kickerSize": 14,
+    "kickerColor": "muted",
+    "kickerLetterSpacing": 0.5,
+    "kickerCase": "none",
+    "kickerWeight": 400,
+    "subFont": "body",
+    "subSize": 16,
+    "subColor": "muted"
+  },
+  "node": {
+    "font": "body",
+    "size": 16.5,
+    "weight": 700,
+    "subFont": "body",
+    "subSize": 13,
+    "tagFont": "body",
+    "tagSize": 12,
+    "tagWeight": 500,
+    "tagPos": "above",
+    "radius": 10,
+    "stroke": 0,
+    "padding": 16,
+    "align": "left",
+    "iconSize": 20,
+    "iconStroke": 1.6,
+    "gap": 4
+  },
+  "tones": {
+    "default": {
+      "fill": "gray",
+      "stroke": "none",
+      "text": "ink",
+      "sub": "muted",
+      "tag": "muted",
+      "icon": "ink"
+    },
+    "yellow": {
+      "fill": "yellow",
+      "stroke": "none",
+      "text": "#5C4B1C",
+      "sub": "#89632A",
+      "tag": "#CB912F",
+      "icon": "#CB912F"
+    },
+    "green": {
+      "fill": "green",
+      "stroke": "none",
+      "text": "#1C3829",
+      "sub": "#448361",
+      "tag": "#448361",
+      "icon": "#448361"
+    },
+    "blue": {
+      "fill": "blue",
+      "stroke": "none",
+      "text": "#183347",
+      "sub": "#337EA9",
+      "tag": "#337EA9",
+      "icon": "#337EA9"
+    },
+    "purple": {
+      "fill": "purple",
+      "stroke": "none",
+      "text": "#412454",
+      "sub": "#9065B0",
+      "tag": "#9065B0",
+      "icon": "#9065B0"
+    },
+    "orange": {
+      "fill": "orange",
+      "stroke": "none",
+      "text": "#49290E",
+      "sub": "#D9730D",
+      "tag": "#D9730D",
+      "icon": "#D9730D"
+    },
+    "red": {
+      "fill": "red",
+      "stroke": "none",
+      "text": "#5D1715",
+      "sub": "#D44C47",
+      "tag": "#D44C47",
+      "icon": "#D44C47"
+    },
+    "white": {
+      "fill": "#FFFFFF",
+      "stroke": "line",
+      "strokeWidth": 1,
+      "text": "ink",
+      "sub": "muted",
+      "tag": "muted"
+    },
+    "blueBar": {
+      "fill": "#5B9BD5",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "greenBar": {
+      "fill": "#6AAF7C",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "orangeBar": {
+      "fill": "#E49A55",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "purpleBar": {
+      "fill": "#A58BC4",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "yellowBar": {
+      "fill": "#E8C14E",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "grayBar": {
+      "fill": "#B4B4B0",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "redBar": {
+      "fill": "#E07A72",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF"
+    },
+    "mark": {
+      "fill": "accent",
+      "stroke": "none",
+      "text": "#FFFFFF",
+      "sub": "#FFFFFF",
+      "labelOut": "ink"
+    },
+    "dot": {
+      "fill": "#FFFFFF",
+      "stroke": "ink",
+      "strokeWidth": 2,
+      "text": "ink"
+    }
+  },
+  "zone": {
+    "style": "outline",
+    "radius": 12,
+    "stroke": 1,
+    "labelFont": "body",
+    "labelSize": 13,
+    "labelWeight": 700,
+    "labelPad": 18,
+    "subSize": 12.5,
+    "tones": {
+      "default": {
+        "fill": "none",
+        "stroke": "line",
+        "text": "muted",
+        "sub": "muted"
+      }
+    }
+  },
+  "edge": {
+    "color": "#A5A4A0",
+    "width": 1.6,
+    "radius": 12,
+    "arrow": "open",
+    "arrowSize": 8,
+    "gap": 5,
+    "labelFont": "body",
+    "labelSize": 12.5,
+    "labelColor": "muted",
+    "labelPlacement": "on",
+    "labelStyle": "chip",
+    "labelBg": "bg",
+    "kinds": {
+      "primary": {
+        "color": "#37352F",
+        "width": 1.8
+      },
+      "soft": {
+        "dash": "4 5"
+      },
+      "orange": {
+        "color": "accent",
+        "width": 1.8
+      }
+    }
+  },
+  "step": {
+    "shape": "circle",
+    "fill": "#37352F",
+    "text": "#FFFFFF",
+    "size": 24,
+    "font": "body",
+    "weight": 700
+  },
+  "note": {
+    "style": "margin",
+    "font": "body",
+    "size": 14,
+    "color": "ink",
+    "numFont": "body",
+    "numColor": "accent",
+    "lineHeight": 1.6
+  },
+  "legend": {
+    "font": "body",
+    "size": 12.5,
+    "color": "muted"
+  },
+  "footer": {
+    "text": "MuseDraw · 柔和笔记",
+    "font": "body",
+    "size": 12,
+    "color": "#B4B4B0",
+    "letterSpacing": 1
+  }
+}

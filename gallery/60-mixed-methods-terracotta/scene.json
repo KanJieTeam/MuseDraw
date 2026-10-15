@@ -1,0 +1,154 @@
+{
+ "theme": "terracotta",
+ "size": [
+  1600,
+  960
+ ],
+ "kicker": "Research design · explanatory sequential",
+ "title": "Explanatory sequential mixed-methods design",
+ "subtitle": "Capital letters mark the dominant strand. The connecting step is where most designs go wrong: the qualitative sample must be chosen from the quantitative results, not by convenience.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "p1",
+   "label": "QUAN data",
+   "tag": "phase 1, survey",
+   "sub": "n = 1,204 nurses, 18 hospitals",
+   "tone": "clay",
+   "x": 64,
+   "y": 360,
+   "w": 250,
+   "h": 120,
+   "step": 1
+  },
+  {
+   "id": "p2",
+   "label": "QUAN analysis",
+   "tag": "regression",
+   "sub": "burnout predictors, odds ratios",
+   "tone": "clay",
+   "x": 364,
+   "y": 360,
+   "w": 250,
+   "h": 120,
+   "step": 2
+  },
+  {
+   "id": "p3",
+   "label": "Connect",
+   "tag": "case selection",
+   "sub": "pick 24 outliers: high workload, low burnout",
+   "tone": "sand",
+   "x": 664,
+   "y": 360,
+   "w": 250,
+   "h": 120,
+   "step": 3
+  },
+  {
+   "id": "p4",
+   "label": "qual data",
+   "tag": "phase 2, interviews",
+   "sub": "semi-structured, 45–60 min",
+   "tone": "olive",
+   "x": 964,
+   "y": 360,
+   "w": 250,
+   "h": 120,
+   "step": 4
+  },
+  {
+   "id": "p5",
+   "label": "qual analysis",
+   "tag": "thematic",
+   "sub": "reflexive thematic analysis",
+   "tone": "olive",
+   "x": 1264,
+   "y": 360,
+   "w": 250,
+   "h": 120,
+   "step": 5
+  },
+  {
+   "id": "int",
+   "label": "Integration",
+   "tag": "joint display",
+   "sub": "how do the stories explain the numbers?",
+   "tone": "default",
+   "x": 514,
+   "y": 620,
+   "w": 550,
+   "h": 120,
+   "step": 6
+  }
+ ],
+ "edges": [
+  {
+   "from": "p1",
+   "to": "p2",
+   "kind": "primary"
+  },
+  {
+   "from": "p2",
+   "to": "p3",
+   "kind": "primary"
+  },
+  {
+   "from": "p3",
+   "to": "p4",
+   "kind": "olive"
+  },
+  {
+   "from": "p4",
+   "to": "p5",
+   "kind": "olive"
+  },
+  {
+   "from": "p2",
+   "to": "int",
+   "fromSide": "b",
+   "toSide": "l",
+   "kind": "soft",
+   "label": "statistical results"
+  },
+  {
+   "from": "p5",
+   "to": "int",
+   "fromSide": "b",
+   "toSide": "r",
+   "kind": "soft",
+   "label": "themes"
+  }
+ ],
+ "texts": [
+  {
+   "x": 64,
+   "y": 330,
+   "text": "Phase 1 — quantitative",
+   "font": "mono",
+   "size": 12,
+   "color": "clay",
+   "weight": 600,
+   "letterSpacing": 1.5
+  },
+  {
+   "x": 964,
+   "y": 330,
+   "text": "Phase 2 — qualitative",
+   "font": "mono",
+   "size": 12,
+   "color": "olive",
+   "weight": 600,
+   "letterSpacing": 1.5
+  }
+ ],
+ "notes": [
+  {
+   "num": "↳",
+   "text": "Report the joint display as a table: each row a predictor, with the matching theme and a quote that confirms, expands or contradicts it.",
+   "x": 64,
+   "y": 820,
+   "w": 1000
+  }
+ ]
+}

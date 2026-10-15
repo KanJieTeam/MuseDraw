@@ -1,0 +1,274 @@
+{
+ "theme": "journal",
+ "size": [
+  1500,
+  1080
+ ],
+ "title": "图 2 | 量表编制与检验流程",
+ "subtitle": "示例：老年人智慧养老数字适应量表。右侧条形显示每一步之后保留的条目数——从 62 条到 24 条，每一次删减都有统计或专家依据。",
+ "nodes": [
+  {
+   "id": "s0",
+   "label": "概念界定",
+   "sub": "文献回顾 + 半结构访谈 18 人",
+   "tone": "blue",
+   "x": 140,
+   "y": 260,
+   "w": 760,
+   "h": 84,
+   "align": "left",
+   "step": 1,
+   "size": 17
+  },
+  {
+   "id": "b0",
+   "label": "",
+   "fill": "#2F6DB5",
+   "stroke": "none",
+   "x": 980,
+   "y": 282,
+   "w": 372,
+   "h": 40,
+   "radius": 3
+  },
+  {
+   "id": "s1",
+   "label": "专家咨询",
+   "sub": "两轮 Delphi，15 位专家，I-CVI ≥ 0.78",
+   "tone": "blue",
+   "x": 140,
+   "y": 372,
+   "w": 760,
+   "h": 84,
+   "align": "left",
+   "step": 2,
+   "size": 17
+  },
+  {
+   "id": "b1",
+   "label": "",
+   "fill": "#2F6DB5",
+   "stroke": "none",
+   "x": 980,
+   "y": 394,
+   "w": 288,
+   "h": 40,
+   "radius": 3
+  },
+  {
+   "id": "s2",
+   "label": "预调查",
+   "sub": "n = 150，项目分析，决断值 / 题总相关",
+   "tone": "orange",
+   "x": 140,
+   "y": 484,
+   "w": 760,
+   "h": 84,
+   "align": "left",
+   "step": 3,
+   "size": 17
+  },
+  {
+   "id": "b2",
+   "label": "",
+   "fill": "#2F6DB5",
+   "stroke": "none",
+   "x": 980,
+   "y": 506,
+   "w": 216,
+   "h": 40,
+   "radius": 3
+  },
+  {
+   "id": "s3",
+   "label": "探索性因子分析",
+   "sub": "n = 300，KMO = 0.91，载荷 ≥ 0.40",
+   "tone": "green",
+   "x": 140,
+   "y": 596,
+   "w": 760,
+   "h": 84,
+   "align": "left",
+   "step": 4,
+   "size": 17
+  },
+  {
+   "id": "b3",
+   "label": "",
+   "fill": "#2F6DB5",
+   "stroke": "none",
+   "x": 980,
+   "y": 618,
+   "w": 168,
+   "h": 40,
+   "radius": 3
+  },
+  {
+   "id": "s4",
+   "label": "验证性因子分析",
+   "sub": "n = 300, CFI = 0.94, RMSEA = 0.056",
+   "tone": "green",
+   "x": 140,
+   "y": 708,
+   "w": 760,
+   "h": 84,
+   "align": "left",
+   "step": 5,
+   "size": 17
+  },
+  {
+   "id": "b4",
+   "label": "",
+   "fill": "#2F6DB5",
+   "stroke": "none",
+   "x": 980,
+   "y": 730,
+   "w": 144,
+   "h": 40,
+   "radius": 3
+  },
+  {
+   "id": "s5",
+   "label": "信效度检验",
+   "sub": "Cronbach α = 0.89，重测 r = 0.83（2 周）",
+   "tone": "purple",
+   "x": 140,
+   "y": 820,
+   "w": 760,
+   "h": 84,
+   "align": "left",
+   "step": 6,
+   "size": 17
+  },
+  {
+   "id": "b5",
+   "label": "",
+   "fill": "#2F6DB5",
+   "stroke": "none",
+   "x": 980,
+   "y": 842,
+   "w": 144,
+   "h": 40,
+   "radius": 3
+  },
+  {
+   "id": "final",
+   "label": "最终量表：24 条目 · 4 个维度",
+   "sub": "认知负担，情感联结，代际沟通，技术信任",
+   "tone": "accent",
+   "x": 140,
+   "y": 948,
+   "w": 760,
+   "h": 80,
+   "align": "left"
+  }
+ ],
+ "edges": [
+  {
+   "from": "s0",
+   "to": "s1",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.08,
+   "toAt": 0.08
+  },
+  {
+   "from": "s1",
+   "to": "s2",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.08,
+   "toAt": 0.08
+  },
+  {
+   "from": "s2",
+   "to": "s3",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.08,
+   "toAt": 0.08
+  },
+  {
+   "from": "s3",
+   "to": "s4",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.08,
+   "toAt": 0.08
+  },
+  {
+   "from": "s4",
+   "to": "s5",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.08,
+   "toAt": 0.08
+  },
+  {
+   "from": "s5",
+   "to": "final",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.08,
+   "toAt": 0.08
+  }
+ ],
+ "texts": [
+  {
+   "x": 1364,
+   "y": 310,
+   "text": "62 条",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1280,
+   "y": 422,
+   "text": "48 条",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1208,
+   "y": 534,
+   "text": "36 条",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1160,
+   "y": 646,
+   "text": "28 条",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1136,
+   "y": 758,
+   "text": "24 条",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 1136,
+   "y": 870,
+   "text": "24 条",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 980,
+   "y": 244,
+   "text": "保留条目数",
+   "size": 13,
+   "weight": 700,
+   "color": "muted"
+  }
+ ]
+}

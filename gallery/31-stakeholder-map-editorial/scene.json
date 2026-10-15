@@ -1,0 +1,163 @@
+{
+ "theme": "editorial",
+ "size": [
+  1600,
+  1080
+ ],
+ "kicker": "Change programme · four-day week pilot",
+ "title": "Stakeholder map: CRM migration",
+ "subtitle": "Plot every stakeholder by influence and interest before the first meeting. The quadrant tells you how to engage; the arrow shows where you need someone to move.",
+ "subtitleWidth": 1080,
+ "figure": "Fig. 31",
+ "blocks": [
+  {
+   "type": "matrix",
+   "x": 64,
+   "y": 300,
+   "w": 1040,
+   "h": 700,
+   "gap": 0,
+   "quadStyle": "outline",
+   "titleFont": "display",
+   "titleSize": 20,
+   "titleCase": "none",
+   "titleWeight": 600,
+   "titleLetterSpacing": 0,
+   "xAxis": [
+    "low interest",
+    "high interest",
+    "interest"
+   ],
+   "yAxis": [
+    "low influence",
+    "high influence",
+    "influence"
+   ],
+   "quadrants": [
+    {
+     "title": "Keep satisfied",
+     "sub": "brief, no surprises"
+    },
+    {
+     "title": "Manage closely",
+     "sub": "co-design the pilot"
+    },
+    {
+     "title": "Monitor",
+     "sub": "light-touch updates"
+    },
+    {
+     "title": "Keep informed",
+     "sub": "regular, honest news"
+    }
+   ],
+   "points": [
+    {
+     "label": "CEO",
+     "x": 0.82,
+     "y": 0.9,
+     "r": 14,
+     "tone": "accent"
+    },
+    {
+     "label": "CFO",
+     "x": 0.3,
+     "y": 0.82,
+     "r": 13,
+     "tone": "accent",
+     "labelPos": "left"
+    },
+    {
+     "label": "Works council",
+     "x": 0.72,
+     "y": 0.7,
+     "r": 13,
+     "tone": "accent"
+    },
+    {
+     "label": "Head of Sales",
+     "x": 0.38,
+     "y": 0.6,
+     "r": 11,
+     "tone": "default"
+    },
+    {
+     "label": "Team leads",
+     "x": 0.86,
+     "y": 0.4,
+     "r": 12,
+     "tone": "default"
+    },
+    {
+     "label": "Employees",
+     "x": 0.93,
+     "y": 0.22,
+     "r": 16,
+     "tone": "default",
+     "labelPos": "left"
+    },
+    {
+     "label": "Key customers",
+     "x": 0.2,
+     "y": 0.3,
+     "r": 11,
+     "tone": "ghost"
+    },
+    {
+     "label": "IT support",
+     "x": 0.42,
+     "y": 0.14,
+     "r": 10,
+     "tone": "ghost"
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "b1-p2",
+   "to": "cfo-target",
+   "fromSide": "r",
+   "toSide": "l",
+   "route": "curve",
+   "color": "accent",
+   "dash": "5 4",
+   "width": 1.6,
+   "label": "move right",
+   "labelAt": 0.55
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "The CFO has a veto and little interest. Move them right before the board meets: show the cost model, not the morale survey.",
+   "x": 1160,
+   "y": 330,
+   "w": 380
+  },
+  {
+   "num": "2",
+   "text": "Works council sits in ‘manage closely’ — invite them to write the evaluation criteria with you.",
+   "x": 1160,
+   "y": 520,
+   "w": 380
+  },
+  {
+   "num": "3",
+   "text": "Employees have the most interest and the least formal power. Their pilot data is the argument.",
+   "x": 1160,
+   "y": 690,
+   "w": 380
+  }
+ ],
+ "nodes": [
+  {
+   "id": "cfo-target",
+   "shape": "text",
+   "x": 790,
+   "y": 418,
+   "w": 0,
+   "h": 0
+  }
+ ]
+}

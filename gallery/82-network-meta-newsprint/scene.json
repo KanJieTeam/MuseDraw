@@ -1,0 +1,261 @@
+{
+ "theme": "newsprint",
+ "size": [
+  1660,
+  960
+ ],
+ "kicker": "Systematic review · network meta-analysis",
+ "figure": "Fig. 2",
+ "title": "Network of evidence for chronic insomnia treatments",
+ "subtitle": "33 randomised trials, six treatments. Every line is at least one direct comparison; everything else is inferred. Counts are illustrative.",
+ "subtitleWidth": 1150,
+ "nodes": [
+  {
+   "id": "PBO",
+   "shape": "circle",
+   "tone": "ink",
+   "x": 746,
+   "y": 566,
+   "w": 148,
+   "h": 148,
+   "label": "Placebo",
+   "sub": "14 trials",
+   "labelPos": "inside",
+   "size": 16,
+   "labelGap": 14
+  },
+  {
+   "id": "EX",
+   "shape": "circle",
+   "tone": "hatch",
+   "x": 466,
+   "y": 366,
+   "w": 108,
+   "h": 108,
+   "label": "Exercise",
+   "sub": "9 trials",
+   "labelPos": "left",
+   "size": 16,
+   "labelGap": 14
+  },
+  {
+   "id": "CBT",
+   "shape": "circle",
+   "tone": "hatch",
+   "x": 1074,
+   "y": 374,
+   "w": 92,
+   "h": 92,
+   "label": "CBT-I",
+   "sub": "7 trials",
+   "labelPos": "right",
+   "size": 16,
+   "labelGap": 14
+  },
+  {
+   "id": "MED",
+   "shape": "circle",
+   "tone": "hatch",
+   "x": 378,
+   "y": 718,
+   "w": 84,
+   "h": 84,
+   "label": "Melatonin",
+   "sub": "6 trials",
+   "labelPos": "left",
+   "size": 16,
+   "labelGap": 14
+  },
+  {
+   "id": "ZOL",
+   "shape": "circle",
+   "tone": "hatch",
+   "x": 1182,
+   "y": 722,
+   "w": 76,
+   "h": 76,
+   "label": "Zolpidem",
+   "sub": "5 trials",
+   "labelPos": "right",
+   "size": 16,
+   "labelGap": 14
+  },
+  {
+   "id": "ACU",
+   "shape": "circle",
+   "tone": "hatch",
+   "x": 786,
+   "y": 296,
+   "w": 68,
+   "h": 68,
+   "label": "Acupuncture",
+   "sub": "4 trials",
+   "labelPos": "above",
+   "size": 16,
+   "labelGap": 14
+  }
+ ],
+ "paths": [
+  {
+   "d": "M820 640L520 420",
+   "stroke": "ink",
+   "width": 12.2,
+   "fill": "none"
+  },
+  {
+   "d": "M820 640L1120 420",
+   "stroke": "ink",
+   "width": 9.399999999999999,
+   "fill": "none"
+  },
+  {
+   "d": "M820 640L420 760",
+   "stroke": "ink",
+   "width": 8.0,
+   "fill": "none"
+  },
+  {
+   "d": "M820 640L1220 760",
+   "stroke": "ink",
+   "width": 6.6,
+   "fill": "none"
+  },
+  {
+   "d": "M520 420L1120 420",
+   "stroke": "ink",
+   "width": 3.8,
+   "fill": "none"
+  },
+  {
+   "d": "M1120 420L1220 760",
+   "stroke": "ink",
+   "width": 3.8,
+   "fill": "none"
+  },
+  {
+   "d": "M520 420L820 330",
+   "stroke": "ink",
+   "width": 3.8,
+   "fill": "none"
+  },
+  {
+   "d": "M820 640L820 330",
+   "stroke": "ink",
+   "width": 5.199999999999999,
+   "fill": "none"
+  },
+  {
+   "d": "M420 760L1220 760",
+   "stroke": "ink",
+   "width": 2.4,
+   "fill": "none"
+  }
+ ],
+ "texts": [
+  {
+   "x": 684.0,
+   "y": 524.0,
+   "text": "8",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 944.0,
+   "y": 516.0,
+   "text": "6",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 634.0,
+   "y": 694.0,
+   "text": "5",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 1034.0,
+   "y": 694.0,
+   "text": "4",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 834.0,
+   "y": 414.0,
+   "text": "2",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 1184.0,
+   "y": 584.0,
+   "text": "2",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 684.0,
+   "y": 369.0,
+   "text": "2",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 834.0,
+   "y": 479.0,
+   "text": "3",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  },
+  {
+   "x": 834.0,
+   "y": 754.0,
+   "text": "1",
+   "size": 14,
+   "color": "ink",
+   "font": "mono",
+   "weight": 700
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "Node size is the number of trials that include the treatment; line width is the number of head-to-head trials.",
+   "x": 1350,
+   "y": 300,
+   "w": 260
+  },
+  {
+   "num": "2",
+   "text": "Acupuncture and Zolpidem were never compared directly. Their contrast rests entirely on indirect evidence through Placebo, CBT-I and Exercise.",
+   "x": 1350,
+   "y": 450,
+   "w": 260
+  },
+  {
+   "num": "3",
+   "text": "Check consistency where closed loops exist (Placebo–Exercise–CBT-I) before ranking treatments.",
+   "x": 1350,
+   "y": 640,
+   "w": 260
+  }
+ ],
+ "autoFit": false
+}

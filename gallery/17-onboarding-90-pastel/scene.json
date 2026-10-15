@@ -1,0 +1,695 @@
+{
+ "theme": "pastel",
+ "size": [
+  1600,
+  960
+ ],
+ "kicker": "产品运营岗 · 入职计划",
+ "title": "新员工 90 天入职计划",
+ "subtitle": "按天排期，三条线并行推进。橙色虚线标出第 30、60、90 天的一对一复盘，复盘标准见下方。",
+ "subtitleWidth": 1200,
+ "nodes": [
+  {
+   "id": "m45",
+   "shape": "diamond",
+   "tone": "mark",
+   "x": 900.3333333333334,
+   "y": 487,
+   "w": 18,
+   "h": 18,
+   "label": "首次在例会独立汇报",
+   "labelPos": "right",
+   "size": 13.5,
+   "labelGap": 8
+  },
+  {
+   "id": "pin30",
+   "shape": "pill",
+   "tone": "orange",
+   "x": 646.0,
+   "y": 706,
+   "w": 68,
+   "h": 24,
+   "label": "30 天",
+   "size": 12
+  },
+  {
+   "id": "r30",
+   "label": "第 30 天复盘",
+   "sub": "能讲清团队的 3 个关键流程，认识 5 位关键同事",
+   "tone": "white",
+   "align": "left",
+   "x": 250,
+   "y": 760,
+   "w": 420,
+   "h": 76,
+   "size": 16
+  },
+  {
+   "id": "pin60",
+   "shape": "pill",
+   "tone": "orange",
+   "x": 1076.0,
+   "y": 706,
+   "w": 68,
+   "h": 24,
+   "label": "60 天",
+   "size": 12
+  },
+  {
+   "id": "r60",
+   "label": "第 60 天复盘",
+   "sub": "交付第一个独立完成的小项目，并拿到反馈",
+   "tone": "white",
+   "align": "left",
+   "x": 690,
+   "y": 760,
+   "w": 420,
+   "h": 76,
+   "size": 16
+  },
+  {
+   "id": "pin90",
+   "shape": "pill",
+   "tone": "orange",
+   "x": 1506.0,
+   "y": 706,
+   "w": 68,
+   "h": 24,
+   "label": "90 天",
+   "size": 12
+  },
+  {
+   "id": "r90",
+   "label": "第 90 天复盘",
+   "sub": "提出一项流程改进，并以负责人身份推进",
+   "tone": "white",
+   "align": "left",
+   "x": 1130,
+   "y": 760,
+   "w": 420,
+   "h": 76,
+   "size": 16
+  }
+ ],
+ "texts": [
+  {
+   "x": 250.0,
+   "y": 326,
+   "text": "0",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 393.33333333333337,
+   "y": 326,
+   "text": "10",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 536.6666666666667,
+   "y": 326,
+   "text": "20",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 680.0,
+   "y": 326,
+   "text": "30",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 823.3333333333334,
+   "y": 326,
+   "text": "40",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 966.6666666666667,
+   "y": 326,
+   "text": "50",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1110.0,
+   "y": 326,
+   "text": "60",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1253.3333333333335,
+   "y": 326,
+   "text": "70",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1396.6666666666667,
+   "y": 326,
+   "text": "80",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 1540.0,
+   "y": 326,
+   "text": "90",
+   "size": 12,
+   "font": "mono",
+   "color": "muted",
+   "anchor": "middle"
+  },
+  {
+   "x": 236,
+   "y": 326,
+   "text": "第 N 天",
+   "size": 12,
+   "color": "muted",
+   "anchor": "end"
+  },
+  {
+   "x": 64,
+   "y": 376,
+   "text": "学习",
+   "size": 18,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 400,
+   "text": "熟悉业务与工具",
+   "size": 13,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 496,
+   "text": "交付",
+   "size": 18,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 520,
+   "text": "从小任务到负责模块",
+   "size": 13,
+   "color": "muted"
+  },
+  {
+   "x": 64,
+   "y": 616,
+   "text": "关系",
+   "size": 18,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 64,
+   "y": 640,
+   "text": "建立工作中的连接",
+   "size": 13,
+   "color": "muted"
+  },
+  {
+   "x": 315.3333333333333,
+   "y": 381,
+   "text": "开通账号与环境",
+   "size": 13.5,
+   "color": "#183347",
+   "weight": 600
+  },
+  {
+   "x": 688.0,
+   "y": 419,
+   "text": "画一张业务流程图",
+   "size": 13.5,
+   "color": "#183347",
+   "weight": 600
+  },
+  {
+   "x": 64,
+   "y": 884,
+   "text": "经理：每个阶段开始前讲清期望，结束时给具体反馈。新人：遇到问题当天写下来，不攒到复盘。",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "bars": [
+  {
+   "x": 250.0,
+   "y": 262,
+   "w": 426.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#CBE0EE",
+   "track": false,
+   "radius": 6,
+   "text": "第 1 个月  了解",
+   "textColor": "#183347",
+   "size": 15,
+   "weight": 700
+  },
+  {
+   "x": 680.0,
+   "y": 262,
+   "w": 426.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#D3E9D3",
+   "track": false,
+   "radius": 6,
+   "text": "第 2 个月  贡献",
+   "textColor": "#1C3829",
+   "size": 15,
+   "weight": 700
+  },
+  {
+   "x": 1110.0,
+   "y": 262,
+   "w": 426.0,
+   "h": 34,
+   "value": 1,
+   "fill": "#F7D4BA",
+   "track": false,
+   "radius": 6,
+   "text": "第 3 个月  主导",
+   "textColor": "#49290E",
+   "size": 15,
+   "weight": 700
+  },
+  {
+   "x": 264.3333333333333,
+   "y": 362,
+   "w": 43.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#CBE0EE",
+   "track": false,
+   "radius": 6
+  },
+  {
+   "x": 422.0,
+   "y": 362,
+   "w": 215.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#CBE0EE",
+   "track": false,
+   "radius": 6,
+   "text": "读团队手册与近 3 次复盘",
+   "textColor": "#183347",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 336.0,
+   "y": 400,
+   "w": 258.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#CBE0EE",
+   "track": false,
+   "radius": 6,
+   "text": "旁听 2 次客户会议",
+   "textColor": "#183347",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 637.0,
+   "y": 400,
+   "w": 43.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#CBE0EE",
+   "track": false,
+   "radius": 6,
+   "text": "",
+   "textColor": "#183347",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 508.0,
+   "y": 482,
+   "w": 344.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#D3E9D3",
+   "track": false,
+   "radius": 6,
+   "text": "认领一个边界清晰的小任务",
+   "textColor": "#1C3829",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 794.6666666666667,
+   "y": 520,
+   "w": 258.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#D3E9D3",
+   "track": false,
+   "radius": 6,
+   "text": "改进一处团队文档",
+   "textColor": "#1C3829",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 1138.6666666666667,
+   "y": 482,
+   "w": 401.33333333333337,
+   "h": 28,
+   "value": 1,
+   "fill": "#F7D4BA",
+   "track": false,
+   "radius": 6,
+   "text": "独立负责一个模块",
+   "textColor": "#49290E",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 264.3333333333333,
+   "y": 602,
+   "w": 415.6666666666667,
+   "h": 28,
+   "value": 1,
+   "fill": "#E2D4EC",
+   "track": false,
+   "radius": 6,
+   "text": "导师每日 15 分钟",
+   "textColor": "#412454",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 766.0,
+   "y": 640,
+   "w": 272.33333333333337,
+   "h": 28,
+   "value": 1,
+   "fill": "#E2D4EC",
+   "track": false,
+   "radius": 6,
+   "text": "与跨部门同事完成一次协作",
+   "textColor": "#412454",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  },
+  {
+   "x": 1282.0,
+   "y": 602,
+   "w": 258.0,
+   "h": 28,
+   "value": 1,
+   "fill": "#F7D4BA",
+   "track": false,
+   "radius": 6,
+   "text": "带一位更新的同事",
+   "textColor": "#49290E",
+   "size": 13.5,
+   "weight": 600,
+   "textPos": "inside"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     250.0,
+     338
+    ],
+    [
+     250.0,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     393.33333333333337,
+     338
+    ],
+    [
+     393.33333333333337,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     536.6666666666667,
+     338
+    ],
+    [
+     536.6666666666667,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     680.0,
+     338
+    ],
+    [
+     680.0,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     823.3333333333334,
+     338
+    ],
+    [
+     823.3333333333334,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     966.6666666666667,
+     338
+    ],
+    [
+     966.6666666666667,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1110.0,
+     338
+    ],
+    [
+     1110.0,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1253.3333333333335,
+     338
+    ],
+    [
+     1253.3333333333335,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1396.6666666666667,
+     338
+    ],
+    [
+     1396.6666666666667,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1540.0,
+     338
+    ],
+    [
+     1540.0,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     64,
+     460
+    ],
+    [
+     1540,
+     460
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     64,
+     580
+    ],
+    [
+     1540,
+     580
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     64,
+     700
+    ],
+    [
+     1540,
+     700
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     64,
+     346
+    ],
+    [
+     1540,
+     346
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     680.0,
+     338
+    ],
+    [
+     680.0,
+     708
+    ]
+   ],
+   "color": "accent",
+   "width": 1.6,
+   "dash": "5 4"
+  },
+  {
+   "points": [
+    [
+     1110.0,
+     338
+    ],
+    [
+     1110.0,
+     708
+    ]
+   ],
+   "color": "accent",
+   "width": 1.6,
+   "dash": "5 4"
+  },
+  {
+   "points": [
+    [
+     1540.0,
+     338
+    ],
+    [
+     1540.0,
+     708
+    ]
+   ],
+   "color": "accent",
+   "width": 1.6,
+   "dash": "5 4"
+  }
+ ]
+}

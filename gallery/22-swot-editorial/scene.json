@@ -1,0 +1,84 @@
+{
+ "theme": "editorial",
+ "size": [
+  1600,
+  1080
+ ],
+ "kicker": "战略分析 · 社区咖啡品牌进入第二城市",
+ "title": "区域连锁咖啡品牌 SWOT 分析",
+ "subtitle": "内部看优势与短板，外部看机会与威胁。右下角的组合最危险：把短板暴露在威胁面前。",
+ "subtitleWidth": 1100,
+ "figure": "Fig. 22",
+ "blocks": [
+  {
+   "type": "matrix",
+   "x": 64,
+   "y": 300,
+   "w": 1472,
+   "h": 680,
+   "gap": 14,
+   "quadStyle": "outline",
+   "bullet": "—",
+   "itemTop": 108,
+   "itemGap": 40,
+   "itemSize": 18,
+   "xAxis": [
+    "有利",
+    "不利",
+    "影响方向"
+   ],
+   "yAxis": [
+    "外部",
+    "内部",
+    "来源"
+   ],
+   "quadrants": [
+    {
+     "title": "S　优势 Strengths",
+     "tone": "default",
+     "big": "S",
+     "items": [
+      "自有烘焙厂，单杯成本低 18%",
+      "会员 32 万，复购率 41%",
+      "社区店模型已验证：14 个月回本"
+     ]
+    },
+    {
+     "title": "W　劣势 Weaknesses",
+     "tone": "default",
+     "big": "W",
+     "items": [
+      "异地供应链尚未建立",
+      "店长培养周期长达 9 个月",
+      "品牌在新城市几乎零认知"
+     ]
+    },
+    {
+     "title": "O　机会 Opportunities",
+     "tone": "default",
+     "big": "O",
+     "items": [
+      "目标城市新建社区 60+ 个",
+      "写字楼外卖早餐需求增长",
+      "本地连锁品牌正在收缩"
+     ]
+    },
+    {
+     "title": "T　威胁 Threats",
+     "tone": "default",
+     "big": "T",
+     "items": [
+      "全国连锁低价扩张",
+      "核心商圈租金上涨 12%",
+      "咖啡豆进口价格波动"
+     ]
+    }
+   ],
+   "titleFont": "display",
+   "titleSize": 26,
+   "titleCase": "none",
+   "titleWeight": 600,
+   "titleLetterSpacing": 0
+  }
+ ]
+}

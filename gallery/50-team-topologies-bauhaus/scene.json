@@ -1,0 +1,151 @@
+{
+ "theme": "bauhaus",
+ "size": [
+  1640,
+  1080
+ ],
+ "kicker": "Org design · Team Topologies",
+ "title": "Team Topologies: four team types",
+ "subtitle": "Stream-aligned teams ship to customers. Everyone else exists to make them faster — and says how: collaborate, facilitate, or offer X-as-a-service.",
+ "subtitleWidth": 800,
+ "figure": "No. 50",
+ "nodes": [
+  {
+   "id": "s1",
+   "label": "Checkout",
+   "tag": "stream-aligned",
+   "tone": "yellow",
+   "x": 100,
+   "y": 420,
+   "w": 300,
+   "h": 110
+  },
+  {
+   "id": "s2",
+   "label": "Search",
+   "tag": "stream-aligned",
+   "tone": "yellow",
+   "x": 100,
+   "y": 570,
+   "w": 300,
+   "h": 110
+  },
+  {
+   "id": "s3",
+   "label": "Seller tools",
+   "tag": "stream-aligned",
+   "tone": "yellow",
+   "x": 100,
+   "y": 720,
+   "w": 300,
+   "h": 110
+  },
+  {
+   "id": "en",
+   "label": "Enabling",
+   "tag": "testing coaches",
+   "shape": "circle",
+   "tone": "blue",
+   "x": 560,
+   "y": 380,
+   "w": 180,
+   "h": 180
+  },
+  {
+   "id": "cs",
+   "label": "Complicated subsystem",
+   "tag": "ranking ML",
+   "shape": "diamond",
+   "tone": "red",
+   "x": 540,
+   "y": 620,
+   "w": 230,
+   "h": 180
+  },
+  {
+   "id": "pf",
+   "label": "Platform",
+   "tag": "payments, deploy, data",
+   "tone": "ink",
+   "x": 100,
+   "y": 900,
+   "w": 1400,
+   "h": 80
+  }
+ ],
+ "edges": [
+  {
+   "from": "en",
+   "to": "s1",
+   "kind": "reply",
+   "label": "facilitate",
+   "fromSide": "l",
+   "toSide": "r"
+  },
+  {
+   "from": "cs",
+   "to": "s2",
+   "kind": "sync",
+   "label": "x-as-a-service",
+   "fromSide": "l",
+   "toSide": "r"
+  },
+  {
+   "from": "s3",
+   "to": "pf",
+   "kind": "event",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "self-service API"
+  },
+  {
+   "from": "s1",
+   "to": "pf",
+   "kind": "event",
+   "fromSide": "l",
+   "toSide": "t",
+   "fromAt": 0.5,
+   "toAt": 0.02,
+   "via": [
+    [
+     70,
+     475
+    ],
+    [
+     70,
+     880
+    ]
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "num": "■",
+   "text": "Stream-aligned: owns a slice of the customer journey end to end. Most teams should be this.",
+   "x": 900,
+   "y": 400,
+   "w": 620
+  },
+  {
+   "num": "●",
+   "text": "Enabling: coaches for a few months, then leaves. Success = not being needed.",
+   "x": 900,
+   "y": 530,
+   "w": 620
+  },
+  {
+   "num": "◆",
+   "text": "Complicated subsystem: deep specialists behind a clean interface.",
+   "x": 900,
+   "y": 660,
+   "w": 620
+  },
+  {
+   "num": "▬",
+   "text": "Platform: a product for internal teams, consumed self-service.",
+   "x": 900,
+   "y": 770,
+   "w": 620
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "theme": "newsprint",
+ "size": [
+  1640,
+  930
+ ],
+ "kicker": "Streaming replication & automatic failover",
+ "title": "PostgreSQL streaming replication and failover",
+ "subtitle": "Every write lands in the write-ahead log first. Standbys replay that log; a consensus store decides who leads when the primary goes quiet.",
+ "subtitleWidth": 1100,
+ "figure": "Fig. 3",
+ "zones": [
+  {
+   "id": "azs",
+   "label": "Three availability zones, one Patroni cluster",
+   "x": 600,
+   "y": 300,
+   "w": 740,
+   "h": 520,
+   "tone": "light"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "app",
+   "label": "Application",
+   "tag": "client",
+   "sub": "connection pool",
+   "x": 64,
+   "y": 380,
+   "w": 200,
+   "h": 92
+  },
+  {
+   "id": "haproxy",
+   "label": "HAProxy",
+   "tag": "routing",
+   "sub": ":5000 writes\n:5001 reads",
+   "x": 330,
+   "y": 380,
+   "w": 200,
+   "h": 92,
+   "step": 4
+  },
+  {
+   "id": "primary",
+   "label": "Primary",
+   "tag": "AZ-a, leader",
+   "sub": "accepts writes,\nships WAL",
+   "tone": "hatch",
+   "x": 640,
+   "y": 350,
+   "w": 270,
+   "h": 150,
+   "step": 1
+  },
+  {
+   "id": "sync",
+   "label": "Sync standby",
+   "tag": "AZ-b",
+   "sub": "commit waits for its ack",
+   "tone": "bold",
+   "x": 1040,
+   "y": 340,
+   "w": 270,
+   "h": 104,
+   "step": 3
+  },
+  {
+   "id": "async",
+   "label": "Async replica",
+   "tag": "AZ-c",
+   "sub": "serves reads, may lag",
+   "x": 1040,
+   "y": 486,
+   "w": 270,
+   "h": 104
+  },
+  {
+   "id": "archive",
+   "label": "WAL archive",
+   "tag": "object storage",
+   "sub": "base backups + PITR",
+   "shape": "cylinder",
+   "x": 640,
+   "y": 640,
+   "w": 270,
+   "h": 120
+  },
+  {
+   "id": "etcd",
+   "label": "etcd × 3",
+   "tag": "consensus",
+   "sub": "leader key, TTL 30 s",
+   "tone": "ink",
+   "x": 1040,
+   "y": 660,
+   "w": 270,
+   "h": 100,
+   "step": 2
+  }
+ ],
+ "edges": [
+  {
+   "from": "app",
+   "to": "haproxy"
+  },
+  {
+   "from": "haproxy",
+   "to": "primary",
+   "label": "writes",
+   "fromAt": 0.4,
+   "toAt": 0.32
+  },
+  {
+   "from": "haproxy",
+   "to": "async",
+   "fromSide": "b",
+   "toSide": "l",
+   "label": "reads",
+   "labelAt": [
+    585,
+    556
+   ],
+   "toAt": 0.75
+  },
+  {
+   "from": "primary",
+   "to": "sync",
+   "kind": "wal",
+   "label": "sync WAL",
+   "fromAt": 0.28,
+   "toAt": 0.5,
+   "labelAt": [
+    975,
+    370
+   ]
+  },
+  {
+   "from": "primary",
+   "to": "async",
+   "kind": "async",
+   "label": "async WAL",
+   "fromAt": 0.7,
+   "mid": 1000,
+   "toAt": 0.3,
+   "labelOffset": [
+    10,
+    0
+   ]
+  },
+  {
+   "from": "primary",
+   "to": "archive",
+   "kind": "async",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "archive_command",
+   "labelAt": 0.8
+  },
+  {
+   "from": "primary",
+   "to": "etcd",
+   "kind": "control",
+   "fromAt": 0.93,
+   "mid": 1020,
+   "fromSide": "r",
+   "toSide": "l",
+   "toAt": 0.5
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "The primary stops renewing its leader key — crash, network split, or a hung disk.",
+   "x": 1388,
+   "y": 340,
+   "w": 200
+  },
+  {
+   "num": "2",
+   "text": "After 30 seconds the key expires. Standbys race to take it.",
+   "x": 1388,
+   "y": 470,
+   "w": 200
+  },
+  {
+   "num": "3",
+   "text": "The sync standby wins: it already holds every committed transaction.",
+   "x": 1388,
+   "y": 578,
+   "w": 200
+  },
+  {
+   "num": "4",
+   "text": "HAProxy health checks find the new leader. Writes resume, usually within a minute.",
+   "x": 1388,
+   "y": 690,
+   "w": 200
+  }
+ ],
+ "texts": [
+  {
+   "x": 1388,
+   "y": 316,
+   "text": "Failover, in four beats",
+   "font": "display",
+   "size": 22,
+   "color": "ink"
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 862,
+  "items": [
+   {
+    "kind": "default",
+    "label": "client traffic"
+   },
+   {
+    "kind": "wal",
+    "label": "WAL, synchronous"
+   },
+   {
+    "kind": "async",
+    "label": "WAL, async"
+   },
+   {
+    "kind": "control",
+    "label": "control plane"
+   }
+  ]
+ }
+}

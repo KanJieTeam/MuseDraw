@@ -1,94 +1,66 @@
 # 使用 MuseDraw
 
-[English](usage.md) · [返回 README](../README.md) · [风格与示例](https://kanjieteam.github.io/MuseDraw/)
+[English](usage.md) · [返回 README](../README.md) · [图库](../gallery/README.md)
 
-MuseDraw 是供现有 AI 智能体使用的专业绘图 Skill。智能体理解需求并整理组件、归属和关系；安装版绘图代码生成原生图形、文字、连线与图片。当前公开工作流是两种风格的组件图，可用于新的业务主题。
+MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教学与工程图示。当前主工作流是 scene 引擎：智能体理解几句话的需求，选择构图和风格，生成场景，渲染并实际看图后交付 PNG 与可编辑 SVG。
 
-## 安装，然后用几句话开始
+## 安装与开始
 
-需要 Node.js 22.20+。执行安装命令，按提示选择你的智能体或客户端：
+需要 Node.js 22+，以及能读写文件、执行命令的智能体。首次安装 Skill，并在安装后的 `skills/musedraw/` 目录安装字体与渲染依赖：
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
+npm --prefix skills/musedraw install
 ```
 
-在能够读写文件、执行工具的智能体中提出需求：
+第二条命令中的路径以实际 Skill 安装位置为准；在仓库根目录执行时可直接使用以上路径。安装包含开源字体、Playwright，并尝试下载 Chromium，需要网络和相应安装权限。后续绘图可复用安装结果。
+
+然后告诉智能体：
 
 ```text
-用 MuseDraw 画一张医院预约系统的组件图，使用手绘线稿。
-患者端向预约服务提交请求，预约服务查询排班服务并把预约写入预约库。
-给产品方案说明使用，输出 PNG 和可编辑 SVG。
+用 MuseDraw 的“科研期刊”风格画一张技术路线图。
+科学问题是肝星状细胞代谢重编程如何驱动肝纤维化。
+三条研究内容是临床队列、细胞机制、动物验证，最后整合出机制与靶点。
 ```
 
-替换成你的题材与已知关系即可，不需要案例编号、坐标、色值或绘图代码。对真实系统，提供已有资料；只有缺少会改变图中事实的关键信息时才需要澄清。想要从零构思一个示例时，说明“通用参考”，智能体会将提出的内容与真实系统事实区分。
+也可以画采购审批泳道、课堂流程、OKR、项目甘特或系统架构。说明用途、已知内容与关系即可，不需要自己写坐标、颜色代码或 `scene.json`。真实项目使用你提供的事实；通用示例应明确标注，图中的示例数字不能当作研究结果或实际业务数据。
 
-安装命令加载指令、参考与工具，实际执行仍由宿主提供。仅把仓库 URL 发给普通聊天网页，不等于安装或拥有执行环境。MuseDraw 不额外要求模型 API key、MCP server 或 CAD 引擎；宿主自身的访问要求仍适用。
+直接提供仓库 URL 时，智能体应复用已安装的 Skill，或获取仓库并读取[完整 Skill](../skills/musedraw/SKILL.md)。仓库 URL 本身不会给普通聊天网页增加执行能力。MuseDraw 不另行要求模型 API key，宿主自身的访问条件仍适用。
 
-## 选择风格
+## 选图和选风格
 
-| 风格 | 视觉表达 | 怎么说 |
-| --- | --- | --- |
-| 手绘线稿 | 白纸、墨绿线稿、角色图形与存储排线 | “使用手绘线稿。” |
-| 终端色域 | 浅色画布、清晰几何、按已知归属区分暖冷色域 | “使用终端色域。” |
+[图库](../gallery/README.md)包含 100 个当前 scene 引擎案例，每个目录有一句话需求 `prompt.md`、完整来源 `scene.json`、SVG 和预览。案例可借鉴布局，不限定新题材，也不提供你的项目事实。图库区分精选、已审图与待设计审阅的预览状态，不等于全部经过同等人工验收。
 
-没有指定风格时，智能体按内容和用途选择这两种表达之一。终端色域使用浅色画布，名字不代表暗色终端主题。
+20 种风格的字体、线条、质感与标注方式见[风格图谱](../skills/musedraw/references/style-atlas.md)。直接说中文名、英文名或 ID 即可，例如“科研期刊”“商务墨蓝”“黑板教学”或 `blueprint`。未指定时，由智能体根据用途选择。
 
-两种风格使用相同的绘图基础，并可用于不同题材。构图可以按关系从左到右分层（`flow`），也可以把已提供的平面归属域排成区域（`planes`）。用户无需选择内部参数；智能体根据资料选择，不凭风格名虚构控制面、数据面或业务关系。
+结构可用树、思维导图、时间线、甘特、矩阵、漏斗、循环、鱼骨、泳道和表格布局块，也可使用时序图或自由图元。智能体按[构图参考](../skills/musedraw/references/composition-patterns.md)与[场景格式](../skills/musedraw/references/scene-schema.md)制作，不需要用户填写内部参数。
 
-[公开示例](https://kanjieteam.github.io/MuseDraw/)可以查看短需求、PNG、SVG 与语义文档。示例里的资料归档和设备平台只是具体内容，不是这两种风格仅能处理的业务。
-
-## 在同一段对话中修改
-
-例如：
+## 继续修改与交付
 
 ```text
-把预约服务改名为预约管理服务，其他组件和关系保持不变。
+保持研究内容与关系不变，换成水墨宣纸风格。
 ```
 
 ```text
-新增通知服务，由预约管理服务发送预约确认给它。
+把动物验证移到细胞机制之后，保留其他内容。
 ```
 
-```text
-保持组件和关系不变，换成终端色域。
-```
+智能体编辑已有场景，保留无关内容和稳定 ID，再重新渲染。交付以 `diagram@2x.png` 和 `diagram.svg` 为主，并保留 `scene.json` 便于后续编辑与复刻；检查结果写入 `checks.json`。SVG 使用原生文字和图形，可继续编辑。主引擎不承诺原生 drawio 输出。
 
-智能体在已有语义文档上修改，再生成新的输出目录。小幅内容修改使用改名、增删节点和关系的操作，保留未修改对象的身份。重新排版可能移动图形，但不会因此改变事实。新增节点的关系以你给出的内容为准。
+## 渲染与复刻
 
-## 拿到什么，怎样重渲染
-
-输出包括完整 PNG、1200px 预览、可编辑原生 SVG、`document.json`，以及内容、呈现配置和检查结果。SVG 中的文字与图形可编辑；语义文档保存组件、分组、关系及风格选择。
-
-要重做同一张图，把下载的 `document.json` 交给智能体：
-
-```text
-用 MuseDraw 重渲染这份语义文档，保留内容与呈现设置。
-```
-
-同一份规范化文档在相同代码版本、字体与运行环境下可重复生成相同原生几何。已经验证的两份文档重渲染 SVG 字节一致；PNG 抗锯齿仍可能有微小差异。这与让另一个模型只凭短需求重新理解、重新绘图是两件事，后者不能保证完全相同，更不代表任意模型成功率为 100%。
-
-[实现、验证范围与边界](semantic-graph.zh-CN.md) · [真实输出和模型验证记录](verification/graph-workflow-20261014/README.md)
-
-## 宿主和绘图运行条件
-
-智能体应完整读取 [skills/musedraw/SKILL.md](../skills/musedraw/SKILL.md)，并保留整个 `skills/musedraw/` 文件夹。仓库根目录 [SKILL.md](../SKILL.md) 是导航入口，不是第二个可安装 Skill。组件图使用[语义图工作流](../skills/musedraw/references/graph-workflow.md)，无需用户手动编写下面的工具命令。
-
-PNG 与渲染检查需要已有 Node.js 22+、Playwright、Chromium 兼容浏览器（可复用 Chrome/Edge），以及覆盖图中文字的字体。不会静默安装缺失依赖。缺少运行条件时，应说明未生成的文件和未完成的检查。
-
-智能体整理语义 JSON 后，使用安装版命令生成文件；`<skill>` 表示安装后的 Skill 目录，输出目录必须是新目录：
+以下命令供智能体或开发者使用，`<skill>` 是实际安装目录：
 
 ```sh
-node <skill>/scripts/render_graph.mjs brief.json new-output --playwright <existing-module> --browser <existing-browser>
+node <skill>/scripts/musedraw.mjs render path/to/scene.json --out output/new-run
+node <skill>/scripts/musedraw.mjs render path/to/scene.json --theme 水墨宣纸 --out output/restyled
+node <skill>/scripts/musedraw.mjs themes
 ```
 
-重渲染使用已保存的文档：
+默认输出到场景目录；用 `--out` 指向新目录可保留之前的版本。重渲染会写入该目录中的同名产物，先确认目标。完整仓库可用 `npm run gallery` 重新渲染全部图库。
 
-```sh
-node <skill>/scripts/render_graph.mjs current-output/document.json next-output --playwright <existing-module> --browser <existing-browser>
-```
+同一份场景在相同引擎、主题、字体与渲染环境下可重复生成；跨平台字体或抗锯齿可能影响结果。给另一个模型一句话，让它重新理解并设计一张图，是另一项任务，不保证与案例逐像素相同，也不代表任意模型均成功。
 
-应读取检查结果并实际查看全图和密集局部，检查文字、归属边界、箭头、连线与跨线。程序成功退出不等于架构事实正确或审美验收。
+没有浏览器时可加 `--svg-only`，并说明 PNG 与浏览器版面检查未完成。不要把 SVG-only 输出视为已看图验收。正常渲染后应打开 PNG，阅读 `checks.json`，修复文字溢出、碰撞、连线标签压框、节点重叠和越界等警告，再检查事实、连线与[视觉清单](../skills/musedraw/references/anti-ai-checklist.md)。脚本成功不等于审美验收。
 
-当前支持最多 80 个节点、12 个平面归属域和 160 条显式关系。嵌套域、自连接、同端点重复关系及过密布局可能被拒绝；应保留输入和错误，不为通过检查删去事实。科研流程与统计图尚未作为工作流发布。
-
-贡献修改前请阅读[贡献指南](../CONTRIBUTING.zh-CN.md)，运行 `python scripts/check.py`；影响图片的修改还需实际渲染和看图。
+当前不是原始数据统计绘图工具，柱状图、散点图等请使用 matplotlib 或 ggplot。旧小型组件图引擎只作为[兼容路线](semantic-graph.zh-CN.md)保留，新工作使用 scene 引擎。贡献前阅读[贡献指南](../CONTRIBUTING.zh-CN.md)。

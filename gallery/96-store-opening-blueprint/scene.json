@@ -1,0 +1,115 @@
+{
+ "theme": "blueprint",
+ "size": [
+  1700,
+  1140
+ ],
+ "meta": {
+  "dwg": "OPS-STORE-031",
+  "rev": "B",
+  "scale": "WEEKS",
+  "date": "2026-10",
+  "by": "Ops PMO"
+ },
+ "title": "New café opening schedule",
+ "shortTitle": "Store 031 opening",
+ "subtitle": "Sixteen weeks from lease to grand opening. Critical path in yellow: fit-out, then the food safety permit, which cannot be applied for until fit-out passes fire inspection.",
+ "subtitleWidth": 1200,
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 64,
+   "y": 250,
+   "w": 1570,
+   "labelW": 340,
+   "rowH": 46,
+   "groupH": 36,
+   "barRatio": 0.5,
+   "columns": [
+    "MONTH 1",
+    "MONTH 2",
+    "MONTH 3",
+    "MONTH 4"
+   ],
+   "colSize": 12,
+   "labelSize": 13.5,
+   "milestoneTone": "accent",
+   "tasks": [
+    {
+     "group": "SITE",
+     "label": "Lease signed",
+     "start": 0,
+     "milestone": true
+    },
+    {
+     "group": "SITE",
+     "label": "Fit-out and MEP",
+     "start": 0.3,
+     "end": 3.2,
+     "tone": "accent"
+    },
+    {
+     "group": "SITE",
+     "label": "Fire inspection",
+     "start": 3.2,
+     "end": 3.5,
+     "tone": "default"
+    },
+    {
+     "group": "PERMITS",
+     "label": "Business licence",
+     "start": 0.2,
+     "end": 1.2,
+     "tone": "default"
+    },
+    {
+     "group": "PERMITS",
+     "label": "Food safety permit",
+     "start": 2.6,
+     "end": 3.8,
+     "tone": "accent"
+    },
+    {
+     "group": "PEOPLE",
+     "label": "Hire manager",
+     "start": 0.3,
+     "end": 1,
+     "tone": "default"
+    },
+    {
+     "group": "PEOPLE",
+     "label": "Hire 14 staff",
+     "start": 1.5,
+     "end": 3,
+     "tone": "default"
+    },
+    {
+     "group": "PEOPLE",
+     "label": "Training at flagship",
+     "start": 3,
+     "end": 3.8,
+     "tone": "default"
+    },
+    {
+     "group": "SYSTEMS",
+     "label": "POS and inventory set-up",
+     "start": 2.8,
+     "end": 3.6,
+     "tone": "default"
+    },
+    {
+     "group": "OPEN",
+     "label": "Soft opening",
+     "start": 3.85,
+     "milestone": true
+    },
+    {
+     "group": "OPEN",
+     "label": "Grand opening",
+     "start": 4,
+     "milestone": true
+    }
+   ]
+  }
+ ]
+}

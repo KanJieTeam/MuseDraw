@@ -1,0 +1,27 @@
+{
+  "id": "terminal",
+  "name": "Terminal",
+  "nameZh": "终端暗色",
+  "aliases": ["终端", "dark terminal"],
+  "summary": "GitHub-dark canvas, monospace everything, status colours that mean pass / warn / fail. For pipelines, CLIs and READMEs.",
+  "palette": { "bg": "#0D1117", "card": "#161B22", "line": "#30363D", "ink": "#E6EDF3", "muted": "#8B949E", "accent": "#3FB950", "amber": "#D29922", "red": "#F85149", "blue": "#58A6FF", "violet": "#BC8CFF" },
+  "fonts": { "display": "JetBrains Mono, Noto Sans SC, monospace", "body": "JetBrains Mono, Noto Sans SC, monospace", "mono": "JetBrains Mono, Noto Sans SC, monospace" },
+  "canvas": { "bg": "bg", "margin": 64, "texture": "dots", "textureGap": 22, "textureColor": "#30363D", "textureOpacity": 0.9 },
+  "header": { "layout": "terminal", "titleFont": "display", "titleSize": 38, "titleWeight": 700, "kickerFont": "mono", "kickerSize": 13, "promptColor": "accent", "subFont": "mono", "subSize": 14, "subColor": "muted", "subPrefix": "# ", "windowDots": ["red", "amber", "accent"] },
+  "node": { "font": "mono", "size": 14, "weight": 700, "subFont": "mono", "subSize": 11.5, "tagFont": "mono", "tagSize": 10.5, "tagPos": "above", "tagWeight": 500, "radius": 7, "stroke": 1.2, "padding": 14, "align": "left", "iconSize": 18, "gap": 5 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "line", "text": "ink", "sub": "muted", "tag": "muted", "icon": "muted" },
+    "accent": { "fill": "#0F2417", "stroke": "accent", "text": "ink", "sub": "#9BD3A8", "tag": "accent", "icon": "accent" },
+    "warn": { "fill": "#221B0C", "stroke": "amber", "text": "ink", "sub": "#D9BE85", "tag": "amber", "icon": "amber" },
+    "danger": { "fill": "#260F10", "stroke": "red", "text": "ink", "sub": "#E8A3A0", "tag": "red", "icon": "red" },
+    "info": { "fill": "#0C1A2E", "stroke": "blue", "text": "ink", "sub": "#9CC3EE", "tag": "blue", "icon": "blue" },
+    "violet": { "fill": "#1A1229", "stroke": "violet", "text": "ink", "sub": "#CDB5F0", "tag": "violet", "icon": "violet" }
+  },
+  "zone": { "style": "outline", "radius": 10, "stroke": 1, "dash": "3 4", "labelFont": "mono", "labelSize": 11.5, "letterSpacing": 0.5, "labelWeight": 500, "labelPad": 16, "tones": { "default": { "stroke": "line", "dash": "3 4", "text": "muted" }, "panel": { "fill": "#11161D", "stroke": "line", "text": "muted" } } },
+  "edge": { "color": "#6E7681", "width": 1.4, "radius": 10, "arrow": "triangle", "arrowSize": 7.5, "gap": 3, "labelFont": "mono", "labelSize": 11, "labelColor": "muted", "labelPlacement": "on", "labelStyle": "chip", "labelBg": "bg",
+    "kinds": { "primary": { "color": "accent", "width": 1.8 }, "deploy": { "color": "blue", "width": 1.6 }, "fail": { "color": "red", "dash": "5 4", "width": 1.5 }, "watch": { "color": "violet", "dash": "2 4" } } },
+  "step": { "shape": "square", "fill": "accent", "text": "#0D1117", "size": 20, "font": "mono", "weight": 800 },
+  "note": { "style": "comment", "font": "mono", "size": 12, "color": "muted", "prefix": "# ", "lineHeight": 1.5, "leader": "line" },
+  "legend": { "font": "mono", "size": 11, "color": "muted", "titleColor": "ink" },
+  "footer": { "text": "musedraw --style terminal", "font": "mono", "size": 11, "color": "#484F58", "letterSpacing": 0 }
+}

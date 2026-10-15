@@ -1,0 +1,230 @@
+{
+ "theme": "bauhaus",
+ "size": [
+  1600,
+  1140
+ ],
+ "kicker": "Microservices · choreography with events",
+ "title": "E-commerce\nmicroservices",
+ "subtitle": "Shape tells the role: squares answer requests, circles react to events, the diamond routes traffic. Red lines are events on the bus.",
+ "subtitleWidth": 760,
+ "figure": "No. 09",
+ "nodes": [
+  {
+   "id": "clients",
+   "label": "Web + apps",
+   "tag": "clients",
+   "x": 100,
+   "y": 372,
+   "w": 200,
+   "h": 96
+  },
+  {
+   "id": "gateway",
+   "label": "API gateway",
+   "tag": "router",
+   "shape": "diamond",
+   "tone": "yellow",
+   "x": 690,
+   "y": 340,
+   "w": 220,
+   "h": 160
+  },
+  {
+   "id": "catalog",
+   "label": "Catalog",
+   "tag": "sync",
+   "sub": "products, prices",
+   "tone": "blue",
+   "x": 150,
+   "y": 580,
+   "w": 200,
+   "h": 124
+  },
+  {
+   "id": "cart",
+   "label": "Cart",
+   "tag": "sync",
+   "sub": "Redis-backed",
+   "x": 470,
+   "y": 580,
+   "w": 200,
+   "h": 124
+  },
+  {
+   "id": "orders",
+   "label": "Orders",
+   "tag": "sync",
+   "sub": "owns order state",
+   "tone": "red",
+   "x": 790,
+   "y": 580,
+   "w": 200,
+   "h": 124
+  },
+  {
+   "id": "payments",
+   "label": "Payments",
+   "tag": "sync",
+   "sub": "talks to the PSP",
+   "tone": "blue",
+   "x": 1110,
+   "y": 580,
+   "w": 200,
+   "h": 124
+  },
+  {
+   "id": "bus",
+   "label": "Event bus",
+   "tag": "Kafka",
+   "tone": "ink",
+   "align": "left",
+   "x": 100,
+   "y": 790,
+   "w": 1400,
+   "h": 52
+  },
+  {
+   "id": "inventory",
+   "label": "Inventory",
+   "sub": "reserve stock",
+   "shape": "circle",
+   "tone": "yellow",
+   "x": 250,
+   "y": 912,
+   "w": 170,
+   "h": 170
+  },
+  {
+   "id": "shipping",
+   "label": "Shipping",
+   "sub": "label + pickup",
+   "shape": "circle",
+   "x": 600,
+   "y": 912,
+   "w": 170,
+   "h": 170
+  },
+  {
+   "id": "notify",
+   "label": "Notify",
+   "sub": "email, push",
+   "shape": "circle",
+   "tone": "red",
+   "x": 950,
+   "y": 912,
+   "w": 170,
+   "h": 170
+  },
+  {
+   "id": "analytics",
+   "label": "Analytics",
+   "sub": "to warehouse",
+   "shape": "circle",
+   "tone": "blue",
+   "x": 1300,
+   "y": 912,
+   "w": 170,
+   "h": 170
+  }
+ ],
+ "edges": [
+  {
+   "from": "clients",
+   "to": "gateway",
+   "kind": "sync",
+   "label": "HTTPS"
+  },
+  {
+   "from": "gateway",
+   "to": "catalog",
+   "kind": "sync",
+   "fromSide": "b",
+   "toSide": "t",
+   "mid": 540
+  },
+  {
+   "from": "gateway",
+   "to": "cart",
+   "kind": "sync",
+   "fromSide": "b",
+   "toSide": "t",
+   "mid": 540
+  },
+  {
+   "from": "gateway",
+   "to": "orders",
+   "kind": "sync",
+   "fromSide": "b",
+   "toSide": "t",
+   "mid": 540
+  },
+  {
+   "from": "orders",
+   "to": "payments",
+   "kind": "sync",
+   "label": "authorize",
+   "step": 1,
+   "fromAt": 0.5,
+   "labelPlacement": "above"
+  },
+  {
+   "from": "orders",
+   "to": "bus",
+   "kind": "event",
+   "label": "OrderPlaced",
+   "step": 2
+  },
+  {
+   "from": "payments",
+   "to": "bus",
+   "kind": "event",
+   "label": "PaymentCaptured",
+   "step": 3
+  },
+  {
+   "from": "bus",
+   "to": "inventory",
+   "kind": "event"
+  },
+  {
+   "from": "bus",
+   "to": "shipping",
+   "kind": "event",
+   "step": 4
+  },
+  {
+   "from": "bus",
+   "to": "notify",
+   "kind": "event"
+  },
+  {
+   "from": "bus",
+   "to": "analytics",
+   "kind": "event"
+  }
+ ],
+ "notes": [
+  {
+   "num": "!",
+   "text": "No service calls Inventory or Shipping directly. They listen, so Orders can ship features without coordinating a release.",
+   "x": 1110,
+   "y": 340,
+   "w": 400
+  }
+ ],
+ "legend": {
+  "x": 100,
+  "y": 1100,
+  "items": [
+   {
+    "kind": "sync",
+    "label": "request / response"
+   },
+   {
+    "kind": "event",
+    "label": "event"
+   }
+  ]
+ }
+}

@@ -1,0 +1,243 @@
+{
+ "theme": "journal",
+ "size": [
+  1640,
+  1060
+ ],
+ "title": "图 3 | 技术路线图",
+ "subtitle": "示例课题：基于多组学的肝纤维化代谢重编程机制研究（国家自然科学基金面上项目申请书格式）。三条研究内容并行，最终汇聚到一个可验证的机制。",
+ "nodes": [
+  {
+   "id": "q",
+   "label": "科学问题：肝星状细胞活化的代谢重编程如何驱动肝纤维化？",
+   "tone": "ink",
+   "x": 120,
+   "y": 250,
+   "w": 1400,
+   "h": 64,
+   "size": 18
+  },
+  {
+   "id": "s00",
+   "label": "120 例肝活检样本\nF0–F4 分期",
+   "tone": "blue",
+   "x": 180,
+   "y": 440,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s01",
+   "label": "转录组 + 代谢组",
+   "tone": "blue",
+   "x": 180,
+   "y": 552,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s02",
+   "label": "差异基因与通路富集",
+   "tone": "blue",
+   "x": 180,
+   "y": 664,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s10",
+   "label": "原代肝星状细胞\nTGF-β 诱导活化",
+   "tone": "orange",
+   "x": 660,
+   "y": 440,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s11",
+   "label": "关键代谢酶敲低 / 过表达",
+   "tone": "orange",
+   "x": 660,
+   "y": 552,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s12",
+   "label": "Seahorse 代谢流 · 胶原表达",
+   "tone": "orange",
+   "x": 660,
+   "y": 664,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s20",
+   "label": "CCl₄ 与 BDL 两种模型",
+   "tone": "green",
+   "x": 1140,
+   "y": 440,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s21",
+   "label": "肝特异性敲除小鼠",
+   "tone": "green",
+   "x": 1140,
+   "y": 552,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "s22",
+   "label": "病理评分 · 羟脯氨酸",
+   "tone": "green",
+   "x": 1140,
+   "y": 664,
+   "w": 320,
+   "h": 76,
+   "size": 15
+  },
+  {
+   "id": "int",
+   "label": "整合分析：锁定关键代谢酶及其上游调控",
+   "tone": "purple",
+   "x": 120,
+   "y": 830,
+   "w": 1400,
+   "h": 64,
+   "size": 17
+  },
+  {
+   "id": "out",
+   "label": "预期成果：阐明新机制 · 提出干预靶点 · 论文 4–6 篇 · 专利 1 项",
+   "tone": "accent",
+   "x": 320,
+   "y": 940,
+   "w": 1000,
+   "h": 60,
+   "size": 16
+  }
+ ],
+ "edges": [
+  {
+   "from": "s00",
+   "to": "s01",
+   "kind": "primary"
+  },
+  {
+   "from": "s01",
+   "to": "s02",
+   "kind": "primary"
+  },
+  {
+   "from": "q",
+   "to": "s00",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "primary"
+  },
+  {
+   "from": "s10",
+   "to": "s11",
+   "kind": "orange"
+  },
+  {
+   "from": "s11",
+   "to": "s12",
+   "kind": "orange"
+  },
+  {
+   "from": "q",
+   "to": "s10",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "orange"
+  },
+  {
+   "from": "s20",
+   "to": "s21",
+   "kind": "green"
+  },
+  {
+   "from": "s21",
+   "to": "s22",
+   "kind": "green"
+  },
+  {
+   "from": "q",
+   "to": "s20",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "green"
+  },
+  {
+   "from": "s02",
+   "to": "int",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "primary"
+  },
+  {
+   "from": "s12",
+   "to": "int",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "orange"
+  },
+  {
+   "from": "s22",
+   "to": "int",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "green"
+  },
+  {
+   "from": "int",
+   "to": "out",
+   "fromSide": "b",
+   "toSide": "t"
+  }
+ ],
+ "zones": [
+  {
+   "id": "z0",
+   "label": "研究内容一",
+   "sub": "临床队列与多组学",
+   "tone": "blue",
+   "x": 120,
+   "y": 350,
+   "w": 440,
+   "h": 440
+  },
+  {
+   "id": "z1",
+   "label": "研究内容二",
+   "sub": "细胞机制",
+   "tone": "orange",
+   "x": 600,
+   "y": 350,
+   "w": 440,
+   "h": 440
+  },
+  {
+   "id": "z2",
+   "label": "研究内容三",
+   "sub": "动物模型验证",
+   "tone": "green",
+   "x": 1080,
+   "y": 350,
+   "w": 440,
+   "h": 440
+  }
+ ]
+}

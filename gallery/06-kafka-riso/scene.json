@@ -1,0 +1,266 @@
+{
+ "theme": "riso",
+ "size": [
+  1700,
+  1060
+ ],
+ "kicker": "Event streaming · a field guide",
+ "title": "Event streaming with Kafka",
+ "subtitle": "Producers append to topics. Topics are split into partitions and replicated across brokers. Every consumer group reads at its own pace, from its own offset.",
+ "subtitleWidth": 1100,
+ "figure": "Zine no. 6",
+ "zones": [
+  {
+   "id": "cluster",
+   "label": "Kafka cluster · 3 brokers · RF 3",
+   "x": 400,
+   "y": 300,
+   "w": 620,
+   "h": 640
+  }
+ ],
+ "nodes": [
+  {
+   "id": "orders-svc",
+   "label": "Orders service",
+   "tag": "producer",
+   "sub": "acks=all, idempotent",
+   "x": 64,
+   "y": 360,
+   "w": 268,
+   "h": 84
+  },
+  {
+   "id": "payments-svc",
+   "label": "Payments service",
+   "tag": "producer",
+   "sub": "acks=all",
+   "x": 64,
+   "y": 464,
+   "w": 268,
+   "h": 84
+  },
+  {
+   "id": "inv-db",
+   "label": "Inventory DB",
+   "tag": "Postgres, CDC",
+   "sub": "read by Debezium",
+   "shape": "cylinder",
+   "x": 64,
+   "y": 560,
+   "w": 268,
+   "h": 96
+  },
+  {
+   "id": "web",
+   "label": "Web clickstream",
+   "tag": "REST proxy",
+   "sub": "batched, lz4",
+   "x": 64,
+   "y": 676,
+   "w": 268,
+   "h": 84
+  },
+  {
+   "id": "t-orders",
+   "label": "orders.v1",
+   "tag": "12 partitions, key = order_id",
+   "sub": "retention 7 d",
+   "shape": "queue",
+   "tone": "blue",
+   "x": 440,
+   "y": 364,
+   "w": 540,
+   "h": 76
+  },
+  {
+   "id": "t-payments",
+   "label": "payments.v1",
+   "tag": "6 partitions",
+   "sub": "compacted",
+   "shape": "queue",
+   "x": 440,
+   "y": 468,
+   "w": 540,
+   "h": 76
+  },
+  {
+   "id": "t-inventory",
+   "label": "inventory.cdc",
+   "tag": "6 partitions",
+   "sub": "row changes",
+   "shape": "queue",
+   "x": 440,
+   "y": 572,
+   "w": 540,
+   "h": 76
+  },
+  {
+   "id": "t-clicks",
+   "label": "clicks.raw",
+   "tag": "24 partitions",
+   "sub": "retention 1 d",
+   "shape": "queue",
+   "x": 440,
+   "y": 680,
+   "w": 540,
+   "h": 76
+  },
+  {
+   "id": "registry",
+   "label": "Schema Registry",
+   "tag": "contracts",
+   "sub": "Avro, BACKWARD",
+   "x": 440,
+   "y": 816,
+   "w": 262,
+   "h": 84
+  },
+  {
+   "id": "connect",
+   "label": "Kafka Connect",
+   "tag": "integration",
+   "sub": "Debezium in, S3 out",
+   "x": 718,
+   "y": 816,
+   "w": 262,
+   "h": 84
+  },
+  {
+   "id": "fraud",
+   "label": "Fraud scoring",
+   "tag": "Flink, group fraud-v2",
+   "sub": "joins orders + payments",
+   "tone": "accent",
+   "x": 1110,
+   "y": 360,
+   "w": 262,
+   "h": 92
+  },
+  {
+   "id": "notify",
+   "label": "Notifications",
+   "tag": "group notify",
+   "sub": "email, push",
+   "x": 1110,
+   "y": 480,
+   "w": 262,
+   "h": 84
+  },
+  {
+   "id": "search",
+   "label": "Search index",
+   "tag": "sink connector",
+   "sub": "Elasticsearch",
+   "x": 1110,
+   "y": 592,
+   "w": 262,
+   "h": 84
+  },
+  {
+   "id": "lake",
+   "label": "Data lake",
+   "tag": "sink connector",
+   "sub": "S3 → Iceberg, hourly",
+   "x": 1110,
+   "y": 704,
+   "w": 262,
+   "h": 84
+  }
+ ],
+ "edges": [
+  {
+   "from": "orders-svc",
+   "to": "t-orders",
+   "kind": "primary",
+   "label": "produce"
+  },
+  {
+   "from": "payments-svc",
+   "to": "t-payments",
+   "kind": "primary"
+  },
+  {
+   "from": "inv-db",
+   "to": "t-inventory",
+   "kind": "primary",
+   "label": "CDC"
+  },
+  {
+   "from": "web",
+   "to": "t-clicks",
+   "kind": "primary"
+  },
+  {
+   "from": "t-orders",
+   "to": "fraud",
+   "kind": "read",
+   "mid": 1045,
+   "fromAt": 0.35
+  },
+  {
+   "from": "t-payments",
+   "to": "fraud",
+   "kind": "read",
+   "mid": 1062,
+   "toAt": 0.75
+  },
+  {
+   "from": "t-orders",
+   "to": "notify",
+   "kind": "read",
+   "mid": 1079,
+   "fromAt": 0.7
+  },
+  {
+   "from": "t-inventory",
+   "to": "search",
+   "kind": "read",
+   "mid": 1062
+  },
+  {
+   "from": "t-clicks",
+   "to": "lake",
+   "kind": "read",
+   "mid": 1045,
+   "label": "consume"
+  }
+ ],
+ "notes": [
+  {
+   "num": "1",
+   "text": "Partitions are the unit of parallelism: 12 partitions means at most 12 busy consumers per group.",
+   "x": 1420,
+   "y": 360,
+   "w": 236
+  },
+  {
+   "num": "2",
+   "text": "Same key, same partition. Every event for order 4182 stays in order.",
+   "x": 1420,
+   "y": 510,
+   "w": 236
+  },
+  {
+   "num": "3",
+   "text": "Offsets belong to the consumer. The lake can replay last week without touching a producer.",
+   "x": 1420,
+   "y": 640,
+   "w": 236
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 990,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "produce"
+   },
+   {
+    "kind": "read",
+    "label": "consume"
+   }
+  ]
+ }
+}

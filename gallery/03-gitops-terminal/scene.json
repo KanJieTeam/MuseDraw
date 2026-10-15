@@ -1,0 +1,372 @@
+{
+ "theme": "terminal",
+ "size": [
+  1700,
+  960
+ ],
+ "kicker": "gh workflow view deploy.yml --repo acme/api",
+ "title": "GitOps delivery pipeline: commit to production",
+ "subtitle": "GitOps delivery: CI builds and signs one image; a bot bumps the tag in the env repo; Argo CD and Argo Rollouts do the rest, gated by live metrics.",
+ "zones": [
+  {
+   "id": "s1",
+   "label": "01 commit",
+   "tone": "panel",
+   "x": 64,
+   "y": 236,
+   "w": 268,
+   "h": 640
+  },
+  {
+   "id": "s2",
+   "label": "02 verify",
+   "tone": "panel",
+   "x": 352,
+   "y": 236,
+   "w": 268,
+   "h": 640
+  },
+  {
+   "id": "s3",
+   "label": "03 build",
+   "tone": "panel",
+   "x": 640,
+   "y": 236,
+   "w": 268,
+   "h": 640
+  },
+  {
+   "id": "s4",
+   "label": "04 release",
+   "tone": "panel",
+   "x": 928,
+   "y": 236,
+   "w": 268,
+   "h": 640
+  },
+  {
+   "id": "s5",
+   "label": "05 deploy",
+   "tone": "panel",
+   "x": 1216,
+   "y": 236,
+   "w": 420,
+   "h": 640
+  }
+ ],
+ "nodes": [
+  {
+   "id": "push",
+   "label": "git push",
+   "tag": "developer",
+   "sub": "feat/login-rate-limit",
+   "icon": "git",
+   "x": 88,
+   "y": 288,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "pr",
+   "label": "pull request",
+   "tag": "github",
+   "sub": "2 approvals required",
+   "x": 88,
+   "y": 430,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "lint",
+   "label": "lint + types",
+   "tag": "job, 48s",
+   "sub": "eslint, tsc --noEmit",
+   "icon": "check",
+   "tone": "accent",
+   "x": 376,
+   "y": 288,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "test",
+   "label": "unit tests",
+   "tag": "job, 3m12s",
+   "sub": "1,284 passed",
+   "icon": "check",
+   "tone": "accent",
+   "x": 376,
+   "y": 400,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "sast",
+   "label": "SAST + deps",
+   "tag": "job, 1m40s",
+   "sub": "CodeQL, osv-scanner",
+   "icon": "alert",
+   "tone": "warn",
+   "x": 376,
+   "y": 512,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "merge",
+   "label": "merge → main",
+   "tag": "required checks ✓",
+   "sub": "squash, signed commit",
+   "x": 376,
+   "y": 660,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "build",
+   "label": "docker buildx",
+   "tag": "job, 2m55s",
+   "sub": "amd64 + arm64, GHA cache",
+   "icon": "box",
+   "x": 664,
+   "y": 288,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "sign",
+   "label": "SBOM + sign",
+   "tag": "supply chain",
+   "sub": "syft, cosign keyless",
+   "icon": "key",
+   "x": 664,
+   "y": 430,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "registry",
+   "label": "ghcr.io/acme/api",
+   "tag": "registry",
+   "sub": "sha-3f9c2e1, 84 MB",
+   "x": 952,
+   "y": 288,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "bump",
+   "label": "bump image tag",
+   "tag": "bot PR",
+   "sub": "kustomize edit set image",
+   "x": 952,
+   "y": 430,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "envrepo",
+   "label": "env repo",
+   "tag": "desired state",
+   "sub": "apps/api/overlays/*",
+   "icon": "git",
+   "x": 952,
+   "y": 572,
+   "w": 220,
+   "h": 84
+  },
+  {
+   "id": "argo",
+   "label": "Argo CD",
+   "tag": "sync, 3 min",
+   "sub": "applies, reports drift",
+   "tone": "info",
+   "x": 1240,
+   "y": 288,
+   "w": 182,
+   "h": 84
+  },
+  {
+   "id": "prom",
+   "label": "Prometheus",
+   "tag": "metrics gate",
+   "sub": "error rate, p95",
+   "tone": "violet",
+   "x": 1432,
+   "y": 288,
+   "w": 182,
+   "h": 84
+  },
+  {
+   "id": "staging",
+   "label": "staging",
+   "tag": "namespace",
+   "sub": "smoke tests, 4 min",
+   "tone": "info",
+   "x": 1240,
+   "y": 430,
+   "w": 182,
+   "h": 84
+  },
+  {
+   "id": "canary",
+   "label": "canary 10% → 50% → 100%",
+   "tag": "Argo Rollouts, production",
+   "sub": "promote while error rate < 1% and p95 < 300 ms",
+   "tone": "accent",
+   "x": 1240,
+   "y": 572,
+   "w": 374,
+   "h": 84
+  },
+  {
+   "id": "rollback",
+   "label": "auto-rollback",
+   "tag": "analysis failed",
+   "sub": "traffic → stable ReplicaSet in < 30 s",
+   "icon": "refresh",
+   "tone": "danger",
+   "x": 1240,
+   "y": 714,
+   "w": 374,
+   "h": 84
+  }
+ ],
+ "edges": [
+  {
+   "from": "push",
+   "to": "pr",
+   "kind": "primary"
+  },
+  {
+   "from": "pr",
+   "to": "lint",
+   "kind": "primary",
+   "mid": 342,
+   "toAt": 0.5
+  },
+  {
+   "from": "lint",
+   "to": "test",
+   "kind": "primary"
+  },
+  {
+   "from": "test",
+   "to": "sast",
+   "kind": "primary"
+  },
+  {
+   "from": "sast",
+   "to": "merge",
+   "kind": "primary"
+  },
+  {
+   "from": "merge",
+   "to": "build",
+   "kind": "primary",
+   "fromSide": "r",
+   "toSide": "l",
+   "mid": 630,
+   "label": "on: push",
+   "labelAt": [
+    630,
+    560
+   ]
+  },
+  {
+   "from": "build",
+   "to": "sign",
+   "kind": "primary"
+  },
+  {
+   "from": "sign",
+   "to": "registry",
+   "kind": "primary",
+   "mid": 918,
+   "label": "push"
+  },
+  {
+   "from": "registry",
+   "to": "bump",
+   "kind": "primary"
+  },
+  {
+   "from": "bump",
+   "to": "envrepo",
+   "kind": "primary",
+   "label": "auto-merge"
+  },
+  {
+   "from": "envrepo",
+   "to": "argo",
+   "kind": "deploy",
+   "mid": 1206,
+   "label": "pull",
+   "fromSide": "r",
+   "toSide": "l"
+  },
+  {
+   "from": "argo",
+   "to": "staging",
+   "kind": "deploy"
+  },
+  {
+   "from": "staging",
+   "to": "canary",
+   "kind": "deploy",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "promote",
+   "toAt": 0.25
+  },
+  {
+   "from": "prom",
+   "to": "canary",
+   "kind": "watch",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "analysis",
+   "toAt": 0.757
+  },
+  {
+   "from": "canary",
+   "to": "rollback",
+   "kind": "fail",
+   "label": "fail"
+  },
+  {
+   "from": "rollback",
+   "to": "envrepo",
+   "kind": "fail",
+   "fromSide": "l",
+   "toSide": "b",
+   "label": "revert tag",
+   "labelAt": [
+    1120,
+    756
+   ]
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 904,
+  "items": [
+   {
+    "kind": "primary",
+    "label": "CI (GitHub Actions)"
+   },
+   {
+    "kind": "deploy",
+    "label": "CD (Argo)"
+   },
+   {
+    "kind": "watch",
+    "label": "metrics query"
+   },
+   {
+    "kind": "fail",
+    "label": "failure path"
+   }
+  ]
+ }
+}

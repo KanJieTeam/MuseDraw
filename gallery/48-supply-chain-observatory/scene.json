@@ -1,0 +1,222 @@
+{
+ "theme": "observatory",
+ "size": [
+  1760,
+  980
+ ],
+ "kicker": "Supply chain · fresh produce",
+ "title": "Fresh-produce supply chain: goods, information, money",
+ "subtitle": "Amber is product moving towards the shelf, teal is demand data moving back to the farm, violet is money. A forecast is only as good as the teal lines.",
+ "subtitleWidth": 1150,
+ "figure": "chain / 48",
+ "nodes": [
+  {
+   "id": "farm",
+   "label": "Growers",
+   "tag": "supply",
+   "sub": "38 farms, weekly contracts",
+   "icon": "map",
+   "x": 64,
+   "y": 400,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "pack",
+   "label": "Pack house",
+   "tag": "grading",
+   "sub": "cool within 2 h of harvest",
+   "icon": "box",
+   "x": 364,
+   "y": 400,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "dc",
+   "label": "Regional DC",
+   "tag": "cross-dock",
+   "sub": "< 24 h dwell, 2–4 °C",
+   "icon": "layers",
+   "tone": "hub",
+   "x": 664,
+   "y": 400,
+   "w": 250,
+   "h": 110
+  },
+  {
+   "id": "store",
+   "label": "Stores",
+   "tag": "112 shops",
+   "sub": "daily replenishment",
+   "icon": "card",
+   "x": 984,
+   "y": 400,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "cust",
+   "label": "Shoppers",
+   "tag": "demand",
+   "sub": "POS + app orders",
+   "icon": "users",
+   "x": 1284,
+   "y": 400,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "fc",
+   "label": "Demand forecast",
+   "tag": "model",
+   "sub": "weather, promos, holidays",
+   "icon": "chart",
+   "tone": "teal",
+   "x": 664,
+   "y": 640,
+   "w": 250,
+   "h": 110
+  },
+  {
+   "id": "fin",
+   "label": "Payments",
+   "tag": "finance",
+   "sub": "growers paid in 14 days",
+   "icon": "bank",
+   "tone": "violet",
+   "x": 1284,
+   "y": 640,
+   "w": 230,
+   "h": 110
+  },
+  {
+   "id": "waste",
+   "label": "Waste & returns",
+   "tag": "loop",
+   "sub": "food bank + compost",
+   "icon": "refresh",
+   "tone": "coral",
+   "x": 984,
+   "y": 780,
+   "w": 230,
+   "h": 110
+  }
+ ],
+ "edges": [
+  {
+   "from": "farm",
+   "to": "pack",
+   "kind": "logs",
+   "label": "harvest"
+  },
+  {
+   "from": "pack",
+   "to": "dc",
+   "kind": "logs",
+   "label": "pallets"
+  },
+  {
+   "from": "dc",
+   "to": "store",
+   "kind": "logs",
+   "label": "trucks"
+  },
+  {
+   "from": "store",
+   "to": "cust",
+   "kind": "logs"
+  },
+  {
+   "from": "store",
+   "to": "fc",
+   "kind": "metrics",
+   "fromSide": "b",
+   "toSide": "r",
+   "fromAt": 0.3,
+   "label": "POS data",
+   "labelAt": [
+    1000,
+    695
+   ]
+  },
+  {
+   "from": "fc",
+   "to": "dc",
+   "kind": "metrics",
+   "fromSide": "t",
+   "toSide": "b"
+  },
+  {
+   "from": "fc",
+   "to": "farm",
+   "kind": "metrics",
+   "fromSide": "l",
+   "toSide": "b",
+   "toAt": 0.7,
+   "label": "order plan"
+  },
+  {
+   "from": "store",
+   "to": "waste",
+   "kind": "alert",
+   "fromSide": "b",
+   "toSide": "t",
+   "fromAt": 0.7,
+   "toAt": 0.7
+  },
+  {
+   "from": "cust",
+   "to": "fin",
+   "kind": "traces",
+   "fromSide": "b",
+   "toSide": "t",
+   "label": "revenue"
+  },
+  {
+   "from": "fin",
+   "to": "farm",
+   "kind": "traces",
+   "fromSide": "b",
+   "toSide": "b",
+   "toAt": 0.3,
+   "via": [
+    [
+     1399,
+     860
+    ],
+    [
+     133,
+     860
+    ]
+   ],
+   "label": "grower payments · 14 days",
+   "labelAt": [
+    700,
+    860
+   ]
+  }
+ ],
+ "legend": {
+  "x": 64,
+  "y": 920,
+  "items": [
+   {
+    "kind": "logs",
+    "label": "goods"
+   },
+   {
+    "kind": "metrics",
+    "label": "information"
+   },
+   {
+    "kind": "traces",
+    "label": "money"
+   },
+   {
+    "kind": "alert",
+    "label": "waste"
+   }
+  ]
+ }
+}

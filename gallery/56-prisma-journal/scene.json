@@ -1,0 +1,215 @@
+{
+ "theme": "journal",
+ "size": [
+  1420,
+  1130
+ ],
+ "title": "Fig. 1 | PRISMA 2020 flow diagram",
+ "subtitle": "Identification of studies via databases and registers for a systematic review of exercise interventions in older adults. Counts reconcile at every step (2,454 − 704 = 1,750; 1,750 − 1,512 = 238; 238 − 11 = 227; 227 − 191 = 36 reports).",
+ "nodes": [
+  {
+   "id": "lane0",
+   "label": "",
+   "tone": "accent",
+   "x": 56,
+   "y": 250,
+   "w": 40,
+   "h": 260,
+   "radius": 4
+  },
+  {
+   "id": "lane1",
+   "label": "",
+   "tone": "accent",
+   "x": 56,
+   "y": 530,
+   "w": 40,
+   "h": 410,
+   "radius": 4
+  },
+  {
+   "id": "lane2",
+   "label": "",
+   "tone": "accent",
+   "x": 56,
+   "y": 960,
+   "w": 40,
+   "h": 120,
+   "radius": 4
+  },
+  {
+   "id": "ident",
+   "label": "Records identified from:\n· Databases (n = 2,416)\n· PubMed 812 · Embase 1,104 · Web of Science 500\n· Registers (n = 38)",
+   "x": 130,
+   "y": 262,
+   "w": 560,
+   "h": 140,
+   "tone": "blue",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "removed",
+   "label": "Records removed before screening:\n· Duplicate records (n = 704)\n· Marked ineligible by automation (n = 0)",
+   "x": 830,
+   "y": 280,
+   "w": 520,
+   "h": 104,
+   "tone": "gray",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "screened",
+   "label": "Records screened (n = 1,750)",
+   "x": 130,
+   "y": 560,
+   "w": 560,
+   "h": 64,
+   "tone": "default",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "exc1",
+   "label": "Records excluded on title / abstract (n = 1,512)",
+   "x": 830,
+   "y": 560,
+   "w": 520,
+   "h": 64,
+   "tone": "gray",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "sought",
+   "label": "Reports sought for retrieval (n = 238)",
+   "x": 130,
+   "y": 680,
+   "w": 560,
+   "h": 64,
+   "tone": "default",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "notret",
+   "label": "Reports not retrieved (n = 11)",
+   "x": 830,
+   "y": 680,
+   "w": 520,
+   "h": 64,
+   "tone": "gray",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "assessed",
+   "label": "Reports assessed for eligibility (n = 227)",
+   "x": 130,
+   "y": 800,
+   "w": 560,
+   "h": 64,
+   "tone": "default",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "exc2",
+   "label": "Reports excluded (n = 191):\n· Wrong population (n = 84)\n· Wrong outcome (n = 57)\n· Not randomised (n = 50)",
+   "x": 830,
+   "y": 768,
+   "w": 520,
+   "h": 128,
+   "tone": "gray",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  },
+  {
+   "id": "incl",
+   "label": "Studies included in review (n = 34)\nReports of included studies (n = 36)",
+   "x": 130,
+   "y": 980,
+   "w": 560,
+   "h": 82,
+   "tone": "green",
+   "align": "left",
+   "size": 14.5,
+   "weight": 500
+  }
+ ],
+ "texts": [
+  {
+   "x": 82,
+   "y": 438.8,
+   "text": "Identification",
+   "font": "body",
+   "size": 15,
+   "weight": 700,
+   "color": "#FFFFFF",
+   "rotate": -90
+  },
+  {
+   "x": 82,
+   "y": 772.8,
+   "text": "Screening",
+   "font": "body",
+   "size": 15,
+   "weight": 700,
+   "color": "#FFFFFF",
+   "rotate": -90
+  },
+  {
+   "x": 82,
+   "y": 1053.6,
+   "text": "Included",
+   "font": "body",
+   "size": 15,
+   "weight": 700,
+   "color": "#FFFFFF",
+   "rotate": -90
+  }
+ ],
+ "edges": [
+  {
+   "from": "ident",
+   "to": "removed"
+  },
+  {
+   "from": "ident",
+   "to": "screened"
+  },
+  {
+   "from": "screened",
+   "to": "exc1"
+  },
+  {
+   "from": "screened",
+   "to": "sought"
+  },
+  {
+   "from": "sought",
+   "to": "notret"
+  },
+  {
+   "from": "sought",
+   "to": "assessed"
+  },
+  {
+   "from": "assessed",
+   "to": "exc2"
+  },
+  {
+   "from": "assessed",
+   "to": "incl"
+  }
+ ]
+}

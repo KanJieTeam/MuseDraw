@@ -1,0 +1,168 @@
+{
+ "theme": "bauhaus",
+ "size": [
+  1600,
+  1040
+ ],
+ "kicker": "Operating rhythm · 12-person product team",
+ "title": "Team operating rhythm, one week",
+ "subtitle": "Meetings cluster on Monday and Friday so Tuesday and Thursday stay empty. Red blocks are the two rituals nobody skips.",
+ "subtitleWidth": 900,
+ "figure": "No. 34",
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 100,
+   "y": 330,
+   "w": 1400,
+   "labelW": 330,
+   "rowH": 64,
+   "barRatio": 0.62,
+   "columns": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri"
+   ],
+   "colSize": 14,
+   "labelSize": 16,
+   "barLabelSize": 13,
+   "gridColor": "#15151522",
+   "ruleColor": "ink",
+   "tasks": [
+    {
+     "label": "Daily stand-up · 15 min",
+     "segments": [
+      [
+       0.08,
+       0.18
+      ],
+      [
+       1.08,
+       1.18
+      ],
+      [
+       2.08,
+       2.18
+      ],
+      [
+       3.08,
+       3.18
+      ],
+      [
+       4.08,
+       4.18
+      ]
+     ],
+     "tone": "yellow"
+    },
+    {
+     "label": "Planning",
+     "segments": [
+      [
+       0.25,
+       0.6,
+       "plan"
+      ]
+     ],
+     "tone": "blue"
+    },
+    {
+     "label": "Deep work — no meetings",
+     "segments": [
+      [
+       1.25,
+       1.95,
+       "focus"
+      ],
+      [
+       3.25,
+       3.95,
+       "focus"
+      ]
+     ],
+     "tone": "default"
+    },
+    {
+     "label": "Design review",
+     "segments": [
+      [
+       2.3,
+       2.6,
+       "crit"
+      ]
+     ],
+     "tone": "red"
+    },
+    {
+     "label": "1:1s",
+     "segments": [
+      [
+       0.7,
+       0.95
+      ],
+      [
+       2.7,
+       2.95
+      ]
+     ],
+     "tone": "default"
+    },
+    {
+     "label": "Customer call",
+     "segments": [
+      [
+       3.6,
+       3.85
+      ]
+     ],
+     "tone": "blue"
+    },
+    {
+     "label": "Demo + retro",
+     "segments": [
+      [
+       4.3,
+       4.75,
+       "demo"
+      ]
+     ],
+     "tone": "red"
+    },
+    {
+     "label": "Async written update",
+     "segments": [
+      [
+       4.8,
+       4.95
+      ]
+     ],
+     "tone": "yellow"
+    }
+   ]
+  }
+ ],
+ "legend": {
+  "x": 100,
+  "y": 930,
+  "items": [
+   {
+    "tone": "red",
+    "label": "ritual"
+   },
+   {
+    "tone": "blue",
+    "label": "planning / customer"
+   },
+   {
+    "tone": "yellow",
+    "label": "short sync"
+   },
+   {
+    "tone": "default",
+    "label": "focus & 1:1"
+   }
+  ]
+ }
+}

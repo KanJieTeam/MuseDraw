@@ -1,0 +1,291 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1720,
+  960
+ ],
+ "kicker": "护理质量 · 流程梳理工具",
+ "title": "护士交接班 SIPOC",
+ "subtitle": "先画清楚边界：谁提供、提供什么、经过哪五步、产出什么、交给谁。改进时只动中间那一列，左右两列是约束。",
+ "subtitleWidth": 1250,
+ "zones": [
+  {
+   "id": "z0",
+   "label": "S 供方",
+   "sub": "Suppliers",
+   "x": 60,
+   "y": 260,
+   "w": 310,
+   "h": 600,
+   "tone": "default"
+  },
+  {
+   "id": "z1",
+   "label": "I 输入",
+   "sub": "Inputs",
+   "x": 388,
+   "y": 260,
+   "w": 310,
+   "h": 600,
+   "tone": "default"
+  },
+  {
+   "id": "z2",
+   "label": "P 过程",
+   "sub": "Process",
+   "x": 716,
+   "y": 260,
+   "w": 310,
+   "h": 600,
+   "tone": "accent"
+  },
+  {
+   "id": "z3",
+   "label": "O 输出",
+   "sub": "Outputs",
+   "x": 1044,
+   "y": 260,
+   "w": 310,
+   "h": 600,
+   "tone": "default"
+  },
+  {
+   "id": "z4",
+   "label": "C 客户",
+   "sub": "Customers",
+   "x": 1372,
+   "y": 260,
+   "w": 310,
+   "h": 600,
+   "tone": "default"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "n00",
+   "label": "交班护士",
+   "tone": "white",
+   "x": 78,
+   "y": 330,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n01",
+   "label": "医生医嘱系统",
+   "tone": "white",
+   "x": 78,
+   "y": 426,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n02",
+   "label": "检验科 / 影像科",
+   "tone": "white",
+   "x": 78,
+   "y": 522,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n03",
+   "label": "护理信息系统",
+   "tone": "white",
+   "x": 78,
+   "y": 618,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n10",
+   "label": "患者病情变化",
+   "tone": "white",
+   "x": 406,
+   "y": 330,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n11",
+   "label": "未完成治疗",
+   "tone": "white",
+   "x": 406,
+   "y": 426,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n12",
+   "label": "异常检验结果",
+   "tone": "white",
+   "x": 406,
+   "y": 522,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n13",
+   "label": "高危风险评估",
+   "tone": "white",
+   "x": 406,
+   "y": 618,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n30",
+   "label": "交接班记录（SBAR）",
+   "tone": "white",
+   "x": 1062,
+   "y": 330,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n31",
+   "label": "风险患者清单",
+   "tone": "white",
+   "x": 1062,
+   "y": 426,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n32",
+   "label": "待办任务清单",
+   "tone": "white",
+   "x": 1062,
+   "y": 522,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n40",
+   "label": "接班护士",
+   "tone": "white",
+   "x": 1390,
+   "y": 330,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n41",
+   "label": "患者与家属",
+   "tone": "white",
+   "x": 1390,
+   "y": 426,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "n42",
+   "label": "护士长 · 质控",
+   "tone": "white",
+   "x": 1390,
+   "y": 522,
+   "w": 274,
+   "h": 72,
+   "size": 15.5
+  },
+  {
+   "id": "p0",
+   "label": "床旁核对身份",
+   "tone": "amber",
+   "x": 746,
+   "y": 346,
+   "w": 250,
+   "h": 70,
+   "step": 1,
+   "size": 15.5
+  },
+  {
+   "id": "p1",
+   "label": "SBAR 口头交接",
+   "tone": "amber",
+   "x": 746,
+   "y": 450,
+   "w": 250,
+   "h": 70,
+   "step": 2,
+   "size": 15.5
+  },
+  {
+   "id": "p2",
+   "label": "查看管路与皮肤",
+   "tone": "amber",
+   "x": 746,
+   "y": 554,
+   "w": 250,
+   "h": 70,
+   "step": 3,
+   "size": 15.5
+  },
+  {
+   "id": "p3",
+   "label": "核对未完成医嘱",
+   "tone": "amber",
+   "x": 746,
+   "y": 658,
+   "w": 250,
+   "h": 70,
+   "step": 4,
+   "size": 15.5
+  },
+  {
+   "id": "p4",
+   "label": "双人签字确认",
+   "tone": "amber",
+   "x": 746,
+   "y": 762,
+   "w": 250,
+   "h": 70,
+   "step": 5,
+   "size": 15.5
+  }
+ ],
+ "edges": [
+  {
+   "from": "p0",
+   "to": "p1",
+   "kind": "accent"
+  },
+  {
+   "from": "p1",
+   "to": "p2",
+   "kind": "accent"
+  },
+  {
+   "from": "p2",
+   "to": "p3",
+   "kind": "accent"
+  },
+  {
+   "from": "p3",
+   "to": "p4",
+   "kind": "accent"
+  }
+ ],
+ "texts": [
+  {
+   "x": 60,
+   "y": 910,
+   "text": "SBAR：Situation 现状 · Background 背景 · Assessment 评估 · Recommendation 建议",
+   "size": 14,
+   "color": "muted"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "theme": "chalkboard",
+ "size": [
+  1760,
+  780
+ ],
+ "kicker": "大班 · 一日生活安排",
+ "title": "幼儿园大班一日活动流程",
+ "subtitle": "动静交替、室内外交替。时间是骨架，不是闹钟：孩子玩得投入时，老师可以把下一环节推后十分钟。",
+ "subtitleWidth": 1450,
+ "blocks": [
+  {
+   "type": "timeline",
+   "x": 64,
+   "y": 470,
+   "w": 1632,
+   "pad": 70,
+   "itemW": 170,
+   "gap": 56,
+   "color": "ink",
+   "axisWidth": 3,
+   "labelFont": "body",
+   "labelSize": 22,
+   "subSize": 15,
+   "dateSize": 17,
+   "dateColor": "yellow",
+   "tickColor": "#8FA494",
+   "items": [
+    {
+     "date": "7:50",
+     "label": "入园晨检",
+     "sub": "摸额头、看手口、问早安",
+     "tone": "default",
+     "big": false
+    },
+    {
+     "date": "8:30",
+     "label": "早餐",
+     "sub": "自己取餐、收拾餐具",
+     "tone": "default",
+     "big": false
+    },
+    {
+     "date": "9:00",
+     "label": "集体活动",
+     "sub": "25 分钟 · 本周主题",
+     "tone": "default",
+     "big": false
+    },
+    {
+     "date": "9:40",
+     "label": "户外游戏",
+     "sub": "不少于 2 小时 / 天",
+     "tone": "yellow",
+     "big": true
+    },
+    {
+     "date": "11:20",
+     "label": "午餐",
+     "sub": "细嚼慢咽，不催促",
+     "tone": "default",
+     "big": false
+    },
+    {
+     "date": "12:10",
+     "label": "午睡",
+     "sub": "安静入睡，值班老师巡视",
+     "tone": "default",
+     "big": false
+    },
+    {
+     "date": "14:40",
+     "label": "午点",
+     "sub": "水果与牛奶",
+     "tone": "default",
+     "big": false
+    },
+    {
+     "date": "15:10",
+     "label": "区域活动",
+     "sub": "建构、美工、阅读角",
+     "tone": "yellow",
+     "big": true
+    },
+    {
+     "date": "16:20",
+     "label": "离园",
+     "sub": "与家长交流一句话",
+     "tone": "default",
+     "big": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,191 @@
+{
+ "theme": "observatory",
+ "size": [
+  1760,
+  760
+ ],
+ "kicker": "LLM evaluation · regression harness",
+ "title": "LLM evaluation pipeline",
+ "subtitle": "A fixed set of cases, three kinds of graders, and a CI gate. The LLM judge is calibrated against humans on a sample every week — otherwise it quietly drifts.",
+ "subtitleWidth": 1150,
+ "figure": "evals / 73",
+ "nodes": [
+  {
+   "id": "cases",
+   "label": "Eval set",
+   "tag": "1,240 cases",
+   "sub": "real tickets, edge cases, red-team",
+   "icon": "table",
+   "x": 64,
+   "y": 320,
+   "w": 240,
+   "h": 110
+  },
+  {
+   "id": "cand",
+   "label": "Candidate",
+   "tag": "prompt v42 + model",
+   "sub": "temperature 0, seeded",
+   "icon": "spark",
+   "tone": "hub",
+   "x": 364,
+   "y": 320,
+   "w": 240,
+   "h": 110
+  },
+  {
+   "id": "out",
+   "label": "Outputs",
+   "tag": "jsonl",
+   "sub": "with latency + token cost",
+   "icon": "doc",
+   "x": 664,
+   "y": 320,
+   "w": 220,
+   "h": 110
+  },
+  {
+   "id": "g1",
+   "label": "Exact / schema",
+   "tag": "deterministic",
+   "sub": "JSON valid, fields correct",
+   "icon": "check",
+   "tone": "teal",
+   "x": 964,
+   "y": 250,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "g2",
+   "label": "LLM judge",
+   "tag": "rubric, 1–5",
+   "sub": "helpfulness, groundedness",
+   "icon": "eye",
+   "tone": "violet",
+   "x": 964,
+   "y": 360,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "g3",
+   "label": "Human review",
+   "tag": "5% sample",
+   "sub": "calibrates the judge",
+   "icon": "users",
+   "tone": "amber",
+   "x": 964,
+   "y": 470,
+   "w": 280,
+   "h": 90
+  },
+  {
+   "id": "score",
+   "label": "Scorecard",
+   "tag": "vs baseline v41",
+   "sub": "by slice: language, intent, length",
+   "icon": "chart",
+   "tone": "hub",
+   "x": 1324,
+   "y": 330,
+   "w": 260,
+   "h": 120
+  },
+  {
+   "id": "gate",
+   "label": "CI gate",
+   "tag": "block merge",
+   "sub": "any slice drops > 2 pts",
+   "icon": "shield",
+   "tone": "coral",
+   "x": 1324,
+   "y": 560,
+   "w": 260,
+   "h": 100
+  }
+ ],
+ "edges": [
+  {
+   "from": "cases",
+   "to": "cand",
+   "kind": "otlp"
+  },
+  {
+   "from": "cand",
+   "to": "out",
+   "kind": "otlp"
+  },
+  {
+   "from": "out",
+   "to": "g1",
+   "kind": "metrics",
+   "mid": 924
+  },
+  {
+   "from": "out",
+   "to": "g2",
+   "kind": "traces",
+   "mid": 924
+  },
+  {
+   "from": "out",
+   "to": "g3",
+   "kind": "logs",
+   "mid": 924
+  },
+  {
+   "from": "g1",
+   "to": "score",
+   "kind": "metrics",
+   "mid": 1284
+  },
+  {
+   "from": "g2",
+   "to": "score",
+   "kind": "traces",
+   "mid": 1284
+  },
+  {
+   "from": "g3",
+   "to": "score",
+   "kind": "logs",
+   "mid": 1284
+  },
+  {
+   "from": "g3",
+   "to": "g2",
+   "kind": "link",
+   "fromSide": "r",
+   "toSide": "r",
+   "via": [
+    [
+     1290,
+     515
+    ],
+    [
+     1290,
+     405
+    ]
+   ],
+   "label": "agreement κ",
+   "labelAt": [
+    1290,
+    460
+   ]
+  },
+  {
+   "from": "score",
+   "to": "gate",
+   "kind": "alert"
+  }
+ ],
+ "notes": [
+  {
+   "text": "// add every production failure to the eval set the day it happens — the set should grow, never shrink",
+   "x": 64,
+   "y": 640,
+   "w": 800
+  }
+ ]
+}

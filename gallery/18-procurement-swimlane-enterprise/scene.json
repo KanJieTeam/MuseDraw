@@ -1,0 +1,214 @@
+{
+ "theme": "enterprise",
+ "size": [
+  1780,
+  940
+ ],
+ "kicker": "跨部门泳道图",
+ "title": "采购审批跨部门泳道图",
+ "subtitle": "五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。",
+ "subtitleWidth": 1300,
+ "blocks": [
+  {
+   "type": "swimlane",
+   "x": 60,
+   "y": 262,
+   "w": 1660,
+   "laneH": 118,
+   "labelW": 116,
+   "cols": 8,
+   "stepW": 160,
+   "stepH": 64,
+   "lanes": [
+    {
+     "id": "req",
+     "label": "申请人"
+    },
+    {
+     "id": "mgr",
+     "label": "部门经理"
+    },
+    {
+     "id": "buy",
+     "label": "采购部"
+    },
+    {
+     "id": "fin",
+     "label": "财务部"
+    },
+    {
+     "id": "sup",
+     "label": "供应商"
+    }
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "req",
+     "col": 0,
+     "label": "提交采购申请",
+     "sub": "附需求说明",
+     "tone": "white"
+    },
+    {
+     "id": "s2",
+     "lane": "mgr",
+     "col": 1,
+     "label": "预算内？",
+     "shape": "diamond",
+     "tone": "white",
+     "w": 132,
+     "h": 80
+    },
+    {
+     "id": "s3",
+     "lane": "buy",
+     "col": 2,
+     "label": "询价比价",
+     "sub": "至少 3 家",
+     "tone": "amber"
+    },
+    {
+     "id": "s4",
+     "lane": "fin",
+     "col": 3,
+     "label": "金额 > 5 万？",
+     "shape": "diamond",
+     "tone": "white",
+     "w": 150,
+     "h": 84
+    },
+    {
+     "id": "s5",
+     "lane": "mgr",
+     "col": 4,
+     "label": "总经理加签",
+     "sub": "大额采购",
+     "tone": "amber"
+    },
+    {
+     "id": "s6",
+     "lane": "buy",
+     "col": 5,
+     "label": "签合同并下单",
+     "tone": "white"
+    },
+    {
+     "id": "s7",
+     "lane": "sup",
+     "col": 6,
+     "label": "发货并开票",
+     "tone": "white"
+    },
+    {
+     "id": "s8",
+     "lane": "req",
+     "col": 6,
+     "label": "验收入库",
+     "tone": "white"
+    },
+    {
+     "id": "s9",
+     "lane": "fin",
+     "col": 7,
+     "label": "三单匹配后付款",
+     "sub": "订单/收货/发票",
+     "tone": "navy"
+    }
+   ],
+   "flows": [
+    {
+     "from": "s1",
+     "to": "s2",
+     "fromSide": "b",
+     "toSide": "l"
+    },
+    {
+     "from": "s2",
+     "to": "s3",
+     "fromSide": "b",
+     "toSide": "l",
+     "label": "是"
+    },
+    {
+     "from": "s2",
+     "to": "s1",
+     "fromSide": "t",
+     "toSide": "r",
+     "kind": "soft",
+     "label": "否，退回",
+     "labelAt": [
+      468,
+      329
+     ]
+    },
+    {
+     "from": "s3",
+     "to": "s4",
+     "fromSide": "b",
+     "toSide": "l"
+    },
+    {
+     "from": "s4",
+     "to": "s5",
+     "fromSide": "t",
+     "toSide": "b",
+     "label": "是"
+    },
+    {
+     "from": "s4",
+     "to": "s6",
+     "fromSide": "r",
+     "toSide": "b",
+     "label": "否"
+    },
+    {
+     "from": "s5",
+     "to": "s6",
+     "fromSide": "r",
+     "toSide": "t"
+    },
+    {
+     "from": "s6",
+     "to": "s7",
+     "fromSide": "b",
+     "toSide": "t",
+     "kind": "primary"
+    },
+    {
+     "from": "s7",
+     "to": "s8",
+     "fromSide": "t",
+     "toSide": "b",
+     "kind": "primary",
+     "label": "到货"
+    },
+    {
+     "from": "s8",
+     "to": "s9",
+     "fromSide": "r",
+     "toSide": "t",
+     "kind": "primary",
+     "label": "收货单"
+    },
+    {
+     "from": "s7",
+     "to": "s9",
+     "fromSide": "r",
+     "toSide": "b",
+     "kind": "soft",
+     "label": "发票"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "title": "改进建议",
+   "text": "询价比价平均耗时 6.5 天，占全流程 40%。建议对 2 万元以下常用品建立年度框架协议，直接下单。",
+   "x": 60,
+   "y": 870,
+   "w": 860
+  }
+ ]
+}

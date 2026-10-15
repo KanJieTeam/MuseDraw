@@ -1,0 +1,456 @@
+{
+ "theme": "pastel",
+ "size": [
+  1660,
+  900
+ ],
+ "kicker": "骨科护理 · 临床路径",
+ "title": "全膝关节置换术临床路径（标准住院日 6 天）",
+ "subtitle": "横向是住院日，纵向是谁负责。同一列读下来，就是这一天四方各自要完成的事。内容为示例，以本院路径为准。",
+ "subtitleWidth": 1300,
+ "nodes": [
+  {
+   "id": "c00",
+   "label": "病史、查体、术前评估",
+   "tone": "blue",
+   "x": 258,
+   "y": 330,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c01",
+   "label": "签署手术同意书",
+   "tone": "blue",
+   "x": 488,
+   "y": 330,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c02",
+   "label": "全膝关节置换术",
+   "tone": "blue",
+   "x": 718,
+   "y": 330,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c03",
+   "label": "查看切口、调整镇痛",
+   "tone": "blue",
+   "x": 948,
+   "y": 330,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c04",
+   "label": "复查 X 线",
+   "tone": "blue",
+   "x": 1178,
+   "y": 330,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c05",
+   "label": "开具出院医嘱",
+   "tone": "blue",
+   "x": 1408,
+   "y": 330,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c10",
+   "label": "Morse / Braden 评估",
+   "tone": "green",
+   "x": 258,
+   "y": 450,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c11",
+   "label": "术前宣教、备皮",
+   "tone": "green",
+   "x": 488,
+   "y": 450,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c12",
+   "label": "术后 6 小时生命体征",
+   "tone": "green",
+   "x": 718,
+   "y": 450,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c13",
+   "label": "协助床边坐起",
+   "tone": "green",
+   "x": 948,
+   "y": 450,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c14",
+   "label": "指导助行器行走",
+   "tone": "green",
+   "x": 1178,
+   "y": 450,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c15",
+   "label": "出院宣教、预约复诊",
+   "tone": "green",
+   "x": 1408,
+   "y": 450,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c21",
+   "label": "讲解术后训练",
+   "tone": "orange",
+   "x": 488,
+   "y": 570,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c22",
+   "label": "踝泵运动",
+   "tone": "orange",
+   "x": 718,
+   "y": 570,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c23",
+   "label": "CPM 0–60°",
+   "tone": "orange",
+   "x": 948,
+   "y": 570,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c24",
+   "label": "CPM 0–90°，下地行走",
+   "tone": "orange",
+   "x": 1178,
+   "y": 570,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c25",
+   "label": "发放居家训练单",
+   "tone": "orange",
+   "x": 1408,
+   "y": 570,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c30",
+   "label": "了解住院流程",
+   "tone": "purple",
+   "x": 258,
+   "y": 690,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c31",
+   "label": "禁食 8 小时",
+   "tone": "purple",
+   "x": 488,
+   "y": 690,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c32",
+   "label": "配合镇痛评分",
+   "tone": "purple",
+   "x": 718,
+   "y": 690,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c33",
+   "label": "主动做踝泵 3 组",
+   "tone": "purple",
+   "x": 948,
+   "y": 690,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c34",
+   "label": "步行 30 米",
+   "tone": "purple",
+   "x": 1178,
+   "y": 690,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  },
+  {
+   "id": "c35",
+   "label": "会做 5 个居家动作",
+   "tone": "purple",
+   "x": 1408,
+   "y": 690,
+   "w": 214,
+   "h": 96,
+   "size": 14.5,
+   "align": "left",
+   "weight": 500
+  }
+ ],
+ "texts": [
+  {
+   "x": 365.0,
+   "y": 290,
+   "text": "入院当天",
+   "size": 15,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 595.0,
+   "y": 290,
+   "text": "术前 1 天",
+   "size": 15,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 825.0,
+   "y": 290,
+   "text": "手术日",
+   "size": 15,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1055.0,
+   "y": 290,
+   "text": "术后 1 天",
+   "size": 15,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1285.0,
+   "y": 290,
+   "text": "术后 2–3 天",
+   "size": 15,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 1515.0,
+   "y": 290,
+   "text": "出院日",
+   "size": 15,
+   "weight": 700,
+   "color": "ink",
+   "anchor": "middle"
+  },
+  {
+   "x": 60,
+   "y": 362,
+   "text": "医生",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 482,
+   "text": "护士",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 602,
+   "text": "康复师",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 722,
+   "text": "患者与家属",
+   "size": 17,
+   "weight": 700,
+   "color": "ink"
+  },
+  {
+   "x": 60,
+   "y": 830,
+   "text": "变异记录：任何一格没有按时完成，在当天写明原因（患者因素 / 医疗因素 / 系统因素），每月汇总分析。",
+   "size": 14,
+   "color": "muted"
+  }
+ ],
+ "lines": [
+  {
+   "points": [
+    [
+     60,
+     304
+    ],
+    [
+     1630,
+     304
+    ]
+   ],
+   "color": "ink",
+   "width": 1.5
+  },
+  {
+   "points": [
+    [
+     60,
+     436
+    ],
+    [
+     1630,
+     436
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     556
+    ],
+    [
+     1630,
+     556
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     676
+    ],
+    [
+     1630,
+     676
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     60,
+     796
+    ],
+    [
+     1630,
+     796
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  }
+ ]
+}

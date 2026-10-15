@@ -1,0 +1,123 @@
+{
+ "theme": "pastel",
+ "size": [
+  1680,
+  900
+ ],
+ "kicker": "Lab protocol · bench card",
+ "title": "Western blot protocol, two-day schedule",
+ "subtitle": "The overnight primary incubation splits the protocol cleanly. Yellow is the cheapest check in the whole workflow — never skip the Ponceau stain.",
+ "subtitleWidth": 1150,
+ "blocks": [
+  {
+   "type": "gantt",
+   "x": 72,
+   "y": 280,
+   "w": 1536,
+   "labelW": 290,
+   "rowH": 50,
+   "barRatio": 0.62,
+   "groupH": 36,
+   "columns": [
+    "0h",
+    "1h",
+    "2h",
+    "3h",
+    "4h",
+    "5h",
+    "6h",
+    "+ overnight",
+    "Day 2 · 0h",
+    "1h",
+    "2h",
+    "3h"
+   ],
+   "colSize": 12,
+   "labelSize": 15,
+   "barRadius": 8,
+   "groupColor": "accent",
+   "groupCase": "none",
+   "groupFont": "body",
+   "groupSize": 14,
+   "gridColor": "#37352F14",
+   "tasks": [
+    {
+     "group": "Day 1",
+     "label": "Lyse cells + BCA assay",
+     "start": 0,
+     "end": 1.2,
+     "tone": "blueBar"
+    },
+    {
+     "group": "Day 1",
+     "label": "Load & run SDS-PAGE",
+     "start": 1.2,
+     "end": 2.8,
+     "tone": "blueBar",
+     "note": "120 V, 90 min"
+    },
+    {
+     "group": "Day 1",
+     "label": "Transfer to PVDF",
+     "start": 2.8,
+     "end": 4.2,
+     "tone": "purpleBar",
+     "note": "wet, 100 V, 70 min, 4 °C"
+    },
+    {
+     "group": "Day 1",
+     "label": "Ponceau check",
+     "start": 4.2,
+     "end": 4.5,
+     "tone": "yellowBar"
+    },
+    {
+     "group": "Day 1",
+     "label": "Block",
+     "start": 4.5,
+     "end": 5.5,
+     "tone": "purpleBar",
+     "note": "5% milk, 1 h"
+    },
+    {
+     "group": "Day 1",
+     "label": "Primary antibody",
+     "start": 5.5,
+     "end": 8,
+     "tone": "orangeBar",
+     "note": "1:1000, 4 °C overnight"
+    },
+    {
+     "group": "Day 2",
+     "label": "Wash × 3",
+     "start": 8,
+     "end": 8.5,
+     "tone": "grayBar"
+    },
+    {
+     "group": "Day 2",
+     "label": "Secondary antibody",
+     "start": 8.5,
+     "end": 9.5,
+     "tone": "orangeBar",
+     "note": "HRP, 1:5000, 1 h RT"
+    },
+    {
+     "group": "Day 2",
+     "label": "Wash × 3 + ECL",
+     "start": 9.5,
+     "end": 10.2,
+     "tone": "grayBar"
+    },
+    {
+     "group": "Day 2",
+     "label": "Image + quantify",
+     "start": 10.2,
+     "end": 11.2,
+     "tone": "greenBar",
+     "note": "vs total protein"
+    }
+   ]
+  }
+ ]
+}

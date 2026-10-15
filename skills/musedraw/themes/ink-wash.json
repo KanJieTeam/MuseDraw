@@ -1,0 +1,27 @@
+{
+  "id": "ink-wash",
+  "name": "Ink Wash",
+  "nameZh": "水墨宣纸",
+  "aliases": ["水墨", "墨韵", "宣纸", "国风", "ink"],
+  "summary": "Rice paper, brush-calligraphy headline, a cinnabar seal and vertical column labels. Chinese typographic tradition for government, culture and enterprise reports.",
+  "palette": { "paper": "#F3EEE2", "card": "#FAF7EF", "ink": "#1E1C19", "muted": "#6E675B", "accent": "#B3342A", "dai": "#3E5868", "wash": "#E4DED1" },
+  "fonts": { "display": "Ma Shan Zheng, Noto Serif SC, serif", "body": "Noto Serif SC, serif", "mono": "Noto Serif SC, serif" },
+  "canvas": { "bg": "paper", "margin": 64, "grain": { "opacity": 0.3, "frequency": 0.75, "r": 0.4, "g": 0.35, "b": 0.25, "alpha": 0.55 }, "glows": [ { "x": 0.9, "y": 0.1, "r": 0.25, "color": "#CFC6B2", "opacity": 0.6 } ] },
+  "header": { "layout": "seal", "titleFont": "display", "titleSize": 64, "titleWeight": 400, "titleLetterSpacing": 6, "seal": "墨图", "sealColor": "accent", "sealText": "#F6EFE1", "kickerFont": "body", "kickerSize": 15, "kickerColor": "accent", "kickerLetterSpacing": 4, "subFont": "body", "subSize": 16, "subColor": "muted" },
+  "node": { "font": "body", "size": 17, "weight": 700, "subFont": "body", "subSize": 12.5, "tagFont": "body", "tagSize": 11.5, "tagPos": "below", "radius": 2, "stroke": 1.2, "padding": 12, "align": "center", "lineHeight": 1.2, "gap": 3, "letterSpacing": 1 },
+  "tones": {
+    "default": { "fill": "card", "stroke": "ink", "text": "ink", "sub": "muted", "tag": "dai" },
+    "accent": { "fill": "ink", "stroke": "ink", "text": "#F6EFE1", "sub": "#CFC6B2", "tag": "#E8B9A9" },
+    "wash": { "gradient": ["#DCD5C5", "#F5F0E5"], "stroke": "#8C8475", "text": "ink", "sub": "muted", "tag": "dai" },
+    "seal": { "fill": "accent", "stroke": "accent", "text": "#F6EFE1", "sub": "#F1D3C8", "tag": "#F6EFE1" },
+    "ghost": { "fill": "none", "stroke": "#9A9283", "dash": "3 3", "text": "muted", "sub": "muted" }
+  },
+  "zone": { "style": "outline", "radius": 0, "stroke": 0.8, "labelFont": "body", "labelSize": 18, "labelWeight": 700, "letterSpacing": 10, "labelStyle": "vertical", "verticalRule": true, "labelPad": 14,
+    "tones": { "default": { "fill": "#EEE8DA", "stroke": "#B9B09E", "text": "ink" }, "accent": { "fill": "#F1E3DC", "stroke": "accent", "text": "accent" } } },
+  "edge": { "color": "#3A3632", "width": 1.2, "radius": 4, "arrow": "triangle", "arrowSize": 8, "gap": 3, "labelFont": "body", "labelSize": 12.5, "labelColor": "muted", "labelPlacement": "above", "labelStyle": "plain",
+    "kinds": { "primary": { "color": "accent", "width": 1.8 }, "soft": { "color": "#8C8475", "dash": "4 4" } } },
+  "step": { "shape": "square", "fill": "accent", "text": "#F6EFE1", "size": 22, "font": "body", "weight": 700 },
+  "note": { "style": "margin", "font": "body", "size": 13.5, "color": "muted", "numFont": "body", "numColor": "accent", "lineHeight": 1.6 },
+  "legend": { "font": "body", "size": 12.5, "color": "muted" },
+  "footer": { "text": "MuseDraw · 水墨宣纸", "font": "body", "size": 12, "color": "muted", "letterSpacing": 3 }
+}
