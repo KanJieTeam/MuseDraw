@@ -29,4 +29,26 @@ assert.ok(!attribute.includes('\n')&&!attribute.includes('\r'),'XML attribute li
 assert.equal((attribute.match(/&#(?:10|x0*a);/gi)||[]).length,2,'Every source line break must survive XML attribute normalization');
 const decoded=attribute.replace(/&#(?:10|x0*a);/gi,'\n').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,"'").replace(/&amp;/g,'&');
 assert.equal(decoded,source,'Native editable text preserves all lines and literal XML-sensitive content');
-console.log('PASS native drawio multiline XML entities and absolute/relative SVG path commands');
+const native={size:[600,400],title:'Native contract',groups:[
+ {id:'group-a',sourceId:'a',kind:'node',box:[10,10,100,50]},
+ {id:'group-b',sourceId:'b',kind:'node',box:[200,10,100,50]}
+],shapes:[{id:'shape-a',parent:'group-a',box:[10,10,100,50],tag:'rect',attributes:{x:10,y:10,width:100,height:50},matrix:[1,0,0,1,0,0],fill:'#ffffff',stroke:'#123456',width:1,opacity:1,fillOpacity:1,strokeOpacity:1,dash:'none',cap:'butt',join:'miter'}],texts:[],edges:[
+ {id:'a-b',from:'a',to:'b',points:[[110,35],[200,35]],color:'#123456',width:1,opacity:1}
+]};
+const connected=toDrawio(native);
+assert.match(connected,/source="group-a" target="group-b"/);
+assert.match(connected,/shape=stencil\(/);
+assert.doesNotMatch(connected,/<(?:svg|image|foreignObject)\b|shape=image|data:image/i);
+function rejected(change,expected){const scene=structuredClone(native);change(scene);assert.throws(()=>toDrawio(scene),expected);}
+for(const tag of ['image','svg','foreignObject'])rejected(s=>{s.shapes[0].tag=tag;},/Unsupported editable primitive/);
+rejected(s=>{s.shapes[0].id='group-a';},/Duplicate or invalid native object ID/);
+rejected(s=>{s.shapes[0].parent='missing';},/Unresolved native parent/);
+rejected(s=>{s.shapes[0].box[0]=NaN;},/Invalid native geometry/);
+rejected(s=>{s.shapes[0].matrix[0]=Infinity;},/Invalid native transform/);
+rejected(s=>{s.groups[1].sourceId='a';},/Duplicate or invalid native node/);
+rejected(s=>{s.edges[0].to='missing';},/Unresolved editable terminals/);
+rejected(s=>{s.edges.push({...s.edges[0]});},/Duplicate native connector ID/);
+rejected(s=>{s.shapes[0].id='connector-1';},/Duplicate native connector ID/);
+rejected(s=>{s.edges[0].points[0][0]=NaN;},/Invalid native connector geometry/);
+rejected(s=>{s.shapes[0].edgeParent='missing';},/Unresolved native edge label/);
+console.log('PASS native drawio contract, multiline XML entities and absolute/relative SVG path commands');

@@ -11,6 +11,25 @@ reader must understand, choose a diagram type and a style, write a
 The engine owns typography, colour, line, texture, ports and arrowheads; you own
 content, composition and emphasis.
 
+## Default delivery · every drawing, every style
+
+These rules apply automatically to new drawings, replays and revisions. Users
+only need to describe the content and style; do not ask them to repeat these
+rules or append them to copied gallery prompts.
+
+1. Render with the scene engine. Default deliverables are `diagram@2x.png` and
+   native `diagram.drawio`, with individually editable text, vector shapes and
+   connected edges. Never flatten the diagram into an embedded SVG or screenshot.
+   The exporter rejects unsupported primitives, invalid object IDs and broken
+   native references before writing the draw.io file.
+2. Open `preview.jpg` or the PNG and read `checks.json`. Inspect content,
+   legibility, layout and connectors; fix warnings and visible problems, then
+   rerender and inspect again. Automated checks do not prove visual inspection.
+3. Deliver links to both primary files after inspection. Keep scene JSON, SVG
+   and checks as supporting files. If rendering or inspection cannot finish,
+   report the incomplete step; do not claim a finished or visually checked result.
+   Honor an explicit request for a different output format, such as SVG only.
+
 ## Fast path · get the first image on screen
 
 Read this Skill once. Use an already installed current copy; do not clone or

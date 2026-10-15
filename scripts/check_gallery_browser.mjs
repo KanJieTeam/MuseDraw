@@ -28,7 +28,8 @@ async function noOverflow(){assert.deepEqual(await page.evaluate(()=>['html','bo
 async function screenshot(name){await page.screenshot({path:path.join(output,name),animations:'disabled'});report.screenshots.push(name);}
 async function selectFilter(key,value){const data=key==='theme'?'style':key;await page.locator(`[data-${data}="${value}"]`).click();}
 function prompt(markdown){const match=markdown.match(/(?:^|\n)>[ \t]+([^\n]+(?:\n>[ \t]+[^\n]+)*)/);assert.ok(match,'Original user prompt missing');return match[1].replace(/\n>[ \t]+/g,'\n').trim().replace(/\r\n/g,'\n');}
-async function copiedBrief(item,original){const name=await page.locator(`#theme option[value="${item.theme}"]`).textContent();return `请使用 MuseDraw 最新版（https://github.com/KanJieTeam/MuseDraw），先读取完整 Skill，采用“${name}”风格。\n${original}\n请渲染并看图检查，交付 PNG 和可逐个编辑文字、图形与连线的原生 .drawio 文件，不要把 SVG 或截图嵌入 drawio。`;}
+async function copiedBrief(item,original){const name=await page.locator(`#theme option[value="${item.theme}"]`).textContent();return `请使用 MuseDraw 最新版（https://github.com/KanJieTeam/MuseDraw），先读取完整 Skill，采用“${name}”风格。\n${original}`;}
+function noDeliveryBoilerplate(text){assert.doesNotMatch(text,/请渲染并看图检查|交付 PNG|Deliver PNG|Do not embed an SVG|not an embedded SVG|不要把 SVG/);}
 
 try{
  const requested=option('--url')||await serve();
@@ -75,7 +76,7 @@ try{
  });
  await check('native-clipboard-copies-original-user-prompts',async()=>{
   await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(url).origin});
-  for(const item of samples){await page.evaluate(()=>navigator.clipboard.writeText('QA clipboard marker'));const expected=await copiedBrief(item,prompts.get(item.slug));await page.locator(`#gallery [data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);assert.ok(expected.includes('MuseDraw 最新版'));assert.ok(expected.includes('原生 .drawio'));assert.ok(expected.includes(prompts.get(item.slug)));}
+  for(const item of samples){await page.evaluate(()=>navigator.clipboard.writeText('QA clipboard marker'));const expected=await copiedBrief(item,prompts.get(item.slug));await page.locator(`#gallery [data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);assert.ok(expected.includes('MuseDraw 最新版'));noDeliveryBoilerplate(expected);assert.ok(expected.includes(prompts.get(item.slug)));}
   return {copiedOriginalPrompts:samples.map(item=>item.slug)};
  });
  await check('denied-clipboard-uses-selected-manual-fallback',async()=>{
@@ -83,11 +84,11 @@ try{
   try{
    page=await fallback.newPage();await page.goto(url,{waitUntil:'networkidle'});const item=items.find(item=>item.status==='flagship'),expected=await copiedBrief(item,prompts.get(item.slug));
    await page.locator(`#gallery [data-copy="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#copy-text').inputValue(),expected);assert.equal(await page.locator('#copy-text').evaluate(element=>element.selectionEnd-element.selectionStart),expected.length);await noOverflow();await screenshot('mobile-copy-fallback.png');await page.locator('#close-copy').click();
-   await page.locator(`#gallery [data-replay="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});assert.ok((await page.locator('#copy-text').inputValue()).includes('原生 .drawio'));await page.keyboard.press('Escape');assert.equal(await page.locator('#copy-dialog').evaluate(element=>element.open),false);
+   await page.locator(`#gallery [data-replay="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});noDeliveryBoilerplate(await page.locator('#copy-text').inputValue());await page.keyboard.press('Escape');assert.equal(await page.locator('#copy-dialog').evaluate(element=>element.open),false);
   }finally{await fallback.close();page=original;}
  });
  await check('exact-replay-copies-latest-repository-and-raw-scene',async()=>{
-  const item=items[0];await page.locator(`#gallery [data-replay="${item.slug}"]`).click();const text=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(text.includes('仓库最新版'));assert.ok(text.includes(`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`));assert.ok(text.includes('直接渲染'));assert.ok(text.includes('不要要求我提供坐标'));assert.ok(text.includes('原生 .drawio'));assert.ok(text.split('\n').length<=6);
+  const item=items[0];await page.locator(`#gallery [data-replay="${item.slug}"]`).click();const text=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(text.includes('仓库最新版'));assert.ok(text.includes(`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`));assert.ok(text.includes('直接渲染'));assert.ok(text.includes('不要要求我提供坐标'));noDeliveryBoilerplate(text);assert.ok(text.split('\n').length<=6);
  });
  await check('svg-preview-zoom-fit-close-and-mobile-layout',async()=>{
   for(const width of [1440,390]){
@@ -118,8 +119,8 @@ try{
  });
  await check('bilingual-prompts-preview-clipboard-replay-and-preference',async()=>{
   const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();
-  await page.locator('#preview-details [data-prompt-language="en"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].en);const en=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(en.includes('Use the latest MuseDraw'));assert.ok(en.includes('native .drawio'));
-  await page.locator('#preview-details [data-replay]').click();await page.waitForFunction(async()=>(await navigator.clipboard.readText()).startsWith('Reproduce this MuseDraw'));await page.reload({waitUntil:'networkidle'});await page.locator('#preview[open]').waitFor();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await screenshot('english-prompt.png');
+  await page.locator('#preview-details [data-prompt-language="en"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].en);const en=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(en.includes('Use the latest MuseDraw'));noDeliveryBoilerplate(en);
+  await page.locator('#preview-details [data-replay]').click();await page.waitForFunction(async()=>(await navigator.clipboard.readText()).startsWith('Reproduce this MuseDraw'));noDeliveryBoilerplate(await page.evaluate(()=>navigator.clipboard.readText()));await page.reload({waitUntil:'networkidle'});await page.locator('#preview[open]').waitFor();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await screenshot('english-prompt.png');
   await page.locator('#preview-details [data-prompt-language="zh"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].zh);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].zh);assert.ok((await page.evaluate(()=>navigator.clipboard.readText())).startsWith('请使用 MuseDraw 最新版'));await page.locator('#close-preview').click();
  });
  await check('readable-type-and-prefilled-style-request-entrypoints',async()=>{

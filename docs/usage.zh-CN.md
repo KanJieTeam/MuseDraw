@@ -19,6 +19,8 @@ npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts -
 
 然后告诉智能体：
 
+只需描述内容和风格。渲染、实际看图检查、交付 PNG 与原生可编辑 draw.io 已是 Skill 的默认交付规则，不需要在每条需求后重复；图库复制按钮也只附上案例内容与风格。明确要求其他格式时，以你的要求为准。
+
 ```text
 用 MuseDraw 的“科研期刊”风格画一张技术路线图。
 科学问题是肝星状细胞代谢重编程如何驱动肝纤维化。
