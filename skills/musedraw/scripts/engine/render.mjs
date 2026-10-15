@@ -8,8 +8,7 @@ import rough from '../vendor/rough.esm.js';
 import { ICONS, iconSvg } from './icons.mjs';
 import { esc, measure, wrap, applyCase, textBlock, rd } from './text.mjs';
 import { autoSides, port, orthoPoints, roundedPath, curvePath, bezierPoint, along, longestSegmentMid, shorten, f } from './route.mjs';
-import { layoutSequence } from './sequence.mjs';
-import { expandBlocks } from './layouts.mjs';
+import { prepareScene } from './validate.mjs';
 import { assertStaticSvg } from './safety.mjs';
 
 const gen = rough.generator();
@@ -18,8 +17,7 @@ function hash(s) { let h = 2166136261; for (const c of String(s)) { h ^= c.charC
 const deepMerge = (a, b) => { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === 'object' && !Array.isArray(v) && a?.[k] && typeof a[k] === 'object' ? deepMerge(a[k], v) : v; return o; };
 
 export function render(scene, theme) {
-  if (scene.type === 'sequence') scene = layoutSequence(scene, theme);
-  scene = expandBlocks(scene, theme);
+  scene = prepareScene(scene, theme);
   const ctx = new Ctx(scene, theme);
   return assertStaticSvg(ctx.build());
 }
@@ -830,6 +828,7 @@ class Ctx {
   // ---------- header & footer ----------
   header() {
     const H = this.t.header ?? {}, s = this.s;
+    if (s.header === false) { this.headerBottom = 0; return ''; }
     const m = this.t.canvas.margin ?? 56;
     const fam = this.font(H.titleFont ?? 'display');
     const size = s.titleSize ?? H.titleSize ?? 40;

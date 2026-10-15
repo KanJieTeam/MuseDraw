@@ -1,0 +1,298 @@
+{
+  "theme": "editorial",
+  "size": [
+    1600,
+    1080
+  ],
+  "kicker": "Reference architecture · question answering over internal docs",
+  "title": "Retrieval-augmented generation, end to end",
+  "subtitle": "Two pipelines share one vector index. Documents are chunked and embedded in advance; each question is embedded, matched, re-ranked and grounded before the model generates text.",
+  "subtitleWidth": 1020,
+  "zones": [
+    {
+      "id": "z-ingest",
+      "label": "a — c   Documents · offline preparation and updates",
+      "x": 64,
+      "y": 286,
+      "w": 1116,
+      "h": 1
+    },
+    {
+      "id": "z-retrieve",
+      "label": "1 — 4   Questions · per request",
+      "x": 64,
+      "y": 548,
+      "w": 1116,
+      "h": 1
+    },
+    {
+      "id": "z-generate",
+      "label": "5 — 7   Grounding and generation",
+      "x": 64,
+      "y": 806,
+      "w": 1116,
+      "h": 1
+    }
+  ],
+  "nodes": [
+    {
+      "id": "sources",
+      "label": "Source documents",
+      "sub": "retain source locations",
+      "icon": "doc",
+      "x": 64,
+      "y": 330,
+      "w": 220,
+      "h": 92,
+      "step": "a"
+    },
+    {
+      "id": "chunk",
+      "label": "Parse & chunk",
+      "sub": "split along document structure",
+      "x": 352,
+      "y": 330,
+      "w": 232,
+      "h": 92,
+      "step": "b"
+    },
+    {
+      "id": "embed-docs",
+      "label": "Document embeddings",
+      "sub": "encode document chunks",
+      "x": 652,
+      "y": 330,
+      "w": 220,
+      "h": 92,
+      "step": "c"
+    },
+    {
+      "id": "index",
+      "label": "Shared vector index",
+      "sub": "vectors + chunk references",
+      "icon": "db",
+      "x": 940,
+      "y": 330,
+      "w": 240,
+      "h": 92,
+      "tone": "accent"
+    },
+    {
+      "id": "question",
+      "label": "User question",
+      "sub": "retain the original question",
+      "icon": "user",
+      "x": 64,
+      "y": 592,
+      "w": 220,
+      "h": 92,
+      "step": 1
+    },
+    {
+      "id": "embed-q",
+      "label": "Query embedding",
+      "sub": "same model as documents",
+      "x": 352,
+      "y": 592,
+      "w": 232,
+      "h": 92,
+      "step": 2
+    },
+    {
+      "id": "retrieve",
+      "label": "Similarity matching",
+      "sub": "retrieve candidate evidence",
+      "x": 652,
+      "y": 592,
+      "w": 220,
+      "h": 92,
+      "step": 3
+    },
+    {
+      "id": "rerank",
+      "label": "Re-rank",
+      "sub": "compare question and evidence",
+      "x": 940,
+      "y": 592,
+      "w": 240,
+      "h": 92,
+      "step": 4
+    },
+    {
+      "id": "answer",
+      "label": "Answer + citations",
+      "sub": "link claims to source evidence",
+      "x": 64,
+      "y": 850,
+      "w": 220,
+      "h": 92,
+      "step": 7
+    },
+    {
+      "id": "llm",
+      "label": "Model generation",
+      "sub": "write from grounded evidence",
+      "icon": "spark",
+      "x": 352,
+      "y": 850,
+      "w": 232,
+      "h": 92,
+      "step": 6,
+      "tone": "accent"
+    },
+    {
+      "id": "prompt",
+      "label": "Evidence\ngrounding",
+      "sub": "question + evidence + sources",
+      "x": 652,
+      "y": 850,
+      "w": 220,
+      "h": 92,
+      "step": 5
+    }
+  ],
+  "edges": [
+    {
+      "from": "sources",
+      "to": "chunk",
+      "kind": "offline"
+    },
+    {
+      "from": "chunk",
+      "to": "embed-docs",
+      "kind": "offline"
+    },
+    {
+      "from": "embed-docs",
+      "to": "index",
+      "kind": "offline",
+      "label": "upsert"
+    },
+    {
+      "from": "question",
+      "to": "embed-q",
+      "kind": "primary"
+    },
+    {
+      "from": "embed-q",
+      "to": "retrieve",
+      "kind": "primary"
+    },
+    {
+      "from": "retrieve",
+      "to": "index",
+      "fromSide": "t",
+      "toSide": "b",
+      "mid": 500,
+      "both": true,
+      "label": "vector lookup",
+      "labelAt": [
+        906,
+        486
+      ]
+    },
+    {
+      "from": "retrieve",
+      "to": "rerank",
+      "kind": "primary",
+      "label": "matches"
+    },
+    {
+      "from": "rerank",
+      "to": "prompt",
+      "kind": "primary",
+      "fromSide": "b",
+      "toSide": "r",
+      "label": "evidence",
+      "labelAt": [
+        1012,
+        880
+      ]
+    },
+    {
+      "from": "question",
+      "to": "prompt",
+      "fromSide": "b",
+      "toSide": "t",
+      "mid": 770,
+      "kind": "return",
+      "label": "original question",
+      "labelAt": [
+        470,
+        760
+      ]
+    },
+    {
+      "from": "prompt",
+      "to": "llm",
+      "kind": "primary"
+    },
+    {
+      "from": "llm",
+      "to": "answer",
+      "kind": "primary"
+    }
+  ],
+  "notes": [
+    {
+      "num": "b",
+      "text": "Prepare the documents in advance. New and changed content follows the same indexing pipeline.",
+      "x": 1256,
+      "y": 330,
+      "w": 280
+    },
+    {
+      "num": "3",
+      "text": "Use the same embedding model for documents and queries so vectors share a comparison space.",
+      "x": 1256,
+      "y": 560,
+      "w": 280
+    },
+    {
+      "num": "4",
+      "text": "Re-ranking compares the question with candidate chunks to prioritise relevant evidence.",
+      "x": 1256,
+      "y": 676,
+      "w": 280
+    },
+    {
+      "num": "7",
+      "text": "Ground the context in evidence and source locations before generating a traceable answer.",
+      "x": 1256,
+      "y": 850,
+      "w": 280
+    }
+  ],
+  "legend": {
+    "x": 64,
+    "y": 1000,
+    "items": [
+      {
+        "kind": "primary",
+        "label": "question path"
+      },
+      {
+        "kind": "offline",
+        "label": "offline documents"
+      },
+      {
+        "kind": "default",
+        "label": "index lookup"
+      }
+    ]
+  },
+  "texts": [
+    {
+      "x": 1256,
+      "y": 300,
+      "text": "MARGIN NOTES",
+      "font": "mono",
+      "size": 11,
+      "color": "accent",
+      "letterSpacing": 2,
+      "weight": 600
+    }
+  ],
+  "footer": false,
+  "header": false
+}

@@ -1,0 +1,1844 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MuseDraw scene",
+  "description": "Scene structure for the MuseDraw scene engine. Extra fields remain allowed for compatibility. Cross-object references and layout relationships are checked by the engine.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "footer": {
+      "anyOf": [
+        {
+          "const": false
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "theme": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "kicker": {
+      "type": "string"
+    },
+    "figure": {
+      "type": "string"
+    },
+    "seal": {
+      "type": "string"
+    },
+    "shortTitle": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "graph",
+        "sequence"
+      ]
+    },
+    "size": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "autoFit": {
+      "type": "boolean"
+    },
+    "header": {
+      "type": "boolean"
+    },
+    "subtitleWidth": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "headWidth": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "headHeight": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "rowGap": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "top": {
+      "type": "number"
+    },
+    "left": {
+      "type": "number"
+    },
+    "right": {
+      "type": "number"
+    },
+    "firstGap": {
+      "type": "number"
+    },
+    "noteColumn": {
+      "type": "number"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/edge"
+      }
+    },
+    "zones": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/zone"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/note"
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/text"
+      }
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/line"
+      }
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/path"
+      }
+    },
+    "bars": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/bar"
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/block"
+      }
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/participant"
+      }
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/message"
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/section"
+      }
+    },
+    "legend": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "items"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "dwg": {
+          "type": "string"
+        },
+        "rev": {
+          "type": "string"
+        },
+        "scale": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "by": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "sequence"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "participants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/participant"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "participants"
+        ]
+      }
+    }
+  ],
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "point": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "nodeContent": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "sub": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "tone": {
+          "type": "string"
+        },
+        "fill": {
+          "type": "string"
+        },
+        "stroke": {
+          "type": "string"
+        },
+        "textColor": {
+          "type": "string"
+        },
+        "font": {
+          "type": "string"
+        },
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "step": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "stepAt": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "shape": {
+          "enum": [
+            "box",
+            "pill",
+            "chip",
+            "circle",
+            "station",
+            "cylinder",
+            "queue",
+            "hex",
+            "diamond",
+            "doc",
+            "browser",
+            "person",
+            "cloud",
+            "stack",
+            "chevron",
+            "trapezoid",
+            "parallelogram",
+            "text"
+          ]
+        },
+        "icon": {
+          "enum": [
+            "user",
+            "users",
+            "browser",
+            "phone",
+            "server",
+            "db",
+            "queue",
+            "stream",
+            "cloud",
+            "lock",
+            "key",
+            "gear",
+            "globe",
+            "bolt",
+            "spark",
+            "doc",
+            "chart",
+            "cpu",
+            "shield",
+            "search",
+            "cache",
+            "box",
+            "git",
+            "eye",
+            "card",
+            "bank",
+            "mail",
+            "clock",
+            "gamepad",
+            "device",
+            "sensor",
+            "layers",
+            "table",
+            "brain",
+            "tool",
+            "map",
+            "check",
+            "alert",
+            "refresh",
+            "balance"
+          ]
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "valign": {
+          "enum": [
+            "top",
+            "middle",
+            "bottom"
+          ]
+        },
+        "labelPos": {
+          "enum": [
+            "inside",
+            "right",
+            "left",
+            "above",
+            "below",
+            "none"
+          ]
+        },
+        "w": {
+          "type": "number",
+          "minimum": 0
+        },
+        "h": {
+          "type": "number",
+          "minimum": 0
+        },
+        "radius": {
+          "type": "number",
+          "minimum": 0
+        },
+        "size": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "subSize": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "tagSize": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "overlap": {
+          "type": "boolean"
+        },
+        "first": {
+          "type": "boolean"
+        },
+        "flip": {
+          "type": "boolean"
+        }
+      }
+    },
+    "node": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/nodeContent"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "id",
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "from": {
+          "$ref": "#/definitions/id"
+        },
+        "to": {
+          "$ref": "#/definitions/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "arrow": {
+          "type": "string"
+        },
+        "dash": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string"
+        },
+        "labelPlacement": {
+          "type": "string"
+        },
+        "fromSide": {
+          "enum": [
+            "l",
+            "r",
+            "t",
+            "b"
+          ]
+        },
+        "toSide": {
+          "enum": [
+            "l",
+            "r",
+            "t",
+            "b"
+          ]
+        },
+        "fromAt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "toAt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "fromGap": {
+          "type": "number"
+        },
+        "toGap": {
+          "type": "number"
+        },
+        "mid": {
+          "type": "number"
+        },
+        "bend": {
+          "type": "number"
+        },
+        "labelOffset": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "via": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "labelAt": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          ]
+        },
+        "route": {
+          "enum": [
+            "ortho",
+            "curve",
+            "straight"
+          ]
+        },
+        "both": {
+          "type": "boolean"
+        },
+        "step": {
+          "type": [
+            "string",
+            "number"
+          ]
+        }
+      },
+      "required": [
+        "from",
+        "to"
+      ]
+    },
+    "zone": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "sub": {
+          "type": "string"
+        },
+        "tone": {
+          "type": "string"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "style": {
+          "enum": [
+            "outline",
+            "dashed",
+            "fill",
+            "band",
+            "lane",
+            "bracket",
+            "rule"
+          ]
+        },
+        "labelSize": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "subSize": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "w",
+        "h"
+      ]
+    },
+    "note": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "dy": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "variant": {
+          "type": "string"
+        },
+        "num": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "target": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "from": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "to": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "style": {
+          "enum": [
+            "margin",
+            "sticky",
+            "callout",
+            "comment"
+          ]
+        }
+      },
+      "required": [
+        "x"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "y"
+          ]
+        },
+        {
+          "required": [
+            "row"
+          ]
+        }
+      ]
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "rotate": {
+          "type": "number"
+        },
+        "letterSpacing": {
+          "type": "number"
+        },
+        "text": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "size": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "lineHeight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "font": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "weight": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "italic": {
+          "type": "boolean"
+        },
+        "anchor": {
+          "enum": [
+            "start",
+            "middle",
+            "end"
+          ]
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "text"
+      ]
+    },
+    "line": {
+      "type": "object",
+      "properties": {
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 2
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "color": {
+          "type": "string"
+        },
+        "dash": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "points"
+      ]
+    },
+    "path": {
+      "type": "object",
+      "properties": {
+        "d": {
+          "type": "string"
+        },
+        "fill": {
+          "type": "string"
+        },
+        "stroke": {
+          "type": "string"
+        },
+        "dash": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "d"
+      ]
+    },
+    "bar": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "from": {
+          "type": "number"
+        },
+        "value": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "max": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "size": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "text": {
+          "type": "string"
+        },
+        "fill": {
+          "type": "string"
+        },
+        "textColor": {
+          "type": "string"
+        },
+        "track": {
+          "type": [
+            "string",
+            "boolean"
+          ]
+        },
+        "textPos": {
+          "enum": [
+            "inside",
+            "right",
+            "after",
+            "left"
+          ]
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "w",
+        "h"
+      ]
+    },
+    "treeNode": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/nodeContent"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "children": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/treeNode"
+              }
+            },
+            "stack": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "tone": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "inLabel": {
+          "type": "string"
+        },
+        "start": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end": {
+          "type": "number",
+          "minimum": 0
+        },
+        "milestone": {
+          "type": "boolean"
+        },
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {},
+            "minItems": 2,
+            "maxItems": 3
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "start",
+            "end"
+          ]
+        },
+        {
+          "properties": {
+            "milestone": {
+              "const": true
+            }
+          },
+          "required": [
+            "milestone",
+            "start"
+          ]
+        },
+        {
+          "required": [
+            "segments"
+          ]
+        }
+      ]
+    },
+    "column": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        }
+      },
+      "required": [
+        "w"
+      ]
+    },
+    "cell": {
+      "anyOf": [
+        {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            "tone": {
+              "type": "string"
+            },
+            "bold": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "block": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "type": {
+          "enum": [
+            "tree",
+            "mindmap",
+            "timeline",
+            "gantt",
+            "matrix",
+            "funnel",
+            "cycle",
+            "fishbone",
+            "swimlane",
+            "table"
+          ]
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "cx": {
+          "type": "number"
+        },
+        "cy": {
+          "type": "number"
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "r": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rowH": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "headH": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "laneH": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "labelW": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "stepW": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "stepH": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rootW": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rootH": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "stageH": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "itemW": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "levelGap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "siblingGap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "stackGap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "stackIndent": {
+          "type": "number",
+          "minimum": 0
+        },
+        "branchGap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "gap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "nodeW": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "minItems": 1
+            }
+          ]
+        },
+        "nodeH": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "minItems": 1
+            }
+          ]
+        },
+        "root": {
+          "$ref": "#/definitions/treeNode"
+        },
+        "direction": {
+          "enum": [
+            "down",
+            "right"
+          ]
+        },
+        "cols": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "split": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "date": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "sub": {
+                "type": "string"
+              },
+              "tone": {
+                "type": "string"
+              },
+              "at": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/task"
+          }
+        },
+        "deps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/edge"
+          }
+        },
+        "today": {
+          "type": "number"
+        },
+        "quadrants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "sub": {
+                "type": "string"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "string",
+                    "number"
+                  ]
+                }
+              }
+            }
+          },
+          "minItems": 0,
+          "maxItems": 4
+        },
+        "xAxis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "yAxis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "label": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "r": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "label": {
+                "type": "string"
+              },
+              "sub": {
+                "type": "string"
+              },
+              "inside": {
+                "type": "string"
+              },
+              "tone": {
+                "type": "string"
+              },
+              "valueText": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "lane": {
+                "$ref": "#/definitions/id"
+              },
+              "label": {
+                "type": "string"
+              },
+              "sub": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "string"
+              },
+              "tone": {
+                "type": "string"
+              },
+              "col": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "w": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "h": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "dy": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "center": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "sub": {
+              "type": "string"
+            }
+          }
+        },
+        "head": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "sub": {
+              "type": "string"
+            },
+            "tone": {
+              "type": "string"
+            }
+          }
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        },
+                        "count": {
+                          "type": [
+                            "string",
+                            "number"
+                          ]
+                        },
+                        "key": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "text"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "lanes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          }
+        },
+        "flows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/edge"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "cells": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/cell"
+                }
+              },
+              "tone": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "cells"
+            ]
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "gantt"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "columns": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "w",
+              "columns"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "columns": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/column"
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "columns"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "tree"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "root"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "mindmap"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "cx",
+              "cy",
+              "root"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "timeline"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "matrix"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "funnel"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cycle"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "nodeW": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "nodeH": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "cx",
+              "cy"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "fishbone"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h",
+              "head"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "swimlane"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {},
+                  "required": [
+                    "id",
+                    "lane",
+                    "col"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "w"
+            ]
+          }
+        }
+      ]
+    },
+    "participant": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/nodeContent"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "$ref": "#/definitions/id"
+        },
+        "to": {
+          "$ref": "#/definitions/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "step": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "gapBefore": {
+          "type": "number",
+          "minimum": 0
+        },
+        "gapAfter": {
+          "type": "number",
+          "minimum": 0
+        },
+        "labelWidth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "labelAt": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          ]
+        }
+      },
+      "required": [
+        "from",
+        "to"
+      ]
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "from": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "to": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "to"
+      ]
+    }
+  }
+}

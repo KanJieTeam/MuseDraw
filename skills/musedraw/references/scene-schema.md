@@ -1,7 +1,43 @@
 # Scene schema · scene.json 字段说明
 
 A scene is plain JSON. Coordinates are canvas pixels (1× — the PNG is exported
-at 2×). Everything not listed here is ignored. Copy a gallery scene and edit it.
+at 2×). Extra fields remain allowed for compatibility. Copy a gallery scene and edit it.
+The bundled [JSON Schema](scene.schema.json) describes core fields, primitives
+and all ten layout blocks; associate it with your scene in a JSON-aware editor
+for completion and structural diagnostics. Existing scenes need no changes.
+
+## Validate before rendering
+
+```sh
+node <skill>/scripts/musedraw.mjs validate path/to/scene.json
+node <skill>/scripts/musedraw.mjs validate first.json second.json --theme journal
+```
+
+Validation uses Node.js only: no npm install, fonts, browser or output writes.
+It checks field types, finite coordinates, required layout inputs, duplicate
+node IDs, connector/note targets, sequence participants and message ranges,
+swimlane lanes/columns, table cell counts and Gantt ranges. References to
+block-generated nodes are resolved after layout expansion. Like `render`, it
+requires a scene theme or `--theme` and stops at the first invalid file with
+exit code 1. The failing file and JSON Pointer paths identify the errors:
+
+```text
+scene.json: Invalid scene:
+  /nodes/1/id: duplicate ID "api"; first defined at /nodes/0/id
+```
+
+`render` runs the same validation before browser startup or writing that scene's
+artifacts. Errors labelled `after layout expansion` use paths into the expanded
+primitive arrays, which include generated nodes and edges. In a batch, earlier
+valid scenes may already have been rendered when a later scene fails.
+
+`schemaVersion` is optional; omitted means version 1, and an explicit value must
+be `1`. Unknown fields are still allowed, not a guarantee that the renderer uses
+them. The offline validator reads the bundled schema with its supported keyword
+subset; the regression suite guards that vocabulary when the schema changes.
+The schema alone cannot check cross-object relationships: use `validate` for
+those. Validation success does not certify typography, collisions, static SVG
+safety, visual quality or factual accuracy; render and inspect the result too.
 
 ```json
 {
@@ -27,6 +63,8 @@ at 2×). Everything not listed here is ignored. Copy a gallery scene and edit it
 | `seal` | `ink-wash` only: 1–4 characters in the cinnabar seal. |
 | `meta` | `blueprint` title block: `{dwg, rev, scale, date, by}`. |
 | `autoFit` | `false` keeps your coordinates exactly; default closes the gap under the header. |
+| `header` | `false` hides the entire page header (title, subtitle, kicker, figure and rule), and auto-fit moves the diagram up. Use this for new document figures; `true` enables a requested heading. |
+| `footer` | `false` hides attribution. The CLI omits unsolicited theme signatures; a string supplies attribution explicitly requested by the user. |
 
 ## Blocks — structure without coordinates
 

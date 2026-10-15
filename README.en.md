@@ -31,8 +31,10 @@
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
-npm --prefix skills/musedraw install     # open-source fonts + Playwright, identical renders on every OS
+npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0
 ```
+
+Run `node skills/musedraw/scripts/musedraw.mjs doctor --json` to reuse Chrome/Edge. For RAG, `quickstart rag --out output/rag --strict` uses system fonts and delivers a small JPEG preview before the full PNG and native draw.io. New drawings omit headings, figure tags and attribution unless requested. Official fonts are optional; see the [fast-path guide](docs/fast-start.zh-CN.md).
 
 Then ask your agent (Codex, Cursor, …):
 
@@ -69,7 +71,7 @@ Choose a style and a diagram, switch between Chinese and English prompts, then c
 
 ## Design method
 
-- **One figure, one claim.** Write the subtitle first.
+- **One figure, one claim.** Clarify the relationship before drawing.
 - **Specific beats generic.** Examples use real names and numbers that reconcile — never “Service A”.
 - **One focal point, a numbered path, a note on why.**
 - **Look before you ship.** `checks.json` measures real glyphs for overflow and collisions; the [anti-AI checklist](skills/musedraw/references/anti-ai-checklist.md) covers taste.
@@ -80,7 +82,7 @@ Copy a `gallery/` folder, change the content, render, look, and submit `scene.js
 
 ## Limits
 
-Needs an agent that can run commands. PNG export needs Node.js 22+ and Chromium (installed by `npm install`); `--svg-only` otherwise. Not a statistical charting tool. Numbers in examples are illustrative. The legacy auto-layout route (`render_graph.mjs`) is kept for existing users.
+Needs an agent that can run commands. PNG export needs Node.js 22+, Playwright and a compatible browser; installed Chrome/Edge can be reused. System-font mode requires no font packages; use `--svg-only` without a browser. Not a statistical charting tool. Numbers in examples are illustrative. The legacy auto-layout route (`render_graph.mjs`) is kept for existing users.
 
 ## License
 
