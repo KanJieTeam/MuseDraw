@@ -1,36 +1,36 @@
 # MuseDraw Gallery · 图库
 
-**[打开在线图库 ↗](https://kanjieteam.github.io/MuseDraw/)** · 按风格筛选、看大图、复制提示词、下载可编辑 drawio。下面仅为仓库内的源文件索引。
+**[打开在线图库 ↗](https://kanjieteam.github.io/MuseDraw/)** · 按风格筛选、看大图、复制需求、下载可编辑 drawio。下面为源文件索引。
 
-100 个案例全部出图：**20 精选** · **27 已逐张全尺寸审图** · **53 预览**（通过版面检查，待设计审阅）。机器可读清单：[catalog.json](catalog.json)。
+101 个案例全部出图：**20 精选** · **28 已审图** · **53 预览**。机器可读清单：[catalog.json](catalog.json)。
 
-All 100 cases are rendered. The default delivery is PNG plus native editable draw.io; each folder includes `diagram.drawio`, supporting `scene.json`, `prompt.md`, SVG and a preview. Render the scene to obtain the full PNG. Paper textures, blur and glow are PNG effects; draw.io preserves editable shapes, text and connected edges without promising identical rendering of every effect.
+All 101 cases are rendered. Each folder includes native editable `diagram.drawio`, `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
 
 ## 精选 · 科研
 
-| | | |
+| | |
 | --- | --- | --- |
 | [![图 7 | 论文投稿到出版的典型时间线](100-submission-timeline-journal/preview.jpg)](100-submission-timeline-journal/prompt.md)<br>**图 7 | 论文投稿到出版的典型时间线**<br>`journal` | [![Fig. 1 | PRISMA 2020 flow diagram](56-prisma-journal/preview.jpg)](56-prisma-journal/prompt.md)<br>**Fig. 1 | PRISMA 2020 flow diagram**<br>`journal` | [![Fig. 2 | CONSORT 2010 participant flow](57-consort-journal/preview.jpg)](57-consort-journal/prompt.md)<br>**Fig. 2 | CONSORT 2010 participant flow**<br>`journal` |
-| [![图 3 | 技术路线图](59-nsfc-roadmap-journal/preview.jpg)](59-nsfc-roadmap-journal/prompt.md)<br>**图 3 | 技术路线图**<br>`journal` | [![文献综述写作流程](66-literature-review-pastel/preview.jpg)](66-literature-review-pastel/prompt.md)<br>**文献综述写作流程**<br>`pastel` | [![Structural equation model: nurses' adoption of e-charting](68-sem-tam-newsprint/preview.jpg)](68-sem-tam-newsprint/prompt.md)<br>**Structural equation model: nurses' adoption of e-charting**<br>`newsprint` |
+| [![肝纤维化多组学研究技术路线](59-nsfc-roadmap-journal/preview.jpg)](59-nsfc-roadmap-journal/prompt.md)<br>**肝纤维化多组学研究技术路线**<br>`journal` | [![文献综述写作流程](66-literature-review-pastel/preview.jpg)](66-literature-review-pastel/prompt.md)<br>**文献综述写作流程**<br>`pastel` | [![Structural equation model: nurses' adoption of e-charting](68-sem-tam-newsprint/preview.jpg)](68-sem-tam-newsprint/prompt.md)<br>**Structural equation model: nurses' adoption of e-charting**<br>`newsprint` |
 | [![肝纤维化小鼠模型分组与给药方案](81-animal-study-journal/preview.jpg)](81-animal-study-journal/prompt.md)<br>**肝纤维化小鼠模型分组与给药方案**<br>`journal` | [![Network of evidence for chronic insomnia treatments](82-network-meta-newsprint/preview.jpg)](82-network-meta-newsprint/prompt.md)<br>**Network of evidence for chronic insomnia treatments**<br>`newsprint` |  |
 
 ## 精选 · 办公
 
-| | | |
+| | |
 | --- | --- | --- |
-| [![2027 年度 OKR 进度](16-okr-tree-enterprise/preview.jpg)](16-okr-tree-enterprise/prompt.md)<br>**2027 年度 OKR 进度**<br>`enterprise` | [![新员工 90 天入职计划](17-onboarding-90-pastel/preview.jpg)](17-onboarding-90-pastel/prompt.md)<br>**新员工 90 天入职计划**<br>`pastel` | [![采购审批跨部门泳道图](18-procurement-swimlane-enterprise/preview.jpg)](18-procurement-swimlane-enterprise/prompt.md)<br>**采购审批跨部门泳道图**<br>`enterprise` |
+| [![2027 年度 OKR 目标树](16-okr-tree-enterprise/preview.jpg)](16-okr-tree-enterprise/prompt.md)<br>**2027 年度 OKR 目标树**<br>`enterprise` | [![新员工 90 天入职计划](17-onboarding-90-pastel/preview.jpg)](17-onboarding-90-pastel/prompt.md)<br>**新员工 90 天入职计划**<br>`pastel` | [![采购审批跨部门泳道图：协作矩阵](18-procurement-swimlane-enterprise/preview.jpg)](18-procurement-swimlane-enterprise/prompt.md)<br>**采购审批跨部门泳道图：协作矩阵**<br>`enterprise` |
 | [![神经内科住院患者跌倒率改善](24-pdca-nursing-pastel/preview.jpg)](24-pdca-nursing-pastel/prompt.md)<br>**神经内科住院患者跌倒率改善**<br>`pastel` | [![夜间如厕跌倒根因分析](25-fishbone-falls-newsprint/preview.jpg)](25-fishbone-falls-newsprint/prompt.md)<br>**夜间如厕跌倒根因分析**<br>`newsprint` | [![费用报销审批流程](33-expense-flow-pastel/preview.jpg)](33-expense-flow-pastel/prompt.md)<br>**费用报销审批流程**<br>`pastel` |
-| [![2027–2029 战略地图](36-strategy-house-enterprise/preview.jpg)](36-strategy-house-enterprise/prompt.md)<br>**2027–2029 战略地图**<br>`enterprise` | [![公文办理流程](45-document-flow-ink-wash/preview.jpg)](45-document-flow-ink-wash/prompt.md)<br>**公文办理流程**<br>`ink-wash` |  |
+| [![2027–2029 战略能力地图](36-strategy-house-enterprise/preview.jpg)](36-strategy-house-enterprise/prompt.md)<br>**2027–2029 战略能力地图**<br>`enterprise` | [![公文办理流程](45-document-flow-ink-wash/preview.jpg)](45-document-flow-ink-wash/prompt.md)<br>**公文办理流程**<br>`ink-wash` |  |
 
 ## 精选 · 教学
 
-| | | |
+| | |
 | --- | --- | --- |
 | [![《沉与浮》教学流程](38-good-lesson-chalkboard/preview.jpg)](38-good-lesson-chalkboard/prompt.md)<br>**《沉与浮》教学流程**<br>`chalkboard` |  |  |
 
 ## 精选 · 工程
 
-| | | |
+| | |
 | --- | --- | --- |
 | [![Retrieval-augmented generation, end to end](01-rag-editorial/preview.jpg)](01-rag-editorial/prompt.md)<br>**Retrieval-augmented generation, end to end**<br>`editorial` | [![Production Kubernetes cluster across three zones](02-kubernetes-blueprint/preview.jpg)](02-kubernetes-blueprint/prompt.md)<br>**Production Kubernetes cluster across three zones**<br>`blueprint` | [![Inside a tool-using AI agent](08-ai-agent-aurora/preview.jpg)](08-ai-agent-aurora/prompt.md)<br>**Inside a tool-using AI agent**<br>`aurora` |
 
@@ -54,9 +54,9 @@ All 100 cases are rendered. The default delivery is PNG plus native editable dra
 | 13 | [Food delivery platform — Container diagram](13-food-delivery-c4/prompt.md) | 工程 | `c4` | 已审图 |
 | 14 | [Real-time multiplayer game backend](14-game-backend-neon/prompt.md) | 工程 | `neon` | 预览 |
 | 15 | [实时协同编辑（CRDT）架构](15-crdt-collab-pastel/prompt.md) | 工程 | `pastel` | 预览 |
-| 16 | [2027 年度 OKR 进度](16-okr-tree-enterprise/prompt.md) | 办公 | `enterprise` | 精选 |
+| 16 | [2027 年度 OKR 目标树](16-okr-tree-enterprise/prompt.md) | 办公 | `enterprise` | 精选 |
 | 17 | [新员工 90 天入职计划](17-onboarding-90-pastel/prompt.md) | 办公 | `pastel` | 精选 |
-| 18 | [采购审批跨部门泳道图](18-procurement-swimlane-enterprise/prompt.md) | 办公 | `enterprise` | 精选 |
+| 18 | [采购审批跨部门泳道图：协作矩阵](18-procurement-swimlane-enterprise/prompt.md) | 办公 | `enterprise` | 精选 |
 | 19 | [Product roadmap FY2027](19-product-roadmap-product/prompt.md) | 办公 | `product` | 预览 |
 | 20 | [Customer journey map](20-customer-journey-terracotta/prompt.md) | 办公 | `terracotta` | 已审图 |
 | 21 | [Self-serve funnel, last 90 days](21-sales-funnel-swiss/prompt.md) | 办公 | `swiss` | 已审图 |
@@ -74,7 +74,7 @@ All 100 cases are rendered. The default delivery is PNG plus native editable dra
 | 33 | [费用报销审批流程](33-expense-flow-pastel/prompt.md) | 办公 | `pastel` | 精选 |
 | 34 | [Team operating rhythm, one week](34-team-rhythm-bauhaus/prompt.md) | 办公 | `bauhaus` | 预览 |
 | 35 | [新品发布会筹备清单](35-launch-mindmap-whiteboard/prompt.md) | 办公 | `whiteboard` | 已审图 |
-| 36 | [2027–2029 战略地图](36-strategy-house-enterprise/prompt.md) | 办公 | `enterprise` | 精选 |
+| 36 | [2027–2029 战略能力地图](36-strategy-house-enterprise/prompt.md) | 办公 | `enterprise` | 精选 |
 | 37 | [公司 2026 年度大事记](37-annual-timeline-metro/prompt.md) | 办公 | `metro` | 预览 |
 | 38 | [《沉与浮》教学流程](38-good-lesson-chalkboard/prompt.md) | 教学 | `chalkboard` | 精选 |
 | 39 | [一年级数学一学期课程地图](39-curriculum-map-metro/prompt.md) | 教学 | `metro` | 预览 |
@@ -97,7 +97,7 @@ All 100 cases are rendered. The default delivery is PNG plus native editable dra
 | 56 | [Fig. 1 | PRISMA 2020 flow diagram](56-prisma-journal/prompt.md) | 科研 | `journal` | 精选 |
 | 57 | [Fig. 2 | CONSORT 2010 participant flow](57-consort-journal/prompt.md) | 科研 | `journal` | 精选 |
 | 58 | [Transformer architecture](58-transformer-editorial/prompt.md) | 科研 | `editorial` | 已审图 |
-| 59 | [图 3 | 技术路线图](59-nsfc-roadmap-journal/prompt.md) | 科研 | `journal` | 精选 |
+| 59 | [肝纤维化多组学研究技术路线](59-nsfc-roadmap-journal/prompt.md) | 科研 | `journal` | 精选 |
 | 60 | [Explanatory sequential mixed-methods design](60-mixed-methods-terracotta/prompt.md) | 科研 | `terracotta` | 预览 |
 | 61 | [Machine-learning model lifecycle](61-ml-lifecycle-observatory/prompt.md) | 工程 | `observatory` | 预览 |
 | 62 | [Fig. 4 | Generating a validated CRISPR–Cas9 knockout cell line](62-crispr-workflow-journal/prompt.md) | 科研 | `journal` | 预览 |
@@ -138,3 +138,4 @@ All 100 cases are rendered. The default delivery is PNG plus native editable dra
 | 97 | [Cross-team weekly status](97-status-board-bauhaus/prompt.md) | 办公 | `bauhaus` | 已审图 |
 | 98 | [科室知识库目录结构](98-knowledge-base-ink-wash/prompt.md) | 办公 | `ink-wash` | 已审图 |
 | 99 | [家园沟通四个频率](99-home-school-chalkboard/prompt.md) | 教学 | `chalkboard` | 已审图 |
+| 101 | [采购审批跨部门泳道图：纵向审批](101-procurement-vertical-enterprise/prompt.md) | 办公 | `enterprise` | 已审图 |

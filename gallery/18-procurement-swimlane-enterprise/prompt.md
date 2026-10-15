@@ -1,27 +1,24 @@
-# 采购审批跨部门泳道图
+# 采购审批跨部门泳道图：协作矩阵
 
 | | |
 | --- | --- |
 | 类别 Category | 办公 · office |
 | 风格 Style | 商务墨蓝 · Enterprise Navy (`enterprise`) |
 | 状态 Status | 精选 · flagship |
-| 结构 Blocks | swimlane |
 
 ![preview](preview.jpg)
 
 ## 一句话需求 · One-line prompt
 
-> 用 MuseDraw 的「商务墨蓝」风格画一张图：采购审批跨部门泳道图。五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。
-
-把这句话交给任何能读写文件、执行命令的智能体（Codex、Cursor 等），并让它使用 MuseDraw skill。
-Give this sentence to any agent that can run commands, with the MuseDraw skill installed.
+> 用 MuseDraw 的「商务墨蓝」风格画采购审批跨部门泳道图：五个角色沿横向八阶段协作，显示预算退回、超过 5 万元加签、发货验收和三单匹配付款。用紫色阶段栏、粉色操作块和浅灰泳道区分层级。
 
 ## 复刻 · Reproduce
 
 ```sh
 node skills/musedraw/scripts/musedraw.mjs render gallery/18-procurement-swimlane-enterprise/scene.json
-node skills/musedraw/scripts/musedraw.mjs render gallery/18-procurement-swimlane-enterprise/scene.json --theme journal --out output/restyle
 ```
 
-`scene.json` 是这张图的完整、可编辑来源；示例中的人名、机构与数字为说明用途。
-`scene.json` is the complete editable source; names and numbers in examples are illustrative.
+`scene.json` 保存内容、布局与本例的配色及模块样式。默认交付 PNG 和原生可编辑 draw.io。
+示例中的数字与机构设定用于说明；按自己的事实替换内容即可。图面默认不显示页眉、图号或署名。
+
+The scene preserves content, layout and this case's local visual tokens. Its default exports are PNG and native editable draw.io. Example values are illustrative.

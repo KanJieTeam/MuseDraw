@@ -66,16 +66,16 @@
       "en": "Use MuseDraw in the Pastel Notes style to draw: Real-time collaborative editing architecture with CRDTs. Why do two people editing the same passage not overwrite each other? Each client holds a complete replica and exchanges only deltas; merge results do not depend on arrival order."
     },
     "16-okr-tree-enterprise": {
-      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：2027 年度 OKR 进度。数据截至 6 月 30 日。条形为关键结果完成度，虚线为时间进度；条形停在虚线左侧，即进度落后于时间。",
-      "en": "Use MuseDraw in the Enterprise Navy style to draw: 2027 annual OKR progress. Data is current as of June 30. Bars show key-result completion and dashed lines show elapsed-time progress; a bar ending to the left of the dashed line is behind schedule."
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画年度 OKR 目标树：新业务收入由 1.2 亿增至 2.4 亿元，下接四个关键结果，再接具体举措与负责团队。保留当前完成度、风险状态和 50% 时间标记，以黄紫分支区分目标组。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw an annual OKR tree. Grow new-business revenue from CNY 120 million to CNY 240 million, branch into four key results, then link concrete initiatives and responsible teams. Keep current progress, risk states and the 50% time marker; distinguish goal groups with yellow and lavender branches."
     },
     "17-onboarding-90-pastel": {
       "zh": "用 MuseDraw 的「柔和笔记」风格画一张图：新员工 90 天入职计划。按天排期，三条线并行推进。橙色虚线标出第 30、60、90 天的一对一复盘，复盘标准见下方。",
       "en": "Use MuseDraw in the Pastel Notes style to draw: A new employee's 90-day onboarding plan. Schedule by day, with three tracks running in parallel. Orange dashed lines mark one-to-one reviews on days 30, 60 and 90; show the review criteria below."
     },
     "18-procurement-swimlane-enterprise": {
-      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：采购审批跨部门泳道图。五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。",
-      "en": "Use MuseDraw in the Enterprise Navy style to draw: Cross-department procurement approval swimlane. Five roles, two spending thresholds and one three-way document match. Show who does what and when in a single row; amber marks the steps most likely to become bottlenecks."
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画采购审批跨部门泳道图：五个角色沿横向八阶段协作，显示预算退回、超过 5 万元加签、发货验收和三单匹配付款。用紫色阶段栏、粉色操作块和浅灰泳道区分层级。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw procurement approval as five role lanes across eight phases. Show budget rejection, countersignature above CNY 50,000, delivery, acceptance and three-way invoice matching. Use purple phase headers, pink actions and quiet gray lanes."
     },
     "19-product-roadmap-product": {
       "en": "Use MuseDraw in the Product Clean style to draw: Product roadmap FY2027. Four tracks, one calendar. Bars are committed work, the outline bar is a bet we will size in Q2, and diamonds are dates we have promised to customers.",
@@ -146,8 +146,8 @@
       "en": "Use MuseDraw in the Whiteboard style to draw: New-product launch event preparation checklist. Put an owner and deadline on every item. The three red items are risks only remembered in the final week of the previous launch; prepare contingencies for them early this time."
     },
     "36-strategy-house-enterprise": {
-      "zh": "用 MuseDraw 的「商务墨蓝」风格画一张图：2027–2029 战略地图。一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。",
-      "en": "Use MuseDraw in the Enterprise Navy style to draw: 2027–2029 strategy map. One vision, three overall goals and four pillars. Measure each pillar with just one indicator, and specify annual targets and an owner. Data is illustrative."
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画社区健康服务集团的三年战略地图：浅蓝屋顶呈现 2029 年服务 50 万户、营收 30 亿元、NPS 至少 60 的目标；四根支柱展示逐年指标，组织支撑作底座，橙色基础层表示年度复盘。模块具有轻微厚度与投影。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw a three-year strategy house for a community health group. A pale-blue roof holds the 2029 goals: 500,000 households, CNY 3 billion revenue and NPS at least 60. Four pillars carry annual metrics, an organizational platform supports them, and an orange foundation represents annual reviews. Give modules subtle editable depth and shadows."
     },
     "37-annual-timeline-metro": {
       "zh": "用 MuseDraw 的「地铁线路」风格画一张图：公司 2026 年度大事记。一条主线，八个站点。红色站点是改变公司规模的节点，其余是能力建设。",
@@ -238,8 +238,8 @@
       "zh": "用 MuseDraw 的「纸墨编辑」风格画一张图：Transformer 架构。两组由相同模块堆叠而成的结构。编码器把句子转换为富含上下文的向量；解码器关注这些向量，每次生成一个 token 来写出结果。"
     },
     "59-nsfc-roadmap-journal": {
-      "zh": "用 MuseDraw 的「科研期刊」风格画一张图：图 3 | 技术路线图。示例课题：基于多组学的肝纤维化代谢重编程机制研究（国家自然科学基金面上项目申请书格式）。三条研究内容并行，最终汇聚到一个可验证的机制。",
-      "en": "Use MuseDraw in the Journal Figure style to draw: Fig. 3 | Technical research roadmap. Example topic: a multi-omics study of metabolic reprogramming mechanisms in liver fibrosis, formatted for a National Natural Science Foundation of China General Program application. Three research workstreams run in parallel and converge on one testable mechanism."
+      "zh": "用 MuseDraw 的「科研期刊」风格画肝纤维化多组学研究技术路线：三条研究任务并行，按样本与模型、研究方法、检测与评价分层，再汇入整合分析和预期成果。以研究阶段组织浅色横带，保留临床队列、细胞机制和动物验证的对应关系。",
+      "en": "Use MuseDraw in the Journal Figure style to draw a multi-omics liver-fibrosis research roadmap. Three parallel investigations pass through samples and models, methods, then measurement and evaluation before converging on integrated analysis and expected outputs. Use light horizontal stage bands and preserve the clinical-cohort, cellular-mechanism and animal-validation paths."
     },
     "60-mixed-methods-terracotta": {
       "en": "Use MuseDraw in the Terracotta style to draw: Explanatory sequential mixed-methods design. Capital letters mark the dominant strand. The connecting step is where most designs go wrong: the qualitative sample must be chosen from the quantitative results, not by convenience.",
@@ -400,6 +400,10 @@
     "99-home-school-chalkboard": {
       "zh": "用 MuseDraw 的「黑板教学」风格画一张图：家园沟通四个频率。日常沟通按固定节奏走，家长知道什么时候能得到什么信息；特殊情况单独处理，不占用日常渠道。",
       "en": "Use MuseDraw in the Chalkboard style to draw: Four frequencies of kindergarten–family communication. Follow a regular rhythm for routine communication so parents know what information to expect and when. Handle special situations separately without taking over routine channels."
+    },
+    "101-procurement-vertical-enterprise": {
+      "zh": "用 MuseDraw 的「商务墨蓝」风格画纵向采购审批泳道图：申请人、部门经理、采购部、财务部和供应商各占一列，流程从上向下推进。黄色表示操作，黑色菱形表示判断，保留预算退回、大额加签和付款凭证分支。",
+      "en": "Use MuseDraw in the Enterprise Navy style to draw a vertical procurement swimlane: requester, department manager, procurement, finance and supplier each have a column. Read top to bottom, with yellow actions and black decision diamonds. Preserve budget rejection, large-purchase countersignature and payment-document branches."
     }
   }
 }

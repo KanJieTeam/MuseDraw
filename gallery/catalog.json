@@ -1,6 +1,6 @@
 {
  "version": 1,
- "description": "MuseDraw gallery plan: 100 cases. flagship = curated front-page set; reviewed = inspected at full size; preview = rendered, passes layout checks, awaiting review; planned = not yet drawn.",
+ "description": "MuseDraw gallery: 101 original cases. flagship = curated front-page set; reviewed = visually inspected; preview = rendered, passes layout checks, awaiting design review.",
  "summary": {
   "engineering": {
    "flagship": 3,
@@ -15,7 +15,7 @@
   "office": {
    "flagship": 8,
    "preview": 23,
-   "reviewed": 16
+   "reviewed": 17
   },
   "teaching": {
    "flagship": 1,
@@ -223,8 +223,8 @@
    "category": "office",
    "theme": "enterprise",
    "lang": "zh",
-   "title": "2027 年度 OKR 进度",
-   "subtitle": "数据截至 6 月 30 日。条形为关键结果完成度，虚线为时间进度；条形停在虚线左侧，即进度落后于时间。",
+   "title": "2027 年度 OKR 目标树",
+   "subtitle": "新业务收入由 1.2 亿增至 2.4 亿元，下接四个关键结果，再接具体举措与负责团队。保留当前完成度、风险状态和 50% 时间标记，以黄紫分支区分目标组。",
    "blocks": [],
    "path": "gallery/16-okr-tree-enterprise"
   },
@@ -247,11 +247,9 @@
    "category": "office",
    "theme": "enterprise",
    "lang": "zh",
-   "title": "采购审批跨部门泳道图",
-   "subtitle": "五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。",
-   "blocks": [
-    "swimlane"
-   ],
+   "title": "采购审批跨部门泳道图：协作矩阵",
+   "subtitle": "五个角色沿横向八阶段协作，显示预算退回、超过 5 万元加签、发货验收和三单匹配付款。用紫色阶段栏、粉色操作块和浅灰泳道区分层级。",
+   "blocks": [],
    "path": "gallery/18-procurement-swimlane-enterprise"
   },
   {
@@ -485,8 +483,8 @@
    "category": "office",
    "theme": "enterprise",
    "lang": "zh",
-   "title": "2027–2029 战略地图",
-   "subtitle": "一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。",
+   "title": "2027–2029 战略能力地图",
+   "subtitle": "浅蓝屋顶呈现 2029 年服务 50 万户、营收 30 亿元、NPS 至少 60 的目标；四根支柱展示逐年指标，组织支撑作底座，橙色基础层表示年度复盘。模块具有轻微厚度与投影。",
    "blocks": [],
    "path": "gallery/36-strategy-house-enterprise"
   },
@@ -773,8 +771,8 @@
    "category": "research",
    "theme": "journal",
    "lang": "zh",
-   "title": "图 3 | 技术路线图",
-   "subtitle": "示例课题：基于多组学的肝纤维化代谢重编程机制研究（国家自然科学基金面上项目申请书格式）。三条研究内容并行，最终汇聚到一个可验证的机制。",
+   "title": "肝纤维化多组学研究技术路线",
+   "subtitle": "三条研究任务并行，按样本与模型、研究方法、检测与评价分层，再汇入整合分析和预期成果。以研究阶段组织浅色横带，保留临床队列、细胞机制和动物验证的对应关系。",
    "blocks": [],
    "path": "gallery/59-nsfc-roadmap-journal"
   },
@@ -1283,6 +1281,18 @@
    "subtitle": "日常沟通按固定节奏走，家长知道什么时候能得到什么信息；特殊情况单独处理，不占用日常渠道。",
    "blocks": [],
    "path": "gallery/99-home-school-chalkboard"
+  },
+  {
+   "id": "101",
+   "slug": "101-procurement-vertical-enterprise",
+   "status": "reviewed",
+   "category": "office",
+   "theme": "enterprise",
+   "lang": "zh",
+   "path": "gallery/101-procurement-vertical-enterprise",
+   "title": "采购审批跨部门泳道图：纵向审批",
+   "subtitle": "申请人、部门经理、采购部、财务部和供应商各占一列，流程从上向下推进。黄色表示操作，黑色菱形表示判断，保留预算退回、大额加签和付款凭证分支。",
+   "blocks": []
   }
  ]
 }

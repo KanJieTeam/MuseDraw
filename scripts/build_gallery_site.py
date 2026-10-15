@@ -59,8 +59,8 @@ def build_site(root, output_name="site"):
     root = Path(root).resolve()
     catalog = json.loads((root / "gallery/catalog.json").read_text(encoding="utf-8"))
     items = catalog["items"]
-    if len(items) != 100 or len({item["slug"] for item in items}) != 100:
-        raise ValueError("Expected the 100 unique current catalog cases")
+    if not items or len({item["slug"] for item in items}) != len(items):
+        raise ValueError("Expected a nonempty catalog of unique current cases")
     output = root / "output"
     if output.is_symlink():
         raise ValueError("Refusing a linked output directory")

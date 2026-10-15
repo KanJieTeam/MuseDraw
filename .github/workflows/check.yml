@@ -51,7 +51,7 @@ jobs:
         run: node output/browser-deps/node_modules/playwright/cli.js install --with-deps chromium
       - name: Install locked scene-engine fonts without lifecycle scripts
         run: npm ci --prefix skills/musedraw --ignore-scripts
-      - name: Unified checks including all 100 native drawio structures and SVG scenes
+      - name: Unified checks including all 101 native drawio structures and SVG scenes
         run: python scripts/check.py
         env:
           PYTHONDONTWRITEBYTECODE: '1'

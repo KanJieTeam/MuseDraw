@@ -163,7 +163,7 @@ test('preserves defaults, extra metadata, empty labels, zero-size anchors and nu
 });
 
 test('the bundled schema uses only the supported offline vocabulary and engine names', () => {
-  const supported = new Set(['$schema', '$ref', 'title', 'description', 'definitions', 'type', 'properties', 'required', 'const', 'enum', 'pattern', 'minimum', 'maximum', 'exclusiveMinimum', 'minItems', 'maxItems', 'items', 'allOf', 'anyOf', 'if', 'then']);
+  const supported = new Set(['$schema', '$ref', 'title', 'description', 'definitions', 'type', 'properties', 'additionalProperties', 'required', 'const', 'enum', 'pattern', 'minimum', 'maximum', 'exclusiveMinimum', 'minItems', 'maxItems', 'items', 'allOf', 'anyOf', 'if', 'then']);
   function visit(rule) {
     for (const key of Object.keys(rule)) assert.ok(supported.has(key), `Unsupported schema keyword: ${key}`);
     if (rule.$ref) assert.ok(schema.definitions[rule.$ref.slice('#/definitions/'.length)]);

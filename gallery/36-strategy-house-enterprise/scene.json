@@ -1,666 +1,1318 @@
 {
  "theme": "enterprise",
  "size": [
-  1700,
-  960
+  1940,
+  1110
  ],
- "kicker": "社区健康服务集团 · 三年战略",
- "title": "2027–2029 战略地图",
- "subtitle": "一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。",
- "subtitleWidth": 1300,
- "texts": [
+ "autoFit": false,
+ "header": false,
+ "footer": false,
+ "nodes": [
   {
-   "x": 60,
-   "y": 288,
-   "text": "愿景",
-   "size": 13,
-   "color": "muted",
-   "weight": 700
+   "id": "pillar-head-0",
+   "label": "网点密度",
+   "x": 212,
+   "y": 270,
+   "w": 361,
+   "h": 52,
+   "tone": "blue",
+   "size": 23
   },
   {
-   "x": 60,
-   "y": 336,
-   "text": "成为长三角最受信赖的",
-   "size": 30,
-   "color": "navy",
-   "weight": 900
+   "id": "pillar-head-1",
+   "label": "数字化服务",
+   "x": 637,
+   "y": 270,
+   "w": 361,
+   "h": 52,
+   "tone": "blue",
+   "size": 23
   },
   {
-   "x": 60,
-   "y": 378,
-   "text": "社区健康服务品牌",
-   "size": 30,
-   "color": "navy",
-   "weight": 900
+   "id": "pillar-head-2",
+   "label": "专业人才",
+   "x": 1062,
+   "y": 270,
+   "w": 361,
+   "h": 52,
+   "tone": "blue",
+   "size": 23
   },
   {
-   "x": 60,
-   "y": 460,
-   "text": "服务家庭",
-   "size": 13.5,
-   "color": "muted"
+   "id": "pillar-head-3",
+   "label": "医保与合作",
+   "x": 1487,
+   "y": 270,
+   "w": 361,
+   "h": 52,
+   "tone": "blue",
+   "size": 23
   },
   {
-   "x": 60,
-   "y": 500,
-   "text": "50 万户",
-   "size": 34,
-   "color": "ink",
-   "weight": 900
+   "id": "support-0",
+   "label": "区域合伙制",
+   "x": 230,
+   "y": 744,
+   "w": 500,
+   "h": 76,
+   "tone": "lightSecond",
+   "shape": "box",
+   "size": 23,
+   "strokeWidth": 1.2
   },
   {
-   "x": 60,
-   "y": 556,
-   "text": "营收",
-   "size": 13.5,
-   "color": "muted"
+   "id": "support-1",
+   "label": "数据中台",
+   "x": 775,
+   "y": 744,
+   "w": 500,
+   "h": 76,
+   "tone": "lightSecond",
+   "shape": "cylinder",
+   "size": 23,
+   "strokeWidth": 1.2
   },
   {
-   "x": 60,
-   "y": 596,
-   "text": "30 亿元",
-   "size": 34,
-   "color": "ink",
-   "weight": 900
+   "id": "support-2",
+   "label": "质量与合规体系",
+   "x": 1320,
+   "y": 744,
+   "w": 500,
+   "h": 76,
+   "tone": "lightSecond",
+   "shape": "box",
+   "size": 23,
+   "strokeWidth": 1.2
   },
   {
-   "x": 60,
-   "y": 652,
-   "text": "NPS",
-   "size": 13.5,
-   "color": "muted"
+   "id": "review-0",
+   "label": "1 月",
+   "x": 278,
+   "y": 928,
+   "w": 88,
+   "h": 88,
+   "tone": "warm",
+   "shape": "circle",
+   "size": 22
   },
   {
-   "x": 60,
-   "y": 692,
-   "text": "≥ 60",
-   "size": 34,
-   "color": "ink",
-   "weight": 900
+   "id": "review-1",
+   "label": "指标",
+   "x": 808,
+   "y": 928,
+   "w": 88,
+   "h": 88,
+   "tone": "warm",
+   "shape": "circle",
+   "size": 22
   },
   {
-   "x": 60,
-   "y": 420,
-   "text": "2029 年总目标",
-   "size": 12.5,
-   "color": "muted"
-  },
-  {
-   "x": 560,
-   "y": 290,
-   "text": "战略支柱 / 衡量指标",
-   "size": 13,
-   "color": "muted",
-   "weight": 700
-  },
-  {
-   "x": 880,
-   "y": 290,
-   "text": "2026 基线",
-   "size": 13,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1080,
-   "y": 290,
-   "text": "2027",
-   "size": 13,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1280,
-   "y": 290,
-   "text": "2028",
-   "size": 13,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1480,
-   "y": 290,
-   "text": "2029 目标",
-   "size": 13,
-   "color": "navy",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1640,
-   "y": 290,
-   "text": "负责人",
-   "size": 13,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "end"
-  },
-  {
-   "x": 560,
-   "y": 360,
-   "text": "1",
-   "size": 30,
-   "color": "accent",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 358,
-   "text": "网点密度",
-   "size": 20,
-   "color": "ink",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 386,
-   "text": "15 分钟服务圈覆盖率",
-   "size": 13.5,
-   "color": "muted"
-  },
-  {
-   "x": 880,
-   "y": 364,
-   "text": "41%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1080,
-   "y": 364,
-   "text": "55%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1280,
-   "y": 364,
-   "text": "68%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1480,
-   "y": 364,
-   "text": "80%",
-   "size": 20,
-   "color": "ink",
-   "weight": 900,
-   "anchor": "middle"
-  },
-  {
-   "x": 1640,
-   "y": 364,
-   "text": "运营副总",
-   "size": 14,
-   "color": "ink",
-   "anchor": "end"
-  },
-  {
-   "x": 560,
-   "y": 490,
-   "text": "2",
-   "size": 30,
-   "color": "accent",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 488,
-   "text": "数字化服务",
-   "size": 20,
-   "color": "ink",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 516,
-   "text": "线上收入占比",
-   "size": 13.5,
-   "color": "muted"
-  },
-  {
-   "x": 880,
-   "y": 494,
-   "text": "6%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1080,
-   "y": 494,
-   "text": "12%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1280,
-   "y": 494,
-   "text": "19%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1480,
-   "y": 494,
-   "text": "25%",
-   "size": 20,
-   "color": "ink",
-   "weight": 900,
-   "anchor": "middle"
-  },
-  {
-   "x": 1640,
-   "y": 494,
-   "text": "CIO",
-   "size": 14,
-   "color": "ink",
-   "anchor": "end"
-  },
-  {
-   "x": 560,
-   "y": 620,
-   "text": "3",
-   "size": 30,
-   "color": "accent",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 618,
-   "text": "专业人才",
-   "size": 20,
-   "color": "ink",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 646,
-   "text": "护士长内部晋升比例",
-   "size": 13.5,
-   "color": "muted"
-  },
-  {
-   "x": 880,
-   "y": 624,
-   "text": "35%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1080,
-   "y": 624,
-   "text": "50%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1280,
-   "y": 624,
-   "text": "62%",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1480,
-   "y": 624,
-   "text": "70%",
-   "size": 20,
-   "color": "ink",
-   "weight": 900,
-   "anchor": "middle"
-  },
-  {
-   "x": 1640,
-   "y": 624,
-   "text": "HR 总监",
-   "size": 14,
-   "color": "ink",
-   "anchor": "end"
-  },
-  {
-   "x": 560,
-   "y": 750,
-   "text": "4",
-   "size": 30,
-   "color": "accent",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 748,
-   "text": "医保与合作",
-   "size": 20,
-   "color": "ink",
-   "weight": 900
-  },
-  {
-   "x": 600,
-   "y": 776,
-   "text": "接入医保的城市数",
-   "size": 13.5,
-   "color": "muted"
-  },
-  {
-   "x": 880,
-   "y": 754,
-   "text": "1 城",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1080,
-   "y": 754,
-   "text": "3 城",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1280,
-   "y": 754,
-   "text": "5 城",
-   "size": 17,
-   "color": "muted",
-   "weight": 700,
-   "anchor": "middle"
-  },
-  {
-   "x": 1480,
-   "y": 754,
-   "text": "6 城",
-   "size": 20,
-   "color": "ink",
-   "weight": 900,
-   "anchor": "middle"
-  },
-  {
-   "x": 1640,
-   "y": 754,
-   "text": "战略合作部",
-   "size": 14,
-   "color": "ink",
-   "anchor": "end"
-  },
-  {
-   "x": 560,
-   "y": 880,
-   "text": "支撑：区域合伙制 · 数据中台 · 质量与合规体系。每年 1 月复盘一次，指标不变，只调整举措。",
-   "size": 14,
-   "color": "muted"
+   "id": "review-2",
+   "label": "举措",
+   "x": 1338,
+   "y": 928,
+   "w": 88,
+   "h": 88,
+   "tone": "warm",
+   "shape": "circle",
+   "size": 22
   }
  ],
- "lines": [
+ "zones": [
   {
-   "points": [
-    [
-     470,
-     276
-    ],
-    [
-     470,
-     860
-    ]
-   ],
-   "color": "line",
-   "width": 1
+   "id": "pillar-bay",
+   "label": "",
+   "x": 180,
+   "y": 242,
+   "w": 1694,
+   "h": 469,
+   "tone": "pillarBay",
+   "style": "fill"
   },
   {
-   "points": [
-    [
-     560,
-     304
-    ],
-    [
-     1640,
-     304
-    ]
-   ],
-   "color": "navy",
-   "width": 1.5
+   "id": "pillar-label",
+   "label": "",
+   "x": 60,
+   "y": 248,
+   "w": 112,
+   "h": 448,
+   "tone": "soft",
+   "style": "fill"
   },
   {
-   "points": [
-    [
-     560,
-     440
-    ],
-    [
-     1640,
-     440
-    ]
-   ],
-   "color": "line",
-   "width": 1
+   "id": "pillar-0-shadow-outer",
+   "label": "",
+   "x": 200,
+   "y": 262,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowOuter",
+   "style": "fill"
   },
   {
-   "points": [
-    [
-     560,
-     570
-    ],
-    [
-     1640,
-     570
-    ]
-   ],
-   "color": "line",
-   "width": 1
+   "id": "pillar-0-shadow-inner",
+   "label": "",
+   "x": 195,
+   "y": 256,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowInner",
+   "style": "fill"
   },
   {
-   "points": [
-    [
-     560,
-     700
-    ],
-    [
-     1640,
-     700
-    ]
-   ],
-   "color": "line",
-   "width": 1
+   "id": "pillar-0",
+   "label": "",
+   "x": 190,
+   "y": 248,
+   "w": 405,
+   "h": 448,
+   "tone": "module",
+   "style": "fill"
   },
   {
-   "points": [
-    [
-     560,
-     830
-    ],
-    [
-     1640,
-     830
-    ]
-   ],
-   "color": "line",
-   "width": 1
+   "id": "pillar-1-shadow-outer",
+   "label": "",
+   "x": 625,
+   "y": 262,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowOuter",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-1-shadow-inner",
+   "label": "",
+   "x": 620,
+   "y": 256,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowInner",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-1",
+   "label": "",
+   "x": 615,
+   "y": 248,
+   "w": 405,
+   "h": 448,
+   "tone": "module",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-2-shadow-outer",
+   "label": "",
+   "x": 1050,
+   "y": 262,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowOuter",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-2-shadow-inner",
+   "label": "",
+   "x": 1045,
+   "y": 256,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowInner",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-2",
+   "label": "",
+   "x": 1040,
+   "y": 248,
+   "w": 405,
+   "h": 448,
+   "tone": "module",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-3-shadow-outer",
+   "label": "",
+   "x": 1475,
+   "y": 262,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowOuter",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-3-shadow-inner",
+   "label": "",
+   "x": 1470,
+   "y": 256,
+   "w": 405,
+   "h": 448,
+   "tone": "shadowInner",
+   "style": "fill"
+  },
+  {
+   "id": "pillar-3",
+   "label": "",
+   "x": 1465,
+   "y": 248,
+   "w": 405,
+   "h": 448,
+   "tone": "module",
+   "style": "fill"
+  },
+  {
+   "id": "support-label",
+   "label": "",
+   "x": 60,
+   "y": 714,
+   "w": 112,
+   "h": 132,
+   "tone": "soft",
+   "style": "fill"
+  },
+  {
+   "id": "support-band",
+   "label": "",
+   "x": 190,
+   "y": 714,
+   "w": 1670,
+   "h": 132,
+   "tone": "pillarBay",
+   "style": "fill"
+  },
+  {
+   "id": "review-label",
+   "label": "",
+   "x": 60,
+   "y": 906,
+   "w": 112,
+   "h": 130,
+   "tone": "warm",
+   "style": "fill"
+  }
+ ],
+ "edges": [],
+ "texts": [
+  {
+   "x": 970,
+   "y": 124,
+   "text": "成为长三角最受信赖的社区健康服务品牌",
+   "size": 28,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 480,
+   "y": 173,
+   "text": "服务家庭",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 480,
+   "y": 210,
+   "text": "50 万户",
+   "size": 28,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 970,
+   "y": 173,
+   "text": "营收",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 970,
+   "y": 210,
+   "text": "30 亿元",
+   "size": 28,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 1460,
+   "y": 173,
+   "text": "NPS",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 1460,
+   "y": 210,
+   "text": "≥ 60",
+   "size": 28,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 1800,
+   "y": 210,
+   "text": "2029 目标",
+   "size": 15,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "end"
+  },
+  {
+   "x": 116,
+   "y": 446,
+   "text": "战略\n支柱",
+   "size": 22,
+   "color": "#4d66b8",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 392,
+   "y": 361,
+   "text": "15 分钟服务圈覆盖率",
+   "size": 18,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 216,
+   "y": 410,
+   "text": "2026 基线",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 569,
+   "y": 410,
+   "text": "41%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 216,
+   "y": 474,
+   "text": "2027",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 569,
+   "y": 474,
+   "text": "55%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 216,
+   "y": 538,
+   "text": "2028",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 569,
+   "y": 538,
+   "text": "68%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 216,
+   "y": 602,
+   "text": "2029 目标",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 569,
+   "y": 602,
+   "text": "80%",
+   "size": 26,
+   "color": "#3f579c",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 392,
+   "y": 671,
+   "text": "运营副总",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 817,
+   "y": 361,
+   "text": "线上收入占比",
+   "size": 18,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 641,
+   "y": 410,
+   "text": "2026 基线",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 994,
+   "y": 410,
+   "text": "6%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 641,
+   "y": 474,
+   "text": "2027",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 994,
+   "y": 474,
+   "text": "12%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 641,
+   "y": 538,
+   "text": "2028",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 994,
+   "y": 538,
+   "text": "19%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 641,
+   "y": 602,
+   "text": "2029 目标",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 994,
+   "y": 602,
+   "text": "25%",
+   "size": 26,
+   "color": "#3f579c",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 817,
+   "y": 671,
+   "text": "CIO",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 1242,
+   "y": 361,
+   "text": "护士长内部晋升比例",
+   "size": 18,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 1066,
+   "y": 410,
+   "text": "2026 基线",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1419,
+   "y": 410,
+   "text": "35%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1066,
+   "y": 474,
+   "text": "2027",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1419,
+   "y": 474,
+   "text": "50%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1066,
+   "y": 538,
+   "text": "2028",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1419,
+   "y": 538,
+   "text": "62%",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1066,
+   "y": 602,
+   "text": "2029 目标",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1419,
+   "y": 602,
+   "text": "70%",
+   "size": 26,
+   "color": "#3f579c",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1242,
+   "y": 671,
+   "text": "HR 总监",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 1667,
+   "y": 361,
+   "text": "接入医保的城市数",
+   "size": 18,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 1491,
+   "y": 410,
+   "text": "2026 基线",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1844,
+   "y": 410,
+   "text": "1 城",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1491,
+   "y": 474,
+   "text": "2027",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1844,
+   "y": 474,
+   "text": "3 城",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1491,
+   "y": 538,
+   "text": "2028",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1844,
+   "y": 538,
+   "text": "5 城",
+   "size": 26,
+   "color": "ink",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1491,
+   "y": 602,
+   "text": "2029 目标",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1844,
+   "y": 602,
+   "text": "6 城",
+   "size": 26,
+   "color": "#3f579c",
+   "weight": 600,
+   "anchor": "end"
+  },
+  {
+   "x": 1667,
+   "y": 671,
+   "text": "战略合作部",
+   "size": 17,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "middle"
+  },
+  {
+   "x": 116,
+   "y": 768,
+   "text": "组织\n支撑",
+   "size": 22,
+   "color": "#4d66b8",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 116,
+   "y": 958,
+   "text": "年度\n复盘",
+   "size": 22,
+   "color": "#aa671e",
+   "weight": 600,
+   "anchor": "middle"
+  },
+  {
+   "x": 396,
+   "y": 978,
+   "text": "每年复盘一次",
+   "size": 23,
+   "color": "ink",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 926,
+   "y": 978,
+   "text": "保持不变",
+   "size": 23,
+   "color": "ink",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 1456,
+   "y": 978,
+   "text": "随复盘调整",
+   "size": 23,
+   "color": "ink",
+   "weight": 400,
+   "anchor": "start"
   }
  ],
  "bars": [
   {
-   "x": 810,
-   "y": 380,
-   "w": 140,
-   "h": 10,
+   "x": 216,
+   "y": 426,
+   "w": 353,
+   "h": 7,
    "value": 0.41,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1010,
-   "y": 380,
-   "w": 140,
-   "h": 10,
+   "x": 216,
+   "y": 490,
+   "w": 353,
+   "h": 7,
    "value": 0.55,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1210,
-   "y": 380,
-   "w": 140,
-   "h": 10,
+   "x": 216,
+   "y": 554,
+   "w": 353,
+   "h": 7,
    "value": 0.68,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1410,
-   "y": 380,
-   "w": 140,
-   "h": 10,
+   "x": 216,
+   "y": 618,
+   "w": 353,
+   "h": 7,
    "value": 0.8,
-   "fill": "navy",
-   "track": "pale",
-   "radius": 2
+   "fill": "#7c96ef",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 810,
-   "y": 510,
-   "w": 140,
-   "h": 10,
+   "x": 641,
+   "y": 426,
+   "w": 353,
+   "h": 7,
    "value": 0.2,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1010,
-   "y": 510,
-   "w": 140,
-   "h": 10,
+   "x": 641,
+   "y": 490,
+   "w": 353,
+   "h": 7,
    "value": 0.4,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1210,
-   "y": 510,
-   "w": 140,
-   "h": 10,
+   "x": 641,
+   "y": 554,
+   "w": 353,
+   "h": 7,
    "value": 0.6333333333333334,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1410,
-   "y": 510,
-   "w": 140,
-   "h": 10,
+   "x": 641,
+   "y": 618,
+   "w": 353,
+   "h": 7,
    "value": 0.8333333333333334,
-   "fill": "navy",
-   "track": "pale",
-   "radius": 2
+   "fill": "#7c96ef",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 810,
-   "y": 640,
-   "w": 140,
-   "h": 10,
+   "x": 1066,
+   "y": 426,
+   "w": 353,
+   "h": 7,
    "value": 0.35,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1010,
-   "y": 640,
-   "w": 140,
-   "h": 10,
+   "x": 1066,
+   "y": 490,
+   "w": 353,
+   "h": 7,
    "value": 0.5,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1210,
-   "y": 640,
-   "w": 140,
-   "h": 10,
+   "x": 1066,
+   "y": 554,
+   "w": 353,
+   "h": 7,
    "value": 0.62,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1410,
-   "y": 640,
-   "w": 140,
-   "h": 10,
+   "x": 1066,
+   "y": 618,
+   "w": 353,
+   "h": 7,
    "value": 0.7,
-   "fill": "navy",
-   "track": "pale",
-   "radius": 2
+   "fill": "#7c96ef",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 810,
-   "y": 770,
-   "w": 140,
-   "h": 10,
+   "x": 1491,
+   "y": 426,
+   "w": 353,
+   "h": 7,
    "value": 0.16666666666666666,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1010,
-   "y": 770,
-   "w": 140,
-   "h": 10,
+   "x": 1491,
+   "y": 490,
+   "w": 353,
+   "h": 7,
    "value": 0.5,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1210,
-   "y": 770,
-   "w": 140,
-   "h": 10,
+   "x": 1491,
+   "y": 554,
+   "w": 353,
+   "h": 7,
    "value": 0.8333333333333334,
-   "fill": "blue",
-   "track": "pale",
-   "radius": 2
+   "fill": "#c2d0f7",
+   "track": "#e9eaee",
+   "radius": 1
   },
   {
-   "x": 1410,
-   "y": 770,
-   "w": 140,
-   "h": 10,
+   "x": 1491,
+   "y": 618,
+   "w": 353,
+   "h": 7,
    "value": 1,
-   "fill": "navy",
-   "track": "pale",
-   "radius": 2
+   "fill": "#7c96ef",
+   "track": "#e9eaee",
+   "radius": 1
   }
  ],
- "nodes": []
+ "lines": [],
+ "paths": [
+  {
+   "d": "M60 232 L290 56 L1650 56 L1880 232 Z",
+   "fill": "#edf2ff"
+  },
+  {
+   "d": "M60 862 L1880 862 L1910 886 L30 886 Z",
+   "fill": "#7c96ef"
+  },
+  {
+   "d": "M60 1040 L1880 1040 L1910 1064 L30 1064 Z",
+   "fill": "#f3a233"
+  },
+  {
+   "d": "M60 232 L1880 232 L1880 246 L60 246 Z",
+   "fill": "#c7d3f4"
+  },
+  {
+   "d": "M30 886 L1910 886 L1910 900 L30 900 Z",
+   "fill": "#5d76ce"
+  },
+  {
+   "d": "M30 1064 L1910 1064 L1910 1078 L30 1078 Z",
+   "fill": "#d68216"
+  }
+ ],
+ "style": {
+  "palette": {
+   "bg": "#ffffff",
+   "ink": "#292b30",
+   "muted": "#72747a",
+   "navy": "#4d66b8",
+   "blue": "#7c96ef",
+   "pale": "#f3f6ff",
+   "line": "#dfe1e6",
+   "accent": "#7c96ef",
+   "amberPale": "#FDF4E6",
+   "red": "#C2412D",
+   "green": "#2F8F5B"
+  },
+  "fonts": {
+   "display": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif",
+   "body": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif",
+   "mono": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif"
+  },
+  "canvas": {
+   "bg": "#ffffff",
+   "margin": 40
+  },
+  "node": {
+   "font": "body",
+   "size": 20,
+   "weight": 500,
+   "subFont": "body",
+   "subSize": 16,
+   "tagFont": "body",
+   "tagSize": 12.4,
+   "tagWeight": 700,
+   "tagPos": "above",
+   "radius": 3,
+   "stroke": 1,
+   "padding": 12,
+   "align": "center",
+   "lineHeight": 1.28,
+   "gap": 7,
+   "iconSize": 20,
+   "shadowOffset": [
+    3,
+    5
+   ]
+  },
+  "tones": {
+   "default": {
+    "fill": "#ffffff",
+    "stroke": "#cfd2d7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "blue"
+   },
+   "white": {
+    "fill": "#ffffff",
+    "stroke": "#cfd2d7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "blue"
+   },
+   "navy": {
+    "fill": "navy",
+    "stroke": "navy",
+    "text": "#FFFFFF",
+    "sub": "#B9C8DC",
+    "tag": "accent",
+    "icon": "#FFFFFF"
+   },
+   "blue": {
+    "fill": "#7b94ef",
+    "stroke": "#6e87de",
+    "text": "#ffffff",
+    "sub": "#e8eeff",
+    "tag": "#e8eeff",
+    "icon": "#FFFFFF",
+    "shadow": "hard",
+    "shadowColor": "#c1ccef"
+   },
+   "accent": {
+    "fill": "#7c96ef",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "#2B1A00"
+   },
+   "amber": {
+    "fill": "amberPale",
+    "stroke": "accent",
+    "strokeWidth": 1.5,
+    "text": "#5C3A05",
+    "sub": "#8A5A12",
+    "tag": "#B4741A"
+   },
+   "ghost": {
+    "fill": "#FFFFFF",
+    "stroke": "line",
+    "dash": "4 3",
+    "text": "muted",
+    "sub": "muted"
+   },
+   "lane": {
+    "fill": "#FFFFFF"
+   },
+   "laneAlt": {
+    "fill": "#F6F8FB"
+   },
+   "laneHead": {
+    "fill": "navy",
+    "stroke": "navy",
+    "text": "#FFFFFF",
+    "sub": "#B9C8DC"
+   },
+   "red": {
+    "fill": "#FBEDEA",
+    "stroke": "#C2412D",
+    "text": "#8E2414",
+    "sub": "#8E2414",
+    "tag": "#C2412D"
+   },
+   "green": {
+    "fill": "#E8F4EC",
+    "stroke": "#2F8F5B",
+    "text": "#1E5E3B",
+    "sub": "#1E5E3B",
+    "tag": "#2F8F5B"
+   },
+   "soft": {
+    "fill": "#f3f6ff",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "second": {
+    "fill": "#4d66b8",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#eeeeff",
+    "tag": "#eeeeff"
+   },
+   "lightSecond": {
+    "fill": "#dce5ff",
+    "stroke": "#9db1e7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "shadow": "hard",
+    "shadowColor": "#c7d2ef"
+   },
+   "dark": {
+    "fill": "#292b30",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#e0e0e4",
+    "tag": "#e0e0e4"
+   },
+   "pink": {
+    "fill": "#f5b9c6",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "yellow": {
+    "fill": "#ffe34f",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "mint": {
+    "fill": "#d8ede4",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "warm": {
+    "fill": "#ffc373",
+    "stroke": "#eea342",
+    "text": "#6f4516",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "shadow": "hard",
+    "shadowColor": "#f0d8b3"
+   },
+   "cyan": {
+    "fill": "#cce8ec",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "lavender": {
+    "fill": "#e9e5f3",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   }
+  },
+  "zone": {
+   "style": "band",
+   "radius": 0,
+   "stroke": 1,
+   "bandHeight": 36,
+   "labelFont": "body",
+   "labelSize": 20,
+   "labelWeight": 700,
+   "letterSpacing": 0,
+   "labelPad": 16,
+   "subSize": 15,
+   "tones": {
+    "default": {
+     "fill": "#FFFFFF",
+     "stroke": "line",
+     "band": "navy",
+     "bandText": "#FFFFFF",
+     "text": "navy",
+     "sub": "muted"
+    },
+    "blue": {
+     "fill": "#FFFFFF",
+     "stroke": "#9DB8D8",
+     "band": "blue",
+     "bandText": "#FFFFFF"
+    },
+    "accent": {
+     "fill": "#FFFCF6",
+     "stroke": "accent",
+     "band": "accent",
+     "bandText": "#2B1A00"
+    },
+    "lane": {
+     "fill": "#FFFFFF",
+     "stroke": "line"
+    },
+    "laneAlt": {
+     "fill": "#F6F8FB",
+     "stroke": "line"
+    },
+    "plain": {
+     "fill": "#ffffff",
+     "stroke": "#e0e2e6",
+     "band": "pale",
+     "bandText": "navy"
+    },
+    "soft": {
+     "fill": "#f3f6ff",
+     "stroke": "none"
+    },
+    "gray": {
+     "fill": "#f6f6f8",
+     "stroke": "none"
+    },
+    "warm": {
+     "fill": "#fff7eb",
+     "stroke": "none"
+    },
+    "mint": {
+     "fill": "#eef6f2",
+     "stroke": "none"
+    },
+    "lavender": {
+     "fill": "#eef2fd",
+     "stroke": "none"
+    },
+    "module": {
+     "fill": "#ffffff",
+     "stroke": "#c9d3ec"
+    },
+    "shadowOuter": {
+     "fill": "#e7ebf5",
+     "stroke": "none"
+    },
+    "shadowInner": {
+     "fill": "#cdd6eb",
+     "stroke": "none"
+    },
+    "pillarBay": {
+     "fill": "#f2f5fc",
+     "stroke": "none"
+    }
+   }
+  },
+  "edge": {
+   "color": "#797d85",
+   "width": 1.4,
+   "radius": 0,
+   "arrow": "triangle",
+   "arrowSize": 7,
+   "gap": 2,
+   "labelFont": "body",
+   "labelSize": 15,
+   "labelColor": "#5f626a",
+   "labelPlacement": "on",
+   "labelStyle": "chip",
+   "labelBg": "#ffffff",
+   "kinds": {
+    "primary": {
+     "color": "#797d85",
+     "width": 1.5
+    },
+    "accent": {
+     "color": "#7c96ef",
+     "width": 1.8
+    },
+    "soft": {
+     "color": "#a6a9b0",
+     "dash": "5 4",
+     "width": 1.2
+    },
+    "second": {
+     "color": "#4d66b8",
+     "width": 1.5
+    }
+   }
+  },
+  "step": {
+   "shape": "circle",
+   "fill": "accent",
+   "text": "#2B1A00",
+   "size": 24,
+   "font": "body",
+   "weight": 900
+  },
+  "note": {
+   "style": "callout",
+   "font": "body",
+   "size": 14,
+   "color": "muted",
+   "fill": "#FFFFFF",
+   "stroke": "line",
+   "radius": 4,
+   "lineHeight": 1.55,
+   "titleColor": "navy"
+  },
+  "legend": {
+   "font": "body",
+   "size": 13.5,
+   "color": "muted"
+  }
+ },
+ "title": "2027–2029 战略能力地图"
 }

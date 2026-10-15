@@ -1,205 +1,359 @@
 {
  "theme": "journal",
  "size": [
-  1640,
-  1060
+  1940,
+  1150
  ],
- "title": "图 3 | 技术路线图",
- "subtitle": "示例课题：基于多组学的肝纤维化代谢重编程机制研究（国家自然科学基金面上项目申请书格式）。三条研究内容并行，最终汇聚到一个可验证的机制。",
+ "autoFit": false,
+ "header": false,
+ "footer": false,
  "nodes": [
   {
    "id": "q",
    "label": "科学问题：肝星状细胞活化的代谢重编程如何驱动肝纤维化？",
-   "tone": "ink",
-   "x": 120,
-   "y": 250,
-   "w": 1400,
+   "x": 260,
+   "y": 44,
+   "w": 1610,
+   "h": 84,
+   "tone": "cyan",
+   "size": 26
+  },
+  {
+   "id": "head-0",
+   "label": "研究内容一",
+   "x": 260,
+   "y": 174,
+   "w": 510,
    "h": 64,
-   "size": 18
+   "tone": "cyan",
+   "size": 23,
+   "sub": "临床队列与多组学",
+   "subSize": 17
+  },
+  {
+   "id": "head-1",
+   "label": "研究内容二",
+   "x": 810,
+   "y": 174,
+   "w": 510,
+   "h": 64,
+   "tone": "cyan",
+   "size": 23,
+   "sub": "细胞机制",
+   "subSize": 17
+  },
+  {
+   "id": "head-2",
+   "label": "研究内容三",
+   "x": 1360,
+   "y": 174,
+   "w": 510,
+   "h": 64,
+   "tone": "cyan",
+   "size": 23,
+   "sub": "动物模型验证",
+   "subSize": 17
+  },
+  {
+   "id": "stage-mark-0",
+   "label": "样本与模型",
+   "x": 50,
+   "y": 321,
+   "w": 154,
+   "h": 70,
+   "tone": "cyan",
+   "size": 20
   },
   {
    "id": "s00",
    "label": "120 例肝活检样本\nF0–F4 分期",
-   "tone": "blue",
-   "x": 180,
-   "y": 440,
-   "w": 320,
-   "h": 76,
-   "size": 15
-  },
-  {
-   "id": "s01",
-   "label": "转录组 + 代谢组",
-   "tone": "blue",
-   "x": 180,
-   "y": 552,
-   "w": 320,
-   "h": 76,
-   "size": 15
-  },
-  {
-   "id": "s02",
-   "label": "差异基因与通路富集",
-   "tone": "blue",
-   "x": 180,
-   "y": 664,
-   "w": 320,
-   "h": 76,
-   "size": 15
+   "x": 288,
+   "y": 302,
+   "w": 454,
+   "h": 100,
+   "tone": "warm",
+   "size": 22
   },
   {
    "id": "s10",
    "label": "原代肝星状细胞\nTGF-β 诱导活化",
-   "tone": "orange",
-   "x": 660,
-   "y": 440,
-   "w": 320,
-   "h": 76,
-   "size": 15
-  },
-  {
-   "id": "s11",
-   "label": "关键代谢酶敲低 / 过表达",
-   "tone": "orange",
-   "x": 660,
-   "y": 552,
-   "w": 320,
-   "h": 76,
-   "size": 15
-  },
-  {
-   "id": "s12",
-   "label": "Seahorse 代谢流 · 胶原表达",
-   "tone": "orange",
-   "x": 660,
-   "y": 664,
-   "w": 320,
-   "h": 76,
-   "size": 15
+   "x": 838,
+   "y": 302,
+   "w": 454,
+   "h": 100,
+   "tone": "warm",
+   "size": 22
   },
   {
    "id": "s20",
    "label": "CCl₄ 与 BDL 两种模型",
-   "tone": "green",
-   "x": 1140,
-   "y": 440,
-   "w": 320,
-   "h": 76,
-   "size": 15
+   "x": 1388,
+   "y": 302,
+   "w": 454,
+   "h": 100,
+   "tone": "warm",
+   "size": 22
+  },
+  {
+   "id": "stage-mark-1",
+   "label": "研究方法",
+   "x": 50,
+   "y": 499,
+   "w": 154,
+   "h": 70,
+   "tone": "cyan",
+   "size": 20
+  },
+  {
+   "id": "s01",
+   "label": "转录组 + 代谢组",
+   "x": 288,
+   "y": 480,
+   "w": 454,
+   "h": 100,
+   "tone": "lavender",
+   "size": 22
+  },
+  {
+   "id": "s11",
+   "label": "关键代谢酶敲低 / 过表达",
+   "x": 838,
+   "y": 480,
+   "w": 454,
+   "h": 100,
+   "tone": "lavender",
+   "size": 22
   },
   {
    "id": "s21",
    "label": "肝特异性敲除小鼠",
-   "tone": "green",
-   "x": 1140,
-   "y": 552,
-   "w": 320,
-   "h": 76,
-   "size": 15
+   "x": 1388,
+   "y": 480,
+   "w": 454,
+   "h": 100,
+   "tone": "lavender",
+   "size": 22
+  },
+  {
+   "id": "stage-mark-2",
+   "label": "检测与评价",
+   "x": 50,
+   "y": 677,
+   "w": 154,
+   "h": 70,
+   "tone": "cyan",
+   "size": 20
+  },
+  {
+   "id": "s02",
+   "label": "差异基因与通路富集",
+   "x": 288,
+   "y": 658,
+   "w": 454,
+   "h": 100,
+   "tone": "cyan",
+   "size": 22
+  },
+  {
+   "id": "s12",
+   "label": "Seahorse 代谢流\n胶原表达",
+   "x": 838,
+   "y": 658,
+   "w": 454,
+   "h": 100,
+   "tone": "cyan",
+   "size": 22
   },
   {
    "id": "s22",
-   "label": "病理评分 · 羟脯氨酸",
-   "tone": "green",
-   "x": 1140,
-   "y": 664,
-   "w": 320,
-   "h": 76,
-   "size": 15
+   "label": "病理评分\n羟脯氨酸",
+   "x": 1388,
+   "y": 658,
+   "w": 454,
+   "h": 100,
+   "tone": "cyan",
+   "size": 22
   },
   {
    "id": "int",
    "label": "整合分析：锁定关键代谢酶及其上游调控",
-   "tone": "purple",
-   "x": 120,
-   "y": 830,
-   "w": 1400,
-   "h": 64,
-   "size": 17
+   "x": 260,
+   "y": 866,
+   "w": 1610,
+   "h": 76,
+   "tone": "mint",
+   "size": 25
   },
   {
    "id": "out",
-   "label": "预期成果：阐明新机制 · 提出干预靶点 · 论文 4–6 篇 · 专利 1 项",
-   "tone": "accent",
-   "x": 320,
-   "y": 940,
-   "w": 1000,
-   "h": 60,
-   "size": 16
+   "label": "阐明新机制　提出干预靶点",
+   "x": 480,
+   "y": 1010,
+   "w": 1170,
+   "h": 86,
+   "tone": "warm",
+   "sub": "预期成果：论文 4–6 篇　专利 1 项",
+   "size": 26,
+   "subSize": 20
+  }
+ ],
+ "zones": [
+  {
+   "id": "stage-0",
+   "label": "",
+   "x": 242,
+   "y": 280,
+   "w": 1648,
+   "h": 148,
+   "tone": "gray",
+   "style": "fill"
+  },
+  {
+   "id": "stage-1",
+   "label": "",
+   "x": 242,
+   "y": 458,
+   "w": 1648,
+   "h": 148,
+   "tone": "gray",
+   "style": "fill"
+  },
+  {
+   "id": "stage-2",
+   "label": "",
+   "x": 242,
+   "y": 636,
+   "w": 1648,
+   "h": 148,
+   "tone": "gray",
+   "style": "fill"
   }
  ],
  "edges": [
   {
-   "from": "s00",
-   "to": "s01",
-   "kind": "primary"
-  },
-  {
-   "from": "s01",
-   "to": "s02",
-   "kind": "primary"
+   "from": "stage-mark-0",
+   "to": "stage-mark-1",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "accent"
   },
   {
    "from": "q",
    "to": "s00",
    "fromSide": "b",
+   "fromAt": 0.16666666666666666,
    "toSide": "t",
-   "kind": "primary"
-  },
-  {
-   "from": "s10",
-   "to": "s11",
-   "kind": "orange"
-  },
-  {
-   "from": "s11",
-   "to": "s12",
-   "kind": "orange"
+   "via": [
+    [
+     528.3333333333333,
+     154
+    ],
+    [
+     515,
+     154
+    ]
+   ],
+   "kind": "soft"
   },
   {
    "from": "q",
    "to": "s10",
    "fromSide": "b",
+   "fromAt": 0.5,
    "toSide": "t",
-   "kind": "orange"
-  },
-  {
-   "from": "s20",
-   "to": "s21",
-   "kind": "green"
-  },
-  {
-   "from": "s21",
-   "to": "s22",
-   "kind": "green"
+   "via": [
+    [
+     1065,
+     154
+    ],
+    [
+     1065,
+     154
+    ]
+   ],
+   "kind": "soft"
   },
   {
    "from": "q",
    "to": "s20",
    "fromSide": "b",
+   "fromAt": 0.8333333333333334,
    "toSide": "t",
-   "kind": "green"
+   "via": [
+    [
+     1601.6666666666667,
+     154
+    ],
+    [
+     1615,
+     154
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "from": "stage-mark-1",
+   "to": "stage-mark-2",
+   "fromSide": "b",
+   "toSide": "t",
+   "kind": "accent"
+  },
+  {
+   "from": "s00",
+   "to": "s01",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "s10",
+   "to": "s11",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "s20",
+   "to": "s21",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "s01",
+   "to": "s02",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "s11",
+   "to": "s12",
+   "fromSide": "b",
+   "toSide": "t"
+  },
+  {
+   "from": "s21",
+   "to": "s22",
+   "fromSide": "b",
+   "toSide": "t"
   },
   {
    "from": "s02",
    "to": "int",
    "fromSide": "b",
    "toSide": "t",
-   "kind": "primary"
+   "toAt": 0.16666666666666666
   },
   {
    "from": "s12",
    "to": "int",
    "fromSide": "b",
    "toSide": "t",
-   "kind": "orange"
+   "toAt": 0.5
   },
   {
    "from": "s22",
    "to": "int",
    "fromSide": "b",
    "toSide": "t",
-   "kind": "green"
+   "toAt": 0.8333333333333334
   },
   {
    "from": "int",
@@ -208,36 +362,329 @@
    "toSide": "t"
   }
  ],
- "zones": [
-  {
-   "id": "z0",
-   "label": "研究内容一",
-   "sub": "临床队列与多组学",
-   "tone": "blue",
-   "x": 120,
-   "y": 350,
-   "w": 440,
-   "h": 440
+ "texts": [],
+ "bars": [],
+ "lines": [],
+ "paths": [],
+ "style": {
+  "palette": {
+   "bg": "#ffffff",
+   "ink": "#292b30",
+   "muted": "#72747a",
+   "navy": "#5a8ea6",
+   "blue": "#79bfc7",
+   "pale": "#f3f9fa",
+   "line": "#dfe1e6",
+   "accent": "#79bfc7",
+   "amberPale": "#FDF4E6",
+   "red": "#C2412D",
+   "green": "#2F8F5B"
   },
-  {
-   "id": "z1",
-   "label": "研究内容二",
-   "sub": "细胞机制",
-   "tone": "orange",
-   "x": 600,
-   "y": 350,
-   "w": 440,
-   "h": 440
+  "fonts": {
+   "display": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif",
+   "body": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif",
+   "mono": "Noto Sans SC, Inter, Microsoft YaHei, sans-serif"
   },
-  {
-   "id": "z2",
-   "label": "研究内容三",
-   "sub": "动物模型验证",
-   "tone": "green",
-   "x": 1080,
-   "y": 350,
-   "w": 440,
-   "h": 440
+  "canvas": {
+   "bg": "#ffffff",
+   "margin": 40
+  },
+  "node": {
+   "font": "body",
+   "size": 20,
+   "weight": 500,
+   "subFont": "body",
+   "subSize": 16,
+   "tagFont": "body",
+   "tagSize": 12.4,
+   "tagWeight": 700,
+   "tagPos": "above",
+   "radius": 3,
+   "stroke": 1,
+   "padding": 12,
+   "align": "center",
+   "lineHeight": 1.28,
+   "gap": 7,
+   "iconSize": 20
+  },
+  "tones": {
+   "default": {
+    "fill": "#ffffff",
+    "stroke": "#cfd2d7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "blue"
+   },
+   "white": {
+    "fill": "#ffffff",
+    "stroke": "#cfd2d7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "blue"
+   },
+   "navy": {
+    "fill": "navy",
+    "stroke": "navy",
+    "text": "#FFFFFF",
+    "sub": "#B9C8DC",
+    "tag": "accent",
+    "icon": "#FFFFFF"
+   },
+   "blue": {
+    "fill": "#7f98ed",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#e8eeff",
+    "tag": "#e8eeff",
+    "icon": "#FFFFFF"
+   },
+   "accent": {
+    "fill": "#79bfc7",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "#2B1A00"
+   },
+   "amber": {
+    "fill": "amberPale",
+    "stroke": "accent",
+    "strokeWidth": 1.5,
+    "text": "#5C3A05",
+    "sub": "#8A5A12",
+    "tag": "#B4741A"
+   },
+   "ghost": {
+    "fill": "#FFFFFF",
+    "stroke": "line",
+    "dash": "4 3",
+    "text": "muted",
+    "sub": "muted"
+   },
+   "lane": {
+    "fill": "#FFFFFF"
+   },
+   "laneAlt": {
+    "fill": "#F6F8FB"
+   },
+   "laneHead": {
+    "fill": "navy",
+    "stroke": "navy",
+    "text": "#FFFFFF",
+    "sub": "#B9C8DC"
+   },
+   "red": {
+    "fill": "#FBEDEA",
+    "stroke": "#C2412D",
+    "text": "#8E2414",
+    "sub": "#8E2414",
+    "tag": "#C2412D"
+   },
+   "green": {
+    "fill": "#E8F4EC",
+    "stroke": "#2F8F5B",
+    "text": "#1E5E3B",
+    "sub": "#1E5E3B",
+    "tag": "#2F8F5B"
+   },
+   "soft": {
+    "fill": "#f3f9fa",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "second": {
+    "fill": "#5a8ea6",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#eeeeff",
+    "tag": "#eeeeff"
+   },
+   "lightSecond": {
+    "fill": "#eaf2f6",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "dark": {
+    "fill": "#292b30",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#e0e0e4",
+    "tag": "#e0e0e4"
+   },
+   "pink": {
+    "fill": "#f5b9c6",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "yellow": {
+    "fill": "#ffe34f",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "mint": {
+    "fill": "#d8ede4",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "warm": {
+    "fill": "#fff0d7",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "cyan": {
+    "fill": "#cce8ec",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "lavender": {
+    "fill": "#e9e5f3",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   }
+  },
+  "zone": {
+   "style": "band",
+   "radius": 0,
+   "stroke": 1,
+   "bandHeight": 36,
+   "labelFont": "body",
+   "labelSize": 20,
+   "labelWeight": 700,
+   "letterSpacing": 0,
+   "labelPad": 16,
+   "subSize": 15,
+   "tones": {
+    "default": {
+     "fill": "#FFFFFF",
+     "stroke": "line",
+     "band": "navy",
+     "bandText": "#FFFFFF",
+     "text": "navy",
+     "sub": "muted"
+    },
+    "blue": {
+     "fill": "#FFFFFF",
+     "stroke": "#9DB8D8",
+     "band": "blue",
+     "bandText": "#FFFFFF"
+    },
+    "accent": {
+     "fill": "#FFFCF6",
+     "stroke": "accent",
+     "band": "accent",
+     "bandText": "#2B1A00"
+    },
+    "lane": {
+     "fill": "#FFFFFF",
+     "stroke": "line"
+    },
+    "laneAlt": {
+     "fill": "#F6F8FB",
+     "stroke": "line"
+    },
+    "plain": {
+     "fill": "#ffffff",
+     "stroke": "#e0e2e6",
+     "band": "pale",
+     "bandText": "navy"
+    },
+    "soft": {
+     "fill": "#f3f9fa",
+     "stroke": "none"
+    },
+    "gray": {
+     "fill": "#f6f6f8",
+     "stroke": "none"
+    },
+    "warm": {
+     "fill": "#fff7eb",
+     "stroke": "none"
+    },
+    "mint": {
+     "fill": "#eef6f2",
+     "stroke": "none"
+    },
+    "lavender": {
+     "fill": "#eaf2f6",
+     "stroke": "none"
+    }
+   }
+  },
+  "edge": {
+   "color": "#797d85",
+   "width": 1.4,
+   "radius": 0,
+   "arrow": "triangle",
+   "arrowSize": 7,
+   "gap": 2,
+   "labelFont": "body",
+   "labelSize": 15,
+   "labelColor": "#5f626a",
+   "labelPlacement": "on",
+   "labelStyle": "chip",
+   "labelBg": "#ffffff",
+   "kinds": {
+    "primary": {
+     "color": "#797d85",
+     "width": 1.5
+    },
+    "accent": {
+     "color": "#79bfc7",
+     "width": 1.8
+    },
+    "soft": {
+     "color": "#a6a9b0",
+     "dash": "5 4",
+     "width": 1.2
+    },
+    "second": {
+     "color": "#5a8ea6",
+     "width": 1.5
+    }
+   }
+  },
+  "step": {
+   "shape": "circle",
+   "fill": "accent",
+   "text": "#2B1A00",
+   "size": 24,
+   "font": "body",
+   "weight": 900
+  },
+  "note": {
+   "style": "callout",
+   "font": "body",
+   "size": 14,
+   "color": "muted",
+   "fill": "#FFFFFF",
+   "stroke": "line",
+   "radius": 4,
+   "lineHeight": 1.55,
+   "titleColor": "navy"
+  },
+  "legend": {
+   "font": "body",
+   "size": 13.5,
+   "color": "muted"
   }
- ]
+ },
+ "title": "肝纤维化多组学研究技术路线"
 }

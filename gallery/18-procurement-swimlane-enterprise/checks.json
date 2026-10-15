@@ -1,12 +1,21 @@
 {
   "size": [
-    1780,
-    940
+    2000,
+    1050
   ],
-  "nodes": 14,
-  "texts": 27,
+  "nodes": 22,
+  "texts": 33,
   "warnings": [],
   "passed": true,
   "missingFonts": [],
+  "fontMode": "system",
+  "drawio": {
+    "native": true,
+    "nodes": 22,
+    "edges": 11,
+    "texts": 36,
+    "visualEffects": [],
+    "durationMs": 17
+  },
   "theme": "enterprise"
 }

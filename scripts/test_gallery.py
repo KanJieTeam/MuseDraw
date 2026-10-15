@@ -57,8 +57,8 @@ class GalleryTests(unittest.TestCase):
             self.assertIn(heading, template)
 
     def test_current_catalog_and_original_artwork(self):
-        self.assertEqual(len(self.items), 100)
-        self.assertEqual(len({item["slug"] for item in self.items}), 100)
+        self.assertEqual(len(self.items), 101)
+        self.assertEqual(len({item["slug"] for item in self.items}), 101)
         self.assertEqual(len({item["theme"] for item in self.items}), 20)
         self.assertEqual(sum(item["status"] == "flagship" for item in self.items), 20)
         themes = {file.stem for file in (ROOT / "skills/musedraw/themes").glob("*.json")}
@@ -144,8 +144,8 @@ class GalleryTests(unittest.TestCase):
             result = subprocess.run([shutil.which("node"), "--input-type=module", "-e", script],
                                     capture_output=True, text=True, encoding="utf-8", timeout=120)
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(json.loads(result.stdout)["rendered"], 100)
-            self.assertEqual(len(list(Path(scratch).glob("*.svg"))), 100)
+            self.assertEqual(json.loads(result.stdout)["rendered"], 101)
+            self.assertEqual(len(list(Path(scratch).glob("*.svg"))), 101)
             for file in Path(scratch).glob("*.svg"):
                 svg_dimensions(file.read_text(encoding="utf-8"))
 
