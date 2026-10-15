@@ -31,8 +31,8 @@ Found in our own gallery (OKR tree, onboarding columns) and removed:
 - [ ] **Every arrow says something.** Verbs or payloads (“写入 WAL”, “OTLP”,
   “5 chunks”), not “调用 / 访问 / 交互” on every line. Unlabelled is fine when
   the legend explains the kind.
-- [ ] **The figure makes one claim**, written as the subtitle. If it could be
-  the subtitle of any diagram, rewrite it.
+- [ ] **The figure makes one clear claim.** Express it through the content and
+  relationships; add an in-image subtitle only when the user requests one.
 - [ ] **Something explains why.** A margin note, a numbered step list, a
   callout: one or two sentences a person would actually say.
 

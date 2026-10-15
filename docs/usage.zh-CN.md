@@ -6,14 +6,16 @@ MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教�
 
 ## 安装与开始
 
-需要 Node.js 22+，以及能读写文件、执行命令的智能体。首次安装 Skill，并在安装后的 `skills/musedraw/` 目录安装字体与渲染依赖：
+需要 Node.js 22+，以及能读写文件、执行命令的智能体。安装一次 Skill，优先复用已有浏览器与运行依赖；缺少运行依赖时仅安装最小集：
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
-npm --prefix skills/musedraw install
+npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0
 ```
 
-第二条命令中的路径以实际 Skill 安装位置为准；在仓库根目录执行时可直接使用以上路径。安装包含开源字体、Playwright，并尝试下载 Chromium，需要网络和相应安装权限。后续绘图可复用安装结果。
+路径以实际 Skill 安装位置为准。最小安装不下载字体和 Chromium；先用 `doctor --json` 检查可复用的运行环境与 Chrome/Edge。RAG 图可直接运行 `quickstart rag --out output/rag --strict`，默认用系统字体，先交付小尺寸 JPEG 预览，再输出高清 PNG 和原生 draw.io。其他图可在 `render` 后增加 `--font-mode system --preview-first --cache`。新图默认设置 `header: false, footer: false`，标题、图号和署名按需添加。详见[快速出图指南](fast-start.zh-CN.md)。
+
+只有需要官方字形时才运行完整的 `npm --prefix skills/musedraw install`，并选择 `--font-mode bundled`。完整安装包含主题字体并尝试下载 Chromium；系统字体模式需要能显示目标语言的字体，跨机器字形可能不同。
 
 然后告诉智能体：
 
@@ -52,10 +54,13 @@ npm --prefix skills/musedraw install
 以下命令供智能体或开发者使用，`<skill>` 是实际安装目录：
 
 ```sh
+node <skill>/scripts/musedraw.mjs validate path/to/scene.json
 node <skill>/scripts/musedraw.mjs render path/to/scene.json --out output/new-run
 node <skill>/scripts/musedraw.mjs render path/to/scene.json --theme 水墨宣纸 --out output/restyled
 node <skill>/scripts/musedraw.mjs themes
 ```
+
+`validate` 仅需 Node.js，无需安装字体或浏览器，也不写入产物。它检查场景结构与引用，错误中包含文件名和 JSON Pointer 字段路径。渲染命令也会在启动浏览器前执行同样的预检；预检通过仍需渲染并审图。详见[校验说明](../skills/musedraw/references/scene-schema.md#validate-before-rendering)。
 
 默认输出到场景目录；用 `--out` 指向新目录可保留之前的版本。重渲染会写入该目录中的同名产物，先确认目标。完整仓库可用 `npm run gallery` 重新渲染全部图库。
 

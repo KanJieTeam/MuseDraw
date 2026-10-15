@@ -31,8 +31,10 @@
 
 ```bash
 npx skills add KanJieTeam/MuseDraw          # 安装 Skill 到你的智能体
-npm --prefix skills/musedraw install        # 首次：安装开源字体与 Playwright（跨平台渲染一致）
+npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0
 ```
+
+先运行 `node skills/musedraw/scripts/musedraw.mjs doctor --json` 复用已有 Chrome/Edge。RAG 图可用 `quickstart rag --out output/rag --strict`：系统字体、先出小预览、再交付高清 PNG 与原生 draw.io。默认不加标题、图号或项目署名；官方字体可选装，见[快速出图](docs/fast-start.zh-CN.md)。
 
 然后在 Codex、Cursor 等能执行命令的智能体里说：
 
@@ -75,7 +77,7 @@ npm run gallery        # 重新渲染全部案例
 
 ## 设计方法
 
-- **一张图只证明一件事。** 先写副标题，再画图。
+- **一张图只证明一件事。** 先明确要表达的关系，再画图。
 - **具体胜过“通用”。** 示例也用真实名词和能对上的数字，绝不出现“服务A / 模块甲”。
 - **一个焦点，编号路径，旁注解释为什么。**
 - **看图再交付。** `checks.json` 用真实字形检查溢出、碰撞和标签压框；[去 AI 味检查表](skills/musedraw/references/anti-ai-checklist.md) 负责审美。
@@ -87,7 +89,7 @@ npm run gallery        # 重新渲染全部案例
 ## 限制
 
 - 需要能读写文件、执行命令的智能体；纯聊天网页无法运行渲染。
-- PNG 需要 Node.js 22+ 与 Chromium（`npm install` 自动安装）；无浏览器时可用 `--svg-only`。
+- PNG 需要 Node.js 22+、Playwright 与兼容浏览器；可复用 Chrome/Edge。系统字体模式无需安装字体包；无浏览器时可用 `--svg-only`。
 - 不是统计绘图工具：柱状图、散点图请用 matplotlib / ggplot。
 - 案例中的数字为说明用途；真实项目以你提供的事实为准。
 - 旧版自动布局路线（`render_graph.mjs`）仍保留，见 [语义图说明](docs/semantic-graph.zh-CN.md)。

@@ -47,22 +47,29 @@ export function fontStylesheets(svg, fontDirs) {
   return { links, missing, families: [...families] };
 }
 
-export async function loadPlaywright(explicit) {
+export async function loadPlaywrightInfo(explicit) {
   const candidates = [];
   if (explicit) candidates.push(path.resolve(explicit));
   if (process.env.MUSEDRAW_PLAYWRIGHT) candidates.push(path.resolve(process.env.MUSEDRAW_PLAYWRIGHT));
-  for (const base of [process.cwd(), path.join(import.meta.dirname, '../..')]) {
+  // A minimal runtime install avoids the full font dependency tree.
+  for (const base of [process.cwd(), path.resolve(import.meta.dirname, '../..')]) candidates.push(path.join(base, 'output/runtime/node_modules/playwright/index.mjs'));
+  for (const base of [process.cwd(), path.join(import.meta.dirname, '../..'), path.dirname(process.execPath)]) {
     try { candidates.push(createRequire(path.join(base, 'x.js')).resolve('playwright')); } catch { /* not installed here */ }
   }
   for (const c of candidates) {
-    try { const m = await import(pathToFileURL(c).href); return m.chromium ? m : m.default; } catch { /* try next */ }
+    try {
+      const m = await import(pathToFileURL(c).href), pw = m.chromium ? m : m.default;
+      if (pw?.chromium) return { pw, modulePath: c };
+    } catch { /* try next */ }
   }
-  throw new Error('Playwright not found. Run `npm install` in the skill folder (skills/musedraw) or pass --playwright <path/to/playwright/index.mjs>.');
+  throw new Error('Playwright not found. Reuse an installed module with --playwright, or install only playwright in output/runtime with --ignore-scripts. Run musedraw.mjs doctor for setup instructions.');
 }
 
-export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true }) {
+export async function loadPlaywright(explicit) { return (await loadPlaywrightInfo(explicit)).pw; }
+
+export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, fontMode = 'bundled', previewFirst = false, onProgress = () => {} }) {
   assertStaticSvg(svg);
-  const { links, missing } = fontStylesheets(svg, fontDirs);
+  const { links, missing } = fontMode === 'system' ? { links: [], missing: [] } : fontStylesheets(svg, fontDirs);
   const tmp = await fsp.mkdtemp(path.join(os.tmpdir(), 'musedraw-'));
   const html = `<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'unsafe-inline' file:; font-src file: data:; img-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'">${links.map((l) => `<link rel="stylesheet" href="${l}">`).join('')}<style>html,body{margin:0;padding:0;background:transparent}svg{display:block}</style></head><body>${svg}</body></html>`;
   const htmlPath = path.join(tmp, 'page.html');
@@ -75,26 +82,48 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
     await page.goto(pathToFileURL(htmlPath).href);
     await page.evaluate(async () => { await document.fonts.ready; });
     // Force every used face to load, then wait again (unicode-range chunks load lazily).
-    await page.evaluate(async () => {
+    const fontLoads = await page.evaluate(async () => {
       const seen = new Set();
+      const loads = [];
       for (const t of document.querySelectorAll('text')) {
         const cs = getComputedStyle(t);
         const key = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
-        if (!seen.has(key + t.textContent)) { seen.add(key + t.textContent); try { await document.fonts.load(key, t.textContent); } catch { /* ignore */ } }
+        if (!seen.has(key + t.textContent)) { seen.add(key + t.textContent); loads.push(document.fonts.load(key, t.textContent).catch(() => [])); }
       }
+      await Promise.all(loads);
       await document.fonts.ready;
+      return loads.length;
     });
-    await page.waitForTimeout(150);
     const checks = await page.evaluate(runChecks, { W, H });
     checks.missingFonts = missing;
+    if (fontMode === 'system') checks.fontMode = 'system';
+    onProgress('checked', { warnings: checks.warnings.length, fontLoads });
+    if (previewFirst && images) {
+      // Keep the first view small enough for chat/file previews. Restore CSS
+      // before collecting native geometry and making the full-size PNG.
+      const style = await page.evaluate(({ W, H }) => {
+        const svg = document.querySelector('svg'), previous = svg.getAttribute('style');
+        const ratio = Math.min(1, 1200 / W, 1000 / H);
+        svg.style.width = `${W * ratio}px`; svg.style.height = `${H * ratio}px`;
+        return previous;
+      }, { W, H });
+      try {
+        await page.locator('svg').first().screenshot({ path: path.join(outDir, 'preview.jpg'), type: 'jpeg', quality: 85, scale: 'css' });
+      } finally {
+        await page.evaluate((style) => { const svg = document.querySelector('svg'); if (style === null) svg.removeAttribute('style'); else svg.setAttribute('style', style); }, style);
+      }
+      onProgress('preview', { file: 'preview.jpg', passed: checks.passed });
+    }
     const editable = await page.evaluate(collectEditableScene);
     await fsp.writeFile(path.join(outDir, `${name}.drawio`), toDrawio(editable));
     checks.drawio = { native: true, nodes: editable.groups.filter(g => g.kind === 'node').length, edges: editable.edges.length, texts: editable.texts.length, visualEffects: editable.visualEffects };
+    onProgress('drawio', { file: `${name}.drawio` });
     if (images) {
       const shot = path.join(outDir, `${name}@${scale}x.png`);
       await page.locator('svg').first().screenshot({ path: shot, omitBackground: false });
       // Lightweight preview for READMEs and galleries (grain textures make PNGs large).
-      await page.locator('svg').first().screenshot({ path: path.join(outDir, 'preview.jpg'), type: 'jpeg', quality: 82, scale: 'css' });
+      if (!previewFirst) await page.locator('svg').first().screenshot({ path: path.join(outDir, 'preview.jpg'), type: 'jpeg', quality: 82, scale: 'css' });
+      onProgress('png', { file: `${name}@${scale}x.png` });
     }
     return checks;
   } finally {

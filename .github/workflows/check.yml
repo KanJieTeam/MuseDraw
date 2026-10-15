@@ -76,6 +76,8 @@ jobs:
                   assert 'shape=image' not in cell.get('style', '') and 'image=' not in cell.get('style', ''), 'Embedded image'
                   if cell.get('edge') == '1':
                       assert cell.get('source') in by_id and cell.get('target') in by_id, 'Missing connected terminals'
+      - name: Check system-font quickstart, small preview, native export and cache invalidation
+        run: node scripts/check_fast_browser.mjs --lang en --runs 1 --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/fast-qa
       - name: Check current catalog, copied prompts, theme filters and downloads
         run: |
           python scripts/build_gallery_site.py
@@ -88,3 +90,4 @@ jobs:
           path: |
             output/gallery-qa
             output/engine-browser
+            output/fast-qa

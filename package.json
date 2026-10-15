@@ -5,7 +5,8 @@
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {
-    "setup": "npm --prefix skills/musedraw install",
+    "setup": "npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0",
+    "setup:fonts": "npm --prefix skills/musedraw install",
     "gallery": "node scripts/render_gallery.mjs",
     "themes": "node skills/musedraw/scripts/musedraw.mjs themes",
     "check": "python scripts/check.py"

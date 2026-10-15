@@ -1,0 +1,298 @@
+{
+  "theme": "editorial",
+  "size": [
+    1600,
+    1080
+  ],
+  "kicker": "参考架构 · 文档检索与证据生成",
+  "title": "端到端检索增强生成",
+  "subtitle": "两条流水线共享一个向量索引。文档预先分块并生成嵌入；每个问题经过嵌入、匹配、重排序与证据锚定后，模型才开始生成文字。",
+  "subtitleWidth": 1116,
+  "zones": [
+    {
+      "id": "z-ingest",
+      "label": "a — c   文档流水线 · 离线准备与更新",
+      "x": 64,
+      "y": 286,
+      "w": 1116,
+      "h": 1
+    },
+    {
+      "id": "z-retrieve",
+      "label": "1 — 4   问题流水线 · 每次请求",
+      "x": 64,
+      "y": 548,
+      "w": 1116,
+      "h": 1
+    },
+    {
+      "id": "z-generate",
+      "label": "5 — 7   证据锚定与生成",
+      "x": 64,
+      "y": 806,
+      "w": 1116,
+      "h": 1
+    }
+  ],
+  "nodes": [
+    {
+      "id": "sources",
+      "label": "原始文档",
+      "sub": "保留原文与来源位置",
+      "icon": "doc",
+      "x": 64,
+      "y": 330,
+      "w": 220,
+      "h": 92,
+      "step": "a"
+    },
+    {
+      "id": "chunk",
+      "label": "解析与分块",
+      "sub": "按文档结构切分片段",
+      "x": 352,
+      "y": 330,
+      "w": 232,
+      "h": 92,
+      "step": "b"
+    },
+    {
+      "id": "embed-docs",
+      "label": "文档嵌入",
+      "sub": "将片段编码为向量",
+      "x": 652,
+      "y": 330,
+      "w": 220,
+      "h": 92,
+      "step": "c"
+    },
+    {
+      "id": "index",
+      "label": "共享向量索引",
+      "sub": "存储向量与片段引用",
+      "icon": "db",
+      "x": 940,
+      "y": 330,
+      "w": 240,
+      "h": 92,
+      "tone": "accent"
+    },
+    {
+      "id": "question",
+      "label": "用户问题",
+      "sub": "保留原始问题",
+      "icon": "user",
+      "x": 64,
+      "y": 592,
+      "w": 220,
+      "h": 92,
+      "step": 1
+    },
+    {
+      "id": "embed-q",
+      "label": "问题嵌入",
+      "sub": "与文档使用相同模型",
+      "x": 352,
+      "y": 592,
+      "w": 232,
+      "h": 92,
+      "step": 2
+    },
+    {
+      "id": "retrieve",
+      "label": "相似度匹配",
+      "sub": "检索候选证据片段",
+      "x": 652,
+      "y": 592,
+      "w": 220,
+      "h": 92,
+      "step": 3
+    },
+    {
+      "id": "rerank",
+      "label": "重排序",
+      "sub": "比较问题与候选证据",
+      "x": 940,
+      "y": 592,
+      "w": 240,
+      "h": 92,
+      "step": 4
+    },
+    {
+      "id": "answer",
+      "label": "回答与引用",
+      "sub": "答案关联证据来源",
+      "x": 64,
+      "y": 850,
+      "w": 220,
+      "h": 92,
+      "step": 7
+    },
+    {
+      "id": "llm",
+      "label": "模型生成",
+      "sub": "依据证据组织文字",
+      "icon": "spark",
+      "x": 352,
+      "y": 850,
+      "w": 232,
+      "h": 92,
+      "step": 6,
+      "tone": "accent"
+    },
+    {
+      "id": "prompt",
+      "label": "证据锚定",
+      "sub": "问题、证据与来源引用",
+      "x": 652,
+      "y": 850,
+      "w": 220,
+      "h": 92,
+      "step": 5
+    }
+  ],
+  "edges": [
+    {
+      "from": "sources",
+      "to": "chunk",
+      "kind": "offline"
+    },
+    {
+      "from": "chunk",
+      "to": "embed-docs",
+      "kind": "offline"
+    },
+    {
+      "from": "embed-docs",
+      "to": "index",
+      "kind": "offline",
+      "label": "写入"
+    },
+    {
+      "from": "question",
+      "to": "embed-q",
+      "kind": "primary"
+    },
+    {
+      "from": "embed-q",
+      "to": "retrieve",
+      "kind": "primary"
+    },
+    {
+      "from": "retrieve",
+      "to": "index",
+      "fromSide": "t",
+      "toSide": "b",
+      "mid": 500,
+      "both": true,
+      "label": "向量检索",
+      "labelAt": [
+        906,
+        486
+      ]
+    },
+    {
+      "from": "retrieve",
+      "to": "rerank",
+      "kind": "primary",
+      "label": "候选证据"
+    },
+    {
+      "from": "rerank",
+      "to": "prompt",
+      "kind": "primary",
+      "fromSide": "b",
+      "toSide": "r",
+      "label": "相关证据",
+      "labelAt": [
+        1012,
+        880
+      ]
+    },
+    {
+      "from": "question",
+      "to": "prompt",
+      "fromSide": "b",
+      "toSide": "t",
+      "mid": 770,
+      "kind": "return",
+      "label": "原始问题",
+      "labelAt": [
+        470,
+        760
+      ]
+    },
+    {
+      "from": "prompt",
+      "to": "llm",
+      "kind": "primary"
+    },
+    {
+      "from": "llm",
+      "to": "answer",
+      "kind": "primary"
+    }
+  ],
+  "notes": [
+    {
+      "num": "b",
+      "text": "文档处理可以提前完成。新增或变更的文档进入同一条索引流水线。",
+      "x": 1256,
+      "y": 330,
+      "w": 280
+    },
+    {
+      "num": "3",
+      "text": "文档与问题使用相同的嵌入模型，才能在共享向量空间中进行匹配。",
+      "x": 1256,
+      "y": 560,
+      "w": 280
+    },
+    {
+      "num": "4",
+      "text": "重排序再次比较问题与片段，优先保留与当前问题相关的证据。",
+      "x": 1256,
+      "y": 676,
+      "w": 280
+    },
+    {
+      "num": "7",
+      "text": "先把证据与来源锚定到上下文，再生成回答；引用用于追溯依据。",
+      "x": 1256,
+      "y": 850,
+      "w": 280
+    }
+  ],
+  "legend": {
+    "x": 64,
+    "y": 1000,
+    "items": [
+      {
+        "kind": "primary",
+        "label": "问题处理路径"
+      },
+      {
+        "kind": "offline",
+        "label": "离线文档处理"
+      },
+      {
+        "kind": "default",
+        "label": "索引检索"
+      }
+    ]
+  },
+  "texts": [
+    {
+      "x": 1256,
+      "y": 300,
+      "text": "旁注 · 为什么这样设计",
+      "font": "mono",
+      "size": 11,
+      "color": "accent",
+      "letterSpacing": 2,
+      "weight": 600
+    }
+  ],
+  "footer": false,
+  "header": false
+}

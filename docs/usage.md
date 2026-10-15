@@ -6,14 +6,16 @@ MuseDraw is a professional drawing Skill for AI agents working on research, offi
 
 ## Install and start
 
-Use Node.js 22+ and an agent that can read and write files and execute commands. Install the Skill once, then install fonts and rendering dependencies inside its actual directory:
+Use Node.js 22+ and an agent that can read and write files and execute commands. Install the Skill once, reuse an existing browser/runtime when possible, or install only the runtime:
 
 ```bash
 npx skills add KanJieTeam/MuseDraw
-npm --prefix skills/musedraw install
+npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0
 ```
 
-Adjust the second command to the actual Skill installation path; it works as written from the repository root. Setup installs open-source fonts and Playwright and attempts to download Chromium, requiring network access and installation permission. Later drawings reuse the setup.
+Adjust the path to the actual Skill directory. This minimal setup skips fonts and Chromium downloads. Run `doctor --json` to check for a reusable runtime and Chrome/Edge. For the RAG workflow, `quickstart rag --out output/rag --strict` produces a bounded JPEG preview before the final PNG and native draw.io, using system fonts. Other drawings can use `render ... --font-mode system --preview-first --cache`. New diagrams should use `header: false, footer: false`; headings, figure numbers and attribution are opt-in. See the [fast-path guide](fast-start.zh-CN.md).
+
+Official font families are optional: the full `npm --prefix skills/musedraw install` installs them and attempts a Chromium download. Use `--font-mode bundled` when those fonts are required. System mode needs fonts covering the scene language and may look different across machines.
 
 Then ask your agent:
 
@@ -53,10 +55,17 @@ The agent edits the existing scene, preserving unrelated content and stable IDs,
 These commands are for the agent or developer; `<skill>` is the installed directory:
 
 ```sh
+node <skill>/scripts/musedraw.mjs validate path/to/scene.json
 node <skill>/scripts/musedraw.mjs render path/to/scene.json --out output/new-run
 node <skill>/scripts/musedraw.mjs render path/to/scene.json --theme 水墨宣纸 --out output/restyled
 node <skill>/scripts/musedraw.mjs themes
 ```
+
+`validate` checks scene structure and references with Node.js alone, without
+installing rendering dependencies or writing output. Errors include the file
+and JSON Pointer path. Rendering performs the same preflight before browser
+startup. This does not replace browser layout checks or visual review; see the
+[validation reference](../skills/musedraw/references/scene-schema.md#validate-before-rendering).
 
 Output defaults to the scene directory. Use `--out` with a new directory to preserve earlier versions. Rerendering writes files with the same output names, so check the destination first. A full checkout can run `npm run gallery` to rerender the entire gallery.
 
