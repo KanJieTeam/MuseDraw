@@ -3,6 +3,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { rendererStamp } from '../skills/musedraw/scripts/engine/cache.mjs';
 
@@ -79,8 +80,32 @@ for (let i = 0; i < runs; i++) {
   assert.equal(scene.header, false); assert.equal(scene.footer, false); assert.equal(scene.figure, undefined);
   const svg = fs.readFileSync(path.join(dir, 'diagram.svg'), 'utf8');
   assert.ok(svg.includes('<g id="header"></g>') && svg.includes('<g id="footer"></g>'));
-  samples.push({ wallMs, previewMs: preview.elapsedMs, drawioMs: drawio.elapsedMs, pngMs: png.elapsedMs, previewBytes: fs.statSync(path.join(dir, 'preview.jpg')).size, dimensions, native: nativeCheck(dir) });
+  samples.push({ wallMs, previewMs: preview.elapsedMs, drawioMs: drawio.elapsedMs, drawioExportMs: checks.drawio.durationMs, pngMs: png.elapsedMs, previewBytes: fs.statSync(path.join(dir, 'preview.jpg')).size, dimensions, native: nativeCheck(dir) });
 }
+
+// PNG-only must really skip native collection, preserve the same image and use
+// a separate artifact cache. Switching formats cannot return missing/stale XML.
+const pngDir=fs.mkdtempSync(path.join(out,'png-only-'));
+const pngWallMs=command(['quickstart','rag','--lang',lang,'--out',pngDir,'--no-drawio','--no-cache']);
+let pngRun=read(pngDir,'run.json');
+assert.equal(read(pngDir,'checks.json').passed,true);
+assert.deepEqual(read(pngDir,'checks.json').drawio,{skipped:true,reason:'requested'});
+assert.equal(fs.existsSync(path.join(pngDir,'diagram.drawio')),false);
+assert.ok(!pngRun.events.some(event=>event.stage==='drawio'));
+const hashPng=dir=>createHash('sha256').update(fs.readFileSync(path.join(dir,'diagram@2x.png'))).digest('hex');
+assert.equal(hashPng(pngDir),hashPng(path.join(out,'uncached-1')),'Format preference must not change the PNG');
+const pngOnly={wallMs:pngWallMs,previewMs:pngRun.events.find(event=>event.stage==='preview').elapsedMs,pngMs:pngRun.events.find(event=>event.stage==='png').elapsedMs,identicalPng:true};
+command(['quickstart','rag','--out',pngDir,'--no-drawio']);
+command(['quickstart','rag','--out',pngDir,'--no-drawio']);
+assert.equal(read(pngDir,'run.json').cached,true);
+command(['quickstart','rag','--out',pngDir]);
+assert.equal(read(pngDir,'run.json').cached,false);nativeCheck(pngDir);
+fs.writeFileSync(path.join(pngDir,'diagram.drawio'),'user-edited file');
+command(['quickstart','rag','--out',pngDir,'--no-drawio']);
+assert.equal(read(pngDir,'run.json').cached,false);
+assert.equal(fs.readFileSync(path.join(pngDir,'diagram.drawio'),'utf8'),'user-edited file');
+command(['quickstart','rag','--out',pngDir]);
+assert.equal(read(pngDir,'run.json').cached,false);nativeCheck(pngDir);
 
 // Cache hits skip browser launch. Source edits and artifact edits must rerender.
 const cachedDir = path.join(out, 'cached');
@@ -110,7 +135,7 @@ const report = {
   skillFontPackagesInstalled: fs.existsSync(path.join(root, 'skills/musedraw/node_modules')),
   median: { previewMs: median('previewMs'), drawioMs: median('drawioMs'), pngMs: median('pngMs'), wallMs: median('wallMs') },
   cache: { wallMs: cacheWallMs, elapsedMs: hit.elapsedMs, sourceInvalidation: true, artifactInvalidation: true, verified: true },
-  samples, passed: true,
+  samples, pngOnly, passed: true,
 };
 fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));

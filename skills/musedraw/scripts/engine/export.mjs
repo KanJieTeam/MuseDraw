@@ -67,7 +67,7 @@ export async function loadPlaywrightInfo(explicit) {
 
 export async function loadPlaywright(explicit) { return (await loadPlaywrightInfo(explicit)).pw; }
 
-export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, fontMode = 'bundled', previewFirst = false, onProgress = () => {} }) {
+export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, drawio = true, fontMode = 'bundled', previewFirst = false, onProgress = () => {} }) {
   assertStaticSvg(svg);
   const { links, missing } = fontMode === 'system' ? { links: [], missing: [] } : fontStylesheets(svg, fontDirs);
   const tmp = await fsp.mkdtemp(path.join(os.tmpdir(), 'musedraw-'));
@@ -114,10 +114,13 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
       }
       onProgress('preview', { file: 'preview.jpg', passed: checks.passed });
     }
-    const editable = await page.evaluate(collectEditableScene);
-    await fsp.writeFile(path.join(outDir, `${name}.drawio`), toDrawio(editable));
-    checks.drawio = { native: true, nodes: editable.groups.filter(g => g.kind === 'node').length, edges: editable.edges.length, texts: editable.texts.length, visualEffects: editable.visualEffects };
-    onProgress('drawio', { file: `${name}.drawio` });
+    if (drawio) {
+      const started = performance.now();
+      const editable = await page.evaluate(collectEditableScene);
+      await fsp.writeFile(path.join(outDir, `${name}.drawio`), toDrawio(editable));
+      checks.drawio = { native: true, nodes: editable.groups.filter(g => g.kind === 'node').length, edges: editable.edges.length, texts: editable.texts.length, visualEffects: editable.visualEffects, durationMs: Math.round(performance.now() - started) };
+      onProgress('drawio', { file: `${name}.drawio`, durationMs: checks.drawio.durationMs });
+    } else checks.drawio = { skipped: true, reason: 'requested' };
     if (images) {
       const shot = path.join(outDir, `${name}@${scale}x.png`);
       await page.locator('svg').first().screenshot({ path: shot, omitBackground: false });

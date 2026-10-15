@@ -35,6 +35,8 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Build static gallery
         run: python scripts/build_gallery_site.py
+        env:
+          MUSEDRAW_SOURCE_COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
       - uses: actions/upload-pages-artifact@v4
         with:
           path: output/site

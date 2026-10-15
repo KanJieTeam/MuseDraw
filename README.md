@@ -29,6 +29,8 @@
 
 ## 快速开始
 
+[轻量 Skill ZIP](https://kanjieteam.github.io/MuseDraw/downloads/musedraw-skill.zip) · [构建信息与校验值](https://kanjieteam.github.io/MuseDraw/downloads/musedraw-skill.json)。Git 克隆缓慢时，解压 Skill 即可，无需下载图库和 Git 历史，再读取 `musedraw/SKILL.md`。
+
 ```bash
 npx skills add KanJieTeam/MuseDraw          # 安装 Skill 到你的智能体
 npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0

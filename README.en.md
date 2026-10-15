@@ -29,6 +29,8 @@
 
 ## Quick start
 
+[Lightweight Skill ZIP](https://kanjieteam.github.io/MuseDraw/downloads/musedraw-skill.zip) · [Build and SHA-256](https://kanjieteam.github.io/MuseDraw/downloads/musedraw-skill.json). If Git cloning stalls, extract the Skill without downloading the gallery or Git history, then read `musedraw/SKILL.md`.
+
 ```bash
 npx skills add KanJieTeam/MuseDraw
 npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0

@@ -12,8 +12,9 @@ from unittest import mock
 import xml.etree.ElementTree as ET
 from urllib.parse import unquote
 import zlib
+import zipfile
 
-from build_gallery_site import build_site, CASE_FILES, PAGE_FILES
+from build_gallery_site import build_site, CASE_FILES, PAGE_FILES, DOWNLOAD_FILES, build_skill_download
 from check import svg_dimensions
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -154,6 +155,10 @@ class GalleryTests(unittest.TestCase):
             shutil.copytree(ROOT / "gallery", root / "gallery")
             shutil.copytree(ROOT / "assets/gallery", root / "assets/gallery")
             shutil.copytree(ROOT / "assets/brand", root / "assets/brand")
+            shutil.copytree(ROOT / "skills/musedraw", root / "skills/musedraw", ignore=shutil.ignore_patterns("node_modules", "output", "__pycache__"))
+            shutil.copyfile(ROOT / "LICENSE", root / "LICENSE")
+            if (ROOT / "NOTICE").is_file():
+                shutil.copyfile(ROOT / "NOTICE", root / "NOTICE")
             stale = root / "output/site/docs/gallery/cases/001"
             stale.mkdir(parents=True)
             (stale / "diagram.drawio").touch()
@@ -176,7 +181,7 @@ class GalleryTests(unittest.TestCase):
             for filename in ("gallery.css", "gallery.mjs"):
                 version = hashlib.sha256((site / filename).read_bytes()).hexdigest()[:12]
                 self.assertIn(f'"{filename}?v={version}"', html)
-            expected = set(PAGE_FILES) | {".nojekyll", "gallery/catalog.json", "gallery/prompts.json", "docs/gallery/index.html"}
+            expected = set(PAGE_FILES) | set(DOWNLOAD_FILES) | {".nojekyll", "gallery/catalog.json", "gallery/prompts.json", "docs/gallery/index.html"}
             expected |= {f'{item["path"]}/{filename}' for item in self.items for filename in CASE_FILES}
             expected |= {file.relative_to(root).as_posix() for file in (root / "assets/brand").rglob("*") if file.is_file()}
             self.assertEqual({file.relative_to(site).as_posix() for file in site.rglob("*") if file.is_file()}, expected)
@@ -190,6 +195,29 @@ class GalleryTests(unittest.TestCase):
                 for filename in CASE_FILES:
                     relative = Path(item["path"]) / filename
                     self.assertEqual((site / relative).read_bytes(), (ROOT / relative).read_bytes())
+
+    def test_skill_download_is_small_complete_reproducible_and_runtime_free(self):
+        with tempfile.TemporaryDirectory(prefix="musedraw-download-") as scratch:
+            staging = Path(scratch)
+            build_skill_download(ROOT, staging)
+            archive = staging / DOWNLOAD_FILES[0]
+            first = archive.read_bytes()
+            manifest = json.loads((staging / DOWNLOAD_FILES[1]).read_text())
+            self.assertEqual(manifest["bytes"], len(first))
+            self.assertEqual(manifest["sha256"], hashlib.sha256(first).hexdigest())
+            self.assertLess(len(first), 1024 * 1024)
+            with zipfile.ZipFile(archive) as bundle:
+                names = bundle.namelist()
+                self.assertEqual(len(names), manifest["files"])
+                for required in ("SKILL.md", "LICENSE", "scripts/musedraw.mjs", "scripts/vendor/ROUGHJS-LICENSE", "assets/starters/rag.zh.json", "assets/starters/rag.en.json", "references/scene.schema.json"):
+                    self.assertIn("musedraw/" + required, names)
+                self.assertEqual(len([name for name in names if name.startswith("musedraw/themes/")]), 20)
+                self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
+                self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
+            second = staging / "second"
+            second.mkdir()
+            build_skill_download(ROOT, second)
+            self.assertEqual(first, (second / DOWNLOAD_FILES[0]).read_bytes())
 
 
 if __name__ == "__main__":

@@ -21,6 +21,11 @@ npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts -
 
 只需描述内容和风格。渲染、实际看图检查、交付 PNG 与原生可编辑 draw.io 已是 Skill 的默认交付规则，不需要在每条需求后重复；图库复制按钮也只附上案例内容与风格。明确要求其他格式时，以你的要求为准。
 
+只想要图片时，说“只需 PNG”或点击图库的“快速 PNG”。Skill 会在内部选择
+`--no-drawio`，跳过原生导出并保留 PNG 与版面检查；默认仍交付双文件。
+命令参数和执行路线维护在 Skill 内，不拼入复制需求。PNG 由内置引擎直接生成，
+不需要安装 draw.io 软件或另找转换工具。
+
 ```text
 用 MuseDraw 的“科研期刊”风格画一张技术路线图。
 科学问题是肝星状细胞代谢重编程如何驱动肝纤维化。
