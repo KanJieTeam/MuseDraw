@@ -91,6 +91,13 @@ edges and zones (so you can still add primitives around it).
 
 ## Primitives
 
+For a reviewed composition, optional `style` stores local visual tokens over the
+named `theme`: `palette`, `fonts`, `canvas`, `node`, `tones`, `zone`, `edge`,
+`step`, `note` and `legend`. These values are already sized; no additional type
+scale is applied. The override stays in this scene and does not mutate the
+shared theme. It works with ordinary `render scene.json` and gallery replay;
+omit it when the named theme is sufficient. SVG safety checks still apply.
+
 **zones** — groups and boundaries: `{id, label, sub, x, y, w, h, tone, style}`;
 `style`: `outline | dashed | fill | band | lane | bracket | rule`.
 

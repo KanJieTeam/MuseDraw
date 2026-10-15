@@ -1,27 +1,24 @@
-# 2027–2029 战略地图
+# 2027–2029 战略能力地图
 
 | | |
 | --- | --- |
 | 类别 Category | 办公 · office |
 | 风格 Style | 商务墨蓝 · Enterprise Navy (`enterprise`) |
 | 状态 Status | 精选 · flagship |
-| 结构 Blocks | primitives |
 
 ![preview](preview.jpg)
 
 ## 一句话需求 · One-line prompt
 
-> 用 MuseDraw 的「商务墨蓝」风格画一张图：2027–2029 战略地图。一个愿景、三项总目标、四根支柱。每根支柱只用一个指标衡量，并写明逐年目标与负责人。数据为示例。
-
-把这句话交给任何能读写文件、执行命令的智能体（Codex、Cursor 等），并让它使用 MuseDraw skill。
-Give this sentence to any agent that can run commands, with the MuseDraw skill installed.
+> 用 MuseDraw 的「商务墨蓝」风格画社区健康服务集团的三年战略地图：浅蓝屋顶呈现 2029 年服务 50 万户、营收 30 亿元、NPS 至少 60 的目标；四根支柱展示逐年指标，组织支撑作底座，橙色基础层表示年度复盘。模块具有轻微厚度与投影。
 
 ## 复刻 · Reproduce
 
 ```sh
 node skills/musedraw/scripts/musedraw.mjs render gallery/36-strategy-house-enterprise/scene.json
-node skills/musedraw/scripts/musedraw.mjs render gallery/36-strategy-house-enterprise/scene.json --theme journal --out output/restyle
 ```
 
-`scene.json` 是这张图的完整、可编辑来源；示例中的人名、机构与数字为说明用途。
-`scene.json` is the complete editable source; names and numbers in examples are illustrative.
+`scene.json` 保存内容、布局与本例的配色及模块样式。默认交付 PNG 和原生可编辑 draw.io。
+示例中的数字与机构设定用于说明；按自己的事实替换内容即可。图面默认不显示页眉、图号或署名。
+
+The scene preserves content, layout and this case's local visual tokens. Its default exports are PNG and native editable draw.io. Example values are illustrative.

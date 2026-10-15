@@ -23,6 +23,23 @@
     "theme": {
       "type": "string"
     },
+    "style": {
+      "type": "object",
+      "description": "Scene-local visual tokens merged over the named theme; does not change the theme identity.",
+      "additionalProperties": false,
+      "properties": {
+        "palette": { "type": "object" },
+        "fonts": { "type": "object" },
+        "canvas": { "type": "object" },
+        "node": { "type": "object" },
+        "tones": { "type": "object" },
+        "zone": { "type": "object" },
+        "edge": { "type": "object" },
+        "step": { "type": "object" },
+        "note": { "type": "object" },
+        "legend": { "type": "object" }
+      }
+    },
     "title": {
       "type": "string"
     },

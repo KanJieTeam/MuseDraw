@@ -1,214 +1,1030 @@
 {
  "theme": "enterprise",
  "size": [
-  1780,
-  940
+  2000,
+  1050
  ],
- "kicker": "跨部门泳道图",
- "title": "采购审批跨部门泳道图",
- "subtitle": "五个角色、两道金额闸门、一次三单匹配。谁在什么时候做什么，一行看清；琥珀色是最容易卡住的节点。",
- "subtitleWidth": 1300,
- "blocks": [
+ "autoFit": false,
+ "header": false,
+ "footer": false,
+ "nodes": [
   {
-   "type": "swimlane",
-   "x": 60,
-   "y": 262,
-   "w": 1660,
-   "laneH": 118,
-   "labelW": 116,
-   "cols": 8,
-   "stepW": 160,
-   "stepH": 64,
-   "lanes": [
-    {
-     "id": "req",
-     "label": "申请人"
-    },
-    {
-     "id": "mgr",
-     "label": "部门经理"
-    },
-    {
-     "id": "buy",
-     "label": "采购部"
-    },
-    {
-     "id": "fin",
-     "label": "财务部"
-    },
-    {
-     "id": "sup",
-     "label": "供应商"
-    }
+   "id": "phase-0",
+   "label": "需求提交",
+   "x": 212,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-1",
+   "label": "预算审核",
+   "x": 425,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-2",
+   "label": "询价比价",
+   "x": 652,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-3",
+   "label": "金额审批",
+   "x": 875,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-4",
+   "label": "大额加签",
+   "x": 1102,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-5",
+   "label": "合同下单",
+   "x": 1312,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-6",
+   "label": "履约验收",
+   "x": 1512,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "phase-7",
+   "label": "结算付款",
+   "x": 1740,
+   "y": 58,
+   "w": 190,
+   "h": 48,
+   "tone": "second",
+   "size": 18
+  },
+  {
+   "id": "role-0",
+   "label": "申请人",
+   "x": 64,
+   "y": 174,
+   "w": 130,
+   "h": 48,
+   "tone": "lightSecond",
+   "size": 20
+  },
+  {
+   "id": "role-1",
+   "label": "部门经理",
+   "x": 64,
+   "y": 318,
+   "w": 130,
+   "h": 48,
+   "tone": "lightSecond",
+   "size": 20
+  },
+  {
+   "id": "role-2",
+   "label": "采购部",
+   "x": 64,
+   "y": 462,
+   "w": 130,
+   "h": 48,
+   "tone": "lightSecond",
+   "size": 20
+  },
+  {
+   "id": "role-3",
+   "label": "财务部",
+   "x": 64,
+   "y": 606,
+   "w": 130,
+   "h": 48,
+   "tone": "lightSecond",
+   "size": 20
+  },
+  {
+   "id": "role-4",
+   "label": "供应商",
+   "x": 64,
+   "y": 750,
+   "w": 130,
+   "h": 48,
+   "tone": "lightSecond",
+   "size": 20
+  },
+  {
+   "id": "s1",
+   "label": "提交采购申请",
+   "x": 220,
+   "y": 165,
+   "w": 174,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "附需求说明",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s2",
+   "label": "预算内？",
+   "x": 450,
+   "y": 303,
+   "w": 140,
+   "h": 78,
+   "tone": "white",
+   "shape": "diamond",
+   "sub": "",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s3",
+   "label": "询价比价",
+   "x": 660,
+   "y": 453,
+   "w": 174,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "至少 3 家",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s4",
+   "label": "金额 > 5 万？",
+   "x": 890,
+   "y": 591,
+   "w": 160,
+   "h": 78,
+   "tone": "white",
+   "shape": "diamond",
+   "sub": "",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s5",
+   "label": "总经理加签",
+   "x": 1110,
+   "y": 309,
+   "w": 174,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "大额采购",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s6",
+   "label": "签合同并下单",
+   "x": 1320,
+   "y": 453,
+   "w": 174,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s7",
+   "label": "发货并开票",
+   "x": 1520,
+   "y": 741,
+   "w": 174,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s8",
+   "label": "验收入库",
+   "x": 1520,
+   "y": 165,
+   "w": 174,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "",
+   "size": 18,
+   "subSize": 14
+  },
+  {
+   "id": "s9",
+   "label": "三单匹配后付款",
+   "x": 1750,
+   "y": 597,
+   "w": 170,
+   "h": 66,
+   "tone": "pink",
+   "shape": "box",
+   "sub": "订单/收货/发票",
+   "size": 18,
+   "subSize": 14
+  }
+ ],
+ "zones": [
+  {
+   "id": "lane-0",
+   "label": "",
+   "x": 50,
+   "y": 126,
+   "w": 1900,
+   "h": 144,
+   "tone": "gray",
+   "style": "fill"
+  },
+  {
+   "id": "lane-1",
+   "label": "",
+   "x": 50,
+   "y": 270,
+   "w": 1900,
+   "h": 144,
+   "tone": "plain",
+   "style": "fill"
+  },
+  {
+   "id": "lane-2",
+   "label": "",
+   "x": 50,
+   "y": 414,
+   "w": 1900,
+   "h": 144,
+   "tone": "gray",
+   "style": "fill"
+  },
+  {
+   "id": "lane-3",
+   "label": "",
+   "x": 50,
+   "y": 558,
+   "w": 1900,
+   "h": 144,
+   "tone": "plain",
+   "style": "fill"
+  },
+  {
+   "id": "lane-4",
+   "label": "",
+   "x": 50,
+   "y": 702,
+   "w": 1900,
+   "h": 144,
+   "tone": "gray",
+   "style": "fill"
+  }
+ ],
+ "edges": [
+  {
+   "from": "s1",
+   "to": "s2",
+   "fromSide": "r",
+   "toSide": "t",
+   "via": [
+    [
+     520,
+     198
+    ]
+   ]
+  },
+  {
+   "from": "s2",
+   "to": "s3",
+   "fromSide": "r",
+   "toSide": "t",
+   "via": [
+    [
+     747,
+     342
+    ]
    ],
-   "steps": [
-    {
-     "id": "s1",
-     "lane": "req",
-     "col": 0,
-     "label": "提交采购申请",
-     "sub": "附需求说明",
-     "tone": "white"
-    },
-    {
-     "id": "s2",
-     "lane": "mgr",
-     "col": 1,
-     "label": "预算内？",
-     "shape": "diamond",
-     "tone": "white",
-     "w": 132,
-     "h": 80
-    },
-    {
-     "id": "s3",
-     "lane": "buy",
-     "col": 2,
-     "label": "询价比价",
-     "sub": "至少 3 家",
-     "tone": "amber"
-    },
-    {
-     "id": "s4",
-     "lane": "fin",
-     "col": 3,
-     "label": "金额 > 5 万？",
-     "shape": "diamond",
-     "tone": "white",
-     "w": 150,
-     "h": 84
-    },
-    {
-     "id": "s5",
-     "lane": "mgr",
-     "col": 4,
-     "label": "总经理加签",
-     "sub": "大额采购",
-     "tone": "amber"
-    },
-    {
-     "id": "s6",
-     "lane": "buy",
-     "col": 5,
-     "label": "签合同并下单",
-     "tone": "white"
-    },
-    {
-     "id": "s7",
-     "lane": "sup",
-     "col": 6,
-     "label": "发货并开票",
-     "tone": "white"
-    },
-    {
-     "id": "s8",
-     "lane": "req",
-     "col": 6,
-     "label": "验收入库",
-     "tone": "white"
-    },
-    {
-     "id": "s9",
-     "lane": "fin",
-     "col": 7,
-     "label": "三单匹配后付款",
-     "sub": "订单/收货/发票",
-     "tone": "navy"
-    }
+   "label": "是",
+   "labelAt": [
+    647,
+    342
+   ]
+  },
+  {
+   "from": "s2",
+   "to": "s1",
+   "fromSide": "t",
+   "toSide": "t",
+   "via": [
+    [
+     520,
+     145
+    ],
+    [
+     307,
+     145
+    ]
    ],
-   "flows": [
-    {
-     "from": "s1",
-     "to": "s2",
-     "fromSide": "b",
-     "toSide": "l"
-    },
-    {
-     "from": "s2",
-     "to": "s3",
-     "fromSide": "b",
-     "toSide": "l",
-     "label": "是"
-    },
-    {
-     "from": "s2",
-     "to": "s1",
-     "fromSide": "t",
-     "toSide": "r",
-     "kind": "soft",
-     "label": "否，退回",
-     "labelAt": [
-      468,
-      329
-     ]
-    },
-    {
-     "from": "s3",
-     "to": "s4",
-     "fromSide": "b",
-     "toSide": "l"
-    },
-    {
-     "from": "s4",
-     "to": "s5",
-     "fromSide": "t",
-     "toSide": "b",
-     "label": "是"
-    },
-    {
-     "from": "s4",
-     "to": "s6",
-     "fromSide": "r",
-     "toSide": "b",
-     "label": "否"
-    },
-    {
-     "from": "s5",
-     "to": "s6",
-     "fromSide": "r",
-     "toSide": "t"
-    },
-    {
-     "from": "s6",
-     "to": "s7",
-     "fromSide": "b",
-     "toSide": "t",
-     "kind": "primary"
-    },
-    {
-     "from": "s7",
-     "to": "s8",
-     "fromSide": "t",
-     "toSide": "b",
-     "kind": "primary",
-     "label": "到货"
-    },
-    {
-     "from": "s8",
-     "to": "s9",
-     "fromSide": "r",
-     "toSide": "t",
-     "kind": "primary",
-     "label": "收货单"
-    },
-    {
-     "from": "s7",
-     "to": "s9",
-     "fromSide": "r",
-     "toSide": "b",
-     "kind": "soft",
-     "label": "发票"
-    }
+   "kind": "soft",
+   "label": "否，退回",
+   "labelAt": [
+    415,
+    145
+   ]
+  },
+  {
+   "from": "s3",
+   "to": "s4",
+   "fromSide": "r",
+   "toSide": "t",
+   "via": [
+    [
+     970,
+     486
+    ]
+   ]
+  },
+  {
+   "from": "s4",
+   "to": "s5",
+   "fromSide": "r",
+   "toSide": "b",
+   "via": [
+    [
+     1197,
+     630
+    ]
+   ],
+   "label": "是",
+   "labelAt": [
+    1197,
+    525
+   ]
+  },
+  {
+   "from": "s4",
+   "to": "s6",
+   "fromSide": "r",
+   "toSide": "b",
+   "via": [
+    [
+     1407,
+     630
+    ]
+   ],
+   "label": "否",
+   "labelAt": [
+    1340,
+    630
+   ]
+  },
+  {
+   "from": "s5",
+   "to": "s6",
+   "fromSide": "r",
+   "toSide": "t",
+   "via": [
+    [
+     1407,
+     342
+    ]
+   ]
+  },
+  {
+   "from": "s6",
+   "to": "s7",
+   "fromSide": "b",
+   "toSide": "l",
+   "via": [
+    [
+     1407,
+     774
+    ]
+   ]
+  },
+  {
+   "from": "s7",
+   "to": "s8",
+   "fromSide": "t",
+   "toSide": "b",
+   "label": "到货",
+   "labelAt": [
+    1607,
+    552
+   ]
+  },
+  {
+   "from": "s8",
+   "to": "s9",
+   "fromSide": "r",
+   "toSide": "t",
+   "via": [
+    [
+     1835,
+     198
+    ]
+   ],
+   "label": "收货单",
+   "labelAt": [
+    1835,
+    420
+   ]
+  },
+  {
+   "from": "s7",
+   "to": "s9",
+   "fromSide": "r",
+   "toSide": "b",
+   "via": [
+    [
+     1835,
+     774
+    ]
+   ],
+   "kind": "soft",
+   "label": "发票",
+   "labelAt": [
+    1760,
+    774
    ]
   }
  ],
- "notes": [
+ "texts": [
   {
-   "title": "改进建议",
-   "text": "询价比价平均耗时 6.5 天，占全流程 40%。建议对 2 万元以下常用品建立年度框架协议，直接下单。",
-   "x": 60,
-   "y": 870,
-   "w": 860
+   "x": 64,
+   "y": 932,
+   "text": "改进建议",
+   "size": 19,
+   "color": "#7252ad",
+   "weight": 600,
+   "anchor": "start"
+  },
+  {
+   "x": 212,
+   "y": 932,
+   "text": "询价比价平均耗时 6.5 天，占全流程 40%。",
+   "size": 19,
+   "color": "ink",
+   "weight": 400,
+   "anchor": "start"
+  },
+  {
+   "x": 212,
+   "y": 970,
+   "text": "建议对 2 万元以下常用品建立年度框架协议，直接下单。",
+   "size": 19,
+   "color": "muted",
+   "weight": 400,
+   "anchor": "start"
   }
- ]
+ ],
+ "bars": [],
+ "lines": [
+  {
+   "points": [
+    [
+     210,
+     126
+    ],
+    [
+     1950,
+     126
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     210,
+     270
+    ],
+    [
+     1950,
+     270
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     210,
+     414
+    ],
+    [
+     1950,
+     414
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     210,
+     558
+    ],
+    [
+     1950,
+     558
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     210,
+     702
+    ],
+    [
+     1950,
+     702
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     210,
+     846
+    ],
+    [
+     1950,
+     846
+    ]
+   ],
+   "color": "line",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     414,
+     126
+    ],
+    [
+     414,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     620,
+     126
+    ],
+    [
+     620,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     850,
+     126
+    ],
+    [
+     850,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1070,
+     126
+    ],
+    [
+     1070,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1280,
+     126
+    ],
+    [
+     1280,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1500,
+     126
+    ],
+    [
+     1500,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     1720,
+     126
+    ],
+    [
+     1720,
+     846
+    ]
+   ],
+   "color": "#ededf0",
+   "width": 1
+  },
+  {
+   "points": [
+    [
+     64,
+     893
+    ],
+    [
+     1934,
+     893
+    ]
+   ],
+   "color": "#dddde3",
+   "width": 1
+  }
+ ],
+ "paths": [],
+ "style": {
+  "palette": {
+   "bg": "#ffffff",
+   "ink": "#292b30",
+   "muted": "#72747a",
+   "navy": "#7252ad",
+   "blue": "#f4b7c6",
+   "pale": "#fafafb",
+   "line": "#dfe1e6",
+   "accent": "#f4b7c6",
+   "amberPale": "#FDF4E6",
+   "red": "#C2412D",
+   "green": "#2F8F5B"
+  },
+  "fonts": {
+   "display": "Microsoft YaHei, Arial, sans-serif",
+   "body": "Microsoft YaHei, Arial, sans-serif",
+   "mono": "Microsoft YaHei, Arial, sans-serif"
+  },
+  "canvas": {
+   "bg": "#ffffff",
+   "margin": 40
+  },
+  "node": {
+   "font": "body",
+   "size": 20,
+   "weight": 500,
+   "subFont": "body",
+   "subSize": 16,
+   "tagFont": "body",
+   "tagSize": 12.4,
+   "tagWeight": 700,
+   "tagPos": "above",
+   "radius": 3,
+   "stroke": 1,
+   "padding": 12,
+   "align": "center",
+   "lineHeight": 1.28,
+   "gap": 7,
+   "iconSize": 20
+  },
+  "tones": {
+   "default": {
+    "fill": "#ffffff",
+    "stroke": "#cfd2d7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "blue"
+   },
+   "white": {
+    "fill": "#ffffff",
+    "stroke": "#cfd2d7",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "blue"
+   },
+   "navy": {
+    "fill": "navy",
+    "stroke": "navy",
+    "text": "#FFFFFF",
+    "sub": "#B9C8DC",
+    "tag": "accent",
+    "icon": "#FFFFFF"
+   },
+   "blue": {
+    "fill": "#7f98ed",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#e8eeff",
+    "tag": "#e8eeff",
+    "icon": "#FFFFFF"
+   },
+   "accent": {
+    "fill": "#f4b7c6",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a",
+    "icon": "#2B1A00"
+   },
+   "amber": {
+    "fill": "amberPale",
+    "stroke": "accent",
+    "strokeWidth": 1.5,
+    "text": "#5C3A05",
+    "sub": "#8A5A12",
+    "tag": "#B4741A"
+   },
+   "ghost": {
+    "fill": "#FFFFFF",
+    "stroke": "line",
+    "dash": "4 3",
+    "text": "muted",
+    "sub": "muted"
+   },
+   "lane": {
+    "fill": "#FFFFFF"
+   },
+   "laneAlt": {
+    "fill": "#F6F8FB"
+   },
+   "laneHead": {
+    "fill": "navy",
+    "stroke": "navy",
+    "text": "#FFFFFF",
+    "sub": "#B9C8DC"
+   },
+   "red": {
+    "fill": "#FBEDEA",
+    "stroke": "#C2412D",
+    "text": "#8E2414",
+    "sub": "#8E2414",
+    "tag": "#C2412D"
+   },
+   "green": {
+    "fill": "#E8F4EC",
+    "stroke": "#2F8F5B",
+    "text": "#1E5E3B",
+    "sub": "#1E5E3B",
+    "tag": "#2F8F5B"
+   },
+   "soft": {
+    "fill": "#fafafb",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "second": {
+    "fill": "#7252ad",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#eeeeff",
+    "tag": "#eeeeff"
+   },
+   "lightSecond": {
+    "fill": "#f3eff8",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "dark": {
+    "fill": "#292b30",
+    "stroke": "none",
+    "text": "#ffffff",
+    "sub": "#e0e0e4",
+    "tag": "#e0e0e4"
+   },
+   "pink": {
+    "fill": "#f5b9c6",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "yellow": {
+    "fill": "#ffe34f",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "mint": {
+    "fill": "#d8ede4",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "warm": {
+    "fill": "#fff0d7",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "cyan": {
+    "fill": "#cce8ec",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   },
+   "lavender": {
+    "fill": "#e9e5f3",
+    "stroke": "none",
+    "text": "#292b30",
+    "sub": "#72747a",
+    "tag": "#72747a"
+   }
+  },
+  "zone": {
+   "style": "band",
+   "radius": 0,
+   "stroke": 1,
+   "bandHeight": 36,
+   "labelFont": "body",
+   "labelSize": 20,
+   "labelWeight": 700,
+   "letterSpacing": 0,
+   "labelPad": 16,
+   "subSize": 15,
+   "tones": {
+    "default": {
+     "fill": "#FFFFFF",
+     "stroke": "line",
+     "band": "navy",
+     "bandText": "#FFFFFF",
+     "text": "navy",
+     "sub": "muted"
+    },
+    "blue": {
+     "fill": "#FFFFFF",
+     "stroke": "#9DB8D8",
+     "band": "blue",
+     "bandText": "#FFFFFF"
+    },
+    "accent": {
+     "fill": "#FFFCF6",
+     "stroke": "accent",
+     "band": "accent",
+     "bandText": "#2B1A00"
+    },
+    "lane": {
+     "fill": "#FFFFFF",
+     "stroke": "line"
+    },
+    "laneAlt": {
+     "fill": "#F6F8FB",
+     "stroke": "line"
+    },
+    "plain": {
+     "fill": "#ffffff",
+     "stroke": "#e0e2e6",
+     "band": "pale",
+     "bandText": "navy"
+    },
+    "soft": {
+     "fill": "#fafafb",
+     "stroke": "none"
+    },
+    "gray": {
+     "fill": "#f6f6f8",
+     "stroke": "none"
+    },
+    "warm": {
+     "fill": "#fff7eb",
+     "stroke": "none"
+    },
+    "mint": {
+     "fill": "#eef6f2",
+     "stroke": "none"
+    },
+    "lavender": {
+     "fill": "#f3eff8",
+     "stroke": "none"
+    }
+   }
+  },
+  "edge": {
+   "color": "#797d85",
+   "width": 1.4,
+   "radius": 0,
+   "arrow": "triangle",
+   "arrowSize": 7,
+   "gap": 2,
+   "labelFont": "body",
+   "labelSize": 15,
+   "labelColor": "#5f626a",
+   "labelPlacement": "on",
+   "labelStyle": "chip",
+   "labelBg": "#ffffff",
+   "kinds": {
+    "primary": {
+     "color": "#797d85",
+     "width": 1.5
+    },
+    "accent": {
+     "color": "#f4b7c6",
+     "width": 1.8
+    },
+    "soft": {
+     "color": "#a6a9b0",
+     "dash": "5 4",
+     "width": 1.2
+    },
+    "second": {
+     "color": "#7252ad",
+     "width": 1.5
+    }
+   }
+  },
+  "step": {
+   "shape": "circle",
+   "fill": "accent",
+   "text": "#2B1A00",
+   "size": 24,
+   "font": "body",
+   "weight": 900
+  },
+  "note": {
+   "style": "callout",
+   "font": "body",
+   "size": 14,
+   "color": "muted",
+   "fill": "#FFFFFF",
+   "stroke": "line",
+   "radius": 4,
+   "lineHeight": 1.55,
+   "titleColor": "navy"
+  },
+  "legend": {
+   "font": "body",
+   "size": 13.5,
+   "color": "muted"
+  }
+ },
+ "title": "采购审批跨部门泳道图：协作矩阵"
 }

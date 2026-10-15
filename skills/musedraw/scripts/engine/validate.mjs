@@ -53,6 +53,9 @@ function check(value, rule, path, issues) {
     if (rule.items) value.forEach((v, i) => check(v, rule.items, child(path, i), issues));
   }
   if (object(value)) {
+    if (rule.additionalProperties === false) for (const key of Object.keys(value)) {
+      if (!Object.hasOwn(rule.properties ?? {}, key)) issues.push({ path: child(path, key), message: 'is not a supported field' });
+    }
     for (const key of rule.required ?? []) if (!own(value, key)) issues.push({ path: child(path, key), message: 'is required' });
     for (const [key, property] of Object.entries(rule.properties ?? {})) if (own(value, key)) check(value[key], property, child(path, key), issues);
   }

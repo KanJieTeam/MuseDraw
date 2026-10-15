@@ -43,7 +43,7 @@ If Git downloads stall, use the [lightweight Skill ZIP](https://kanjieteam.githu
 - **Keep the scene source**: revise content or restyle the same `scene.json`.
 - **Diagram content by default**: no added page heading or attribution. Automatic checks cover overflow, collisions, bounds and native export.
 
-Choose a style in the gallery, copy a brief or download an editable diagram. [20 styles](skills/musedraw/references/style-atlas.md) · [All 100 examples](gallery/README.md)
+Choose a style in the gallery, copy a brief or download an editable diagram. [20 styles](skills/musedraw/references/style-atlas.md) · [All 101 examples](gallery/README.md)
 
 ## Documentation and contributions
 

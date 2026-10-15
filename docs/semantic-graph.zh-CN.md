@@ -1,6 +1,6 @@
 # Scene 主工作流与旧组件图兼容
 
-MuseDraw 当前面向科研、办公、教学与工程，主入口为 [Skill](../skills/musedraw/SKILL.md) 和 [100 案例图库](../gallery/README.md)。使用方法见[使用指南](usage.zh-CN.md)。新图使用 scene 引擎，不再以旧两种组件风格定义当前能力。
+MuseDraw 当前面向科研、办公、教学与工程，主入口为 [Skill](../skills/musedraw/SKILL.md) 和 [101 案例图库](../gallery/README.md)。使用方法见[使用指南](usage.zh-CN.md)。新图使用 scene 引擎，不再以旧两种组件风格定义当前能力。
 
 ## 当前场景引擎
 
