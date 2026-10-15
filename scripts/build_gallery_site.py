@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 import shutil
 import tempfile
+import time
 
 PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json")
 CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json", "diagram.drawio")
@@ -63,7 +64,16 @@ def build_site(root, output_name="site"):
         (staging / ".nojekyll").touch()
         if destination.exists():
             shutil.rmtree(destination)
-        staging.replace(destination)
+        for attempt in range(6):
+            try:
+                staging.replace(destination)
+                break
+            except PermissionError:
+                # Virus scanners can briefly hold newly copied gallery files
+                # on Windows. Never delete a destination to recover from this.
+                if attempt == 5 or destination.exists():
+                    raise
+                time.sleep(0.15 * (attempt + 1))
     finally:
         if staging.exists():
             if staging.parent.resolve() != output.resolve() or not staging.name.startswith("site-build-"):

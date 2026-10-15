@@ -37,7 +37,7 @@ try{
  const external=[],errors=[];
  async function observe(context){await context.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(url.origin!==new URL(requested).origin&&['http:','https:'].includes(url.protocol)){external.push(request.url());await route.abort();}else{assert.ok(['GET','HEAD'].includes(request.method()),'Static gallery must not call an API');await route.continue();}});context.on('page',opened=>opened.on('pageerror',error=>errors.push(error.message)));}
  const context=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true,reducedMotion:'reduce'});await observe(context);page=await context.newPage();
- await page.goto(requested,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelectorAll('.case-card').length===20);
+ await page.goto(requested,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelectorAll('.case-card').length===100);
  const url=page.url(),catalog=JSON.parse((await fetchBytes(new URL('gallery/catalog.json',url))).toString('utf8'));
  assert.deepEqual(catalog,JSON.parse(await fs.readFile(path.join(repo,'gallery/catalog.json'),'utf8')));
  const items=catalog.items,themes=[...new Set(items.map(item=>item.theme))];assert.equal(items.length,100);assert.equal(themes.length,20);
@@ -52,11 +52,11 @@ try{
   for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md'){prompt(remote.toString('utf8'));prompts.set(item.slug,bilingual.items[item.slug].zh);}}));
   return {cases:100,files:600};
  });
- await check('20-flagship-default-and-all-100-decoded-previews',async()=>{
-  const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.status==='flagship').map(item=>item.slug));await noOverflow();await screenshot('desktop.png');
-  await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),100);
+ await check('all-100-default-featured-optional-and-decoded-previews',async()=>{
+  const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.map(item=>item.slug));assert.equal(await page.locator('[data-collection="all"]').getAttribute('aria-pressed'),'true');await noOverflow();await screenshot('desktop.png');
+  await selectFilter('collection','flagship');assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.status==='flagship').map(item=>item.slug));await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),100);
   for(const item of items){const image=page.locator(`[data-item="${item.slug}"] img`);await image.scrollIntoViewIfNeeded();await image.evaluate(async image=>{await image.decode();if(!image.naturalWidth||!image.naturalHeight)throw Error('Preview did not decode');});}
-  return {defaultFlagship:20,decodedPreviews:100};
+  return {defaultCases:100,optionalFlagship:20,decodedPreviews:100};
  });
  await check('all-20-theme-filters-retain-catalog-facts',async()=>{
   assert.equal(await page.locator('#theme option').count(),21);
@@ -121,6 +121,17 @@ try{
   await page.locator('#preview-details [data-prompt-language="en"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].en);const en=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(en.includes('Use the latest MuseDraw'));assert.ok(en.includes('native .drawio'));
   await page.locator('#preview-details [data-replay]').click();await page.waitForFunction(async()=>(await navigator.clipboard.readText()).startsWith('Reproduce this MuseDraw'));await page.reload({waitUntil:'networkidle'});await page.locator('#preview[open]').waitFor();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].en);await screenshot('english-prompt.png');
   await page.locator('#preview-details [data-prompt-language="zh"]').click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,bilingual.items[item.slug].zh);await page.locator('#preview-details [data-copy]').click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),bilingual.items[item.slug].zh);assert.ok((await page.evaluate(()=>navigator.clipboard.readText())).startsWith('请使用 MuseDraw 最新版'));await page.locator('#close-preview').click();
+ });
+ await check('readable-type-and-prefilled-style-request-entrypoints',async()=>{
+  const inspectLink=async(selector,expected=[])=>{const node=page.locator(selector),target=new URL(await node.getAttribute('href'));assert.equal(target.origin,'https://github.com');assert.equal(target.pathname,'/KanJieTeam/MuseDraw/issues/new');assert.equal(target.searchParams.get('template'),'style-request.md');assert.ok(target.searchParams.get('title').startsWith('[Style request]'));for(const text of expected)assert.ok(target.searchParams.get('body').includes(text),text);assert.equal(await node.getAttribute('target'),'_blank');assert.ok((await node.getAttribute('rel')).includes('noopener'));assert.ok((await node.getAttribute('rel')).includes('noreferrer'));return target;};
+  for(const width of [1440,390]){
+   await page.setViewportSize({width,height:width===390?844:1000});await page.locator('#reset-filters').click();assert.equal(await page.locator('.case-card').count(),100);
+   for(const [selector,min]of [['.style-option strong',14],['.case-heading h2',16],['.case-meta',12],['.case-info>.case-actions button',13],['.case-info>.downloads',13],['.prompt-language button',14]])assert.ok(await page.locator(selector).first().evaluate((node,min)=>parseFloat(getComputedStyle(node).fontSize)>=min,min),`${width}px: ${selector} too small`);
+   await inspectLink('#request-top',['所有风格']);await inspectLink('#request-style',['全部作品']);await page.locator('#request-style').scrollIntoViewIfNeeded();await noOverflow();await screenshot(width===390?'mobile-request.png':'desktop-request.png');
+   await selectFilter('theme','editorial');await selectFilter('category','engineering');await page.locator('#search').fill('private-brief-not-for-github');assert.equal(await page.locator('#empty').isVisible(),true);const request=await inspectLink('#request-empty',['纸墨编辑','工程']);assert.ok(!request.href.includes('private-brief-not-for-github'));assert.ok(!request.searchParams.get('body').includes('private-brief-not-for-github'));
+   await page.locator('#reset-filters').click();const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();await page.waitForFunction(()=>document.querySelector('.detail-prompt')?.textContent.length>30);assert.ok(await page.locator('.detail-prompt').evaluate(node=>parseFloat(getComputedStyle(node).fontSize)>=16));await inspectLink('#request-detail',[item.title,`#${item.slug}`]);await page.locator('#preview-details').evaluate(node=>{node.scrollTop=node.scrollHeight;});await noOverflow();await screenshot(width===390?'mobile-readable-detail.png':'desktop-readable-detail.png');await page.locator('#close-preview').click();
+  }
+  await page.locator('.collection-caption [data-prompt-language="en"]').click();await inspectLink('#request-style',['What would you like to draw','All examples']);await page.locator('.collection-caption [data-prompt-language="zh"]').click();
  });
  await check('static-gallery-has-no-external-network-or-runtime-errors',async()=>{assert.deepEqual(external,[]);assert.deepEqual(errors,[]);assert.equal(await page.locator('iframe').count(),0);});
  report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 100 cases, 20 themes, 6 byte-exact downloads.`);

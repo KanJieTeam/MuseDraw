@@ -8,6 +8,7 @@ import subprocess
 import re
 import tempfile
 import unittest
+from unittest import mock
 import xml.etree.ElementTree as ET
 from urllib.parse import unquote
 import zlib
@@ -42,6 +43,17 @@ class GalleryTests(unittest.TestCase):
             self.assertTrue(style["swatches"])
             for color in style["swatches"]:
                 self.assertRegex(color, r"^#[0-9a-fA-F]{3,8}$")
+
+    def test_gallery_defaults_to_all_and_has_a_reachable_request_template(self):
+        html = (ROOT / "assets/gallery/index.html").read_text(encoding="utf-8")
+        self.assertRegex(html, r'data-collection="all"[^>]*aria-pressed="true"')
+        collection = re.search(r'<select id="collection">(.*?)</select>', html).group(1)
+        self.assertTrue(collection.startswith('<option value="all">'))
+        for element_id in ("request-top", "request-style", "request-empty"):
+            self.assertIn(f'id="{element_id}"', html)
+        template = (ROOT / ".github/ISSUE_TEMPLATE/style-request.md").read_text(encoding="utf-8")
+        for heading in ("想画什么", "希望是什么样子", "What would you like to draw", "保密"):
+            self.assertIn(heading, template)
 
     def test_current_catalog_and_original_artwork(self):
         self.assertEqual(len(self.items), 100)
@@ -148,7 +160,18 @@ class GalleryTests(unittest.TestCase):
             historical = root / "gallery/cases/002"
             historical.mkdir(parents=True)
             (historical / "old.svg").touch()
-            site = build_site(root)
+            original_replace = Path.replace
+            locked_attempts = []
+
+            def transient_scanner_lock(source, destination):
+                if source.name.startswith("site-build-") and len(locked_attempts) < 2:
+                    locked_attempts.append(source)
+                    raise PermissionError("Temporary scanner lock")
+                return original_replace(source, destination)
+
+            with mock.patch.object(Path, "replace", transient_scanner_lock), mock.patch("build_gallery_site.time.sleep") as sleep:
+                site = build_site(root)
+            self.assertGreaterEqual(sleep.call_count, 2)
             html = (site / "index.html").read_text(encoding="utf-8")
             for filename in ("gallery.css", "gallery.mjs"):
                 version = hashlib.sha256((site / filename).read_bytes()).hexdigest()[:12]
