@@ -37,7 +37,8 @@ them. The offline validator reads the bundled schema with its supported keyword
 subset; the regression suite guards that vocabulary when the schema changes.
 The schema alone cannot check cross-object relationships: use `validate` for
 those. Validation success does not certify typography, collisions, static SVG
-safety, visual quality or factual accuracy; render and inspect the result too.
+safety, visual quality or factual accuracy. Render and read `checks.json` for
+browser measurements; visual review is optional under the policy in SKILL.md.
 
 ```json
 {

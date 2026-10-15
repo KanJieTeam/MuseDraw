@@ -56,7 +56,7 @@ node skills/musedraw/scripts/musedraw.mjs quickstart rag --lang zh --out output/
 候选数量或数据库产品。用户提供不同事实时，应先修改场景再交付。
 
 流程会打印阶段耗时，并在高清 PNG 前生成最大 1200×1000 的 `preview.jpg`。
-先打开这个小预览，避免高清纸纹 PNG 超出聊天预览大小限制。
+优先展示或链接小预览，避免高清纸纹 PNG 超出聊天预览大小限制；无需为交付额外调用读图或视觉分析工具。
 最终文件为 `diagram@2x.png`、原生可编辑 `diagram.drawio` 和 `checks.json`；
 `run.json` 记录本次命令的阶段耗时，不包含智能体读文档或模型思考的时间。
 
@@ -100,11 +100,12 @@ npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts -
 node skills/musedraw/scripts/musedraw.mjs render scene.json --font-mode system --preview-first --cache --strict
 ```
 
-新建场景使用 `"header": false, "footer": false`，关闭页眉并收紧顶部空白。
+渲染命令默认使用 `"header": false, "footer": false`，即使场景省略这两个字段也关闭页眉并收紧顶部空白。
+仅填写 `title`、`subtitle`、`kicker` 或 `figure` 不会显示页眉。
 需要内置标题时设置 `header: true`，填写 `title`，必要时再填 `subtitle` 或 `figure`。
 署名只填写用户指定的 `footer` 文本。渲染命令不会自动加主题署名；
 原有明确填写的图号和署名仍会保留。`autoFit: false` 会保留用户指定坐标。
 
 快速入口仍运行实际字形版面检查、静态 SVG 安全检查和原生 draw.io 导出。
 预览是便于快速查看的小图，细小文字请在高清 PNG 中检查。
-缓存和自动检查都不能代替审图、事实核对或真实编辑器中的编辑验收。
+普通出图以自动检查为默认验收，检查通过且文件齐全即可交付，不强制读图、上传 CDN、OCR 或调用视觉模型。自动检查不证明已经目检或事实正确；只有用户明确要求、反馈可见缺陷或出现具体疑点时，才按需用小预览复核。

@@ -7,14 +7,14 @@ description: Draw publication-quality diagrams for office work, research and eng
 
 You are the art director. The user gives a few sentences; you decide what the
 reader must understand, choose a diagram type and a style, write a
-`scene.json`, render it with the bundled engine, look at the PNG and fix it.
+`scene.json`, render it with the bundled engine, check the report and deliver.
 The engine owns typography, colour, line, texture, ports and arrowheads; you own
 content, composition and emphasis.
 
 ## Start here · required execution route
 
-Create or edit `scene.json`, run `scripts/musedraw.mjs`, inspect the small
-`preview.jpg` and `checks.json`, then deliver. For the shared-index RAG workflow,
+Create or edit `scene.json`, run `scripts/musedraw.mjs`, read `checks.json`,
+then deliver with the small `preview.jpg`. For the shared-index RAG workflow,
 run `quickstart rag`; for other diagrams, run `render scene.json`. The commands
 below are the implementation instructions; keep them out of user-facing prompts.
 When the user says “PNG only” / “只需 PNG”, select `--no-drawio` internally.
@@ -29,8 +29,8 @@ Choose one route after reading this file:
   Do not first read the scene schema, style atlas, theme JSON or exporter source.
   The later custom-composition instructions do not apply to this route. Diagnose
   a runtime failure once, fix that dependency, and retry the same command.
-- **Existing scene or exact replay:** render that scene directly, then inspect
-  the output. Read source/reference files only to resolve a concrete problem.
+- **Existing scene or exact replay:** render that scene directly, then check
+  its report. Read source/reference files only to resolve a concrete problem.
 - **New custom composition:** use sections 1–3 and only the relevant reference
   fields before rendering. Do not read every theme or the exporter implementation.
 
@@ -45,14 +45,35 @@ rules or append them to copied gallery prompts.
    connected edges. Never flatten the diagram into an embedded SVG or screenshot.
    The exporter rejects unsupported primitives, invalid object IDs and broken
    native references before writing the draw.io file.
-2. Open `preview.jpg` or the PNG and read `checks.json`. Inspect content,
-   legibility, layout and connectors; fix warnings and visible problems, then
-   rerender and inspect again. Automated checks do not prove visual inspection.
-3. Deliver links to both primary files after inspection. Keep scene JSON, SVG
-   and checks as supporting files. If rendering or inspection cannot finish,
-   report the incomplete step; do not claim a finished or visually checked result.
+2. **Automatic checks are the default review.** Read `checks.json`; fix reported
+   warnings, missing fonts or export failures. When checks pass and the requested
+   files exist, deliver immediately with the small preview. Do not open the full
+   PNG, upload it to a CDN, run OCR or call a vision service merely to satisfy a
+   routine review step. Visual review is optional, under the policy below.
+3. Deliver links to the requested primary files. Keep scene JSON, SVG and checks
+   as supporting files. Describe a passing report as “automatic checks passed”,
+   not “visually inspected”, “human reviewed” or proof of factual accuracy.
+   If rendering or requested exports fail, report the incomplete step.
    Honor an explicit request for a different output format, such as PNG only
-   (`--no-drawio`) or SVG only (`--svg-only`). PNG-only still gets visual review.
+   (`--no-drawio`) or SVG only (`--svg-only`). The same automatic-first review
+   policy applies to PNG-only requests.
+
+Keep the delivery message brief: preview, requested file links and check status.
+Mention an assumption only when it materially affects interpretation. Do not
+recount version discovery, explain the entire pipeline again or add a long
+quality-verification report unless asked.
+
+### Optional visual review
+
+Use visual review only when the user explicitly requests it, reports a visible
+defect, or a concrete issue in the checks cannot be resolved from scene data.
+A custom or dense diagram alone does not make review mandatory. Start with
+`preview.jpg`; inspect a high-resolution detail only for a specific uncertainty.
+If the host cannot display images, an external vision service is optional, never
+an automatic fallback. Do not let unavailable image tools block ordinary output.
+Report what was actually reviewed; an unfinished requested visual review does
+not mean already generated files must be withheld. Gallery/style contributions
+still follow the repository's publishing review requirements.
 
 The pipeline is `scene.json` → SVG → PNG, with native draw.io as a parallel
 export from the same browser page. No draw.io application is required.
@@ -99,6 +120,10 @@ relationships, edit its `scene.json` before delivering; it is not an interpreter
 for arbitrary requests. An existing scene is preserved on repeat runs.
 
 New drawings default to diagram content only: `header: false`, `footer: false`.
+The render CLI applies these defaults even if the scene omits both fields;
+`title`, `subtitle`, `kicker` and `figure` metadata alone do not enable a header.
+Set `header: true` only when the user explicitly requests visible headings,
+including an exact replay that is meant to retain a gallery image's headings.
 Do not add a title, subtitle, kicker, figure number or MuseDraw signature unless
 the user asks for these. Keep useful node labels, section labels and legends.
 When adapting a gallery example, remove its figure tag, attribution, example
@@ -129,16 +154,16 @@ System fonts can differ from the official typefaces; the machine needs a font
 covering the scene's language. Choose `--font-mode bundled` only when exact font
 families are required and the appropriate fonts are already installed.
 
-Open the bounded `preview.jpg` as soon as the command reports it; do not try to
-preview a large 2x PNG first. Check `checks.json`, then deliver `diagram@2x.png`
-and `diagram.drawio`. The preview is at most 1200×1000; text details can be
-inspected in the full PNG. `run.json` records phase timings. Quickstart verifies
+Show or link the bounded `preview.jpg` as soon as the command reports it; reading
+the image with an analysis tool is not required. Check `checks.json`, then deliver
+`diagram@2x.png` and `diagram.drawio` unless another format was requested.
+The preview is at most 1200×1000. `run.json` records phase timings. Quickstart verifies
 cached artifacts on repeat runs; use `--no-cache` for a fresh render.
 
 For other diagrams, read only the relevant scene fields and closest case.
 Inspect renderer source or dependency manifests only to diagnose a specific
 error. Avoid a chain of repeated README/schema/theme/source reads before the
-first render. Use the workflow below for custom composition and visual review.
+first render. Use the workflow below for custom composition and automatic checks.
 
 ## 1 · Read the request like an editor
 
@@ -156,8 +181,10 @@ first render. Use the workflow below for custom composition and visual review.
    micro-label stacked on every box.
 5. **Facts.** Use the user's names, numbers and relationships exactly. For a
    generic reference, use *specific, realistic* example content (real tool
-   names, plausible counts that reconcile) and mark it as an example in the
-   subtitle — never “服务A / 模块甲 / 业务系统”.
+   names, plausible counts that reconcile) — never “服务A / 模块甲 / 业务系统”.
+   Add numbers and configurations only when the brief needs them; identify an
+   illustrative value next to that value or briefly in the delivery note, not
+   with an unsolicited subtitle or a generic warning paragraph inside the image.
 
 ## 2 · Pick a style by its job
 
@@ -207,7 +234,7 @@ replays do not need this reference. In short:
   github.com/KanJieTeam/MuseDraw/tree/main/gallery) and change content — every gallery
   case is a working scene for an agent to imitate.
 
-## 4 · Render and look
+## 4 · Render and check
 
 ```sh
 node <skill>/scripts/musedraw.mjs validate path/to/scene.json      # optional preflight; Node.js only, no output files
@@ -224,23 +251,22 @@ browser checks are incomplete.
 
 Rendering validates scene structure and references before starting the browser
 or writing that scene's output. Fix errors at the reported JSON Pointer paths;
-preflight success still requires rendering and visual inspection.
+preflight success still requires rendering and reading the browser check report.
 
-Then **open the PNG** and read `checks.json`. Fix every `text-overflow`,
+Read `checks.json`. Fix every `text-overflow`,
 `text-collision`, `edge-label-on-node`, `node-overlap`, `outside-canvas`.
-Checks catch geometry, not taste: also run the
-[anti-AI checklist](references/anti-ai-checklist.md) on what you see.
-One successful render and one visual pass are sufficient when no problem is
-found. Rerender only after a change, failed check or unresolved visual issue;
-do not repeat renders just to demonstrate reproducibility, transcribe all text
-through OCR or call multiple vision services for an already accepted image.
+Once checks pass, deliver without a mandatory image-reading or vision-model call.
+Checks cover measured geometry, not taste or factual correctness. Compare scene
+content and relationships with the user's request; do not use image OCR for this.
+Use the [anti-AI checklist](references/anti-ai-checklist.md) only for requested
+design review or publishing a new gallery/style contribution. Rerender only after
+a change, failed check or concrete unresolved issue, not to prove reproducibility.
 Use `checks.drawio.native` and connected-edge checks as the export evidence;
 do not research or audit the exporter source on each drawing. For a slow task,
 compare `run.json` phase times with total task time and report them separately.
 The CLI timer excludes agent reasoning, reference reads, installation and host
 tool latency; do not attribute those minutes to draw.io serialization.
-Deliver the PNG and native editable draw.io by default,
-plus one line on what was assumed. Keep scene JSON, SVG and checks as supporting
+Deliver the PNG and native editable draw.io by default. Keep scene JSON, SVG and checks as supporting
 files. Paper textures, blur and glow are PNG visual effects; draw.io preserves
 editable shapes, text and connected edges, without promising identical rendering
 of every effect. Never substitute an embedded image for editable draw.io objects.

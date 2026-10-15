@@ -8,8 +8,10 @@ rag` for the shared-index RAG starter, or `render scene.json` for other diagrams
 The engine produces PNG and native editable draw.io directly; do not handwrite
 draw.io XML or install third-party drawio exporters to make the PNG. A PNG-only
 request selects `--no-drawio`. Keep execution details in the Skill, not in copied
-user prompts. Inspect `preview.jpg` and checks before delivery; rerender only
-after changes or unresolved issues. Follow the Skill's runtime reuse instructions.
+user prompts. Read `checks.json`; passing ordinary drawings can be delivered with
+`preview.jpg` immediately. Image reading, CDN uploads, OCR and external vision
+calls are not mandatory. Follow the Skill's optional visual-review policy and
+runtime reuse instructions; rerender only after changes or concrete issues.
 
 ## Contributions
 

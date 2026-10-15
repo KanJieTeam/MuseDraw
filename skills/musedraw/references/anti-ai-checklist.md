@@ -1,7 +1,10 @@
 # Anti-AI checklist · 去 AI 味检查表
 
-Run this on the rendered PNG before delivering. Every item is something the
-old MuseDraw gallery did and readers recognised instantly as generated.
+Use this for requested design review or new gallery/style publishing. It is not
+a required step for every drawing: ordinary deliveries use the automatic-first
+policy in SKILL.md, with no mandatory image-reading or external vision call.
+Every item is something the old MuseDraw gallery did and readers recognised
+instantly as generated.
 
 ## The six tells reviewers flag first · 最常被一眼认出的六个 AI 痕迹
 
@@ -27,7 +30,8 @@ Found in our own gallery (OKR tree, onboarding columns) and removed:
 - [ ] **No placeholder nouns.** No “服务A / 模块甲 / 业务系统 / 数据节点 / Service 1”.
   Real names, real tools, real roles. A generic example is still specific.
 - [ ] **Numbers reconcile.** PRISMA, CONSORT, funnels and budgets add up. Say
-  “illustrative” in the subtitle when they are invented.
+  “illustrative” next to invented values or briefly in the delivery note; do not
+  add an unsolicited subtitle just to label examples.
 - [ ] **Every arrow says something.** Verbs or payloads (“写入 WAL”, “OTLP”,
   “5 chunks”), not “调用 / 访问 / 交互” on every line. Unlabelled is fine when
   the legend explains the kind.

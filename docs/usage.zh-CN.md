@@ -2,7 +2,7 @@
 
 [English](usage.md) · [返回 README](../README.md) · [在线图库](https://kanjieteam.github.io/MuseDraw/)
 
-MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教学与工程图示。当前主工作流是 scene 引擎：智能体理解几句话的需求，选择构图和风格，生成场景，渲染并实际看图后默认交付 PNG 与原生可编辑 draw.io。
+MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教学与工程图示。当前主工作流是 scene 引擎：智能体理解几句话的需求，选择构图和风格，生成场景，渲染、自动检查后默认交付 PNG 与原生可编辑 draw.io。
 
 ## 安装与开始
 
@@ -13,13 +13,13 @@ npx skills add KanJieTeam/MuseDraw
 npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0
 ```
 
-路径以实际 Skill 安装位置为准。最小安装不下载字体和 Chromium；先用 `doctor --json` 检查可复用的运行环境与 Chrome/Edge。RAG 图可直接运行 `quickstart rag --out output/rag --strict`，默认用系统字体，先交付小尺寸 JPEG 预览，再输出高清 PNG 和原生 draw.io。其他图可在 `render` 后增加 `--font-mode system --preview-first --cache`。新图默认设置 `header: false, footer: false`，标题、图号和署名按需添加。详见[快速出图指南](fast-start.zh-CN.md)。
+路径以实际 Skill 安装位置为准。最小安装不下载字体和 Chromium；先用 `doctor --json` 检查可复用的运行环境与 Chrome/Edge。RAG 图可直接运行 `quickstart rag --out output/rag --strict`，默认用系统字体，先交付小尺寸 JPEG 预览，再输出高清 PNG 和原生 draw.io。其他图可在 `render` 后增加 `--font-mode system --preview-first --cache`。新图默认设置 `header: false, footer: false`，标题、图号和署名按需添加；命令行也会默认关闭页眉，只有 `header: true` 才显示标题和副标题。详见[快速出图指南](fast-start.zh-CN.md)。
 
 只有需要官方字形时才运行完整的 `npm --prefix skills/musedraw install`，并选择 `--font-mode bundled`。完整安装包含主题字体并尝试下载 Chromium；系统字体模式需要能显示目标语言的字体，跨机器字形可能不同。
 
 然后告诉智能体：
 
-只需描述内容和风格。渲染、实际看图检查、交付 PNG 与原生可编辑 draw.io 已是 Skill 的默认交付规则，不需要在每条需求后重复；图库复制按钮也只附上案例内容与风格。明确要求其他格式时，以你的要求为准。
+只需描述内容和风格。渲染、自动检查、交付 PNG 与原生可编辑 draw.io 已是 Skill 的默认交付规则，不需要在每条需求后重复；图库复制按钮也只附上案例内容与风格。明确要求其他格式时，以你的要求为准。
 
 只想要图片时，说“只需 PNG”或点击图库的“快速 PNG”。Skill 会在内部选择
 `--no-drawio`，跳过原生导出并保留 PNG 与版面检查；默认仍交付双文件。
@@ -67,12 +67,12 @@ node <skill>/scripts/musedraw.mjs render path/to/scene.json --theme 水墨宣纸
 node <skill>/scripts/musedraw.mjs themes
 ```
 
-`validate` 仅需 Node.js，无需安装字体或浏览器，也不写入产物。它检查场景结构与引用，错误中包含文件名和 JSON Pointer 字段路径。渲染命令也会在启动浏览器前执行同样的预检；预检通过仍需渲染并审图。详见[校验说明](../skills/musedraw/references/scene-schema.md#validate-before-rendering)。
+`validate` 仅需 Node.js，无需安装字体或浏览器，也不写入产物。它检查场景结构与引用，错误中包含文件名和 JSON Pointer 字段路径。渲染命令也会在启动浏览器前执行同样的预检；预检通过仍需渲染并读取浏览器检查报告。详见[校验说明](../skills/musedraw/references/scene-schema.md#validate-before-rendering)。
 
 默认输出到场景目录；用 `--out` 指向新目录可保留之前的版本。重渲染会写入该目录中的同名产物，先确认目标。完整仓库可用 `npm run gallery` 重新渲染全部图库。
 
 同一份场景在相同引擎、主题、字体与渲染环境下可重复生成；跨平台字体或抗锯齿可能影响结果。给另一个模型一句话，让它重新理解并设计一张图，是另一项任务，不保证与案例逐像素相同，也不代表任意模型均成功。
 
-没有浏览器时可加 `--svg-only`，并说明 PNG、原生 draw.io 与浏览器版面检查未完成。不要把 SVG-only 输出视为已看图验收。正常渲染后应打开 PNG，阅读 `checks.json`，修复文字溢出、碰撞、连线标签压框、节点重叠和越界等警告，再检查事实、连线与[视觉清单](../skills/musedraw/references/anti-ai-checklist.md)。脚本成功不等于审美验收。
+没有浏览器时可加 `--svg-only`，并说明 PNG、原生 draw.io 与浏览器版面检查未完成。正常渲染后读取 `checks.json`，修复警告；自动检查通过、所需文件齐全即可交付小预览与产物，不强制读取完整 PNG、上传 CDN、执行 OCR 或调用视觉模型。只有用户明确要求、反馈可见缺陷或报告中出现无法从场景数据解决的具体问题时，才按需审图，优先使用 `preview.jpg`。自动检查通过不代表已目检、审美验收或事实正确，不能据此宣称“人工视觉检查通过”。
 
 当前不是原始数据统计绘图工具，柱状图、散点图等请使用 matplotlib 或 ggplot。旧小型组件图引擎只作为[兼容路线](semantic-graph.zh-CN.md)保留，新工作使用 scene 引擎。贡献前阅读[贡献指南](../CONTRIBUTING.zh-CN.md)。
