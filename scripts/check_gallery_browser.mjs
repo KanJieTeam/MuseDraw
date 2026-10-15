@@ -116,7 +116,12 @@ try{
  await check('progressive-preview-zoom-fit-close-and-mobile-layout',async()=>{
   for(const width of [1440,390]){
    await page.setViewportSize({width,height:width===390?844:1000});await selectFilter('collection','flagship');await page.evaluate(()=>window.scrollTo(0,0));await noOverflow();await screenshot(width===390?'mobile.png':'desktop-flagship.png');
-   const item=items.find(item=>item.status==='flagship');await page.locator(`[data-preview="${item.slug}"]`).click();await page.locator('#preview-image').evaluate(async image=>{await image.decode();});await page.waitForFunction(()=>document.querySelector('#preview-image').dataset.quality==='raster');assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/preview.jpg`,url).href);
+   const item=items.find(item=>item.status==='flagship');await page.locator(`[data-preview="${item.slug}"]`).click();
+   // The small thumbnail is deliberately replaced by the full JPEG. Decoding
+   // before that swap completes races the src change and rejects with
+   // EncodingError even when both assets are valid. Check the final image.
+   await page.waitForFunction(()=>document.querySelector('#preview-image').dataset.quality==='raster');
+   await page.locator('#preview-image').evaluate(async image=>{await image.decode();});assert.equal(new URL(await page.locator('#preview-image').getAttribute('src'),url).href,new URL(`${item.path}/preview.jpg`,url).href);
    const transform=()=>page.locator('#preview-image').evaluate(image=>getComputedStyle(image).transform);const initial=await transform();await page.locator('#zoom-in').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();assert.equal(await transform(),initial);await page.locator('#zoom-out').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();await noOverflow();await screenshot(width===390?'mobile-preview.png':'desktop-preview.png');await page.locator('#close-preview').click();await page.locator(`[data-preview="${item.slug}"]`).click();await page.keyboard.press('Escape');assert.equal(await page.locator('#preview').evaluate(element=>element.open),false);
   }
  });
