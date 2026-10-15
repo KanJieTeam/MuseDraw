@@ -123,7 +123,37 @@ function stencil(s){
 function color(v){if(!v||v==='none'||v==='transparent')return 'none';if(/^#[\da-f]{3,8}$/i.test(v))return v;const rgb=v.match(/^rgba?\((\d+)[, ]+(\d+)[, ]+(\d+)/);if(rgb)return '#'+rgb.slice(1).map(n=>Number(n).toString(16).padStart(2,'0')).join('');throw new Error(`Unsupported native paint: ${v}`);}
 function family(v){return v.split(',')[0].replace(/['";]/g,'').trim();}
 
+// Enforce the native-object contract for every caller, not just the browser
+// collector. An unsupported primitive must never become a placeholder rectangle.
+function assertNativeScene(scene){
+  const groups=new Map(scene.groups.map(g=>[g.id,g])),ids=new Set(['0','1']),nodes=new Set(),edges=new Set();
+  const finite=(values,length)=>Array.isArray(values)&&values.length===length&&values.every(Number.isFinite);
+  if(!finite(scene.size,2)||scene.size.some(n=>n<=0))throw new Error('Invalid native canvas size');
+  for(const item of [...scene.groups,...scene.shapes,...scene.texts]){
+    if(typeof item.id!=='string'||!item.id||ids.has(item.id))throw new Error(`Duplicate or invalid native object ID: ${item.id}`);
+    ids.add(item.id);
+    if(!finite(item.box,4))throw new Error(`Invalid native geometry: ${item.id}`);
+    if(item.parent&&!groups.has(item.parent))throw new Error(`Unresolved native parent: ${item.parent}`);
+  }
+  for(const g of scene.groups)if(g.kind==='node'){
+    if(!g.sourceId||nodes.has(g.sourceId))throw new Error(`Duplicate or invalid native node: ${g.sourceId}`);
+    nodes.add(g.sourceId);
+  }
+  for(const s of scene.shapes){
+    if(!['rect','circle','ellipse','path','line','polygon','polyline'].includes(s.tag))throw new Error(`Unsupported editable primitive: ${s.tag}`);
+    if(!finite(s.matrix,6))throw new Error(`Invalid native transform: ${s.id}`);
+  }
+  for(const [i,e] of scene.edges.entries()){
+    if(!e.id||edges.has(e.id)||ids.has(`connector-${i+1}`))throw new Error(`Duplicate native connector ID: ${e.id}`);
+    edges.add(e.id);
+    if(!nodes.has(e.from)||!nodes.has(e.to))throw new Error(`Unresolved editable terminals ${e.from} → ${e.to}`);
+    if(!Array.isArray(e.points)||e.points.length<2||e.points.some(p=>!finite(p,2)))throw new Error(`Invalid native connector geometry: ${e.id}`);
+  }
+  for(const item of [...scene.groups,...scene.shapes,...scene.texts])if(item.edgeParent&&!edges.has(item.edgeParent))throw new Error(`Unresolved native edge label: ${item.edgeParent}`);
+}
+
 export function toDrawio(scene){
+  assertNativeScene(scene);
   const cells=['<mxCell id="0"/>','<mxCell id="1" parent="0"/>'],groups=new Map(scene.groups.map(g=>[g.id,g])),nodeIds=new Map(scene.groups.filter(g=>g.kind==='node').map(g=>[g.sourceId,g.id]));
   const edgeMap=new Map(scene.edges.map(e=>[e.id,e])),edgeIds=new Map(scene.edges.map((e,i)=>[e.id,`connector-${i+1}`]));
   const cell=(obj,geo)=>`<mxCell${attrs(obj)}>${geo}</mxCell>`;

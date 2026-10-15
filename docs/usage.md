@@ -19,6 +19,11 @@ Official font families are optional: the full `npm --prefix skills/musedraw inst
 
 Then ask your agent:
 
+Describe the content and style. Rendering, actual visual inspection, and delivery
+of PNG plus native editable draw.io are default Skill rules; users do not need
+to repeat them, and gallery prompts omit this boilerplate. An explicit request
+for another output format takes precedence.
+
 ```text
 Use MuseDraw's 科研期刊 style for a research roadmap.
 The question is how metabolic reprogramming in hepatic stellate cells drives fibrosis.
