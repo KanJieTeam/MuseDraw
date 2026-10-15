@@ -10,7 +10,7 @@ import tempfile
 import time
 import zipfile
 
-PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json")
+PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json", "previews.json")
 CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json", "diagram.drawio")
 DOWNLOAD_FILES = ("downloads/musedraw-skill.zip", "downloads/musedraw-skill.json")
 
@@ -74,6 +74,7 @@ def build_site(root, output_name="site"):
     try:
         for filename in PAGE_FILES:
             shutil.copyfile(root / "assets/gallery" / filename, staging / filename)
+        shutil.copytree(root / "assets/gallery/previews", staging / "previews")
         # Keep frequent gallery visitors from mixing a new page with yesterday's
         # cached stylesheet or module after a GitHub Pages deployment.
         html = (staging / "index.html").read_text(encoding="utf-8")

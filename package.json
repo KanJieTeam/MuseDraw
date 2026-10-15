@@ -8,6 +8,8 @@
     "setup": "npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts --no-audit --no-fund --fetch-timeout=15000 --fetch-retries=0 playwright@1.56.0",
     "setup:fonts": "npm --prefix skills/musedraw install",
     "gallery": "node scripts/render_gallery.mjs",
+    "gallery:previews": "python scripts/build_gallery_previews.py",
+    "readme:showcase": "python scripts/build_readme_showcase.py",
     "themes": "node skills/musedraw/scripts/musedraw.mjs themes",
     "check": "python scripts/check.py"
   }

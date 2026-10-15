@@ -45,3 +45,14 @@ python scripts/check.py
 重渲染已有场景与模型理解新需求应分别描述；不能据此承诺任意模型准确率、跨平台逐像素一致、token 节省或超过其他工具。只报告实际环境与完成的检查。
 
 分支使用 `feat/`、`fix/`、`docs/`、`test/`、`refactor/` 或 `chore/` 等前缀，名称不得包含 `codex`，不区分大小写。这只限制分支命名，不禁止准确说明 Codex 客户端。
+
+## 图库缩略图维护
+
+列表使用已提交的 WebP 小图，文件名带内容哈希。弹窗先显示小图，再后台升级为
+大预览；用户点击“高清”后才加载 SVG，原始下载文件保持不变。
+修改图库 `preview.jpg` 后，维护者安装 `Pillow==12.3.0`，运行
+`npm run gallery:previews`，提交生成的 `assets/gallery/previews/` 与
+`previews.json`。普通绘图、离线检查和 Pages 构建不需要 Pillow；
+检查会核对源图哈希，防止修改案例后继续使用旧缩略图。
+
+README 合集维护：`npm run readme:showcase` 重建 1920×1080 交错叠放的照片拼贴及其源图哈希记录，使用同一可选 Pillow 依赖。

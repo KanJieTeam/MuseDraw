@@ -45,3 +45,16 @@ Contribute original work you can license under [Apache-2.0](LICENSE). Public vis
 Distinguish rerendering a supplied scene from a model interpreting a new request. Neither proves universal model accuracy, identical pixels across platforms, token savings or superiority over other tools. Report the actual environment and completed checks.
 
 Use branch prefixes such as `feat/`, `fix/`, `docs/`, `test/`, `refactor/` or `chore/`. Branch names must not contain `codex`, case-insensitively. This restricts branch names, not accurate documentation of the Codex client.
+
+## Gallery thumbnail maintenance
+
+The list uses checked-in, content-addressed WebP thumbnails; the modal shows a
+small image first, upgrades its raster preview in the background and loads SVG
+only on the viewer's **高清** request. Original gallery downloads remain unchanged.
+After changing gallery `preview.jpg` files, maintainers can install
+`Pillow==12.3.0` and run `npm run gallery:previews`, then commit the generated
+`assets/gallery/previews/` files and `previews.json`. Normal drawing, offline
+checks and Pages builds do not need Pillow. Source/image hashes catch stale
+thumbnails during checks.
+
+README showcase maintenance: `npm run readme:showcase` regenerates the 1920x1080 overlapping photo collage and source-hash manifest; it uses the same optional Pillow dependency.

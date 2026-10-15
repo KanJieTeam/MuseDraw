@@ -1,0 +1,116 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "layout": "scattered-overlap",
+  "featured": [
+    "05-mvp-whiteboard",
+    "06-kafka-riso",
+    "38-good-lesson-chalkboard",
+    "03-gitops-terminal",
+    "08-ai-agent-aurora",
+    "17-onboarding-90-pastel",
+    "20-customer-journey-terracotta",
+    "42-gtd-whiteboard",
+    "41-run-of-show-swiss"
+  ],
+  "cases": [
+    {
+      "slug": "05-mvp-whiteboard",
+      "sourceSha256": "bc62a3b35bb8ba4432463969c3860dce37e8a3ae2e446a0117074f6b27093937"
+    },
+    {
+      "slug": "06-kafka-riso",
+      "sourceSha256": "d90d37e180fba24cfb61353e21861610b671187f42a5e1f2b2761d2ee4af5507"
+    },
+    {
+      "slug": "38-good-lesson-chalkboard",
+      "sourceSha256": "7526c876464cdd86ccd9d5f2516f1e1164ba439b24efd0cf03059721a8210e6d"
+    },
+    {
+      "slug": "03-gitops-terminal",
+      "sourceSha256": "5d8384a158a00eb8930c26d387eb208905b5658c0106f895f2bf3c030f1d4dd8"
+    },
+    {
+      "slug": "08-ai-agent-aurora",
+      "sourceSha256": "00e3bc1c27fc2fcaf91aae4c93beb352dd5dcf0ec9a395c821b2721c78f05ee6"
+    },
+    {
+      "slug": "17-onboarding-90-pastel",
+      "sourceSha256": "297c32f5d3b61b48e900f58f817846a5eb368806e15c6850faa998595c5406ca"
+    },
+    {
+      "slug": "20-customer-journey-terracotta",
+      "sourceSha256": "c08d58ae1a21a749165e0b12cf43c999eb6372816cc96afbc7eefec84d9eaade"
+    },
+    {
+      "slug": "42-gtd-whiteboard",
+      "sourceSha256": "309348d4edd4bdbf5cab790eb666dee2decace213a7b395e67cdd684e33d2ea1"
+    },
+    {
+      "slug": "41-run-of-show-swiss",
+      "sourceSha256": "bbf4ed7edca0f511766da6a772394ece346d29182bfa516644191cb6fed1f779"
+    },
+    {
+      "slug": "01-rag-editorial",
+      "sourceSha256": "f506763735766cb6904d69daabc9d927010591232376c2947133d36d8d442679"
+    },
+    {
+      "slug": "02-kubernetes-blueprint",
+      "sourceSha256": "7692163f451d29bed6955df3c19009a203ba9034f96fd3c8c418d45ffef99591"
+    },
+    {
+      "slug": "04-card-payment-swiss",
+      "sourceSha256": "0ab47c0abc39210006e61ee39692583b278b20337ad080bf3edb5c0bebb4f83f"
+    },
+    {
+      "slug": "07-observability-observatory",
+      "sourceSha256": "e85ada486774b8dd5876d814ad4bc3e8cbb3685d058f0540b93524dbcb36c607"
+    },
+    {
+      "slug": "09-microservices-bauhaus",
+      "sourceSha256": "e0e3ac6ae735b50e686835bc06fb594777e254b0ee5178dbfbb04fcab63b630e"
+    },
+    {
+      "slug": "10-postgres-failover-newsprint",
+      "sourceSha256": "a49b3882ad070a5d82de3820c2c0fdc0024a3d42af7f1072a25852e419b3af58"
+    },
+    {
+      "slug": "11-data-exchange-ink-wash",
+      "sourceSha256": "430c5dfd83bbca3786ccbd6260704471f04d66f9e3ce52c9af6db59ce0fdb0fd"
+    },
+    {
+      "slug": "12-saas-tenancy-product",
+      "sourceSha256": "508bdc20606e5e056a26965e8377ad35e090eec18965457538e8a3247822aff2"
+    },
+    {
+      "slug": "13-food-delivery-c4",
+      "sourceSha256": "e47bd3a0c712c0d55fdc2665c196c6ec431a1a8f6fa311a981f805464e66937e"
+    },
+    {
+      "slug": "14-game-backend-neon",
+      "sourceSha256": "943c204e77fd5b9a26540c4d0499c4ccadb3b4d06583a190b2bf861d5f05a6f1"
+    },
+    {
+      "slug": "16-okr-tree-enterprise",
+      "sourceSha256": "7b5d9ad4c6999dac396f73f9149885681395aa66729abc33f7a84e20d54d25fc"
+    },
+    {
+      "slug": "19-product-roadmap-product",
+      "sourceSha256": "a3829992e6008466c86bcd0b0248db22ee71b42001a615abda4ff2054412a5e0"
+    },
+    {
+      "slug": "39-curriculum-map-metro",
+      "sourceSha256": "5d0c31557c56aabae1ac15913f4bb622350f52cf5604e0a22ca0d3fd78a08c7f"
+    },
+    {
+      "slug": "56-prisma-journal",
+      "sourceSha256": "c19f95d2837ef34324d770e53226d57bd6c7ac2f5f272a74801032026073ca54"
+    },
+    {
+      "slug": "62-crispr-workflow-journal",
+      "sourceSha256": "6fae2b46e0b4cb6d1bfe620d3dd7b15459973d7bfb441443ca1b531b9a03d4c3"
+    }
+  ],
+  "bytes": 362887,
+  "sha256": "902198d84bfd6408f70c44f0d29854eeab80b38ea2a7cdd79b4a9c0bfd3ec65a"
+}
