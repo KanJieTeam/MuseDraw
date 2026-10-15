@@ -27,6 +27,7 @@ function matches(actual,expected,format){if(actual.equals(expected))return true;
 async function noOverflow(){assert.deepEqual(await page.evaluate(()=>['html','body','.collection-tools','.case-grid','#preview','#copy-dialog'].flatMap(selector=>[...document.querySelectorAll(selector)].filter(element=>element.clientWidth&&element.scrollWidth>element.clientWidth+1).map(element=>({selector,width:element.clientWidth,scrollWidth:element.scrollWidth})))),[],'Horizontal overflow');}
 async function screenshot(name){await page.screenshot({path:path.join(output,name),animations:'disabled'});report.screenshots.push(name);}
 function prompt(markdown){const match=markdown.match(/(?:^|\n)>[ \t]+([^\n]+(?:\n>[ \t]+[^\n]+)*)/);assert.ok(match,'Original user prompt missing');return match[1].replace(/\n>[ \t]+/g,'\n').trim().replace(/\r\n/g,'\n');}
+async function copiedBrief(item,original){const name=await page.locator(`#theme option[value="${item.theme}"]`).textContent();return `请使用 MuseDraw 最新版（https://github.com/KanJieTeam/MuseDraw），先读取完整 Skill，采用“${name}”风格。\n${original}\n请渲染并看图检查，交付 PNG 和可逐个编辑文字、图形与连线的原生 .drawio 文件，不要把 SVG 或截图嵌入 drawio。`;}
 
 try{
  const requested=option('--url')||await serve();
@@ -42,9 +43,9 @@ try{
  report.caseCount=100;report.themeCount=20;
  const assets=new Map(),prompts=new Map();
  await check('all-100-user-cases-published-assets-match-source',async()=>{
-  const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','preview.jpg','checks.json'].map(filename=>({item,filename})));
+  const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','diagram.drawio','preview.jpg','checks.json'].map(filename=>({item,filename})));
   for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md')prompts.set(item.slug,prompt(remote.toString('utf8')));}));
-  return {cases:100,files:500};
+  return {cases:100,files:600};
  });
  await check('20-flagship-default-and-all-100-decoded-previews',async()=>{
   const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.status==='flagship').map(item=>item.slug));await noOverflow();await screenshot('desktop.png');
@@ -58,14 +59,30 @@ try{
   await page.selectOption('#theme','all');await page.selectOption('#collection','all');assert.equal(await page.locator('.case-card').count(),100);
  });
  const samples=[items[0],items.find(item=>item.lang==='zh')??items[20],items.at(-1)];
+ await check('chinese-styles-search-category-favorites-and-persistence',async()=>{
+  assert.equal(await page.locator('#theme option[value="journal"]').textContent(),'科研期刊');
+  for(const category of ['research','office','teaching','engineering']){await page.selectOption('#category',category);assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.category===category).map(item=>item.slug));}
+  await page.locator('#reset-filters').click();await page.locator('#search').fill('科研期刊');assert.equal(await page.locator('.case-card').count(),items.filter(item=>item.theme==='journal').length);
+  await page.locator('#search').fill('没有这个图-qa');assert.equal(await page.locator('.case-card').count(),0);assert.equal(await page.locator('#empty').isVisible(),true);
+  await page.locator('#reset-filters').click();const item=items[0];await page.locator(`#gallery [data-favorite="${item.slug}"]`).click();assert.equal(await page.locator('#favorite-count').textContent(),'1');await page.locator('#favorites').click();assert.equal(await page.locator('.case-card').count(),1);
+  await page.reload({waitUntil:'networkidle'});await page.locator('#favorites').click();assert.equal(await page.locator('.case-card').count(),1);assert.equal(await page.locator('.case-card').getAttribute('data-item'),item.slug);
+  await page.locator(`#gallery [data-favorite="${item.slug}"]`).click();assert.equal(await page.locator('.case-card').count(),0);await page.locator('#reset-filters').click();assert.equal(await page.locator('.case-card').count(),100);
+ });
  await check('native-clipboard-copies-original-user-prompts',async()=>{
   await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(url).origin});
-  for(const item of samples){await page.evaluate(()=>navigator.clipboard.writeText('QA clipboard marker'));await page.locator(`[data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,prompts.get(item.slug));}
+  for(const item of samples){await page.evaluate(()=>navigator.clipboard.writeText('QA clipboard marker'));const expected=await copiedBrief(item,prompts.get(item.slug));await page.locator(`#gallery [data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);assert.ok(expected.includes('MuseDraw 最新版'));assert.ok(expected.includes('原生 .drawio'));assert.ok(expected.includes(prompts.get(item.slug)));}
   return {copiedOriginalPrompts:samples.map(item=>item.slug)};
  });
  await check('denied-clipboard-uses-selected-manual-fallback',async()=>{
   const fallback=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});await observe(fallback);await fallback.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:()=>Promise.reject(new DOMException('Permission denied','NotAllowedError'))}});document.execCommand=()=>false;});const original=page;
-  try{page=await fallback.newPage();await page.goto(url,{waitUntil:'networkidle'});const item=items.find(item=>item.status==='flagship');await page.locator(`[data-copy="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#copy-text').inputValue(),prompts.get(item.slug));assert.equal(await page.locator('#copy-text').evaluate(element=>element.selectionEnd-element.selectionStart),prompts.get(item.slug).length);await noOverflow();await screenshot('mobile-copy-fallback.png');await page.locator('#close-copy').click();await page.locator(`[data-copy="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});await page.keyboard.press('Escape');assert.equal(await page.locator('#copy-dialog').evaluate(element=>element.open),false);}finally{await fallback.close();page=original;}
+  try{
+   page=await fallback.newPage();await page.goto(url,{waitUntil:'networkidle'});const item=items.find(item=>item.status==='flagship'),expected=await copiedBrief(item,prompts.get(item.slug));
+   await page.locator(`#gallery [data-copy="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#copy-text').inputValue(),expected);assert.equal(await page.locator('#copy-text').evaluate(element=>element.selectionEnd-element.selectionStart),expected.length);await noOverflow();await screenshot('mobile-copy-fallback.png');await page.locator('#close-copy').click();
+   await page.locator(`#gallery [data-replay="${item.slug}"]`).click();await page.locator('#copy-dialog').waitFor({state:'visible'});assert.ok((await page.locator('#copy-text').inputValue()).includes('原生 .drawio'));await page.keyboard.press('Escape');assert.equal(await page.locator('#copy-dialog').evaluate(element=>element.open),false);
+  }finally{await fallback.close();page=original;}
+ });
+ await check('exact-replay-copies-latest-repository-and-raw-scene',async()=>{
+  const item=items[0];await page.locator(`#gallery [data-replay="${item.slug}"]`).click();const text=await page.evaluate(()=>navigator.clipboard.readText());assert.ok(text.includes('仓库最新版'));assert.ok(text.includes(`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`));assert.ok(text.includes('直接渲染'));assert.ok(text.includes('不要要求我提供坐标'));assert.ok(text.includes('原生 .drawio'));assert.ok(text.split('\n').length<=6);
  });
  await check('svg-preview-zoom-fit-close-and-mobile-layout',async()=>{
   for(const width of [1440,390]){
@@ -74,12 +91,18 @@ try{
    const transform=()=>page.locator('#preview-image').evaluate(image=>getComputedStyle(image).transform);const initial=await transform();await page.locator('#zoom-in').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();assert.equal(await transform(),initial);await page.locator('#zoom-out').click();assert.notEqual(await transform(),initial);await page.locator('#fit').click();await noOverflow();await screenshot(width===390?'mobile-preview.png':'desktop-preview.png');await page.locator('#close-preview').click();await page.locator(`[data-preview="${item.slug}"]`).click();await page.keyboard.press('Escape');assert.equal(await page.locator('#preview').evaluate(element=>element.open),false);
   }
  });
- await check('real-svg-and-scene-downloads-match-published-bytes',async()=>{
-  await page.selectOption('#collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.svg','scene.json']){
+ await check('preview-details-retain-prompt-actions-and-downloads',async()=>{
+  await page.selectOption('#collection','all');const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,prompts.get(item.slug));
+  for(const filename of ['diagram.drawio','diagram.svg','scene.json'])assert.equal(await page.locator(`#preview-details a[download][href="${item.path}/${filename}"]`).count(),1);
+  const expected=await copiedBrief(item,prompts.get(item.slug));await page.locator(`#preview-details [data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);
+  await page.locator(`#preview-details [data-replay="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`);await page.locator('#close-preview').click();
+ });
+ await check('real-drawio-svg-and-scene-downloads-match-published-bytes',async()=>{
+  await page.selectOption('#collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.drawio','diagram.svg','scene.json']){
    const source=`${item.path}/${filename}`,locator=page.locator(`[data-item="${item.slug}"] a[download][href="${source}"]`);const [download]=await Promise.all([page.waitForEvent('download'),locator.click()]);assert.equal(await download.failure(),null);const target=path.join(scratch,`download-${report.downloads.length}-${filename}`);await download.saveAs(target);const bytes=await fs.readFile(target);assert.equal(hash(bytes),assets.get(source).sha256);report.downloads.push({source,filename:download.suggestedFilename(),bytes:bytes.length,sha256:hash(bytes)});
-  }return {byteExactDownloads:4,formats:['svg','json']};
+  }return {byteExactDownloads:6,formats:['drawio','svg','json']};
  });
  await check('static-gallery-has-no-external-network-or-runtime-errors',async()=>{assert.deepEqual(external,[]);assert.deepEqual(errors,[]);assert.equal(await page.locator('iframe').count(),0);});
- report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 100 cases, 20 themes, 4 byte-exact downloads.`);
+ report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 100 cases, 20 themes, 6 byte-exact downloads.`);
 }catch(error){report.status='failed';report.error=error.message;if(page&&!page.isClosed())await screenshot('failure.png').catch(()=>{});console.error(error.stack);process.exitCode=1;}
 finally{await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');await browser?.close();if(server)await new Promise(resolve=>server.close(resolve));const real=await fs.realpath(scratch).catch(()=>null),temp=await fs.realpath(os.tmpdir()),relative=real&&path.relative(temp,real);assert.ok(real===scratchReal&&relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&path.basename(scratch).startsWith('musedraw-gallery-qa-'),'Refusing an unverified scratch cleanup');await fs.rm(scratch,{recursive:true,force:true});}

@@ -2,7 +2,7 @@
 
 [简体中文](usage.zh-CN.md) · [Back to README](../README.en.md) · [Gallery](../gallery/README.md)
 
-MuseDraw is a professional drawing Skill for AI agents working on research, office, teaching and engineering diagrams. The main workflow uses the scene engine: the agent interprets a short request, chooses composition and style, creates a scene, renders it and inspects the image before delivering PNG and editable SVG.
+MuseDraw is a professional drawing Skill for AI agents working on research, office, teaching and engineering diagrams. The main workflow uses the scene engine: the agent interprets a short request, chooses composition and style, creates a scene, renders it and inspects the image before delivering PNG and native editable draw.io.
 
 ## Install and start
 
@@ -46,7 +46,7 @@ Keep the research content and relationships unchanged; switch to 水墨宣纸.
 Move animal validation after the cell-mechanism work, preserving the other content.
 ```
 
-The agent edits the existing scene, preserving unrelated content and stable IDs, then rerenders. Primary outputs are `diagram@2x.png` and `diagram.svg`; retain `scene.json` for later editing and replay. Checks are written to `checks.json`. SVG uses editable native text and shapes. The main engine does not promise native drawio output.
+The agent edits the existing scene, preserving unrelated content and stable IDs, then rerenders. Primary outputs are `diagram@2x.png` and native editable `diagram.drawio`. Retain `scene.json` and `diagram.svg` as supporting source and vector files; checks are written to `checks.json`. PNG preserves paper textures, blur and glow. The draw.io file contains editable shapes, text and connected edges, without promising identical rendering of every PNG effect.
 
 ## Render and replay
 
@@ -62,6 +62,6 @@ Output defaults to the scene directory. Use `--out` with a new directory to pres
 
 The same scene, engine, theme, fonts and rendering environment allow repeatable generation. Fonts and antialiasing can affect cross-platform results. Asking another model to interpret a short request and design a new figure is separate: it does not guarantee a pixel-identical case or success from every model.
 
-Without a browser, add `--svg-only` and disclose that PNG and browser layout checks are incomplete. SVG-only output is not visual acceptance. After a normal render, open the PNG, read `checks.json` and fix text overflow, collisions, edge labels on nodes, node overlap and out-of-canvas warnings. Also inspect facts, connectors and the [visual checklist](../skills/musedraw/references/anti-ai-checklist.md). Process success alone does not establish aesthetic quality.
+Without a browser, add `--svg-only` and disclose that PNG, native draw.io and browser layout checks are incomplete. SVG-only output is not visual acceptance. After a normal render, open the PNG, read `checks.json` and fix text overflow, collisions, edge labels on nodes, node overlap and out-of-canvas warnings. Also inspect facts, connectors and the [visual checklist](../skills/musedraw/references/anti-ai-checklist.md). Process success alone does not establish aesthetic quality.
 
 This is not a raw-data statistical plotting tool; use matplotlib or ggplot for scatter plots and similar charts. The old small-component engine remains a [compatibility route](semantic-graph.zh-CN.md); use the scene engine for new work. See the [contribution guide](../CONTRIBUTING.md) before contributing.

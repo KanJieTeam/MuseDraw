@@ -51,7 +51,7 @@ jobs:
         run: node output/browser-deps/node_modules/playwright/cli.js install --with-deps chromium
       - name: Install locked scene-engine fonts without lifecycle scripts
         run: npm ci --prefix skills/musedraw --ignore-scripts
-      - name: Unified offline checks including all 100 current SVG scenes
+      - name: Unified checks including all 100 native drawio structures and SVG scenes
         run: python scripts/check.py
         env:
           PYTHONDONTWRITEBYTECODE: '1'
@@ -67,6 +67,15 @@ jobs:
               subprocess.run(['node', 'skills/musedraw/scripts/musedraw.mjs', 'render', str(root / item['path'] / 'scene.json'), '--out', str(output), '--playwright', str(root / 'output/browser-deps/node_modules/playwright/index.mjs'), '--fonts', str(root / 'skills/musedraw/node_modules')], check=True)
               checks = json.loads((output / 'checks.json').read_text(encoding='utf-8'))
               assert checks['passed'] and not checks['warnings'] and not checks['missingFonts'], checks
+              import xml.etree.ElementTree as ET
+              cells = ET.parse(output / 'diagram.drawio').getroot().findall('.//mxCell')
+              assert any(cell.get('vertex') == '1' and cell.get('value', '').strip() for cell in cells), 'Missing native text'
+              by_id = {cell.get('id'): cell for cell in cells}
+              assert len(by_id) == len(cells), 'Duplicate native object IDs'
+              for cell in cells:
+                  assert 'shape=image' not in cell.get('style', '') and 'image=' not in cell.get('style', ''), 'Embedded image'
+                  if cell.get('edge') == '1':
+                      assert cell.get('source') in by_id and cell.get('target') in by_id, 'Missing connected terminals'
       - name: Check current catalog, copied prompts, theme filters and downloads
         run: |
           python scripts/build_gallery_site.py

@@ -7,6 +7,7 @@ import os from 'node:os';
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
 import { assertStaticSvg } from './safety.mjs';
+import { collectEditableScene, toDrawio } from './drawio.mjs';
 
 // Family -> npm package and stylesheet files (all OFL-licensed fonts).
 export const FONT_PACKAGES = {
@@ -59,7 +60,7 @@ export async function loadPlaywright(explicit) {
   throw new Error('Playwright not found. Run `npm install` in the skill folder (skills/musedraw) or pass --playwright <path/to/playwright/index.mjs>.');
 }
 
-export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram' }) {
+export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true }) {
   assertStaticSvg(svg);
   const { links, missing } = fontStylesheets(svg, fontDirs);
   const tmp = await fsp.mkdtemp(path.join(os.tmpdir(), 'musedraw-'));
@@ -86,10 +87,15 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
     await page.waitForTimeout(150);
     const checks = await page.evaluate(runChecks, { W, H });
     checks.missingFonts = missing;
-    const shot = path.join(outDir, `${name}@${scale}x.png`);
-    await page.locator('svg').first().screenshot({ path: shot, omitBackground: false });
-    // Lightweight preview for READMEs and galleries (grain textures make PNGs large).
-    await page.locator('svg').first().screenshot({ path: path.join(outDir, 'preview.jpg'), type: 'jpeg', quality: 82, scale: 'css' });
+    const editable = await page.evaluate(collectEditableScene);
+    await fsp.writeFile(path.join(outDir, `${name}.drawio`), toDrawio(editable));
+    checks.drawio = { native: true, nodes: editable.groups.filter(g => g.kind === 'node').length, edges: editable.edges.length, texts: editable.texts.length, visualEffects: editable.visualEffects };
+    if (images) {
+      const shot = path.join(outDir, `${name}@${scale}x.png`);
+      await page.locator('svg').first().screenshot({ path: shot, omitBackground: false });
+      // Lightweight preview for READMEs and galleries (grain textures make PNGs large).
+      await page.locator('svg').first().screenshot({ path: path.join(outDir, 'preview.jpg'), type: 'jpeg', quality: 82, scale: 'css' });
+    }
     return checks;
   } finally {
     await page.close();

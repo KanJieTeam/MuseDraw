@@ -2,7 +2,7 @@
 
 100 个案例全部出图：**20 精选** · **27 已逐张全尺寸审图** · **53 预览**（通过版面检查，待设计审阅）。机器可读清单：[catalog.json](catalog.json)。
 
-All 100 cases are rendered. Each folder ships `scene.json`, `prompt.md`, `diagram.svg` and `preview.jpg`.
+All 100 cases are rendered. The default delivery is PNG plus native editable draw.io; each folder includes `diagram.drawio`, supporting `scene.json`, `prompt.md`, SVG and a preview. Render the scene to obtain the full PNG. Paper textures, blur and glow are PNG effects; draw.io preserves editable shapes, text and connected edges without promising identical rendering of every effect.
 
 ## 精选 · 科研
 

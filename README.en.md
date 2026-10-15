@@ -7,7 +7,7 @@
 
 <h3>The diagram skill for AI agents</h3>
 
-<p>One sentence in, a journal-grade or boardroom-grade SVG/PNG out. 20 visual styles, 100 cases, every one reproducible.</p>
+<p>One sentence in, PNG and native editable draw.io out. 20 visual styles, 100 cases, reproducible from their scenes.</p>
 
 <p>
   <a href="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml"><img src="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml/badge.svg" alt="Repository checks"></a>
@@ -41,7 +41,9 @@ Use MuseDraw in the Journal Figure style to draw a CONSORT flow for a two-arm tr
 412 assessed, 172 excluded, 240 randomised 1:1, follow-up losses 7 and 9, analysed 110 and 109.
 ```
 
-The agent picks a layout, writes `scene.json`, renders, inspects and fixes, then hands you an editable `diagram.svg`, a `diagram@2x.png` and `checks.json`.
+The agent picks a layout, writes `scene.json`, renders, inspects and fixes, then delivers `diagram@2x.png` and native editable `diagram.drawio` by default. Keep `scene.json`, `diagram.svg` and `checks.json` as supporting source, vector and verification files.
+
+PNG preserves paper textures, blur and glow. The draw.io file provides editable shapes, text and connected edges; it does not promise identical rendering of every PNG effect.
 
 ## Built for research and everyday office work
 
@@ -63,7 +65,7 @@ A style is not a palette: each one has its own type, line grammar, texture, labe
 
 ## Reproduce any case
 
-Each case folder holds `scene.json` (the full source), `prompt.md` (a one-line request), `diagram.svg` and `preview.jpg`. `npm run gallery` re-renders everything. [Gallery](gallery/README.md) · [100-case catalog](gallery/catalog.json)
+Each case folder holds `scene.json` (the full source), `prompt.md` (a one-line request), `diagram.drawio`, supporting SVG and `preview.jpg`. `npm run gallery` re-renders everything. [Gallery](gallery/README.md) · [100-case catalog](gallery/catalog.json)
 
 ## Design method
 

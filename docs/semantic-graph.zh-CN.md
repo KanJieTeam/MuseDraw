@@ -4,7 +4,7 @@ MuseDraw 当前面向科研、办公、教学与工程，主入口为 [Skill](..
 
 ## 当前场景引擎
 
-[musedraw.mjs](../skills/musedraw/scripts/musedraw.mjs) 读取 `scene.json`，结合 20 种主题生成原生 SVG、2× PNG、预览与版面检查。智能体负责理解事实、选择图型、构图与强调；引擎负责字体、颜色、线条、质感和图形渲染。
+[musedraw.mjs](../skills/musedraw/scripts/musedraw.mjs) 读取 `scene.json`，结合 20 种主题，默认交付 2× PNG 与原生可编辑 draw.io；JSON、SVG、预览与版面检查为辅助产物。智能体负责理解事实、选择图型、构图与强调；引擎负责字体、颜色、线条、质感和图形渲染。纸张纹理、模糊与发光属于 PNG 视觉效果，draw.io 保留可编辑图形、文字与关联边，不承诺全部效果完全相同。
 
 场景可以组合布局块、时序图和自由图元。[场景格式](../skills/musedraw/references/scene-schema.md)与[风格图谱](../skills/musedraw/references/style-atlas.md)说明可用字段和风格；图库中的每个案例都提供场景与短需求，不需要为每个业务另写绘图脚本。
 

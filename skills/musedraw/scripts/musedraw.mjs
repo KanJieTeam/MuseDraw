@@ -4,7 +4,7 @@
 //   node scripts/musedraw.mjs render scene.json [more.json ...] [--theme id] [--out dir]
 //   node scripts/musedraw.mjs themes
 //
-// Writes diagram.svg, diagram@2x.png and checks.json next to each scene
+// Writes diagram@2x.png, diagram.drawio, diagram.svg and checks.json next to each scene
 // (or into --out). Needs `npm install` in this skill folder for fonts and
 // Playwright; use --svg-only when no browser is available.
 import fs from 'node:fs';
@@ -56,7 +56,7 @@ function args(argv) {
   const flags = {}, rest = [];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a.startsWith('--')) { const k = a.slice(2); if (['svg-only'].includes(k)) flags[k] = true; else flags[k] = argv[++i]; }
+    if (a.startsWith('--')) { const k = a.slice(2); if (['svg-only', 'strict'].includes(k)) flags[k] = true; else flags[k] = argv[++i]; }
     else rest.push(a);
   }
   return { flags, rest };

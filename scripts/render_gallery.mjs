@@ -15,9 +15,9 @@ try{
   const source=path.join(root,item.path,'scene.json'),scene=JSON.parse(await fs.readFile(source,'utf8'));
   const theme=await loadTheme(scene.theme),svg=render(scene,theme);
   const outDir=option('--out')?path.resolve(option('--out'),item.slug):path.dirname(source);
-  await fs.mkdir(outDir,{recursive:true});await fs.writeFile(path.join(outDir,'diagram.svg'),svg+'\n');
-  const checks=browser?await exportScene({svg,outDir,browser,fontDirs}):{svgOnly:true,passed:null};
-  await fs.writeFile(path.join(outDir,'checks.json'),JSON.stringify({...checks,theme:theme.id},null,2)+'\n');
+  await fs.mkdir(outDir,{recursive:true});if(!args.includes('--drawio-only'))await fs.writeFile(path.join(outDir,'diagram.svg'),svg+'\n');
+  const checks=browser?await exportScene({svg,outDir,browser,fontDirs,images:!args.includes('--drawio-only')}):{svgOnly:true,passed:null};
+  if(!args.includes('--drawio-only'))await fs.writeFile(path.join(outDir,'checks.json'),JSON.stringify({...checks,theme:theme.id},null,2)+'\n');
   results.push({id:item.id,theme:theme.id,passed:checks.passed,warnings:checks.warnings??[],missingFonts:checks.missingFonts??[]});
   console.log(JSON.stringify(results.at(-1)));
  }

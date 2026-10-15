@@ -1,6 +1,6 @@
 ---
 name: musedraw
-description: Draw publication-quality diagrams for office work, research and engineering from a few sentences — research roadmaps, PRISMA/CONSORT flows, model architectures, OKR trees, swimlanes, Gantt plans, fishbone/PDCA, customer journeys, system architecture. 20 named visual styles, native SVG + 2× PNG, reproducible from a scene.json. Not for statistical charts of raw data.
+description: Draw publication-quality diagrams for office work, research and engineering from a few sentences — research roadmaps, PRISMA/CONSORT flows, model architectures, OKR trees, swimlanes, Gantt plans, fishbone/PDCA, customer journeys, system architecture. 20 named visual styles, PNG and native editable draw.io, reproducible from a scene.json. Not for statistical charts of raw data.
 ---
 
 # MuseDraw
@@ -78,20 +78,23 @@ Read [scene schema](references/scene-schema.md) once per session. In short:
 ## 4 · Render and look
 
 ```sh
-node <skill>/scripts/musedraw.mjs render path/to/scene.json        # → diagram.svg, diagram@2x.png, preview.jpg, checks.json
+node <skill>/scripts/musedraw.mjs render path/to/scene.json        # → diagram@2x.png, diagram.drawio; supporting SVG, preview and checks
 node <skill>/scripts/musedraw.mjs render scene.json --theme journal --out restyled/   # same content, another style
 node <skill>/scripts/musedraw.mjs themes
 ```
 
 First run: `npm install` inside the skill folder (fonts, Playwright). No
-browser available → add `--svg-only` and say the PNG was not checked.
+browser available → add `--svg-only` and say PNG, native draw.io and browser checks are incomplete.
 
 Then **open the PNG** and read `checks.json`. Fix every `text-overflow`,
 `text-collision`, `edge-label-on-node`, `node-overlap`, `outside-canvas`.
 Checks catch geometry, not taste: also run the
 [anti-AI checklist](references/anti-ai-checklist.md) on what you see.
-Two passes are normal. Deliver the PNG, the SVG and the scene, plus one line on
-what was assumed.
+Two passes are normal. Deliver the PNG and native editable draw.io by default,
+plus one line on what was assumed. Keep scene JSON, SVG and checks as supporting
+files. Paper textures, blur and glow are PNG visual effects; draw.io preserves
+editable shapes, text and connected edges, without promising identical rendering
+of every effect. Never substitute an embedded image for editable draw.io objects.
 
 ## 5 · Edits in conversation
 

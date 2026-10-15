@@ -7,7 +7,7 @@
 
 <h3>给 AI 智能体的专业绘图 Skill</h3>
 
-<p>一句话需求 → 期刊级、汇报级的原生 SVG / PNG。20 套视觉风格，100 个办公与科研案例，全部可复刻。</p>
+<p>一句话需求 → PNG 与原生可编辑 draw.io。20 套视觉风格，100 个办公与科研案例，场景可重渲染。</p>
 
 <p>
   <a href="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml"><img src="https://github.com/KanJieTeam/MuseDraw/actions/workflows/check.yml/badge.svg" alt="Repository checks"></a>
@@ -41,7 +41,9 @@ npm --prefix skills/musedraw install        # 首次：安装开源字体与 Pla
 科学问题是肝星状细胞代谢重编程如何驱动肝纤维化，三条研究内容是临床队列、细胞机制、动物验证，最后整合出机制与靶点。
 ```
 
-智能体会选择版式、写出 `scene.json`、渲染、看图、修正，交付 `diagram.svg`（可编辑）、`diagram@2x.png` 和 `checks.json`。
+智能体会选择版式、写出 `scene.json`、渲染、看图、修正，默认交付 `diagram@2x.png` 与原生可编辑的 `diagram.drawio`。`scene.json`、`diagram.svg` 与 `checks.json` 作为编辑来源、矢量辅助与检查记录保留。
+
+PNG 保留纸张纹理、模糊与发光等视觉效果；draw.io 提供可编辑图形、文字与关联边，不承诺所有效果与 PNG 完全一致。
 
 ## 为科研与日常办公而做
 
@@ -63,7 +65,7 @@ node skills/musedraw/scripts/musedraw.mjs render gallery/59-nsfc-roadmap-journal
 
 ## 复刻任何一个案例
 
-每个案例目录都有 `scene.json`（完整来源）、`prompt.md`（一句话需求）、`diagram.svg` 与 `preview.jpg`：
+每个案例目录都有 `scene.json`（完整来源）、`prompt.md`（一句话需求）、`diagram.drawio`、辅助 SVG 与 `preview.jpg`：
 
 ```bash
 npm run gallery        # 重新渲染全部案例

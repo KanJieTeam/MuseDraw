@@ -7,7 +7,7 @@ import shutil
 import tempfile
 
 PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs")
-CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json")
+CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json", "diagram.drawio")
 
 
 def build_site(root, output_name="site"):
@@ -43,6 +43,14 @@ def build_site(root, output_name="site"):
             for filename in CASE_FILES:
                 shutil.copyfile(source / filename, target / filename)
         shutil.copytree(root / "assets/brand", staging / "assets/brand")
+        legacy = staging / "docs/gallery"
+        legacy.mkdir(parents=True)
+        (legacy / "index.html").write_text(
+            '<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta http-equiv="refresh" content="0;url=../../">'
+            '<link rel="canonical" href="../../"><title>MuseDraw 图库</title>'
+            '<a href="../../">打开当前 MuseDraw 图库</a></html>\n', encoding="utf-8")
         (staging / ".nojekyll").touch()
         if destination.exists():
             shutil.rmtree(destination)

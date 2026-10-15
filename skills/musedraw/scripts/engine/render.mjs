@@ -402,7 +402,10 @@ class Ctx {
     let id = esc(e.id ?? `edge-${e.from}-${e.to}`);
     if (this.usedEdgeIds.has(id)) id = `${id}-${i + 1}`;
     this.usedEdgeIds.add(id);
-    return { line: `<g id="${id}" data-md="edge">${line}</g>`, label: label ? `<g id="${id}-label" data-md="edge-label">${label}</g>` : '' };
+    // Editable exports use the same resolved ports and route as the SVG.
+    const route = pts ?? [S, curve.c1, curve.c2, Ep];
+    const editable = esc(JSON.stringify({ from: e.from, to: e.to, points: route, curve: !!curve, arrow: st.arrow, both: !!both, color: st.color, width: st.width, dash: st.dash ?? '', opacity: st.opacity ?? 1 }));
+    return { line: `<g id="${id}" data-md="edge" data-connection="${editable}">${line}</g>`, label: label ? `<g id="${id}-label" data-md="edge-label" data-edge="${id}">${label}</g>` : '' };
   }
 
   glowFilter(strength) {

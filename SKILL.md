@@ -18,9 +18,12 @@ installs open-source fonts and Playwright and attempts to download Chromium.
 It requires the corresponding network access and installation permission.
 
 Use `scripts/musedraw.mjs render scene.json` in the installed skill for new work;
-`scripts/musedraw.mjs themes` lists the 20 styles. Deliver PNG and editable SVG,
-retain the scene for follow-up edits, open the PNG and address `checks.json`
-warnings. With `--svg-only`, state that PNG and browser checks are incomplete.
+`scripts/musedraw.mjs themes` lists the 20 styles. Deliver PNG and native editable
+draw.io by default; retain JSON and SVG as supporting files for follow-up edits.
+PNG preserves paper textures, blur and glow; draw.io contains editable objects
+and connected edges without promising identical rendering of those effects.
+Open the PNG and address `checks.json`
+warnings. With `--svg-only`, state that PNG, native draw.io and browser checks are incomplete.
 
 Replaying an existing scene in the same engine, theme, font and rendering
 environment is distinct from a model interpreting a new request. Do not promise

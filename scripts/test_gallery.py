@@ -1,11 +1,15 @@
 """Check the user-supplied catalog, safe artwork, engine and Pages boundary."""
 import json
+import base64
 from pathlib import Path
 import shutil
 import subprocess
+import re
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from urllib.parse import unquote
+import zlib
 
 from build_gallery_site import build_site, CASE_FILES, PAGE_FILES
 from check import svg_dimensions
@@ -51,6 +55,45 @@ class GalleryTests(unittest.TestCase):
                 prompt = (folder / "prompt.md").read_text(encoding="utf-8")
                 self.assertRegex(prompt, r"(?m)^>\s+\S")
 
+    def test_all_100_drawio_files_have_native_shapes_text_and_connected_edges(self):
+        for item in self.items:
+            with self.subTest(case=item["slug"]):
+                folder = ROOT / item["path"]
+                text = (folder / "diagram.drawio").read_text(encoding="utf-8")
+                self.assertNotRegex(text, r"=(?:NaN|[-+]?Infinity)(?:;|\")", "Native coordinates and ports must be finite")
+                self.assertNotRegex(text, r"(?i)<!\s*(?:DOCTYPE|ENTITY)\b|data:image|<\s*(?:image|svg|foreignObject)\b")
+                root = ET.fromstring(text)
+                self.assertEqual(root.tag, "mxfile")
+                self.assertIsNotNone(root.find(".//mxGraphModel/root"))
+                cells = root.findall(".//mxCell")
+                by_id = {cell.get("id"): cell for cell in cells}
+                self.assertEqual(len(by_id), len(cells))
+                self.assertTrue(all(by_id))
+                vertices = [cell for cell in cells if cell.get("vertex") == "1"]
+                self.assertTrue(any(cell.get("value", "").strip() for cell in vertices), "Native editable text is required")
+                self.assertTrue(any("shape=stencil(" in cell.get("style", "") for cell in vertices), "Native vector shapes are required")
+                for cell in cells:
+                    if cell.get("parent"):
+                        self.assertIn(cell.get("parent"), by_id)
+                    style = cell.get("style", "")
+                    self.assertNotRegex(style, r"(?i)(?:^|;)(?:shape=image(?:;|$)|image=)")
+                    if cell.get("vertex") == "1":
+                        self.assertIsNotNone(cell.find("mxGeometry"))
+                    if cell.get("edge") == "1":
+                        for endpoint in ("source", "target"):
+                            self.assertIn(cell.get(endpoint), by_id, "Edges must retain both editable terminals")
+                            self.assertEqual(by_id[cell.get(endpoint)].get("vertex"), "1")
+                        self.assertIsNotNone(cell.find("mxGeometry"))
+                    for encoded in re.findall(r"shape=stencil\(([^)]+)\)", style):
+                        definition = unquote(zlib.decompress(base64.b64decode(encoded), -15).decode("utf-8"))
+                        shape = ET.fromstring(definition)
+                        self.assertEqual(shape.tag, "shape")
+                        self.assertFalse(any(element.tag.lower() in {"image", "svg", "foreignobject", "include-shape"} for element in shape.iter()))
+                        self.assertTrue(any(element.tag in {"path", "rect", "ellipse"} for element in shape.iter()))
+                scene = json.loads((folder / "scene.json").read_text(encoding="utf-8"))
+                if scene.get("edges"):
+                    self.assertGreaterEqual(sum(cell.get("edge") == "1" for cell in cells), len(scene["edges"]))
+
     @unittest.skipUnless(shutil.which("node"), "Node unavailable")
     def test_all_100_scenes_render_svg_in_temporary_output(self):
         with tempfile.TemporaryDirectory(prefix="musedraw-v3-engine-") as scratch:
@@ -86,11 +129,14 @@ class GalleryTests(unittest.TestCase):
             historical.mkdir(parents=True)
             (historical / "old.svg").touch()
             site = build_site(root)
-            expected = set(PAGE_FILES) | {".nojekyll", "gallery/catalog.json"}
+            expected = set(PAGE_FILES) | {".nojekyll", "gallery/catalog.json", "docs/gallery/index.html"}
             expected |= {f'{item["path"]}/{filename}' for item in self.items for filename in CASE_FILES}
             expected |= {file.relative_to(root).as_posix() for file in (root / "assets/brand").rglob("*") if file.is_file()}
             self.assertEqual({file.relative_to(site).as_posix() for file in site.rglob("*") if file.is_file()}, expected)
-            self.assertFalse((site / "docs").exists())
+            self.assertEqual([file.relative_to(site / "docs").as_posix() for file in (site / "docs").rglob("*") if file.is_file()], ["gallery/index.html"])
+            redirect = (site / "docs/gallery/index.html").read_text(encoding="utf-8")
+            self.assertIn('content="0;url=../../"', redirect)
+            self.assertFalse((site / "docs/gallery/cases").exists())
             self.assertFalse((site / "examples").exists())
             self.assertFalse((site / "gallery/cases").exists())
             for item in self.items:

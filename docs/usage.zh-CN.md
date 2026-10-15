@@ -2,7 +2,7 @@
 
 [English](usage.md) · [返回 README](../README.md) · [图库](../gallery/README.md)
 
-MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教学与工程图示。当前主工作流是 scene 引擎：智能体理解几句话的需求，选择构图和风格，生成场景，渲染并实际看图后交付 PNG 与可编辑 SVG。
+MuseDraw 是给 AI 智能体的专业绘图 Skill，覆盖科研、办公、教学与工程图示。当前主工作流是 scene 引擎：智能体理解几句话的需求，选择构图和风格，生成场景，渲染并实际看图后默认交付 PNG 与原生可编辑 draw.io。
 
 ## 安装与开始
 
@@ -45,7 +45,7 @@ npm --prefix skills/musedraw install
 把动物验证移到细胞机制之后，保留其他内容。
 ```
 
-智能体编辑已有场景，保留无关内容和稳定 ID，再重新渲染。交付以 `diagram@2x.png` 和 `diagram.svg` 为主，并保留 `scene.json` 便于后续编辑与复刻；检查结果写入 `checks.json`。SVG 使用原生文字和图形，可继续编辑。主引擎不承诺原生 drawio 输出。
+智能体编辑已有场景，保留无关内容和稳定 ID，再重新渲染。默认交付 `diagram@2x.png` 和原生可编辑的 `diagram.drawio`；`scene.json` 与 `diagram.svg` 作为来源与矢量辅助保留，检查结果写入 `checks.json`。PNG 保留纸张纹理、模糊与发光等视觉效果；draw.io 提供可编辑图形、文字与关联边，不承诺所有效果与 PNG 完全一致。
 
 ## 渲染与复刻
 
@@ -61,6 +61,6 @@ node <skill>/scripts/musedraw.mjs themes
 
 同一份场景在相同引擎、主题、字体与渲染环境下可重复生成；跨平台字体或抗锯齿可能影响结果。给另一个模型一句话，让它重新理解并设计一张图，是另一项任务，不保证与案例逐像素相同，也不代表任意模型均成功。
 
-没有浏览器时可加 `--svg-only`，并说明 PNG 与浏览器版面检查未完成。不要把 SVG-only 输出视为已看图验收。正常渲染后应打开 PNG，阅读 `checks.json`，修复文字溢出、碰撞、连线标签压框、节点重叠和越界等警告，再检查事实、连线与[视觉清单](../skills/musedraw/references/anti-ai-checklist.md)。脚本成功不等于审美验收。
+没有浏览器时可加 `--svg-only`，并说明 PNG、原生 draw.io 与浏览器版面检查未完成。不要把 SVG-only 输出视为已看图验收。正常渲染后应打开 PNG，阅读 `checks.json`，修复文字溢出、碰撞、连线标签压框、节点重叠和越界等警告，再检查事实、连线与[视觉清单](../skills/musedraw/references/anti-ai-checklist.md)。脚本成功不等于审美验收。
 
 当前不是原始数据统计绘图工具，柱状图、散点图等请使用 matplotlib 或 ggplot。旧小型组件图引擎只作为[兼容路线](semantic-graph.zh-CN.md)保留，新工作使用 scene 引擎。贡献前阅读[贡献指南](../CONTRIBUTING.zh-CN.md)。
