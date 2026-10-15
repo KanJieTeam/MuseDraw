@@ -23,7 +23,10 @@ if (option('--browser')) runtime.push('--browser', option('--browser'));
 function command(args) {
   const start = performance.now();
   const result = spawnSync(process.execPath, [cli, ...args, ...runtime, '--strict'], { cwd: root, encoding: 'utf8', timeout: 30000 });
-  assert.equal(result.status, 0, result.stdout + result.stderr);
+  const outputIndex = args.indexOf('--out');
+  const checksFile = outputIndex < 0 ? null : path.join(args[outputIndex + 1], 'checks.json');
+  const diagnostic = result.status !== 0 && checksFile && fs.existsSync(checksFile) ? '\nLayout diagnostics:\n' + fs.readFileSync(checksFile, 'utf8') : '';
+  assert.equal(result.status, 0, result.stdout + result.stderr + diagnostic);
   return Math.round(performance.now() - start);
 }
 const read = (dir, name) => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8'));
