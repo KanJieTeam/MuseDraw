@@ -110,6 +110,7 @@ export function validateScene(scene) {
   }
   for (const [i, block] of (scene.blocks ?? []).entries()) {
     const path = `/blocks/${i}`;
+    if (block.type === 'grid') unique(block.items ?? [], `${path}/items`, issues);
     if (block.type === 'swimlane') {
       const lanes = unique(block.lanes ?? [], `${path}/lanes`, issues);
       unique(block.steps ?? [], `${path}/steps`, issues);

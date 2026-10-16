@@ -23,6 +23,13 @@ format, install another drawio exporter or use app.diagrams.net to render PNG.
 
 Choose one route after reading this file:
 
+- **Gallery case / approved template:** reuse its `scene.json` directly. Render
+  unchanged scenes immediately; adapt requested content and affected modules.
+  Preserve the approved composition, hierarchy, spacing and visual details.
+- **Reference image:** view the supplied image and build a scene using the
+  appropriate composition pattern and primitives. Do not introduce OCR tools,
+  pixel tracing, transcription contracts, voting or forced placeholder labels.
+  Use the image's visual structure; users can judge the result from its preview.
 - **Bundled RAG starter:** run
   `node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --strict`
   immediately. Use `--lang en` for English; append `--no-drawio` for PNG only.
@@ -109,7 +116,7 @@ node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --st
 ```
 
 For a PNG-only request, append `--no-drawio`. For other scenes use
-`render scene.json --font-mode system --preview-first --cache --no-drawio`.
+`render scene.json --no-drawio`.
 This skips native object collection and serialization; it does not remove the
 browser or font/layout checks. Default rendering still produces both files.
 Keep any existing draw.io file untouched in PNG-only mode and do not present it
@@ -129,7 +136,8 @@ the user asks for these. Keep useful node labels, section labels and legends.
 When adapting a gallery example, remove its figure tag, attribution, example
 measurements, vendor choices and captions unless they belong to the new brief.
 
-The quick path uses system fonts and reuses an installed Chromium or Chrome/Edge.
+Render commands default to system fonts, early preview and cache, and reuse an
+installed Chromium or Chrome/Edge. Bundled fonts are an explicit opt-in.
 Do not install the full font library or download Chromium while drawing if
 these resources already exist. If the runtime is not known, diagnose once:
 
@@ -157,7 +165,7 @@ families are required and the appropriate fonts are already installed.
 Show or link the bounded `preview.jpg` as soon as the command reports it; reading
 the image with an analysis tool is not required. Check `checks.json`, then deliver
 `diagram@2x.png` and `diagram.drawio` unless another format was requested.
-The preview is at most 1200×1000. `run.json` records phase timings. Quickstart verifies
+The preview is at most 1200×1000. Every `run.json` records phase timings. Quickstart verifies
 cached artifacts on repeat runs; use `--no-cache` for a fresh render.
 
 For other diagrams, read only the relevant scene fields and closest case.
@@ -223,7 +231,7 @@ replays do not need this reference. In short:
 - `theme`, `size` (≈1600–1760 × 900–1100), `header: false`, `footer: false`.
   Titles and subtitles are optional; `header: true` enables a requested heading.
 - **Blocks** for structured diagrams — `tree`, `mindmap`, `timeline`, `gantt`,
-  `matrix`, `funnel`, `cycle`, `fishbone`, `swimlane`, `table` — give content
+  `matrix`, `funnel`, `cycle`, `fishbone`, `swimlane`, `table`, `grid` — give content
   and a bounding box; the block computes positions.
 - `type: "sequence"` for time-ordered messages between participants.
 - **Primitives** for everything else: `zones`, `nodes` (`label`, `tag`, `sub`,
@@ -273,7 +281,10 @@ of every effect. Never substitute an embedded image for editable draw.io objects
 
 ## 5 · Edits in conversation
 
-Edit the existing `scene.json`; never regenerate unrelated content. Style
+For text-only edits, use `patch` as documented in the
+[editing workflow](references/editing-workflow.md). It preserves unrelated
+content and reports the exact changes. For structural edits, edit the existing
+`scene.json`; never regenerate unrelated content. Style
 changes swap `theme` only. Keep ids stable so diffs stay readable.
 
 ## Legacy routes

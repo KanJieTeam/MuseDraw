@@ -656,7 +656,7 @@ class Ctx {
     const subSize = n.subSize ?? N.subSize ?? 12;
     const tagFam = this.font(N.tagFont ?? 'mono');
     const tagSize = n.tagSize ?? N.tagSize ?? 11;
-    const pad = N.padding ?? 12;
+    const pad = n.padding ?? N.padding ?? 12;
     const align = n.align ?? (['diamond', 'circle', 'hex'].includes(n.shape) ? 'center' : null) ?? tn.align ?? N.align ?? 'center';
     const icon = n.icon && ICONS[n.icon] ? n.icon : null;
     const iconSize = N.iconSize ?? 20;

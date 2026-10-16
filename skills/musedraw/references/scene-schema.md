@@ -3,7 +3,7 @@
 A scene is plain JSON. Coordinates are canvas pixels (1× — the PNG is exported
 at 2×). Extra fields remain allowed for compatibility. Copy a gallery scene and edit it.
 The bundled [JSON Schema](scene.schema.json) describes core fields, primitives
-and all ten layout blocks; associate it with your scene in a JSON-aware editor
+and the layout blocks; associate it with your scene in a JSON-aware editor
 for completion and structural diagnostics. Existing scenes need no changes.
 
 ## Validate before rendering
@@ -84,6 +84,13 @@ edges and zones (so you can still add primitives around it).
 | `fishbone` | `x, y, w, h, head{label, sub}, categories[{label, causes[]}]` |
 | `swimlane` | `x, y, w, lanes[{id, label}], laneH, labelW, cols, steps[{id, lane, col, label, sub, shape, tone}], flows[{from, to, label, kind}]` |
 | `table` | `x, y, columns[{label, w, align}], rows[{cells[str or {text, tone, bold}], tone}], rowH, headH` |
+| `grid` | `x, y, w, h?, columns` (integer), `items[{id,label,sub,shape,tone,...}]`, `size, gap, padding, cellPadding, rowH?, label?, cellFill, cellStroke, textColor, radius` |
+
+Grids calculate cell positions and wrap text at the configured size. Omit `h`
+for content-driven height, or supply a fixed frame. A frame/row too small for
+its content fails before export; it never silently reduces all font sizes.
+An optional grid label occupies its own heading row. Adding items changes only
+that grid's geometry; neighbouring blocks retain their coordinates.
 
 `type: "sequence"` (top level) lays out a sequence diagram:
 `participants[{id, label, sub, tone}]`, `messages[{from, to, label, kind, step}]`,
@@ -113,6 +120,8 @@ omit it when the named theme is sufficient. SVG safety checks still apply.
   clock gamepad device sensor layers table brain tool map check alert refresh balance`.
   Use one only when it adds meaning.
 - `step`: a number or letter badge at the top-left (`stepAt: [dx, dy]` moves it).
+- Explicit appearance overrides: `fill`, `stroke`, `textColor`, `radius`, `size`
+  and `weight`. `size` controls node label text; `labelSize` is not a node field.
 - `labelPos`: `inside` (default) or `right / left / above / below`.
 
 **edges** — `{from, to, kind, label, step, fromSide, toSide, fromAt, toAt, mid, via, both, route, labelAt}`
@@ -152,3 +161,5 @@ their hand-directed connectors are vector paths, not node-attached graph edges.
 `diagram.svg` (native text, editable), `diagram@2x.png`, `preview.jpg`
 (README-size), `checks.json` (real-glyph overflow, collisions, labels on nodes,
 off-canvas text). `passed: true` means geometry is clean, not that the design is good.
+`run.json` always records render phase timings. System fonts, preview-first and
+cache are the CLI defaults; `--font-mode bundled` and `--no-cache` opt out.

@@ -41,9 +41,20 @@ Other subjects include procurement swimlanes, classroom flows, OKRs, project Gan
 
 For a repository-URL request, the agent should reuse an installed Skill or obtain the repository and read the [complete Skill](../skills/musedraw/SKILL.md). A URL does not give a plain chat page execution tools. MuseDraw requires no additional model API key; the host's own access requirements still apply.
 
+## Reuse a template and keep editing
+
+Approved gallery scenes are reusable source files: render them directly or adapt
+their content while preserving the composition and visual hierarchy. For a new
+reference image, the agent views it and draws with the scene engine; there is no
+recognition or transcription pipeline. Review the preview to assess the design.
+
+Use `patch` for exact text changes, preserving the original and unrelated fields.
+See the [editing workflow](../skills/musedraw/references/editing-workflow.md).
+System fonts, early preview, cache and phase timings are the rendering defaults.
+
 ## Choose the diagram and style
 
-The [live gallery](https://kanjieteam.github.io/MuseDraw/) contains 101 current scene-engine cases. Filter by style, open a full-size preview, copy a prompt or download drawio. Switch between Chinese and English: the previewed prompt, copied request and reproduction instructions follow your choice. Each directory retains the original prompt, full scene, SVG and preview; [prompts.json](../gallery/prompts.json) contains the bilingual briefs. Use the cases to learn composition, not to limit new subjects or supply facts about your project. Gallery states distinguish flagship cases, reviewed cases and previews awaiting design review; they do not imply equal human acceptance of every case.
+The [live gallery](https://kanjieteam.github.io/MuseDraw/) contains 105 current scene-engine cases. Filter by style, open a full-size preview, copy a prompt or download drawio. Switch between Chinese and English: the previewed prompt, copied request and reproduction instructions follow your choice. Each directory retains the original prompt, full scene, SVG and preview; [prompts.json](../gallery/prompts.json) contains the bilingual briefs. Use the cases to learn composition, not to limit new subjects or supply facts about your project. Gallery states distinguish flagship cases, reviewed cases and previews awaiting design review; they do not imply equal human acceptance of every case.
 
 The [style atlas](../skills/musedraw/references/style-atlas.md) explains the fonts, lines, textures and annotations of 20 styles. Ask by Chinese name, English name or ID, such as 科研期刊, 商务墨蓝, 黑板教学 or `blueprint`. The agent chooses based on the purpose when no style is specified.
 
