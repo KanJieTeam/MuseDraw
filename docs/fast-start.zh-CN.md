@@ -4,6 +4,20 @@
 也会从 [AGENTS.md](../AGENTS.md) 进入同一工作流。用户只需描述内容、风格和
 格式偏好，不需要把安装命令、导出参数或验收清单写进每条提示词。
 
+## 参考图复刻与局部修改
+
+直接说“用 MuseDraw 复刻这张图”或“沿用这张图的设计，换成这些内容”。
+已有案例直接复用 `scene.json`，保留经过审核的构图、层级和细节。
+参考图片由智能体看图后使用场景图元绘制；不增加识别、转写契约或多源确认流程。
+复刻效果由用户从预览判断，改进应落在 Skill 的构图指导和内核的表达能力上。
+
+文字修改使用内置 `patch`：准确匹配目标、保留原版、输出 `changes.json`。
+目标不存在、重复或原值已改变时会报错，不会猜测修改对象。
+重复模块可用 `grid` 自动布局；固定区域放不下时会报错，避免静默裁切或整体缩字。
+
+从 0.4.0 起，普通 `render` 默认系统字体、先出预览、校验缓存并记录 `run.json`。
+`doctor --json` 会报告版本、内核指纹与能力列表，便于核实宿主加载的副本。
+
 ## 只需 PNG
 
 在需求里加一句“只需 PNG”，或点击图库的“快速 PNG”。智能体会在内部选择：
@@ -12,7 +26,7 @@
 node skills/musedraw/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --no-drawio --strict
 ```
 
-其他图使用 `render scene.json --font-mode system --preview-first --cache --no-drawio`。
+其他图使用 `render scene.json --no-drawio`。
 它跳过原生对象采集与 draw.io 序列化，仍运行浏览器版面检查并生成 PNG、小预览与
 场景源文件。默认模式仍交付双文件；同目录已有的 drawio 不会被删除，也不会被
 当作本次更新结果交付。切回默认模式时会重新导出，PNG 模式的缓存不能代替双文件缓存。

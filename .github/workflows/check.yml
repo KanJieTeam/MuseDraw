@@ -64,7 +64,7 @@ jobs:
           for theme in ('editorial', 'blueprint', 'ink-wash', 'chalkboard'):
               item = next(item for item in items if item['theme'] == theme)
               output = root / 'output/engine-browser' / item['slug']
-              subprocess.run(['node', 'skills/musedraw/scripts/musedraw.mjs', 'render', str(root / item['path'] / 'scene.json'), '--out', str(output), '--playwright', str(root / 'output/browser-deps/node_modules/playwright/index.mjs'), '--fonts', str(root / 'skills/musedraw/node_modules')], check=True)
+              subprocess.run(['node', 'skills/musedraw/scripts/musedraw.mjs', 'render', str(root / item['path'] / 'scene.json'), '--out', str(output), '--font-mode', 'bundled', '--playwright', str(root / 'output/browser-deps/node_modules/playwright/index.mjs'), '--fonts', str(root / 'skills/musedraw/node_modules')], check=True)
               checks = json.loads((output / 'checks.json').read_text(encoding='utf-8'))
               assert checks['passed'] and not checks['warnings'] and not checks['missingFonts'], checks
               import xml.etree.ElementTree as ET
@@ -78,6 +78,8 @@ jobs:
                       assert cell.get('source') in by_id and cell.get('target') in by_id, 'Missing connected terminals'
       - name: Check system-font quickstart, small preview, native export and cache invalidation
         run: node scripts/check_fast_browser.mjs --lang en --runs 1 --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/fast-qa
+      - name: Check module layout and source-preserving text edits
+        run: node scripts/check_edit_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/edit-qa
       - name: Check current catalog, copied prompts, theme filters and downloads
         run: |
           python scripts/build_gallery_site.py
@@ -91,3 +93,4 @@ jobs:
             output/gallery-qa
             output/engine-browser
             output/fast-qa
+            output/edit-qa

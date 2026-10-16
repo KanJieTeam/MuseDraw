@@ -434,6 +434,10 @@
           "type": "number",
           "exclusiveMinimum": 0
         },
+        "padding": {
+          "type": "number",
+          "minimum": 0
+        },
         "tagSize": {
           "type": "number",
           "exclusiveMinimum": 0
@@ -1086,7 +1090,8 @@
             "cycle",
             "fishbone",
             "swimlane",
-            "table"
+            "table",
+            "grid"
           ]
         },
         "x": {
@@ -1766,6 +1771,55 @@
               "x",
               "y",
               "w"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "columns": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "padding": {
+                "type": "number",
+                "minimum": 0
+              },
+              "cellPadding": {
+                "type": "number",
+                "minimum": 0
+              },
+              "gap": {
+                "type": "number",
+                "minimum": 0
+              },
+              "size": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/nodeContent"
+                }
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "w",
+              "items"
             ]
           }
         }
