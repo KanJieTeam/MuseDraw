@@ -43,7 +43,9 @@ Git 下载缓慢时可用[轻量 Skill 包](https://kanjieteam.github.io/MuseDra
 - **保留场景源文件**：后续改内容、换风格，在同一份 `scene.json` 上继续。
 - **默认只画内容**：不附加标题或署名；自动检查溢出、碰撞、边界与原生导出。
 
-在图库选风格、复制需求，或下载现成 draw.io。[查看 20 种风格](skills/musedraw/references/style-atlas.md) · [浏览全部 101 例](gallery/README.md)
+在图库选风格、复制需求，或下载现成 draw.io。[查看 20 种风格](skills/musedraw/references/style-atlas.md) · [浏览全部 108 例](gallery/README.md)
+
+科研示意新例：[位点对照](gallery/106-site-occupancy/prompt.md) · [薄片转移](gallery/107-material-transfer/prompt.md) · [共享表征](gallery/108-shared-representation/prompt.md)。
 
 ## 文档与共建
 

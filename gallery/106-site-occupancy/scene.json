@@ -1,0 +1,241 @@
+{
+  "theme": "journal",
+  "title": "Sparse site occupancy on a shared scaffold",
+  "size": [
+    1180,
+    620
+  ],
+  "header": false,
+  "footer": false,
+  "autoFit": false,
+  "style": {
+    "fonts": {
+      "body": "Arial, sans-serif",
+      "heading": "Arial, sans-serif"
+    }
+  },
+  "meta": {
+    "provenance": "Original abstract scaffold schematic. Supplied states, no biological or experimental claim."
+  },
+  "blocks": [
+    {
+      "type": "object-views",
+      "id": "sites",
+      "x": 210,
+      "y": 75,
+      "w": 900,
+      "h": 490,
+      "columns": 1,
+      "rowGap": 20,
+      "headingH": 0,
+      "entities": [
+        {
+          "id": "scaffold",
+          "extent": [
+            0.94,
+            0.92
+          ],
+          "scientific": {
+            "kind": "duplex",
+            "turns": 2.5,
+            "phase": 18,
+            "amplitude": 26,
+            "strandWidth": 3,
+            "markerRadius": 8,
+            "markerOffset": 4,
+            "rungs": 12,
+            "strands": [
+              {
+                "id": "dark",
+                "fill": "#435D72"
+              },
+              {
+                "id": "light",
+                "fill": "#A7BBC9"
+              }
+            ],
+            "sites": [
+              {
+                "id": "p",
+                "name": "p",
+                "at": 0.1,
+                "marks": [
+                  "dark"
+                ],
+                "fill": "#C7804E"
+              },
+              {
+                "id": "q",
+                "name": "q",
+                "at": 0.47,
+                "marks": [
+                  "light"
+                ],
+                "fill": "#C7804E"
+              },
+              {
+                "id": "r",
+                "name": "r",
+                "at": 0.82,
+                "marks": [],
+                "fill": "#C7804E"
+              }
+            ]
+          }
+        }
+      ],
+      "views": [
+        {
+          "id": "initial",
+          "items": [
+            {
+              "entity": "scaffold",
+              "at": [
+                0.5,
+                0.5
+              ]
+            }
+          ]
+        },
+        {
+          "id": "paired",
+          "items": [
+            {
+              "entity": "scaffold",
+              "at": [
+                0.5,
+                0.5
+              ],
+              "state": {
+                "marks": {
+                  "q": [
+                    "dark",
+                    "light"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "redistributed",
+          "items": [
+            {
+              "entity": "scaffold",
+              "at": [
+                0.5,
+                0.5
+              ],
+              "state": {
+                "marks": {
+                  "p": [],
+                  "q": [
+                    "dark",
+                    "light"
+                  ],
+                  "r": [
+                    "dark"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "x": 57,
+      "y": 125,
+      "text": "a",
+      "size": 20,
+      "weight": 700,
+      "color": "#26323B"
+    },
+    {
+      "x": 57,
+      "y": 158,
+      "text": "Initial",
+      "size": 17,
+      "color": "#4C5A62"
+    },
+    {
+      "x": 57,
+      "y": 295,
+      "text": "b",
+      "size": 20,
+      "weight": 700,
+      "color": "#26323B"
+    },
+    {
+      "x": 57,
+      "y": 328,
+      "text": "Paired at q",
+      "size": 17,
+      "color": "#4C5A62"
+    },
+    {
+      "x": 57,
+      "y": 465,
+      "text": "c",
+      "size": 20,
+      "weight": 700,
+      "color": "#26323B"
+    },
+    {
+      "x": 57,
+      "y": 498,
+      "text": "Redistributed",
+      "size": 17,
+      "color": "#4C5A62"
+    }
+  ],
+  "lines": [
+    {
+      "points": [
+        [
+          330.4,
+          118
+        ],
+        [
+          330.4,
+          566
+        ]
+      ],
+      "color": "#D9DFE2",
+      "width": 0.8,
+      "dash": "3 5"
+    },
+    {
+      "points": [
+        [
+          635.28,
+          118
+        ],
+        [
+          635.28,
+          566
+        ]
+      ],
+      "color": "#D9DFE2",
+      "width": 0.8,
+      "dash": "3 5"
+    },
+    {
+      "points": [
+        [
+          923.68,
+          118
+        ],
+        [
+          923.68,
+          566
+        ]
+      ],
+      "color": "#D9DFE2",
+      "width": 0.8,
+      "dash": "3 5"
+    }
+  ]
+}

@@ -67,7 +67,7 @@ export async function loadPlaywrightInfo(explicit) {
 
 export async function loadPlaywright(explicit) { return (await loadPlaywrightInfo(explicit)).pw; }
 
-export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, drawio = true, fontMode = 'bundled', previewFirst = false, onProgress = () => {} }) {
+export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, drawio = true, fontMode = 'bundled', previewFirst = false, readingProfile = null, onProgress = () => {} }) {
   assertStaticSvg(svg);
   const { links, missing } = fontMode === 'system' ? { links: [], missing: [] } : fontStylesheets(svg, fontDirs);
   const tmp = await fsp.mkdtemp(path.join(os.tmpdir(), 'musedraw-'));
@@ -94,7 +94,7 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
       await document.fonts.ready;
       return loads.length;
     });
-    const checks = await page.evaluate(runChecks, { W, H });
+    const checks = await page.evaluate(runChecks, { W, H, readingProfile });
     checks.missingFonts = missing;
     if (fontMode === 'system') checks.fontMode = 'system';
     onProgress('checked', { warnings: checks.warnings.length, fontLoads });
@@ -136,7 +136,7 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
 }
 
 // Runs inside the page. Measures real glyph boxes.
-function runChecks({ W, H }) {
+function runChecks({ W, H, readingProfile }) {
   const warnings = [];
   const box = (el) => { const b = el.getBBox(); return { x: b.x, y: b.y, w: b.width, h: b.height }; };
   const inter = (a, b, pad = 0) => a.x < b.x + b.w - pad && b.x < a.x + a.w - pad && a.y < b.y + b.h - pad && b.y < a.y + a.h - pad;
@@ -176,5 +176,15 @@ function runChecks({ W, H }) {
   for (const n of nodeBoxes) if (n.b.y + n.b.h > H || n.b.x + n.b.w > W) warnings.push({ type: 'outside-canvas', owner: n.id, text: 'node extends past the canvas; enlarge size' });
   // Overlapping nodes (excluding deliberate containment).
   for (let i = 0; i < nodeBoxes.length; i++) for (let j = i + 1; j < nodeBoxes.length; j++) if (!nodeBoxes[i].overlap && !nodeBoxes[j].overlap && !['chevron'].includes(nodeBoxes[i].shape) && !['chevron'].includes(nodeBoxes[j].shape) && inter(nodeBoxes[i].b, nodeBoxes[j].b, 1)) warnings.push({ type: 'node-overlap', a: nodeBoxes[i].id, b: nodeBoxes[j].id });
-  return { size: [W, H], nodes: nodeBoxes.length, texts: textItems.length, warnings, passed: warnings.length === 0 };
+  let readability;
+  if(readingProfile) {
+    const previewScale=Math.min(1,readingProfile.maxWidth/W,readingProfile.maxHeight/H), sizes=[];
+    for(const text of document.querySelectorAll('text')) {
+      if(!text.textContent.trim())continue;
+      const px=parseFloat(getComputedStyle(text).fontSize)*previewScale;sizes.push(px);
+      if(px+.05<readingProfile.min)warnings.push({type:'text-too-small',text:text.textContent.slice(0,40),previewPx:Math.round(px*100)/100,minimumPx:readingProfile.min});
+    }
+    readability={preview:[Math.round(W*previewScale),Math.round(H*previewScale)],minimumPx:readingProfile.min,smallestTextPx:sizes.length?Math.round(Math.min(...sizes)*100)/100:null};
+  }
+  return { size: [W, H], nodes: nodeBoxes.length, texts: textItems.length, ...(readability?{readability}:{}), warnings, passed: warnings.length === 0 };
 }

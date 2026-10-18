@@ -1,0 +1,1099 @@
+{
+  "schemaVersion": 1,
+  "theme": "journal",
+  "size": [
+    1500,
+    1090
+  ],
+  "header": false,
+  "footer": false,
+  "autoFit": false,
+  "style": {
+    "fonts": {
+      "body": "Arial, sans-serif",
+      "display": "Arial, sans-serif",
+      "mono": "Consolas, monospace"
+    },
+    "node": {
+      "size": 21,
+      "padding": 10,
+      "stroke": 1.5,
+      "radius": 3
+    },
+    "edge": {
+      "labelSize": 18,
+      "width": 1.65,
+      "color": "#303A3D",
+      "radius": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "linear-mode",
+      "label": "",
+      "x": 65,
+      "y": 115,
+      "w": 370,
+      "h": 115,
+      "shape": "box",
+      "fill": "none",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none",
+      "overlap": true
+    },
+    {
+      "id": "linear-ref-0",
+      "label": "",
+      "x": 65,
+      "y": 120,
+      "w": 112,
+      "h": 15,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "linear-ref-1",
+      "label": "",
+      "x": 197,
+      "y": 120,
+      "w": 93,
+      "h": 15,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "linear-ref-2",
+      "label": "",
+      "x": 310,
+      "y": 120,
+      "w": 125,
+      "h": 15,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "linear-read-0",
+      "label": "",
+      "x": 85,
+      "y": 202,
+      "w": 92,
+      "h": 14,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "linear-read-1",
+      "label": "",
+      "x": 205,
+      "y": 202,
+      "w": 116,
+      "h": 14,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "linear-read-2",
+      "label": "",
+      "x": 326,
+      "y": 202,
+      "w": 90,
+      "h": 14,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "mapped-input",
+      "label": "Mapped fragments",
+      "x": 595,
+      "y": 143,
+      "w": 300,
+      "h": 70,
+      "shape": "box",
+      "fill": "#E7F2EF",
+      "stroke": "#3D7D83",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2
+    },
+    {
+      "id": "identify",
+      "label": "Identify candidate events",
+      "x": 595,
+      "y": 340,
+      "w": 300,
+      "h": 76,
+      "shape": "box",
+      "fill": "#F7EBDD",
+      "stroke": "#C4855C",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2
+    },
+    {
+      "id": "filter",
+      "label": "Filter inconsistent spans",
+      "x": 595,
+      "y": 555,
+      "w": 300,
+      "h": 76,
+      "shape": "box",
+      "fill": "#F7EBDD",
+      "stroke": "#C4855C",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2
+    },
+    {
+      "id": "merge",
+      "label": "Merge compatible events",
+      "x": 595,
+      "y": 770,
+      "w": 300,
+      "h": 76,
+      "shape": "box",
+      "fill": "#F7EBDD",
+      "stroke": "#C4855C",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2
+    },
+    {
+      "id": "gap-detail",
+      "label": "",
+      "x": 65,
+      "y": 350,
+      "w": 370,
+      "h": 115,
+      "shape": "box",
+      "fill": "none",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none",
+      "overlap": true
+    },
+    {
+      "id": "gap-ref-left",
+      "label": "",
+      "x": 65,
+      "y": 445,
+      "w": 130,
+      "h": 16,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "gap-ref-right",
+      "label": "",
+      "x": 305,
+      "y": 445,
+      "w": 130,
+      "h": 16,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "gap-frag-left",
+      "label": "",
+      "x": 95,
+      "y": 365,
+      "w": 100,
+      "h": 16,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "gap-frag-right",
+      "label": "",
+      "x": 305,
+      "y": 365,
+      "w": 100,
+      "h": 16,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "support-detail",
+      "label": "",
+      "x": 1045,
+      "y": 600,
+      "w": 370,
+      "h": 120,
+      "shape": "box",
+      "fill": "none",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none",
+      "overlap": true
+    },
+    {
+      "id": "support-reference",
+      "label": "",
+      "x": 1045,
+      "y": 690,
+      "w": 370,
+      "h": 16,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "support-left",
+      "label": "",
+      "x": 1045,
+      "y": 610,
+      "w": 108,
+      "h": 16,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "support-right",
+      "label": "",
+      "x": 1307,
+      "y": 610,
+      "w": 108,
+      "h": 16,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "interval-a",
+      "label": "",
+      "x": 1045,
+      "y": 836,
+      "w": 155,
+      "h": 18,
+      "shape": "box",
+      "fill": "#D47E78",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "interval-b",
+      "label": "",
+      "x": 1160,
+      "y": 884,
+      "w": 155,
+      "h": 18,
+      "shape": "box",
+      "fill": "#D47E78",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "legend-ref",
+      "label": "",
+      "x": 65,
+      "y": 1015,
+      "w": 45,
+      "h": 12,
+      "shape": "box",
+      "fill": "#F8E4E1",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    },
+    {
+      "id": "legend-frag",
+      "label": "",
+      "x": 1040,
+      "y": 1015,
+      "w": 45,
+      "h": 12,
+      "shape": "box",
+      "fill": "#527B91",
+      "stroke": "none",
+      "textColor": "#303A3D",
+      "size": 21,
+      "weight": 400,
+      "radius": 2,
+      "labelPos": "none"
+    }
+  ],
+  "edges": [
+    {
+      "id": "linear-input",
+      "from": "linear-mode",
+      "to": "mapped-input",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight"
+    },
+    {
+      "id": "graph-input",
+      "from": "graph-mode",
+      "to": "mapped-input",
+      "fromSide": "l",
+      "toSide": "r",
+      "route": "straight"
+    },
+    {
+      "id": "identify-flow",
+      "from": "mapped-input",
+      "to": "identify",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight"
+    },
+    {
+      "id": "filter-flow",
+      "from": "identify",
+      "to": "filter",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight"
+    },
+    {
+      "id": "merge-flow",
+      "from": "filter",
+      "to": "merge",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight"
+    },
+    {
+      "id": "gap-span",
+      "from": "gap-frag-left",
+      "to": "gap-frag-right",
+      "arrow": "none",
+      "fromSide": "r",
+      "toSide": "l",
+      "dash": "3 4",
+      "color": "#527B91",
+      "route": "straight"
+    },
+    {
+      "id": "gap-match-left",
+      "from": "gap-frag-left",
+      "to": "gap-ref-left",
+      "arrow": "none",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight",
+      "width": 1,
+      "color": "#A9B2B5"
+    },
+    {
+      "id": "gap-match-right",
+      "from": "gap-frag-right",
+      "to": "gap-ref-right",
+      "arrow": "none",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight",
+      "width": 1,
+      "color": "#A9B2B5"
+    },
+    {
+      "id": "gap-explain",
+      "from": "gap-detail",
+      "to": "identify",
+      "arrow": "none",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "color": "#A9B2B5",
+      "width": 1
+    },
+    {
+      "id": "path-explain",
+      "from": "path-detail",
+      "to": "identify",
+      "arrow": "none",
+      "fromSide": "l",
+      "toSide": "r",
+      "route": "straight",
+      "color": "#A9B2B5",
+      "width": 1
+    },
+    {
+      "id": "support-match-left",
+      "from": "support-left",
+      "to": "support-reference",
+      "arrow": "none",
+      "fromSide": "b",
+      "toSide": "t",
+      "toAt": 0.15,
+      "route": "straight",
+      "width": 1,
+      "color": "#A9B2B5"
+    },
+    {
+      "id": "support-match-right",
+      "from": "support-right",
+      "to": "support-reference",
+      "arrow": "none",
+      "fromSide": "b",
+      "toSide": "t",
+      "toAt": 0.85,
+      "route": "straight",
+      "width": 1,
+      "color": "#A9B2B5"
+    },
+    {
+      "id": "support-explain",
+      "from": "support-detail",
+      "to": "filter",
+      "arrow": "none",
+      "fromSide": "l",
+      "toSide": "r",
+      "route": "straight",
+      "color": "#A9B2B5",
+      "width": 1
+    },
+    {
+      "id": "interval-align",
+      "from": "interval-a",
+      "to": "interval-b",
+      "arrow": "none",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight",
+      "color": "#A9B2B5",
+      "width": 1
+    },
+    {
+      "id": "interval-explain",
+      "from": "interval-a",
+      "to": "merge",
+      "arrow": "none",
+      "fromSide": "l",
+      "toSide": "r",
+      "via": [
+        [
+          980,
+          845
+        ],
+        [
+          980,
+          808
+        ]
+      ],
+      "color": "#A9B2B5",
+      "width": 1
+    },
+    {
+      "id": "graph-update",
+      "from": "merge",
+      "to": "updated-graph",
+      "fromSide": "b",
+      "toSide": "t",
+      "route": "straight"
+    },
+    {
+      "id": "insertion-explain",
+      "from": "insertion-detail",
+      "to": "filter",
+      "arrow": "none",
+      "fromSide": "r",
+      "toSide": "l",
+      "via": [
+        [
+          510,
+          680
+        ],
+        [
+          510,
+          593
+        ]
+      ],
+      "color": "#A9B2B5",
+      "width": 1
+    },
+    {
+      "id": "selected-route-0",
+      "from": "path-detail-a",
+      "to": "path-detail-b",
+      "route": "straight",
+      "arrow": "none",
+      "color": "#527B91",
+      "width": 4,
+      "layer": "foreground"
+    },
+    {
+      "id": "selected-route-1",
+      "from": "path-detail-b",
+      "to": "path-detail-top",
+      "route": "straight",
+      "arrow": "none",
+      "color": "#527B91",
+      "width": 4,
+      "layer": "foreground"
+    },
+    {
+      "id": "selected-route-2",
+      "from": "path-detail-top",
+      "to": "path-detail-c",
+      "route": "straight",
+      "arrow": "none",
+      "color": "#527B91",
+      "width": 4,
+      "layer": "foreground"
+    },
+    {
+      "id": "selected-route-3",
+      "from": "path-detail-c",
+      "to": "path-detail-d",
+      "route": "straight",
+      "arrow": "none",
+      "color": "#527B91",
+      "width": 4,
+      "layer": "foreground"
+    }
+  ],
+  "texts": [
+    {
+      "id": "linear-title",
+      "text": "Linear reference mode",
+      "x": 65,
+      "y": 55,
+      "size": 22,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "graph-title",
+      "text": "Graph reference mode",
+      "x": 1040,
+      "y": 55,
+      "size": 22,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "ref-label",
+      "text": "Reference",
+      "x": 65,
+      "y": 100,
+      "size": 18,
+      "weight": 400,
+      "color": "#303A3D"
+    },
+    {
+      "id": "reads-label",
+      "text": "Fragments",
+      "x": 65,
+      "y": 185,
+      "size": 18,
+      "weight": 400,
+      "color": "#303A3D"
+    },
+    {
+      "id": "gap-title",
+      "text": "Gap-spanning alignment",
+      "x": 65,
+      "y": 320,
+      "size": 20,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "gap-label",
+      "text": "uncovered interval",
+      "x": 218,
+      "y": 429,
+      "size": 17,
+      "weight": 400,
+      "color": "#303A3D",
+      "anchor": "middle"
+    },
+    {
+      "id": "insert-title",
+      "text": "Insertion relative to a path",
+      "x": 65,
+      "y": 565,
+      "size": 20,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "insert-label",
+      "text": "inserted segment",
+      "x": 250,
+      "y": 608,
+      "size": 17,
+      "weight": 400,
+      "color": "#303A3D",
+      "anchor": "middle"
+    },
+    {
+      "id": "path-title",
+      "text": "Path-consistent support",
+      "x": 1040,
+      "y": 320,
+      "size": 20,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "filter-title",
+      "text": "Discontinuous support",
+      "x": 1040,
+      "y": 565,
+      "size": 20,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "support-gap",
+      "text": "gap",
+      "x": 1230,
+      "y": 624,
+      "size": 18,
+      "weight": 400,
+      "color": "#303A3D",
+      "anchor": "middle"
+    },
+    {
+      "id": "merge-detail-title",
+      "text": "Compatible intervals",
+      "x": 1040,
+      "y": 800,
+      "size": 20,
+      "weight": 600,
+      "color": "#303A3D"
+    },
+    {
+      "id": "output-label",
+      "text": "Incremental reference graph",
+      "x": 560,
+      "y": 925,
+      "size": 20,
+      "weight": 600,
+      "color": "#303A3D",
+      "anchor": "end"
+    },
+    {
+      "id": "legend-reference",
+      "text": "Reference path",
+      "x": 65,
+      "y": 995,
+      "size": 18,
+      "weight": 400,
+      "color": "#303A3D"
+    },
+    {
+      "id": "legend-fragments",
+      "text": "Fragment / selected route",
+      "x": 1040,
+      "y": 995,
+      "size": 18,
+      "weight": 400,
+      "color": "#303A3D"
+    },
+    {
+      "id": "selected-path-label",
+      "text": "one continuous route",
+      "x": 1040,
+      "y": 515,
+      "size": 17,
+      "color": "#303A3D"
+    }
+  ],
+  "paths": [],
+  "lines": [],
+  "blocks": [
+    {
+      "type": "scientific",
+      "kind": "graph",
+      "id": "graph-mode",
+      "x": 1045,
+      "y": 100,
+      "w": 370,
+      "h": 145,
+      "points": [
+        {
+          "id": "a",
+          "x": 0.02,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "b",
+          "x": 0.3,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "c",
+          "x": 0.5,
+          "y": 0.1,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "d",
+          "x": 0.5,
+          "y": 0.9,
+          "fill": "#F8E4E1"
+        },
+        {
+          "id": "e",
+          "x": 0.73,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "f",
+          "x": 0.98,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        }
+      ],
+      "links": [
+        {
+          "from": "a",
+          "to": "b"
+        },
+        {
+          "from": "b",
+          "to": "c"
+        },
+        {
+          "from": "c",
+          "to": "e"
+        },
+        {
+          "from": "b",
+          "to": "d"
+        },
+        {
+          "from": "d",
+          "to": "e"
+        },
+        {
+          "from": "e",
+          "to": "f"
+        }
+      ],
+      "diameter": 14,
+      "palette": {
+        "ink": "#303A3D",
+        "soft": "#E7F2EF",
+        "focus": "#3D7D83"
+      }
+    },
+    {
+      "type": "scientific",
+      "kind": "graph",
+      "id": "insertion-detail",
+      "x": 65,
+      "y": 610,
+      "w": 370,
+      "h": 140,
+      "points": [
+        {
+          "id": "a",
+          "x": 0.02,
+          "y": 0.78,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "b",
+          "x": 0.29,
+          "y": 0.78,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "new",
+          "x": 0.5,
+          "y": 0.12,
+          "fill": "#F8E4E1"
+        },
+        {
+          "id": "c",
+          "x": 0.72,
+          "y": 0.78,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "d",
+          "x": 0.98,
+          "y": 0.78,
+          "fill": "#E7F2EF"
+        }
+      ],
+      "links": [
+        {
+          "from": "a",
+          "to": "b"
+        },
+        {
+          "from": "b",
+          "to": "c"
+        },
+        {
+          "from": "b",
+          "to": "new"
+        },
+        {
+          "from": "new",
+          "to": "c"
+        },
+        {
+          "from": "c",
+          "to": "d"
+        }
+      ],
+      "diameter": 14,
+      "palette": {
+        "ink": "#303A3D",
+        "soft": "#E7F2EF",
+        "focus": "#3D7D83"
+      }
+    },
+    {
+      "type": "scientific",
+      "kind": "graph",
+      "id": "path-detail",
+      "x": 1045,
+      "y": 350,
+      "w": 370,
+      "h": 125,
+      "points": [
+        {
+          "id": "a",
+          "x": 0.02,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "b",
+          "x": 0.28,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "top",
+          "x": 0.5,
+          "y": 0.08,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "alt",
+          "x": 0.5,
+          "y": 0.93,
+          "fill": "#F8E4E1"
+        },
+        {
+          "id": "c",
+          "x": 0.74,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "d",
+          "x": 0.98,
+          "y": 0.55,
+          "fill": "#E7F2EF"
+        }
+      ],
+      "links": [
+        {
+          "from": "a",
+          "to": "b"
+        },
+        {
+          "from": "b",
+          "to": "top"
+        },
+        {
+          "from": "top",
+          "to": "c"
+        },
+        {
+          "from": "b",
+          "to": "alt"
+        },
+        {
+          "from": "alt",
+          "to": "c"
+        },
+        {
+          "from": "c",
+          "to": "d"
+        }
+      ],
+      "diameter": 14,
+      "palette": {
+        "ink": "#303A3D",
+        "soft": "#E7F2EF",
+        "focus": "#3D7D83"
+      }
+    },
+    {
+      "type": "scientific",
+      "kind": "graph",
+      "id": "updated-graph",
+      "x": 560,
+      "y": 960,
+      "w": 370,
+      "h": 105,
+      "points": [
+        {
+          "id": "a",
+          "x": 0.02,
+          "y": 0.6,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "b",
+          "x": 0.3,
+          "y": 0.6,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "new",
+          "x": 0.51,
+          "y": 0.08,
+          "fill": "#F8E4E1"
+        },
+        {
+          "id": "c",
+          "x": 0.73,
+          "y": 0.6,
+          "fill": "#E7F2EF"
+        },
+        {
+          "id": "d",
+          "x": 0.98,
+          "y": 0.6,
+          "fill": "#E7F2EF"
+        }
+      ],
+      "links": [
+        {
+          "from": "a",
+          "to": "b"
+        },
+        {
+          "from": "b",
+          "to": "c"
+        },
+        {
+          "from": "b",
+          "to": "new"
+        },
+        {
+          "from": "new",
+          "to": "c"
+        },
+        {
+          "from": "c",
+          "to": "d"
+        }
+      ],
+      "diameter": 14,
+      "palette": {
+        "ink": "#303A3D",
+        "soft": "#E7F2EF",
+        "focus": "#3D7D83"
+      }
+    }
+  ],
+  "meta": {
+    "dwg": "Original concept schematic; symbolic intervals and paths; no measured data",
+    "rev": "worked example 2"
+  }
+}

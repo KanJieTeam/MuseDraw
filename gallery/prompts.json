@@ -420,6 +420,18 @@
     "105-research-workspace-product": {
       "zh": "用 MuseDraw 参考图库「企业研究与知识工作台」的白底橙蓝样式画企业研究工作台：任务入口和组织知识在左侧，身份校验后进入任务编排、项目上下文、资料检索分析和隔离计算环境，再通过模型与工具网关连接企业工具，输出研究简报、图表和可复用流程。不加厂商标识和页脚。",
       "en": "Use MuseDraw with the white, orange and blue workspace composition of the Enterprise Research and Knowledge Workspace gallery example. Place task inputs and organizational knowledge on the left, followed by identity checks, orchestration, project context, retrieval and analysis, isolated computation, model and tool gateways, enterprise tools and outputs: research briefs, charts and reusable workflows. Omit vendor logos and footers."
+    },
+    "106-site-occupancy": {
+      "en": "Use MuseDraw to draw three matching views of one two-strand synthetic scaffold: Initial, Paired at q and Redistributed. Keep strand identities, geometry and the three sites p/q/r fixed. Initially p marks the dark strand and q the light strand; then q marks both; finally remove p and add a dark-strand mark at r while q remains paired. Show the differences on the scaffold, with sparse warm markers and no process cards.",
+      "zh": "用 MuseDraw 的科研期刊风格画同一双链支架的三行条件对照。初始p只标深色链、q只标浅色链；第二行q改为双链标记；第三行移除p并在r深色链加标记，q保持双标。几何、链身份和位点一致，以稀疏暖色圆点直接显示差异。这是抽象概念，不推断真实生物机制。"
+    },
+    "107-material-transfer": {
+      "en": "Use MuseDraw to draw an original three-state thin-film transfer schematic. A ring cutter contacts the central four tiles of a 4×4 donor array; a different solid pickup head lifts those four; finally they are released onto a receiver. Preserve all sixteen tile identities, projection and sizes, with four matching donor vacancies after lifting. Show contact and release gaps directly, with sparse labels. Adhesion switching is a declared concept assumption, not measured performance.",
+      "zh": "用 MuseDraw 画原创薄片转移的三态示意。供体4×4的16片中，中央四片先由开孔框接触，再换实心拾取头抬起，最后落到受体并释放。16片数量守恒，后两态供体留下对应四个空位。相同投影、短标签，接触边与释放间隙清楚。这是概念接口假设，不提供性能数据。"
+    },
+    "108-shared-representation": {
+      "en": "Use MuseDraw to draw a seven-node graph method: edges 0–1, 1–2, 1–3, 3–4, 3–5 and 5–6. Three symbolic components per node enter one neighbourhood aggregation and one shared 7×3 representation H, which branches into seven node readout slots and a three-component global sum. Below, expand only node 3 and neighbours 1, 4 and 5 with native scripted update notation. Preserve row identities and topology; no fabricated results or process cards.",
+      "zh": "用 MuseDraw 画七节点分支图的共享邻域表征：边为0–1、1–2、1–3、3–4、3–5、5–6。逐节点三分量特征经过一次聚合，唯一7×3表征H分出7槽逐节点读出和三分量整体求和。下方只展开节点3与邻居1、4、5，原生下标展示更新公式。示意符号计算，不展示实验或性能结果。"
     }
   }
 }

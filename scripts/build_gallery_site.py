@@ -31,7 +31,8 @@ def build_skill_download(root, staging):
                     raise ValueError("Refusing a linked Skill resource")
             for name in filenames:
                 file = Path(directory) / name
-                if file.suffix in {".md", ".json", ".mjs", ".js", ".py"} or name.endswith("LICENSE"):
+                design_preview = file.name == "preview.jpg" and file.is_relative_to(source / "assets/design-examples")
+                if file.suffix in {".md", ".json", ".mjs", ".js", ".py"} or name.endswith("LICENSE") or design_preview:
                     files[file.relative_to(source).as_posix()] = file
     files["LICENSE"] = root / "LICENSE"
     if (root / "NOTICE").is_file():

@@ -1,0 +1,1054 @@
+{
+  "schemaVersion": 1,
+  "theme": "journal",
+  "size": [
+    1320,
+    770
+  ],
+  "header": false,
+  "footer": false,
+  "autoFit": false,
+  "meta": {
+    "dwg": "Original concept schematic; symbolic objects; no measured data",
+    "rev": "worked example 2"
+  },
+  "style": {
+    "fonts": {
+      "body": "Arial, sans-serif",
+      "display": "Arial, sans-serif",
+      "mono": "Arial, sans-serif"
+    },
+    "node": {
+      "size": 20,
+      "padding": 4,
+      "stroke": 1.15,
+      "radius": 0,
+      "weight": 400
+    },
+    "edge": {
+      "labelSize": 17,
+      "width": 1.3,
+      "color": "#344344",
+      "radius": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "predictor",
+      "label": "f",
+      "x": 410,
+      "y": 135,
+      "w": 38,
+      "h": 38,
+      "shape": "circle",
+      "fill": "#DDECE5",
+      "stroke": "#4C8282",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "select",
+      "label": "Select candidates",
+      "x": 515,
+      "y": 66,
+      "w": 180,
+      "h": 32,
+      "shape": "text",
+      "fill": "none",
+      "stroke": "none",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "annotate",
+      "label": "Acquire labels",
+      "x": 740,
+      "y": 139,
+      "w": 160,
+      "h": 32,
+      "shape": "text",
+      "fill": "none",
+      "stroke": "none",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "append",
+      "label": "Append labels",
+      "x": 540,
+      "y": 244,
+      "w": 160,
+      "h": 30,
+      "shape": "text",
+      "fill": "none",
+      "stroke": "none",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "join",
+      "label": "+",
+      "x": 337,
+      "y": 575,
+      "w": 32,
+      "h": 32,
+      "shape": "circle",
+      "fill": "white",
+      "stroke": "#344344",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "encoder",
+      "label": "",
+      "x": 446,
+      "y": 466,
+      "w": 136,
+      "h": 136,
+      "shape": "circle",
+      "fill": "none",
+      "stroke": "#96A2A1",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400,
+      "labelPos": "none",
+      "overlap": true
+    },
+    {
+      "id": "aggregate",
+      "label": "Σ",
+      "x": 1067,
+      "y": 560,
+      "w": 40,
+      "h": 40,
+      "shape": "box",
+      "fill": "white",
+      "stroke": "#344344",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "site-output",
+      "label": "s",
+      "x": 1191,
+      "y": 491,
+      "w": 32,
+      "h": 32,
+      "shape": "circle",
+      "fill": "#DDECE5",
+      "stroke": "#4C8282",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    },
+    {
+      "id": "graph-output",
+      "label": "g",
+      "x": 1191,
+      "y": 655,
+      "w": 32,
+      "h": 32,
+      "shape": "circle",
+      "fill": "#F2E1CB",
+      "stroke": "#B17C5A",
+      "textColor": "#344344",
+      "size": 20,
+      "weight": 400
+    }
+  ],
+  "edges": [
+    {
+      "id": "train",
+      "from": "labelled-set",
+      "to": "predictor",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "color": "#4C8282",
+      "width": 1.6
+    },
+    {
+      "id": "rank",
+      "from": "predictor",
+      "to": "select",
+      "fromSide": "t",
+      "toSide": "l",
+      "route": "curve",
+      "via": [
+        [
+          429,
+          88
+        ]
+      ],
+      "color": "#4C8282",
+      "width": 2
+    },
+    {
+      "id": "sample",
+      "from": "select",
+      "to": "annotate",
+      "fromSide": "r",
+      "toSide": "t",
+      "route": "curve",
+      "via": [
+        [
+          819,
+          82
+        ]
+      ],
+      "color": "#4C8282",
+      "width": 2
+    },
+    {
+      "id": "label-acquisition",
+      "from": "annotate",
+      "to": "append",
+      "fromSide": "b",
+      "toSide": "r",
+      "route": "curve",
+      "via": [
+        [
+          820,
+          259
+        ]
+      ],
+      "color": "#4C8282",
+      "width": 2
+    },
+    {
+      "id": "label-records",
+      "from": "annotate",
+      "to": "new-labels",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "color": "#B17C5A",
+      "width": 1.5
+    },
+    {
+      "id": "update",
+      "from": "append",
+      "to": "labelled-set",
+      "fromSide": "l",
+      "toSide": "b",
+      "via": [
+        [
+          285,
+          259
+        ],
+        [
+          124,
+          259
+        ]
+      ],
+      "color": "#B17C5A",
+      "width": 1.5
+    },
+    {
+      "id": "graph-input",
+      "from": "object-graph",
+      "to": "join",
+      "fromSide": "r",
+      "toSide": "l",
+      "via": [
+        [
+          231,
+          500
+        ],
+        [
+          231,
+          591
+        ]
+      ]
+    },
+    {
+      "id": "node-feature-input",
+      "from": "node-features",
+      "to": "join",
+      "fromSide": "b",
+      "toSide": "t",
+      "via": [
+        [
+          279.5,
+          568
+        ],
+        [
+          353,
+          568
+        ]
+      ]
+    },
+    {
+      "id": "condition-input",
+      "from": "condition-features",
+      "to": "join",
+      "fromSide": "r",
+      "toSide": "b",
+      "via": [
+        [
+          353,
+          684.5
+        ]
+      ]
+    },
+    {
+      "id": "fused-input",
+      "from": "join",
+      "to": "encoder",
+      "fromSide": "r",
+      "toSide": "l",
+      "via": [
+        [
+          405,
+          591
+        ],
+        [
+          405,
+          534
+        ]
+      ]
+    },
+    {
+      "id": "encode",
+      "from": "encoder",
+      "to": "latent",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight"
+    },
+    {
+      "id": "branch-site",
+      "from": "latent",
+      "to": "site-head",
+      "fromSide": "r",
+      "toSide": "l",
+      "fromAt": 0.25,
+      "via": [
+        [
+          762,
+          512
+        ],
+        [
+          762,
+          468
+        ]
+      ]
+    },
+    {
+      "id": "branch-context",
+      "from": "latent",
+      "to": "context-head",
+      "fromSide": "r",
+      "toSide": "l",
+      "fromAt": 0.75,
+      "via": [
+        [
+          762,
+          564
+        ],
+        [
+          762,
+          706
+        ]
+      ]
+    },
+    {
+      "id": "site-contribute",
+      "from": "site-head",
+      "to": "site-contribution",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "color": "#4C8282"
+    },
+    {
+      "id": "context-contribute",
+      "from": "context-head",
+      "to": "context-contribution",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "color": "#B17C5A"
+    },
+    {
+      "id": "read-site",
+      "from": "site-contribution",
+      "to": "aggregate",
+      "fromSide": "r",
+      "toSide": "t",
+      "via": [
+        [
+          1087,
+          489.5
+        ]
+      ],
+      "color": "#4C8282"
+    },
+    {
+      "id": "read-context",
+      "from": "context-contribution",
+      "to": "aggregate",
+      "fromSide": "r",
+      "toSide": "b",
+      "via": [
+        [
+          1087,
+          674.5
+        ]
+      ],
+      "color": "#B17C5A"
+    },
+    {
+      "id": "output-site",
+      "from": "aggregate",
+      "to": "site-output",
+      "fromSide": "r",
+      "toSide": "l",
+      "fromAt": 0.35,
+      "via": [
+        [
+          1142,
+          574
+        ],
+        [
+          1142,
+          507
+        ]
+      ]
+    },
+    {
+      "id": "output-graph",
+      "from": "aggregate",
+      "to": "graph-output",
+      "fromSide": "r",
+      "toSide": "l",
+      "fromAt": 0.65,
+      "via": [
+        [
+          1142,
+          586
+        ],
+        [
+          1142,
+          671
+        ]
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "a",
+      "text": "a",
+      "x": 25,
+      "y": 33,
+      "size": 23,
+      "weight": 700,
+      "color": "#344344"
+    },
+    {
+      "id": "main-label",
+      "text": "Adaptive sampling",
+      "x": 58,
+      "y": 33,
+      "size": 20,
+      "weight": 600,
+      "color": "#344344"
+    },
+    {
+      "id": "dataset-label",
+      "text": "Labelled set",
+      "x": 55,
+      "y": 95,
+      "size": 20,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "train-label",
+      "text": "Train predictor",
+      "x": 368,
+      "y": 204,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "new-labels-label",
+      "text": "New labelled records",
+      "x": 1000,
+      "y": 95,
+      "size": 20,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "b",
+      "text": "b",
+      "x": 25,
+      "y": 352,
+      "size": 23,
+      "weight": 700,
+      "color": "#344344"
+    },
+    {
+      "id": "detail-label",
+      "text": "Graph predictor",
+      "x": 58,
+      "y": 352,
+      "size": 20,
+      "weight": 600,
+      "color": "#344344"
+    },
+    {
+      "id": "object-label",
+      "text": "Object graph",
+      "x": 55,
+      "y": 409,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "nodefeatures-label",
+      "text": "Node features",
+      "x": 249,
+      "y": 409,
+      "size": 18,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "conditions-label",
+      "text": "Condition features",
+      "x": 55,
+      "y": 635,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "encoder-label",
+      "text": "Geometry encoder",
+      "x": 431,
+      "y": 434,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "latent-label",
+      "text": "Shared states",
+      "x": 635,
+      "y": 434,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "sitehead-label",
+      "text": "Site head",
+      "x": 800,
+      "y": 426,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "contexthead-label",
+      "text": "Context head",
+      "x": 800,
+      "y": 666,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "aggregate-label",
+      "text": "Joint readout",
+      "x": 1045,
+      "y": 610,
+      "size": 18,
+      "weight": 400,
+      "color": "#344344",
+      "anchor": "end"
+    },
+    {
+      "id": "siteoutput-label",
+      "text": "Site ranking",
+      "x": 1162,
+      "y": 472,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    },
+    {
+      "id": "graphoutput-label",
+      "text": "Graph class",
+      "x": 1162,
+      "y": 718,
+      "size": 19,
+      "weight": 400,
+      "color": "#344344"
+    }
+  ],
+  "paths": [
+    {
+      "id": "encoder-latitude",
+      "d": "M447 534 C468 508 558 508 581 534 C558 560 468 560 447 534",
+      "fill": "none",
+      "stroke": "#96A2A1",
+      "width": 1
+    },
+    {
+      "id": "encoder-longitude",
+      "d": "M514 467 C475 487 475 581 514 601 C553 581 553 487 514 467",
+      "fill": "none",
+      "stroke": "#96A2A1",
+      "width": 1
+    },
+    {
+      "id": "encoder-equator",
+      "d": "M447 534 H581 M514 467 V601",
+      "fill": "none",
+      "stroke": "#B9C7C5",
+      "width": 0.8
+    }
+  ],
+  "lines": [
+    {
+      "points": [
+        [
+          25,
+          313
+        ],
+        [
+          1270,
+          313
+        ]
+      ],
+      "color": "#D6DEDC",
+      "width": 0.7
+    }
+  ],
+  "blocks": [
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "labelled-set",
+      "x": 55,
+      "y": 115,
+      "w": 138,
+      "h": 80,
+      "cells": [
+        [
+          "#DDECE5",
+          "#F2E1CB",
+          "#F2E1CB",
+          "#DDECE5"
+        ],
+        [
+          "#F2E1CB",
+          "#DDECE5",
+          "#F2E1CB",
+          "#F2E1CB"
+        ],
+        [
+          "#F2E1CB",
+          "#F2E1CB",
+          "#DDECE5",
+          "#F2E1CB"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "new-labels",
+      "x": 1000,
+      "y": 115,
+      "w": 138,
+      "h": 80,
+      "cells": [
+        [
+          "#DDECE5",
+          "#F2E1CB",
+          "#DDECE5",
+          "#F2E1CB"
+        ],
+        [
+          "#F2E1CB",
+          "#B17C5A",
+          "#F2E1CB",
+          "#DDECE5"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "graph",
+      "id": "object-graph",
+      "x": 55,
+      "y": 439,
+      "w": 158,
+      "h": 122,
+      "points": [
+        {
+          "id": "a",
+          "x": 0.05,
+          "y": 0.5,
+          "fill": "#DDECE5"
+        },
+        {
+          "id": "b",
+          "x": 0.29,
+          "y": 0.08,
+          "fill": "#DDECE5"
+        },
+        {
+          "id": "c",
+          "x": 0.62,
+          "y": 0.19,
+          "fill": "#DDECE5"
+        },
+        {
+          "id": "d",
+          "x": 0.94,
+          "y": 0.47,
+          "fill": "#DDECE5"
+        },
+        {
+          "id": "e",
+          "x": 0.68,
+          "y": 0.9,
+          "fill": "#DDECE5"
+        },
+        {
+          "id": "f",
+          "x": 0.28,
+          "y": 0.82,
+          "fill": "#DDECE5"
+        }
+      ],
+      "links": [
+        {
+          "from": "a",
+          "to": "b"
+        },
+        {
+          "from": "b",
+          "to": "c"
+        },
+        {
+          "from": "c",
+          "to": "d"
+        },
+        {
+          "from": "d",
+          "to": "e"
+        },
+        {
+          "from": "e",
+          "to": "f"
+        },
+        {
+          "from": "f",
+          "to": "a"
+        },
+        {
+          "from": "b",
+          "to": "e"
+        }
+      ],
+      "diameter": 12,
+      "palette": {
+        "ink": "#344344",
+        "soft": "#DDECE5",
+        "focus": "#4C8282"
+      }
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "node-features",
+      "x": 255,
+      "y": 439,
+      "w": 49,
+      "h": 125,
+      "cells": [
+        [
+          "#B17C5A",
+          "#F2E1CB"
+        ],
+        [
+          "#F2E1CB",
+          "#DDECE5"
+        ],
+        [
+          "#F2E1CB",
+          "#B17C5A"
+        ],
+        [
+          "#DDECE5",
+          "#F2E1CB"
+        ],
+        [
+          "#B17C5A",
+          "#F2E1CB"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "condition-features",
+      "x": 55,
+      "y": 658,
+      "w": 196,
+      "h": 53,
+      "cells": [
+        [
+          "#F2E1CB",
+          "#B17C5A",
+          "#F2E1CB",
+          "#DDECE5",
+          "#F2E1CB",
+          "#B17C5A"
+        ],
+        [
+          "#DDECE5",
+          "#F2E1CB",
+          "#B17C5A",
+          "#F2E1CB",
+          "#B17C5A",
+          "#F2E1CB"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "graph",
+      "id": "geometry-points",
+      "x": 475,
+      "y": 499,
+      "w": 80,
+      "h": 73,
+      "points": [
+        {
+          "id": "u",
+          "x": 0.06,
+          "y": 0.64,
+          "fill": "#F2E1CB"
+        },
+        {
+          "id": "v",
+          "x": 0.48,
+          "y": 0.16,
+          "fill": "#DDECE5"
+        },
+        {
+          "id": "w",
+          "x": 0.94,
+          "y": 0.7,
+          "fill": "#DDECE5"
+        }
+      ],
+      "links": [
+        {
+          "from": "u",
+          "to": "v"
+        },
+        {
+          "from": "v",
+          "to": "w"
+        },
+        {
+          "from": "w",
+          "to": "u"
+        }
+      ],
+      "diameter": 9,
+      "palette": {
+        "ink": "#344344",
+        "soft": "#DDECE5",
+        "focus": "#4C8282"
+      }
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "latent",
+      "x": 642,
+      "y": 486,
+      "w": 76,
+      "h": 104,
+      "cells": [
+        [
+          "#DDECE5",
+          "#4C8282",
+          "#DDECE5"
+        ],
+        [
+          "#4C8282",
+          "#DDECE5",
+          "#4C8282"
+        ],
+        [
+          "#DDECE5",
+          "#4C8282",
+          "#DDECE5"
+        ],
+        [
+          "#4C8282",
+          "#DDECE5",
+          "#DDECE5"
+        ]
+      ],
+      "depth": 2,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "site-head",
+      "x": 807,
+      "y": 448,
+      "w": 104,
+      "h": 40,
+      "cells": [
+        [
+          "#4C8282",
+          "#DDECE5",
+          "#4C8282",
+          "#DDECE5"
+        ],
+        [
+          "#DDECE5",
+          "#4C8282",
+          "#DDECE5",
+          "#4C8282"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "context-head",
+      "x": 807,
+      "y": 686,
+      "w": 104,
+      "h": 40,
+      "cells": [
+        [
+          "#B17C5A",
+          "#F2E1CB",
+          "#B17C5A",
+          "#F2E1CB"
+        ],
+        [
+          "#F2E1CB",
+          "#B17C5A",
+          "#F2E1CB",
+          "#B17C5A"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "site-contribution",
+      "x": 964,
+      "y": 459,
+      "w": 27,
+      "h": 61,
+      "cells": [
+        [
+          "#DDECE5"
+        ],
+        [
+          "#4C8282"
+        ],
+        [
+          "#DDECE5"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    },
+    {
+      "type": "scientific",
+      "kind": "tensor",
+      "id": "context-contribution",
+      "x": 964,
+      "y": 644,
+      "w": 27,
+      "h": 61,
+      "cells": [
+        [
+          "#F2E1CB"
+        ],
+        [
+          "#B17C5A"
+        ],
+        [
+          "#F2E1CB"
+        ]
+      ],
+      "depth": 1,
+      "offset": [
+        6,
+        -6
+      ],
+      "cellStroke": "white"
+    }
+  ]
+}

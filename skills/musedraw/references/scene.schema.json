@@ -28,16 +28,36 @@
       "description": "Scene-local visual tokens merged over the named theme; does not change the theme identity.",
       "additionalProperties": false,
       "properties": {
-        "palette": { "type": "object" },
-        "fonts": { "type": "object" },
-        "canvas": { "type": "object" },
-        "node": { "type": "object" },
-        "tones": { "type": "object" },
-        "zone": { "type": "object" },
-        "edge": { "type": "object" },
-        "step": { "type": "object" },
-        "note": { "type": "object" },
-        "legend": { "type": "object" }
+        "palette": {
+          "type": "object"
+        },
+        "fonts": {
+          "type": "object"
+        },
+        "canvas": {
+          "type": "object"
+        },
+        "node": {
+          "type": "object"
+        },
+        "tones": {
+          "type": "object"
+        },
+        "zone": {
+          "type": "object"
+        },
+        "edge": {
+          "type": "object"
+        },
+        "step": {
+          "type": "object"
+        },
+        "note": {
+          "type": "object"
+        },
+        "legend": {
+          "type": "object"
+        }
       }
     },
     "title": {
@@ -283,6 +303,7 @@
     "nodeContent": {
       "type": "object",
       "properties": {
+        "openSide": {"enum":["r","l","t","b"]},
         "label": {
           "type": "string"
         },
@@ -343,6 +364,9 @@
             "chevron",
             "trapezoid",
             "parallelogram",
+            "folder",
+            "frame",
+            "tray",
             "text"
           ]
         },
@@ -433,6 +457,10 @@
         "subSize": {
           "type": "number",
           "exclusiveMinimum": 0
+        },
+        "padding": {
+          "type": "number",
+          "minimum": 0
         },
         "tagSize": {
           "type": "number",
@@ -597,6 +625,12 @@
           "type": [
             "string",
             "number"
+          ]
+        },
+        "layer": {
+          "enum": [
+            "background",
+            "foreground"
           ]
         }
       },
@@ -836,6 +870,12 @@
         },
         "kind": {
           "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "background",
+            "foreground"
+          ]
         }
       },
       "required": [
@@ -860,6 +900,12 @@
         "width": {
           "type": "number",
           "minimum": 0
+        },
+        "layer": {
+          "enum": [
+            "background",
+            "foreground"
+          ]
         }
       },
       "required": [
@@ -1086,7 +1132,10 @@
             "cycle",
             "fishbone",
             "swimlane",
-            "table"
+            "table",
+            "grid",
+            "object-views",
+            "scientific"
           ]
         },
         "x": {
@@ -1524,6 +1573,28 @@
               "cells"
             ]
           }
+        },
+        "entities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/viewEntity"
+          }
+        },
+        "views": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/objectView"
+          }
+        },
+        "rowGap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "headingH": {
+          "type": "number",
+          "minimum": 0
         }
       },
       "required": [
@@ -1768,6 +1839,100 @@
               "w"
             ]
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "columns": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "padding": {
+                "type": "number",
+                "minimum": 0
+              },
+              "cellPadding": {
+                "type": "number",
+                "minimum": 0
+              },
+              "gap": {
+                "type": "number",
+                "minimum": 0
+              },
+              "size": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/nodeContent"
+                }
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "w",
+              "items"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "object-views"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id",
+              "x",
+              "y",
+              "w",
+              "h",
+              "entities",
+              "views"
+            ],
+            "properties": {
+              "columns": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "gap": {
+                "type": "number",
+                "minimum": 0
+              },
+              "size": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties":{"type":{"const":"scientific"}},"required":["type"]},
+          "then": {
+            "required":["id","kind","x","y","w","h"],
+            "properties":{
+              "kind":{"enum":["graph","network","tensor","sequence","layers","cycle","manifold","formula","laminate","duplex"]},
+              "w":{"type":"number","exclusiveMinimum":0},
+              "h":{"type":"number","exclusiveMinimum":0}
+            }
+          }
         }
       ]
     },
@@ -1861,6 +2026,155 @@
         "from",
         "to"
       ]
+    },
+    "viewEntity": {
+      "type": "object",
+      "required": ["id"],
+      "anyOf": [{"required":["label","shape"]},{"required":["scientific"]}],
+      "properties": {
+        "scientific": {"type":"object","required":["kind"],"properties":{"kind":{"enum":["graph","network","tensor","sequence","layers","cycle","manifold","formula","laminate","duplex"]}}},
+        "openSide": {"enum":["r","l","t","b"]},
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "box",
+            "pill",
+            "chip",
+            "circle",
+            "station",
+            "cylinder",
+            "queue",
+            "hex",
+            "diamond",
+            "doc",
+            "browser",
+            "person",
+            "cloud",
+            "stack",
+            "chevron",
+            "trapezoid",
+            "parallelogram",
+            "folder",
+            "frame",
+            "tray",
+            "text"
+          ]
+        },
+        "tone": {
+          "type": "string"
+        },
+        "fill": {
+          "type": "string"
+        },
+        "stroke": {
+          "type": "string"
+        },
+        "textColor": {
+          "type": "string"
+        },
+        "labelPos": {
+          "enum": [
+            "inside",
+            "right",
+            "left",
+            "above",
+            "below",
+            "none"
+          ]
+        },
+        "size": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "radius": {
+          "type": "number",
+          "minimum": 0
+        },
+        "extent": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "viewPose": {
+      "type": "object",
+      "required": [
+        "entity",
+        "at"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "showSiteNames": {"type":"boolean"},
+        "state": {"type":"object","additionalProperties":false,"properties":{
+          "marks":{"type":"object"},
+          "deflection":{"type":"number","minimum":0,"maximum":0.4},
+          "load":{"type":"string","pattern":"^[A-Za-z]$"}
+        }},
+        "entity": {
+          "$ref": "#/definitions/id"
+        },
+        "at": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "size": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          }
+        },
+        "showLabel": {
+          "type": "boolean"
+        },
+        "overlap": {
+          "type": "boolean"
+        }
+      }
+    },
+    "objectView": {
+      "type": "object",
+      "required": [
+        "id",
+        "items"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/viewPose"
+          }
+        }
+      }
     }
   }
 }

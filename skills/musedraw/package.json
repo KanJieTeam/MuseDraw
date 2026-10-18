@@ -1,7 +1,7 @@
 {
   "name": "musedraw-skill",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "MuseDraw scene engine: scene.json -> native SVG + 2x PNG in 20 visual styles.",
   "type": "module",
   "license": "Apache-2.0",
