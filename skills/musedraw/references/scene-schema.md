@@ -95,7 +95,9 @@ that grid's geometry; neighbouring blocks retain their coordinates.
 
 ### Object views — transformations and matched comparisons
 
-Define each entity once (`id,label,shape,tone` and optional node appearance fields).
+Define each primitive entity once (`id,label,shape`, optional `tone,fill,stroke,
+textColor,labelPos,size,radius,openSide`). These are not arbitrary node fields;
+for example, entity `weight` and `layer` are unsupported.
 For a persistent object, define `extent:[w,h]` once there and omit per-pose sizes;
 the block reuses its dimensions in every view. `size` on an entity remains font
 size. A pose's `size:[w,h]` overrides extent only when the content calls for an
@@ -107,8 +109,19 @@ Positions and sizes are fractions of that view's drawing area, not canvas pixels
 the block frame and columns. Use short view labels; `headingH` reserves their
 space. Default labels identify an entity at its first appearance; `showLabel`
 controls a particular appearance. Outside labels still need breathing room.
+Primitive entity labels default to `below`, unlike ordinary nodes. For text
+inside an instrument or container, set entity `labelPos:"inside"`; use pose
+`showLabel:true` when it should appear in each view. Scientific motif labels
+remain outside or `none`.
 `overlap:true` marks an intentional physical overlay, not ordinary layout errors.
 Each entity can appear once per view; give distinct objects their own IDs.
+
+Within a view, primitive `items` paint in their listed order. Put an opaque
+shell first and its internal particles/parts after it. Keep those parts in the
+same view rather than adding top-level nodes: block-generated nodes paint after
+the initial scene nodes. `overlap:true` permits overlap; it does not change paint
+order or prove visibility. Nodes do not support `layer:"foreground"`; that field
+belongs to explicit edges, lines and paths.
 
 ```json
 {"type":"object-views","id":"assembly","x":80,"y":100,"w":1000,"h":400,

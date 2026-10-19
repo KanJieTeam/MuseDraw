@@ -92,6 +92,12 @@ an entire card differently. Don't give each condition an unrelated palette.
 If the difference is quantitative, use the supplied values on a common scale;
 do not substitute illustrative quantities. Keep uncertainty visible as stated.
 
+For occupancy or localization changes inside a filled object, make the internal
+parts distinct entities in the same view and list them after the opaque shell.
+Reuse their size and colour; change their positions or presence only as stated.
+Use entity `labelPos:"inside"` for an instrument's in-box text; `showLabel` alone
+controls repetition, not placement. See the [object-view fields](scene-schema.md#object-views--transformations-and-matched-comparisons).
+
 Reference: [VIM paralogue regulation, Fig. 6](https://www.nature.com/articles/s41477-026-02396-4).
 
 ## Overview and detail · 总览与局部
