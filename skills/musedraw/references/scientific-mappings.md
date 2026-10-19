@@ -69,6 +69,38 @@ Source studies: [token representation changes](https://www.nature.com/articles/s
 Continuous physical fields are a counterexample: a categorical cell grid must
 not imply discrete classes or measured resolution that the model never supplied.
 
+## Supplied values share coordinates, not necessarily a colour scale
+
+For a small, explicitly supplied value grid within an explanation, keep row and
+column identities and orientation fixed across views. Map the values through a
+declared range before assigning cell fills. Comparable raw panels share that
+range; a signed difference has its own scale and a meaningful zero. A red/blue
+palette alone does not establish that values are signed. Keep supplied fixed
+bounds even when one panel does not reach them; do not independently normalise
+each panel to make it look more dramatic.
+
+Compute a difference only where both operands are known numbers. Preserve a
+missing input as missing in the result, rather than replacing it with zero or
+removing its row or column. In JavaScript, check for `null` before subtraction:
+numeric coercion otherwise turns it into zero. Give missing cells a separate
+neutral mark and legend, distinct from the numerical zero colour. Coverage,
+uncertainty and exclusion are different quantities; blank space does not tell
+you which one applies.
+
+Use native cell nodes with explicit fills and labels. For a compact missing
+mark, `label: "× NA"` keeps the mark and text in the same exported cell group;
+an independent overlaid path does not automatically move with that cell.
+Choose readable text against the actual cell fill. These are authoring choices:
+`tensor` accepts explicit colours, but does not calculate numerical scales,
+propagate missingness or validate the arithmetic. Real statistical charts and
+continuous fields still need their source data and an appropriate plotting
+backend.
+
+Source studies: [expression and signed synergy](https://www.nature.com/articles/s41592-023-02040-5/figures/4),
+[distinct quantities and colour legends](https://www.nature.com/articles/s41587-022-01636-0/figures/4).
+Their visible encodings are references, not reusable measurements or inferred
+missing-value definitions.
+
 ## Two coordinate domains refer to the same event
 
 An apparatus has spatial coordinates; an energy diagram has an energy direction;
