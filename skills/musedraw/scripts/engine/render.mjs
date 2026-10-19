@@ -897,10 +897,11 @@ class Ctx {
     const lines = t.w ? wrap(t.text, t.w, t.size ?? 14, fam, t.letterSpacing ?? 0, t.weight ?? 400) : String(t.text).split('\n');
     let out = textBlock({ x: t.x, y: t.y, lines: lines.map((l) => applyCase(l, t.case)), size: t.size ?? 14, family: fam, weight: t.weight ?? 400, color: this.c(t.color ?? 'ink'), anchor: t.anchor ?? 'start', letterSpacing: t.letterSpacing ?? 0, italic: t.italic, opacity: t.opacity, lineHeight: t.lineHeight ?? 1.3 });
     if (t.rotate) out = `<g transform="rotate(${t.rotate} ${t.x} ${t.y})">${out}</g>`;
-    // Point captions stay native text; metadata lets measured checks find them
-    // even when they share a scientific module with their incident connectors.
+    // Standalone module callouts and authored captions stay native text; these
+    // non-paint wrappers let the existing measured connector checks find them.
+    // Node-owned text never passes through freeText. Point identity takes priority.
     if (t.pointLabel) out = `<g data-md-point-label="${esc(t.pointLabel)}" data-caption-id="${esc(t.id)}">${out}</g>`;
-    else if (!t.nativeModule && this.authored.texts.has(t)) out = `<g data-md-free-text="${esc(t.id ?? 'free-text-' + (i + 1))}">${out}</g>`;
+    else if (t.nativeModule || this.authored.texts.has(t)) out = `<g data-md-free-text="${esc(t.id ?? 'free-text-' + (i + 1))}">${out}</g>`;
     return out;
   }
 
