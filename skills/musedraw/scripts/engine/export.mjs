@@ -141,11 +141,13 @@ function runChecks({ W, H, readingProfile }) {
   const box = (el) => { const b = el.getBBox(); return { x: b.x, y: b.y, w: b.width, h: b.height }; };
   const inter = (a, b, pad = 0) => a.x < b.x + b.w - pad && b.x < a.x + a.w - pad && a.y < b.y + b.h - pad && b.y < a.y + a.h - pad;
   const textItems = [];
-  for (const g of document.querySelectorAll('g[data-md]')) {
-    for (const t of g.querySelectorAll(':scope > text, :scope > g > text')) {
-      if (!t.textContent.trim()) continue;
-      textItems.push({ owner: g.id, kind: g.dataset.md, b: box(t), pointCaption: !!t.closest('[data-md-point-label]'), text: t.textContent.slice(0, 40) });
-    }
+  // A nested node's text also belongs to its module's DOM subtree. Enumerate
+  // each real text once, assigning it to the nearest semantic owner so module
+  // labels still collide with child labels without a child colliding with itself.
+  for (const t of document.querySelectorAll('g[data-md] text')) {
+    if (!t.textContent.trim()) continue;
+    const g = t.closest('g[data-md]');
+    textItems.push({ owner: g.id, kind: g.dataset.md, b: box(t), pointCaption: !!t.closest('[data-md-point-label]'), text: t.textContent.slice(0, 40) });
   }
   // Text inside its node.
   const nodeBoxes = [];
