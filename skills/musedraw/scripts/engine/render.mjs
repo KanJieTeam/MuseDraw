@@ -753,6 +753,12 @@ class Ctx {
       return out;
     }
 
+    // The folder's divider ends its decorative top region. Lay out the entire
+    // inside content stack in the body without changing the physical node.
+    if (n.shape === 'folder') {
+      const divider = h * .22 * 1.8;
+      y += divider; h -= divider;
+    }
     const iconLeft = icon && align === 'left';
     const textX0 = x + pad + (iconLeft ? iconSize + 10 : 0);
     const avail = w - pad * 2 - (iconLeft ? iconSize + 10 : 0);

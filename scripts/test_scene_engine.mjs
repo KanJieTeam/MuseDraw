@@ -72,3 +72,39 @@ const folderSvg=render({autoFit:false,header:false,footer:false,size:[1200,720],
 const folderMetadata=folderSvg.match(/data-connection="([^"]+)"/)[1].replace(/&quot;/g,'"').replace(/&amp;/g,'&');
 nearPoint(JSON.parse(folderMetadata).points.at(-1),[948,585]);
 console.log('PASS folder contour ports, bbox fractions, boundary rays, sizing, gap and resolved SVG endpoint metadata');
+
+// A folder's inside content belongs below the divider, while its physical frame
+// and outside labels retain their existing coordinates.
+const nodeSvg=(node,t=theme)=>render({autoFit:false,header:false,footer:false,size:[1200,900],nodes:[{id:'content',...node}]},t);
+const textMarkup=svg=>[...svg.matchAll(/<text\b[^>]*>[\s\S]*?<\/text>/g)].map(m=>m[0]);
+const iconMarkup=svg=>[...svg.matchAll(/<g transform="translate\([^>]+>[\s\S]*?<\/g>/g)].map(m=>m[0]);
+const contentFolder={shape:'folder',x:100,y:100,w:300,h:280,size:24,label:'Archive'};
+for(const tagPos of ['above','below'])for(const content of [
+  {},{label:'Line one\nLine two'},{tag:'TAG',sub:'Supporting detail'},
+  {label:'First\nSecond',tag:'TAG',sub:'Sub one\nSub two'},
+  {valign:'top',tag:'TAG',sub:'Sub'},
+  {icon:'check',align:'left',sub:'Sub'},
+  {icon:'check',align:'left',valign:'top'},
+  {icon:'check',sub:'Sub'}
+]) {
+  const t=structuredClone(theme);t.node.tagPos=tagPos;t.tones.default.plate='#feed01';
+  const n={...contentFolder,...content},offset=n.h*.22*1.8;
+  const actual=nodeSvg(n,t),expected=nodeSvg({...n,shape:'box',y:n.y+offset,h:n.h-offset},t);
+  assert.deepEqual(textMarkup(actual),textMarkup(expected),'Folder content must use its entire body region');
+  assert.deepEqual(iconMarkup(actual),iconMarkup(expected),'Folder icons must use the same body region');
+  assert.equal(actual.match(/<rect\b[^>]*fill="#feed01"[^>]*\/>/)[0],expected.match(/<rect\b[^>]*fill="#feed01"[^>]*\/>/)[0]);
+  assert.match(actual,/data-box="100,100,300,280"/);
+}
+for(const labelPos of ['above','below','left','right','none']) {
+  assert.deepEqual(textMarkup(nodeSvg({...contentFolder,labelPos,sub:'Sub'})),textMarkup(nodeSvg({...contentFolder,shape:'box',labelPos,sub:'Sub'})));
+}
+for(const [shape,y]of [['box',227.68],['doc',227.68],['browser',236.68],['cylinder',236.08]]) {
+  const svg=nodeSvg({...contentFolder,shape,h:240});
+  nearPoint([Number(svg.match(/<text\b[^>]* y="([^"]+)"/)[1])],[y]);
+}
+const journal=await loadTheme('journal');
+const archiveBody=nodeSvg({shape:'folder',x:300,y:630,w:300,h:120,size:24,label:'项目归档'},journal);
+assert.match(archiveBody,/<text\b[^>]* y="721.44"/);
+assert.ok(archiveBody.includes('M300 750V630H408L435 656.4H600V750Z'));
+assert.ok(archiveBody.includes('M300 677.52H600'));
+console.log('PASS folder body text, multiline/tag/sub/icon/plate/top layout and outside/non-folder regressions');

@@ -154,11 +154,12 @@ function runChecks({ W, H, readingProfile }) {
     if (g.dataset.shape === 'text' || w === 0) continue;
     nodeBoxes.push({ id: g.id, b: { x, y, w, h }, shape: g.dataset.shape, overlap: g.dataset.overlap === '1' });
     if (g.dataset.label !== 'inside') continue;
+    const contentTop = g.dataset.shape === 'folder' ? y + h * .22 * 1.8 : y;
     for (const t of g.querySelectorAll('text:not(.md-step)')) {
       if (!t.textContent.trim()) continue;
       const b = box(t);
       const tol = 1.5;
-      if (b.x < x - tol || b.y < y - tol || b.x + b.w > x + w + tol || b.y + b.h > y + h + tol) warnings.push({ type: 'text-overflow', id: g.id, text: t.textContent.slice(0, 40) });
+      if (b.x < x - tol || b.y < contentTop - tol || b.x + b.w > x + w + tol || b.y + b.h > y + h + tol) warnings.push({ type: 'text-overflow', id: g.id, text: t.textContent.slice(0, 40) });
     }
   }
   // Text collisions between different elements.
