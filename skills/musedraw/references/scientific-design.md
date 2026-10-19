@@ -79,6 +79,26 @@ Primary examples for the different grammars:
 and [spatial flux budget](https://www.nature.com/articles/s43247-026-04133-3/figures/4).
 The data and scientific claims in those works are not reusable example facts.
 
+## Let spatial membership explain transport
+
+For a material section or apparatus, establish the solid/fluid regions, contacts
+and passable interfaces before placing transport. Keep a continuous substrate
+when a route, opening or contact is the relationship the reader needs to see.
+A pore is a visible opening in the barrier, rather than an arrow painted across
+an uninterrupted wall. In a qualitative size-exclusion illustration, small
+particles fit that opening and retained large particles stay upstream; these
+relative sizes do not imply measured dimensions or filtration performance.
+
+Keep the complete transport mark, including its stroke width and arrowhead,
+in the region it represents; cross a boundary only at the stated interface or
+opening. Water decorations inside an impermeable layer can imply a false route
+even when the main arrow is correct. Distinguish transport from annotation:
+a thin label leader may cross a wall to name an internal part, and a locating
+line links a detail to its source without representing flow. Resolve ambiguity
+through endpoint, line treatment and placement, rather than banning all such
+crossings. Ordinary checks do not infer material membership or validate a
+transport mechanism; free paths also do not follow an edited material boundary.
+
 ## Editable scientific object vocabulary
 
 In a normal scene, a block is a frame containing a native illustration:
