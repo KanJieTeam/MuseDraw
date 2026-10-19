@@ -1135,7 +1135,8 @@
             "table",
             "grid",
             "object-views",
-            "scientific"
+            "scientific",
+            "graph-view"
           ]
         },
         "x": {
@@ -1920,6 +1921,19 @@
                 "type": "number",
                 "exclusiveMinimum": 0
               }
+            }
+          }
+        },
+        {
+          "if": {"properties":{"type":{"const":"graph-view"}},"required":["type"]},
+          "then": {
+            "required":["id","source","select","x","y","w","h"],
+            "properties":{
+              "source":{"$ref":"#/definitions/id"},
+              "select":{"type":"array","minItems":1,"maxItems":100,"items":{"$ref":"#/definitions/id"}},
+              "guidePoints":{"type":"array","minItems":2,"maxItems":2,"items":{"$ref":"#/definitions/id"}},
+              "padding":{"type":"number","exclusiveMinimum":0},
+              "labelSize":{"type":"number","exclusiveMinimum":0}
             }
           }
         },

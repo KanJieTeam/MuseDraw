@@ -68,6 +68,13 @@ function comparison(kind){
     texts:[{id:'editable-name',nativeModule:'states-v0-object',x:45,y:40,text:kind+' comparison',size:20}]};
 }
 const comparisonCases=['duplex','laminate'].map(kind=>[kind+'-comparison',comparison(kind)]);
+function graphDetail(){
+  return {theme:'journal',size:[1200,600],header:false,footer:false,autoFit:false,
+    blocks:[{type:'graph-view',id:'detail',source:'overview',select:['a','b','c'],x:740,y:220,w:370,h:300,padding:36,guidePoints:['b','c'],labelSize:20},
+      motif({...specs[0],diameter:16,points:[...specs[0].points,{id:'outside',x:.9,y:.9,label:'Outside'}],links:[...specs[0].links,{from:'c',to:'outside'}]},'overview',65,90,500,340)],
+    texts:[{id:'editable-name',nativeModule:'overview',x:65,y:50,text:'Graph overview',size:20}]};
+}
+const detailCases=[['graph-detail',graphDetail()]];
 function near(a,b,message,tolerance=.002){assert.equal(a.length,b.length,message);a.forEach((v,i)=>assert.ok(Math.abs(v-b[i])<=tolerance,`${message}: ${v} != ${b[i]} at ${i}`));}
 function moduleOf(item,native){const groups=new Map(native.groups.map(g=>[g.id,g]));let p=item.kind?item.id:item.parent;while(p){const g=groups.get(p);if(g.kind==='module')return g.sourceId;p=g.parent;}return null;}
 async function parseXml(page,xml){return page.evaluate(xml=>{
@@ -113,7 +120,7 @@ try{
   const page=await browser.newPage();await page.route(/^https?:\/\//,route=>route.abort());
   const theme=await loadTheme('journal');
   async function load(source){const svg=withSystemFonts(render(source,theme));await page.setViewportSize({width:source.size[0],height:source.size[1]});await page.setContent(`<html><head><meta charset="utf-8"><style>body{margin:0}svg{display:block}</style></head><body>${svg}</body></html>`);await page.evaluate(()=>document.fonts.ready);return svg;}
-  for(const [name,source] of [...specs.map(s=>[s.kind,sceneFor(s)]),['combined',combined()],...comparisonCases]){
+  for(const [name,source] of [...specs.map(s=>[s.kind,sceneFor(s)]),['combined',combined()],...comparisonCases,...detailCases]){
     const dir=path.join(out,name);fs.mkdirSync(dir,{recursive:true});const result={name,passed:false};report.cases.push(result);
     try{
       fs.writeFileSync(path.join(dir,'scene.json'),JSON.stringify(source,null,2));
@@ -155,6 +162,15 @@ try{
         result.modules.push({id:module.id,nodes:expectedNodes.length,shapes:shapes.length,texts:texts.length,edges:edges.length});
       }
       result.xml=verifyXml(native,await parseXml(page,xml));
+      if(name==='graph-detail'){
+        const guides=native.edges.filter(e=>e.id.startsWith('detail/guide/'));
+        assert.equal(guides.length,2);assert.ok(guides.every(e=>!e.parent),'guides must remain outside both native modules');
+        assert.equal(prepared.edges.filter(e=>e.nativeModule==='detail').length,3);
+        assert.ok(!native.groups.some(g=>g.sourceId==='detail-outside'));
+        const overflow=await page.evaluate(()=>[...document.querySelectorAll('#scientific-detail text')].map(e=>e.getBoundingClientRect()).some(b=>b.left<740||b.top<220||b.right>1110||b.bottom>520));
+        assert.equal(overflow,false,'real browser glyph bounds fit detail frame');
+        result.detail={sourceOrderIndependent:true,inducedEdges:3,excludedOutsideNode:true,rootGuides:2,realGlyphsFit:true};
+      }
       if(name==='combined'){
         for(const id of ['ordinary-source','ordinary-target']){const g=native.groups.find(g=>g.sourceId===id);assert.ok(g);assert.equal(moduleOf(g,native),null);}
         for(const id of ['ordinary-link','motif-link'])assert.ok(native.edges.some(e=>e.id===id),`ordinary edge ${id} missing`);
@@ -175,4 +191,4 @@ try{
     console.log(`${result.passed?'PASS':'FAIL'} ${name}`);
   }
 }catch(error){report.error=error.stack;}
-finally{if(browser)await browser.close();report.passed=!report.error&&report.cases.length===specs.length+1+comparisonCases.length&&report.cases.every(c=>c.passed);report.finishedUTC=new Date().toISOString();fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));console.log(`Evidence: ${out}`);if(!report.passed)process.exitCode=1;}
+finally{if(browser)await browser.close();report.passed=!report.error&&report.cases.length===specs.length+1+comparisonCases.length+detailCases.length&&report.cases.every(c=>c.passed);report.finishedUTC=new Date().toISOString();fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));console.log(`Evidence: ${out}`);if(!report.passed)process.exitCode=1;}

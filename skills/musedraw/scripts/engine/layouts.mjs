@@ -6,6 +6,7 @@
 import { wrap } from './text.mjs';
 import { objectViews } from './object-views.mjs';
 import { scientificMotif } from './scientific-motifs.mjs';
+import { graphView } from './graph-view.mjs';
 const PI = Math.PI;
 const r2 = (n) => Math.round(n * 100) / 100;
 
@@ -15,7 +16,10 @@ export function expandBlocks(scene, theme) {
   scene.blocks.forEach((b, i) => {
     const fn = BLOCKS[b.type];
     if (!fn) throw new Error(`Unknown block type "${b.type}". Available: ${Object.keys(BLOCKS).join(', ')}`);
-    const res = fn({ id: b.id ?? `b${i + 1}`, ...b }, theme);
+    const input = { id: b.id ?? `b${i + 1}`, ...b };
+    const res = b.type === 'graph-view'
+      ? graphView(input, scene.blocks.find(source => source.id === b.source), theme)
+      : fn(input, theme);
     for (const k of ['zones', 'nodes', 'edges', 'texts', 'lines', 'paths', 'notes','nativeModules']) if (res[k]) out[k].push(...res[k]);
   });
   return out;
@@ -438,4 +442,4 @@ function grid(b, theme) {
   return { nodes, texts, paths };
 }
 
-export const BLOCKS = { tree, mindmap, timeline, gantt, matrix, funnel, cycle, fishbone, swimlane, table, grid, 'object-views': objectViews, scientific: scientificMotif };
+export const BLOCKS = { tree, mindmap, timeline, gantt, matrix, funnel, cycle, fishbone, swimlane, table, grid, 'object-views': objectViews, scientific: scientificMotif, 'graph-view': graphView };

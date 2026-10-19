@@ -22,6 +22,10 @@ families, with one dominant question and subordinate evidence.
 
 ## Cross-family decisions
 
+When overview and detail coexist, select the actual relation in the
+[detail method](scientific-details.md): same geometry, induced subgraph,
+representation mapping and sample association have different contracts.
+
 - **Visual weight follows the question.** A large object, decisive interaction
   or primary path can lead; headings, legends and guides remain subordinate.
   Do not assign the largest area to the longest paragraph by default.

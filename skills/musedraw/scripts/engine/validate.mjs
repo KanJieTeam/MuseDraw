@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import { expandBlocks } from './layouts.mjs';
 import { layoutSequence } from './sequence.mjs';
 import { objectViews } from './object-views.mjs';
+import { graphView } from './graph-view.mjs';
 
 const schema = JSON.parse(fs.readFileSync(new URL('../../references/scene.schema.json', import.meta.url), 'utf8'));
 const own = (o, key) => Object.hasOwn(o, key) && o[key] !== undefined;
@@ -111,6 +112,15 @@ export function validateScene(scene) {
   }
   for (const [i, block] of (scene.blocks ?? []).entries()) {
     const path = `/blocks/${i}`;
+    if (block.type === 'graph-view') {
+      const source = scene.blocks.find(candidate => candidate.id === block.source);
+      if (!source || source.type !== 'scientific' || source.kind !== 'graph')
+        issues.push({path:`${path}/source`,message:'must reference a direct scientific graph block in this scene'});
+      else if (!issues.length) {
+        try { graphView(block, source); }
+        catch (error) { issues.push({path,message:error.message}); }
+      }
+    }
     if (block.type === 'object-views') {
       const entities = unique(block.entities, `${path}/entities`, issues);
       const definitions = new Map(block.entities.map(e=>[e.id,e]));

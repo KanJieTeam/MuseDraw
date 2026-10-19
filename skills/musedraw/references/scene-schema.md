@@ -225,6 +225,12 @@ shapes and graph nodes. Processing relations remain ordinary source/target
 edges. Alignment guides, thermal arrows and cycle silhouettes are editable
 geometry and do not become causal edges. Internally `nativeModules:[{id}]` and
 `nativeModule:id` preserve the grouping; an unknown group reference is rejected.
+`graph-view` derives an induced subgraph from a direct scientific graph in the
+same scene: `id,source,select[],x,y,w,h`, optional positive `padding,labelSize`
+and two `guidePoints`. Source order does not matter. Names, positions, colours
+and all internal links come from the original definition. It is not an image
+crop or a calibrated enlargement; see [linked details](scientific-details.md).
+
 Use the scientific block rather than manually authoring this internal metadata.
 
 ### Exact replay of art-directed vectors

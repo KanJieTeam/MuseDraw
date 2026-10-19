@@ -70,9 +70,10 @@ the actual task. Diagnose once only if a needed read or render command fails.
   and select its visual family in the [scientific atlas](references/scientific-atlas.md).
   Read an example's method/scene only when its relationship actually fits.
   For paired sites and condition comparisons use the linked comparison method;
-  unrelated architecture examples are not required reading. Use native object motifs and the
+  for overview/detail correspondence use the [detail method](references/scientific-details.md).
+  Unrelated architecture examples are not required reading. Use native object motifs and the
   composition the mechanism requires; preserve the supplied relationships.
-  The two examples are concept-level candidates, not a journal-quality guarantee.
+  The worked examples teach composition; they are not a journal-quality guarantee.
 - **New flow or object states:** for ordinary directed workflows and simple matched
   object states, read [semantic composition](references/semantic-composition.md),
   translate the actual objects/steps/conditions into `composition.json`, and run

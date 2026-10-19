@@ -105,6 +105,9 @@ long explanations into document prose rather than adding a commentary sidebar.
 Use `zones`, `paths` and `lines` for the selection and leaders, ordinary `nodes`
 for graph objects, and `notes` only when a short anchored clarification is needed.
 Do not add “zoom” as a process step or invent magnification ratios.
+For a graph subset, use the [derived-view method](scientific-details.md) to keep
+its topology and positions attached to one source. Distinguish this from an
+image crop, a model transformation and a different sample/time/depth association.
 
 Reference: [layered-device overview, Fig. 1](https://www.nature.com/articles/s41563-026-02751-y).
 
