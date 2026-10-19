@@ -78,6 +78,17 @@ Use ordinary connected edges with explicit ports and one central spine; give
 details their own subordinate area. A short side label can explain a special
 operation. Don't repeat the entire pipeline to fill symmetrical columns.
 
+Shared inputs or output types do not make two processing chains identical.
+Keep each branch's actual operators and order, even when the branches have
+different lengths. Don't add a padding step, merge different transformations
+or duplicate a shared resource to make the layout symmetrical.
+
+Keep parameters distinct from the samples or signals being processed. For example,
+a threshold can sit beside the comparison that uses it, with a separate relation;
+it is not another step in the signal path. Likewise, a reference input should
+reach the operation that consumes it rather than an attractive nearby junction.
+Use position, a short label or a distinct line treatment to make the role clear.
+
 Reference: [SVPG, Fig. 1](https://www.nature.com/articles/s41592-026-03219-2).
 
 ## Matched comparison · 同构对照
