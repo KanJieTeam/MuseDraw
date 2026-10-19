@@ -68,6 +68,9 @@ the actual task. Diagnose once only if a needed read or render command fails.
   its report. Read source/reference files only to resolve a concrete problem.
 - **New scientific schematic:** read [scientific composition](references/scientific-design.md)
   and select its visual family in the [scientific atlas](references/scientific-atlas.md).
+  Use ordinary scene objects/blocks and connected edges when relationships must
+  stay attached during editing. The vector replay route preserves artwork;
+  its free connector paths do not become node-attached graph edges.
   Read an example's method/scene only when its relationship actually fits.
   For paired sites and condition comparisons use the linked comparison method;
   for overview/detail correspondence use the [detail method](references/scientific-details.md).

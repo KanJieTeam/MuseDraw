@@ -256,8 +256,10 @@ Use the scientific block rather than manually authoring this internal metadata.
 
 Gallery cases 102–105 use `type: "vector"`, `theme`, `size` and `nativeSvg`.
 They preserve approved native text and geometry through the same render/export
-command. Static-SVG safety checks and matching width/height/viewBox are required;
-images, scripts and external resources are rejected. Graph primitives cannot be
+command. Static-SVG safety checks and matching width/height/viewBox are required.
+The SVG root must also declare a matching `data-theme` (for example,
+`data-theme="journal"` when the scene has `theme: "journal"`).
+Images, scripts and external resources are rejected. Graph primitives cannot be
 mixed into this format. Edit the native artwork for revisions; changing a named
 theme does not restyle fixed vector artwork. Use ordinary graph scenes for
 automatic theme switching. These four cases export editable text and shapes;
