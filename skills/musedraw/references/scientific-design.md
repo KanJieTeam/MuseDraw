@@ -191,6 +191,9 @@ paths are shapes, not `-layer-N` connection terminals. In `object-views`, replac
 `device-rest-patch-electrode-left`. In a laminate's own `states` array the
 prefix is `block.id-state-` plus `encodeURIComponent(state.id)`. Connect a lead
 to its electrode node; a whole-object anchor is not an electrical contact.
+Right-side laminate labels pack near layer ends with clearance around a declared
+electrode's horizontal lead. Enlarge the frame if those rows cannot fit; this
+local clearance does not route or avoid arbitrary external connectors.
 
 Use normal scene `edges` with actual `from/to` IDs for processing, causal or
 feedback relations. Connect the complete resource when the resource is consumed;

@@ -6,6 +6,42 @@ const number = value => Number.isFinite(value);
 const r = value => Number(value.toFixed(6));
 const plain = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 
+// Minimise squared displacement from fixed layer ends with ordered, spaced rows.
+// Subtracting the required spacing turns this into bounded isotonic regression.
+function packLabelCentres(anchors, spacing, low, high) {
+  if (anchors.length && high-low < (anchors.length-1)*spacing-1e-8) return null;
+  const blocks = [];
+  anchors.forEach((anchor, i) => {
+    blocks.push({first:i, last:i, sum:anchor-i*spacing, count:1});
+    while (blocks.length > 1) {
+      const a=blocks[blocks.length-2], b=blocks[blocks.length-1];
+      if (a.sum/a.count <= b.sum/b.count) break;
+      blocks.splice(-2,2,{first:a.first,last:b.last,sum:a.sum+b.sum,count:a.count+b.count});
+    }
+  });
+  const ceiling=high-(anchors.length-1)*spacing, centres=[];
+  for (const block of blocks) {
+    const offset=Math.max(low,Math.min(ceiling,block.sum/block.count));
+    for (let i=block.first;i<=block.last;i++) centres[i]=offset+i*spacing;
+  }
+  return centres;
+}
+
+// Known electrode exits share a fixed y. Reserve one glyph-safe band there;
+// evaluate ordered splits without guessing or rerouting any external wires.
+function packContactLabels(anchors, spacing, low, high, contactY, halfBand) {
+  let best=null, bestCost=Infinity;
+  for (let split=0;split<=anchors.length;split++) {
+    const above=packLabelCentres(anchors.slice(0,split),spacing,low,Math.min(high,contactY-halfBand));
+    const below=packLabelCentres(anchors.slice(split),spacing,Math.max(low,contactY+halfBand),high);
+    if (!above || !below) continue;
+    const centres=[...above,...below];
+    const cost=centres.reduce((sum,y,i)=>sum+(y-anchors[i])**2,0);
+    if (cost<bestCost-1e-9) {best=centres;bestCost=cost;}
+  }
+  return best;
+}
+
 /**
  * Expand one frame into native geometry, without mutating b or p.
  * thickness, gap and electrode width are logical pixels. deflection is the
@@ -79,6 +115,18 @@ export function laminateParts(b, p = {}, size = b?.size ?? 16) {
     if (!number(ew) || ew <= 0 || ew >= width / 2) bad('electrode width must be positive and less than half the material width');
     electrode = {layer: e.layer, width: ew, fill: colour(e.fill ?? ink)};
   }
+  let labelY = top;
+  const labelAnchors = layers.flatMap(layer => {
+    const centre = labelY + layer.thickness / 2;
+    labelY += layer.thickness + gap;
+    return labelled.includes(layer) ? [centre] : [];
+  });
+  const labelLow=b.y+inset+size*.85, labelHigh=b.y+b.h-inset-size*.5;
+  const contactY=electrode ? top+layers.slice(0,electrode.layer).reduce((sum,layer)=>sum+layer.thickness+gap,0)+layers[electrode.layer].thickness/2 : null;
+  const labelCentres=electrode && labelled.length
+    ? packContactLabels(labelAnchors,size*1.35,labelLow,labelHigh,contactY,size*.9+Math.max(2,stroke*1.5))
+    : packLabelCentres(labelAnchors,size*1.35,labelLow,labelHigh);
+  if (!labelCentres) bad('labels do not fit around electrode contact; enlarge the frame or use labelSide none');
   const end = electrode?.width ?? 0;
   const a = left + end, z = right - end, mid = (a + z) / 2;
   const c1 = a + (z - a) / 6, c2 = a + (z - a) / 3;
@@ -99,7 +147,7 @@ export function laminateParts(b, p = {}, size = b?.size ?? 16) {
     }
     if (labelSide === 'right' && layer.label) {
       const index = labelled.indexOf(layer);
-      const centre = b.y + inset + innerH * (index + 0.5) / labelled.length;
+      const centre = labelCentres[index];
       const tx = right + lead, anchorY = y + layer.thickness / 2;
       out.paths.push({id: `${layer.id}-leader`, d: `M${r(right)} ${r(anchorY)}L${r(right + lead * 0.4)} ${r(anchorY)}L${r(tx - 2)} ${r(centre)}`, fill: 'none', stroke: ink, width: stroke * 0.7});
       out.texts.push({id: `${layer.id}-label`, x: r(tx), y: r(centre + size * 0.3), text: layer.label, size, color: ink, anchor: 'start'});

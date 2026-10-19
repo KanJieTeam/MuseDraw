@@ -150,3 +150,53 @@ test('load is opt-in, a single letter and requires existing headroom inside each
   assert.throws(() => laminateParts({...base, h: 100, load: 'F'}, palette), /load and force symbol do not fit/);
   assert.throws(() => laminateParts({...base, w: 20, electrodes: undefined, load: 'F'}, palette), /load and force symbol do not fit/);
 });
+
+test('crowded right labels pack around actual fixed contacts rather than unused bend reserve', () => {
+  const input={id:'packed',x:0,y:0,w:500,h:300,labelSide:'right',gap:0,
+    layers:['A','B','C'].map(id=>({id,label:id,fill:'#abc',thickness:4}))};
+  const flat=laminateParts(input,{},14),bent=laminateParts({...input,deflection:.4},{},14);
+  assert.deepEqual(flat.texts,bent.texts);
+  assert.deepEqual(flat.paths.filter(p=>p.id.endsWith('-leader')),bent.paths.filter(p=>p.id.endsWith('-leader')));
+  assert.deepEqual(flat.nodes,bent.nodes);
+  const centres=flat.texts.map(t=>t.y-14*.3);
+  [71.1,90,108.9].forEach((expected,i)=>close(centres[i],expected));
+  flat.paths.filter(p=>p.id.endsWith('-leader')).forEach((p,i)=>close(commands(p)[0][2],[86,90,94][i]));
+});
+
+test('well-separated labels stay on their actual layer midpoint and sparse labels keep order', () => {
+  const input={id:'spaced',x:0,y:0,w:500,h:500,labelSide:'right',gap:10,
+    layers:[{id:'a',label:'A',fill:'#abc',thickness:50},{id:'middle',fill:'#bca',thickness:10},{id:'c',label:'C',fill:'#cab',thickness:50}]};
+  const out=laminateParts(input,{},14);
+  assert.deepEqual(out.texts.map(t=>t.text),['A','C']);
+  for(const t of out.texts){const leader=out.paths.find(p=>p.id===t.id.replace(/-label$/,'-leader'));close(t.y-14*.3,commands(leader)[0][2]);}
+});
+
+test('packed label centres respect minimum spacing and frame limits; infeasible frames reject', () => {
+  const input={id:'bounded',x:15,y:20,w:600,h:200,labelSide:'right',
+    layers:Array.from({length:8},(_,i)=>({id:String(i),label:'Layer '+i,fill:'#abc',thickness:2}))};
+  const out=laminateParts(input,{},16),centres=out.texts.map(t=>t.y-16*.3);
+  for(let i=0;i<centres.length;i++){
+    assert.ok(centres[i]>=input.y+16*.85&&centres[i]<=input.y+input.h-16*.5);
+    if(i)assert.ok(centres[i]-centres[i-1]>=16*1.35-1e-5);
+  }
+  assert.throws(()=>laminateParts({...input,h:150},{},16),/labels do not fit/);
+  assert.throws(()=>laminateParts({...input,w:50},{},16),/labels do not fit/);
+});
+
+test('declared electrode exits reserve a glyph-safe band without reordering labels', () => {
+  const input={id:'contacts',x:0,y:0,w:500,h:300,labelSide:'right',gap:0,
+    layers:['A','B','C'].map(id=>({id,label:id,fill:'#abc',thickness:4})),electrodes:{layer:1,width:18}};
+  const out=laminateParts(input,{},14),centres=out.texts.map(t=>t.y-14*.3);
+  [75.4,104.6,123.5].forEach((expected,i)=>close(centres[i],expected));
+  assert.deepEqual(out.texts.map(t=>t.text),['A','B','C']);
+  for(const c of centres)assert.ok(Math.abs(c-90)>=14*.9+2-1e-5);
+  out.paths.filter(p=>p.id.endsWith('-leader')).forEach((p,i)=>close(commands(p)[0][2],[86,90,94][i]));
+  const bent=laminateParts({...input,deflection:.4},{},14);assert.deepEqual(bent.nodes,out.nodes);assert.deepEqual(bent.texts,out.texts);
+});
+
+test('a row-feasible frame rejects when the declared contact band leaves no ordered fit', () => {
+  const input={id:'tight-contact',x:0,y:0,w:950,h:205,size:18,labelSide:'right',
+    layers:Array.from({length:8},(_,i)=>({id:String(i),label:'Layer '+i,fill:'#abc',thickness:6}))};
+  assert.doesNotThrow(()=>laminateParts(input,{},18));
+  assert.throws(()=>laminateParts({...input,electrodes:{layer:1,width:18}},{},18),/labels do not fit around electrode contact/);
+});
