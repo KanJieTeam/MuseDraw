@@ -64,6 +64,12 @@ the question concerns flows between equipment. For operating totals and work
 orders, a chart-and-table composition can be sufficient. Choose the view from
 the relationship, not from the expectation that every large screen needs a map.
 
+Every encoding needs a reading key. Multicolour geographic grids, point height,
+flow lines and heat fields should state what their colour, position or size
+means, including units or a legend when needed. Do not infer that meaning from
+a decorative preview. Likewise, a pale theme still needs text contrast; changing
+a dark screen to pastel does not by itself improve its information hierarchy.
+
 Study source: [EasyV public marketplace](https://easyv.cloud/market). Its previews
 are reference material, not reusable production facts or a guarantee of quality.
 Further per-case visual records and user review must test these decisions.

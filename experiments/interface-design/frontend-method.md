@@ -68,6 +68,12 @@ an interface. Record only what is actually visible. Depth can clarify a real
 control (for example, a musical key or knob), but a row of shadowed information
 cards should not inherit it merely because the effect looks polished.
 
+Record visible failures as well as useful choices: overlapping glyphs, broken
+states or a cover labelled as a login page without a visible login form. A
+consistent palette is not evidence of a complete interface. A bundle advertised
+as hundreds of screens is one observed reference until its individual screens
+have actually been inspected and distinguished.
+
 At the intended desktop and mobile sizes, identify what the eye sees first and
 whether the next action is clear. Check the longest text, empty/error/success
 states and keyboard path. A passing browser test does not decide whether it
