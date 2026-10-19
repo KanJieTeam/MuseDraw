@@ -181,8 +181,16 @@ Each block exports a native group; its text and shapes remain separate editable
 objects. The whole-object terminal is `block.id`. A graph point terminal is
 `block.id + '-' + encodeURIComponent(point.id)`; feature cells use
 `block.id-sheet-L-cell-R-C`; network units use `block.id-layer-L-unit-N`;
-physical layers use `block.id-layer-N`. Numbers are zero-based. Stable IDs make
+projected `kind:"layers"` layers use `block.id-layer-N`. Numbers are zero-based. Stable IDs make
 renaming independent from geometry.
+
+A `laminate` with `electrodes` exports the actual contact nodes
+`block.id-electrode-left` and `block.id-electrode-right`. Its material layer
+paths are shapes, not `-layer-N` connection terminals. In `object-views`, replace
+`block.id` with the documented `object-views` entity node ID, for example
+`device-rest-patch-electrode-left`. In a laminate's own `states` array the
+prefix is `block.id-state-` plus `encodeURIComponent(state.id)`. Connect a lead
+to its electrode node; a whole-object anchor is not an electrical contact.
 
 Use normal scene `edges` with actual `from/to` IDs for processing, causal or
 feedback relations. Connect the complete resource when the resource is consumed;
