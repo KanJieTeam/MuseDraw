@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f2e9">
+  <title>慢行星期六 · 城市休闲骑行</title>
+  <style>
+    :root{--paper:#f3f2e9;--ink:#263c31;--muted:#657267;--green:#dce6cd;--orange:#ec783d;--line:#cbd1c2;--white:#fffef7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:5px}::selection{background:#f5b28f;color:var(--ink)}.wrap{width:min(1184px,calc(100% - 64px));margin:auto}.header{display:flex;align-items:center;justify-content:space-between;min-height:102px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:1px}.brand-mark{height:36px;width:36px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;transform:rotate(-15deg);font-size:21px}.nav{display:flex;align-items:center;gap:33px;font-size:14px}.nav a:hover{color:#b84e1c}.nav .nav-cta{border:1px solid var(--ink);border-radius:30px;padding:8px 21px}.hero{padding:74px 0 44px;display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center}.eyebrow{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:2.2px}.eyebrow:before{content:"";width:8px;height:8px;background:var(--orange);border-radius:50%}h1{font-size:clamp(58px,6.5vw,88px);line-height:1.16;letter-spacing:-4px;margin:24px 0 22px;font-weight:900}h1 em{font-style:normal;color:#6d8558}.hero-copy{font-size:16px;max-width:380px;color:var(--muted);margin:0 0 28px}.hero-actions{display:flex;gap:24px;align-items:center}.button{border:0;background:var(--ink);color:var(--white);font-weight:700;border-radius:6px;padding:15px 25px;display:inline-flex;gap:32px;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,transform .2s}.button:hover{background:#42604b;transform:translateY(-2px)}.hero-actions .small{font-size:13px;color:var(--muted)}.hero-art{height:430px;position:relative;background:var(--green);border-radius:50% 50% 8px 8px;overflow:hidden}.art-caption{position:absolute;bottom:20px;left:25px;right:25px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:1.8px;z-index:1}.hero-art svg{width:100%;height:100%;display:block}.date-badge{position:absolute;top:43px;right:27px;border:1px solid var(--ink);border-radius:50%;width:100px;height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--paper);transform:rotate(12deg);line-height:1.3;font-size:11px}.date-badge strong{font-size:28px;font-family:Georgia,serif}.facts{display:grid;grid-template-columns:1fr 1.3fr 1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:13px;padding:28px 0}.fact{padding:0 28px;border-right:1px solid var(--line)}.fact:first-child{padding-left:0}.fact:last-child{border:0}.fact-label{font-size:11px;color:var(--muted);letter-spacing:1.8px;margin-bottom:5px}.fact strong{font-size:21px;letter-spacing:-.5px}.fact span{font-size:12px;display:block;color:var(--muted);margin-top:3px}.section{padding:84px 0}.section-tag{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--muted);margin-bottom:15px}.section h2{font-size:34px;line-height:1.4;letter-spacing:-1px;margin:0}.section-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}.section-intro p{margin:0;color:var(--muted);font-size:15px;line-height:1.9}.route-card{margin-top:36px;border:1px solid var(--line);background:var(--white);border-radius:8px;display:grid;grid-template-columns:1.2fr 1fr;overflow:hidden}.route-graphic{min-height:255px;position:relative;background:#e8eddf;display:flex;flex-direction:column;justify-content:center;padding:35px 38px}.route-line{display:flex;align-items:center;margin:18px 0 16px}.node{height:15px;width:15px;background:var(--ink);border:4px solid #e8eddf;outline:2px solid var(--ink);border-radius:50%;flex-shrink:0}.node.end{background:var(--orange);outline-color:var(--orange)}.dashes{flex:1;border-top:2px dashed #839678;position:relative}.route-pin-labels{display:flex;justify-content:space-between;font-size:12px}.distance{font-size:52px;letter-spacing:-3px;font-weight:800;line-height:1}.distance span{font-size:15px;letter-spacing:0;font-weight:400;margin-left:5px}.graphic-note{font-size:10px;color:var(--muted);margin-top:20px;letter-spacing:.4px}.route-details{padding:30px 34px;display:grid;gap:18px}.route-item{display:grid;grid-template-columns:30px 1fr;gap:12px}.step{color:#8d9a82;font-family:Georgia,serif;font-size:18px}.route-item strong{font-size:14px}.route-item p{font-size:12px;color:var(--muted);margin:3px 0 0}.essentials{padding-top:0}.essentials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}.tip{border-top:1px solid var(--ink);padding:24px 0 5px}.tip-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:50%;background:var(--green);margin-bottom:17px}.tip-icon svg{width:21px;height:21px;stroke:var(--ink);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}.tip h3{font-size:18px;margin:0 0 10px}.tip p{font-size:14px;color:var(--muted);margin:0;max-width:320px}.signup-area{background:var(--ink);color:var(--white);padding:68px 0 64px}.signup-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:85px}.signup-area .section-tag{color:#bdc9b6}.signup-area h2{font-size:43px;line-height:1.4;margin:0 0 20px;letter-spacing:-1px}.signup-copy{color:#c2cbbd;font-size:14px;max-width:310px}.signup-summary{display:flex;gap:32px;margin:32px 0 25px}.signup-summary strong{font-size:28px;line-height:1.2}.signup-summary span{font-size:11px;display:block;color:#c2cbbd;margin-top:7px}.demo-label{display:inline-block;border:1px solid #627364;border-radius:3px;padding:4px 9px;font-size:11px;color:#d6dfd0}.signup-form{background:var(--paper);color:var(--ink);border-radius:8px;padding:30px}.form-row{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.field{margin-bottom:20px}.field label{font-size:13px;font-weight:700;display:block;margin-bottom:8px}.field input,.field select{width:100%;min-width:0;padding:11px 12px;border:1px solid #bcc6b5;border-radius:4px;background:var(--white);color:var(--ink);height:48px;font-size:14px}.field input::placeholder{color:#969f91}.field input[aria-invalid=true],.field select[aria-invalid=true]{border-color:#a53524;box-shadow:0 0 0 1px #a53524}.error{font-size:11px;line-height:1.5;color:#a53524;margin:6px 0 0;display:none}.error:not(:empty){display:block}.helper{font-size:11px;color:var(--muted);margin:6px 0 0}.submit{width:100%;background:var(--orange);color:#263c31;justify-content:space-between;margin-top:3px}.submit:hover{background:#f18d59}.privacy{font-size:11px;line-height:1.7;color:var(--muted);margin:12px 0 0}.success{margin-top:20px;border:1px solid #9aae8c;border-radius:5px;padding:17px;background:#e2ebd8}.success[hidden]{display:none}.success h3{font-size:16px;margin:0 0 7px}.success p{font-size:13px;margin:0 0 7px}.success small{font-size:11px;color:var(--muted);display:block}.footer{padding:25px 0 28px;display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.footer strong{font-size:13px;color:var(--ink);letter-spacing:1px}.arrow{font-size:20px;line-height:1}
+    @media(min-width:1450px){.hero{padding-top:85px;padding-bottom:55px}}@media(max-width:900px){.wrap{width:calc(100% - 44px)}.hero{gap:20px;padding-top:48px}.hero-art{height:370px}h1{font-size:64px}.date-badge{width:80px;height:80px;right:15px;top:35px}.date-badge strong{font-size:23px}.hero-copy{font-size:14px}.hero-actions{gap:16px}.hero-actions .small{font-size:11px}.fact{padding:0 18px}.fact strong{font-size:17px}.section{padding:64px 0}.section-intro{gap:30px}.section h2{font-size:29px}.signup-grid{gap:35px}.signup-area h2{font-size:35px}.signup-form{padding:24px}.form-row{gap:12px}.essentials{padding-top:0}}
+    @media(max-width:620px){.wrap{width:calc(100% - 40px)}.header{min-height:78px}.brand{font-size:14px;gap:9px}.brand-mark{width:30px;height:30px;font-size:18px}.nav{gap:0}.nav>a:not(.nav-cta){display:none}.nav .nav-cta{padding:6px 14px;font-size:12px}.hero{grid-template-columns:1fr;padding:37px 0 28px;gap:33px}.eyebrow{font-size:10px}h1{font-size:66px;margin-top:19px;letter-spacing:-3px}.hero-copy{max-width:340px;font-size:14px;margin-bottom:23px}.hero-art{height:340px;max-width:440px;width:100%;margin:auto;border-radius:45% 45% 6px 6px}.hero-actions{gap:22px}.hero-actions .small{font-size:12px}.button{padding:13px 22px}.date-badge{top:28px;right:22px}.facts{grid-template-columns:1fr 1fr;padding:5px 0;margin-top:0}.fact{padding:19px 13px 19px 0;border-right:0}.fact:nth-child(even){padding-left:17px;border-left:1px solid var(--line)}.fact:nth-child(-n+2){border-bottom:1px solid var(--line)}.fact strong{font-size:18px}.fact-label{font-size:10px}.fact span{font-size:11px}.section{padding:50px 0}.section-intro{grid-template-columns:1fr;gap:18px}.section h2{font-size:28px}.section-intro p{font-size:14px}.section-tag{font-size:10px;margin-bottom:11px}.route-card{grid-template-columns:1fr;margin-top:25px}.route-graphic{min-height:220px;padding:30px}.route-details{padding:26px;gap:19px}.essentials{padding-top:0}.essentials-grid{grid-template-columns:1fr;gap:19px;margin-top:24px}.tip{display:grid;grid-template-columns:39px 1fr;gap:0 15px;padding-top:21px}.tip-icon{grid-row:1/3;margin:0}.tip h3{font-size:16px;margin-bottom:6px}.tip p{font-size:13px;max-width:none}.signup-area{padding:45px 0}.signup-grid{grid-template-columns:1fr;gap:29px}.signup-area h2{font-size:34px;margin-bottom:13px}.signup-copy{max-width:none;margin-bottom:0}.signup-summary{margin:23px 0 19px}.signup-summary strong{font-size:24px}.signup-form{padding:22px}.form-row{grid-template-columns:1fr}.form-row .field{margin-bottom:18px}.field{margin-bottom:18px}.footer{gap:16px;align-items:start;padding:23px 0}.footer>span{text-align:right;max-width:180px}.privacy{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <a class="brand" href="#" aria-label="慢行星期六首页"><span class="brand-mark" aria-hidden="true">↗</span>慢行星期六</a>
+      <nav class="nav" aria-label="主要导航"><a href="#route">骑行路线</a><a href="#notes">出发准备</a><a class="nav-cta" href="#signup">一起出发 ↗</a></nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="eyebrow">周末，把时间交给车轮</div>
+          <h1 id="hero-title">慢一点，<br>也<em>很好。</em></h1>
+          <p class="hero-copy">把闹钟拨早一点，把周末过慢一点。<br>一段 18 公里的城市休闲骑行，<br>从江边出发，发现平日错过的风景。</p>
+          <div class="hero-actions"><a class="button" href="#signup">报名一起骑 <span class="arrow" aria-hidden="true">↗</span></a><span class="small">免费参加 · 总名额 24 人</span></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="暖阳、绿地与一辆自行车的插画">
+          <svg viewBox="0 0 550 430" aria-hidden="true" focusable="false">
+            <circle cx="163" cy="102" r="49" fill="#ef8b4e"/>
+            <path d="M-20 266 Q120 150 277 253 T590 220 L590 450H-20Z" fill="#b4c79e"/>
+            <path d="M-20 332 Q167 207 326 292 T590 272 L590 450H-20Z" fill="#8ca67b"/>
+            <path d="M-20 392 Q190 274 590 354" fill="none" stroke="#e9eddd" stroke-width="55"/>
+            <path d="M-20 392 Q190 274 590 354" fill="none" stroke="#a0ad92" stroke-width="2" stroke-dasharray="12 14"/>
+            <g fill="none" stroke="#263c31" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="151" cy="310" r="60" fill="#e8ecdc"/><circle cx="381" cy="310" r="60" fill="#e8ecdc"/>
+              <circle cx="151" cy="310" r="48" stroke="#a5b197" stroke-width="1.5"/><circle cx="381" cy="310" r="48" stroke="#a5b197" stroke-width="1.5"/>
+              <path d="M151 310 208 211 270 310H151L319 218 381 310M270 310 200 194" stroke="#eb7840" stroke-width="8"/>
+              <path d="m319 218-12-32h36q15 0 15 12t-15 12M185 194h42"/>
+              <circle cx="270" cy="310" r="10" fill="#263c31"/>
+              <path d="m270 310 20 14h16" stroke-width="4"/>
+            </g>
+            <g stroke="#526d45" fill="none" stroke-width="3" stroke-linecap="round"><path d="M46 311v-36m0 16-10-12m10 2 10-12M493 312v-48m0 26-14-15m14 2 14-17"/></g>
+            <path d="m255 98 7-4 7 4m12-15 7-4 7 4" fill="none" stroke="#6a8058" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="date-badge"><span>OCTOBER</span><strong>10.24</strong><span>星期六 · 08:00</span></div>
+          <div class="art-caption"><span>TAKE THE SLOW WAY.</span><span>享受沿途</span></div>
+        </div>
+      </section>
+      <div class="facts" aria-label="活动关键信息">
+        <div class="fact"><div class="fact-label">集合时间 / WHEN</div><strong><time datetime="2026-10-24T08:00:00+08:00">10 月 24 日 08:00</time></strong><span>2026 年 · 星期六</span></div>
+        <div class="fact"><div class="fact-label">出发地点 / WHERE</div><strong>江滨公园南门</strong><span>在这里集合，一起出发</span></div>
+        <div class="fact"><div class="fact-label">骑行距离 / DISTANCE</div><strong>18 公里</strong><span>城市休闲骑行</span></div>
+        <div class="fact"><div class="fact-label">活动费用 / FEE</div><strong>免费</strong><span>总名额 24 人</span></div>
+      </div>
+      <section class="section" id="route" aria-labelledby="route-title">
+        <div class="section-tag">01 / 这一程，慢慢来</div>
+        <div class="section-intro"><h2 id="route-title">不用赶路，<br>只管享受沿途。</h2><p>这是一场以放松和欣赏城市为目的的休闲骑行。普通自行车就能加入，不需要专业装备或竞速目标。带上你的车，也可以约上朋友，在星期六的早晨一起转动车轮。</p></div>
+        <div class="route-card">
+          <div class="route-graphic">
+            <div class="distance">18<span>公里 / 城市休闲路线</span></div>
+            <div class="route-line" aria-hidden="true"><span class="node"></span><span class="dashes"></span><span class="node end"></span></div>
+            <div class="route-pin-labels"><strong>江滨公园南门出发</strong><span>沿途慢骑</span></div>
+            <div class="graphic-note">路线示意，非实际地图；具体道路与终点待确认。</div>
+          </div>
+          <div class="route-details">
+            <div class="route-item"><span class="step">01</span><div><strong>08:00 · 江滨公园南门集合</strong><p>请提前检查车辆，带齐骑行所需物品。</p></div></div>
+            <div class="route-item"><span class="step">02</span><div><strong>18 公里 · 城市休闲骑行</strong><p>按自己的能力参与，沿途遵守交通规则。</p></div></div>
+            <div class="route-item"><span class="step">03</span><div><strong>关于路线的更多信息</strong><p>具体途经道路、终点与结束时间尚未公布。</p></div></div>
+          </div>
+        </div>
+      </section>
+      <section class="section essentials" id="notes" aria-labelledby="notes-title">
+        <div class="section-tag">02 / 出发前的小准备</div><h2 id="notes-title">轻装出发，安全第一。</h2>
+        <div class="essentials-grid">
+          <article class="tip"><div class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13a9 9 0 0 1 18 0v2H3Zm3-1 2-5m3 5 1-7m3 7-1-6m4 9v4h-5"/></svg></div><h3>头盔，请一定带上</h3><p>参与者须自备并佩戴头盔。出发前检查刹车、轮胎与车铃，确认车辆状态良好。</p></article>
+          <article class="tip"><div class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="16" r="4"/><circle cx="19" cy="16" r="4"/><path d="m5 16 5-9 4 9H5l11-7 3 7M8 7h4m4 2-1-4h3"/></svg></div><h3>普通自行车，就够了</h3><p>自备适合自己的自行车，无需专业车型。建议穿舒适的衣服和鞋子，随身带水。</p></article>
+          <article class="tip"><div class="tip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 3 7v6c0 5 9 8 9 8s9-3 9-8V7Z"/><path d="m8 12 3 3 5-6"/></svg></div><h3>照顾自己，也照顾彼此</h3><p>遵守交通信号，注意行人与路况。根据身体状况安排骑行，保持安全车距，不追逐竞速。</p></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <section class="signup-area" id="signup" aria-labelledby="signup-title">
+    <div class="wrap signup-grid">
+      <div><div class="section-tag">03 / 给周末留一点风</div><h2 id="signup-title">这个星期六，<br>一起慢慢骑。</h2><p class="signup-copy">一个人来，或和朋友结伴。<br>填写下方信息，试试报名流程。</p><div class="signup-summary"><div><strong>¥ 0</strong><span>免费参加</span></div><div><strong>24 人</strong><span>活动总名额</span></div><div><strong>1–4 人</strong><span>每次可报名人数</span></div></div><span class="demo-label">本地演示 · 不发送数据</span></div>
+      <form class="signup-form" id="signup-form" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="name">姓名 <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" placeholder="怎么称呼你？" autocomplete="name" maxlength="30" required aria-describedby="name-error"><p class="error" id="name-error"></p></div>
+          <div class="field"><label for="count">参加人数 <span aria-hidden="true">*</span></label><select id="count" name="count" required aria-describedby="count-error"><option value="1">1 人</option><option value="2">2 人</option><option value="3">3 人</option><option value="4">4 人</option></select><p class="error" id="count-error"></p></div>
+        </div>
+        <div class="field"><label for="contact">联系方式 <span aria-hidden="true">*</span></label><input id="contact" name="contact" type="text" placeholder="填写手机号或邮箱" autocomplete="email" maxlength="100" required aria-describedby="contact-helper contact-error"><p class="helper" id="contact-helper">支持中国大陆手机号或邮箱。</p><p class="error" id="contact-error"></p></div>
+        <button class="button submit" type="submit"><span>提交报名</span><span class="arrow" aria-hidden="true">↗</span></button>
+        <p class="privacy">这是虚构活动的报名页原型。提交后仅在本页显示示例确认，信息不会发送或保存，也不会预留真实名额。</p>
+        <div class="success" id="confirmation" role="status" aria-live="polite" tabindex="-1" hidden><h3>✓ 示例报名确认已生成</h3><p id="confirmation-message"></p><small>2026 年 10 月 24 日 08:00 · 江滨公园南门<br>此为本地演示结果，不代表真实报名成功。</small></div>
+      </form>
+    </div>
+  </section>
+  <footer class="wrap footer"><strong>慢行星期六</strong><span>让车轮转一转，让日子慢一点。<br>虚构活动 · 网页原型</span></footer>
+  <script>
+    (() => {
+      const form = document.getElementById('signup-form');
+      const fields = ['name', 'count', 'contact'];
+      const confirmation = document.getElementById('confirmation');
+      function validate(id) {
+        const input = document.getElementById(id);
+        const value = input.value.trim();
+        let error = '';
+        if (id === 'name' && !value) error = '请填写姓名。';
+        if (id === 'count' && !['1', '2', '3', '4'].includes(value)) error = '请选择 1–4 人。';
+        if (id === 'contact') {
+          if (!value) error = '请填写手机号或邮箱。';
+          else if (!/^1[3-9]\d{9}$/.test(value) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) error = '请输入有效的 11 位手机号或邮箱。';
+        }
+        document.getElementById(id + '-error').textContent = error;
+        input.setAttribute('aria-invalid', error ? 'true' : 'false');
+        return !error;
+      }
+      fields.forEach(id => {
+        const input = document.getElementById(id);
+        input.addEventListener('blur', () => { if (input.value || input.getAttribute('aria-invalid') === 'true') validate(id); });
+        input.addEventListener(id === 'count' ? 'change' : 'input', () => {
+          confirmation.hidden = true;
+          if (input.getAttribute('aria-invalid') === 'true') validate(id);
+        });
+      });
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        confirmation.hidden = true;
+        const invalid = fields.filter(id => !validate(id));
+        if (invalid.length) { document.getElementById(invalid[0]).focus(); return; }
+        const name = document.getElementById('name').value.trim();
+        const count = document.getElementById('count').value;
+        document.getElementById('confirmation-message').textContent = name + '，你的 ' + count + ' 人骑行报名示例已生成。出发前，请记得准备自行车与头盔。';
+        confirmation.hidden = false;
+        confirmation.focus({preventScroll: true});
+        confirmation.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+      });
+    })();
+  </script>
+</body>
+</html>

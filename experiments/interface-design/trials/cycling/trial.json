@@ -1,0 +1,59 @@
+{
+  "scope": "One exploratory same-brief pair, not a host success rate or aesthetic verdict.",
+  "modelControl": "Both fresh agents inherited the same parent model/settings; exact backend model ID was not captured. One trial, no aesthetic verdict.",
+  "validation": [
+    {
+      "variant": "baseline",
+      "sha256": "c37c556bff44dd586cfdcdb4ad4c627747a53e5d6aa69be031768adf3cadb6e4",
+      "sizes": [
+        {
+          "label": "desktop",
+          "width": 1440,
+          "height": 1000,
+          "overflow": false,
+          "formY": 1836
+        },
+        {
+          "label": "mobile",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "formY": 2785
+        }
+      ],
+      "formChecksPassed": true,
+      "requests": [],
+      "errors": [],
+      "firstDraftUnchanged": true
+    },
+    {
+      "variant": "guided",
+      "sha256": "2c1fc310f9fe7b164fc39f94e1843304c4a760edf39b4c5057c75f6e4cfa07ba",
+      "sizes": [
+        {
+          "label": "desktop",
+          "width": 1440,
+          "height": 1000,
+          "overflow": false,
+          "formY": 244
+        },
+        {
+          "label": "mobile",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "formY": 847
+        }
+      ],
+      "formChecksPassed": true,
+      "requests": [],
+      "errors": [],
+      "firstDraftUnchanged": true
+    }
+  ],
+  "formats": [
+    "self-contained HTML/CSS/JS",
+    "desktop/mobile PNG previews"
+  ],
+  "drawio": false
+}

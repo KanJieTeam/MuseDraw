@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#234a35">
+<title>慢行星期六 · 10月24日城市骑行</title>
+<style>
+:root{--paper:#f5f4ec;--ink:#234a35;--muted:#647366;--line:#ced5c5;--accent:#def18a;--white:#fffef9;--error:#a12d27;--radius:6px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:15px;line-height:1.7}a{color:inherit}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #638d26;outline-offset:4px}button{cursor:pointer}::selection{background:var(--accent);color:var(--ink)}.shell{width:min(1240px,calc(100% - 96px));margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;min-height:102px;border-bottom:1px solid var(--line);gap:20px}.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font-size:18px;font-weight:750;letter-spacing:1px}.brand svg{width:43px;height:34px}.nav{display:flex;gap:32px;font-size:13px}.nav a{text-decoration:none;padding:5px 0;border-bottom:1px solid transparent}.nav a:hover{border-color:currentColor}.hero{display:grid;grid-template-columns:minmax(0,1fr) 378px;gap:72px;align-items:start;padding:55px 0 62px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;display:flex;align-items:center;gap:12px;margin:0 0 22px}.eyebrow:before{content:"";width:27px;height:2px;background:currentColor}.title-row{display:flex;align-items:flex-end;gap:23px}h1{font-size:clamp(66px,7.4vw,100px);line-height:1.12;letter-spacing:-5px;font-weight:800;margin:0}.date-tag{border:1px solid var(--ink);border-radius:50%;width:92px;height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:9px;transform:rotate(-8deg);font-size:12px;line-height:1.5;flex-shrink:0}.date-tag strong{font-size:24px;letter-spacing:-1px}.lead{font-size:19px;margin:24px 0 12px;font-weight:600;letter-spacing:.5px}.intro{max-width:470px;color:var(--muted);margin:0;font-size:14px}.ride-art{position:relative;margin:27px 0 18px;height:148px;overflow:hidden}.ride-art svg{width:100%;height:100%;display:block}.art-label{position:absolute;left:0;bottom:0;background:var(--paper);padding:2px 14px 2px 0;font-size:11px;letter-spacing:2px}.facts{display:grid;grid-template-columns:1.45fr 1fr 1fr;border-top:1px solid var(--ink);padding-top:17px;gap:18px;margin:0}.facts dt{font-size:11px;color:var(--muted);margin-bottom:3px;letter-spacing:1px}.facts dd{margin:0;font-size:16px;font-weight:700}.facts small{font-size:12px;font-weight:400;display:block;color:var(--muted);margin-top:2px}.signup{background:var(--white);border:1px solid var(--ink);border-radius:var(--radius);scroll-margin-top:24px}.signup-head{background:var(--ink);color:var(--paper);padding:23px 27px 21px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}.signup-head h2{font-size:23px;margin:0;font-weight:650;letter-spacing:1px}.signup-head .free{font-size:21px;font-weight:650;line-height:1.2;text-align:right}.free small{font-size:10px;letter-spacing:1px;display:block;font-weight:400;margin-top:5px;color:#d4dfce}.form-body{padding:23px 27px 26px}.capacity{font-size:12px;color:var(--muted);margin:0 0 22px;padding-bottom:15px;border-bottom:1px solid var(--line)}.field{margin-bottom:18px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field label span{font-size:11px;font-weight:400;color:var(--muted);margin-left:6px}input,select{border:1px solid #aebba8;border-radius:3px;background:var(--white);width:100%;height:46px;padding:9px 12px;color:var(--ink);font-size:14px}input::placeholder{color:#859080}select{cursor:pointer}input:hover,select:hover{border-color:var(--ink)}[aria-invalid=true]{border-color:var(--error);background:#fff9f4}.hint{color:var(--muted);font-size:11px;margin:6px 0 0}.error{color:var(--error);font-size:12px;margin:5px 0 0}.error:empty{display:none}.submit{width:100%;background:var(--accent);color:var(--ink);border:1px solid var(--ink);border-radius:3px;height:49px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:700;margin-top:24px}.submit:hover{background:#d1e678}.submit .arrow{font-size:22px;font-weight:400}.demo-note{font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.7}.details{border-top:1px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) 378px;gap:72px;padding:40px 0 50px}.section-kicker{font-size:11px;letter-spacing:1.5px;margin:0 0 9px;color:var(--muted)}.details h2{font-size:27px;line-height:1.4;letter-spacing:1px;margin:0 0 25px}.route{position:relative;display:flex;justify-content:space-between;gap:18px;margin:34px 0 23px}.route:before{content:"";position:absolute;top:7px;left:8px;right:8px;border-top:2px dashed #9baa8e}.route-stop{position:relative;flex:1;font-size:13px}.route-stop:before{content:"";width:14px;height:14px;display:block;border:2px solid var(--ink);border-radius:50%;background:var(--paper);margin-bottom:14px;position:relative}.route-stop:first-child:before{background:var(--ink)}.route-stop:last-child{flex:0 0 87px}.route-stop strong{display:block;font-size:14px}.route-stop span{font-size:11px;color:var(--muted);display:block;margin-top:4px}.route-description{font-size:12px;color:var(--muted);max-width:510px;margin:0}.notice-list{padding:0;margin:0;list-style:none}.notice-list li{position:relative;padding:0 0 13px 18px;font-size:13px}.notice-list li:before{content:"+";position:absolute;left:0;top:0;color:var(--muted)}.notice-list strong{font-weight:700}.closing{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:22px 0 30px;font-size:11px;color:var(--muted)}.closing p{margin:0}.success{padding:27px;min-height:480px}.success[hidden]{display:none}.success-mark{border:1px solid var(--ink);background:var(--accent);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:24px;margin:6px 0 21px}.success h3{font-size:24px;line-height:1.4;margin:0 0 10px}.success p{font-size:13px}.success dl{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;margin:22px 0}.success dl div{display:flex;justify-content:space-between;gap:12px;padding:3px 0;font-size:13px}.success dt{color:var(--muted)}.success dd{margin:0;text-align:right;overflow-wrap:anywhere;min-width:0}.edit{border:1px solid var(--ink);padding:9px 15px;background:transparent;color:var(--ink);border-radius:3px;margin-top:12px;font-size:13px}.edit:hover{background:var(--paper)}.success-focus:focus{outline:0}.success-focus:focus-visible{outline:3px solid #638d26;outline-offset:5px}
+@media(min-width:1450px){.hero{gap:90px}.details{gap:90px}}
+@media(max-width:1050px){.shell{width:calc(100% - 56px)}.hero,.details{gap:35px;grid-template-columns:minmax(0,1fr) 345px}.title-row{gap:12px}h1{font-size:75px}.date-tag{width:74px;height:74px}.date-tag strong{font-size:21px}.facts{grid-template-columns:1.4fr 1fr;gap:15px}.facts>div:last-child{display:none}.signup-head,.form-body{padding-left:23px;padding-right:23px}.intro{font-size:13px}}
+@media(max-width:760px){.shell{width:calc(100% - 40px)}.topbar{min-height:78px}.brand{font-size:15px;gap:8px}.brand svg{width:34px}.nav{gap:18px;font-size:12px}.nav a:first-child{display:none}.hero{display:flex;flex-direction:column;padding:34px 0 38px;gap:32px}.hero-copy,.signup{width:100%}.eyebrow{margin-bottom:19px;font-size:10px}.title-row{justify-content:space-between;align-items:center}h1{font-size:clamp(68px,17vw,108px);letter-spacing:-4px}.date-tag{width:82px;height:82px;margin:0 9px 0 0}.lead{font-size:18px;margin-top:22px}.intro{font-size:13px;max-width:440px}.ride-art{height:124px;margin-top:20px;margin-bottom:20px}.facts{grid-template-columns:1.45fr 1fr 1fr;gap:12px}.facts dd{font-size:14px}.facts small{font-size:10px}.facts>div:last-child{display:block}.signup-head{padding:20px 23px}.form-body{padding:21px 23px 23px}.capacity{margin-bottom:18px}.field{margin-bottom:17px}.details{display:flex;flex-direction:column;gap:34px;padding:30px 0 34px}.details h2{font-size:25px;margin-bottom:20px}.route{margin-top:27px}.route-stop strong{font-size:12px}.route-stop:last-child{flex-basis:70px}.route-stop{font-size:12px}.closing{flex-direction:column;gap:4px;padding-top:18px}.success{min-height:0;padding:25px 23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+  <a class="brand" href="#activity" aria-label="慢行星期六，活动介绍"><svg viewBox="0 0 60 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="13" cy="27" r="10"/><circle cx="47" cy="27" r="10"/><path d="m13 27 12-19 11 19H13l9-15h18l7 15M35 4h8M23 8h-7" stroke-linecap="round" stroke-linejoin="round"/></svg>慢行星期六</a>
+  <nav class="nav" aria-label="页面导航"><a href="#activity">活动介绍</a><a href="#route">路线概览</a><a href="#signup">参加骑行 ↗</a></nav>
+</header>
+<main>
+<section class="hero" id="activity" aria-labelledby="event-title">
+  <div class="hero-copy">
+    <p class="eyebrow">城市休闲骑行 / OCT. 2026</p>
+    <div class="title-row"><h1 id="event-title">慢行<br>星期六<span aria-hidden="true" style="color:#7d9b50">。</span></h1><div class="date-tag"><span>周六集合</span><strong>10.24</strong><span>08:00 AM</span></div></div>
+    <p class="lead">18公里，把城市看慢一点。</p>
+    <p class="intro">从江滨公园南门出发，一起过个骑车的周六。<br>不用专业装备，普通自行车和一顶自备头盔就可以。</p>
+    <div class="ride-art" aria-hidden="true">
+      <svg viewBox="0 0 650 160" fill="none"><path d="M-15 130C88 130 121 25 218 25S376 144 473 108 598 51 674 51" stroke="#dfe8cd" stroke-width="23"/><path d="M-15 130C88 130 121 25 218 25S376 144 473 108 598 51 674 51" stroke="#7a9455" stroke-width="1.5" stroke-dasharray="5 9"/><g stroke="#234a35" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="264" cy="86" r="28" fill="#f5f4ec"/><circle cx="358" cy="86" r="28" fill="#f5f4ec"/><path d="m264 86 31-49 31 49h-62l25-40h56l13 40M339 24h18M293 36h-17M326 86l16-51"/><path d="M86 76V43M73 59l13-23 13 23ZM503 128V96M491 110l12-24 12 24M527 123V103" stroke-width="1.5"/></g><circle cx="180" cy="30" r="5" fill="#234a35"/><circle cx="550" cy="77" r="5" fill="#234a35"/></svg>
+      <span class="art-label">轻松出发，沿途慢看</span>
+    </div>
+    <dl class="facts"><div><dt>集合出发</dt><dd>江滨公园南门</dd><small>2026年10月24日 · 08:00</small></div><div><dt>骑行距离</dt><dd>18 公里</dd><small>城市休闲骑行</small></div><div><dt>活动规模</dt><dd>24 人</dd><small>总名额 · 免费参加</small></div></dl>
+  </div>
+  <aside class="signup" id="signup" aria-labelledby="signup-title">
+    <div class="signup-head"><h2 id="signup-title">一起骑一段</h2><div class="free">免费<small>总名额 24 人</small></div></div>
+    <form id="registration" class="form-body" novalidate>
+      <p class="capacity">10月24日，周六 08:00 · 江滨公园南门</p>
+      <div class="field"><label for="name">姓名</label><input id="name" name="name" type="text" autocomplete="name" maxlength="40" placeholder="怎么称呼你？" aria-describedby="name-error" required><p class="error" id="name-error"></p></div>
+      <div class="field"><label for="people">参加人数 <span>含你自己</span></label><select id="people" name="people" aria-describedby="people-error" required><option value="1">1 人 · 自己出发</option><option value="2">2 人 · 结伴同行</option><option value="3">3 人</option><option value="4">4 人</option></select><p class="error" id="people-error"></p></div>
+      <div class="field"><label for="contact">联系方式 <span>手机或电子邮箱</span></label><input id="contact" name="contact" type="text" inputmode="text" autocomplete="email" maxlength="120" placeholder="填写手机号或电子邮箱" aria-describedby="contact-hint contact-error" required><p class="hint" id="contact-hint">示例可用：13800138000 或 hello@example.com</p><p class="error" id="contact-error"></p></div>
+      <button class="submit" type="submit"><span>报名 · 查看示例确认</span><span class="arrow" aria-hidden="true">↗</span></button>
+      <p class="demo-note">这是本地报名演示。填写内容仅用于本页展示，不会发送或保存；不代表已获得实际活动名额。</p>
+    </form>
+    <div class="success" id="confirmation" hidden>
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <h3 class="success-focus" tabindex="-1" id="confirmation-title">报名 · 示例确认</h3>
+      <p>信息已在本页整理好了。<br>这是本地示例，未向任何活动方提交报名。</p>
+      <dl><div><dt>姓名</dt><dd id="confirm-name"></dd></div><div><dt>参加人数</dt><dd id="confirm-people"></dd></div><div><dt>联系方式</dt><dd id="confirm-contact"></dd></div></dl>
+      <p>10月24日（周六）08:00<br>江滨公园南门 · 记得自备头盔</p>
+      <button class="edit" id="edit" type="button">修改报名信息 ←</button>
+    </div>
+  </aside>
+</section>
+<section class="details" aria-label="路线与骑行准备">
+  <div id="route"><p class="section-kicker">THE RIDE / 路线概览</p><h2>从江滨出发，慢慢骑进城市。</h2>
+    <div class="route" aria-label="路线概览：江滨公园南门集合，城市休闲骑行，全程18公里"><div class="route-stop"><strong>江滨公园南门</strong><span>08:00 集合出发</span></div><div class="route-stop"><strong>城市休闲骑行</strong><span>按现场指引同行</span></div><div class="route-stop"><strong>全程 18 km</strong><span>自在骑行</span></div></div>
+    <p class="route-description">以上为行程概览，不是导航地图。具体途经道路与骑行安排以活动现场说明为准，请在出发前了解路线并确认适合自己的体力。</p>
+  </div>
+  <div><p class="section-kicker">BEFORE YOU GO / 出发前</p><h2>人到，车到，头盔到。</h2><ul class="notice-list"><li><strong>自备并佩戴头盔。</strong>普通自行车即可参加。</li><li>出发前检查刹车、轮胎，带好饮水。</li><li>遵守交通规则，留出车距，路口减速。</li><li>按自身状态骑行；如有不适，及时停下。</li></ul></div>
+</section>
+</main>
+<footer class="closing"><p>慢行星期六 · 2026.10.24 · 让周末多一点风。</p><p>虚构活动 / 本地交互原型</p></footer>
+</div>
+<script>
+(()=>{'use strict';
+const form=document.getElementById('registration');
+const confirmation=document.getElementById('confirmation');
+const fields=['name','people','contact'];
+let attempted=false;
+function validate(id){const el=document.getElementById(id),v=el.value.trim();let message='';
+if(id==='name'&&(!v||v.length<2))message='请填写至少 2 个字符的姓名。';
+if(id==='people'&&!['1','2','3','4'].includes(v))message='请选择 1–4 人参加。';
+if(id==='contact'){if(!v)message='请填写手机号或电子邮箱。';else if(!/^1[3-9]\d{9}$/.test(v.replace(/[\s-]/g,''))&&!/^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/.test(v))message='请填写有效的 11 位手机号或电子邮箱。';}
+document.getElementById(id+'-error').textContent=message;el.setAttribute('aria-invalid',message?'true':'false');return !message;}
+fields.forEach(id=>{const el=document.getElementById(id);el.addEventListener(id==='people'?'change':'input',()=>{if(attempted||el.getAttribute('aria-invalid')==='true')validate(id);});});
+form.addEventListener('submit',event=>{event.preventDefault();attempted=true;const validity=fields.map(validate);const invalid=validity.indexOf(false);if(invalid!==-1){document.getElementById(fields[invalid]).focus();return;}
+document.getElementById('confirm-name').textContent=document.getElementById('name').value.trim();document.getElementById('confirm-people').textContent=document.getElementById('people').value+' 人';document.getElementById('confirm-contact').textContent=document.getElementById('contact').value.trim();form.hidden=true;confirmation.hidden=false;document.getElementById('confirmation-title').focus();});
+document.getElementById('edit').addEventListener('click',()=>{confirmation.hidden=true;form.hidden=false;document.getElementById('name').focus();});
+})();
+</script>
+</body>
+</html>
