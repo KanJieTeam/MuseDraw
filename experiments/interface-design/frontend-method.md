@@ -62,6 +62,12 @@ interface inside it. A brand-only cover is not a viewed UI example. A cropped
 or tilted screen can support limited composition notes, not claims about exact
 type sizes, accessibility or interaction quality.
 
+Separate component style from page composition. A perspective stack of charts
+does not demonstrate a usable dashboard; a phone mockup does not demonstrate
+an interface. Record only what is actually visible. Depth can clarify a real
+control (for example, a musical key or knob), but a row of shadowed information
+cards should not inherit it merely because the effect looks polished.
+
 At the intended desktop and mobile sizes, identify what the eye sees first and
 whether the next action is clear. Check the longest text, empty/error/success
 states and keyboard path. A passing browser test does not decide whether it

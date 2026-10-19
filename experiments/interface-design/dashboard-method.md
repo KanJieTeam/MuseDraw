@@ -54,6 +54,16 @@ Exclude isolated 3D assets, scene baseplates and tutorial covers from screen
 composition counts. A real screen preview can support layout observations;
 it still does not verify its displayed numbers or live operational behaviour.
 
+Reserve space for presentation modes. A presenter, subtitles, open help panel
+or selected-object detail can cover the same central map the screen is meant to
+explain. Define their occupied area and an unobstructed working view; hiding the
+controls in a screenshot does not resolve that conflict.
+
+A process topology may be a better main view than an administrative map when
+the question concerns flows between equipment. For operating totals and work
+orders, a chart-and-table composition can be sufficient. Choose the view from
+the relationship, not from the expectation that every large screen needs a map.
+
 Study source: [EasyV public marketplace](https://easyv.cloud/market). Its previews
 are reference material, not reusable production facts or a guarantee of quality.
 Further per-case visual records and user review must test these decisions.
