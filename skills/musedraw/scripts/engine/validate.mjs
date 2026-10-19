@@ -4,6 +4,8 @@
 import fs from 'node:fs';
 import { expandBlocks } from './layouts.mjs';
 import { layoutSequence } from './sequence.mjs';
+import { objectViews } from './object-views.mjs';
+import { graphView } from './graph-view.mjs';
 
 const schema = JSON.parse(fs.readFileSync(new URL('../../references/scene.schema.json', import.meta.url), 'utf8'));
 const own = (o, key) => Object.hasOwn(o, key) && o[key] !== undefined;
@@ -110,6 +112,43 @@ export function validateScene(scene) {
   }
   for (const [i, block] of (scene.blocks ?? []).entries()) {
     const path = `/blocks/${i}`;
+    if (block.type === 'graph-view') {
+      const source = scene.blocks.find(candidate => candidate.id === block.source);
+      if (!source || source.type !== 'scientific' || source.kind !== 'graph')
+        issues.push({path:`${path}/source`,message:'must reference a direct scientific graph block in this scene'});
+      else if (!issues.length) {
+        try { graphView(block, source); }
+        catch (error) { issues.push({path,message:error.message}); }
+      }
+    }
+    if (block.type === 'object-views') {
+      const entities = unique(block.entities, `${path}/entities`, issues);
+      const definitions = new Map(block.entities.map(e=>[e.id,e]));
+      unique(block.views, `${path}/views`, issues);
+      for (const [j, view] of block.views.entries()) {
+        const used = new Set();
+        for (const [k, item] of view.items.entries()) {
+          const here = `${path}/views/${j}/items/${k}`;
+          if (!entities.has(item.entity)) issues.push({ path: `${here}/entity`, message: `unknown entity ID ${JSON.stringify(item.entity)}` });
+          if (used.has(item.entity)) issues.push({ path: `${here}/entity`, message: 'an entity may appear only once per view; give distinct objects distinct IDs' });
+          used.add(item.entity);
+          if (item.state !== undefined && !definitions.get(item.entity)?.scientific)
+            issues.push({path:`${here}/state`,message:'state is only supported by scientific entities'});
+          const dimensions = item.size ?? definitions.get(item.entity)?.extent;
+          if (!dimensions) issues.push({ path: `${here}/size`, message: 'define extent once on the entity, or an explicit size for this pose' });
+          else if (item.at.some((v, axis) => v - dimensions[axis] / 2 < -1e-9 || v + dimensions[axis] / 2 > 1 + 1e-9))
+            issues.push({ path: `${here}/at`, message: 'object bounds must fit within the view (at is centre, size is width/height)' });
+        }
+      }
+      // The motif grammar owns kind-specific fields and sparse-state semantics.
+      // Expand purely before a browser starts; do not let an override conceal an
+      // invalid canonical definition or inject a second object frame/identity.
+      if (!issues.length && block.entities.some(e => e.scientific !== undefined)) {
+        try { objectViews(block); }
+        catch (error) { issues.push({path,message:error.message}); }
+      }
+    }
+    if (block.type === 'grid') unique(block.items ?? [], `${path}/items`, issues);
     if (block.type === 'swimlane') {
       const lanes = unique(block.lanes ?? [], `${path}/lanes`, issues);
       unique(block.steps ?? [], `${path}/steps`, issues);
@@ -151,6 +190,10 @@ export function prepareScene(scene, theme) {
     for (const [i, item] of (scene[kind] ?? []).entries()) check(item, schema.properties[kind].items, `/${kind}/${i}`, issues);
   }
   const nodes = unique(scene.nodes ?? [], '/nodes', issues);
+  const modules=unique(scene.nativeModules??[], '/nativeModules',issues);
+  for(const [i,m] of (scene.nativeModules??[]).entries())if(!m.id||typeof m.id!=='string')issues.push({path:`/nativeModules/${i}/id`,message:'requires a non-empty module ID'});
+  for(const kind of ['nodes','edges','paths','texts'])for(const [i,item] of (scene[kind]??[]).entries())
+    if(item.nativeModule!==undefined&&!modules.has(item.nativeModule))issues.push({path:`/${kind}/${i}/nativeModule`,message:'unknown native module'});
   references(scene.edges ?? [], nodes, '/edges', issues);
   for (const [i, note] of (scene.notes ?? []).entries()) if (note.target != null && !nodes.has(note.target)) issues.push({ path: `/notes/${i}/target`, message: `unknown node ID ${JSON.stringify(note.target)}` });
   if (issues.length) throw new SceneValidationError(issues, expanded);

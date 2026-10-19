@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "status": "worked-example",
+  "provenance": "Original concept schematics; no measured data; no embedded images",
+  "examples": [
+    {
+      "id": "graph-learning",
+      "scene": "graph-learning/scene.json",
+      "method": "graph-learning/method.md",
+      "relationships": [
+        "resource-feedback",
+        "feature-fusion",
+        "shared-encoder",
+        "two-heads",
+        "joint-readout",
+        "dual-output",
+        "overview-detail"
+      ],
+      "objects": [
+        "graph",
+        "feature-array",
+        "node-state-array"
+      ],
+      "useWhen": "Graph and conditions enter one predictor; two heads contribute to a joint readout; active labelling updates the training resource.",
+      "ports": [
+        "labelled-set",
+        "predictor",
+        "select",
+        "annotate",
+        "append",
+        "new-labels",
+        "object-graph",
+        "node-features",
+        "condition-features",
+        "join",
+        "encoder",
+        "latent",
+        "site-head",
+        "context-head",
+        "site-contribution",
+        "context-contribution",
+        "aggregate",
+        "site-output",
+        "graph-output"
+      ],
+      "boundaries": [
+        "Concept only; no scientific performance evidence",
+        "Joint readout is only appropriate if both heads actually contribute"
+      ],
+      "inputContract": {
+        "required": [
+          "object topology",
+          "graph node-feature roles",
+          "context feature roles",
+          "encoder role",
+          "two head roles",
+          "readout relationship",
+          "two output roles",
+          "sampling update destination"
+        ],
+        "inferenceLimit": "Do not infer losses, equivariance, sample counts or quantitative cell values."
+      },
+      "preview": "graph-learning/preview.jpg",
+      "status": "worked-example",
+      "aestheticApproval": "pending-user-review"
+    },
+    {
+      "id": "shared-trunk",
+      "scene": "shared-trunk/scene.json",
+      "method": "shared-trunk/method.md",
+      "relationships": [
+        "alternative-input-modes",
+        "shared-trunk",
+        "gap-alignment",
+        "insertion",
+        "path-consistency",
+        "support-filter",
+        "interval-merge",
+        "incremental-graph"
+      ],
+      "objects": [
+        "linear-segments",
+        "fragment-spans",
+        "branching-path",
+        "candidate-intervals"
+      ],
+      "useWhen": "Two mapping representations share identification/filtering/merging; local object details explain the shared operations.",
+      "ports": [
+        "linear-mode",
+        "graph-mode",
+        "mapped-input",
+        "identify",
+        "filter",
+        "merge",
+        "gap-detail",
+        "insertion-detail",
+        "path-detail",
+        "support-detail",
+        "updated-graph"
+      ],
+      "boundaries": [
+        "Concept only; no genomic coordinates or inferred variants",
+        "Alternative modes do not mean biological sample pooling"
+      ],
+      "inputContract": {
+        "required": [
+          "input representation definitions",
+          "first and last shared operation",
+          "gap/alignment meaning",
+          "filter criterion",
+          "merge compatibility criterion",
+          "output topology"
+        ],
+        "inferenceLimit": "Do not infer structural variants, read counts, nucleotide lengths, thresholds or sample pooling."
+      },
+      "preview": "shared-trunk/preview.jpg",
+      "status": "worked-example",
+      "aestheticApproval": "pending-user-review"
+    },
+    {
+      "id": "site-occupancy",
+      "scene": "site-occupancy/scene.json",
+      "method": "site-occupancy/method.md",
+      "preview": "site-occupancy/preview.jpg",
+      "relationships": [
+        "matched-comparison",
+        "sparse-state",
+        "site-occupancy"
+      ],
+      "objects": [
+        "duplex",
+        "paired-strands",
+        "site-markers"
+      ],
+      "useWhen": "Supplied occupancy states change at explicit sites on one shared paired-strand object.",
+      "boundaries": [
+        "Abstract schematic, not empirical biology",
+        "Strand identity follows the curve, not upper/lower screen position"
+      ],
+      "status": "worked-example",
+      "aestheticApproval": "pending-user-review"
+    }
+  ],
+  "nativeContract": {
+    "moduleEndpoint": "block.id",
+    "partEndpoint": "block.id + '-' + encodeURIComponent(partId)",
+    "processingRelationships": "native source/target connected edges",
+    "alignmentAndMotion": "explicit non-causal geometry; never evidence by itself",
+    "images": "none"
+  }
+}

@@ -20,21 +20,22 @@ export function collectEditableScene() {
     omitted.add('paper-texture'); return 'none';
   };
   let serial=0;
-  function walk(el,parent=null,edgeParent=null){
+  function walk(el,parent=null,edgeParent=null,moduleParent=null){
     const tag=el.tagName.toLowerCase();
     if(['defs','title','desc','metadata'].includes(tag))return;
     if(tag==='g'){
-      if(el.dataset.md==='edge'&&el.dataset.connection){edges.push({id:el.id,...JSON.parse(el.dataset.connection)});return;}
+      if(el.dataset.md==='edge'&&el.dataset.connection){edges.push({id:el.id,...JSON.parse(el.dataset.connection),...(moduleParent?{parent:moduleParent}:{}),layer:el.closest('#foreground')?'foreground':'background'});return;}
       if(el.dataset.md==='edge-label')edgeParent=el.dataset.edge||null;
-      if(el.dataset.md||['header','footer','legend','texts','notes'].includes(el.id)){
+      if(el.dataset.md||['header','footer','legend','texts','notes','foreground'].includes(el.id)){
         const box=el.dataset.box?el.dataset.box.split(',').map(Number):bounds(el);
         // Sequence messages have zero-sized invisible attachment points. Give
         // them a centered 1px native anchor so port fractions stay finite.
         if(el.dataset.md==='node')for(const axis of [0,1])if(box[axis+2]===0){box[axis]-=0.5;box[axis+2]=1;}
         const id=`group-${++serial}`;
         groups.push({id,sourceId:el.id,kind:el.dataset.md||el.id,parent,edgeParent,box});parent=id;
+        if(el.dataset.md==='module')moduleParent=id;
       }
-      for(const child of el.children)walk(child,parent,edgeParent);
+      for(const child of el.children)walk(child,parent,edgeParent,moduleParent);
       return;
     }
     const cs=getComputedStyle(el);
@@ -146,6 +147,7 @@ function assertNativeScene(scene){
   for(const [i,e] of scene.edges.entries()){
     if(!e.id||edges.has(e.id)||ids.has(`connector-${i+1}`))throw new Error(`Duplicate native connector ID: ${e.id}`);
     edges.add(e.id);
+    if(e.parent&&!groups.has(e.parent))throw new Error(`Unresolved native connector parent: ${e.parent}`);
     if(!nodes.has(e.from)||!nodes.has(e.to))throw new Error(`Unresolved editable terminals ${e.from} → ${e.to}`);
     if(!Array.isArray(e.points)||e.points.length<2||e.points.some(p=>!finite(p,2)))throw new Error(`Invalid native connector geometry: ${e.id}`);
   }
@@ -158,7 +160,13 @@ export function toDrawio(scene){
   const edgeMap=new Map(scene.edges.map(e=>[e.id,e])),edgeIds=new Map(scene.edges.map((e,i)=>[e.id,`connector-${i+1}`]));
   const cell=(obj,geo)=>`<mxCell${attrs(obj)}>${geo}</mxCell>`;
   const parentInfo=(item)=>{
-    if(item.parent){const g=groups.get(item.parent);return {parent:g.id,x:g.box[0],y:g.box[1],relative:false};}
+    // A module owns the connector; its label belongs to that connector. Text
+    // and shapes inside the label keep their immediate annotation group.
+    const attachedLabel=item.kind==='edge-label'&&item.edgeParent&&edgeMap.has(item.edgeParent);
+    if(item.parent&&!attachedLabel){const g=groups.get(item.parent);return {parent:g.id,x:g.box[0],y:g.box[1],relative:false};}
+    // Only a foreground connector's own label uses the annotation layer.
+    // Unrelated foreground objects must not detach ordinary edge labels.
+    if(item.edgeParent&&edgeMap.get(item.edgeParent)?.layer==='foreground')return {parent:'1',x:0,y:0,relative:false};
     if(item.edgeParent&&edgeMap.has(item.edgeParent)){const edge=edgeMap.get(item.edgeParent),p=edge.points,mid=[(p[0][0]+p.at(-1)[0])/2,(p[0][1]+p.at(-1)[1])/2];return {parent:edgeIds.get(item.edgeParent),x:mid[0],y:mid[1],relative:true};}
     return {parent:'1',x:0,y:0,relative:false};
   };
@@ -167,8 +175,11 @@ export function toDrawio(scene){
     const a=groups.get(source).box,b=groups.get(target).box,p=e.points,S=p[0],E=p.at(-1);
     const port=(pt,box)=>[Math.max(0,Math.min(1,(pt[0]-box[0])/box[2])),Math.max(0,Math.min(1,(pt[1]-box[1])/box[3]))];const sp=port(S,a),tp=port(E,b);
     const style=`edgeStyle=none;noEdgeStyle=1;rounded=1;curved=${e.curve?1:0};endArrow=${e.arrow==='none'?'none':e.arrow==='triangle'?'block':'open'};endFill=${e.arrow==='triangle'?1:0};startArrow=${e.both?'open':'none'};strokeColor=${color(e.color)};strokeWidth=${e.width};dashed=${e.dash?1:0};opacity=${Math.round(e.opacity*100)};exitX=${sp[0]};exitY=${sp[1]};exitPerimeter=0;entryX=${tp[0]};entryY=${tp[1]};entryPerimeter=0;`;
-    const points=p.slice(1,-1).map(([x,y])=>`<mxPoint x="${num(x)}" y="${num(y)}"/>`).join('');
-    cells.push(cell({id:edgeIds.get(e.id),value:'',edge:1,parent:'1',source,target,style},`<mxGeometry relative="1" as="geometry"><Array as="points">${points}</Array></mxGeometry>`));
+    // Internal connectors belong to the module together with their terminals.
+    // mxGraph waypoints are local to the edge parent; ports remain node-local.
+    const parent=e.parent??'1',origin=e.parent?groups.get(e.parent).box:[0,0];
+    const points=p.slice(1,-1).map(([x,y])=>`<mxPoint x="${num(x-origin[0])}" y="${num(y-origin[1])}"/>`).join('');
+    cells.push(cell({id:edgeIds.get(e.id),value:'',edge:1,parent,source,target,style},`<mxGeometry relative="1" as="geometry"><Array as="points">${points}</Array></mxGeometry>`));
   }
   for(const g of scene.groups){
     const pi=parentInfo({...g,parent:g.parent}),[x,y,w,h]=g.box;
@@ -191,6 +202,14 @@ export function toDrawio(scene){
   // root by SVG layer: background first, connectors, then the foreground groups.
   const roots=cells.splice(2),background=scene.shapes.filter(s=>!s.parent).map(s=>s.id);
   const first=roots.filter(c=>background.some(id=>c.startsWith(`<mxCell id="${id}"`))),rest=roots.filter(c=>!background.some(id=>c.startsWith(`<mxCell id="${id}"`)));
-  cells.push(...first,...rest);
+  const frontIds=new Set(scene.edges.filter(e=>e.layer==='foreground').map(e=>edgeIds.get(e.id)));
+  const front=rest.filter(c=>frontIds.has(c.match(/^<mxCell id="([^"]+)"/)?.[1]));
+  const ordered=rest.filter(c=>!frontIds.has(c.match(/^<mxCell id="([^"]+)"/)?.[1]));
+  // SVG foreground precedes annotation/text layers. Put native foreground
+  // connectors there too, instead of painting them over all later labels.
+  const overlays=new Set(scene.groups.filter(g=>!g.parent&&['edge-label','notes','note','legend','texts','header','footer'].includes(g.kind)).map(g=>g.id));
+  let at=ordered.findIndex(c=>overlays.has(c.match(/^<mxCell id="([^"]+)"/)?.[1]));
+  if(at<0)at=ordered.length;
+  cells.push(...first,...ordered.slice(0,at),...front,...ordered.slice(at));
   return `<?xml version="1.0" encoding="UTF-8"?>\n<mxfile host="app.diagrams.net" agent="MuseDraw" version="24.7.17"><diagram id="musedraw" name="${xml(scene.title)}"><mxGraphModel page="1" pageScale="1" pageWidth="${scene.size[0]}" pageHeight="${scene.size[1]}" grid="0" background="none"><root>${cells.join('')}</root></mxGraphModel></diagram></mxfile>\n`;
 }

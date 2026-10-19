@@ -1,15 +1,15 @@
 {
  "version": 1,
- "description": "MuseDraw gallery: 101 original cases. flagship = curated front-page set; reviewed = visually inspected; preview = rendered, passes layout checks, awaiting design review.",
+ "description": "MuseDraw gallery: 108 original cases. flagship = curated front-page set; reviewed = visually inspected; preview = rendered, passes layout checks, awaiting design review.",
  "summary": {
   "engineering": {
    "flagship": 3,
    "preview": 12,
-   "reviewed": 4
+   "reviewed": 8
   },
   "research": {
    "flagship": 8,
-   "reviewed": 6,
+   "reviewed": 9,
    "preview": 16
   },
   "office": {
@@ -1341,6 +1341,57 @@
    "subtitle": "白底橙蓝的工作空间视图，用边界、图标和路径组织入口、执行、工具与成果。",
    "blocks": [],
    "path": "gallery/105-research-workspace-product"
+  },
+  {
+   "id": "106",
+   "slug": "106-site-occupancy",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "Sparse site occupancy on a shared scaffold",
+   "subtitle": "",
+   "blocks": [
+    "object-views"
+   ],
+   "path": "gallery/106-site-occupancy"
+  },
+  {
+   "id": "107",
+   "slug": "107-material-transfer",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "Contact, lift and release of a thin-film array",
+   "subtitle": "",
+   "blocks": [],
+   "path": "gallery/107-material-transfer"
+  },
+  {
+   "id": "108",
+   "slug": "108-shared-representation",
+   "status": "reviewed",
+   "category": "research",
+   "theme": "journal",
+   "lang": "en",
+   "title": "One shared representation, two readouts",
+   "subtitle": "",
+   "blocks": [
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific",
+    "scientific"
+   ],
+   "path": "gallery/108-shared-representation"
   }
  ]
 }

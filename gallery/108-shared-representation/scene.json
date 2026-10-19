@@ -1,0 +1,991 @@
+{
+  "theme": "journal",
+  "size": [
+    1200,
+    720
+  ],
+  "header": false,
+  "footer": false,
+  "autoFit": false,
+  "style": {
+    "palette": {
+      "ink": "#26383C",
+      "muted": "#65777B"
+    },
+    "canvas": {
+      "background": "#FFFFFF"
+    },
+    "edge": {
+      "width": 1.5
+    },
+    "node": {
+      "shadow": false
+    }
+  },
+  "blocks": [
+    {
+      "type": "scientific",
+      "id": "neighborhood",
+      "kind": "graph",
+      "x": 210,
+      "y": 78,
+      "w": 415,
+      "h": 310,
+      "diameter": 38,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#2D7F86"
+      },
+      "points": [
+        {
+          "id": "0",
+          "x": 0.09084337349397588,
+          "y": 0.16,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "1",
+          "x": 0.3042168674698795,
+          "y": 0.4,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "2",
+          "x": 0.23927710843373498,
+          "y": 0.88,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "3",
+          "x": 0.6103614457831325,
+          "y": 0.38,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "4",
+          "x": 0.7866265060240965,
+          "y": 0.05,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "5",
+          "x": 0.9350602409638553,
+          "y": 0.67,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "6",
+          "x": 0.7402409638554218,
+          "y": 0.96,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        }
+      ],
+      "links": [
+        {
+          "from": "0",
+          "to": "1",
+          "color": "#2D7F86",
+          "width": 2.8
+        },
+        {
+          "from": "1",
+          "to": "2",
+          "color": "#2D7F86",
+          "width": 2.8
+        },
+        {
+          "from": "1",
+          "to": "3",
+          "color": "#2D7F86",
+          "width": 2.8
+        },
+        {
+          "from": "3",
+          "to": "4",
+          "color": "#2D7F86",
+          "width": 2.8
+        },
+        {
+          "from": "3",
+          "to": "5",
+          "color": "#2D7F86",
+          "width": 2.8
+        },
+        {
+          "from": "5",
+          "to": "6",
+          "color": "#2D7F86",
+          "width": 2.8
+        }
+      ]
+    },
+    {
+      "type": "scientific",
+      "id": "features",
+      "kind": "tensor",
+      "x": 70,
+      "y": 140,
+      "w": 72,
+      "h": 196,
+      "cells": [
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ],
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ],
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ],
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ],
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ],
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ],
+        [
+          "#DCEBE6",
+          "#DCEBE6",
+          "#DCEBE6"
+        ]
+      ],
+      "cellStroke": "#FFFFFF",
+      "palette": {
+        "ink": "#26383C"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "shared",
+      "kind": "tensor",
+      "x": 748,
+      "y": 140,
+      "w": 72,
+      "h": 196,
+      "cells": [
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ],
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ],
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ],
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ],
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ],
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ],
+        [
+          "#D7BE86",
+          "#D7BE86",
+          "#D7BE86"
+        ]
+      ],
+      "cellStroke": "#FFFFFF",
+      "palette": {
+        "ink": "#26383C"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "scores",
+      "kind": "tensor",
+      "x": 1060,
+      "y": 132,
+      "w": 28,
+      "h": 196,
+      "cells": [
+        [
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF"
+        ]
+      ],
+      "cellStroke": "#8C9B9E",
+      "palette": {
+        "ink": "#26383C"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "global",
+      "kind": "tensor",
+      "x": 1040,
+      "y": 421,
+      "w": 90,
+      "h": 30,
+      "cells": [
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "cellStroke": "#26383C",
+      "palette": {
+        "ink": "#26383C"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "input-symbol",
+      "kind": "formula",
+      "x": 58,
+      "y": 82,
+      "w": 94,
+      "h": 40,
+      "runs": [
+        {
+          "text": "h",
+          "sub": "i"
+        }
+      ],
+      "size": 25,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#FFFFFF"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "shared-symbol",
+      "kind": "formula",
+      "x": 738,
+      "y": 82,
+      "w": 92,
+      "h": 40,
+      "runs": [
+        {
+          "text": "H"
+        }
+      ],
+      "size": 27,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#FFFFFF"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "node-rule",
+      "kind": "formula",
+      "x": 928,
+      "y": 68,
+      "w": 245,
+      "h": 48,
+      "runs": [
+        {
+          "text": "s",
+          "sub": "i"
+        },
+        {
+          "text": " = ",
+          "italic": false
+        },
+        {
+          "text": "ρ"
+        },
+        {
+          "text": "(",
+          "italic": false
+        },
+        {
+          "text": "h",
+          "sub": "i",
+          "sup": "'"
+        },
+        {
+          "text": ")",
+          "italic": false
+        }
+      ],
+      "size": 22,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#FFFFFF"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "pool",
+      "kind": "formula",
+      "x": 918,
+      "y": 402,
+      "w": 64,
+      "h": 64,
+      "runs": [
+        {
+          "text": "Σ",
+          "sub": "i",
+          "italic": false
+        }
+      ],
+      "size": 30,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#FFFFFF"
+      },
+      "enclosure": "circle"
+    },
+    {
+      "type": "scientific",
+      "id": "global-rule",
+      "kind": "formula",
+      "x": 926,
+      "y": 480,
+      "w": 240,
+      "h": 48,
+      "runs": [
+        {
+          "text": "g"
+        },
+        {
+          "text": " = ",
+          "italic": false
+        },
+        {
+          "text": "Σ",
+          "sub": "i",
+          "italic": false
+        },
+        {
+          "text": " h",
+          "sub": "i",
+          "sup": "'"
+        }
+      ],
+      "size": 22,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#FFFFFF"
+      }
+    },
+    {
+      "type": "scientific",
+      "id": "detail",
+      "kind": "graph",
+      "x": 274,
+      "y": 440,
+      "w": 280,
+      "h": 128,
+      "diameter": 28,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#2D7F86"
+      },
+      "points": [
+        {
+          "id": "1",
+          "x": 0.03,
+          "y": 0.32,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "3",
+          "x": 0.48,
+          "y": 0.56,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "4",
+          "x": 0.69,
+          "y": 0.02,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        },
+        {
+          "id": "5",
+          "x": 0.97,
+          "y": 0.84,
+          "fill": "#2D7F86",
+          "stroke": "#2D7F86"
+        }
+      ],
+      "links": [
+        {
+          "from": "1",
+          "to": "3",
+          "color": "#2D7F86",
+          "width": 1.8
+        },
+        {
+          "from": "3",
+          "to": "4",
+          "color": "#2D7F86",
+          "width": 1.8
+        },
+        {
+          "from": "3",
+          "to": "5",
+          "color": "#2D7F86",
+          "width": 1.8
+        }
+      ]
+    },
+    {
+      "type": "scientific",
+      "id": "local-rule",
+      "kind": "formula",
+      "x": 186,
+      "y": 614,
+      "w": 615,
+      "h": 50,
+      "runs": [
+        {
+          "text": "m",
+          "sub": "3"
+        },
+        {
+          "text": " = ",
+          "italic": false
+        },
+        {
+          "text": "h",
+          "sub": "1"
+        },
+        {
+          "text": " + ",
+          "italic": false
+        },
+        {
+          "text": "h",
+          "sub": "4"
+        },
+        {
+          "text": " + ",
+          "italic": false
+        },
+        {
+          "text": "h",
+          "sub": "5"
+        },
+        {
+          "text": "    ",
+          "italic": false
+        },
+        {
+          "text": "h",
+          "sub": "3",
+          "sup": "'"
+        },
+        {
+          "text": " = ",
+          "italic": false
+        },
+        {
+          "text": "φ"
+        },
+        {
+          "text": "(",
+          "italic": false
+        },
+        {
+          "text": "h",
+          "sub": "3"
+        },
+        {
+          "text": ", ",
+          "italic": false
+        },
+        {
+          "text": "m",
+          "sub": "3"
+        },
+        {
+          "text": ")",
+          "italic": false
+        }
+      ],
+      "size": 21,
+      "palette": {
+        "ink": "#26383C",
+        "soft": "#FFFFFF"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "detail-frame",
+      "shape": "box",
+      "x": 244,
+      "y": 417,
+      "w": 345,
+      "h": 174,
+      "fill": "none",
+      "stroke": "#637B9B",
+      "radius": 0,
+      "label": "",
+      "labelPos": "none",
+      "overlap": true
+    },
+    {
+      "id": "node3-locus",
+      "shape": "circle",
+      "x": 436.29999999999995,
+      "y": 168.8,
+      "w": 54,
+      "h": 54,
+      "fill": "none",
+      "stroke": "#637B9B",
+      "label": "",
+      "labelPos": "none",
+      "overlap": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "input-to-neighborhood",
+      "from": "features",
+      "to": "neighborhood",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "arrow": "triangle",
+      "color": "#26383C",
+      "width": 1.5
+    },
+    {
+      "id": "aggregate-to-shared",
+      "from": "neighborhood",
+      "to": "shared",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "arrow": "triangle",
+      "color": "#26383C",
+      "width": 1.5,
+      "fromAt": 0.47096774193548385,
+      "toAt": 0.42857142857142855
+    },
+    {
+      "id": "shared-node-readout",
+      "from": "shared",
+      "to": "scores",
+      "fromSide": "r",
+      "toSide": "l",
+      "fromAt": 0.42857142857142855,
+      "toAt": 0.46938775510204084,
+      "route": "straight",
+      "arrow": "triangle",
+      "color": "#26383C",
+      "width": 1.5
+    },
+    {
+      "id": "shared-global-readout",
+      "from": "shared",
+      "to": "pool",
+      "fromSide": "r",
+      "fromAt": 0.86,
+      "toSide": "l",
+      "route": "curve",
+      "via": [
+        [
+          878,
+          310
+        ],
+        [
+          885,
+          434
+        ]
+      ],
+      "arrow": "triangle",
+      "color": "#26383C",
+      "width": 1.5
+    },
+    {
+      "id": "pooled-vector",
+      "from": "pool",
+      "to": "global",
+      "fromSide": "r",
+      "toSide": "l",
+      "route": "straight",
+      "arrow": "triangle",
+      "color": "#26383C",
+      "width": 1.5
+    }
+  ],
+  "lines": [
+    {
+      "points": [
+        [
+          463.3,
+          223
+        ],
+        [
+          463.3,
+          354
+        ],
+        [
+          422,
+          417
+        ]
+      ],
+      "color": "#637B9B",
+      "width": 1,
+      "dash": "4 4"
+    },
+    {
+      "points": [
+        [
+          224,
+          105
+        ],
+        [
+          210,
+          105
+        ],
+        [
+          210,
+          376
+        ],
+        [
+          224,
+          376
+        ]
+      ],
+      "color": "#2D7F86",
+      "width": 1.2
+    }
+  ],
+  "texts": [
+    {
+      "x": 44,
+      "y": 49,
+      "text": "a",
+      "size": 20,
+      "weight": 600,
+      "color": "#26383C"
+    },
+    {
+      "x": 244,
+      "y": 402,
+      "text": "b",
+      "size": 20,
+      "weight": 600,
+      "color": "#26383C"
+    },
+    {
+      "x": 686,
+      "y": 202,
+      "text": "邻域聚合",
+      "size": 17,
+      "color": "#26383C",
+      "anchor": "middle"
+    },
+    {
+      "x": 247.7,
+      "y": 133.6,
+      "text": "0",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 336.25,
+      "y": 208,
+      "text": "1",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 309.3,
+      "y": 356.8,
+      "text": "2",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 463.29999999999995,
+      "y": 201.8,
+      "text": "3",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 536.45,
+      "y": 99.5,
+      "text": "4",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 598.05,
+      "y": 291.70000000000005,
+      "text": "5",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 517.2,
+      "y": 381.59999999999997,
+      "text": "6",
+      "size": 18,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 53,
+      "y": 160,
+      "text": "0",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 160,
+      "text": "0",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 152,
+      "text": "0",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 53,
+      "y": 188,
+      "text": "1",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 188,
+      "text": "1",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 180,
+      "text": "1",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 53,
+      "y": 216,
+      "text": "2",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 216,
+      "text": "2",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 208,
+      "text": "2",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 53,
+      "y": 244,
+      "text": "3",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 244,
+      "text": "3",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 236,
+      "text": "3",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 53,
+      "y": 272,
+      "text": "4",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 272,
+      "text": "4",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 264,
+      "text": "4",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 53,
+      "y": 300,
+      "text": "5",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 300,
+      "text": "5",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 292,
+      "text": "5",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 53,
+      "y": 328,
+      "text": "6",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 734,
+      "y": 328,
+      "text": "6",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "end"
+    },
+    {
+      "x": 1103,
+      "y": 320,
+      "text": "6",
+      "size": 15,
+      "color": "#26383C",
+      "anchor": "start"
+    },
+    {
+      "x": 282.4,
+      "y": 485.96,
+      "text": "1",
+      "size": 14,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 408.4,
+      "y": 516.6800000000001,
+      "text": "3",
+      "size": 14,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 467.2,
+      "y": 447.56,
+      "text": "4",
+      "size": 14,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    },
+    {
+      "x": 545.5999999999999,
+      "y": 552.52,
+      "text": "5",
+      "size": 14,
+      "color": "#FFFFFF",
+      "anchor": "middle"
+    }
+  ],
+  "title": "One shared representation, two readouts"
+}

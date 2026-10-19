@@ -38,19 +38,19 @@ try{
  const external=[],errors=[],imageRequests=[];
  async function observe(context){await context.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(request.resourceType()==='image')imageRequests.push(url.pathname);if(url.origin!==new URL(requested).origin&&['http:','https:'].includes(url.protocol)){external.push(request.url());await route.abort();}else{assert.ok(['GET','HEAD'].includes(request.method()),'Static gallery must not call an API');await route.continue();}});context.on('page',opened=>opened.on('pageerror',error=>errors.push(error.message)));}
  const context=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true,reducedMotion:'reduce'});await observe(context);page=await context.newPage();
- await page.goto(requested,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelectorAll('.case-card').length===105);
+ await page.goto(requested,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.querySelectorAll('.case-card').length===108);
  const url=page.url(),catalog=JSON.parse((await fetchBytes(new URL('gallery/catalog.json',url))).toString('utf8'));
  assert.deepEqual(catalog,JSON.parse(await fs.readFile(path.join(repo,'gallery/catalog.json'),'utf8')));
- const items=catalog.items,themes=[...new Set(items.map(item=>item.theme))];assert.equal(items.length,105);assert.equal(themes.length,20);
+ const items=catalog.items,themes=[...new Set(items.map(item=>item.theme))];assert.equal(items.length,108);assert.equal(themes.length,20);
  const bilingual=JSON.parse((await fetchBytes(new URL('gallery/prompts.json',url))).toString('utf8'));
  assert.deepEqual(bilingual,JSON.parse(await fs.readFile(path.join(repo,'gallery/prompts.json'),'utf8')));
  const styleIndex=JSON.parse((await fetchBytes(new URL('styles.json',url))).toString('utf8'));
  assert.deepEqual(styleIndex,JSON.parse(await fs.readFile(path.join(repo,'assets/gallery/styles.json'),'utf8')));
- report.caseCount=105;report.themeCount=20;
+ report.caseCount=108;report.themeCount=20;
  const smallPreviews=JSON.parse((await fetchBytes(new URL('previews.json',url))).toString('utf8'));
  report.previewPayload={sourceBytes:smallPreviews.sourceBytes,thumbnailBytes:smallPreviews.thumbnailBytes};
  await check('list-loads-small-images-with-first-row-priority',async()=>{
-  assert.equal(Object.keys(smallPreviews.items).length,105);
+  assert.equal(Object.keys(smallPreviews.items).length,108);
   assert.ok(smallPreviews.thumbnailBytes<smallPreviews.sourceBytes*.15);
   assert.ok(!imageRequests.some(path=>/\/gallery\/[^/]+\/(?:preview\.jpg|diagram\.svg)$/.test(path)));
   const images=await page.locator('.case-card img').evaluateAll(nodes=>nodes.map(node=>({src:node.getAttribute('src'),loading:node.loading,priority:node.fetchPriority,decoding:node.decoding})));
@@ -59,21 +59,21 @@ try{
   assert.ok(images.slice(4).every(image=>image.loading==='lazy'));
  });
  const assets=new Map(),prompts=new Map();
- await check('all-105-user-cases-published-assets-match-source',async()=>{
+ await check('all-108-user-cases-published-assets-match-source',async()=>{
   const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','diagram.drawio','preview.jpg','checks.json'].map(filename=>({item,filename})));
   for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md'){prompt(remote.toString('utf8'));prompts.set(item.slug,bilingual.items[item.slug].zh);}}));
-  return {cases:105,files:630};
+  return {cases:108,files:630};
  });
- await check('all-105-default-featured-optional-and-decoded-previews',async()=>{
+ await check('all-108-default-featured-optional-and-decoded-previews',async()=>{
   const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.map(item=>item.slug));assert.equal(await page.locator('[data-collection="all"]').getAttribute('aria-pressed'),'true');await noOverflow();await screenshot('desktop.png');
-  await selectFilter('collection','flagship');assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.status==='flagship').map(item=>item.slug));await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),105);
+  await selectFilter('collection','flagship');assert.deepEqual(await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item)),items.filter(item=>item.status==='flagship').map(item=>item.slug));await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),108);
   for(const item of items){const image=page.locator(`[data-item="${item.slug}"] img`);await image.scrollIntoViewIfNeeded();await image.evaluate(async image=>{await image.decode();if(!image.naturalWidth||image.naturalWidth>640||!image.naturalHeight||image.naturalHeight>480)throw Error('Invalid small preview dimensions');});}
-  return {defaultCases:105,optionalFlagship:20,decodedPreviews:105};
+  return {defaultCases:108,optionalFlagship:20,decodedPreviews:108};
  });
  await check('all-20-theme-filters-retain-catalog-facts',async()=>{
   assert.equal(await page.locator('#theme option').count(),21);
   for(const theme of themes){await selectFilter('theme',theme);const displayed=await page.locator('.case-card').evaluateAll(cards=>cards.map(card=>card.dataset.item));assert.deepEqual(displayed,items.filter(item=>item.theme===theme).map(item=>item.slug));}
-  await selectFilter('theme','all');await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),105);
+  await selectFilter('theme','all');await selectFilter('collection','all');assert.equal(await page.locator('.case-card').count(),108);
  });
  const samples=[items[0],items.find(item=>item.lang==='zh')??items[20],items.at(-1)];
  await check('chinese-styles-search-category-favorites-and-persistence',async()=>{
@@ -83,7 +83,7 @@ try{
   await page.locator('#search').fill('没有这个图-qa');assert.equal(await page.locator('.case-card').count(),0);assert.equal(await page.locator('#empty').isVisible(),true);
   await page.locator('#reset-filters').click();const item=items[0];await page.locator(`#gallery [data-favorite="${item.slug}"]`).click();assert.equal(await page.locator('#favorite-count').textContent(),'1');await page.locator('#favorites').click();assert.equal(await page.locator('.case-card').count(),1);
   await page.reload({waitUntil:'networkidle'});await page.locator('#favorites').click();assert.equal(await page.locator('.case-card').count(),1);assert.equal(await page.locator('.case-card').getAttribute('data-item'),item.slug);
-  await page.locator(`#gallery [data-favorite="${item.slug}"]`).click();assert.equal(await page.locator('.case-card').count(),0);await page.locator('#reset-filters').click();assert.equal(await page.locator('.case-card').count(),105);
+  await page.locator(`#gallery [data-favorite="${item.slug}"]`).click();assert.equal(await page.locator('.case-card').count(),0);await page.locator('#reset-filters').click();assert.equal(await page.locator('.case-card').count(),108);
  });
  await check('native-clipboard-copies-original-user-prompts',async()=>{
   await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(url).origin});
@@ -186,7 +186,7 @@ try{
  await check('readable-type-and-prefilled-style-request-entrypoints',async()=>{
   const inspectLink=async(selector,expected=[])=>{const node=page.locator(selector),target=new URL(await node.getAttribute('href'));assert.equal(target.origin,'https://github.com');assert.equal(target.pathname,'/KanJieTeam/MuseDraw/issues/new');assert.equal(target.searchParams.get('template'),'style-request.md');assert.ok(target.searchParams.get('title').startsWith('[Style request]'));for(const text of expected)assert.ok(target.searchParams.get('body').includes(text),text);assert.equal(await node.getAttribute('target'),'_blank');assert.ok((await node.getAttribute('rel')).includes('noopener'));assert.ok((await node.getAttribute('rel')).includes('noreferrer'));return target;};
   for(const width of [1440,390]){
-   await page.setViewportSize({width,height:width===390?844:1000});await page.locator('#reset-filters').click();assert.equal(await page.locator('.case-card').count(),105);
+   await page.setViewportSize({width,height:width===390?844:1000});await page.locator('#reset-filters').click();assert.equal(await page.locator('.case-card').count(),108);
    for(const [selector,min]of [['.style-option strong',14],['.case-heading h2',16],['.case-meta',12],['.case-info>.case-actions button',13],['.case-info>.downloads',13],['.prompt-language button',14]])assert.ok(await page.locator(selector).first().evaluate((node,min)=>parseFloat(getComputedStyle(node).fontSize)>=min,min),`${width}px: ${selector} too small`);
    await inspectLink('#request-top',['所有风格']);await inspectLink('#request-style',['全部作品']);await page.locator('#request-style').scrollIntoViewIfNeeded();await noOverflow();await screenshot(width===390?'mobile-request.png':'desktop-request.png');
    await selectFilter('theme','editorial');await selectFilter('category','engineering');await page.locator('#search').fill('private-brief-not-for-github');assert.equal(await page.locator('#empty').isVisible(),true);const request=await inspectLink('#request-empty',['纸墨编辑','工程']);assert.ok(!request.href.includes('private-brief-not-for-github'));assert.ok(!request.searchParams.get('body').includes('private-brief-not-for-github'));
@@ -202,6 +202,6 @@ try{
   assert.ok(bytes.length<1024*1024);assert.equal(bytes.readUInt32LE(0),0x04034b50);
   assert.equal(await page.locator('#download-skill').getAttribute('href'),'downloads/musedraw-skill.zip');
  });
- report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 105 cases, 20 themes, 6 byte-exact downloads.`);
+ report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 108 cases, 20 themes, 6 byte-exact downloads.`);
 }catch(error){report.status='failed';report.error=error.message;if(page&&!page.isClosed())await screenshot('failure.png').catch(()=>{});console.error(error.stack);process.exitCode=1;}
 finally{await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');await browser?.close();if(server)await new Promise(resolve=>server.close(resolve));const real=await fs.realpath(scratch).catch(()=>null),temp=await fs.realpath(os.tmpdir()),relative=real&&path.relative(temp,real);assert.ok(real===scratchReal&&relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&path.basename(scratch).startsWith('musedraw-gallery-qa-'),'Refusing an unverified scratch cleanup');await fs.rm(scratch,{recursive:true,force:true});}

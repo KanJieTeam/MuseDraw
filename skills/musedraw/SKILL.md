@@ -5,17 +5,22 @@ description: Draw publication-quality diagrams for office work, research and eng
 
 # MuseDraw
 
-You are the art director. The user gives a few sentences; you decide what the
-reader must understand, choose a diagram type and a style, write a
-`scene.json`, render it with the bundled engine, check the report and deliver.
-The engine owns typography, colour, line, texture, ports and arrowheads; you own
-content, composition and emphasis.
+Translate the user's facts into visible objects and relationships. MuseDraw
+owns repeatable layout, reading size, role styling, ports and export. Use the
+semantic `compose` route below when it fits; it avoids guessing a canvas,
+coordinates, font sizes and colours. Free composition remains available for
+relationships these methods do not cover.
+
+For object changes, comparisons, feedback, shared routes, detail views and layers,
+use the matching [object-composition method](references/object-composition.md).
+Make the relationship visible in the drawing; don't replace it with explanatory
+cards. The engine's `object-views` block keeps repeated native objects consistent.
 
 ## Start here · required execution route
 
-Create or edit `scene.json`, run `scripts/musedraw.mjs`, read `checks.json`,
+Create a composition or edit `scene.json`, run `scripts/musedraw.mjs`, read `checks.json`,
 then deliver with the small `preview.jpg`. For the shared-index RAG workflow,
-run `quickstart rag`; for other diagrams, run `render scene.json`. The commands
+run `quickstart rag`; use `compose` for states/flows and `render scene.json` for other diagrams. The commands
 below are the implementation instructions; keep them out of user-facing prompts.
 When the user says “PNG only” / “只需 PNG”, select `--no-drawio` internally.
 Both formats come from this engine. Do not handwrite draw.io XML, research its
@@ -23,6 +28,36 @@ format, install another drawio exporter or use app.diagrams.net to render PNG.
 
 Choose one route after reading this file:
 
+When the user explicitly says this installed Skill was updated, reread this file
+and the selected route's reference once before revising an older composition.
+Conversation memory may describe older primitives. Do not inspect renderer source
+or reinstall dependencies to discover the update.
+
+If the installed Skill path is already known, use it directly. Its `scripts`,
+`references` and `themes` paths are fixed; the lightweight install intentionally
+has no `gallery` directory, and a new output directory need not exist yet. Read
+the one relevant reference by its exact path, write the scene, and render. Do
+not inventory directories, search for a gallery or repair PATH before attempting
+the actual task. Diagnose once only if a needed read or render command fails.
+
+- **Gallery case / approved template:** reuse its `scene.json` directly. Render
+  unchanged scenes immediately; adapt requested content and affected modules.
+  Preserve the approved composition, hierarchy, spacing and visual details.
+- **Reference image:** view the supplied image and build a scene using the
+  appropriate composition pattern and primitives. For scientific mechanisms,
+  method overviews, device sections and Nature-style reference figures, use
+  [scientific composition](references/scientific-design.md) before selecting
+  primitives. Preserve the reference's material/category colours and object
+  shapes; an ordinary flow/states layout is not a substitute for its artwork.
+  Do not introduce OCR tools,
+  pixel tracing, transcription contracts, voting or forced placeholder labels.
+  Use the image's visual structure; users can judge the result from its preview.
+  Before the first render, inspect the whole reference and at most two uncertain
+  detail crops. Then write one scene and render it. Do not run image-coordinate
+  measurement scripts, enumerate pixel colours or repeatedly crop every panel.
+  Preserve the visible relationships, identities and proportions first; resolve
+  a remaining fine detail locally after a first artifact exists. A request to
+  reproduce a reference does not implicitly require pixel-identical tracing.
 - **Bundled RAG starter:** run
   `node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --strict`
   immediately. Use `--lang en` for English; append `--no-drawio` for PNG only.
@@ -31,8 +66,31 @@ Choose one route after reading this file:
   a runtime failure once, fix that dependency, and retry the same command.
 - **Existing scene or exact replay:** render that scene directly, then check
   its report. Read source/reference files only to resolve a concrete problem.
+- **New scientific schematic:** read [scientific composition](references/scientific-design.md)
+  and select its visual family in the [scientific atlas](references/scientific-atlas.md).
+  Read an example's method/scene only when its relationship actually fits.
+  For paired sites and condition comparisons use the linked comparison method;
+  for overview/detail correspondence use the [detail method](references/scientific-details.md).
+  Unrelated architecture examples are not required reading. Use native object motifs and the
+  composition the mechanism requires; preserve the supplied relationships.
+  The worked examples teach composition; they are not a journal-quality guarantee.
+- **New flow or object states:** for ordinary directed workflows and simple matched
+  object states, read [semantic composition](references/semantic-composition.md),
+  translate the actual objects/steps/conditions into `composition.json`, and run
+  `node <skill>/scripts/musedraw.mjs compose composition.json --out output/diagram --strict`.
+  This route owns page geometry, font sizes and routing. Do not read the raw
+  schema, theme files, renderer or gallery beforehand. Do not choose a style
+  when the content fits its quiet journal default. Use a requested named style
+  via `theme`; for a reference or richer scientific composition use the routes
+  above rather than forcing the semantic layout. Preserve every fact and exception.
 - **New custom composition:** use sections 1–3 and only the relevant reference
-  fields before rendering. Do not read every theme or the exporter implementation.
+  fields before rendering. Read the [anti-AI design guidance](references/anti-ai-checklist.md)
+  once before composing a new design; apply it while choosing structure, text
+  density and colour roles. It is not an extra image-review stage. Do not read
+  every theme or the exporter implementation. The drawing field reference is
+  `references/scene-schema.md`; the large `scene.schema.json` is for validators
+  and editor completion. Layout/renderer source is not a drawing prerequisite;
+  inspect it only when a reported failure cannot be resolved from this reference.
 
 ## Default delivery · every drawing, every style
 
@@ -109,7 +167,7 @@ node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --st
 ```
 
 For a PNG-only request, append `--no-drawio`. For other scenes use
-`render scene.json --font-mode system --preview-first --cache --no-drawio`.
+`render scene.json --no-drawio`.
 This skips native object collection and serialization; it does not remove the
 browser or font/layout checks. Default rendering still produces both files.
 Keep any existing draw.io file untouched in PNG-only mode and do not present it
@@ -129,7 +187,8 @@ the user asks for these. Keep useful node labels, section labels and legends.
 When adapting a gallery example, remove its figure tag, attribution, example
 measurements, vendor choices and captions unless they belong to the new brief.
 
-The quick path uses system fonts and reuses an installed Chromium or Chrome/Edge.
+Render commands default to system fonts, early preview and cache, and reuse an
+installed Chromium or Chrome/Edge. Bundled fonts are an explicit opt-in.
 Do not install the full font library or download Chromium while drawing if
 these resources already exist. If the runtime is not known, diagnose once:
 
@@ -157,7 +216,7 @@ families are required and the appropriate fonts are already installed.
 Show or link the bounded `preview.jpg` as soon as the command reports it; reading
 the image with an analysis tool is not required. Check `checks.json`, then deliver
 `diagram@2x.png` and `diagram.drawio` unless another format was requested.
-The preview is at most 1200×1000. `run.json` records phase timings. Quickstart verifies
+The preview is at most 1200×1000. Every `run.json` records phase timings. Quickstart verifies
 cached artifacts on repeat runs; use `--no-cache` for a fresh render.
 
 For other diagrams, read only the relevant scene fields and closest case.
@@ -166,6 +225,11 @@ error. Avoid a chain of repeated README/schema/theme/source reads before the
 first render. Use the workflow below for custom composition and automatic checks.
 
 ## 1 · Read the request like an editor
+
+Use the anti-AI guidance to make the diagram serve its relationships. Muted
+colours, fewer words, a dark highlight or perfectly aligned cards alone do not
+make a design professional. Peers can share a visual treatment; different roles
+need a visible distinction. Preserve user facts while reducing decorative prose.
 
 1. **Who reads it, where?** Grant reviewer, journal, a team meeting, a README,
    a printed handout. This picks the style (see table) and the density.
@@ -220,19 +284,26 @@ For a new custom composition, read the relevant fields in the
 [scene schema](references/scene-schema.md). Bundled starters and unchanged-scene
 replays do not need this reference. In short:
 
-- `theme`, `size` (≈1600–1760 × 900–1100), `header: false`, `footer: false`.
+- `theme`, `size` (start at 1200 px wide; height follows content), `header: false`, `footer: false`.
   Titles and subtitles are optional; `header: true` enables a requested heading.
+  At the final 1200px preview, main labels should be 18–20px and relationship
+  labels at least 14px. When using a wider canvas, scale type with it. Grow,
+  wrap or reflow content before shrinking text. Print figures use their actual
+  intended final size rather than treating screen pixels as print points.
 - **Blocks** for structured diagrams — `tree`, `mindmap`, `timeline`, `gantt`,
-  `matrix`, `funnel`, `cycle`, `fishbone`, `swimlane`, `table` — give content
+  `matrix`, `funnel`, `cycle`, `fishbone`, `swimlane`, `table`, `grid` — give content
   and a bounding box; the block computes positions.
+- `type: "scientific"` provides native graph, network, tensor, sequence,
+  projected layers, fixed-end laminate states, paired-strand site markers, circular motion, spherical wireframes and scripted formula
+  objects; see scientific composition.
 - `type: "sequence"` for time-ordered messages between participants.
 - **Primitives** for everything else: `zones`, `nodes` (`label`, `tag`, `sub`,
   `shape`, `tone`, `icon`, `step`), `edges` (`kind`, `label`, `step`, sides,
   `mid`, `via`), `notes`, `texts`, `legend`. Coordinates are canvas pixels.
   Leave ~60 px under the header; the engine closes any larger gap itself.
-- Copy the closest file in `gallery/` (in the repo, or fetch it from
-  github.com/KanJieTeam/MuseDraw/tree/main/gallery) and change content — every gallery
-  case is a working scene for an agent to imitate.
+- An already available approved gallery scene can be adapted. A new custom
+  composition does not require searching/downloading a gallery case: use the
+  relevant method and native primitives directly.
 
 ## 4 · Render and check
 
@@ -258,14 +329,18 @@ Read `checks.json`. Fix every `text-overflow`,
 Once checks pass, deliver without a mandatory image-reading or vision-model call.
 Checks cover measured geometry, not taste or factual correctness. Compare scene
 content and relationships with the user's request; do not use image OCR for this.
-Use the [anti-AI checklist](references/anti-ai-checklist.md) only for requested
-design review or publishing a new gallery/style contribution. Rerender only after
+Apply the anti-AI guidance during composition. A separate visual review is only
+needed under the optional-review policy above or gallery/style publishing rules.
+Do not add image uploads, OCR or multiple inspection rounds for this guidance. Rerender only after
 a change, failed check or concrete unresolved issue, not to prove reproducibility.
 Use `checks.drawio.native` and connected-edge checks as the export evidence;
 do not research or audit the exporter source on each drawing. For a slow task,
 compare `run.json` phase times with total task time and report them separately.
 The CLI timer excludes agent reasoning, reference reads, installation and host
 tool latency; do not attribute those minutes to draw.io serialization.
+Some Windows host shells return empty stdout or write redirected logs as UTF-16.
+Check `checks.json` and the requested files once before retrying a render. Valid
+outputs mean the render completed; missing console text alone is not a failure.
 Deliver the PNG and native editable draw.io by default. Keep scene JSON, SVG and checks as supporting
 files. Paper textures, blur and glow are PNG visual effects; draw.io preserves
 editable shapes, text and connected edges, without promising identical rendering
@@ -273,8 +348,16 @@ of every effect. Never substitute an embedded image for editable draw.io objects
 
 ## 5 · Edits in conversation
 
-Edit the existing `scene.json`; never regenerate unrelated content. Style
+For text-only edits, use `patch` as documented in the
+[editing workflow](references/editing-workflow.md). It preserves unrelated
+content and reports the exact changes. For structural edits, edit the existing
+`scene.json`; never regenerate unrelated content. Style
 changes swap `theme` only. Keep ids stable so diffs stay readable.
+
+One writer owns a scene at a time. Combine related edits into one write or apply
+them sequentially; do not launch parallel replacements against the same file.
+Render only after those edits finish, and verify the saved scene when the result
+unexpectedly stays unchanged. Independent reference reads may run in parallel.
 
 ## Legacy routes
 

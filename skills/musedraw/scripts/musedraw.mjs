@@ -16,9 +16,23 @@ import { exportScene, loadPlaywrightInfo, fontStylesheets } from './engine/expor
 import { prepareScene, validateScene, SceneValidationError } from './engine/validate.mjs';
 import { resolveBrowser, systemFontStacks, withSystemFonts, fileStamp, fontEnvironmentStamp } from './engine/environment.mjs';
 import { renderKey, rendererStamp, readRenderCache, writeRenderCache } from './engine/cache.mjs';
+import { patchScene } from './engine/patch.mjs';
+import { compose } from './engine/compose.mjs';
 
 const SKILL = path.resolve(import.meta.dirname, '..');
 const THEMES = path.join(SKILL, 'themes');
+
+// Windows case aliases, symlinks and existing hard links must not let an output
+// overwrite the semantic source. Lexical comparison alone is not file identity.
+export function sameFilePath(a, b) {
+  const canonical = p => {
+    let resolved = path.resolve(p);
+    try { resolved = fs.realpathSync.native(resolved); } catch { /* output may not exist */ }
+    return process.platform === 'win32' ? resolved.toLowerCase() : resolved;
+  };
+  if (canonical(a) === canonical(b)) return true;
+  try { const x=fs.statSync(a), y=fs.statSync(b); return x.ino!==0 && x.dev===y.dev && x.ino===y.ino; } catch { return false; }
+}
 
 export async function loadTheme(id, trail = []) {
   if (typeof id !== 'string' || !id.trim() || /[\\/.:\u0000-\u001f]/.test(id)) throw new Error('Use a named theme, not a filesystem path');
@@ -79,10 +93,10 @@ async function main() {
   const started = performance.now();
   const [cmd, ...argv] = process.argv.slice(2);
   const { flags, rest } = args(argv);
-  const fontMode = flags['font-mode'] ?? (cmd === 'quickstart' || cmd === 'doctor' ? 'system' : 'bundled');
+  const fontMode = flags['font-mode'] ?? 'system';
   if (!['system', 'bundled'].includes(fontMode)) throw new Error('--font-mode must be system or bundled');
   if (cmd === 'doctor') {
-    const report = { node: process.versions.node, skillVersion: JSON.parse(await fsp.readFile(path.join(SKILL, 'package.json'), 'utf8')).version, fontMode, fontsRequired: fontMode === 'bundled', ready: false };
+    const report = { node: process.versions.node, skillVersion: JSON.parse(await fsp.readFile(path.join(SKILL, 'package.json'), 'utf8')).version, engineFingerprint: rendererStamp(), capabilities: ['compose', 'patch', 'grid', 'object-views', 'scientific', 'designs', 'foreground', 'default-progress'], fontMode, fontsRequired: fontMode === 'bundled', ready: false };
     if (Number(process.versions.node.split('.')[0]) < 22) report.error = 'Node.js 22+ is required';
     else try {
       const { pw } = await loadPlaywrightInfo(flags.playwright);
@@ -112,7 +126,52 @@ async function main() {
     }
     return;
   }
+  const designRoot=path.join(SKILL,'assets/design-examples/scientific');
+  if(cmd==='designs'){
+    const catalog=JSON.parse(await fsp.readFile(path.join(designRoot,'index.json'),'utf8'));
+    const terms=rest.join(' ').toLowerCase().split(/\s+/).filter(Boolean);
+    const matches=catalog.examples.filter(e=>terms.every(term=>JSON.stringify(e).toLowerCase().includes(term)));
+    if(flags.json)console.log(JSON.stringify({...catalog,examples:matches},null,2));
+    else for(const e of matches)console.log(`${e.id} — ${e.useWhen}\n  Scene: assets/design-examples/scientific/${e.scene}\n  Method: assets/design-examples/scientific/${e.method}`);
+    return;
+  }
   let starter = null;
+  let edit = null;
+  let composition = null;
+  let compositionInput = null;
+  if(cmd==='design'){
+    if(rest.length!==1||!flags.out)throw new Error('Usage: musedraw.mjs design <id> --out <directory>; adapt its scene facts before delivery');
+    const catalog=JSON.parse(await fsp.readFile(path.join(designRoot,'index.json'),'utf8'));
+    const example=catalog.examples.find(e=>e.id===rest[0]);
+    if(!example)throw new Error('Unknown design; use designs --json to select a matching composition');
+    const source=path.resolve(designRoot,example.scene),rel=path.relative(designRoot,source);
+    if(rel.startsWith('..')||path.isAbsolute(rel))throw new Error('Design source must stay inside its asset directory');
+    const target=path.resolve(flags.out,'scene.json');
+    if(!fs.existsSync(target))starter=JSON.parse(await fsp.readFile(source,'utf8'));
+    rest.splice(0,1,target);
+  }
+  if (cmd === 'compose') {
+    if (rest.length !== 1 || !flags.out) throw new Error('Usage: musedraw.mjs compose composition.json --out <directory>');
+    const input = path.resolve(rest[0]);
+    compositionInput = input;
+    composition = JSON.parse(await fsp.readFile(input, 'utf8'));
+    starter = compose(composition);
+    const target = path.resolve(flags.out, 'scene.json');
+    for (const name of ['scene.json','diagram.svg','diagram@2x.png','diagram.drawio','preview.jpg','checks.json','run.json','.musedraw-cache.json']) {
+      if (sameFilePath(input,path.resolve(flags.out,name))) throw new Error(`Composition input conflicts with generated ${name}; keep the source outside reserved output filenames`);
+    }
+    rest.splice(0, 1, target);
+  }
+  if (cmd === 'patch') {
+    if (rest.length !== 2 || !flags.out) throw new Error('Usage: musedraw.mjs patch source.json changes.json --out new-directory');
+    const original = JSON.parse(await fsp.readFile(path.resolve(rest[0]), 'utf8'));
+    const operations = JSON.parse(await fsp.readFile(path.resolve(rest[1]), 'utf8'));
+    edit = patchScene(original, operations);
+    starter = edit.scene;
+    const target = path.resolve(flags.out, 'scene.json');
+    if (target === path.resolve(rest[0]) || fs.existsSync(target)) throw new Error('Patch output must be a new scene path; the source and existing revisions are preserved');
+    rest.splice(0, 2, target);
+  }
   if (cmd === 'quickstart') {
     if (rest.length !== 1 || rest[0] !== 'rag') throw new Error('Usage: musedraw.mjs quickstart rag --out <directory> [--lang zh|en]');
     const lang = flags.lang ?? 'zh';
@@ -122,8 +181,8 @@ async function main() {
     if (!fs.existsSync(sceneFile)) starter = JSON.parse(await fsp.readFile(path.join(SKILL, `assets/starters/rag.${lang}.json`), 'utf8'));
     rest.splice(0, 1, sceneFile);
   }
-  if (!['render', 'validate', 'quickstart'].includes(cmd) || !rest.length) {
-    console.log('Usage: musedraw.mjs quickstart rag --out <directory> [--lang zh|en]\n       musedraw.mjs doctor [--json]\n       musedraw.mjs render scene.json [...] [--font-mode system|bundled] [--preview-first] [--cache] [--no-drawio] [--theme id] [--out dir] [--svg-only] [--playwright module] [--browser exe] [--fonts node_modules]\n       musedraw.mjs validate scene.json [...] [--theme id]\n       musedraw.mjs themes');
+  if (!['render', 'validate', 'quickstart', 'patch', 'compose', 'design'].includes(cmd) || !rest.length) {
+    console.log('Usage: musedraw.mjs designs [relationship query] [--json]\n       musedraw.mjs design <id> --out <directory>\n       musedraw.mjs compose composition.json --out <directory>\n       musedraw.mjs quickstart rag --out <directory> [--lang zh|en]\n       musedraw.mjs patch source.json changes.json --out new-directory\n       musedraw.mjs doctor [--json]\n       musedraw.mjs render scene.json [...] [--font-mode system|bundled] [--no-cache] [--no-drawio] [--theme id] [--out dir] [--svg-only] [--playwright module] [--browser exe] [--fonts node_modules]\n       musedraw.mjs validate scene.json [...] [--theme id]\n       musedraw.mjs themes');
     process.exitCode = cmd ? 1 : 0;
     return;
   }
@@ -131,8 +190,8 @@ async function main() {
   const fontDirs = [flags.fonts, path.join(SKILL, 'node_modules'), path.join(process.cwd(), 'node_modules'), path.join(SKILL, '../../node_modules')].filter(Boolean).filter((d) => fs.existsSync(d));
   let browser = null;
   let runtime = null;
-  const previewFirst = cmd === 'quickstart' || flags['preview-first'] || flags.cache;
-  const useCache = !flags['no-cache'] && !flags['svg-only'] && fontMode === 'system' && (cmd === 'quickstart' || flags.cache);
+  const previewFirst = true;
+  const useCache = !flags['no-cache'] && !flags['svg-only'] && fontMode === 'system';
   let cacheContext = null;
   let failed = 0;
   try {
@@ -142,7 +201,7 @@ async function main() {
         const progress = (stage, detail = {}) => {
           const event = { stage, elapsedMs: Math.round(performance.now() - started), ...detail };
           events.push(event);
-          if (cmd === 'quickstart' || flags['preview-first']) console.log(`[${(event.elapsedMs / 1000).toFixed(2)}s] ${stage}${detail.file ? `: ${path.join(path.resolve(flags.out ?? path.dirname(file)), detail.file)}` : ''}`);
+          console.log(`[${(event.elapsedMs / 1000).toFixed(2)}s] ${stage}${detail.file ? `: ${path.join(path.resolve(flags.out ?? path.dirname(file)), detail.file)}` : ''}`);
         };
         const scene = starter ?? JSON.parse(await fsp.readFile(file, 'utf8'));
         const source = JSON.stringify(scene);
@@ -152,7 +211,7 @@ async function main() {
         if (!themeId) throw new Error('no theme (set "theme" in the scene or pass --theme)');
         const theme = await loadTheme(themeId);
         if (cmd === 'validate') {
-          prepareScene(scene, theme);
+          prepareScene(scene, merge(theme, scene.style ?? {}));
           console.log(`✓ ${file}  valid scene (browser layout and visual quality not checked)`);
           continue;
         }
@@ -175,6 +234,10 @@ async function main() {
           key = renderKey({ source, svg, cacheContext, drawio });
           const cached = readRenderCache(outDir, key, { drawio });
           if (cached) {
+            if (composition) {
+              await fsp.writeFile(file, JSON.stringify(starter, null, 2) + '\n');
+              if (!sameFilePath(path.resolve(outDir, 'composition.json'), compositionInput)) await fsp.writeFile(path.join(outDir, 'composition.json'), JSON.stringify(composition, null, 2) + '\n');
+            }
             progress('cache-hit', { file: 'preview.jpg' });
             await fsp.writeFile(path.join(outDir, 'run.json'), JSON.stringify({ cached: true, fontMode, events, elapsedMs: Math.round(performance.now() - started) }, null, 2) + '\n');
             console.log(`✓ ${path.relative(process.cwd(), outDir) || '.'}  [${theme.id}] cached (artifacts verified)`);
@@ -186,11 +249,14 @@ async function main() {
           progress('browser-ready');
         }
         await fsp.mkdir(outDir, { recursive: true });
-        if (starter) await fsp.writeFile(file, JSON.stringify(starter, null, 2) + '\n', { flag: 'wx' });
+        if (starter) await fsp.writeFile(file, JSON.stringify(starter, null, 2) + '\n', { flag: composition ? 'w' : 'wx' });
+        if (composition && !sameFilePath(path.resolve(outDir, 'composition.json'), compositionInput)) await fsp.writeFile(path.join(outDir, 'composition.json'), JSON.stringify(composition, null, 2) + '\n');
+        if (edit) await fsp.writeFile(path.join(outDir, 'changes.json'), JSON.stringify({ changes: edit.changes, unrelatedSceneFieldsChanged: false }, null, 2) + '\n');
         await fsp.writeFile(path.join(outDir, 'diagram.svg'), svg + '\n');
         let checks = { svgOnly: true };
         if (fontMode === 'system') checks.fontMode = 'system';
-        if (browser) checks = await exportScene({ svg, outDir, browser, fontDirs, fontMode, drawio, previewFirst, onProgress: progress });
+        if (browser) checks = await exportScene({ svg, outDir, browser, fontDirs, fontMode, drawio, previewFirst,
+          readingProfile: scene.meta?.composition ? {maxWidth:1200,maxHeight:1000,min:14} : null, onProgress: progress });
         checks.theme = theme.id;
         await fsp.writeFile(path.join(outDir, 'checks.json'), JSON.stringify(checks, null, 2) + '\n');
         if (key) writeRenderCache(outDir, key, checks, { drawio });

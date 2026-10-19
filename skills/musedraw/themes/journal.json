@@ -3,7 +3,7 @@
   "name": "Journal Figure",
   "nameZh": "科研期刊",
   "aliases": ["journal", "nature", "paper", "期刊", "科研", "论文"],
-  "summary": "Publication-ready figure: white field, small precise type, colour-blind-safe palette, bold panel letters and a caption-style title. For papers, theses and grant proposals.",
+  "summary": "Scientific typography and colour foundation: white field, precise type and panel letters. For Nature-style methods and mechanisms, use references/scientific-design.md to select object geometry, composition and evidence; selecting this theme alone does not establish publication quality.",
   "palette": { "bg": "#FFFFFF", "ink": "#1B1B1B", "muted": "#5F6368", "line": "#BFC4CA", "accent": "#2F6DB5", "blue": "#2F6DB5", "orange": "#E07B39", "green": "#3E9651", "red": "#C2423F", "purple": "#7A62A8", "teal": "#2C8C99", "sand": "#F4F1EA" },
   "fonts": { "display": "Inter, Noto Sans SC, sans-serif", "body": "Inter, Noto Sans SC, sans-serif", "mono": "Inter, Noto Sans SC, sans-serif" },
   "canvas": { "bg": "bg", "margin": 56 },

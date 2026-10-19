@@ -3,17 +3,24 @@
 // *what* (a tree, a timeline, a 2×2 matrix…) and a bounding box; the block
 // computes positions. Blocks can be mixed with hand-placed primitives.
 
+import { wrap } from './text.mjs';
+import { objectViews } from './object-views.mjs';
+import { scientificMotif } from './scientific-motifs.mjs';
+import { graphView } from './graph-view.mjs';
 const PI = Math.PI;
 const r2 = (n) => Math.round(n * 100) / 100;
 
 export function expandBlocks(scene, theme) {
   if (!scene.blocks?.length) return scene;
-  const out = { ...scene, zones: [...(scene.zones ?? [])], nodes: [...(scene.nodes ?? [])], edges: [...(scene.edges ?? [])], texts: [...(scene.texts ?? [])], lines: [...(scene.lines ?? [])], paths: [...(scene.paths ?? [])], notes: [...(scene.notes ?? [])] };
+  const out = { ...scene, zones: [...(scene.zones ?? [])], nodes: [...(scene.nodes ?? [])], edges: [...(scene.edges ?? [])], texts: [...(scene.texts ?? [])], lines: [...(scene.lines ?? [])], paths: [...(scene.paths ?? [])], notes: [...(scene.notes ?? [])], nativeModules:[...(scene.nativeModules??[])] };
   scene.blocks.forEach((b, i) => {
     const fn = BLOCKS[b.type];
     if (!fn) throw new Error(`Unknown block type "${b.type}". Available: ${Object.keys(BLOCKS).join(', ')}`);
-    const res = fn({ id: b.id ?? `b${i + 1}`, ...b }, theme);
-    for (const k of ['zones', 'nodes', 'edges', 'texts', 'lines', 'paths', 'notes']) if (res[k]) out[k].push(...res[k]);
+    const input = { id: b.id ?? `b${i + 1}`, ...b };
+    const res = b.type === 'graph-view'
+      ? graphView(input, scene.blocks.find(source => source.id === b.source), theme)
+      : fn(input, theme);
+    for (const k of ['zones', 'nodes', 'edges', 'texts', 'lines', 'paths', 'notes','nativeModules']) if (res[k]) out[k].push(...res[k]);
   });
   return out;
 }
@@ -394,4 +401,45 @@ function table(b) {
   return { nodes, texts, lines };
 }
 
-export const BLOCKS = { tree, mindmap, timeline, gantt, matrix, funnel, cycle, fishbone, swimlane, table };
+// A bounded module/grid reflows its own items without moving unrelated blocks.
+// Long labels grow their row; a fixed frame that cannot fit is rejected rather
+// than silently shrinking type, clipping content or overlapping the next module.
+function grid(b, theme) {
+  const items = b.items ?? [], columns = Math.min(b.columns ?? 3, Math.max(1, items.length));
+  const pad = b.padding ?? 12, gap = b.gap ?? 12;
+  const cellW = (b.w - 2 * pad - gap * (columns - 1)) / columns;
+  if (cellW <= 2 * (b.cellPadding ?? 6)) throw new Error(`Grid ${b.id}: frame too narrow for ${columns} columns`);
+  const labelSize = b.labelSize ?? 16, titleH = b.label ? labelSize * 1.4 + gap : 0;
+  const rowCount = Math.ceil(items.length / columns), rows = [];
+  for (let row = 0; row < rowCount; row++) {
+    rows[row] = Math.max(...items.slice(row * columns, (row + 1) * columns).map((item) => {
+      const size = item.size ?? b.size ?? theme.node.size ?? 16;
+      const padding = item.padding ?? b.cellPadding ?? 6;
+      const lines = wrap(item.label ?? '', cellW - 2 * padding, size, theme.fonts.body, 0, item.weight ?? b.weight ?? theme.node.weight).length;
+      return Math.ceil(lines * size * (theme.node.lineHeight ?? 1.25) + 2 * padding + (item.sub ? (theme.node.subSize ?? 12) * 1.4 + 5 : 0) + (item.tag ? (theme.node.tagSize ?? 10) * 1.4 + 5 : 0));
+    }));
+    if (b.rowH !== undefined) {
+      if (b.rowH < rows[row]) throw new Error(`Grid ${b.id}: rowH ${b.rowH} cannot fit row ${row + 1} (needs ${rows[row]}); grow the row/frame`);
+      rows[row] = b.rowH;
+    }
+  }
+  const minimumH = 2 * pad + titleH + rows.reduce((a, h) => a + h, 0) + Math.max(0, rowCount - 1) * gap;
+  if (b.h !== undefined && b.h < minimumH) throw new Error(`Grid ${b.id}: frame height ${b.h} cannot fit content (needs ${minimumH}); increase h or reduce columns`);
+  const frameH = b.h ?? minimumH;
+  if (rowCount && b.h !== undefined && b.rowH === undefined) {
+    const extra = (b.h - minimumH) / rowCount;
+    rows.forEach((height, i) => { rows[i] = height + extra; });
+  }
+  const nodes = [], texts = [], paths = [];
+  if (b.fill || b.stroke) paths.push({ d: `M${b.x} ${b.y}h${b.w}v${frameH}h-${b.w}Z`, fill: b.fill ?? 'none', stroke: b.stroke ?? 'none', width: 1 });
+  if (b.label) texts.push({ x: b.x + b.w / 2, y: b.y + pad + labelSize, text: b.label, size: labelSize, weight: b.labelWeight ?? 600, color: b.labelColor ?? 'ink', anchor: 'middle' });
+  let y = b.y + pad + titleH;
+  items.forEach((item, i) => {
+    const row = Math.floor(i / columns), col = i % columns;
+    if (col === 0 && row > 0) y += rows[row - 1] + gap;
+    nodes.push({ ...item, id: item.id ?? `${b.id}-item${i + 1}`, x: r2(b.x + pad + col * (cellW + gap)), y: r2(y), w: r2(cellW), h: r2(rows[row]), shape: item.shape ?? b.shape ?? 'box', tone: item.tone ?? b.tone, size: item.size ?? b.size, weight: item.weight ?? b.weight, radius: item.radius ?? b.radius, padding: item.padding ?? b.cellPadding ?? 6, fill: item.fill ?? b.cellFill, stroke: item.stroke ?? b.cellStroke, textColor: item.textColor ?? b.textColor, align: item.align ?? b.align ?? 'center' });
+  });
+  return { nodes, texts, paths };
+}
+
+export const BLOCKS = { tree, mindmap, timeline, gantt, matrix, funnel, cycle, fishbone, swimlane, table, grid, 'object-views': objectViews, scientific: scientificMotif, 'graph-view': graphView };

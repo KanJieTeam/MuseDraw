@@ -1,0 +1,21 @@
+{
+  "size": [
+    1180,
+    620
+  ],
+  "nodes": 11,
+  "texts": 3,
+  "warnings": [],
+  "passed": true,
+  "missingFonts": [],
+  "fontMode": "system",
+  "drawio": {
+    "native": true,
+    "nodes": 11,
+    "edges": 0,
+    "texts": 9,
+    "visualEffects": [],
+    "durationMs": 22
+  },
+  "theme": "journal"
+}

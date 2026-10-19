@@ -14,6 +14,12 @@ import { renderVectorScene } from './vector.mjs';
 
 const gen = rough.generator();
 
+function openFramePoints(side,x,y,w,h) {
+  const inset=Math.min(w,h)*.075, vertical=side==='t'||side==='b', W=vertical?h:w, H=vertical?w:h;
+  return [[W,0],[0,0],[0,H],[W,H],[W,H-inset],[inset,H-inset],[inset,inset],[W,inset]].map(([u,v])=>
+    side==='l'?[x+w-u,y+v]:side==='t'?[x+v,y+h-u]:side==='b'?[x+w-v,y+u]:[x+u,y+v]);
+}
+
 function hash(s) { let h = 2166136261; for (const c of String(s)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return (h >>> 0) % 2147483647 || 7; }
 const deepMerge = (a, b) => { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === 'object' && !Array.isArray(v) && a?.[k] && typeof a[k] === 'object' ? deepMerge(a[k], v) : v; return o; };
 
@@ -126,21 +132,32 @@ class Ctx {
     const s = this.s, t = this.t;
     const layers = {
       bg: this.background(),
-      zones: (s.zones ?? []).map((z) => this.zone(z)).join('') + (s.bars ?? []).map((b, i) => this.barEl(b, i)).join('') + (s.lines ?? []).map((l, i) => this.lineEl(l, i)).join('') + (s.paths ?? []).map((p, i) => this.pathEl(p, i)).join(''),
+      zones: (s.zones ?? []).map((z) => this.zone(z)).join('') + (s.bars ?? []).map((b, i) => this.barEl(b, i)).join('') + (s.lines ?? []).map((l, i) => l.layer === 'foreground' ? '' : this.lineEl(l, i)).join('') + (s.paths ?? []).map((p, i) => p.nativeModule || p.layer === 'foreground' ? '' : this.pathEl(p, i)).join(''),
       edges: '', nodes: '', labels: '', notes: '', legend: '', texts: '', header: '', footer: '',
     };
     this.assignPorts();
     const edgeParts = (s.edges ?? []).map((e, i) => this.edge(e, i));
-    layers.edges = edgeParts.map((p) => p.line).join('');
-    layers.labels = edgeParts.map((p) => p.label).join('');
-    layers.nodes = [...this.nodes.values()].map((n) => this.node(n)).join('');
+    layers.edges = edgeParts.map((p, i) => s.edges[i].nativeModule || s.edges[i].layer === 'foreground' ? '' : p.line).join('');
+    layers.labels = edgeParts.map((p,i) => s.edges[i].nativeModule ? '' : p.label).join('');
+    const modules=(s.nativeModules??[]).map(m=>{
+      const paths=(s.paths??[]).filter(p=>p.nativeModule===m.id).map((p,i)=>this.pathEl(p,i)).join('');
+      const edges=edgeParts.map((p,i)=>s.edges[i].nativeModule===m.id?p.line:'').join('');
+      const nodes=[...this.nodes.values()].filter(n=>n.nativeModule===m.id).map(n=>this.node(n)).join('');
+      const labels=edgeParts.map((p,i)=>s.edges[i].nativeModule===m.id?p.label:'').join('');
+      const texts=(s.texts??[]).filter(t=>t.nativeModule===m.id).map(t=>this.freeText(t)).join('');
+      return `<g id="scientific-${esc(m.id)}" data-md="module">${paths}${edges}${nodes}${labels}${texts}</g>`;
+    }).join('');
+    layers.nodes = modules+[...this.nodes.values()].filter(n=>!n.nativeModule).map((n) => this.node(n)).join('');
     layers.notes = (s.notes ?? []).map((n, i) => this.note(n, i)).join('');
     layers.legend = s.legend ? this.legend(s.legend) : '';
-    layers.texts = (s.texts ?? []).map((x) => this.freeText(x)).join('');
+    layers.texts = (s.texts ?? []).filter(t=>!t.nativeModule).map((x) => this.freeText(x)).join('');
     layers.header = this.header();
     layers.footer = this.footer();
     const blend = t.effects?.blend ? ` style="mix-blend-mode:${t.effects.blend}"` : '';
-    const body = `<g id="zones">${layers.zones}</g><g id="edges"${blend}>${layers.edges}</g><g id="nodes"${blend}>${layers.nodes}</g><g id="edge-labels">${layers.labels}</g><g id="notes">${layers.notes}</g><g id="legend">${layers.legend}</g><g id="texts">${layers.texts}</g><g id="header">${layers.header}</g><g id="footer">${layers.footer}</g>`;
+    const foreground = (s.lines ?? []).map((l, i) => l.layer === 'foreground' ? this.lineEl(l, i) : '').join('')
+      + (s.paths ?? []).map((p, i) => !p.nativeModule && p.layer === 'foreground' ? this.pathEl(p, i) : '').join('')
+      + edgeParts.map((p, i) => !s.edges[i].nativeModule && s.edges[i].layer === 'foreground' ? p.line : '').join('');
+    const body = `<g id="zones">${layers.zones}</g><g id="edges"${blend}>${layers.edges}</g><g id="nodes"${blend}>${layers.nodes}</g>${foreground ? `<g id="foreground"${blend}>${foreground}</g>` : ''}<g id="edge-labels">${layers.labels}</g><g id="notes">${layers.notes}</g><g id="legend">${layers.legend}</g><g id="texts">${layers.texts}</g><g id="header">${layers.header}</g><g id="footer">${layers.footer}</g>`;
     const title = esc(s.title ?? 'Diagram');
     const desc = esc(s.description ?? s.subtitle ?? '');
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${this.W} ${this.H}" width="${this.W}" height="${this.H}" role="img" aria-labelledby="md-title md-desc" data-theme="${esc(t.id)}"><title id="md-title">${title}</title><desc id="md-desc">${desc}</desc><defs>${this.defs.join('')}</defs>${layers.bg}${body}</svg>`;
@@ -273,7 +290,7 @@ class Ctx {
     if (!/^[MmLlHhVvCcSsQqTtAaZz0-9.,\s-]+$/.test(p.d)) throw new Error('path d may contain only SVG path commands and numbers');
     const fill = p.fill && p.fill !== 'none' ? this.c(p.fill) : 'none';
     const stroke = p.stroke && p.stroke !== 'none' ? this.c(p.stroke) : 'none';
-    return `<path id="path-${i + 1}"${this.fitShift ? ` transform="translate(0 ${-this.fitShift})"` : ''} d="${p.d}" fill="${fill}" stroke="${stroke}" stroke-width="${p.width ?? 1}"${p.dash ? ` stroke-dasharray="${p.dash}"` : ''} stroke-linecap="round" stroke-linejoin="round"${p.opacity ? ` opacity="${p.opacity}"` : ''}/>`;
+    return `<path id="${esc(p.id ?? `path-${i + 1}`)}"${this.fitShift ? ` transform="translate(0 ${-this.fitShift})"` : ''} d="${p.d}" fill="${fill}" stroke="${stroke}" stroke-width="${p.width ?? 1}"${p.dash ? ` stroke-dasharray="${p.dash}"` : ''} stroke-linecap="round" stroke-linejoin="round"${p.opacity ? ` opacity="${p.opacity}"` : ''}/>`;
   }
 
   // Bars: progress, ranges and time spans. {x,y,w,h, from?, value, max, fill, track, radius, text, textPos, textColor, size}
@@ -569,6 +586,24 @@ class Ctx {
       const k = 14;
       return `<path d="M${x} ${y}H${x + w - k}L${x + w} ${y + k}V${y + h}H${x}Z" fill="${fill}" ${strokeAttr} stroke-linejoin="round"${filter}/><path d="M${x + w - k} ${y}V${y + k}H${x + w}" fill="none" ${strokeAttr}/>`;
     }
+    if (s === 'folder') {
+      const lip = h * .22;
+      return `<path d="M${x} ${y+h}V${y}H${x+w*.36}L${x+w*.45} ${y+lip}H${x+w}V${y+h}Z" fill="${fill}" ${strokeAttr}${filter}/><path d="M${x} ${y+lip*1.8}H${x+w}" fill="none" ${strokeAttr}/>`;
+    }
+    if (s === 'frame') {
+      if(n.openSide) {
+        const points=openFramePoints(n.openSide,x,y,w,h);
+        return `<path d="M${points.map(([xx,yy])=>`${xx} ${yy}`).join('L')}Z" fill="${fill}" ${strokeAttr} stroke-linejoin="round"${filter}/>`;
+      }
+      const inset = Math.min(w,h)*.075;
+      const walls=[[x,y,w,inset],[x,y+h-inset,w,inset],[x,y+inset,inset,h-2*inset],[x+w-inset,y+inset,inset,h-2*inset]];
+      return walls.map(([xx,yy,ww,hh])=>`<rect x="${xx}" y="${yy}" width="${ww}" height="${hh}" fill="${fill}" stroke="none"${filter}/>`).join('')
+        + `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="none" ${strokeAttr}/><rect x="${x+inset}" y="${y+inset}" width="${w-2*inset}" height="${h-2*inset}" fill="none" ${strokeAttr}/>`;
+    }
+    if (s === 'tray') {
+      const lip = h*.2, handle = Math.min(w*.28,h*.8);
+      return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" ${strokeAttr}${filter}/><path d="M${x} ${y+h-lip}H${x+w}M${x+(w-handle)/2} ${y+h*.9}H${x+(w+handle)/2}" fill="none" ${strokeAttr} stroke-linecap="round"/>`;
+    }
     if (s === 'browser') {
       const bar = 18;
       return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" ${strokeAttr}${filter}/><path d="M${x} ${y + bar}H${x + w}" ${strokeAttr} fill="none"/>` + [0, 1, 2].map((i) => `<circle cx="${x + 10 + i * 9}" cy="${y + bar / 2}" r="2.4" fill="none" ${strokeAttr}/>`).join('');
@@ -639,6 +674,24 @@ class Ctx {
       const cx = x + w / 2, hr = Math.min(16, h * 0.17), top = y + 4;
       return this.roughShape('circle', [cx, top + hr, hr * 2], o, key) + this.roughPath(`M${cx - hr * 1.9} ${top + hr * 4.3}C${cx - hr * 1.9} ${top + hr * 2.6} ${cx - hr} ${top + hr * 2.25} ${cx} ${top + hr * 2.25}S${cx + hr * 1.9} ${top + hr * 2.6} ${cx + hr * 1.9} ${top + hr * 4.3}`, { ...o, roughness: this.t.node.sketch }, key + 'p');
     }
+    if (n.shape === 'folder') {
+      const lip=h*.22;
+      return this.roughShape('polygon', [[[x,y+h],[x,y],[x+w*.36,y],[x+w*.45,y+lip],[x+w,y+lip],[x+w,y+h]]],o,key)
+        + this.roughPath(`M${x} ${y+lip*1.8}H${x+w}`, {...o,fill:undefined},key+'lip');
+    }
+    if (n.shape === 'frame') {
+      if(n.openSide)return this.roughShape('polygon',[openFramePoints(n.openSide,x,y,w,h)],o,key);
+      const inset=Math.min(w,h)*.075;
+      const walls=[[x,y,w,inset],[x,y+h-inset,w,inset],[x,y+inset,inset,h-2*inset],[x+w-inset,y+inset,inset,h-2*inset]];
+      return walls.map((wall,i)=>this.roughShape('rectangle',wall,{...o,stroke:'none'},key+'wall'+i)).join('')
+        + this.roughShape('rectangle',[x,y,w,h],{...o,fill:undefined},key)
+        + this.roughShape('rectangle',[x+inset,y+inset,w-2*inset,h-2*inset],{...o,fill:undefined},key+'opening');
+    }
+    if (n.shape === 'tray') {
+      const handle=Math.min(w*.28,h*.8);
+      return this.roughShape('rectangle',[x,y,w,h],o,key)
+        + this.roughPath(`M${x} ${y+h*.8}H${x+w}M${x+(w-handle)/2} ${y+h*.9}H${x+(w+handle)/2}`,{...o,fill:undefined},key+'lip');
+    }
     if (n.shape === 'diamond') return this.roughShape('polygon', [[[x + w / 2, y], [x + w, y + h / 2], [x + w / 2, y + h], [x, y + h / 2]]], o, key);
     if (n.shape === 'text') return '';
     return this.roughShape('rectangle', [x, y, w, h], o, key);
@@ -656,7 +709,7 @@ class Ctx {
     const subSize = n.subSize ?? N.subSize ?? 12;
     const tagFam = this.font(N.tagFont ?? 'mono');
     const tagSize = n.tagSize ?? N.tagSize ?? 11;
-    const pad = N.padding ?? 12;
+    const pad = n.padding ?? N.padding ?? 12;
     const align = n.align ?? (['diamond', 'circle', 'hex'].includes(n.shape) ? 'center' : null) ?? tn.align ?? N.align ?? 'center';
     const icon = n.icon && ICONS[n.icon] ? n.icon : null;
     const iconSize = N.iconSize ?? 20;
@@ -665,12 +718,13 @@ class Ctx {
 
     // Outside labels (stations, persons in some themes, explicit labelPos).
     const pos = n.labelPos ?? (n.shape === 'station' ? 'right' : n.shape === 'person' ? 'below' : 'inside');
+    if (pos === 'none') return '';
     if (n.shape === 'person' && pos === 'below') {
       const hr = Math.min(16, h * 0.17);
       const top = y + 4 + hr * 4.3 + 8;
       const lines = wrap(label, w + 24, size, fam, lsp, weight);
-      let out = textBlock({ x: x + w / 2, y: top + size * 0.85, lines, size, family: fam, weight, color: tn.labelOut ?? tn.text, anchor: 'middle', lineHeight: lh, letterSpacing: lsp });
-      if (n.sub) out += textBlock({ x: x + w / 2, y: top + size * 0.85 + lines.length * size * lh + 2, lines: wrap(n.sub, w + 40, subSize, subFam), size: subSize, family: subFam, color: tn.subOut ?? tn.sub, anchor: 'middle', lineHeight: 1.3 });
+      let out = textBlock({ x: x + w / 2, y: top + size * 0.85, lines, size, family: fam, weight, color: n.labelColor ? this.c(n.labelColor) : (tn.labelOut ?? this.c('ink')), anchor: 'middle', lineHeight: lh, letterSpacing: lsp });
+      if (n.sub) out += textBlock({ x: x + w / 2, y: top + size * 0.85 + lines.length * size * lh + 2, lines: wrap(n.sub, w + 40, subSize, subFam), size: subSize, family: subFam, color: tn.subOut ?? this.c('muted'), anchor: 'middle', lineHeight: 1.3 });
       return out;
     }
     if (pos !== 'inside') {

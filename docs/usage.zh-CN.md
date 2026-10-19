@@ -36,9 +36,18 @@ npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts -
 
 直接提供仓库 URL 时，智能体应复用已安装的 Skill，或获取仓库并读取[完整 Skill](../skills/musedraw/SKILL.md)。仓库 URL 本身不会给普通聊天网页增加执行能力。MuseDraw 不另行要求模型 API key，宿主自身的访问条件仍适用。
 
+## 复用案例与继续编辑
+
+精品案例直接复用 `scene.json`，按需求修改内容与受影响的模块，保留构图、层级和细节。
+参考图片由智能体看图后用场景引擎绘制，不建立识别、转写契约或多源确认流程。
+预览用于判断实际设计质量；自动检查只负责版面与文件正确性。
+
+文字修改使用 `patch`，保留原版并输出变更记录，详见[编辑流程](../skills/musedraw/references/editing-workflow.md)。
+系统字体、小预览、缓存和分阶段计时已是渲染默认行为。
+
 ## 选图和选风格
 
-[在线图库](https://kanjieteam.github.io/MuseDraw/)包含 101 个当前 scene 引擎案例。按风格筛选，点开看大图、复制需求或下载 drawio；提示词可切换中文／English，复制与原样复刻说明会跟随语言选择。每个案例目录保留原始 `prompt.md`、完整来源 `scene.json`、SVG 和预览；双语需求见 [prompts.json](../gallery/prompts.json)。案例可借鉴布局，不限定新题材，也不提供你的项目事实。图库区分精选、已审图与待设计审阅的预览状态，不等于全部经过同等人工验收。
+[在线图库](https://kanjieteam.github.io/MuseDraw/)包含 108 个当前 scene 引擎案例。按风格筛选，点开看大图、复制需求或下载 drawio；提示词可切换中文／English，复制与原样复刻说明会跟随语言选择。每个案例目录保留原始 `prompt.md`、完整来源 `scene.json`、SVG 和预览；双语需求见 [prompts.json](../gallery/prompts.json)。案例可借鉴布局，不限定新题材，也不提供你的项目事实。图库区分精选、已审图与待设计审阅的预览状态，不等于全部经过同等人工验收。
 
 20 种风格的字体、线条、质感与标注方式见[风格图谱](../skills/musedraw/references/style-atlas.md)。直接说中文名、英文名或 ID 即可，例如“科研期刊”“商务墨蓝”“黑板教学”或 `blueprint`。未指定时，由智能体根据用途选择。
 

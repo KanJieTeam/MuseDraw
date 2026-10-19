@@ -2,9 +2,18 @@
 
 **[打开在线图库 ↗](https://kanjieteam.github.io/MuseDraw/)** · 按风格筛选、看大图、复制需求、下载可编辑 drawio。下面为源文件索引。
 
-105 个案例全部出图：**20 精选** · **32 已审图** · **53 预览**。机器可读清单：[catalog.json](catalog.json)。
+108 个案例全部出图：**20 精选** · **35 已审图** · **53 预览**。机器可读清单：[catalog.json](catalog.json)。
 
-All 105 cases are rendered. Each folder includes native editable `diagram.drawio`, `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
+All 108 cases are rendered. Each folder includes native editable `diagram.drawio`, `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
+
+
+## 科研对象与机制 · Original scientific schematics
+
+三种可迁移的表达：同构对照、接触转移、共享表征。均为原创概念图，无实测数据。
+
+| 条件对照 | 接触与转移 | 共享与读出 |
+| --- | --- | --- |
+| [![Sparse site occupancy on a shared scaffold](106-site-occupancy/preview.jpg)](106-site-occupancy/prompt.md) | [![Contact, lift and release of a thin-film array](107-material-transfer/preview.jpg)](107-material-transfer/prompt.md) | [![One shared representation, two readouts](108-shared-representation/preview.jpg)](108-shared-representation/prompt.md) |
 
 ## 精选 · 科研
 
