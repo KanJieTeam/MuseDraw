@@ -75,6 +75,33 @@ test('labels keep canonical source correspondence, explicit reading size and pad
   const changed=graphView(b,renamed,theme);assert.equal(changed.texts[1].text,'Beta prime');assert.equal(node(changed,'detail-B%2F2').fill,'#CCAA66');
 });
 
+test('side captions fit their actual anchor and hidden captions do not shift point identities',()=>{
+  const s=source();s.points[0].labelPos='none';
+  Object.assign(s.points[1],{labelPos:'left',labelGap:12,label:'Beta\ntwo lines'});
+  Object.assign(s.points[2],{labelPos:'right',labelGap:0,label:'A long right-hand caption'});
+  const b={...brief(),w:760,labelSize:25,padding:28},saved=structuredClone(s);
+  const out=graphView(b,s,theme),canonical=scientificMotif(s,theme);
+  assert.deepEqual(s,saved);
+  assert.deepEqual(out.texts.map(t=>[t.pointLabel,t.text,t.anchor]),[['B/2','Beta\ntwo lines','end'],['C-3','A long right-hand caption','start']]);
+  const scale=node(out,'detail-A').w/node(canonical,'source-A').w;
+  for(const t of out.texts){
+    const original=canonical.texts.find(v=>v.pointLabel===t.pointLabel),n=node(out,'detail-'+encodeURIComponent(t.pointLabel));
+    const originalNode=node(canonical,'source-'+encodeURIComponent(t.pointLabel));
+    near(t.x-centre(n)[0],(original.x-centre(originalNode)[0])*scale);
+    near(t.y-centre(n)[1],(original.y-centre(originalNode)[1])*scale);
+    assert.equal(t.size,25);
+    const left=t.x-(t.anchor==='end'?t.w:t.anchor==='middle'?t.w/2:0),lines=t.text.split('\n').length;
+    assert.ok(left>=b.x+28-1e-8&&left+t.w<=b.x+b.w-28+1e-8);
+    assert.ok(t.y-25*1.15>=b.y+28-1e-8&&t.y+25*(.45+1.3*(lines-1))<=b.y+b.h-28+1e-8);
+  }
+  const only=graphView({...b,select:['C-3']},s,theme);
+  assert.equal(only.texts[0].text,'A long right-hand caption');assert.equal(only.texts[0].pointLabel,'C-3');
+  assert.equal(only.texts[0].id,out.texts[1].id,'subset keeps canonical caption correspondence after a hidden label');
+  const below=source();below.points[0].labelPos='below';below.points[0].labelGap=0;
+  const result=graphView({...b,select:['A']},below,theme),label=result.texts[0];
+  assert.equal(label.anchor,'middle');assert.ok(label.y>centre(node(result,'detail-A'))[1]);
+});
+
 test('editing source coordinates, diameter and links propagates without hand-maintained copies',()=>{
   const a=source(),before=graphView(brief(),a,theme);a.points[1].x=.53;a.points[1].diameter=25;
   a.links[1].directed=true;a.links.push({from:'A',to:'C-3',directed:true});
@@ -108,7 +135,8 @@ test('invalid frames, sources, selection, guides and unknown fields fail explici
   }
   for(const mutation of [s=>s.kind='network',s=>s.type='vector',s=>s.extra=1,s=>s.points[0].id='',s=>s.points[1].id='A',
     s=>s.points[0].id='\ud800',s=>s.points[0].diameter=-1,s=>s.points[0].x=1.2,s=>s.points[0].label=42,
-    s=>s.points[0].bondOrder=2,s=>s.links[0].order=2,s=>s.links[0].directed='yes',s=>s.links[0].to='unknown',
+    s=>s.points[0].bondOrder=2,s=>s.points[0].labelPos='inside',s=>s.points[0].labelGap=-1,s=>s.points[0].labelGap=Infinity,
+    s=>s.links[0].order=2,s=>s.links[0].directed='yes',s=>s.links[0].to='unknown',
     s=>s.links[0].width=0,s=>s.points[3].diameter=Infinity,s=>s.links=null,s=>s.palette={ink:4}]){
     const s=source();mutation(s);assert.throws(()=>graphView(brief(),s,theme),/graph-view|Scientific motif/);
   }

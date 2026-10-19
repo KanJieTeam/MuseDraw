@@ -1371,6 +1371,15 @@
               "label": {
                 "type": "string"
               },
+              "labelPos": {
+                "description": "Scientific graph point caption side; none preserves the point but hides its caption.",
+                "enum": ["above", "below", "left", "right", "none"]
+              },
+              "labelGap": {
+                "description": "Scientific graph point caption gap in source pixels, default 6.",
+                "type": "number",
+                "minimum": 0
+              },
               "x": {
                 "type": "number",
                 "minimum": 0,

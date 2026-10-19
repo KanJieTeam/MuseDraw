@@ -97,9 +97,24 @@ export function scientificMotif(b,theme){
     const ids=new Map();
     b.points.forEach((v,i)=>{
       if(!v.id||ids.has(v.id)||![v.x,v.y].every(n=>Number.isFinite(n)&&n>=0&&n<=1))bad(b,'graph points need unique IDs and x/y in 0..1');
+      if(v.labelPos!==undefined&&!['above','below','left','right','none'].includes(v.labelPos))bad(b,'point labelPos must be above, below, left, right or none');
+      if(v.labelGap!==undefined&&(!Number.isFinite(v.labelGap)||v.labelGap<0))bad(b,'point labelGap must be nonnegative finite pixels');
       const d=v.diameter??b.diameter??8;if(!Number.isFinite(d)||d<=0||d>Math.min(b.w,b.h)/2)bad(b,'invalid point diameter');
       ids.set(v.id,node(v.id,'circle',X(v.x)-d/2,Y(v.y)-d/2,d,d,v.fill??p.soft,v.stroke??p.ink));
-      if(v.label)text(X(v.x),Y(v.y)-d/2-6,v.label,{anchor:'middle'});
+      const pos=v.labelPos??'above',gap=v.labelGap??6;
+      if(v.label&&pos!=='none'){
+        const lines=String(v.label).split('\n').length;
+        let x=X(v.x),y=Y(v.y)-d/2-gap,anchor='middle';
+        // Keep the legacy above-label baseline. Side captions are vertically
+        // centred; below captions start after the point's lower boundary.
+        if(pos==='below')y=Y(v.y)+d/2+gap+size*.82;
+        if(pos==='left'||pos==='right'){
+          x=X(v.x)+(pos==='left'?-1:1)*(d/2+gap);
+          y=Y(v.y)+size*.35-(lines-1)*size*.65;
+          anchor=pos==='left'?'end':'start';
+        }
+        text(x,y,v.label,{anchor,pointLabel:v.id});
+      }
     });
     for(const [i,e] of (b.links??[]).entries()){
       if(!ids.has(e.from)||!ids.has(e.to)||e.from===e.to)bad(b,'graph links need distinct existing point IDs');

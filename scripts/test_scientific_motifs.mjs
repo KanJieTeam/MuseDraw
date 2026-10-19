@@ -58,6 +58,38 @@ test('graph topology and endpoints survive a label or palette edit',()=>{
   assert.deepEqual(c.nodes.map(n=>[n.id,n.x,n.y,n.w,n.h]),a.nodes.map(n=>[n.id,n.x,n.y,n.w,n.h]));
   assert.equal(c.edges[0].from,'object-a');assert.equal(c.edges[0].to,'object-b');
 });
+
+test('graph point captions support explicit sides and gaps without changing topology',()=>{
+  const source={...base,kind:'graph',diameter:20,size:16,
+    points:[{id:'upper',x:.5,y:.25,label:'Upper'},{id:'lower',x:.5,y:.75,label:'Lower'}],
+    links:[{from:'upper',to:'lower'}]};
+  const original=scientificMotif(source,theme),before=structuredClone(source);
+  const point=original.nodes.find(n=>n.id==='object-lower'),cx=point.x+point.w/2,cy=point.y+point.h/2;
+  assert.deepEqual(original.texts[1],{id:'object-label-2',x:cx,y:cy-10-6,text:'Lower',size:16,color:'#3C4749',anchor:'middle',pointLabel:'lower',nativeModule:'object'});
+  for(const [labelPos,anchor] of [['above','middle'],['below','middle'],['left','end'],['right','start']]){
+    const input=structuredClone(source);Object.assign(input.points[1],{labelPos,labelGap:9});
+    const out=scientificMotif(input,theme),caption=out.texts.find(t=>t.pointLabel==='lower');
+    assert.equal(caption.anchor,anchor);assert.equal(caption.id,'object-label-2');
+    if(labelPos==='above')assert.equal(caption.y,cy-19);
+    if(labelPos==='below')assert.equal(caption.y,Math.round((cy+19+16*.82)*100)/100);
+    if(labelPos==='left'||labelPos==='right'){
+      assert.equal(caption.x,cx+(labelPos==='left'?-19:19));assert.equal(caption.y,cy+5.6);
+    }
+    assert.deepEqual(out.nodes,original.nodes);assert.deepEqual(out.edges,original.edges);
+  }
+  const hidden=structuredClone(source);hidden.points[0].labelPos='none';
+  const out=scientificMotif(hidden,theme);assert.deepEqual(out.texts.map(t=>t.pointLabel),['lower']);
+  assert.deepEqual(out.nodes,original.nodes);assert.deepEqual(out.edges,original.edges);
+  const multiline=structuredClone(source);Object.assign(multiline.points[1],{label:'Two\nlines',labelPos:'right',labelGap:0});
+  const caption=scientificMotif(multiline,theme).texts[1];assert.equal(caption.x,cx+10);assert.equal(caption.y,cy-4.8);
+  assert.deepEqual(source,before);
+});
+
+test('invalid graph point caption settings fail rather than silently using defaults',()=>{
+  for(const props of [{labelPos:'inside'},{labelPos:null},{labelGap:-1},{labelGap:NaN},{labelGap:Infinity},{labelGap:'8'},{labelGap:null}]){
+    assert.throws(()=>scientificMotif({...base,kind:'graph',points:[{id:'a',x:.5,y:.5,label:'A',...props}]},theme),/point labelPos|point labelGap/);
+  }
+});
 test('cell count, network topology and interval lengths are explicit input facts',()=>{
   const tensor=scientificMotif({...base,...examples[2]},theme);assert.equal(tensor.nodes.length-1,12);
   const network=scientificMotif({...base,...examples[1]},theme);assert.equal(network.nodes.length-1,6);assert.equal(network.edges.length,9);

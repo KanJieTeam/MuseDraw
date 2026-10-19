@@ -144,7 +144,7 @@ function runChecks({ W, H, readingProfile }) {
   for (const g of document.querySelectorAll('g[data-md]')) {
     for (const t of g.querySelectorAll(':scope > text, :scope > g > text')) {
       if (!t.textContent.trim()) continue;
-      textItems.push({ owner: g.id, kind: g.dataset.md, b: box(t), text: t.textContent.slice(0, 40) });
+      textItems.push({ owner: g.id, kind: g.dataset.md, b: box(t), pointCaption: !!t.closest('[data-md-point-label]'), text: t.textContent.slice(0, 40) });
     }
   }
   // Text inside its node.
@@ -164,11 +164,62 @@ function runChecks({ W, H, readingProfile }) {
   // Text collisions between different elements.
   for (let i = 0; i < textItems.length; i++) for (let j = i + 1; j < textItems.length; j++) {
     const a = textItems[i], b = textItems[j];
-    if (a.owner === b.owner) continue;
+    if (a.owner === b.owner && !a.pointCaption && !b.pointCaption) continue;
     if (inter(a.b, b.b, 1)) warnings.push({ type: 'text-collision', a: `${a.owner}: ${a.text}`, b: `${b.owner}: ${b.text}` });
   }
   // Edge labels sitting on nodes.
   for (const t of textItems.filter((t) => t.kind === 'edge-label' || t.kind === 'note')) for (const n of nodeBoxes) if (inter(t.b, n.b, 2)) warnings.push({ type: `${t.kind}-on-node`, label: t.text, node: n.id });
+  // Scientific graph captions are outside their nodes. A caption can cross an
+  // incident bond despite every node and caption having separate valid boxes.
+  // Test connector segments, not their bounding boxes (diagonals would produce
+  // many false positives). Work in root SVG units, including group transforms.
+  const svg = document.querySelector('svg'), rootInverse = svg.getCTM().inverse();
+  const matrix = el => rootInverse.multiply(el.getCTM());
+  const point = (m, p) => ({ x:m.a*p[0]+m.c*p[1]+m.e, y:m.b*p[0]+m.d*p[1]+m.f });
+  const hits = (a,b,r) => {
+    let lo=0,hi=1;
+    for (const [v,d,min,max] of [[a.x,b.x-a.x,r.x,r.x+r.w],[a.y,b.y-a.y,r.y,r.y+r.h]]) {
+      if (Math.abs(d)<1e-9) { if(v<min || v>max)return false; }
+      else { const s=(min-v)/d,t=(max-v)/d;lo=Math.max(lo,Math.min(s,t));hi=Math.min(hi,Math.max(s,t));if(lo>hi)return false; }
+    }
+    return true;
+  };
+  const captions=[...document.querySelectorAll('[data-md-point-label]')];
+  const connectors=captions.length ? [...document.querySelectorAll('g[data-md="edge"][data-connection]')].flatMap(g=>{
+    const e=JSON.parse(g.dataset.connection);
+    if(e.opacity===0 || e.color==='none')return [];
+    const paths=[...g.querySelectorAll('[data-md-connector-path] path')];
+    // Older/static SVG can lack the marker. Its first path is the centerline;
+    // later paths may be arrowheads and are intentionally not included.
+    if(!paths.length && g.querySelector('path'))paths.push(g.querySelector('path'));
+    return paths.flatMap(path=>{
+      const style=getComputedStyle(path);
+      if(style.stroke==='none' || Number(style.opacity)===0 || Number(style.strokeOpacity)===0)return [];
+      const m=matrix(path),sum=m.a*m.a+m.b*m.b+m.c*m.c+m.d*m.d,det=m.a*m.d-m.b*m.c;
+      const scale=Math.sqrt((sum+Math.sqrt(Math.max(0,sum*sum-4*det*det)))/2),length=path.getTotalLength();
+      // At most one root SVG unit of arc per sample. Any curve-to-chord
+      // discrepancy is bounded by half that arc, included in the clearance.
+      // This follows actual rounded/curved geometry, not native route corners.
+      const steps=Math.max(1,Math.ceil(length*scale)),parts=[];
+      let previous;
+      for(let i=0;i<=steps;i++){
+        const p=path.getPointAtLength(length*i/steps),current=point(m,[p.x,p.y]);
+        if(previous)parts.push([previous,current]);previous=current;
+      }
+      return [{id:g.id,parts,pad:2+(parseFloat(style.strokeWidth)||e.width||1)*scale/2}];
+    });
+  }) : [];
+  for(const caption of captions) {
+    const rectangles=[...caption.querySelectorAll('text')].filter(t=>t.textContent.trim()).map(t=>{
+      const b=t.getBBox(),m=matrix(t),corners=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(p=>point(m,p));
+      const x=Math.min(...corners.map(p=>p.x)),y=Math.min(...corners.map(p=>p.y));
+      return {x,y,w:Math.max(...corners.map(p=>p.x))-x,h:Math.max(...corners.map(p=>p.y))-y};
+    });
+    const seen=new Set();
+    for(const e of connectors)if(!seen.has(e.id) && rectangles.some(b=>e.parts.some(([a,c])=>hits(a,c,{x:b.x-e.pad,y:b.y-e.pad,w:b.w+2*e.pad,h:b.h+2*e.pad})))){
+      seen.add(e.id);warnings.push({type:'text-edge-collision',id:caption.dataset.captionId,point:caption.dataset.mdPointLabel,edge:e.id,text:caption.textContent.slice(0,40)});
+    }
+  }
   // Header and free text must stay inside the canvas too.
   for (const t of document.querySelectorAll('#header text, #texts text, #legend text')) { const b = box(t); if (b.x < 0 || b.x + b.w > W - 8 || b.y + b.h > H) warnings.push({ type: 'outside-canvas', owner: 'header/text', text: t.textContent.slice(0, 40) }); }
   // Outside the canvas.

@@ -47,10 +47,12 @@ export function graphView(b, source, theme = {}) {
   if (!Array.isArray(source.points) || !source.points.length || source.points.length > 100) bad('source needs 1..100 explicit points');
   const pointIds = new Set();
   for (const p of source.points) {
-    keys(p, ['id','x','y','label','fill','stroke','diameter'], 'point'); id(p.id, 'point');
+    keys(p, ['id','x','y','label','fill','stroke','diameter','labelPos','labelGap'], 'point'); id(p.id, 'point');
     if (pointIds.has(p.id)) bad(`duplicate source point ID ${p.id}`); pointIds.add(p.id);
     if (![p.x,p.y].every(v => finite(v) && v >= 0 && v <= 1)) bad('point coordinates must be in 0..1');
     if (p.label !== undefined && typeof p.label !== 'string') bad('point label must be text');
+    if (p.labelPos !== undefined && !['above','below','left','right','none'].includes(p.labelPos)) bad('point labelPos must be above, below, left, right or none');
+    if (p.labelGap !== undefined && (!finite(p.labelGap) || p.labelGap < 0)) bad('point labelGap must be nonnegative finite pixels');
     for (const k of ['fill','stroke']) if (p[k] !== undefined) colour(p[k], `point.${k}`);
     if (p.diameter !== undefined) positive(p.diameter, 'point.diameter');
   }
@@ -85,8 +87,7 @@ export function graphView(b, source, theme = {}) {
   }
   const terminal = (prefix, name) => `${prefix}-${encodeURIComponent(name)}`;
   const sourceNodes = new Map(canonical.nodes.map(n => [n.id,n]));
-  const textByPoint = new Map(); let textIndex = 0;
-  for (const p of source.points) if (p.label) textByPoint.set(p.id, canonical.texts[textIndex++]);
+  const textByPoint = new Map(canonical.texts.map(t=>[t.pointLabel,t]));
   const labelSize = b.labelSize ?? source.size ?? 16;
   const font = theme.fonts?.body ?? 'Arial, sans-serif';
   const items = source.points.filter(p => selected.has(p.id)).map(p => {
@@ -106,7 +107,8 @@ export function graphView(b, source, theme = {}) {
       left=Math.min(left,x-r);right=Math.max(right,x+r);top=Math.min(top,y-r);bottom=Math.max(bottom,y+r);
       if (item.text) {
         const labelX=(item.text.x-origin[0])*scale,baseline=(item.text.y-origin[1])*scale;
-        left=Math.min(left,labelX-item.labelW/2);right=Math.max(right,labelX+item.labelW/2);
+        const labelLeft=labelX-(item.text.anchor==='end'?item.labelW:item.text.anchor==='middle'?item.labelW/2:0);
+        left=Math.min(left,labelLeft);right=Math.max(right,labelLeft+item.labelW);
         top=Math.min(top,baseline-labelSize*1.15);
         bottom=Math.max(bottom,baseline+labelSize*(.45+1.3*(item.lines-1)));
       }

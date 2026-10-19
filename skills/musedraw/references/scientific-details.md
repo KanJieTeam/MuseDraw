@@ -34,6 +34,19 @@ No repeated point/link arrays are needed. Use explicit names on the source
 points; editing a name, position, colour or internal relation then updates the
 derived view from the same definition.
 
+Point captions accept `labelPos:"above"|"below"|"left"|"right"|"none"`
+and `labelGap` in nonnegative finite pixels. Defaults remain `above` and `6`.
+Choose a side clear of incident bonds instead of placing a caption on a vertical
+bond; `none` hides only the caption, preserving the point and its relations.
+For example, `{"id":"D","x":0.8,"y":0.8,"label":"D","labelPos":"right","labelGap":8}`.
+Derived views preserve the caption anchor and include its text extent in their
+padded fit. They uniformly scale source positions and gaps while `labelSize`
+sets the derived reading size; they do not automatically choose a clear side.
+Browser checks report `text-edge-collision` when a graph point caption crosses
+an authored connector, including incident bonds and links inside the same
+module. Move that caption to a clear side and rerender. This check covers graph
+point captions, not every free annotation or the figure's aesthetic quality.
+
 A complete starting scene (original illustrative topology, no measurements):
 
 ```json
