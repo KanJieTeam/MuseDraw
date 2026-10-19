@@ -1,0 +1,352 @@
+{
+  "brief": "Cold-chain duty desk with four supplied devices at a fixed demo time; show current unknown versus last-known readings, all/attention filters, detail selection and acknowledgments that retain exceptions. No fabricated history or production connection.",
+  "scope": "One fresh same-brief pair using inherited model/settings. Exact backend model ID was not captured. Functional validation does not establish visual superiority or production readiness.",
+  "validation": [
+    {
+      "variant": "baseline",
+      "sha256": "f0b92f78a16dca5a9110cfc2ae0a8ca23c1efe37fceb1313f6d1d9b0e7a0a566",
+      "firstDraftUnchanged": true,
+      "checks": [
+        {
+          "viewport": 1440,
+          "name": "no-horizontal-overflow",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "participant-hash-matches",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "four-devices",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "local-demo-disclosed",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-A",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-D",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "attention-filter-keeps-B-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "offline-history-is-separate-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "acknowledge-does-not-clear-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "focus-retained-after-ack-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "offline-history-is-separate-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "acknowledge-does-not-clear-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "focus-retained-after-ack-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "all-filter-restored",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "no-horizontal-overflow",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "participant-hash-matches",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "four-devices",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "local-demo-disclosed",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-A",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-D",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "attention-filter-keeps-B-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "offline-history-is-separate-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "acknowledge-does-not-clear-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "focus-retained-after-ack-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "offline-history-is-separate-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "acknowledge-does-not-clear-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "focus-retained-after-ack-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "all-filter-restored",
+          "passed": true
+        }
+      ],
+      "pageErrors": [],
+      "networkRequests": [],
+      "passed": true
+    },
+    {
+      "variant": "guided",
+      "sha256": "1cb67732ad06a2633543a7c15677d65eb69e59d2d497df81addc94848d67318a",
+      "firstDraftUnchanged": true,
+      "checks": [
+        {
+          "viewport": 1440,
+          "name": "no-horizontal-overflow",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "participant-hash-matches",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "four-devices",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "local-demo-disclosed",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-A",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "select-D",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "attention-filter-keeps-B-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "offline-history-is-separate-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "acknowledge-does-not-clear-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "focus-retained-after-ack-B",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "offline-history-is-separate-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "acknowledge-does-not-clear-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "focus-retained-after-ack-C",
+          "passed": true
+        },
+        {
+          "viewport": 1440,
+          "name": "all-filter-restored",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "no-horizontal-overflow",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "participant-hash-matches",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "four-devices",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "local-demo-disclosed",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-A",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "select-D",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "attention-filter-keeps-B-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "offline-history-is-separate-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "acknowledge-does-not-clear-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "focus-retained-after-ack-B",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "offline-history-is-separate-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "acknowledge-does-not-clear-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "focus-retained-after-ack-C",
+          "passed": true
+        },
+        {
+          "viewport": 390,
+          "name": "all-filter-restored",
+          "passed": true
+        }
+      ],
+      "pageErrors": [],
+      "networkRequests": [],
+      "passed": true
+    }
+  ],
+  "formats": [
+    "self-contained HTML/CSS/JS",
+    "desktop/mobile previews"
+  ],
+  "drawio": false,
+  "aestheticReview": "Pending user selection; both unedited first drafts retained."
+}

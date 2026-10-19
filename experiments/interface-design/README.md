@@ -39,6 +39,18 @@ consistency and interaction states independently of layout correctness. A single
 pair is exploratory evidence, not a broad success rate or proof of better taste.
 An informed revision is not another cold-start success.
 
+Preserved exploratory first drafts:
+
+- [Cycling registration](trials/cycling/trial.json): same event facts, local-only
+  registration validation and desktop/mobile previews.
+- [Cold-chain duty desk](trials/cold-chain/trial.json): four fixed device readings,
+  offline versus last-known temperature, filters, selection and acknowledgment
+  that leaves the exception active. Both unedited drafts passed the independent
+  browser checks. The user's aesthetic selection remains pending.
+
+These are comparison records, not approved templates or demonstrated aesthetic
+wins. Their presence does not establish that the study targets have been met.
+
 ## Current source boundaries
 
 - [EasyV public marketplace](https://easyv.cloud/market): public template metadata
