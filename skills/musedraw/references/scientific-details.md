@@ -44,8 +44,10 @@ padded fit. They uniformly scale source positions and gaps while `labelSize`
 sets the derived reading size; they do not automatically choose a clear side.
 Browser checks report `text-edge-collision` when a graph point caption crosses
 an authored connector, including incident bonds and links inside the same
-module. Move that caption to a clear side and rerender. This check covers graph
-point captions, not every free annotation or the figure's aesthetic quality.
+module. Move that caption to a clear side and rerender. Authored free `texts`
+are also checked against semantic edges and explicit `scene.lines`; warnings
+identify the source text and connector IDs. Arbitrary `scene.paths` artwork and
+the figure's aesthetic quality remain outside this scoped geometry check.
 
 A complete starting scene (original illustrative topology, no measurements):
 

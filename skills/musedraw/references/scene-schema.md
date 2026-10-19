@@ -224,6 +224,12 @@ Both accept `layer: "foreground"` for detail leaders, internal wiring or a seal
 that must appear over a filled object. Default primitives stay behind nodes.
 The editable draw.io preserves this explicit foreground layer too.
 
+Browser checks report `text-edge-collision` when an authored free text's measured
+font box meets an `edge` centerline or an explicit `line`. They follow curves,
+rotation and individual wrapped lines, and report the text/connector `id` when
+provided. Arrowheads and arbitrary `paths` artwork are excluded. This is a
+scoped geometry check, not a general artwork-overlap or visual-quality audit.
+
 ## Output
 
 ### Scientific objects and native modules

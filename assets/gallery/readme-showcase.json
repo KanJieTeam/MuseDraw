@@ -36,7 +36,7 @@
     },
     {
       "slug": "17-onboarding-90-pastel",
-      "sourceSha256": "297c32f5d3b61b48e900f58f817846a5eb368806e15c6850faa998595c5406ca"
+      "sourceSha256": "6f11cf77730d4ce5e081705b0d997744d018bc99d23f326b961adaa9ac1785fd"
     },
     {
       "slug": "20-customer-journey-terracotta",
@@ -111,6 +111,6 @@
       "sourceSha256": "6fae2b46e0b4cb6d1bfe620d3dd7b15459973d7bfb441443ca1b531b9a03d4c3"
     }
   ],
-  "bytes": 360334,
-  "sha256": "b137814aa656d5abf5dc8434baeeb980450007046c031fbb26ee1a6e2c31ef9b"
+  "bytes": 360220,
+  "sha256": "5407a827ce569e2bb9a32b624934ee62a49b64ac66212b66d23f6d5fb366ed32"
 }

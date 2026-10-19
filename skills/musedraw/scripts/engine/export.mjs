@@ -169,13 +169,30 @@ function runChecks({ W, H, readingProfile }) {
   }
   // Edge labels sitting on nodes.
   for (const t of textItems.filter((t) => t.kind === 'edge-label' || t.kind === 'note')) for (const n of nodeBoxes) if (inter(t.b, n.b, 2)) warnings.push({ type: `${t.kind}-on-node`, label: t.text, node: n.id });
-  // Scientific graph captions are outside their nodes. A caption can cross an
-  // incident bond despite every node and caption having separate valid boxes.
-  // Test connector segments, not their bounding boxes (diagonals would produce
-  // many false positives). Work in root SVG units, including group transforms.
+  // Check graph captions and authored free texts against semantic connector
+  // centerlines and explicit scene.lines, never arbitrary artwork in scene.paths.
+  // Measure each wrapped line separately, in its own coordinates, so rotations
+  // and the empty space between lines do not become false collision boxes.
   const svg = document.querySelector('svg'), rootInverse = svg.getCTM().inverse();
   const matrix = el => rootInverse.multiply(el.getCTM());
   const point = (m, p) => ({ x:m.a*p[0]+m.c*p[1]+m.e, y:m.b*p[0]+m.d*p[1]+m.f });
+  const maxScale = m => {
+    const sum=m.a*m.a+m.b*m.b+m.c*m.c+m.d*m.d,det=m.a*m.d-m.b*m.c;
+    return Math.sqrt((sum+Math.sqrt(Math.max(0,sum*sum-4*det*det)))/2);
+  };
+  const visible = el => {
+    for(let p=el;p && p!==svg;p=p.parentElement){
+      const s=getComputedStyle(p);
+      if(s.display==='none' || s.visibility==='hidden' || Number(s.opacity)===0)return false;
+    }
+    return true;
+  };
+  const rootBox = (b,m) => {
+    const corners=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(p=>point(m,p));
+    const x=Math.min(...corners.map(p=>p.x)),y=Math.min(...corners.map(p=>p.y));
+    return {x,y,w:Math.max(...corners.map(p=>p.x))-x,h:Math.max(...corners.map(p=>p.y))-y};
+  };
+  const expand = (b,pad) => ({x:b.x-pad,y:b.y-pad,w:b.w+2*pad,h:b.h+2*pad});
   const hits = (a,b,r) => {
     let lo=0,hi=1;
     for (const [v,d,min,max] of [[a.x,b.x-a.x,r.x,r.x+r.w],[a.y,b.y-a.y,r.y,r.y+r.h]]) {
@@ -184,40 +201,52 @@ function runChecks({ W, H, readingProfile }) {
     }
     return true;
   };
-  const captions=[...document.querySelectorAll('[data-md-point-label]')];
-  const connectors=captions.length ? [...document.querySelectorAll('g[data-md="edge"][data-connection]')].flatMap(g=>{
+  const labels=[...document.querySelectorAll('[data-md-point-label], [data-md-free-text]')].map(el=>{
+    const caption=el.hasAttribute('data-md-point-label');
+    const rectangles=[...el.querySelectorAll('text')].filter(t=>{
+      const style=getComputedStyle(t);
+      return t.textContent.trim() && visible(t) && style.fill!=='none' && Number(style.fillOpacity)!==0;
+    }).flatMap(t=>{
+      const spans=[...t.querySelectorAll(':scope > tspan')];
+      return (spans.length?spans:[t]).filter(s=>s.textContent.trim()).flatMap(s=>{
+        const b=s.getBBox(),m=matrix(s);
+        if(!b.width || !b.height || Math.abs(m.a*m.d-m.b*m.c)<1e-12)return [];
+        const inverse=m.inverse();
+        return [{b:{x:b.x,y:b.y,w:b.width,h:b.height},root:rootBox(b,m),inverse,scale:maxScale(inverse)}];
+      });
+    });
+    return {el,caption,rectangles};
+  }).filter(label=>label.rectangles.length);
+  const hasFreeTexts=labels.some(l=>!l.caption);
+  const connectors=labels.length ? [...document.querySelectorAll('g[data-md="edge"][data-connection]')].flatMap(g=>{
     const e=JSON.parse(g.dataset.connection);
     if(e.opacity===0 || e.color==='none')return [];
     const paths=[...g.querySelectorAll('[data-md-connector-path] path')];
-    // Older/static SVG can lack the marker. Its first path is the centerline;
-    // later paths may be arrowheads and are intentionally not included.
+    // The fallback's first path is the centerline; later paths may be arrowheads.
     if(!paths.length && g.querySelector('path'))paths.push(g.querySelector('path'));
-    return paths.flatMap(path=>{
-      const style=getComputedStyle(path);
-      if(style.stroke==='none' || Number(style.opacity)===0 || Number(style.strokeOpacity)===0)return [];
-      const m=matrix(path),sum=m.a*m.a+m.b*m.b+m.c*m.c+m.d*m.d,det=m.a*m.d-m.b*m.c;
-      const scale=Math.sqrt((sum+Math.sqrt(Math.max(0,sum*sum-4*det*det)))/2),length=path.getTotalLength();
-      // At most one root SVG unit of arc per sample. Any curve-to-chord
-      // discrepancy is bounded by half that arc, included in the clearance.
-      // This follows actual rounded/curved geometry, not native route corners.
-      const steps=Math.max(1,Math.ceil(length*scale)),parts=[];
-      let previous;
-      for(let i=0;i<=steps;i++){
-        const p=path.getPointAtLength(length*i/steps),current=point(m,[p.x,p.y]);
-        if(previous)parts.push([previous,current]);previous=current;
-      }
-      return [{id:g.id,parts,pad:2+(parseFloat(style.strokeWidth)||e.width||1)*scale/2}];
-    });
-  }) : [];
-  for(const caption of captions) {
-    const rectangles=[...caption.querySelectorAll('text')].filter(t=>t.textContent.trim()).map(t=>{
-      const b=t.getBBox(),m=matrix(t),corners=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(p=>point(m,p));
-      const x=Math.min(...corners.map(p=>p.x)),y=Math.min(...corners.map(p=>p.y));
-      return {x,y,w:Math.max(...corners.map(p=>p.x))-x,h:Math.max(...corners.map(p=>p.y))-y};
-    });
-    const seen=new Set();
-    for(const e of connectors)if(!seen.has(e.id) && rectangles.some(b=>e.parts.some(([a,c])=>hits(a,c,{x:b.x-e.pad,y:b.y-e.pad,w:b.w+2*e.pad,h:b.h+2*e.pad})))){
-      seen.add(e.id);warnings.push({type:'text-edge-collision',id:caption.dataset.captionId,point:caption.dataset.mdPointLabel,edge:e.id,text:caption.textContent.slice(0,40)});
+    return paths.map(path=>({id:g.id,path,line:false}));
+  }).concat(hasFreeTexts?[...document.querySelectorAll('path[data-md-line]')].map(path=>({id:path.dataset.mdLine,path,line:true})):[]) : [];
+  for(const e of connectors){
+    const style=getComputedStyle(e.path);
+    if(!visible(e.path) || style.stroke==='none' || Number(style.strokeOpacity)===0 || parseFloat(style.strokeWidth)===0)continue;
+    const m=matrix(e.path),scale=maxScale(m),stroke=(parseFloat(style.strokeWidth)||1)*scale/2;
+    const bounds=rootBox(e.path.getBBox(),m);
+    // Broad phase only rejects distant paths. It never produces warnings.
+    const nearby=labels.filter(l=>(!e.line || !l.caption) && l.rectangles.some(r=>inter(expand(r.root,stroke+(l.caption?2:.5)),bounds,-.001)));
+    if(!nearby.length)continue;
+    const length=e.path.getTotalLength(),steps=Math.max(1,Math.ceil(length*scale)),parts=[];
+    // One root SVG unit of arc per sample bounds curve/chord error by .5.
+    let previous;
+    for(let i=0;i<=steps;i++){
+      const p=e.path.getPointAtLength(length*i/steps),current=point(m,[p.x,p.y]);
+      if(previous)parts.push([previous,current]);previous=current;
+    }
+    for(const label of nearby){
+      if(label.seen?.has(e.id))continue;
+      if(!label.rectangles.some(r=>parts.some(([a,b])=>hits(point(r.inverse,[a.x,a.y]),point(r.inverse,[b.x,b.y]),expand(r.b,(stroke+(label.caption?2:.5))*r.scale)))))continue;
+      (label.seen??=new Set()).add(e.id);
+      const el=label.el;
+      warnings.push({type:'text-edge-collision',id:label.caption?el.dataset.captionId:el.dataset.mdFreeText,...(label.caption?{point:el.dataset.mdPointLabel}:{}),edge:e.id,...(e.line?{connector:'line'}:{}),text:el.textContent.slice(0,40)});
     }
   }
   // Header and free text must stay inside the canvas too.

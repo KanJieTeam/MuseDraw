@@ -28,15 +28,21 @@ export function render(scene, theme) {
   // Scene-local art direction preserves an approved composition without adding
   // another named theme or mutating the shared theme used by later drawings.
   theme = deepMerge(theme, scene?.style ?? {});
+  // Block-internal text, axes and guides are not authored free annotations.
+  const authored = {
+    texts: new Set(Array.isArray(scene?.texts) ? scene.texts : []),
+    lines: new Set(Array.isArray(scene?.lines) ? scene.lines : []),
+  };
   scene = prepareScene(scene, theme);
-  const ctx = new Ctx(scene, theme);
+  const ctx = new Ctx(scene, theme, authored);
   return assertStaticSvg(ctx.build());
 }
 
 class Ctx {
-  constructor(scene, theme) {
+  constructor(scene, theme, authored) {
     this.s = scene;
     this.t = theme;
+    this.authored = authored;
     this.W = scene.size?.[0] ?? 1600;
     this.H = scene.size?.[1] ?? 1000;
     this.defs = [];
@@ -150,7 +156,7 @@ class Ctx {
     layers.nodes = modules+[...this.nodes.values()].filter(n=>!n.nativeModule).map((n) => this.node(n)).join('');
     layers.notes = (s.notes ?? []).map((n, i) => this.note(n, i)).join('');
     layers.legend = s.legend ? this.legend(s.legend) : '';
-    layers.texts = (s.texts ?? []).filter(t=>!t.nativeModule).map((x) => this.freeText(x)).join('');
+    layers.texts = (s.texts ?? []).filter(t=>!t.nativeModule).map((x, i) => this.freeText(x, i)).join('');
     layers.header = this.header();
     layers.footer = this.footer();
     const blend = t.effects?.blend ? ` style="mix-blend-mode:${t.effects.blend}"` : '';
@@ -315,7 +321,8 @@ class Ctx {
   lineEl(l, i) {
     const S = { color: 'muted', width: 1, ...(this.t.lines?.[l.kind ?? 'default'] ?? {}), ...l };
     const d = roundedPath(l.points, S.radius ?? 0);
-    return `<path id="line-${i + 1}" d="${d}" fill="none" stroke="${this.c(S.color)}" stroke-width="${S.width}"${S.dash ? ` stroke-dasharray="${S.dash}"` : ''} stroke-linecap="round"${S.opacity ? ` opacity="${S.opacity}"` : ''}/>`;
+    const metadata = this.authored.lines.has(l) ? ` data-md-line="${esc(l.id ?? 'line-' + (i + 1))}"` : '';
+    return `<path id="line-${i + 1}"${metadata} d="${d}" fill="none" stroke="${this.c(S.color)}" stroke-width="${S.width}"${S.dash ? ` stroke-dasharray="${S.dash}"` : ''} stroke-linecap="round"${S.opacity ? ` opacity="${S.opacity}"` : ''}/>`;
   }
 
   // ---------- ports ----------
@@ -879,7 +886,7 @@ class Ctx {
     return out;
   }
 
-  freeText(t) {
+  freeText(t, i) {
     const fam = this.font(t.font ?? 'body');
     const lines = t.w ? wrap(t.text, t.w, t.size ?? 14, fam, t.letterSpacing ?? 0, t.weight ?? 400) : String(t.text).split('\n');
     let out = textBlock({ x: t.x, y: t.y, lines: lines.map((l) => applyCase(l, t.case)), size: t.size ?? 14, family: fam, weight: t.weight ?? 400, color: this.c(t.color ?? 'ink'), anchor: t.anchor ?? 'start', letterSpacing: t.letterSpacing ?? 0, italic: t.italic, opacity: t.opacity, lineHeight: t.lineHeight ?? 1.3 });
@@ -887,6 +894,7 @@ class Ctx {
     // Point captions stay native text; metadata lets measured checks find them
     // even when they share a scientific module with their incident connectors.
     if (t.pointLabel) out = `<g data-md-point-label="${esc(t.pointLabel)}" data-caption-id="${esc(t.id)}">${out}</g>`;
+    else if (!t.nativeModule && this.authored.texts.has(t)) out = `<g data-md-free-text="${esc(t.id ?? 'free-text-' + (i + 1))}">${out}</g>`;
     return out;
   }
 
