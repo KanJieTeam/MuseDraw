@@ -60,6 +60,12 @@ model, map or energy diagram from a title. Complex spatial substrates need
 appropriate source geometry. The simple object vocabulary is not a substitute
 for that evidence.
 
+For analysis boundaries, element-preserving representation changes, local graph
+update scopes or event-to-response correspondence, use only the matching
+[scope and mapping recipe](scientific-mappings.md). These relationships need
+different geometry; another set of equally styled process boxes cannot express
+their membership, element mapping or coordinate association.
+
 Give the primary object the most room. Place short labels next to its parts;
 use a detail view only where an interaction would otherwise be hidden. Preserve
 the reference's white field and local tinted regions: a lightly coloured data
