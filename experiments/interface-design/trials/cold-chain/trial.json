@@ -168,6 +168,22 @@
           "passed": true
         }
       ],
+      "initialViews": [
+        {
+          "viewport": "desktop",
+          "acknowledgmentTop": 949,
+          "acknowledgmentBottom": 991,
+          "acknowledgmentFullyInInitialViewport": false,
+          "documentHeight": 1093
+        },
+        {
+          "viewport": "mobile",
+          "acknowledgmentTop": 1483,
+          "acknowledgmentBottom": 1525,
+          "acknowledgmentFullyInInitialViewport": false,
+          "documentHeight": 1644
+        }
+      ],
       "pageErrors": [],
       "networkRequests": [],
       "passed": true
@@ -336,6 +352,22 @@
           "viewport": 390,
           "name": "all-filter-restored",
           "passed": true
+        }
+      ],
+      "initialViews": [
+        {
+          "viewport": "desktop",
+          "acknowledgmentTop": 781,
+          "acknowledgmentBottom": 825,
+          "acknowledgmentFullyInInitialViewport": true,
+          "documentHeight": 1051
+        },
+        {
+          "viewport": "mobile",
+          "acknowledgmentTop": 1529,
+          "acknowledgmentBottom": 1573,
+          "acknowledgmentFullyInInitialViewport": false,
+          "documentHeight": 1711
         }
       ],
       "pageErrors": [],
