@@ -14,13 +14,21 @@ export function autoSides(a, b) {
   return b.y >= a.y + a.h / 2 ? ['b', 't'] : ['t', 'b'];
 }
 
-/** Point on a node side; `at` is 0..1 along the side (left→right or top→bottom). */
+/** Point on a node side; `at` is a bbox fraction (left→right or top→bottom).
+ * Folder top/right ports meet the contour along the requested side axis.
+ */
 export function port(n, side, at = 0.5, gap = 0) {
   const [dx, dy] = SIDES[side];
   if (n.shape === 'person' || n.shape === 'station' || n.shape === 'circle') at = 0.5;
   let x, y;
   if (side === 'l' || side === 'r') { x = side === 'l' ? n.x : n.x + n.w; y = n.y + n.h * at; }
   else { y = side === 't' ? n.y : n.y + n.h; x = n.x + n.w * at; }
+  if (n.shape === 'folder') {
+    // Match the folder's .36w tab, .45w slope end and .22h roof lip.
+    if (side === 't') y += n.h * .22 * (at <= .36 ? 0 : at >= .45 ? 1 : (at - .36) / .09);
+    // At the horizontal roof, a ray from the right hits its rightmost point.
+    else if (side === 'r' && at < .22) x = n.x + n.w * (.36 + .09 * at / .22);
+  }
   // Ellipse-like shapes: pull ports onto the curve.
   if (n.shape === 'circle' || n.shape === 'station') {
     const [cx, cy] = center(n);
