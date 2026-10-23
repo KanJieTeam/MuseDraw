@@ -24,7 +24,7 @@
 Install in a Skill-capable agent that can read files and run commands:
 
 ```bash
-npx skills add KanJieTeam/MuseDraw
+npx skills add KanJieTeam/MuseDraw --skill musedraw
 ```
 
 Then describe the content and relationships:
@@ -44,6 +44,16 @@ If Git downloads stall, use the [lightweight Skill ZIP](https://kanjieteam.githu
 - **Diagram content by default**: no added page heading or attribution. Automatic checks cover overflow, collisions, bounds and native export.
 
 Choose a style in the gallery, copy a brief or download an editable diagram. [20 styles](skills/musedraw/references/style-atlas.md) · [All 101 examples](gallery/README.md)
+
+## Visual design judgment Skill
+
+For composition, reading rhythm, emotional expression or storytelling, optionally install [visual-design-judgment](skills/visual-design-judgment/SKILL.md):
+
+```bash
+npx skills add KanJieTeam/MuseDraw --skill visual-design-judgment
+```
+
+It turns cross-media, literary, classical and Romantic research into task-specific design guidance, using your existing creation tools. See the [original information-grouping comparison](examples/visual-judgment-event/review.md) and [research and evaluation scope](skills/visual-design-judgment/references/evidence.md).
 
 ## Documentation and contributions
 
