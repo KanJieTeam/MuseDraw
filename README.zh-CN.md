@@ -24,7 +24,7 @@
 在支持 Skill、能读写文件并执行命令的智能体中安装：
 
 ```bash
-npx skills add KanJieTeam/MuseDraw
+npx skills add KanJieTeam/MuseDraw --skill musedraw
 ```
 
 然后描述想画的内容与关系，例如：
@@ -44,6 +44,16 @@ Git 下载缓慢时可用[轻量 Skill 包](https://kanjieteam.github.io/MuseDra
 - **默认只画内容**：不附加标题或署名；自动检查溢出、碰撞、边界与原生导出。
 
 在图库选风格、复制需求，或下载现成 draw.io。[查看 20 种风格](skills/musedraw/references/style-atlas.md) · [浏览全部 101 例](gallery/README.md)
+
+## 设计判断 Skill
+
+需要改善构图、阅读节奏、情绪表达或叙事时，可另外安装 [visual-design-judgment](skills/visual-design-judgment/SKILL.md)：
+
+```bash
+npx skills add KanJieTeam/MuseDraw --skill visual-design-judgment
+```
+
+它把跨媒介、文学、古典与浪漫主义研究整理为按任务读取的设计方法，沿用当前创作工具。查看[原创信息组织对照](examples/visual-judgment-event/review.md)及[研究与验证范围](skills/visual-design-judgment/references/evidence.md)。
 
 ## 文档与共建
 
