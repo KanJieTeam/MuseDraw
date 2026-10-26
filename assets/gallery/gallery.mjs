@@ -2,8 +2,8 @@ const $=id=>document.getElementById(id);
 async function readJson(url){const response=await fetch(url,{cache:'no-cache'});if(!response.ok)throw Error('图集资源加载失败，请刷新重试');return response.json();}
 const [catalog,styleIndex,promptIndex,previewIndex]=await Promise.all([readJson('gallery/catalog.json'),readJson('styles.json'),readJson('gallery/prompts.json'),readJson('previews.json').catch(()=>({items:{}}))]);
 const {items}=catalog,localizedPrompts=promptIndex.items,previews=previewIndex.items;
-const statuses={flagship:'精选',reviewed:'已审阅',preview:'待审阅',planned:'计划中'};
-const categories={engineering:'工程',research:'科研',office:'办公',teaching:'教学'};
+const statuses={flagship:'精选',reviewed:'已审阅',preview:'待审阅',planned:'计划中',included:'已收录'};
+const categories={engineering:'工程',research:'科研',office:'办公',teaching:'教学',poster:'海报',data:'数据与信息图'};
 const themeNames={journal:'科研期刊',editorial:'纸墨编辑',newsprint:'报刊黑白',enterprise:'商务墨蓝','ink-wash':'水墨宣纸',pastel:'柔和笔记',terracotta:'暖陶',whiteboard:'白板手绘',chalkboard:'黑板教学',swiss:'瑞士海报',bauhaus:'包豪斯',metro:'地铁线路',product:'产品发布',c4:'C4 标准',blueprint:'工程蓝图',terminal:'终端暗色',observatory:'观测夜空',aurora:'极光玻璃',riso:'孔版套印',neon:'霓虹街机'};
 const styleCues={journal:'清晰、克制，面向论文',editorial:'暖纸与朱红，留白叙事',newsprint:'黑白线稿，适合印刷',enterprise:'墨蓝分层，清晰汇报','ink-wash':'宣纸墨色，典雅中文',pastel:'柔和色域，轻松阅读',terracotta:'陶色暖调，策略与旅程',whiteboard:'自然笔触，自由推演',chalkboard:'粉笔质感，直观讲解',swiss:'鲜明主次，理性编排',bauhaus:'几何与原色，鲜明角色',metro:'线路与站点，并行叙事',product:'轻盈层级，产品表达',c4:'系统边界，标准架构',blueprint:'蓝图网格，工程精度',terminal:'终端夜色，技术流程',observatory:'深空底色，数据脉络',aurora:'光晕与玻璃，层次空间',riso:'套印肌理，纸上个性',neon:'霓虹对比，实时节奏'};
 const topics={流程:'flow process pipeline workflow prisma consort',架构:'architecture rag kubernetes microservices system',计划:'roadmap gantt timeline plan strategy',审批:'procurement approval expense',科研:'study research experiment clinical literature sem mediation',教学:'lesson classroom curriculum',项目:'project roadmap milestone',思维导图:'mindmap',鱼骨:'fishbone',客户:'customer journey',风险:'risk',组织:'organization org',时间:'timeline gantt',数据:'data observability streaming'};
@@ -21,7 +21,7 @@ for(const id of ['all',...themes]){const node=button('','style',id,'style-option
 function link(text,href,download=false){const a=element('a','',text);a.href=href;if(download)a.setAttribute('download','');return a;}
 function toast(text){$('status').textContent=text;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('status').textContent='',3200);}
 function favoriteButton(item){const saved=favorites.has(item.slug),node=button(saved?'♥':'♡','favorite',item.slug,'favorite-button');node.setAttribute('aria-label',`${saved?'取消收藏':'收藏'} ${item.title}`);node.setAttribute('aria-pressed',String(saved));return node;}
-function downloads(item){const node=element('div','downloads');for(const [label,file]of [['SVG','diagram.svg'],['场景','scene.json']])node.append(link(label,`${item.path}/${file}`,true));node.append(link('原始需求',`${item.path}/prompt.md`));return node;}
+function downloads(item){const node=element('div','downloads');for(const [label,file]of [['SVG','diagram.svg'],['场景','scene.json'],...(item.nativeArtwork?[['PNG','original.png']]:[])])node.append(link(label,`${item.path}/${file}`,true));node.append(link('原始需求',`${item.path}/prompt.md`));if(item.nativeArtwork)node.append(link('设计说明',`${item.path}/design.md`));return node;}
 function actions(item){const node=element('div','case-actions');node.append(button('复制简短需求','copy',item.slug,'copy-button'),button('快速 PNG','fast',item.slug,'replay-button'),button('原样复刻','replay',item.slug,'replay-button'));return node;}
 function card(item,index){
  const article=element('article','case-card');article.dataset.item=item.slug;
@@ -41,7 +41,7 @@ function searchMatches(item,query){
 }
 function render(){
  const theme=$('theme').value,collection=$('collection').value,category=$('category').value,query=$('search').value.trim().toLowerCase();
- const shown=items.filter(item=>(collection==='all'||item.status==='flagship')&&(theme==='all'||item.theme===theme)&&(category==='all'||item.category===category)&&(!onlyFavorites||favorites.has(item.slug))&&searchMatches(item,query));
+ const shown=items.filter(item=>(collection==='all'||collection==='visual-cases'&&item.collection==='visual-cases'||collection==='flagship'&&item.status==='flagship')&&(theme==='all'||item.theme===theme)&&(category==='all'||item.category===category)&&(!onlyFavorites||favorites.has(item.slug))&&searchMatches(item,query));
  visibleItems=shown;
  for(const node of document.querySelectorAll('[data-style]')){const on=node.dataset.style===theme;node.setAttribute('aria-pressed',String(on));}
  for(const key of ['collection','category'])for(const node of document.querySelectorAll(`[data-${key}]`)){const on=node.dataset[key]===$(key).value;node.classList.toggle('active',on);node.setAttribute('aria-pressed',String(on));}
@@ -49,7 +49,7 @@ function render(){
  $('favorite-count').textContent=String(favorites.size);$('favorites').setAttribute('aria-pressed',String(onlyFavorites));
  updateLanguageButtons();
 }
-function showAll(){if($('search').value.trim()||$('category').value!=='all'||$('theme').value!=='all'||onlyFavorites)$('collection').value='all';render();}
+function showAll(){if($('collection').value==='flagship'&&($('search').value.trim()||$('category').value!=='all'||$('theme').value!=='all'||onlyFavorites))$('collection').value='all';render();}
 $('collection').addEventListener('change',render);
 for(const id of ['theme','category'])$(id).addEventListener('change',showAll);
 for(const [id,key] of [['style-options','style'],['category-options','category']])$(id).addEventListener('click',event=>{const node=event.target.closest(`[data-${key}]`);if(!node)return;$(key==='style'?'theme':'category').value=node.dataset[key];showAll();});
@@ -59,10 +59,11 @@ $('favorites').addEventListener('click',()=>{onlyFavorites=!onlyFavorites;showAl
 $('reset-filters').addEventListener('click',()=>{$('search').value='';$('theme').value=$('category').value='all';$('collection').value='all';onlyFavorites=false;render();});
 window.addEventListener('storage',event=>{if(event.key!==savedKey)return;try{const saved=JSON.parse(event.newValue??'[]');if(Array.isArray(saved)){favorites=new Set(saved.filter(slug=>items.some(item=>item.slug===slug)));render();if(activeItem)updateDetails(activeItem);}}catch{}});
 render();
-async function promptFor(item){const text=localizedPrompts[item.slug]?.[promptLanguage];if(!text?.trim())throw Error('没有找到这个语言的提示词');return text;}
+for(const name of ['all','flagship','visual-cases']){const count=items.filter(item=>name==='all'||name==='flagship'&&item.status==='flagship'||name==='visual-cases'&&item.collection==='visual-cases').length;const label=document.querySelector(`[data-collection="${name}"] span`);if(label)label.textContent=count;}
+async function promptFor(item){const localized=localizedPrompts[item.slug],text=localized?.[promptLanguage]??localized?.zh;if(!text?.trim())throw Error('没有找到这个语言的提示词');return text;}
 function briefFor(item,prompt){return promptLanguage==='en'?`Use the latest MuseDraw (https://github.com/KanJieTeam/MuseDraw). Read the complete Skill and use the “${item.theme}” style.\n${prompt}`:`请使用 MuseDraw 最新版（https://github.com/KanJieTeam/MuseDraw），先读取完整 Skill，采用“${themeNames[item.theme]??item.theme}”风格。\n${prompt}`;}
 function fastFor(item,prompt){return briefFor(item,prompt)+(promptLanguage==='en'?'\nPNG only.':'\n只需 PNG。');}
-function replayFor(item){return promptLanguage==='en'?`Reproduce this MuseDraw diagram from the latest repository, without redesigning it.\nRepository: https://github.com/KanJieTeam/MuseDraw (read the complete Skill first).\nScene: https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json\nDownload the scene and render it directly with the bundled scene engine, preserving content, layout and the “${item.theme}” theme. Do not ask me for coordinates.`:`请使用 MuseDraw 仓库最新版，原样复刻“${item.title}”。\n仓库：https://github.com/KanJieTeam/MuseDraw（先读取完整 Skill）\n完整场景：https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json\n下载场景，保留内容、布局与“${themeNames[item.theme]??item.theme}”主题，用仓库 scene 引擎直接渲染，不要要求我提供坐标。`;}
+function replayFor(item){const scene=`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/${item.repoPath??item.path}/scene.json`;return promptLanguage==='en'?`Reproduce this MuseDraw diagram from the latest repository, without redesigning it.\nRepository: https://github.com/KanJieTeam/MuseDraw (read the complete Skill first).\nScene: ${scene}\nDownload the scene and render it directly with the bundled scene engine, preserving content, layout and the “${item.theme}” theme. Do not ask me for coordinates.`:`请使用 MuseDraw 仓库最新版，原样复刻“${item.title}”。\n仓库：https://github.com/KanJieTeam/MuseDraw（先读取完整 Skill）\n完整场景：${scene}\n下载场景，保留内容、布局与“${themeNames[item.theme]??item.theme}”主题，用仓库 scene 引擎直接渲染，不要要求我提供坐标。`;}
 function languageControls(){const controls=element('div','prompt-language');controls.setAttribute('role','group');controls.setAttribute('aria-label','提示词语言');for(const [id,label] of [['zh','中文'],['en','English']])controls.append(button(label,'promptLanguage',id));return controls;}
 function issueUrl(item){const en=promptLanguage==='en',style=$('theme').value,category=$('category').value;const url=new URL('https://github.com/KanJieTeam/MuseDraw/issues/new');url.searchParams.set('template','style-request.md');url.searchParams.set('title',en?'[Style request] A style I would like to see':'[Style request] 我想要的绘图风格');const context=en?`Style filter: ${style==='all'?'All styles':style}\nUse: ${category==='all'?'All uses':category}\nCollection: ${$('collection').value==='all'?'All examples':'Featured'}`:`风格筛选：${style==='all'?'所有风格':themeNames[style]}\n用途：${category==='all'?'所有用途':categories[category]}\n作品集：${$('collection').value==='all'?'全部作品':'编辑精选'}`;const related=item?`\n${en?'Related example':'相关案例'}: ${item.title}\nhttps://kanjieteam.github.io/MuseDraw/#${item.slug}`:'';url.searchParams.set('body',en?`## What would you like to draw, and for what purpose?\n\n\n## What should it look like?\n\nDescribe the colors, feel or layout, or add public references you can share.\n\n## What is missing from the current examples? (optional)\n\n\n## Gallery context\n\n${context}${related}\n\nPlease remove confidential data before submitting. A request does not automatically generate a drawing or commit to a delivery date.`:`## 想画什么、用在哪里？\n\n\n## 希望是什么样子？\n\n可以描述配色、质感、排版，或贴一张有权分享的参考图。\n\n## 现有案例还差在哪里？（可选）\n\n\n## 浏览信息\n\n${context}${related}\n\n提交前请移除保密资料；提交需求不会立即生成图，也不代表已排期实现。`);return url.href;}
 function updateLanguageButtons(){for(const node of document.querySelectorAll('[data-prompt-language]'))node.setAttribute('aria-pressed',String(node.dataset.promptLanguage===promptLanguage));for(const id of ['request-top','request-style','request-empty'])$(id).href=issueUrl();}
@@ -76,6 +77,7 @@ async function updateDetails(item){
  const share=button('复制这张图的链接 ↗','share',item.slug,'share-button');
  const request=link('这个风格还差点？提建议 ↗',issueUrl(item));request.id='request-detail';request.className='request-link';request.target='_blank';request.rel='noopener noreferrer';
  const prompt=element('p','detail-prompt','正在加载简短需求…');details.append(meta,title,colors,element('p','detail-description',item.subtitle),downloads(item),element('h4','','几句话，开始画图'),languageControls(),prompt,actions(item),element('p','detail-note','复制需求，换成你的内容；原样复刻则沿用完整场景。PNG 保留纹理与光效，SVG 与场景 JSON 用于继续创作。'),share,request);updateLanguageButtons();
+ if(item.nativeArtwork){details.append(element('p','detail-note','本例保留原生矢量稿；更换内容时需要重新排版。'+(promptLanguage==='en'&&!localizedPrompts[item.slug]?.en?' 此案例保留中文原始需求。':'')));}
  try{const text=await promptFor(item);if(activeItem?.slug===item.slug)prompt.textContent=text;}catch(error){prompt.textContent=error.message;}
 }
 async function handleAction(event){

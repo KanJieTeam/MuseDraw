@@ -16,6 +16,7 @@ import zipfile
 
 from build_gallery_site import build_site, CASE_FILES, PAGE_FILES, DOWNLOAD_FILES, build_skill_download, visual_case_files, VISUAL_CASE_DOWNLOADS
 from check import svg_dimensions, check_markdown
+from gallery_catalog import gallery_catalog, gallery_prompts, gallery_source
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -139,6 +140,8 @@ class GalleryTests(unittest.TestCase):
                 site = build_site(root)
             self.assertGreaterEqual(sleep.call_count, 2)
             html = (site / "index.html").read_text(encoding="utf-8")
+            self.assertEqual(json.loads((site / "gallery/catalog.json").read_text(encoding="utf-8")), gallery_catalog(root))
+            self.assertEqual(json.loads((site / "gallery/prompts.json").read_text(encoding="utf-8")), gallery_prompts(root))
             for filename in ("gallery.css", "gallery.mjs"):
                 version = hashlib.sha256((site / filename).read_bytes()).hexdigest()[:12]
                 self.assertIn(f'"{filename}?v={version}"', html)
@@ -164,16 +167,18 @@ class GalleryTests(unittest.TestCase):
 
     def test_small_previews_match_current_sources_and_have_a_bounded_payload(self):
         index = json.loads((ROOT / "assets/gallery/previews.json").read_text(encoding="utf-8"))
-        self.assertEqual(set(index["items"]), {item["slug"] for item in self.items})
+        all_items = gallery_catalog(ROOT)["items"]
+        self.assertEqual(len(all_items), 288)
+        self.assertEqual(set(index["items"]), {item["slug"] for item in all_items})
         total = source_total = 0
         expected = set()
-        for item in self.items:
+        for item in all_items:
             data = index["items"][item["slug"]]
             relative = data["thumbnail"]
             self.assertRegex(relative, rf'^previews/{re.escape(item["slug"])}-[a-f0-9]{{12}}\.webp$')
             expected.add(Path(relative).name)
             content = (ROOT / "assets/gallery" / relative).read_bytes()
-            source = (ROOT / item["path"] / "preview.jpg").read_bytes()
+            source = (gallery_source(ROOT, item) / "preview.jpg").read_bytes()
             self.assertEqual(hashlib.sha256(source).hexdigest(), data["sourceSha256"], "Run build_gallery_previews.py after changing a gallery preview")
             self.assertEqual(hashlib.sha256(content).hexdigest(), data["sha256"])
             self.assertEqual(len(content), data["bytes"])

@@ -4,6 +4,7 @@ import io
 import json
 from pathlib import Path
 import re
+from gallery_catalog import gallery_catalog, gallery_source
 
 
 def build_previews(root):
@@ -13,13 +14,13 @@ def build_previews(root):
     if output.is_symlink():
         raise ValueError("Refusing a linked thumbnail directory")
     output.mkdir(exist_ok=True)
-    catalog = json.loads((root / "gallery/catalog.json").read_text(encoding="utf-8"))
+    catalog = gallery_catalog(root)
     index = {"version": 1, "items": {}, "sourceBytes": 0, "thumbnailBytes": 0}
     for item in catalog["items"]:
         slug = item["slug"]
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
             raise ValueError("Expected a portable case slug")
-        source = root / "gallery" / slug / "preview.jpg"
+        source = gallery_source(root, item) / "preview.jpg"
         original = source.read_bytes()
         with Image.open(io.BytesIO(original)) as image:
             width, height = image.size

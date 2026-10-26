@@ -9,6 +9,7 @@ import shutil
 import tempfile
 import time
 import zipfile
+from gallery_catalog import gallery_catalog, gallery_prompts
 
 PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json", "previews.json")
 CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json")
@@ -132,8 +133,8 @@ def build_site(root, output_name="site"):
             html = html.replace(f'"{filename}"', f'"{filename}?v={version}"')
         (staging / "index.html").write_text(html, encoding="utf-8")
         (staging / "gallery").mkdir()
-        shutil.copyfile(root / "gallery/catalog.json", staging / "gallery/catalog.json")
-        shutil.copyfile(root / "gallery/prompts.json", staging / "gallery/prompts.json")
+        (staging / "gallery/catalog.json").write_text(json.dumps(gallery_catalog(root), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        (staging / "gallery/prompts.json").write_text(json.dumps(gallery_prompts(root), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         for item in items:
             slug = item["slug"]
             if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or item["path"] != f"gallery/{slug}":

@@ -30,7 +30,7 @@ MuseDraw 是一个开源视觉创作项目，将设计方法与绘图工具带�
 - **把修改留在对话里。** 补充一个步骤、调整一处重点，或沿着喜欢的方向继续打磨。
 - **拿到作品，也保留修改的余地。** 当前图示工作流提供高清图片与可编辑文件，方便使用、分享和继续完善。
 
-[浏览作品与源文件](https://kanjieteam.github.io/MuseDraw/) · [完整视觉案例库](https://kanjieteam.github.io/MuseDraw/collections/visual-cases/) · [了解当前使用方式](docs/usage.zh-CN.md)
+[浏览作品与源文件](https://kanjieteam.github.io/MuseDraw/) · [了解当前使用方式](docs/usage.zh-CN.md)
 
 ## 开始创作
 

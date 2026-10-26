@@ -30,7 +30,7 @@ You bring what you want to express. MuseDraw helps work out how to present it: w
 - **Keep revising through conversation.** Add a step, shift the emphasis, or develop a direction you like.
 - **Use the work and keep the freedom to change it.** The current diagram workflow provides high-resolution images and editable files for sharing, using, and refining.
 
-[Explore the work and source files](https://kanjieteam.github.io/MuseDraw/) · [Full visual case library](https://kanjieteam.github.io/MuseDraw/collections/visual-cases/) · [See how it works today](docs/usage.md)
+[Explore the work and source files](https://kanjieteam.github.io/MuseDraw/) · [See how it works today](docs/usage.md)
 
 ## Start creating
 
