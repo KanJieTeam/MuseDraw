@@ -1,0 +1,40 @@
+{
+  "id": "134",
+  "title": "水的三态变化",
+  "use": "教学",
+  "style": "极光玻璃",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "极光",
+    "标题",
+    "三态",
+    "变化",
+    "温度"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "渐变",
+    "滤镜（发光或模糊）",
+    "半透明"
+  ],
+  "example_data": false,
+  "computed": [
+    "温度轴按 −20 °C 到 120 °C 线性刻度绘制。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

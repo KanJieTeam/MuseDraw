@@ -1,0 +1,69 @@
+<svg data-theme="aurora" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1000" width="1800" height="1000">
+<title>电磁波谱</title>
+<defs><radialGradient id="au0" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#1FD1B2" stop-opacity="0.55"/><stop offset="1" stop-color="#1FD1B2" stop-opacity="0"/></radialGradient><radialGradient id="au1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7B5CFF" stop-opacity="0.55"/><stop offset="1" stop-color="#7B5CFF" stop-opacity="0"/></radialGradient><radialGradient id="au2" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#4BE38A" stop-opacity="0.55"/><stop offset="1" stop-color="#4BE38A" stop-opacity="0"/></radialGradient><radialGradient id="au3" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2B7CFF" stop-opacity="0.55"/><stop offset="1" stop-color="#2B7CFF" stop-opacity="0"/></radialGradient><linearGradient id="vis" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E5322B"/><stop offset="0.18" stop-color="#F28C28"/><stop offset="0.34" stop-color="#F6D33C"/><stop offset="0.52" stop-color="#3FB34F"/><stop offset="0.68" stop-color="#22A7C9"/><stop offset="0.84" stop-color="#2F5BD3"/><stop offset="1" stop-color="#7B3FC4"/></linearGradient></defs>
+<g data-md-layer="光谱">
+<rect width="1800" height="1000" fill="#070B1A"/>
+<ellipse cx="380" cy="260" rx="520" ry="260" fill="url(#au0)"/>
+<ellipse cx="1250" cy="200" rx="600" ry="240" fill="url(#au1)"/>
+<ellipse cx="900" cy="760" rx="700" ry="220" fill="url(#au2)"/>
+<ellipse cx="1550" cy="650" rx="380" ry="220" fill="url(#au3)"/>
+<rect x="153" y="360" width="594" height="130" rx="16" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1.4"/>
+<rect x="160" y="368" width="580" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<text x="450" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#F2F5FF" font-weight="700" text-anchor="middle">无线电波</text>
+<text x="450" y="530" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9C3E6" text-anchor="middle">广播、手机通信</text>
+<text x="450" y="556" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9C3E6" text-anchor="middle">微波炉、雷达（微波）</text>
+<rect x="753" y="360" width="305.92" height="130" rx="16" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1.4"/>
+<rect x="760" y="368" width="291.92" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<text x="905.96" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#F2F5FF" font-weight="700" text-anchor="middle">红外线</text>
+<text x="905.96" y="530" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9C3E6" text-anchor="middle">遥控器、红外测温</text>
+<rect x="1061.92" y="360" width="27.88" height="130" fill="url(#vis)"/>
+<rect x="1092.79" y="360" width="154.21" height="130" rx="16" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1.4"/>
+<rect x="1099.79" y="368" width="140.21" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<text x="1169.9" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#F2F5FF" font-weight="700" text-anchor="middle">紫外线</text>
+<text x="1169.9" y="530" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9C3E6" text-anchor="middle">杀菌、验钞</text>
+<rect x="1253" y="360" width="294" height="130" rx="16" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1.4"/>
+<rect x="1260" y="368" width="280" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<text x="1400" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#F2F5FF" font-weight="700" text-anchor="middle">X 射线</text>
+<text x="1400" y="530" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9C3E6" text-anchor="middle">医学透视、安检</text>
+<rect x="1553" y="360" width="94" height="130" rx="16" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1.4"/>
+<rect x="1560" y="368" width="80" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<text x="1600" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#F2F5FF" font-weight="700" text-anchor="middle">γ 射线</text>
+<text x="1600" y="530" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9C3E6" text-anchor="middle">放射治疗</text>
+<line x1="150" y1="300" x2="150" y2="354" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<text x="150" y="290" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">1 km</text>
+<text x="150" y="250" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" fill="#8EA0D6" text-anchor="middle">300 kHz</text>
+<line x1="450" y1="300" x2="450" y2="354" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<text x="450" y="290" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">1 m</text>
+<text x="450" y="250" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" fill="#8EA0D6" text-anchor="middle">300 MHz</text>
+<line x1="750" y1="300" x2="750" y2="354" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<text x="750" y="290" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">1 mm</text>
+<text x="750" y="250" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" fill="#8EA0D6" text-anchor="middle">300 GHz</text>
+<line x1="1050" y1="300" x2="1050" y2="354" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<text x="1050" y="290" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">1 μm</text>
+<text x="1050" y="250" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" fill="#8EA0D6" text-anchor="middle">300 THz</text>
+<line x1="1350" y1="300" x2="1350" y2="354" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<text x="1350" y="290" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">1 nm</text>
+<text x="1350" y="250" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" fill="#8EA0D6" text-anchor="middle">3×10¹⁷ Hz</text>
+<line x1="1650" y1="300" x2="1650" y2="354" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<text x="1650" y="290" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">1 pm</text>
+<text x="1650" y="250" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" fill="#8EA0D6" text-anchor="middle">3×10²⁰ Hz</text>
+<text x="150" y="216" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#8EA0D6" font-weight="500">频率</text>
+<line x1="1300" y1="140" x2="1631.6" y2="140" stroke="#F2F5FF" stroke-width="2"/>
+<path d="M1640 140 L1629.4 145.63 L1629.4 134.37 Z" fill="#F2F5FF"/>
+<text x="1300" y="124" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#F2F5FF" font-weight="500">波长变短，频率变高，能量变大</text>
+<path d="M1061.92 490 L760 700 M1089.79 490 L1360 700" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="760" y="700" width="600" height="70" rx="10" fill="url(#vis)"/>
+<text x="760" y="804" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#F2F5FF" text-anchor="middle">760 nm</text>
+<text x="1360" y="804" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#F2F5FF" text-anchor="middle">400 nm</text>
+<text x="1060" y="804" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#F2F5FF" font-weight="700" text-anchor="middle">可见光：人眼只看得见这一小段</text>
+<text x="802.86" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">红</text>
+<text x="888.57" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">橙</text>
+<text x="974.29" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">黄</text>
+<text x="1060" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">绿</text>
+<text x="1145.71" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">青</text>
+<text x="1231.43" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">蓝</text>
+<text x="1317.14" y="744" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#10131F" font-weight="900" text-anchor="middle">紫</text>
+<text id="title" x="150" y="110" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="56" fill="#F2F5FF" font-weight="900">电磁波谱</text>
+<text x="150" y="940" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#8EA0D6">波长坐标为对数刻度：每一格相差 1000 倍。</text>
+</g>
+</svg>

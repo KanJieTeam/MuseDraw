@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>可观测性线路图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="线路">
+<path d="M150.0,300.0 L1120.0,300.0 L1330.0,510.0" fill="none" stroke="#D7282F" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150.0,510.0 L1330.0,510.0" fill="none" stroke="#1D6FB8" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150.0,720.0 L1120.0,720.0 L1330.0,510.0" fill="none" stroke="#1E9E5A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M840.0,300.0 L840.0,150.0 L1330.0,150.0" fill="none" stroke="#F29400" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="车站">
+<circle cx="150" cy="300" r="11" fill="#FFFFFF" stroke="#D7282F" stroke-width="5"/>
+<text x="150" y="256" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">应用 /metrics</text>
+<text x="150" y="278" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">暴露指标端点</text>
+<circle cx="380" cy="300" r="11" fill="#FFFFFF" stroke="#D7282F" stroke-width="5"/>
+<text x="380" y="256" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Prometheus</text>
+<text x="380" y="278" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">定时拉取</text>
+<circle cx="610" cy="300" r="11" fill="#FFFFFF" stroke="#D7282F" stroke-width="5"/>
+<text x="610" y="256" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">时序库</text>
+<text x="610" y="278" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">保留 15 天</text>
+<circle cx="150" cy="510" r="11" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="5"/>
+<text x="150" y="554" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">标准输出</text>
+<text x="150" y="576" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">容器日志</text>
+<circle cx="380" cy="510" r="11" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="5"/>
+<text x="380" y="554" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Fluent Bit</text>
+<text x="380" y="576" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">采集、打标签</text>
+<circle cx="610" cy="510" r="11" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="5"/>
+<text x="610" y="554" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Kafka</text>
+<text x="610" y="576" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">缓冲削峰</text>
+<circle cx="840" cy="510" r="11" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="5"/>
+<text x="840" y="554" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Loki</text>
+<text x="840" y="576" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">按标签索引</text>
+<circle cx="150" cy="720" r="11" fill="#FFFFFF" stroke="#1E9E5A" stroke-width="5"/>
+<text x="150" y="764" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">OTel SDK</text>
+<text x="150" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">生成 Span</text>
+<circle cx="380" cy="720" r="11" fill="#FFFFFF" stroke="#1E9E5A" stroke-width="5"/>
+<text x="380" y="764" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">OTel Collector</text>
+<text x="380" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">批量、重试</text>
+<circle cx="610" cy="720" r="11" fill="#FFFFFF" stroke="#1E9E5A" stroke-width="5"/>
+<text x="610" y="764" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">尾部采样</text>
+<text x="610" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">保留错误与慢请求</text>
+<circle cx="840" cy="720" r="11" fill="#FFFFFF" stroke="#1E9E5A" stroke-width="5"/>
+<text x="840" y="764" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Tempo</text>
+<text x="840" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">链路存储</text>
+<circle cx="1090" cy="150" r="11" fill="#FFFFFF" stroke="#F29400" stroke-width="5"/>
+<text x="1090" y="106" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Alertmanager</text>
+<text x="1090" y="128" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">分组、抑制、静默</text>
+<circle cx="1330" cy="150" r="11" fill="#FFFFFF" stroke="#F29400" stroke-width="5"/>
+<text x="1330" y="106" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">值班手机</text>
+<text x="1330" y="128" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle"></text>
+<circle cx="840" cy="300" r="15" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="864" y="342" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A">记录规则</text>
+<text x="864" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777">预聚合、评估告警</text>
+<circle cx="1330" cy="510" r="20" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="1366" y="512" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#1A1A1A">Grafana</text>
+<text x="1366" y="536" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#777777">统一查询</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="标题与图例">
+<text x="70" y="100" font-family="'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="800" fill="#1A1A1A">可观测性线路图</text>
+<text x="72" y="138" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#777777">一条请求留下的三种数据，各自走到 Grafana 换乘</text>
+<rect x="70" y="872" width="60" height="12" fill="#D7282F" rx="6"/>
+<text x="142" y="884" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="600" fill="#1A1A1A">指标线</text>
+<rect x="270" y="872" width="60" height="12" fill="#1D6FB8" rx="6"/>
+<text x="342" y="884" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="600" fill="#1A1A1A">日志线</text>
+<rect x="470" y="872" width="60" height="12" fill="#1E9E5A" rx="6"/>
+<text x="542" y="884" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="600" fill="#1A1A1A">追踪线</text>
+<rect x="670" y="872" width="60" height="12" fill="#F29400" rx="6"/>
+<text x="742" y="884" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="600" fill="#1A1A1A">告警支线</text>
+<circle cx="890" cy="878" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="912" y="884" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="600" fill="#1A1A1A">换乘站</text>
+<text x="70" y="940" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#777777">在 Grafana 里同一个面板可以查三类数据；指标上的 exemplar 带着 trace ID，可以从一个异常的点直接跳到对应的链路。</text>
+</g>
+</svg>

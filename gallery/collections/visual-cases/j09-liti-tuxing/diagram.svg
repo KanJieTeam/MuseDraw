@@ -1,0 +1,31 @@
+<svg data-theme="bauhaus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+<title>认识立体图形</title>
+<g data-md-layer="画面">
+<rect width="1400" height="1400" fill="#EEE9DE"/>
+<text id="title" x="80" y="140" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="90" fill="#141414" font-weight="900">认识立体图形</text>
+<text x="84" y="196" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#141414">一年级数学</text>
+<path d="M140 420 h300 v180 h-300 Z" fill="#D7262B"/>
+<path d="M140 420 l112.0 -80.0 h300 l-112.0 80.0 Z" fill="#E86A5E"/>
+<path d="M440 420 l112.0 -80.0 v180 l-112.0 80.0 Z" fill="#A51D22"/>
+<path d="M820 420 h220 v220 h-220 Z" fill="#F4C20D"/>
+<path d="M820 420 l112.0 -80.0 h220 l-112.0 80.0 Z" fill="#F8DA6B"/>
+<path d="M1040 420 l112.0 -80.0 v220 l-112.0 80.0 Z" fill="#C79A06"/>
+<path d="M200 860 V1120 A140 44 0 0 0 480 1120 V860 Z" fill="#1F4DA1"/>
+<ellipse cx="340" cy="860" rx="140" ry="44" fill="#5B7FCC"/>
+<circle cx="1010" cy="990" r="150" fill="#141414"/>
+<ellipse cx="1010" cy="990" rx="150" ry="40" fill="none" stroke="#EEE9DE" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="140" y="690" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="48" fill="#141414" font-weight="900">长方体</text>
+<text x="140" y="740" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#141414" font-weight="500">6 个面，12 条棱，8 个顶点</text>
+<text x="140" y="778" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#141414">相对的面完全一样</text>
+<text x="820" y="690" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="48" fill="#141414" font-weight="900">正方体</text>
+<text x="820" y="740" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#141414" font-weight="500">6 个面，12 条棱，8 个顶点</text>
+<text x="820" y="778" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#141414">6 个面都是同样的正方形</text>
+<text x="140" y="1220" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="48" fill="#141414" font-weight="900">圆柱</text>
+<text x="140" y="1270" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#141414" font-weight="500">上下两个圆，中间是一个曲面</text>
+<text x="140" y="1308" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#141414">能滚，也能立住</text>
+<text x="820" y="1220" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="48" fill="#141414" font-weight="900">球</text>
+<text x="820" y="1270" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#141414" font-weight="500">只有一个曲面</text>
+<text x="820" y="1308" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#141414">从哪个方向看都是圆</text>
+<rect x="0" y="770" width="1400" height="14" fill="#141414"/>
+</g>
+</svg>

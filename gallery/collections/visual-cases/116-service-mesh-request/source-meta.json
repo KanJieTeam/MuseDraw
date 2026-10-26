@@ -1,0 +1,40 @@
+{
+  "id": "116",
+  "title": "服务网格中的一次请求",
+  "use": "工程",
+  "style": "极光玻璃",
+  "pack": 6,
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "极光",
+    "标题",
+    "卡片",
+    "流量",
+    "步骤"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "渐变",
+    "滤镜（发光或模糊）",
+    "半透明"
+  ],
+  "example_data": false,
+  "computed": [
+    "无数值计算。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

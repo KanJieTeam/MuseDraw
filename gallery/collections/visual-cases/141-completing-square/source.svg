@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>配方法与求根公式</title>
+<defs><radialGradient id="smudge" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#7B5032"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="黑板">
+<rect x="36" y="36" width="1528" height="928" fill="#2F4B3C"/>
+<ellipse cx="822.52" cy="171.13" rx="261.14" ry="62.42" fill="url(#smudge)"/>
+<ellipse cx="1057.08" cy="151.14" rx="168.41" ry="89.29" fill="url(#smudge)"/>
+<ellipse cx="1040.87" cy="779.79" rx="194.01" ry="68.8" fill="url(#smudge)"/>
+<ellipse cx="602.68" cy="669.43" rx="266.41" ry="62.92" fill="url(#smudge)"/>
+<ellipse cx="1100.42" cy="401.81" rx="160.38" ry="102.28" fill="url(#smudge)"/>
+<ellipse cx="480.51" cy="528.29" rx="167.04" ry="68.87" fill="url(#smudge)"/>
+<ellipse cx="364.26" cy="740.68" rx="263.72" ry="102.71" fill="url(#smudge)"/>
+<ellipse cx="1015.63" cy="536.57" rx="216.43" ry="94.51" fill="url(#smudge)"/>
+<rect x="36" y="948" width="1528" height="16" fill="#5E3B24"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="90" y="126" font-family="'Noto Sans CJK SC', sans-serif" font-size="52" font-weight="700" fill="#ECEAE1" opacity="0.95">配方法与求根公式</text>
+<text x="1510" y="112" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1" text-anchor="end" opacity="0.85">九年级　一元二次方程</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="几何配方">
+<text x="90" y="210" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="700" fill="#F2D67A">例：x² + 6x = 16</text>
+<rect x="130" y="270" width="170" height="170" fill="#3A5A49" rx="0"/>
+<path d="M126.0,270.0 C133.3,269.8 155.3,269.3 170.0,269.2 C184.7,269.1 199.3,269.5 214.0,269.6 C228.7,269.6 243.3,269.6 258.0,269.6 C272.7,269.7 294.7,270.0 302.0,270.1" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M299.7,268.0 C299.8,275.3 300.0,297.3 300.1,312.0 C300.1,326.7 300.2,341.3 300.2,356.0 C300.2,370.7 300.3,385.3 300.3,400.0 C300.2,414.7 300.0,436.7 299.9,444.0" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M301.2,439.8 C293.9,439.9 272.0,439.8 257.4,439.9 C242.8,440.1 228.2,440.6 213.6,440.5 C199.0,440.4 184.4,439.4 169.8,439.3 C155.2,439.3 133.3,440.2 126.0,440.4" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M129.9,442.0 C129.7,434.7 129.1,412.7 129.0,398.0 C129.0,383.3 129.3,368.7 129.5,354.0 C129.7,339.3 130.1,324.7 130.2,310.0 C130.3,295.3 130.1,273.3 130.1,266.0" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<text x="215" y="365" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="700" fill="#ECEAE1" text-anchor="middle">x²</text>
+<path d="M296.0,269.9 C302.0,269.8 320.0,269.6 332.0,269.7 C344.0,269.7 356.0,270.1 368.0,270.2 C380.0,270.3 398.0,270.2 404.0,270.2" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M402.4,268.0 C402.2,275.3 401.6,297.3 401.6,312.0 C401.5,326.7 402.0,341.3 402.1,356.0 C402.1,370.7 402.1,385.3 402.1,400.0 C402.1,414.7 402.0,436.7 402.0,444.0" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M403.2,440.3 C394.3,440.2 367.5,439.9 349.6,439.9 C331.7,439.9 304.9,440.2 296.0,440.3" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M300.2,442.0 C300.3,434.7 300.9,412.7 300.9,398.0 C300.9,383.3 300.4,368.7 300.3,354.0 C300.1,339.3 299.8,324.7 299.8,310.0 C299.8,295.3 300.2,273.3 300.3,266.0" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<text x="351" y="363" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1" text-anchor="middle">3x</text>
+<path d="M126.0,440.3 C133.3,440.4 155.3,440.6 170.0,440.6 C184.7,440.6 199.3,440.4 214.0,440.3 C228.7,440.1 243.3,439.8 258.0,439.7 C272.7,439.6 294.7,439.8 302.0,439.8" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M299.6,438.0 C299.7,444.0 300.1,462.0 300.3,474.0 C300.4,486.0 300.5,498.0 300.5,510.0 C300.4,522.0 299.9,540.0 299.8,546.0" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M301.2,542.2 C293.9,542.0 272.0,541.2 257.4,541.1 C242.8,541.1 228.2,541.5 213.6,541.8 C199.0,542.1 184.4,542.7 169.8,542.7 C155.2,542.7 133.3,542.0 126.0,541.9" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M130.1,544.0 C129.9,538.0 129.2,520.0 129.2,508.0 C129.2,496.0 129.9,484.0 130.1,472.0 C130.3,460.0 130.2,442.0 130.2,436.0" stroke="#ECEAE1" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<text x="215" y="499" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1" text-anchor="middle">3x</text>
+<path d="M296.0,439.6 C302.0,439.9 320.0,440.8 332.0,441.0 C344.0,441.2 356.0,440.9 368.0,440.7 C380.0,440.6 398.0,440.1 404.0,439.9" stroke="#F2D67A" stroke-width="2.6" stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+<path d="M401.6,438.0 C401.5,444.0 400.9,462.0 401.1,474.0 C401.3,486.0 402.7,498.0 403.0,510.0 C403.2,522.0 402.5,540.0 402.4,546.0" stroke="#F2D67A" stroke-width="2.6" stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+<path d="M403.2,541.9 C394.3,542.0 367.5,542.5 349.6,542.5 C331.7,542.5 304.9,542.1 296.0,542.0" stroke="#F2D67A" stroke-width="2.6" stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+<path d="M299.8,544.0 C299.8,538.0 299.7,520.0 299.6,508.0 C299.5,496.0 299.2,484.0 299.3,472.0 C299.3,460.0 299.7,442.0 299.8,436.0" stroke="#F2D67A" stroke-width="2.6" stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+<text x="351" y="499" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="700" fill="#F2D67A" text-anchor="middle">9</text>
+<text x="215" y="258" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#ECEAE1" text-anchor="middle">x</text>
+<text x="351" y="258" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#ECEAE1" text-anchor="middle">3</text>
+<text x="90" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" fill="#ECEAE1"><tspan x="90" dy="0">把 6x 拆成两个 3x，拼在 x² 的两边，</tspan><tspan x="90" dy="33.6">缺一个角 3 × 3 = 9；补上它，就是边长 x + 3 的正方形。</tspan></text>
+<text x="90" y="750" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" fill="#ECEAE1">x² + 6x + 9 = 16 + 9</text>
+<text x="90" y="798" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" fill="#ECEAE1">(x + 3)² = 25</text>
+<text x="90" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" fill="#ECEAE1">x + 3 = ±5</text>
+<text x="90" y="894" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="700" fill="#F2D67A">x₁ = 2，x₂ = -8</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="一般推导">
+<text x="830" y="210" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="700" fill="#F2D67A">ax² + bx + c = 0（a ≠ 0）</text>
+<text x="830" y="270" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">两边除以 a：　x² + (b/a)x = −c/a</text>
+<text x="830" y="316" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">加上一次项系数一半的平方：</text>
+<text x="830" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">　x² + (b/a)x + (b/2a)² = (b/2a)² − c/a</text>
+<text x="830" y="408" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">　(x + b/2a)² = (b² − 4ac) / 4a²</text>
+<text x="830" y="454" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">当 b² − 4ac ≥ 0 时：</text>
+<path d="M826.0,509.9 C832.3,509.8 851.2,509.4 863.9,509.3 C876.5,509.1 889.1,508.6 901.8,508.9 C914.4,509.1 927.0,510.7 939.6,510.8 C952.2,511.0 964.9,509.9 977.5,510.0 C990.1,510.0 1002.8,511.1 1015.4,511.1 C1028.0,511.1 1040.6,510.2 1053.2,510.1 C1065.9,510.0 1078.5,510.5 1091.1,510.4 C1103.8,510.4 1116.4,510.0 1129.0,509.8 C1141.6,509.6 1154.2,509.0 1166.9,509.2 C1179.5,509.4 1192.1,511.1 1204.8,511.1 C1217.4,511.2 1230.0,509.7 1242.6,509.4 C1255.2,509.1 1267.9,509.1 1280.5,509.2 C1293.1,509.3 1305.8,509.7 1318.4,509.9 C1331.0,510.2 1343.6,510.8 1356.2,510.8 C1368.9,510.7 1381.5,509.7 1394.1,509.5 C1406.8,509.4 1425.7,509.8 1432.0,509.8" stroke="#F2D67A" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M1430.4,508.0 C1430.1,515.2 1429.0,536.7 1428.8,551.0 C1428.7,565.3 1429.4,586.8 1429.5,594.0" stroke="#F2D67A" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M1431.2,589.8 C1424.9,589.8 1406.0,589.7 1393.4,589.8 C1380.8,590.0 1368.2,591.0 1355.5,590.9 C1342.9,590.7 1330.3,589.3 1317.7,589.1 C1305.1,588.9 1292.5,589.8 1279.9,589.9 C1267.3,590.0 1254.7,589.5 1242.1,589.7 C1229.5,589.8 1216.9,590.4 1204.2,590.5 C1191.6,590.7 1179.0,590.8 1166.4,590.8 C1153.8,590.8 1141.2,590.4 1128.6,590.4 C1116.0,590.4 1103.4,590.9 1090.8,590.8 C1078.2,590.7 1065.6,589.8 1053.0,589.7 C1040.3,589.6 1027.7,589.9 1015.1,590.1 C1002.5,590.3 989.9,590.9 977.3,590.8 C964.7,590.7 952.1,589.7 939.5,589.4 C926.9,589.1 914.3,589.1 901.6,589.2 C889.0,589.2 876.4,589.4 863.8,589.6 C851.2,589.7 832.3,590.1 826.0,590.1" stroke="#F2D67A" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M830.3,592.0 C830.4,584.8 830.9,563.3 830.8,549.0 C830.7,534.7 829.9,513.2 829.7,506.0" stroke="#F2D67A" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<text x="1130" y="562" font-family="'Noto Sans CJK SC', sans-serif" font-size="32" font-weight="700" fill="#F2D67A" text-anchor="middle">x = [ −b ± √(b² − 4ac) ] ÷ 2a</text>
+<text x="830" y="650" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="700" fill="#ECEAE1">判别式 Δ = b² − 4ac</text>
+<text x="850" y="700" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#F0A8A2">Δ &gt; 0</text>
+<text x="990" y="700" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">两个不相等的实数根</text>
+<text x="850" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#F0A8A2">Δ = 0</text>
+<text x="990" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">两个相等的实数根</text>
+<text x="850" y="788" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#F0A8A2">Δ &lt; 0</text>
+<text x="990" y="788" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#ECEAE1">没有实数根</text>
+<text x="830" y="860" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#ECEAE1" opacity="0.9">例中 Δ = 6² − 4 × 1 × (−16) = 100，所以有两个不相等的实数根。</text>
+</g>
+</svg>

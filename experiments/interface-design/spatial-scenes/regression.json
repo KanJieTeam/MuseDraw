@@ -1,0 +1,159 @@
+{
+  "testedAt": "2026-10-25T06:50:01.340Z",
+  "stateCount": 64,
+  "results": [
+    {
+      "name": "harbor",
+      "width": 1920,
+      "height": 1080,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "harbor",
+      "width": 1440,
+      "height": 900,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "harbor",
+      "width": 1024,
+      "height": 768,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "harbor",
+      "width": 390,
+      "height": 844,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "water",
+      "width": 1920,
+      "height": 1080,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "water",
+      "width": 1440,
+      "height": 900,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "water",
+      "width": 1024,
+      "height": 768,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    },
+    {
+      "name": "water",
+      "width": 390,
+      "height": 844,
+      "entityCameraStateChecks": 8,
+      "checks": [
+        "selection and details",
+        "physical scene pin state",
+        "status color invariant across selection",
+        "stable keyboard focus",
+        "finite scene projection",
+        "all three labels in bounds",
+        "no pairwise label overlaps",
+        "no horizontal page overflow",
+        "no external requests",
+        "no script errors"
+      ],
+      "pass": true
+    }
+  ],
+  "scope": "Functional and layout robustness only. These tests do not score aesthetic excellence or engineering accuracy."
+}

@@ -1,0 +1,91 @@
+<svg data-theme="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1400" height="1000" viewBox="0 0 1400 1000">
+<title>Pod 调度：过滤与打分</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1400" height="1000" fill="#FAF8F3"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题与导语">
+<text x="70" y="150" font-family="'Noto Serif CJK SC', serif" font-size="64" font-weight="900" fill="#222222">Pod 调度</text>
+<text x="70" y="228" font-family="'Noto Serif CJK SC', serif" font-size="64" font-weight="900" fill="#222222">过滤与打分</text>
+<text x="70" y="306" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#857F75">待调度的 Pod</text>
+<text x="70" y="346" font-family="'Noto Serif CJK SC', serif" font-size="30" font-weight="700" fill="#222222">web-7f9c</text>
+<text x="70" y="386" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">请求 2 核 CPU、4 GiB 内存</text>
+<text x="70" y="420" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">节点选择器 disktype=ssd</text>
+<text x="70" y="454" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">不容忍任何污点</text>
+<text x="70" y="520" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#857F75"><tspan x="70" dy="0">调度器先运行过滤插件，排除放不下</tspan><tspan x="70" dy="32.3">或不满足约束的节点；剩下的节点再</tspan><tspan x="70" dy="32.3">由打分插件评分，得分最高者胜出。</tspan></text>
+<text x="70" y="712" font-family="'Noto Serif CJK SC', serif" font-size="19" font-weight="700" fill="#222222">LeastAllocated 得分</text>
+<text x="70" y="746" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#222222">（CPU 剩余比例 + 内存剩余比例）÷ 2 × 100</text>
+<text x="70" y="780" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#C8102E">node-e：（4/8 + 18/32）÷ 2 × 100 ≈ 53</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="节点表">
+<text x="450" y="150" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">节点</text>
+<text x="570" y="150" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">CPU 已请求 / 可分配</text>
+<text x="730" y="150" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">内存（GiB）</text>
+<text x="890" y="150" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">磁盘</text>
+<text x="990" y="150" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">污点</text>
+<text x="1150" y="150" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">结果</text>
+<line x1="450" y1="166" x2="1340" y2="166" stroke="#222222" stroke-width="1.5"/>
+<text x="450" y="222" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-a</text>
+<text x="570" y="222" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">6.5 / 8 核</text>
+<text x="730" y="222" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">20 / 32</text>
+<text x="890" y="222" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">ssd</text>
+<text x="990" y="222" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">无</text>
+<line x1="450" y1="256" x2="1340" y2="256" stroke="#CFC9BE" stroke-width="1"/>
+<path d="M440.0,214.5 C450.5,214.3 481.8,213.1 502.7,213.1 C523.6,213.0 544.5,214.2 565.5,214.2 C586.4,214.2 607.3,213.2 628.2,212.9 C649.1,212.6 670.0,212.2 690.9,212.4 C711.8,212.5 732.7,213.1 753.6,213.7 C774.5,214.2 795.5,215.5 816.4,215.7 C837.3,216.0 858.2,215.2 879.1,215.0 C900.0,214.9 920.9,215.2 941.8,214.7 C962.7,214.2 983.6,212.4 1004.5,212.1 C1025.5,211.9 1046.4,213.3 1067.3,213.3 C1088.2,213.4 1119.5,212.7 1130.0,212.6" stroke="#C8102E" stroke-width="2.6" opacity="0.9" fill="none" stroke-linecap="round"/>
+<text x="1150" y="210" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#C8102E"><tspan x="1150" dy="0">CPU 只剩 1.5 核，不够 2</tspan><tspan x="1150" dy="21.6">核</tspan></text>
+<text x="450" y="300" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-b</text>
+<text x="570" y="300" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">3 / 8 核</text>
+<text x="730" y="300" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">26 / 32</text>
+<text x="890" y="300" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">ssd</text>
+<text x="990" y="300" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">无</text>
+<line x1="450" y1="334" x2="1340" y2="334" stroke="#CFC9BE" stroke-width="1"/>
+<rect x="1150" y="284" width="28.44" height="14" fill="#222222"/>
+<text x="1188.44" y="297" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">22</text>
+<text x="450" y="378" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-c</text>
+<text x="570" y="378" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">4 / 16 核</text>
+<text x="730" y="378" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">16 / 64</text>
+<text x="890" y="378" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">hdd</text>
+<text x="990" y="378" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">无</text>
+<line x1="450" y1="412" x2="1340" y2="412" stroke="#CFC9BE" stroke-width="1"/>
+<path d="M440.0,370.4 C450.5,370.2 481.8,369.3 502.7,369.1 C523.6,368.9 544.5,368.8 565.5,369.4 C586.4,369.9 607.3,371.9 628.2,372.3 C649.1,372.7 670.0,371.9 690.9,371.7 C711.8,371.6 732.7,371.5 753.6,371.4 C774.5,371.4 795.5,371.7 816.4,371.2 C837.3,370.7 858.2,368.8 879.1,368.4 C900.0,368.0 920.9,368.5 941.8,368.7 C962.7,369.0 983.6,369.7 1004.5,369.9 C1025.5,370.2 1046.4,370.3 1067.3,370.2 C1088.2,370.2 1119.5,369.7 1130.0,369.6" stroke="#C8102E" stroke-width="2.6" opacity="0.9" fill="none" stroke-linecap="round"/>
+<text x="1150" y="366" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#C8102E"><tspan x="1150" dy="0">没有 disktype=ssd 标签</tspan></text>
+<text x="450" y="456" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-d</text>
+<text x="570" y="456" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">2 / 16 核</text>
+<text x="730" y="456" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">8 / 64</text>
+<text x="890" y="456" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">ssd</text>
+<text x="990" y="450" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#222222">gpu=true</text>
+<text x="990" y="472" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#857F75">NoSchedule</text>
+<line x1="450" y1="490" x2="1340" y2="490" stroke="#CFC9BE" stroke-width="1"/>
+<path d="M440.0,449.7 C450.5,449.2 481.8,447.1 502.7,447.0 C523.6,446.9 544.5,448.7 565.5,449.1 C586.4,449.5 607.3,449.3 628.2,449.2 C649.1,449.1 670.0,448.7 690.9,448.3 C711.8,447.9 732.7,446.8 753.6,446.7 C774.5,446.6 795.5,447.9 816.4,447.8 C837.3,447.7 858.2,445.6 879.1,445.9 C900.0,446.2 920.9,448.9 941.8,449.5 C962.7,450.0 983.6,449.3 1004.6,449.0 C1025.5,448.6 1046.4,447.8 1067.3,447.4 C1088.2,447.0 1119.5,446.8 1130.0,446.6" stroke="#C8102E" stroke-width="2.6" opacity="0.9" fill="none" stroke-linecap="round"/>
+<text x="1150" y="444" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#C8102E"><tspan x="1150" dy="0">有污点</tspan><tspan x="1150" dy="21.6">gpu=true:NoSchedule，</tspan><tspan x="1150" dy="21.6">Pod 不容忍</tspan></text>
+<text x="450" y="534" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-e</text>
+<text x="570" y="534" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">2 / 8 核</text>
+<text x="730" y="534" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">10 / 32</text>
+<text x="890" y="534" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">ssd</text>
+<text x="990" y="534" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">无</text>
+<line x1="450" y1="568" x2="1340" y2="568" stroke="#CFC9BE" stroke-width="1"/>
+<rect x="1150" y="518" width="69.06" height="14" fill="#222222"/>
+<text x="1229.06" y="531" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">53</text>
+<text x="450" y="612" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-f</text>
+<text x="570" y="612" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">1 / 4 核</text>
+<text x="730" y="612" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">13 / 16</text>
+<text x="890" y="612" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">ssd</text>
+<text x="990" y="612" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">无</text>
+<line x1="450" y1="646" x2="1340" y2="646" stroke="#CFC9BE" stroke-width="1"/>
+<path d="M440.0,605.7 C450.5,605.6 481.8,605.0 502.7,605.1 C523.6,605.2 544.5,606.2 565.5,606.3 C586.4,606.5 607.3,606.3 628.2,606.0 C649.1,605.7 670.0,604.7 690.9,604.3 C711.8,603.9 732.7,603.7 753.6,603.7 C774.5,603.7 795.5,604.4 816.4,604.3 C837.3,604.3 858.2,603.8 879.1,603.4 C900.0,603.0 920.9,602.2 941.8,602.1 C962.7,601.9 983.6,602.1 1004.5,602.5 C1025.5,602.9 1046.4,604.6 1067.3,604.6 C1088.2,604.5 1119.5,602.6 1130.0,602.2" stroke="#C8102E" stroke-width="2.6" opacity="0.9" fill="none" stroke-linecap="round"/>
+<text x="1150" y="600" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#C8102E"><tspan x="1150" dy="0">内存只剩 3 GiB，不够 4</tspan><tspan x="1150" dy="21.6">GiB</tspan></text>
+<text x="450" y="690" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222">node-g</text>
+<text x="570" y="690" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">9 / 16 核</text>
+<text x="730" y="690" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">30 / 64</text>
+<text x="890" y="690" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#222222">ssd</text>
+<text x="990" y="690" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">无</text>
+<line x1="450" y1="724" x2="1340" y2="724" stroke="#CFC9BE" stroke-width="1"/>
+<rect x="1150" y="674" width="50.78" height="14" fill="#222222"/>
+<text x="1210.78" y="687" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">39</text>
+<path d="M442.8,512.1 C445.7,510.6 453.7,505.6 460.6,503.2 C467.5,500.9 475.8,498.9 484.2,497.9 C492.6,496.9 503.2,496.7 511.1,497.5 C518.9,498.2 525.0,500.0 531.3,502.3 C537.5,504.6 544.7,507.6 548.6,511.2 C552.6,514.9 554.5,520.2 555.1,524.1 C555.7,528.1 554.5,531.7 552.4,534.9 C550.2,538.0 547.9,540.5 542.3,543.1 C536.8,545.7 526.4,548.5 519.0,550.4 C511.5,552.3 505.5,554.4 497.6,554.5 C489.6,554.6 479.0,552.6 471.1,551.0 C463.3,549.4 456.3,547.4 450.7,544.8 C445.0,542.3 439.6,539.1 437.4,535.9 C435.3,532.6 436.6,529.0 437.8,525.4 C439.0,521.8 441.0,518.1 444.4,514.4 C447.7,510.6 455.4,504.8 457.7,502.9" fill="none" stroke="#C8102E" stroke-width="2.6" stroke-linecap="round"/>
+<text x="1268" y="531" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#C8102E">选中</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="脚注">
+<line x1="450" y1="790" x2="1340" y2="790" stroke="#222222" stroke-width="1"/>
+<text x="450" y="826" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75"><tspan x="450" dy="0">打分只示意 NodeResourcesFit 插件的 LeastAllocated 策略。实际调度器会把多个打分插件的结果加权求和，同分时随机选</tspan><tspan x="450" dy="27.2">一个。节点数据为示例。</tspan></text>
+</g>
+</svg>

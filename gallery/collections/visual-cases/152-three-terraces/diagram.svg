@@ -1,0 +1,39 @@
+<svg data-theme="terracotta" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>中国地势的三级阶梯</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#E9DDCC"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="80" y="104" font-family="'Noto Sans CJK SC', sans-serif" font-size="52" font-weight="800" fill="#4E342A">中国地势的三级阶梯</text>
+<text x="82" y="146" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#7A5A48">地势西高东低，呈阶梯状分布（示意剖面，高度不按比例）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="阶梯">
+<path d="M531.0,593.0 C532.1,640.2 523.5,695.7 506.7,737.3 C489.9,779.0 460.4,820.1 430.3,842.9 C400.2,865.6 360.5,874.6 326.0,874.1 C291.5,873.5 253.6,862.2 223.0,839.7 C192.5,817.3 160.0,780.6 142.6,739.5 C125.3,698.3 117.2,640.5 118.9,593.0 C120.6,545.5 135.5,495.9 152.8,454.7 C170.1,413.4 193.9,371.1 222.8,345.6 C251.6,320.1 291.5,302.1 326.0,301.8 C360.5,301.5 401.0,318.3 430.0,343.7 C459.0,369.1 483.1,412.5 500.0,454.0 C516.8,495.6 529.8,545.8 531.0,593.0 Z" fill="#000000" opacity="0.07"/>
+<rect x="120" y="300" width="418" height="570" rx="26" fill="#5B3A29"/>
+<text x="150" y="352" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="800" fill="#F7EFE4">第一级阶梯</text>
+<text x="150" y="384" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#F7EFE4">平均海拔 4000 米以上</text>
+<text x="150" y="424" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#F7EFE4"><tspan x="150" dy="0">青藏高原</tspan></text>
+<path d="M1072.4,703.0 C1073.9,732.1 1061.7,766.5 1038.8,791.9 C1015.8,817.2 975.0,841.6 934.5,855.1 C894.1,868.6 841.9,873.2 796.0,872.9 C750.1,872.6 699.8,866.9 659.0,853.5 C618.1,840.1 574.2,817.8 551.0,792.7 C527.9,767.6 518.2,732.2 520.2,703.0 C522.1,673.8 539.7,642.9 562.5,617.5 C585.4,592.1 618.3,566.3 657.2,550.6 C696.1,534.8 749.7,523.1 796.0,523.1 C842.3,523.1 895.9,534.7 934.9,550.5 C973.9,566.2 1007.1,591.9 1030.0,617.3 C1052.9,642.8 1071.0,673.9 1072.4,703.0 Z" fill="#000000" opacity="0.07"/>
+<rect x="520" y="520" width="558" height="350" rx="26" fill="#B5613C"/>
+<text x="550" y="572" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="800" fill="#F7EFE4">第二级阶梯</text>
+<text x="550" y="604" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#F7EFE4">海拔多在 1000–2000 米</text>
+<text x="550" y="644" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#F7EFE4"><tspan x="550" dy="0">内蒙古高原、黄土高原、云贵高原、四川盆地、塔里木盆地、</tspan><tspan x="550" dy="28.8">准噶尔盆地</tspan></text>
+<path d="M1410.3,793.0 C1410.7,807.1 1402.7,823.1 1388.5,835.5 C1374.2,847.9 1350.3,860.6 1324.9,867.4 C1299.5,874.2 1265.1,877.0 1236.0,876.5 C1206.9,876.1 1175.7,871.6 1150.1,864.8 C1124.6,858.0 1097.9,847.8 1082.5,835.8 C1067.0,823.8 1056.8,807.1 1057.3,793.0 C1057.9,778.9 1070.6,763.3 1085.8,751.1 C1101.1,739.0 1123.9,727.4 1149.0,720.2 C1174.0,713.0 1206.5,708.2 1236.0,707.7 C1265.5,707.3 1301.1,710.4 1326.1,717.6 C1351.1,724.9 1372.1,738.6 1386.2,751.1 C1400.2,763.7 1410.0,778.9 1410.3,793.0 Z" fill="#000000" opacity="0.07"/>
+<rect x="1060" y="700" width="358" height="170" rx="26" fill="#3D7A74"/>
+<text x="1090" y="752" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="800" fill="#F7EFE4">第三级阶梯</text>
+<text x="1090" y="784" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#F7EFE4">海拔多在 500 米以下</text>
+<text x="1090" y="824" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#F7EFE4"><tspan x="1090" dy="0">东北平原、华北平原、长江中下游</tspan><tspan x="1090" dy="28.8">平原、东南丘陵</tspan></text>
+<path d="M1400,790 Q1450,770 1520,790 L1520,870 L1400,870 Z" fill="#7FA8B0"/>
+<text x="1470" y="840" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#F7EFE4" text-anchor="middle">海洋</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="界线">
+<line x1="520" y1="200" x2="520" y2="510" stroke="#4E342A" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="530" y="216" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#4E342A">昆仑山—祁连山—横断山</text>
+<line x1="1060" y1="200" x2="1060" y2="690" stroke="#4E342A" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="1070" y="256" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#4E342A">大兴安岭—太行山—巫山—雪峰山</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="影响">
+<rect x="80" y="900" width="1440" height="70" rx="20" fill="#DFCDB6"/>
+<text x="110" y="944" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#4E342A">影响：许多大河自西向东流入大海；阶梯交界处河流落差大，水能资源丰富。</text>
+</g>
+</svg>

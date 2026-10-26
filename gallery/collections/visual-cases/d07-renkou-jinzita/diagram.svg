@@ -1,0 +1,83 @@
+<svg data-theme="journal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1060" width="1600" height="1060">
+<title>某县人口金字塔</title>
+<g data-md-layer="背景">
+<rect width="1600" height="1060" fill="#FFFFFF"/>
+</g>
+<g data-md-layer="数据">
+<line x1="756" y1="196" x2="756" y2="990" stroke="#E6E8EB" stroke-width="1"/>
+<line x1="844" y1="196" x2="844" y2="990" stroke="#E6E8EB" stroke-width="1"/>
+<line x1="541" y1="196" x2="541" y2="990" stroke="#E6E8EB" stroke-width="1"/>
+<line x1="1059" y1="196" x2="1059" y2="990" stroke="#E6E8EB" stroke-width="1"/>
+<line x1="326" y1="196" x2="326" y2="990" stroke="#E6E8EB" stroke-width="1"/>
+<line x1="1274" y1="196" x2="1274" y2="990" stroke="#E6E8EB" stroke-width="1"/>
+<rect x="545.3" y="952" width="210.7" height="38" fill="#2E4A5F"/>
+<rect x="844" y="952" width="195.65" height="38" fill="#7A5232"/>
+<rect x="515.2" y="908" width="240.8" height="38" fill="#8CA0B0"/>
+<rect x="844" y="908" width="223.6" height="38" fill="#C9AE96"/>
+<rect x="485.1" y="864" width="270.9" height="38" fill="#8CA0B0"/>
+<rect x="844" y="864" width="251.55" height="38" fill="#C9AE96"/>
+<rect x="478.65" y="820" width="277.35" height="38" fill="#8CA0B0"/>
+<rect x="844" y="820" width="258" height="38" fill="#C9AE96"/>
+<rect x="502.3" y="776" width="253.7" height="38" fill="#8CA0B0"/>
+<rect x="844" y="776" width="242.95" height="38" fill="#C9AE96"/>
+<rect x="465.75" y="732" width="290.25" height="38" fill="#8CA0B0"/>
+<rect x="844" y="732" width="283.8" height="38" fill="#C9AE96"/>
+<rect x="371.15" y="688" width="384.85" height="38" fill="#8CA0B0"/>
+<rect x="844" y="688" width="378.4" height="38" fill="#C9AE96"/>
+<rect x="334.6" y="644" width="421.4" height="38" fill="#8CA0B0"/>
+<rect x="844" y="644" width="417.1" height="38" fill="#C9AE96"/>
+<rect x="351.8" y="600" width="404.2" height="38" fill="#8CA0B0"/>
+<rect x="844" y="600" width="406.35" height="38" fill="#C9AE96"/>
+<rect x="274.4" y="556" width="481.6" height="38" fill="#8CA0B0"/>
+<rect x="844" y="556" width="475.15" height="38" fill="#C9AE96"/>
+<rect x="237.85" y="512" width="518.15" height="38" fill="#2E4A5F"/>
+<rect x="844" y="512" width="516" height="38" fill="#7A5232"/>
+<rect x="304.5" y="468" width="451.5" height="38" fill="#8CA0B0"/>
+<rect x="844" y="468" width="457.95" height="38" fill="#C9AE96"/>
+<rect x="407.7" y="424" width="348.3" height="38" fill="#8CA0B0"/>
+<rect x="844" y="424" width="363.35" height="38" fill="#C9AE96"/>
+<rect x="452.85" y="380" width="303.15" height="38" fill="#8CA0B0"/>
+<rect x="844" y="380" width="322.5" height="38" fill="#C9AE96"/>
+<rect x="545.3" y="336" width="210.7" height="38" fill="#8CA0B0"/>
+<rect x="844" y="336" width="236.5" height="38" fill="#C9AE96"/>
+<rect x="620.55" y="292" width="135.45" height="38" fill="#8CA0B0"/>
+<rect x="844" y="292" width="163.4" height="38" fill="#C9AE96"/>
+<rect x="678.6" y="248" width="77.4" height="38" fill="#8CA0B0"/>
+<rect x="844" y="248" width="105.35" height="38" fill="#C9AE96"/>
+<rect x="715.15" y="204" width="40.85" height="38" fill="#8CA0B0"/>
+<rect x="844" y="204" width="73.1" height="38" fill="#C9AE96"/>
+</g>
+<g data-md-layer="标签">
+<text x="541" y="1014" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#8A9098" text-anchor="middle">10 千</text>
+<text x="1059" y="1014" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#8A9098" text-anchor="middle">10 千</text>
+<text x="326" y="1014" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#8A9098" text-anchor="middle">20 千</text>
+<text x="1274" y="1014" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#8A9098" text-anchor="middle">20 千</text>
+<text x="800" y="977" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#1A1D21" font-weight="700" text-anchor="middle">0—4</text>
+<text x="800" y="933" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">5—9</text>
+<text x="800" y="889" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">10—14</text>
+<text x="800" y="845" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">15—19</text>
+<text x="800" y="801" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">20—24</text>
+<text x="800" y="757" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">25—29</text>
+<text x="800" y="713" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">30—34</text>
+<text x="800" y="669" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">35—39</text>
+<text x="800" y="625" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">40—44</text>
+<text x="800" y="581" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">45—49</text>
+<text x="800" y="537" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#1A1D21" font-weight="700" text-anchor="middle">50—54</text>
+<text x="800" y="493" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">55—59</text>
+<text x="800" y="449" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">60—64</text>
+<text x="800" y="405" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">65—69</text>
+<text x="800" y="361" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">70—74</text>
+<text x="800" y="317" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">75—79</text>
+<text x="800" y="273" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">80—84</text>
+<text x="800" y="229" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#5B6169" text-anchor="middle">85+</text>
+<text x="1380" y="538" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#7A5232" font-weight="700">4.81 万人</text>
+<text x="1059.65" y="978" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#7A5232" font-weight="700">1.89 万人</text>
+<text x="270.1" y="214" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#2E4A5F" font-weight="700" text-anchor="middle">男</text>
+<text x="1329.9" y="214" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#7A5232" font-weight="700" text-anchor="middle">女</text>
+</g>
+<g data-md-layer="文字">
+<text id="title" x="100" y="96" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" fill="#1A1D21" font-weight="700">50—54 岁的人口是 0—4 岁的 2.5 倍，金字塔已经变成花瓶形</text>
+<text id="subtitle" x="100" y="142" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#5B6169">某县按 5 岁分组的人口（千人），左男右女</text>
+<text id="source" x="100" y="1020" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#8A9098">示例数据。</text>
+</g>
+</svg>

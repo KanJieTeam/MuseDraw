@@ -1,0 +1,14 @@
+{
+  "cid": "T15",
+  "title": "电磁波谱",
+  "category": "教学 · 极光玻璃",
+  "features": {
+    "linear-gradient": 1,
+    "radial-gradient": 4,
+    "text": 37,
+    "elements": 63
+  },
+  "use": "教学",
+  "style": "极光玻璃",
+  "short": "极光玻璃风格的电磁波谱：对数波长轴上排出六类电磁波，可见光单独放大。"
+}

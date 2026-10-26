@@ -4,7 +4,6 @@ import { prepareScene, validateScene } from '../skills/musedraw/scripts/engine/v
 import { loadTheme } from '../skills/musedraw/scripts/musedraw.mjs';
 import { patchScene } from '../skills/musedraw/scripts/engine/patch.mjs';
 import { render } from '../skills/musedraw/scripts/engine/render.mjs';
-import { toDrawio } from '../skills/musedraw/scripts/engine/drawio.mjs';
 import { viewNodeId } from '../skills/musedraw/scripts/engine/object-views.mjs';
 
 const theme = await loadTheme('journal');
@@ -108,26 +107,4 @@ test('foreground opt-in paints after filled nodes; defaults retain old layering'
   assert.ok(front<svg.indexOf('id="path-1"'));
   assert.equal((svg.match(/id="line-2"/g)||[]).length,1);
   s.lines[1].layer='foregroun';assert.ok(validateScene(s).length);
-});
-
-test('foreground drawio connector retains native terminals and paints after object groups',()=>{
-  const native={size:[600,400],title:'Section',groups:[
-    {id:'a',sourceId:'a',kind:'node',box:[10,10,100,50]},
-    {id:'b',sourceId:'b',kind:'node',box:[200,10,100,50]},
-    {id:'foreground',kind:'foreground',box:[0,0,300,100]},
-    {id:'edge-label',kind:'edge-label',edgeParent:'route',box:[100,30,80,20]},
-    {id:'annotations',kind:'texts',box:[0,0,300,100]}],shapes:[],texts:[],edges:[
-    {id:'route',from:'a',to:'b',points:[[110,35],[200,35]],color:'#123456',width:1,opacity:1,layer:'foreground'}]};
-  const xml=toDrawio(native);
-  assert.match(xml,/source="a" target="b"/);
-  assert.ok(xml.indexOf('id="connector-1"')>xml.indexOf('id="b"'));
-  assert.ok(xml.indexOf('id="connector-1"')>xml.indexOf('id="foreground"'));
-  assert.ok(xml.indexOf('id="connector-1"')<xml.indexOf('id="annotations"'));
-  assert.ok(xml.indexOf('id="connector-1"')<xml.indexOf('id="edge-label"'));
-  assert.match(xml,/<mxCell id="edge-label"[^>]*parent="1"/);
-  const ordinary=structuredClone(native);
-  ordinary.groups=ordinary.groups.filter(g=>g.kind!=='foreground');
-  ordinary.edges[0].layer='background';
-  assert.match(toDrawio(ordinary),/<mxCell id="edge-label"[^>]*parent="connector-1"/);
-  assert.doesNotMatch(xml,/shape=image|data:image|foreignObject/);
 });

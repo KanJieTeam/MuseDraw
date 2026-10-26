@@ -1,0 +1,74 @@
+<svg data-theme="enterprise" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>期中考试质量分析流程</title>
+<g data-md-layer="泳道图">
+<rect width="1600" height="1000" fill="#FFFFFF"/>
+<text id="title" x="60" y="96" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#14263B" font-weight="900">期中考试质量分析流程</text>
+<text x="62" y="140" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#2F5D8A" font-weight="500">考后两周内完成，从数据到每一个学生</text>
+<rect x="60" y="230" width="1480" height="136" fill="#EEF3F8"/>
+<rect x="60" y="230" width="150" height="136" fill="#1B3A5C"/>
+<text x="135" y="307" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#FFFFFF" font-weight="700" text-anchor="middle">教务处</text>
+<rect x="60" y="366" width="1480" height="136" fill="#FFFFFF"/>
+<rect x="60" y="366" width="150" height="136" fill="#2F5D8A"/>
+<text x="135" y="443" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#FFFFFF" font-weight="700" text-anchor="middle">年级组</text>
+<rect x="60" y="502" width="1480" height="136" fill="#EEF3F8"/>
+<rect x="60" y="502" width="150" height="136" fill="#1B3A5C"/>
+<text x="135" y="579" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#FFFFFF" font-weight="700" text-anchor="middle">学科组</text>
+<rect x="60" y="638" width="1480" height="136" fill="#FFFFFF"/>
+<rect x="60" y="638" width="150" height="136" fill="#2F5D8A"/>
+<text x="135" y="715" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#FFFFFF" font-weight="700" text-anchor="middle">班主任</text>
+<rect x="60" y="774" width="1480" height="136" fill="#EEF3F8"/>
+<rect x="60" y="774" width="150" height="136" fill="#1B3A5C"/>
+<text x="135" y="851" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#FFFFFF" font-weight="700" text-anchor="middle">家长</text>
+<line x1="300" y1="220" x2="300" y2="910" stroke="#2F5D8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+<text x="300" y="208" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" font-weight="700" text-anchor="middle">第 1 天</text>
+<line x1="520" y1="220" x2="520" y2="910" stroke="#2F5D8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+<text x="520" y="208" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" font-weight="700" text-anchor="middle">第 3 天</text>
+<line x1="760" y1="220" x2="760" y2="910" stroke="#2F5D8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+<text x="760" y="208" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" font-weight="700" text-anchor="middle">第 5 天</text>
+<line x1="980" y1="220" x2="980" y2="910" stroke="#2F5D8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+<text x="980" y="208" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" font-weight="700" text-anchor="middle">第 7 天</text>
+<line x1="1210" y1="220" x2="1210" y2="910" stroke="#2F5D8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+<text x="1210" y="208" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" font-weight="700" text-anchor="middle">第 10 天</text>
+<line x1="1430" y1="220" x2="1430" y2="910" stroke="#2F5D8A" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+<text x="1430" y="208" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" font-weight="700" text-anchor="middle">第 14 天</text>
+<rect x="202.0" y="261" width="196" height="74" rx="8" fill="#1B3A5C" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="300" y="305" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#FFFFFF" font-weight="700" text-anchor="middle">阅卷与成绩录入</text>
+<rect x="422.0" y="261" width="196" height="74" rx="8" fill="#FFFFFF" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="520" y="294" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#14263B" font-weight="700" text-anchor="middle">年级统计：</text>
+<text x="520" y="320" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#14263B" font-weight="700" text-anchor="middle">均分、分数段</text>
+<rect x="422.0" y="397" width="196" height="74" rx="8" fill="#1B3A5C" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="520" y="441" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#FFFFFF" font-weight="700" text-anchor="middle">年级质量分析会</text>
+<rect x="662.0" y="533" width="196" height="74" rx="8" fill="#FFFFFF" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="760" y="566" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#14263B" font-weight="700" text-anchor="middle">试卷分析：</text>
+<text x="760" y="592" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#14263B" font-weight="700" text-anchor="middle">找出得分率低的题</text>
+<rect x="882.0" y="533" width="196" height="74" rx="8" fill="#1B3A5C" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="980" y="577" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#FFFFFF" font-weight="700" text-anchor="middle">制定补偿教学计划</text>
+<rect x="882.0" y="669" width="196" height="74" rx="8" fill="#FFFFFF" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="980" y="713" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#14263B" font-weight="700" text-anchor="middle">与重点学生个别谈话</text>
+<rect x="1112.0" y="669" width="196" height="74" rx="8" fill="#1B3A5C" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="1210" y="713" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#FFFFFF" font-weight="700" text-anchor="middle">召开家长会</text>
+<rect x="1112.0" y="805" width="196" height="74" rx="8" fill="#FFFFFF" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="1210" y="849" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#14263B" font-weight="700" text-anchor="middle">了解成绩与在家建议</text>
+<rect x="1332.0" y="533" width="196" height="74" rx="8" fill="#1B3A5C" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="1430" y="577" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#FFFFFF" font-weight="700" text-anchor="middle">跟进小测，检查效果</text>
+<line x1="398" y1="298" x2="414.3" y2="298" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M422 298 L412.29 303.16 L412.29 292.84 Z" fill="#2F5D8A"/>
+<line x1="520" y1="335" x2="520" y2="389.3" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M520 397 L514.84 387.29 L525.16 387.29 Z" fill="#2F5D8A"/>
+<path d="M618 434 H630 V570 H656" fill="none" stroke="#2F5D8A" stroke-width="2"/><path d="M662 570 L652.29 575.16 L652.29 564.84 Z" fill="#2F5D8A"/>
+<line x1="858" y1="570" x2="874.3" y2="570" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M882 570 L872.29 575.16 L872.29 564.84 Z" fill="#2F5D8A"/>
+<line x1="980" y1="607" x2="980" y2="661.3" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M980 669 L974.84 659.29 L985.16 659.29 Z" fill="#2F5D8A"/>
+<line x1="1078" y1="706" x2="1104.3" y2="706" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M1112 706 L1102.29 711.16 L1102.29 700.84 Z" fill="#2F5D8A"/>
+<line x1="1210" y1="743" x2="1210" y2="797.3" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M1210 805 L1204.84 795.29 L1215.16 795.29 Z" fill="#2F5D8A"/>
+<line x1="1078" y1="570" x2="1324.3" y2="570" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M1332 570 L1322.29 575.16 L1322.29 564.84 Z" fill="#2F5D8A"/>
+<rect x="60" y="940" width="22" height="22" rx="4" fill="#1B3A5C"/>
+<text x="92" y="958" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#14263B" font-weight="500">关键节点</text>
+<rect x="210" y="940" width="22" height="22" rx="4" fill="#FFFFFF" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="242" y="958" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#14263B" font-weight="500">配套工作</text>
+</g>
+</svg>

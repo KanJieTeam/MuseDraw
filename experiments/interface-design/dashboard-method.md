@@ -3,7 +3,7 @@
 Use for a live or illustrative screen, not a generic website landing page or
 a statistical claim reconstructed from a screenshot. Use the declared display
 size and viewing distance. Deliver runnable HTML/CSS/JS and a preview; a native
-draw.io file is not a default deliverable for this track.
+HTML/CSS/JS source and previews are the deliverables for this track.
 
 ## Choose the operational question
 

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>混沌工程实验</title>
+<defs><pattern id="dotB" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="4.5" cy="4.5" r="2.3" fill="#0078BF"/></pattern><pattern id="dotP" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(75)"><circle cx="4" cy="4" r="2.1" fill="#FF48B0"/></pattern></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#F3EFE6"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<g data-ok="1">
+<text x="60" y="140" font-family="'Noto Sans CJK SC', sans-serif" font-size="96" font-weight="900" fill="#0078BF">混沌工程实验</text>
+<text x="67" y="146" font-family="'Noto Sans CJK SC', sans-serif" font-size="96" font-weight="900" fill="#FF48B0" style="mix-blend-mode:multiply" opacity="0.85">混沌工程实验</text>
+</g>
+<text x="64" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="500" fill="#0078BF">一次给库存服务注入延迟的实验记录（示例数据）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="实验循环">
+<circle cx="400" cy="600" r="236" fill="none" stroke="#0078BF" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+<circle cx="400" cy="600" r="166" fill="url(#dotP)" opacity="0.55"/>
+<circle cx="400" cy="364" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="404" cy="367" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="400" y="358" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">1</text>
+<text x="400" y="390" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">定义稳态</text>
+<circle cx="584.51" cy="452.86" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="588.51" cy="455.86" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="584.51" y="446.86" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">2</text>
+<text x="584.51" y="478.86" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">提出假设</text>
+<circle cx="630.08" cy="652.51" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="634.08" cy="655.51" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="630.08" y="646.51" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">3</text>
+<text x="630.08" y="678.51" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">缩小范围</text>
+<circle cx="502.4" cy="812.63" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="506.4" cy="815.63" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="502.4" y="806.63" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">4</text>
+<text x="502.4" y="838.63" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">注入故障</text>
+<circle cx="297.6" cy="812.63" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="301.6" cy="815.63" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="297.6" y="806.63" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">5</text>
+<text x="297.6" y="838.63" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">观察指标</text>
+<circle cx="169.92" cy="652.51" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="173.92" cy="655.51" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="169.92" y="646.51" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">6</text>
+<text x="169.92" y="678.51" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">及时中止</text>
+<circle cx="215.49" cy="452.86" r="60" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<circle cx="219.49" cy="455.86" r="60" fill="none" stroke="#0078BF" stroke-width="3" style="mix-blend-mode:multiply"/>
+<text x="215.49" y="446.86" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="900" fill="#0078BF" text-anchor="middle">7</text>
+<text x="215.49" y="478.86" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" text-anchor="middle">修复复验</text>
+<text x="400" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" font-weight="700" fill="#0078BF" text-anchor="middle"><tspan x="400" dy="0">稳态</tspan><tspan x="400" dy="32.6">下单成功率 ≥ 99.5%</tspan><tspan x="400" dy="32.6">p99 &lt; 800 毫秒</tspan></text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="假设与范围">
+<text x="800" y="270" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="900" fill="#0078BF">假设</text>
+<text x="870" y="270" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" fill="#0078BF"><tspan x="870" dy="0">库存服务变慢 300 毫秒时，下单 p99 仍低于 800 毫秒，成功率不低于</tspan><tspan x="870" dy="31.5">99.5%。</tspan></text>
+<text x="800" y="346" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="900" fill="#0078BF">范围</text>
+<text x="870" y="346" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" fill="#0078BF">只针对可用区 B 的 5% 下单流量；p99 超过 800 毫秒立即自动中止。</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="实验曲线">
+<rect x="1095.71" y="430" width="117.86" height="370" fill="url(#dotB)" opacity="0.45"/>
+<text x="848" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="end">200</text>
+<line x1="860" y1="726" x2="1520" y2="726" stroke="#0078BF" stroke-width="1" opacity="0.25"/>
+<text x="848" y="658" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="end">400</text>
+<line x1="860" y1="652" x2="1520" y2="652" stroke="#0078BF" stroke-width="1" opacity="0.25"/>
+<text x="848" y="584" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="end">600</text>
+<line x1="860" y1="578" x2="1520" y2="578" stroke="#0078BF" stroke-width="1" opacity="0.25"/>
+<text x="848" y="510" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="end">800</text>
+<line x1="860" y1="504" x2="1520" y2="504" stroke="#0078BF" stroke-width="1" opacity="0.25"/>
+<text x="848" y="436" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="end">1000</text>
+<line x1="860" y1="430" x2="1520" y2="430" stroke="#0078BF" stroke-width="1" opacity="0.25"/>
+<text x="860" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">0</text>
+<text x="954.29" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">2</text>
+<text x="1048.57" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">4</text>
+<text x="1142.86" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">6</text>
+<text x="1237.14" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">8</text>
+<text x="1331.43" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">10</text>
+<text x="1425.71" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">12</text>
+<text x="1520" y="828" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="middle">14</text>
+<text x="1520" y="856" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF" text-anchor="end">分钟</text>
+<text x="848" y="408" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#0078BF" text-anchor="end">p99 毫秒</text>
+<line x1="860" y1="800" x2="1520" y2="800" stroke="#0078BF" stroke-width="2"/>
+<line x1="860" y1="504" x2="1520" y2="504" stroke="#FF48B0" stroke-width="3" stroke-dasharray="10 6" style="mix-blend-mode:multiply"/>
+<path d="M864.0,680.7 L887.6,678.5 L911.1,683.3 L934.7,679.1 L958.3,676.1 L981.9,678.8 L1005.4,672.8 L1029.0,685.5 L1052.6,680.6 L1076.1,684.6 L1099.7,683.8 L1123.3,611.0 L1146.9,562.9 L1170.4,531.5 L1194.0,511.0 L1217.6,491.2 L1241.1,614.6 L1264.7,667.4 L1288.3,673.2 L1311.9,681.4 L1335.4,682.5 L1359.0,674.9 L1382.6,681.8 L1406.1,689.5 L1429.7,679.5 L1453.3,682.2 L1476.9,686.1 L1500.4,685.0 L1524.0,683.7" fill="none" stroke="#FF48B0" stroke-width="5" stroke-linejoin="round" style="mix-blend-mode:multiply"/>
+<path d="M860.0,677.7 L883.6,675.5 L907.1,680.3 L930.7,676.1 L954.3,673.1 L977.9,675.8 L1001.4,669.8 L1025.0,682.5 L1048.6,677.6 L1072.1,681.6 L1095.7,680.8 L1119.3,608.0 L1142.9,559.9 L1166.4,528.5 L1190.0,508.0 L1213.6,488.2 L1237.1,611.6 L1260.7,664.4 L1284.3,670.2 L1307.9,678.4 L1331.4,679.5 L1355.0,671.9 L1378.6,678.8 L1402.1,686.5 L1425.7,676.5 L1449.3,679.2 L1472.9,683.1 L1496.4,682.0 L1520.0,680.7" fill="none" stroke="#0078BF" stroke-width="4" stroke-linejoin="round" style="mix-blend-mode:multiply"/>
+<text x="1103.71" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#0078BF">注入 +300 毫秒</text>
+<circle cx="1213.57" cy="488.23" r="9" fill="#FF48B0" style="mix-blend-mode:multiply"/>
+<line x1="1221.57" y1="482.23" x2="1257.43" y2="470" stroke="#0078BF" stroke-width="1.5"/>
+<text x="1265.43" y="466" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="900" fill="#0078BF">第 7.5 分钟 p99 = 843 毫秒</text>
+<text x="1265.43" y="492" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#0078BF">超过 800，自动中止</text>
+<text x="868" y="494" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#0078BF">中止线 800</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="结论">
+<rect x="800" y="880" width="740" height="84" fill="#FF48B0" style="mix-blend-mode:multiply" opacity="0.9"/>
+<rect x="805" y="884" width="740" height="84" fill="none" stroke="#0078BF" stroke-width="2.5" style="mix-blend-mode:multiply"/>
+<text x="824" y="916" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#0078BF">发现：只注入 300 毫秒，p99 却升高约 510 毫秒，多出来的来自超时重试。</text>
+<text x="824" y="948" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" fill="#0078BF">下一步：库存调用设 250 毫秒超时，只重试一次，然后用同样的参数复验。</text>
+</g>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "testedAt": "2026-10-25T06:49:02.914Z",
+  "checks": [
+    "Facility focus changes actual geometry lightness, preserves review indication and restores material colors after repeated switching.",
+    "harbor: 320px header and document fit.",
+    "water: 320px header and document fit.",
+    "Review modes load their real images and fit at 1440/390px."
+  ],
+  "pass": true
+}

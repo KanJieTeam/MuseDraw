@@ -132,7 +132,7 @@ async function checkArtifact(page,plan,expected,previous,round,style,dir){
  await page.evaluate(({h})=>{const el=document.querySelector('svg');el.style.width='1200px';el.style.height=h+'px'},{h:Math.ceil(H*1200/W)});
  await page.screenshot({path:path.join(dir,'preview-1200.png')});
  const report={content,layout,geometry:{passed:!failures.length,failures},passed:content.passed&&layout.passed===true&&!failures.length,
-  visualAcceptance:'pending-human-review',notChecked:['cross-model performance','draw.io editing','pixel-perfect style transfer','all SVG path geometry matches its metadata']};
+  visualAcceptance:'pending-human-review',notChecked:['cross-model performance','pixel-perfect style transfer','all SVG path geometry matches its metadata']};
  await json(path.join(dir,'checks.json'),report);return report;
 }
 

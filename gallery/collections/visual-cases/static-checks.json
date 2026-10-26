@@ -1,0 +1,2882 @@
+[
+  {
+    "reviewId": 1,
+    "case": "101_error-budget",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 46,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 2,
+    "case": "102_circuit-breaker",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 42,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 3,
+    "case": "103_hpa-autoscaling",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 4,
+    "case": "104_pod-scheduling",
+    "size": [
+      1400,
+      1000
+    ],
+    "textNodes": 62,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 5,
+    "case": "105_consistent-hashing",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 13,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 6,
+    "case": "106_raft-election",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 39,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 7,
+    "case": "107_service-star-map",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 8,
+    "case": "108_lb-tail-latency",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 58,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 9,
+    "case": "109_rolling-update",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 55,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 10,
+    "case": "110_backup-3-2-1",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 16,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 11,
+    "case": "111_chaos-experiment",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 43,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 12,
+    "case": "112_log-tiering",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 21,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 13,
+    "case": "113_image-layers",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 34,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 14,
+    "case": "114_observability-metro",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 38,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 15,
+    "case": "115_c4-deployment",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 60,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 16,
+    "case": "116_service-mesh-request",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 30,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 17,
+    "case": "117_oncall-escalation",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 18,
+    "case": "118_finops-allocation",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 48,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 19,
+    "case": "119_incident-postmortem",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 53,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 20,
+    "case": "120_gitops-pull",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 27,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 21,
+    "case": "E01-duanlianjie-zujian",
+    "size": [
+      1600,
+      1080
+    ],
+    "textNodes": 62,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 22,
+    "case": "E02-git-merge-rebase",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 41,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 23,
+    "case": "E03-jifang-lengre",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 24,
+    "case": "E04-cdn-qingqiu",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 25,
+    "case": "E05-lingpaitong",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 30,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 26,
+    "case": "E06-hnsw-jiansuo",
+    "size": [
+      1800,
+      1000
+    ],
+    "textNodes": 14,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 27,
+    "case": "E07-fenku-fenbiao",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 55,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 28,
+    "case": "E08-huidu-fabu",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 29,
+    "case": "E09-http-zhuangtaima",
+    "size": [
+      1600,
+      1100
+    ],
+    "textNodes": 67,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 30,
+    "case": "E10-tcp-woshou",
+    "size": [
+      1600,
+      1100
+    ],
+    "textNodes": 32,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 31,
+    "case": "J01-renshi-zhongbiao",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 32,
+    "case": "J02-peiping-fangchengshi",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 17,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 33,
+    "case": "J03-kantu-xiehua",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 34,
+    "case": "J04-chibifu-qinggan",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 23,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 35,
+    "case": "J05-huadong-moca",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 46,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 36,
+    "case": "J06-ruxue-shiying",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 37,
+    "case": "J07-shier-shichen",
+    "size": [
+      1800,
+      760
+    ],
+    "textNodes": 52,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 38,
+    "case": "J08-laji-fenlei",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 39,
+    "case": "J09-liti-tuxing",
+    "size": [
+      1400,
+      1400
+    ],
+    "textNodes": 14,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 40,
+    "case": "J10-shengwu-bixiu1",
+    "size": [
+      1800,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 41,
+    "case": "D01-podu-tu",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 23,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 42,
+    "case": "D02-xiaobeishu-jiangshui",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 51,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 43,
+    "case": "D03-yaling-gongshi",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 44,
+    "case": "D04-pubu-lirun",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 45,
+    "case": "D05-rili-reli",
+    "size": [
+      1600,
+      760
+    ],
+    "textNodes": 35,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 46,
+    "case": "D06-sangji-shouzhi",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 47,
+    "case": "D07-renkou-jinzita",
+    "size": [
+      1600,
+      1060
+    ],
+    "textNodes": 29,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 48,
+    "case": "D08-ansikumu",
+    "size": [
+      1600,
+      1080
+    ],
+    "textNodes": 48,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 49,
+    "case": "D09-paiming-bianhua",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 50,
+    "case": "D10-danweitu-tongqin",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 16,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 51,
+    "case": "P01-guji-xiufu",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 8,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 52,
+    "case": "P02-binjiang-yepao",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 12,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 53,
+    "case": "P03-caoping-jueshi",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 9,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 54,
+    "case": "P04-luoye-tujian",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 23,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 55,
+    "case": "P05-zidai-bei",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 22,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 56,
+    "case": "P06-heidong-yingzi",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 13,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 57,
+    "case": "P07-mopian-zhiye",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 20,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 58,
+    "case": "P08-man-yidian",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 5,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 59,
+    "case": "P09-ma-zou-ri",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 25,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 60,
+    "case": "P10-shangxian-yue",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 14,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 61,
+    "case": "T01-caidou-yisheng",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 13,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 62,
+    "case": "T02-guang-fanshe",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 19,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 63,
+    "case": "T03-yiyuan-yici",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 25,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 64,
+    "case": "T04-lixue-xianlu",
+    "size": [
+      1800,
+      1000
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 65,
+    "case": "T05-zhongzi-mengfa",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 56,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 66,
+    "case": "T06-sanyuanse",
+    "size": [
+      1400,
+      1400
+    ],
+    "textNodes": 11,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 67,
+    "case": "T07-beiying",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 15,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 68,
+    "case": "T08-ershisi-jieqi",
+    "size": [
+      1400,
+      1440
+    ],
+    "textNodes": 56,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 69,
+    "case": "T09-sanlei-ganggan",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 39,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 70,
+    "case": "T10-beidou-beijixing",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 15,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 71,
+    "case": "T11-gongye-geming",
+    "size": [
+      1600,
+      1100
+    ],
+    "textNodes": 43,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 72,
+    "case": "T12-qian20-yuansu",
+    "size": [
+      1600,
+      1100
+    ],
+    "textNodes": 103,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 73,
+    "case": "T13-yijieke-45fenzhong",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 42,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 74,
+    "case": "T14-for-xunhuan",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 42,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 75,
+    "case": "T15-dianci-bopu",
+    "size": [
+      1800,
+      1000
+    ],
+    "textNodes": 37,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 76,
+    "case": "T16-qizhong-fenxi",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 77,
+    "case": "T17-koujue-chuangguan",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 42,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 78,
+    "case": "T18-yilunwen-jiegou",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 79,
+    "case": "T19-fanzhuan-ketang",
+    "size": [
+      1600,
+      900
+    ],
+    "textNodes": 33,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 80,
+    "case": "T20-qibu-xishou",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 35,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 81,
+    "case": "O01-huiyishi-yuding",
+    "size": [
+      1600,
+      1080
+    ],
+    "textNodes": 62,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 82,
+    "case": "O02-gongdan-youxianji",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 36,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 83,
+    "case": "O03-daci-juece",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 32,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 84,
+    "case": "O04-bangong-banqian",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 17,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 85,
+    "case": "O05-yongyin-shenpi",
+    "size": [
+      1500,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 86,
+    "case": "O06-xiansuo-huikuan",
+    "size": [
+      1800,
+      1000
+    ],
+    "textNodes": 23,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 87,
+    "case": "O07-yingji-shusan",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 40,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 88,
+    "case": "O08-quanqiu-kefu",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 34,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 89,
+    "case": "O09-nianxiujia",
+    "size": [
+      1400,
+      1400
+    ],
+    "textNodes": 16,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 90,
+    "case": "O10-lizhi-jiaojie",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 38,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 91,
+    "case": "S01-linchuang-shujupingtai",
+    "size": [
+      1600,
+      1040
+    ],
+    "textNodes": 52,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 92,
+    "case": "S02-danbaizhi-zuxue",
+    "size": [
+      1800,
+      980
+    ],
+    "textNodes": 51,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 93,
+    "case": "S03-yangfangfa",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 15,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 94,
+    "case": "S04-jiaokan-sifa",
+    "size": [
+      1500,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 95,
+    "case": "S05-danbai-jiegou",
+    "size": [
+      1800,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 96,
+    "case": "S06-fengdong",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 29,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 97,
+    "case": "S07-lingxingfa",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 20,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 98,
+    "case": "S08-qianghua-xuexi",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 58,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 99,
+    "case": "S09-celiang-chidu",
+    "size": [
+      1400,
+      1400
+    ],
+    "textNodes": 32,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 100,
+    "case": "S10-xiangguan-yinguo",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 28,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 101,
+    "case": "121_chicken-rabbit",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 23,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 102,
+    "case": "122_tree-planting",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 14,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 103,
+    "case": "123_directions-map",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 104,
+    "case": "124_bar-chart",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 51,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 105,
+    "case": "125_angles",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 12,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 106,
+    "case": "126_axial-symmetry",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 16,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 107,
+    "case": "127_jing-ye-si",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 32,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 108,
+    "case": "128_length-units",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 41,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 109,
+    "case": "129_moon-phases",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 47,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 110,
+    "case": "130_year-month-day",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 55,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 111,
+    "case": "131_decimals",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 19,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 112,
+    "case": "132_food-web",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 27,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 113,
+    "case": "133_twenty-four-hour",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 72,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 114,
+    "case": "134_states-of-water",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 115,
+    "case": "135_average",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 30,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 116,
+    "case": "136_probability",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 16,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 117,
+    "case": "137_character-structure",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 27,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 118,
+    "case": "138_solar-system",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 34,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 119,
+    "case": "139_insect-life-cycle",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 17,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 120,
+    "case": "140_shadows-in-a-day",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 46,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 121,
+    "case": "141_completing-square",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 29,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 122,
+    "case": "142_flagpole-shadow",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 10,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 123,
+    "case": "143_blood-circulation",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 124,
+    "case": "144_ohms-law",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 58,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 125,
+    "case": "145_three-views",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 8,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 126,
+    "case": "146_photosynthesis-respiration",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 29,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 127,
+    "case": "147_contour-map",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 24,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 128,
+    "case": "148_convex-lens",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 60,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 129,
+    "case": "149_keplers-second-law",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 12,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 130,
+    "case": "150_xinhai-revolution",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 33,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 131,
+    "case": "151_orders-of-magnitude",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 33,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 132,
+    "case": "152_three-terraces",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 15,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 133,
+    "case": "153_binary",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 57,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 134,
+    "case": "154_ionic-bond",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 22,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 135,
+    "case": "155_histogram",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 43,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 136,
+    "case": "156_two-dice",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 65,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 137,
+    "case": "157_classical-chinese-syntax",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 44,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 138,
+    "case": "158_newtons-second-law",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 33,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 139,
+    "case": "159_english-tenses",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 140,
+    "case": "160_triangle-angle-sum",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 22,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 141,
+    "case": "161_cryoem-spa",
+    "size": [
+      1600,
+      960
+    ],
+    "textNodes": 82,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 142,
+    "case": "162_gwas-overview",
+    "size": [
+      1600,
+      1100
+    ],
+    "textNodes": 81,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 143,
+    "case": "163_collider-event",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 30,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 144,
+    "case": "164_calcium-imaging",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 44,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 145,
+    "case": "165_grover-search",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 97,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 146,
+    "case": "166_seir-scenarios",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 76,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 147,
+    "case": "167_earth-system-coupling",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 50,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 148,
+    "case": "168_primate-phylogeny",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 56,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 149,
+    "case": "169_repressilator",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 34,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 150,
+    "case": "170_hts-384-plate",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 90,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 151,
+    "case": "171_sequencing-platform-c4",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 57,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 152,
+    "case": "172_metabolism-metro",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 66,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 153,
+    "case": "173_radial-velocity",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 58,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 154,
+    "case": "174_bayesian-update",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 26,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 155,
+    "case": "175_parallel-training",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 111,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 156,
+    "case": "176_bravais-lattices",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 34,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 157,
+    "case": "177_watershed-hydrograph",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 29,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 158,
+    "case": "178_ceramic-sintering",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 45,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 159,
+    "case": "179_light-sheet",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 34,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 160,
+    "case": "180_pcr-primers",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 50,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 161,
+    "case": "181_budget-sankey",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 48,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 162,
+    "case": "182_okr-alignment",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 54,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 163,
+    "case": "183_cohort-retention",
+    "size": [
+      1200,
+      1600
+    ],
+    "textNodes": 141,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 164,
+    "case": "184_critical-path",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 103,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 165,
+    "case": "185_org-restructure",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 47,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 166,
+    "case": "186_onboarding-journey",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 36,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 167,
+    "case": "187_recruiting-funnel",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 68,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 168,
+    "case": "188_meeting-audit",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 100,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 169,
+    "case": "189_procure-to-pay",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 29,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 170,
+    "case": "190_engagement-survey",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 73,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 171,
+    "case": "191_expense-system-c4",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 73,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 172,
+    "case": "192_operating-rhythm-metro",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 55,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 173,
+    "case": "193_timezone-collaboration",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 126,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 174,
+    "case": "194_space-utilization",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 101,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 175,
+    "case": "195_decade-scroll",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 112,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 176,
+    "case": "196_flexible-benefits",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 46,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 177,
+    "case": "197_platform-adoption",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 31,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 178,
+    "case": "198_call-center-staffing",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 46,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 179,
+    "case": "199_weekly-eisenhower",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 61,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  },
+  {
+    "reviewId": 180,
+    "case": "200_three-statements",
+    "size": [
+      1600,
+      1000
+    ],
+    "textNodes": 71,
+    "rasterImages": 0,
+    "scripts": 0,
+    "events": 0,
+    "externalRefs": [],
+    "embeddedDataCount": 0,
+    "foreignObjects": 0,
+    "fonts": []
+  }
+]

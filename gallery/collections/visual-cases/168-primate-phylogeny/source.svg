@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>灵长类的系统发育与分歧时间</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FAF8F3"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="100" font-family="'Noto Serif CJK SC', serif" font-size="44" font-weight="900" fill="#222222">灵长类的系统发育与分歧时间</text>
+<text x="72" y="140" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#857F75">十个物种的时间树：横轴是距今的时间，节点上的数字是分歧时间（百万年）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="地质年代">
+<rect x="110" y="790" width="65.83" height="30" fill="#E7EBD9" stroke="#CFC9BE"/>
+<text x="142.92" y="811" font-family="'Noto Serif CJK SC', serif" font-size="15" font-weight="700" fill="#222222" text-anchor="middle">白垩纪</text>
+<rect x="175.83" y="790" width="471.48" height="30" fill="#F3E0CC" stroke="#CFC9BE"/>
+<text x="411.57" y="811" font-family="'Noto Serif CJK SC', serif" font-size="15" font-weight="700" fill="#222222" text-anchor="middle">古近纪</text>
+<rect x="647.31" y="790" width="224.38" height="30" fill="#F5EDC6" stroke="#CFC9BE"/>
+<text x="759.5" y="811" font-family="'Noto Serif CJK SC', serif" font-size="15" font-weight="700" fill="#222222" text-anchor="middle">新近纪</text>
+<rect x="871.69" y="790" width="28.31" height="30" fill="#F6F1D9" stroke="#CFC9BE"/>
+<rect x="175.83" y="820" width="109.72" height="26" fill="#FAF8F3" stroke="#CFC9BE"/>
+<text x="230.69" y="838" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="middle">古新世</text>
+<rect x="285.56" y="820" width="242.49" height="26" fill="#FAF8F3" stroke="#CFC9BE"/>
+<text x="406.8" y="838" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="middle">始新世</text>
+<rect x="528.04" y="820" width="119.27" height="26" fill="#FAF8F3" stroke="#CFC9BE"/>
+<text x="587.68" y="838" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="middle">渐新世</text>
+<rect x="647.31" y="820" width="194.18" height="26" fill="#FAF8F3" stroke="#CFC9BE"/>
+<text x="744.4" y="838" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="middle">中新世</text>
+<rect x="841.49" y="820" width="30.21" height="26" fill="#FAF8F3" stroke="#CFC9BE"/>
+<rect x="871.69" y="820" width="28.31" height="26" fill="#FAF8F3" stroke="#CFC9BE"/>
+<line x1="900" y1="846" x2="900" y2="856" stroke="#222222"/>
+<text x="900" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">0</text>
+<line x1="790.28" y1="846" x2="790.28" y2="856" stroke="#222222"/>
+<text x="790.28" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">10</text>
+<line x1="680.56" y1="846" x2="680.56" y2="856" stroke="#222222"/>
+<text x="680.56" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">20</text>
+<line x1="570.83" y1="846" x2="570.83" y2="856" stroke="#222222"/>
+<text x="570.83" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">30</text>
+<line x1="461.11" y1="846" x2="461.11" y2="856" stroke="#222222"/>
+<text x="461.11" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">40</text>
+<line x1="351.39" y1="846" x2="351.39" y2="856" stroke="#222222"/>
+<text x="351.39" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">50</text>
+<line x1="241.67" y1="846" x2="241.67" y2="856" stroke="#222222"/>
+<text x="241.67" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">60</text>
+<line x1="131.94" y1="846" x2="131.94" y2="856" stroke="#222222"/>
+<text x="131.94" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#222222" text-anchor="middle">70</text>
+<text x="920" y="876" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#857F75">百万年前</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="树">
+<line x1="790.28" y1="200" x2="900" y2="200" stroke="#222222" stroke-width="2.2"/>
+<line x1="790.28" y1="258" x2="900" y2="258" stroke="#222222" stroke-width="2.2"/>
+<line x1="790.28" y1="200" x2="790.28" y2="258" stroke="#222222" stroke-width="2.2"/>
+<circle cx="790.28" cy="229" r="4" fill="#C8102E"/>
+<text x="782.28" y="221" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">10</text>
+<line x1="879.15" y1="316" x2="900" y2="316" stroke="#222222" stroke-width="2.2"/>
+<line x1="879.15" y1="374" x2="900" y2="374" stroke="#222222" stroke-width="2.2"/>
+<line x1="879.15" y1="316" x2="879.15" y2="374" stroke="#222222" stroke-width="2.2"/>
+<circle cx="879.15" cy="345" r="4" fill="#C8102E"/>
+<text x="871.15" y="337" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">1.9</text>
+<line x1="829.78" y1="432" x2="900" y2="432" stroke="#222222" stroke-width="2.2"/>
+<line x1="829.78" y1="345" x2="879.15" y2="345" stroke="#222222" stroke-width="2.2"/>
+<line x1="829.78" y1="432" x2="829.78" y2="345" stroke="#222222" stroke-width="2.2"/>
+<circle cx="829.78" cy="388.5" r="4" fill="#C8102E"/>
+<text x="821.78" y="380.5" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">6.4</text>
+<line x1="805.64" y1="490" x2="900" y2="490" stroke="#222222" stroke-width="2.2"/>
+<line x1="805.64" y1="388.5" x2="829.78" y2="388.5" stroke="#222222" stroke-width="2.2"/>
+<line x1="805.64" y1="490" x2="805.64" y2="388.5" stroke="#222222" stroke-width="2.2"/>
+<circle cx="805.64" cy="439.25" r="4" fill="#C8102E"/>
+<text x="797.64" y="431.25" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">8.6</text>
+<line x1="735.42" y1="548" x2="900" y2="548" stroke="#222222" stroke-width="2.2"/>
+<line x1="735.42" y1="439.25" x2="805.64" y2="439.25" stroke="#222222" stroke-width="2.2"/>
+<line x1="735.42" y1="548" x2="735.42" y2="439.25" stroke="#222222" stroke-width="2.2"/>
+<circle cx="735.42" cy="493.62" r="4" fill="#C8102E"/>
+<text x="727.42" y="485.62" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">15</text>
+<line x1="680.56" y1="606" x2="900" y2="606" stroke="#222222" stroke-width="2.2"/>
+<line x1="680.56" y1="493.62" x2="735.42" y2="493.62" stroke="#222222" stroke-width="2.2"/>
+<line x1="680.56" y1="606" x2="680.56" y2="493.62" stroke="#222222" stroke-width="2.2"/>
+<circle cx="680.56" cy="549.81" r="4" fill="#C8102E"/>
+<text x="672.56" y="541.81" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">20</text>
+<line x1="581.81" y1="229" x2="790.28" y2="229" stroke="#222222" stroke-width="2.2"/>
+<line x1="581.81" y1="549.81" x2="680.56" y2="549.81" stroke="#222222" stroke-width="2.2"/>
+<line x1="581.81" y1="229" x2="581.81" y2="549.81" stroke="#222222" stroke-width="2.2"/>
+<circle cx="581.81" cy="389.41" r="4" fill="#C8102E"/>
+<text x="573.81" y="381.41" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">29</text>
+<line x1="428.19" y1="664" x2="900" y2="664" stroke="#222222" stroke-width="2.2"/>
+<line x1="428.19" y1="389.41" x2="581.81" y2="389.41" stroke="#222222" stroke-width="2.2"/>
+<line x1="428.19" y1="664" x2="428.19" y2="389.41" stroke="#222222" stroke-width="2.2"/>
+<circle cx="428.19" cy="526.7" r="4" fill="#C8102E"/>
+<text x="420.19" y="518.7" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">43</text>
+<line x1="142.92" y1="722" x2="900" y2="722" stroke="#222222" stroke-width="2.2"/>
+<line x1="142.92" y1="526.7" x2="428.19" y2="526.7" stroke="#222222" stroke-width="2.2"/>
+<line x1="142.92" y1="722" x2="142.92" y2="526.7" stroke="#222222" stroke-width="2.2"/>
+<circle cx="142.92" cy="624.35" r="4" fill="#C8102E"/>
+<text x="134.92" y="616.35" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E" text-anchor="end">69</text>
+<text x="916" y="206" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">恒河猴</text>
+<text x="988" y="206" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Macaca mulatta</text>
+<text x="916" y="264" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">东非狒狒</text>
+<text x="1008" y="264" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Papio anubis</text>
+<text x="916" y="322" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">黑猩猩</text>
+<text x="988" y="322" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Pan troglodytes</text>
+<text x="916" y="380" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">倭黑猩猩</text>
+<text x="1008" y="380" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Pan paniscus</text>
+<text x="916" y="438" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">人</text>
+<text x="948" y="438" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Homo sapiens</text>
+<text x="916" y="496" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">西部大猩猩</text>
+<text x="1028" y="496" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Gorilla gorilla</text>
+<text x="916" y="554" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">婆罗洲猩猩</text>
+<text x="1028" y="554" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Pongo pygmaeus</text>
+<text x="916" y="612" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">白掌长臂猿</text>
+<text x="1028" y="612" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Hylobates lar</text>
+<text x="916" y="670" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">普通狨</text>
+<text x="988" y="670" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Callithrix jacchus</text>
+<text x="916" y="728" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#222222">菲律宾眼镜猴</text>
+<text x="1048" y="728" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75" font-style="italic">Carlito syrichta</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="类群">
+<path d="M1242.0,300.0 L1250.0,300.0 L1250.0,564.0 L1242.0,564.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<text x="1260" y="438" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#222222">人科</text>
+<path d="M1322.0,300.0 L1330.0,300.0 L1330.0,622.0 L1322.0,622.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<text x="1340" y="467" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#222222">人猿超科</text>
+<path d="M1242.0,184.0 L1250.0,184.0 L1250.0,274.0 L1242.0,274.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<text x="1260" y="235" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#222222">猴科</text>
+<path d="M1422.0,184.0 L1430.0,184.0 L1430.0,622.0 L1422.0,622.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<text x="1440" y="409" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#222222">狭鼻类</text>
+<path d="M1492.0,184.0 L1500.0,184.0 L1500.0,680.0 L1492.0,680.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<text x="1510" y="438" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#222222">类人猿</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="距离矩阵">
+<text x="1170" y="748" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#857F75">成对距离（UPGMA 输入）</text>
+<rect x="1170" y="760" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1185" y="760" width="15" height="15" fill="#222222" opacity="0.2"/>
+<rect x="1200" y="760" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1215" y="760" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1230" y="760" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1245" y="760" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1260" y="760" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1275" y="760" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1290" y="760" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="760" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="775" width="15" height="15" fill="#222222" opacity="0.2"/>
+<rect x="1185" y="775" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1200" y="775" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1215" y="775" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1230" y="775" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1245" y="775" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1260" y="775" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1275" y="775" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1290" y="775" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="775" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="790" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1185" y="790" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1200" y="790" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1215" y="790" width="15" height="15" fill="#222222" opacity="0.1"/>
+<rect x="1230" y="790" width="15" height="15" fill="#222222" opacity="0.16"/>
+<rect x="1245" y="790" width="15" height="15" fill="#222222" opacity="0.19"/>
+<rect x="1260" y="790" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1275" y="790" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1290" y="790" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="790" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="805" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1185" y="805" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1200" y="805" width="15" height="15" fill="#222222" opacity="0.1"/>
+<rect x="1215" y="805" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1230" y="805" width="15" height="15" fill="#222222" opacity="0.16"/>
+<rect x="1245" y="805" width="15" height="15" fill="#222222" opacity="0.19"/>
+<rect x="1260" y="805" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1275" y="805" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1290" y="805" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="805" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="820" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1185" y="820" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1200" y="820" width="15" height="15" fill="#222222" opacity="0.16"/>
+<rect x="1215" y="820" width="15" height="15" fill="#222222" opacity="0.16"/>
+<rect x="1230" y="820" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1245" y="820" width="15" height="15" fill="#222222" opacity="0.19"/>
+<rect x="1260" y="820" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1275" y="820" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1290" y="820" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="820" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="835" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1185" y="835" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1200" y="835" width="15" height="15" fill="#222222" opacity="0.19"/>
+<rect x="1215" y="835" width="15" height="15" fill="#222222" opacity="0.19"/>
+<rect x="1230" y="835" width="15" height="15" fill="#222222" opacity="0.19"/>
+<rect x="1245" y="835" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1260" y="835" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1275" y="835" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1290" y="835" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="835" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="850" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1185" y="850" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1200" y="850" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1215" y="850" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1230" y="850" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1245" y="850" width="15" height="15" fill="#222222" opacity="0.26"/>
+<rect x="1260" y="850" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1275" y="850" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1290" y="850" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="850" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="865" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1185" y="865" width="15" height="15" fill="#222222" opacity="0.44"/>
+<rect x="1200" y="865" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1215" y="865" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1230" y="865" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1245" y="865" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1260" y="865" width="15" height="15" fill="#222222" opacity="0.33"/>
+<rect x="1275" y="865" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1290" y="865" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1305" y="865" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1185" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1200" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1215" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1230" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1245" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1260" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1275" y="880" width="15" height="15" fill="#222222" opacity="0.61"/>
+<rect x="1290" y="880" width="15" height="15" fill="#222222" opacity="0.02"/>
+<rect x="1305" y="880" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1170" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1185" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1200" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1215" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1230" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1245" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1260" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1275" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1290" y="895" width="15" height="15" fill="#222222" opacity="0.93"/>
+<rect x="1305" y="895" width="15" height="15" fill="#222222" opacity="0.02"/>
+<text x="1330" y="780" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75">颜色越深</text>
+<text x="1330" y="800" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75">分歧越早</text>
+<text x="70" y="950" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">分歧时间为分子钟研究的常见估计，取整后使用，各研究之间可相差数百万年。眼镜猴的属名现多作 Carlito。</text>
+</g>
+</svg>

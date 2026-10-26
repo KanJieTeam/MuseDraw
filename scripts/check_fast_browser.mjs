@@ -45,21 +45,6 @@ function jpegSize(file) {
   throw new Error('JPEG has no size marker');
 }
 
-function nativeCheck(dir) {
-  const xml = fs.readFileSync(path.join(dir, 'diagram.drawio'), 'utf8');
-  assert.doesNotMatch(xml, /shape=image|data:image|<image\b|foreignObject|<svg\b/i);
-  const cells = [...xml.matchAll(/<mxCell\b([^>]*?)(?:\/>|>)/gs)].map((m) => Object.fromEntries([...m[1].matchAll(/([\w]+)="([^"]*)"/g)].map((a) => [a[1], a[2]])));
-  const byId = new Map(cells.map((cell) => [cell.id, cell]));
-  assert.equal(byId.size, cells.length, 'Native object IDs must be unique');
-  const edges = cells.filter((cell) => cell.edge === '1');
-  assert.equal(edges.length, 11);
-  for (const edge of edges) for (const key of ['source', 'target']) assert.equal(byId.get(edge[key])?.vertex, '1');
-  const textCells = cells.filter((cell) => cell.vertex === '1' && cell.value);
-  assert.ok(textCells.length >= 40);
-  assert.ok(cells.some((cell) => cell.style?.includes('shape=stencil(')));
-  assert.ok(textCells.every((cell) => !/MuseDraw|Fig\. 01|图 01/.test(cell.value)), 'No visible attribution or figure number');
-  return { cells: cells.length, textCells: textCells.length, connectedEdges: edges.length, embeddedImages: 0 };
-}
 
 const samples = [];
 for (let i = 0; i < runs; i++) {
@@ -71,8 +56,7 @@ for (let i = 0; i < runs; i++) {
   assert.equal(checks.fontMode, 'system'); assert.deepEqual(checks.missingFonts, []);
   const preview = run.events.find((event) => event.stage === 'preview');
   const png = run.events.find((event) => event.stage === 'png');
-  const drawio = run.events.find((event) => event.stage === 'drawio');
-  assert.ok(preview.elapsedMs <= drawio.elapsedMs && drawio.elapsedMs <= png.elapsedMs);
+  assert.ok(preview.elapsedMs <= png.elapsedMs);
   const dimensions = jpegSize(path.join(dir, 'preview.jpg'));
   assert.ok(dimensions.width <= 1200 && dimensions.height <= 1000);
   assert.ok(fs.statSync(path.join(dir, 'preview.jpg')).size < 512 * 1024);
@@ -80,32 +64,8 @@ for (let i = 0; i < runs; i++) {
   assert.equal(scene.header, false); assert.equal(scene.footer, false); assert.equal(scene.figure, undefined);
   const svg = fs.readFileSync(path.join(dir, 'diagram.svg'), 'utf8');
   assert.ok(svg.includes('<g id="header"></g>') && svg.includes('<g id="footer"></g>'));
-  samples.push({ wallMs, previewMs: preview.elapsedMs, drawioMs: drawio.elapsedMs, drawioExportMs: checks.drawio.durationMs, pngMs: png.elapsedMs, previewBytes: fs.statSync(path.join(dir, 'preview.jpg')).size, dimensions, native: nativeCheck(dir) });
+  samples.push({ wallMs, previewMs: preview.elapsedMs, pngMs: png.elapsedMs, previewBytes: fs.statSync(path.join(dir, 'preview.jpg')).size, dimensions });
 }
-
-// PNG-only must really skip native collection, preserve the same image and use
-// a separate artifact cache. Switching formats cannot return missing/stale XML.
-const pngDir=fs.mkdtempSync(path.join(out,'png-only-'));
-const pngWallMs=command(['quickstart','rag','--lang',lang,'--out',pngDir,'--no-drawio','--no-cache']);
-let pngRun=read(pngDir,'run.json');
-assert.equal(read(pngDir,'checks.json').passed,true);
-assert.deepEqual(read(pngDir,'checks.json').drawio,{skipped:true,reason:'requested'});
-assert.equal(fs.existsSync(path.join(pngDir,'diagram.drawio')),false);
-assert.ok(!pngRun.events.some(event=>event.stage==='drawio'));
-const hashPng=dir=>createHash('sha256').update(fs.readFileSync(path.join(dir,'diagram@2x.png'))).digest('hex');
-assert.equal(hashPng(pngDir),hashPng(path.join(out,'uncached-1')),'Format preference must not change the PNG');
-const pngOnly={wallMs:pngWallMs,previewMs:pngRun.events.find(event=>event.stage==='preview').elapsedMs,pngMs:pngRun.events.find(event=>event.stage==='png').elapsedMs,identicalPng:true};
-command(['quickstart','rag','--out',pngDir,'--no-drawio']);
-command(['quickstart','rag','--out',pngDir,'--no-drawio']);
-assert.equal(read(pngDir,'run.json').cached,true);
-command(['quickstart','rag','--out',pngDir]);
-assert.equal(read(pngDir,'run.json').cached,false);nativeCheck(pngDir);
-fs.writeFileSync(path.join(pngDir,'diagram.drawio'),'user-edited file');
-command(['quickstart','rag','--out',pngDir,'--no-drawio']);
-assert.equal(read(pngDir,'run.json').cached,false);
-assert.equal(fs.readFileSync(path.join(pngDir,'diagram.drawio'),'utf8'),'user-edited file');
-command(['quickstart','rag','--out',pngDir]);
-assert.equal(read(pngDir,'run.json').cached,false);nativeCheck(pngDir);
 
 // Cache hits skip browser launch. Source edits and artifact edits must rerender.
 const cachedDir = path.join(out, 'cached');
@@ -120,10 +80,10 @@ scene.nodes[0].label = scene.nodes[0].label === labels[0] ? labels[1] : labels[0
 fs.writeFileSync(path.join(cachedDir, 'scene.json'), JSON.stringify(scene, null, 2));
 command(['quickstart', 'rag', '--out', cachedDir]);
 assert.equal(read(cachedDir, 'run.json').cached, false, 'Source edits invalidate cache');
-fs.appendFileSync(path.join(cachedDir, 'diagram.drawio'), '\nchanged');
+fs.appendFileSync(path.join(cachedDir, 'diagram.svg'), '\nchanged');
 command(['quickstart', 'rag', '--out', cachedDir]);
 assert.equal(read(cachedDir, 'run.json').cached, false, 'External artifact edits invalidate cache');
-nativeCheck(cachedDir);
+
 
 const median = (key) => samples.map((s) => s[key]).sort((a, b) => a - b)[Math.floor(samples.length / 2)];
 const report = {
@@ -133,9 +93,9 @@ const report = {
   baseCommit: spawnSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).stdout?.trim() || null,
   playwrightVersion: JSON.parse(fs.readFileSync(path.join(path.dirname(path.resolve(runtime[1])), 'package.json'), 'utf8')).version,
   skillFontPackagesInstalled: fs.existsSync(path.join(root, 'skills/musedraw/node_modules')),
-  median: { previewMs: median('previewMs'), drawioMs: median('drawioMs'), pngMs: median('pngMs'), wallMs: median('wallMs') },
+  median: { previewMs: median('previewMs'), pngMs: median('pngMs'), wallMs: median('wallMs') },
   cache: { wallMs: cacheWallMs, elapsedMs: hit.elapsedMs, sourceInvalidation: true, artifactInvalidation: true, verified: true },
-  samples, pngOnly, passed: true,
+  samples, passed: true,
 };
 fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));

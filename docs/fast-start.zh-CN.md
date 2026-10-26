@@ -18,22 +18,16 @@
 从 0.4.0 起，普通 `render` 默认系统字体、先出预览、校验缓存并记录 `run.json`。
 `doctor --json` 会报告版本、内核指纹与能力列表，便于核实宿主加载的副本。
 
-## 只需 PNG
+## 默认 PNG 交付
 
-在需求里加一句“只需 PNG”，或点击图库的“快速 PNG”。智能体会在内部选择：
+默认生成 PNG，并保留 SVG 与场景 JSON。命令例如：
 
 ```sh
-node skills/musedraw/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --no-drawio --strict
+node skills/musedraw/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --strict
 ```
 
-其他图使用 `render scene.json --no-drawio`。
-它跳过原生对象采集与 draw.io 序列化，仍运行浏览器版面检查并生成 PNG、小预览与
-场景源文件。默认模式仍交付双文件；同目录已有的 drawio 不会被删除，也不会被
-当作本次更新结果交付。切回默认模式时会重新导出，PNG 模式的缓存不能代替双文件缓存。
-
-PNG 直接由内置 scene 引擎渲染，不依赖 draw.io 网页、桌面软件或第三方导出包。
-`checks.json` 的 `drawio.durationMs` 记录实际原生导出耗时；PNG 模式记录跳过原因。
-跳过此步骤通常不会省下数分钟，智能体绕路查资料、安装工具和重复审图才需要优先排查。
+其他图使用 `render scene.json`。内置引擎运行浏览器版面检查，直接生成 PNG、小预览与
+场景源文件。任务总耗时应与 `run.json` 的渲染计时分开看。
 
 同一份 Skill 会同时讲快速路径与自定义构图。内置 RAG starter 应直接运行，
 不需要先读 scene schema、style atlas、主题 JSON 和导出源码；后面的自定义教程
@@ -71,7 +65,7 @@ node skills/musedraw/scripts/musedraw.mjs quickstart rag --lang zh --out output/
 
 流程会打印阶段耗时，并在高清 PNG 前生成最大 1200×1000 的 `preview.jpg`。
 优先展示或链接小预览，避免高清纸纹 PNG 超出聊天预览大小限制；无需为交付额外调用读图或视觉分析工具。
-最终文件为 `diagram@2x.png`、原生可编辑 `diagram.drawio` 和 `checks.json`；
+最终文件为 `diagram@2x.png`、`diagram.svg`、`scene.json` 和 `checks.json`；
 `run.json` 记录本次命令的阶段耗时，不包含智能体读文档或模型思考的时间。
 
 再次运行会保留现有 `scene.json`，不会用模板覆盖用户修改。
@@ -105,7 +99,7 @@ npm install --prefix skills/musedraw/output/runtime --no-save --ignore-scripts -
 如果本机没有兼容浏览器，需要单独准备 Chrome/Edge 或 Playwright Chromium。
 最小安装设置每次网络请求 15 秒超时且不自动重试，避免空闲连接耗尽等待时间；
 这不是整个安装过程的总时限。网络受限时明确更换源或复用现有依赖。
-不要用 `--svg-only` 的成功代替 PNG 和原生 draw.io 的验收。
+不要用 `--svg-only` 的成功代替 PNG 和浏览器版面检查的验收。
 需要严格复现官方字形时，再运行 `npm run setup:fonts`，并选择 `--font-mode bundled`。
 
 ## 自定义图与标题开关
@@ -120,6 +114,6 @@ node skills/musedraw/scripts/musedraw.mjs render scene.json --font-mode system -
 署名只填写用户指定的 `footer` 文本。渲染命令不会自动加主题署名；
 原有明确填写的图号和署名仍会保留。`autoFit: false` 会保留用户指定坐标。
 
-快速入口仍运行实际字形版面检查、静态 SVG 安全检查和原生 draw.io 导出。
+快速入口仍运行实际字形版面检查、静态 SVG 安全检查和 PNG/SVG 导出。
 预览是便于快速查看的小图，细小文字请在高清 PNG 中检查。
 普通出图以自动检查为默认验收，检查通过且文件齐全即可交付，不强制读图、上传 CDN、OCR 或调用视觉模型。自动检查不证明已经目检或事实正确；只有用户明确要求、反馈可见缺陷或出现具体疑点时，才按需用小预览复核。

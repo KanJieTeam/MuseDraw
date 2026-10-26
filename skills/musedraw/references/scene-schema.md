@@ -207,7 +207,7 @@ omit it when the named theme is sufficient. SVG safety checks still apply.
 - `labelAt`: a fraction (0–1) along the path or an `[x, y]` point.
 - `layer: "foreground"` draws an explicit connector above object fills (e.g.
   a penetration path in a section); default `background` keeps graph wires behind
-  nodes. It remains a node-attached native connector in draw.io. Use this only
+  nodes. Use this only
   for an intended internal/overlaid relation, not to hide bad ordinary routing.
   A foreground connector's label stays in an editable overlay group to remain
   legible; moving that connector does not automatically reposition its label.
@@ -222,7 +222,6 @@ omit it when the named theme is sufficient. SVG safety checks still apply.
 **lines** — `{points: [[x, y], …], color, width, dash}`. **paths** — `{d, fill, stroke, width}`.
 Both accept `layer: "foreground"` for detail leaders, internal wiring or a seal
 that must appear over a filled object. Default primitives stay behind nodes.
-The editable draw.io preserves this explicit foreground layer too.
 
 Browser checks report `text-edge-collision` when an authored free text's measured
 font box meets an `edge` centerline or an explicit `line`. They follow curves,
@@ -266,7 +265,7 @@ automatic theme switching. These four cases export editable text and shapes;
 their hand-directed connectors are vector paths, not node-attached graph edges.
 
 短需求表达设计方向；精确复刻上述案例时直接渲染其 `scene.json`。
-改内容可以编辑 draw.io 或 `nativeSvg`，不应承诺任意模型凭短提示词逐像素重画。
+改内容可以编辑 `nativeSvg`，不应承诺任意模型凭短提示词逐像素重画。
 
 `diagram.svg` (native text, editable), `diagram@2x.png`, `preview.jpg`
 (README-size), `checks.json` (real-glyph overflow, collisions, labels on nodes,

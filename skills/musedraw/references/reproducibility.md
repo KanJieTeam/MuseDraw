@@ -12,8 +12,8 @@ Render with the same fonts and renderer when comparing pixels. Delivering the
 stored PNG proves that the asset was copied, not that a model reproduced it.
 
 An identical SVG hash establishes identical source bytes. It does not establish
-identical font rendering on every computer. Native draw.io import/editing also
-needs a separate test; SVG/PNG layout checks do not certify that editor.
+identical font rendering on every computer. Editing in another application needs
+a separate test; SVG/PNG layout checks do not certify third-party editors.
 
 ## Use the style for a different drawing
 

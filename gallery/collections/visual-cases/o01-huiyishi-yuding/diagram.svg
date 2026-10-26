@@ -1,0 +1,108 @@
+<svg data-theme="c4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1080" width="1600" height="1080">
+<title>会议室预订系统容器图</title>
+<g data-md-layer="图">
+<rect width="1600" height="1080" fill="#FFFFFF"/>
+<text id="title" x="60" y="80" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="34" fill="#111111" font-weight="700">会议室预订系统　容器图</text>
+<text x="62" y="116" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#666666">C4 模型第 2 层：系统内部由哪些可单独部署的部分组成</text>
+<circle cx="330" cy="170" r="30" fill="#08427B"/>
+<rect x="215.0" y="192" width="230" height="122" rx="26" fill="#08427B"/>
+<text x="330" y="232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">员工</text>
+<text x="330" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#DCE6F2" text-anchor="middle">[人员]</text>
+<text x="330" y="278" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">查找空闲会议室</text>
+<text x="330" y="300" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">预订、签到、释放</text>
+<circle cx="1270" cy="170" r="30" fill="#08427B"/>
+<rect x="1155.0" y="192" width="230" height="122" rx="26" fill="#08427B"/>
+<text x="1270" y="232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">行政专员</text>
+<text x="1270" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#DCE6F2" text-anchor="middle">[人员]</text>
+<text x="1270" y="278" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">维护会议室信息</text>
+<text x="1270" y="300" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">查看使用率</text>
+<rect x="130" y="360" width="1340" height="430" rx="14" fill="none" stroke="#5A5A5A" stroke-width="1.6" stroke-dasharray="10 7"/>
+<text x="150" y="772" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#333333" font-weight="700">会议室预订系统</text>
+<text x="300" y="772" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#666666">[软件系统]</text>
+<rect x="190" y="400" width="280" height="150" rx="10" fill="#438DD5"/>
+<text x="330" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">Web 应用</text>
+<text x="330" y="460" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：React]</text>
+<text x="330" y="486" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">在浏览器里搜索</text>
+<text x="330" y="509" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">和预订会议室</text>
+<rect x="520" y="400" width="280" height="150" rx="10" fill="#438DD5"/>
+<text x="660" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">移动端</text>
+<text x="660" y="460" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：iOS / Android]</text>
+<text x="660" y="486" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">扫门口二维码签到</text>
+<text x="660" y="509" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">延长或提前释放</text>
+<rect x="860" y="400" width="300" height="150" rx="10" fill="#438DD5"/>
+<text x="1010" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">API 服务</text>
+<text x="1010" y="460" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：Java、Spring Boot]</text>
+<text x="1010" y="486" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">预订规则、冲突检测、</text>
+<text x="1010" y="509" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">超时自动释放</text>
+<path d="M860 616 V744 A150.0 16 0 0 0 1160 744 V616" fill="#438DD5"/>
+<ellipse cx="1010.0" cy="616" rx="150.0" ry="16" fill="#438DD5" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="1010" y="644" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">数据库</text>
+<text x="1010" y="668" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：PostgreSQL]</text>
+<text x="1010" y="694" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">会议室、预订记录</text>
+<text x="1010" y="717" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">签到日志</text>
+<rect x="1200" y="400" width="240" height="150" rx="10" fill="#438DD5"/>
+<text x="1320" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">通知服务</text>
+<text x="1320" y="460" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：消息队列 + Worker]</text>
+<text x="1320" y="486" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">提醒开会、</text>
+<text x="1320" y="509" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">释放前通知</text>
+<rect x="140" y="870" width="300" height="130" rx="10" fill="#8C8C8C"/>
+<text x="290" y="906" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">企业日历</text>
+<text x="290" y="930" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="290" y="956" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">同步预订到个人日程</text>
+<rect x="560" y="870" width="300" height="130" rx="10" fill="#8C8C8C"/>
+<text x="710" y="906" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">统一身份认证</text>
+<text x="710" y="930" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="710" y="956" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">单点登录</text>
+<rect x="980" y="870" width="300" height="130" rx="10" fill="#8C8C8C"/>
+<text x="1130" y="906" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">门禁系统</text>
+<text x="1130" y="930" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="1130" y="956" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">按预订开放门锁</text>
+<path d="M330 304 L330 396" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M330 396 L324.84 386.29 L335.16 386.29 Z" fill="#707070"/>
+<text x="342" y="360" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">使用</text>
+<text x="342" y="379" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[HTTPS]</text>
+<path d="M420 304 L660 396" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M660 396 L649.08 397.35 L652.78 387.7 Z" fill="#707070"/>
+<text x="560" y="340" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">使用</text>
+<text x="560" y="359" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[App]</text>
+<path d="M1270 304 L1270 360 L1010 360 L1010 396" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1010 396 L1004.84 386.29 L1015.16 386.29 Z" fill="#707070"/>
+<text x="1100" y="350" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">管理会议室</text>
+<text x="1100" y="369" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[HTTPS]</text>
+<path d="M470 475 L518 475" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M518 475 L508.29 480.16 L508.29 469.84 Z" fill="#707070"/>
+<path d="M800 475 L856 475" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M856 475 L846.29 480.16 L846.29 469.84 Z" fill="#707070"/>
+<text x="828" y="590" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500" text-anchor="middle">调用</text>
+<text x="828" y="609" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777" text-anchor="middle">[JSON/HTTPS]</text>
+<path d="M1010 550 L1010 596" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1010 596 L1004.84 586.29 L1015.16 586.29 Z" fill="#707070"/>
+<text x="1024" y="580" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">读写</text>
+<text x="1024" y="599" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[SQL]</text>
+<path d="M1160 475 L1196 475" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1196 475 L1186.29 480.16 L1186.29 469.84 Z" fill="#707070"/>
+<path d="M900 760 L900 820 L290 820 L290 866" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M290 866 L284.84 856.29 L295.16 856.29 Z" fill="#707070"/>
+<text x="420" y="812" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">同步日程</text>
+<text x="420" y="831" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[EWS]</text>
+<path d="M950 760 L950 840 L710 840 L710 866" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M710 866 L704.84 856.29 L715.16 856.29 Z" fill="#707070"/>
+<text x="760" y="832" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">验证身份</text>
+<text x="760" y="851" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[SAML]</text>
+<path d="M1100 760 L1130 866" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1130 866 L1122.39 858.06 L1132.32 855.25 Z" fill="#707070"/>
+<text x="1130" y="812" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">下发开门权限</text>
+<text x="1130" y="831" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[API]</text>
+<text x="1360" y="880" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="700">图例</text>
+<circle cx="1372" cy="902" r="6" fill="#08427B"/>
+<rect x="1360" y="906" width="24" height="12" rx="5" fill="#08427B"/>
+<text x="1394" y="913" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">人员</text>
+<rect x="1360" y="926" width="24" height="22" rx="4" fill="#438DD5"/>
+<text x="1394" y="943" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">容器</text>
+<rect x="1360" y="958" width="24" height="18" rx="2" fill="#438DD5"/>
+<ellipse cx="1372" cy="959" rx="12" ry="4" fill="#438DD5" stroke="#FFFFFF"/>
+<text x="1394" y="973" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">数据库</text>
+<rect x="1360" y="986" width="24" height="22" rx="4" fill="#8C8C8C"/>
+<text x="1394" y="1003" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">外部系统</text>
+</g>
+</svg>

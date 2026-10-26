@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+<title>三原色与间色</title>
+<g data-md-layer="画面">
+<rect width="1400" height="1400" fill="#EEE9DE"/>
+<rect x="0" y="0" width="70" height="1400" fill="#141414"/>
+<path d="M150 540 L330 200 L510 540 Z" fill="#F4C20D"/>
+<rect x="580" y="200" width="340" height="340" fill="#D7262B"/>
+<circle cx="1160" cy="370" r="172" fill="#1F4DA1"/>
+<text x="330" y="620" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="56" fill="#141414" font-weight="900" text-anchor="middle">黄</text>
+<text x="750" y="620" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="56" fill="#141414" font-weight="900" text-anchor="middle">红</text>
+<text x="1160" y="620" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="56" fill="#141414" font-weight="900" text-anchor="middle">蓝</text>
+<rect x="70" y="676" width="1330" height="22" fill="#141414"/>
+<text id="title" x="130" y="150" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="96" fill="#141414" font-weight="900">三原色</text>
+<text x="560" y="150" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="96" fill="#141414" font-weight="300">与间色</text>
+<circle cx="240" cy="880" r="112" fill="#D7262B"/>
+<circle cx="360" cy="880" r="112" fill="#F4C20D"/>
+<path d="M300 785.43 A112 112 0 0 1 300 974.57 A112 112 0 0 1 300 785.43 Z" fill="#EE7A1A"/>
+<text x="300" y="1056" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="38" fill="#141414" font-weight="700" text-anchor="middle">红 + 黄 = 橙</text>
+<circle cx="650" cy="880" r="112" fill="#F4C20D"/>
+<circle cx="770" cy="880" r="112" fill="#1F4DA1"/>
+<path d="M710 785.43 A112 112 0 0 1 710 974.57 A112 112 0 0 1 710 785.43 Z" fill="#2E9E4B"/>
+<text x="710" y="1056" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="38" fill="#141414" font-weight="700" text-anchor="middle">黄 + 蓝 = 绿</text>
+<circle cx="1060" cy="880" r="112" fill="#D7262B"/>
+<circle cx="1180" cy="880" r="112" fill="#1F4DA1"/>
+<path d="M1120 785.43 A112 112 0 0 1 1120 974.57 A112 112 0 0 1 1120 785.43 Z" fill="#6B3FA0"/>
+<text x="1120" y="1056" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="38" fill="#141414" font-weight="700" text-anchor="middle">红 + 蓝 = 紫</text>
+<path d="M1127 1190.16 L1090 1126.08 A120 120 0 0 1 1210 1126.08 L1173 1190.16 A46 46 0 0 0 1127 1190.16 Z" fill="#D7262B"/>
+<path d="M1173 1190.16 L1210 1126.08 A120 120 0 0 1 1270 1230 L1196 1230 A46 46 0 0 0 1173 1190.16 Z" fill="#EE7A1A"/>
+<path d="M1196 1230 L1270 1230 A120 120 0 0 1 1210 1333.92 L1173 1269.84 A46 46 0 0 0 1196 1230 Z" fill="#F4C20D"/>
+<path d="M1173 1269.84 L1210 1333.92 A120 120 0 0 1 1090 1333.92 L1127 1269.84 A46 46 0 0 0 1173 1269.84 Z" fill="#2E9E4B"/>
+<path d="M1127 1269.84 L1090 1333.92 A120 120 0 0 1 1030 1230 L1104 1230 A46 46 0 0 0 1127 1269.84 Z" fill="#1F4DA1"/>
+<path d="M1104 1230 L1030 1230 A120 120 0 0 1 1090 1126.08 L1127 1190.16 A46 46 0 0 0 1104 1230 Z" fill="#6B3FA0"/>
+<text x="130" y="1180" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#141414" font-weight="500">色环上正对着的两种颜色，叫互补色：</text>
+<text x="130" y="1232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#141414" font-weight="700">红和绿，黄和紫，蓝和橙。</text>
+<text x="130" y="1300" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#141414">三原色不能用别的颜色调出来；间色由两种原色调成。</text>
+</g>
+</svg>

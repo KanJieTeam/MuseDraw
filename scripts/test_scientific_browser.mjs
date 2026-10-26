@@ -1,17 +1,16 @@
-// Actual Chromium regressions for scientific motifs and native drawio geometry.
+// Actual Chromium regressions for scientific motifs and measured SVG geometry.
 // Uses existing Playwright/browser only; no installation or download.
 // node scripts/test_scientific_browser.mjs [--out <dir>] [--playwright <module>] [--browser <executable>]
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {inflateRawSync} from 'node:zlib';
 import {render} from '../skills/musedraw/scripts/engine/render.mjs';
 import {prepareScene} from '../skills/musedraw/scripts/engine/validate.mjs';
 import {loadTheme} from '../skills/musedraw/scripts/musedraw.mjs';
 import {resolveBrowser,withSystemFonts} from '../skills/musedraw/scripts/engine/environment.mjs';
 import {loadPlaywrightInfo} from '../skills/musedraw/scripts/engine/export.mjs';
-import {collectEditableScene,toDrawio} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {collectMeasuredScene} from './measure_svg.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),options={};
 for(let i=2;i<process.argv.length;i++){
@@ -27,7 +26,7 @@ const evidenceRoot=path.join(root,'output','scientific-browser');
 let out;
 if(options.out){out=path.resolve(options.out);fs.mkdirSync(out,{recursive:true});}
 else{fs.mkdirSync(evidenceRoot,{recursive:true});out=fs.mkdtempSync(path.join(evidenceRoot,new Date().toISOString().replace(/[:.]/g,'-')+'-'));}
-const report={scope:'Actual Chromium SVG rendering, native collector, XML hierarchy and coordinate reconstruction. No official drawio editor import/export round trip.',startedUTC:new Date().toISOString(),cases:[]};
+const report={scope:'Actual Chromium SVG rendering, module ownership, path geometry and source-preserving edits.',startedUTC:new Date().toISOString(),cases:[]};
 const specs=[
   {kind:'graph',points:[{id:'a',x:.1,y:.3,label:'A'},{id:'b',x:.45,y:.6,label:'B'},{id:'c',x:.85,y:.2,label:'C'}],links:[{from:'a',to:'b'},{from:'b',to:'c',directed:true},{from:'a',to:'c'}]},
   {kind:'network',layers:[3,4,2]},
@@ -77,41 +76,6 @@ function graphDetail(){
 const detailCases=[['graph-detail',graphDetail()]];
 function near(a,b,message,tolerance=.002){assert.equal(a.length,b.length,message);a.forEach((v,i)=>assert.ok(Math.abs(v-b[i])<=tolerance,`${message}: ${v} != ${b[i]} at ${i}`));}
 function moduleOf(item,native){const groups=new Map(native.groups.map(g=>[g.id,g]));let p=item.kind?item.id:item.parent;while(p){const g=groups.get(p);if(g.kind==='module')return g.sourceId;p=g.parent;}return null;}
-async function parseXml(page,xml){return page.evaluate(xml=>{
-  const doc=new DOMParser().parseFromString(xml,'application/xml');
-  if(doc.querySelector('parsererror'))throw new Error(doc.querySelector('parsererror').textContent);
-  return [...doc.querySelectorAll('mxCell')].map(el=>{const g=el.querySelector(':scope > mxGeometry'),offset=g?.querySelector('mxPoint[as="offset"]');return {attributes:Object.fromEntries([...el.attributes].map(a=>[a.name,a.value])),geometry:g?{x:Number(g.getAttribute('x')||0),y:Number(g.getAttribute('y')||0),w:Number(g.getAttribute('width')||0),h:Number(g.getAttribute('height')||0),relative:g.getAttribute('relative')==='1',offset:offset?[Number(offset.getAttribute('x')),Number(offset.getAttribute('y'))]:null}:null};});
-},xml);}
-function verifyXml(native,cells){
-  const map=new Map(cells.map(c=>[c.attributes.id,c]));assert.equal(map.size,cells.length,'native XML IDs must be unique');
-  const connectorIds=new Map(native.edges.map((e,i)=>[e.id,`connector-${i+1}`]));
-  const hasForeground=native.groups.some(g=>g.kind==='foreground')||native.edges.some(e=>e.layer==='foreground');
-  function absolute(id,seen=new Set()){
-    assert.ok(!seen.has(id),'native parent cycle');seen.add(id);
-    const c=map.get(id);assert.ok(c,`missing XML cell ${id}`);const g=c.geometry;if(!g)return [0,0];
-    if(g.relative){
-      const edgeIndex=Number(c.attributes.parent?.match(/^connector-(\d+)$/)?.[1])-1,edge=native.edges[edgeIndex];
-      assert.ok(edge&&g.offset,`relative label ${id} needs a connected edge and offset`);
-      return [(edge.points[0][0]+edge.points.at(-1)[0])/2+g.offset[0],(edge.points[0][1]+edge.points.at(-1)[1])/2+g.offset[1]];
-    }
-    const p=c.attributes.parent&&map.get(c.attributes.parent);const base=p?.geometry?absolute(p.attributes.id,seen):[0,0];return [base[0]+g.x,base[1]+g.y];
-  }
-  for(const item of [...native.groups,...native.shapes,...native.texts]){
-    const cell=map.get(item.id);assert.ok(cell,`missing ${item.id}`);
-    const expectedParent=item.parent||(!hasForeground&&item.edgeParent?connectorIds.get(item.edgeParent):'1');
-    assert.equal(cell.attributes.parent,expectedParent,`${item.id} must keep its native parent`);
-    near(absolute(item.id),item.box.slice(0,2),`${item.id} nested position`);
-    const min=item.id.startsWith('shape-') ? .01 : item.id.startsWith('text-') ? 1 : 0;
-    near([cell.geometry.w,cell.geometry.h],item.box.slice(2).map(v=>Math.max(v,min)),`${item.id} extent`);
-  }
-  for(const [i,e] of native.edges.entries()){
-    const cell=map.get(`connector-${i+1}`);assert.equal(cell.attributes.edge,'1');
-    for(const [attr,node] of [['source',e.from],['target',e.to]]){
-      const group=native.groups.find(g=>g.kind==='node'&&g.sourceId===node);assert.ok(group,`missing terminal ${node}`);assert.equal(cell.attributes[attr],group.id);assert.ok(map.has(cell.attributes[attr]));
-    }
-  }
-  return {cells:cells.length,nestedVertices:native.groups.filter(g=>g.parent).length+native.shapes.filter(g=>g.parent).length+native.texts.filter(g=>g.parent).length,connectedEdges:native.edges.length};
-}
 let browser;
 try{
   const {pw}=await loadPlaywrightInfo(options.playwright),found=resolveBrowser(pw,{browser:options.browser});
@@ -126,11 +90,9 @@ try{
       fs.writeFileSync(path.join(dir,'scene.json'),JSON.stringify(source,null,2));
       const prepared=prepareScene(source,theme),svg=await load(source);fs.writeFileSync(path.join(dir,'diagram.svg'),svg);
       await page.screenshot({path:path.join(dir,'diagram.png')});await page.screenshot({path:path.join(dir,'preview.jpg'),type:'jpeg',quality:85});
-      const native=await page.evaluate(collectEditableScene),xml=toDrawio(native);fs.writeFileSync(path.join(dir,'native.json'),JSON.stringify(native,null,2));fs.writeFileSync(path.join(dir,'diagram.drawio'),xml);
-      assert.doesNotMatch(svg+xml,/<image\b|foreignObject|data:image|shape=image/i);
+      const native=await page.evaluate(collectMeasuredScene);
+      assert.doesNotMatch(svg,/<image\b|foreignObject|data:image|shape=image/i);
       assert.equal(native.edges.length,prepared.edges.length,'every scene edge must survive exactly once');
-      const stencils=[...xml.matchAll(/shape=stencil\(([^)]*)\)/g)].map(m=>decodeURIComponent(inflateRawSync(Buffer.from(m[1],'base64')).toString()));
-      assert.equal(stencils.length,native.shapes.length);assert.ok(stencils.every(s=>s.includes('<path>')&&/<(?:move|line|quad|curve)/.test(s)));
       result.modules=[];
       for(const module of prepared.nativeModules){
         const sourceId=`scientific-${module.id}`,group=native.groups.find(g=>g.sourceId===sourceId&&g.kind==='module');assert.ok(group,`missing module ${module.id}`);
@@ -161,7 +123,6 @@ try{
         const edges=prepared.edges.filter(e=>e.nativeModule===module.id);assert.equal(native.edges.filter(e=>edges.some(p=>p.id===e.id)).length,edges.length);
         result.modules.push({id:module.id,nodes:expectedNodes.length,shapes:shapes.length,texts:texts.length,edges:edges.length});
       }
-      result.xml=verifyXml(native,await parseXml(page,xml));
       if(name==='graph-detail'){
         const guides=native.edges.filter(e=>e.id.startsWith('detail/guide/'));
         assert.equal(guides.length,2);assert.ok(guides.every(e=>!e.parent),'guides must remain outside both native modules');
@@ -177,16 +138,12 @@ try{
         for(const value of ['Raw observations','Retained result','Regular connection','Between motifs','Ordinary annotation']){const t=native.texts.find(t=>t.value===value);assert.ok(t,`ordinary label ${value} missing`);assert.equal(moduleOf(t,native),null);}
       }
       const renamed=structuredClone(source);renamed.texts[0].text='Independently renamed module';
-      await load(renamed);const after=await page.evaluate(collectEditableScene);
+      await load(renamed);const after=await page.evaluate(collectMeasuredScene);
       assert.deepEqual(after.shapes.map(s=>[s.box,s.matrix,s.attributes]),native.shapes.map(s=>[s.box,s.matrix,s.attributes]),'changing one module name must not move or change a shape');
       assert.deepEqual(after.edges,native.edges,'changing one name must not change edge geometry/topology');
       assert.deepEqual(after.groups.filter(g=>g.kind==='node').map(g=>[g.sourceId,g.box]),native.groups.filter(g=>g.kind==='node').map(g=>[g.sourceId,g.box]),'changing one name must not move nodes');
       assert.equal(after.texts.filter(t=>t.value==='Independently renamed module').length,1);
-      const nativeEdit=structuredClone(native),editable=nativeEdit.texts.find(t=>t.value===source.texts[0].text);assert.ok(editable);editable.value='Native name edit';
-      const editedXml=toDrawio(nativeEdit);fs.writeFileSync(path.join(dir,'renamed.drawio'),editedXml);
-      const beforeCells=await parseXml(page,xml),afterCells=await parseXml(page,editedXml);
-      assert.deepEqual(afterCells.map(c=>({...c,attributes:{...c.attributes,value:''}})),beforeCells.map(c=>({...c,attributes:{...c.attributes,value:''}})),'native name-only edit must preserve every cell geometry and style');
-      result.rename={sourceNameEditKeepsShapes:true,nativeNameEditKeepsAllGeometry:true};result.passed=true;
+      result.rename={sourceNameEditKeepsShapes:true};result.passed=true;
     }catch(error){result.error=error.stack;fs.writeFileSync(path.join(dir,'failure.txt'),error.stack);}
     console.log(`${result.passed?'PASS':'FAIL'} ${name}`);
   }

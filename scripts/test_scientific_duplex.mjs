@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {duplexParts} from '../skills/musedraw/scripts/engine/scientific-duplex.mjs';
 import {scientificMotif} from '../skills/musedraw/scripts/engine/scientific-motifs.mjs';
-import {pathCommands} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {pathCommands} from '../skills/musedraw/scripts/engine/svg-path.mjs';
 
 const p={focus:'#3563C4',warm:'#C65B59',neutral:'#9BA6B2'};
 const base={id:'duplex',type:'scientific',kind:'duplex',x:25,y:30,w:500,h:130,turns:3,phase:17,amplitude:22,sites:[{id:'site/one',at:.08,marks:['a']},{id:'site two',at:.42,marks:['a','b']},{id:'empty',at:.7,marks:[]}]};

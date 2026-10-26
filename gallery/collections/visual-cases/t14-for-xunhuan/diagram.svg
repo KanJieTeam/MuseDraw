@@ -1,0 +1,56 @@
+<svg data-theme="terminal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>for 循环的执行过程</title>
+<g data-md-layer="终端">
+<rect width="1600" height="1000" fill="#0D1117"/>
+<text id="title" x="80" y="100" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="34" fill="#8B949E" font-weight="700"># for 循环一步一步怎么执行</text>
+<text x="80" y="144" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#8B949E"># 求 1 + 2 + 3 + 4 + 5</text>
+<rect x="80" y="200" width="700" height="300" rx="10" fill="#161B22" stroke="#30363D"/>
+<text x="100" y="234" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">sum.py</text>
+<rect x="81" y="380" width="698" height="44" fill="#1F2A37"/>
+<text x="110" y="312" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#484F58">1</text>
+<text x="160" y="312" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="26" fill="#C9D1D9" xml:space="preserve"><tspan fill="#C9D1D9">total</tspan><tspan fill="#C9D1D9"> = </tspan><tspan fill="#79C0FF">0</tspan></text>
+<text x="110" y="364" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#484F58">2</text>
+<text x="160" y="364" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="26" fill="#C9D1D9" xml:space="preserve"><tspan fill="#FF7B72">for</tspan><tspan fill="#C9D1D9"> i </tspan><tspan fill="#FF7B72">in</tspan><tspan fill="#C9D1D9"> </tspan><tspan fill="#D2A8FF">range</tspan><tspan fill="#C9D1D9">(</tspan><tspan fill="#79C0FF">1</tspan><tspan fill="#C9D1D9">, </tspan><tspan fill="#79C0FF">6</tspan><tspan fill="#C9D1D9">):</tspan></text>
+<text x="110" y="416" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#484F58">3</text>
+<text x="160" y="416" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="26" fill="#C9D1D9" xml:space="preserve"><tspan fill="#C9D1D9">    total</tspan><tspan fill="#C9D1D9"> = </tspan><tspan fill="#C9D1D9">total + i</tspan></text>
+<text x="110" y="468" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#484F58">4</text>
+<text x="160" y="468" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="26" fill="#C9D1D9" xml:space="preserve"><tspan fill="#D2A8FF">print</tspan><tspan fill="#C9D1D9">(total)</tspan></text>
+<path d="M770 418 C830 418 830 364 776 364" fill="none" stroke="#E3B341" stroke-width="2.4"/>
+<path d="M776 364 L786.6 358.37 L786.6 369.63 Z" fill="#E3B341"/>
+<text x="840" y="378" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#E3B341" font-weight="500">range 里还有下一个 i 吗？有就回到第 2 行</text>
+<path d="M64 352 C30 352 30 456 64 456" fill="none" stroke="#79C0FF" stroke-width="2.4"/>
+<path d="M66 456 L55.4 461.63 L55.4 450.37 Z" fill="#79C0FF"/>
+<text x="40" y="534" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#79C0FF" font-weight="500">取完了，跳到第 4 行</text>
+<rect x="900" y="440" width="620" height="420" rx="10" fill="#161B22" stroke="#30363D"/>
+<text x="930" y="484" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#8B949E" font-weight="700">轮次</text>
+<text x="1040" y="484" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#8B949E" font-weight="700">i</text>
+<text x="1140" y="484" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#8B949E" font-weight="700">执行前 total</text>
+<text x="1350" y="484" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#8B949E" font-weight="700">执行后 total</text>
+<text x="930" y="530" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">1</text>
+<text x="1040" y="530" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#79C0FF">1</text>
+<text x="1140" y="530" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">0</text>
+<text x="1350" y="530" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#E3B341" font-weight="700">1</text>
+<text x="930" y="582" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">2</text>
+<text x="1040" y="582" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#79C0FF">2</text>
+<text x="1140" y="582" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">1</text>
+<text x="1350" y="582" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#E3B341" font-weight="700">3</text>
+<text x="930" y="634" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">3</text>
+<text x="1040" y="634" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#79C0FF">3</text>
+<text x="1140" y="634" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">3</text>
+<text x="1350" y="634" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#E3B341" font-weight="700">6</text>
+<text x="930" y="686" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">4</text>
+<text x="1040" y="686" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#79C0FF">4</text>
+<text x="1140" y="686" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">6</text>
+<text x="1350" y="686" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#E3B341" font-weight="700">10</text>
+<text x="930" y="738" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">5</text>
+<text x="1040" y="738" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#79C0FF">5</text>
+<text x="1140" y="738" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#C9D1D9">10</text>
+<text x="1350" y="738" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="24" fill="#E3B341" font-weight="700">15</text>
+<text x="930" y="790" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#8B949E">结束：range(1, 6) 只给出 1 到 5</text>
+<rect x="80" y="560" width="700" height="300" rx="10" fill="#010409" stroke="#30363D"/>
+<text x="110" y="620" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="26" fill="#3FB950" font-weight="500">$ python sum.py</text>
+<text x="110" y="674" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="40" fill="#C9D1D9" font-weight="700">15</text>
+<text x="110" y="740" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="26" fill="#3FB950" font-weight="500">$ ▍</text>
+<text x="80" y="930" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#8B949E"># range(1, 6) 包含 1，不包含 6，所以循环体正好执行 5 次</text>
+</g>
+</svg>

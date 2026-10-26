@@ -60,7 +60,7 @@ try{
  });
  const assets=new Map(),prompts=new Map();
  await check('all-108-user-cases-published-assets-match-source',async()=>{
-  const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','diagram.drawio','preview.jpg','checks.json'].map(filename=>({item,filename})));
+  const tasks=items.flatMap(item=>['scene.json','prompt.md','diagram.svg','preview.jpg','checks.json'].map(filename=>({item,filename})));
   for(let index=0;index<tasks.length;index+=12)await Promise.all(tasks.slice(index,index+12).map(async({item,filename})=>{const source=`${item.path}/${filename}`;assert.equal(item.path,`gallery/${item.slug}`);const remote=await fetchBytes(new URL(source,url)),local=await fs.readFile(path.join(repo,source));assert.ok(matches(remote,local,filename),`${source}: published content differs from original`);const entry={slug:item.slug,format:filename,bytes:remote.length,sha256:hash(remote)};assets.set(source,entry);report.httpAssets.push(entry);if(filename==='prompt.md'){prompt(remote.toString('utf8'));prompts.set(item.slug,bilingual.items[item.slug].zh);}}));
   return {cases:108,files:630};
  });
@@ -105,7 +105,7 @@ try{
   const item=items[0],expected=(await copiedBrief(item,prompts.get(item.slug)))+'\n只需 PNG。';
   await page.locator(`#gallery [data-fast="${item.slug}"]`).click();
   await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);
-  assert.doesNotMatch(expected,/--no-drawio|--font-mode|npm |musedraw\.mjs/);
+  assert.doesNotMatch(expected,/--font-mode|npm |musedraw\.mjs/);
   await page.locator(`#gallery [data-preview="${item.slug}"]`).click();
   await page.locator('#preview-details [data-prompt-language="en"]').click();
   await page.locator('#preview-details [data-fast]').click();
@@ -159,14 +159,14 @@ try{
  });
  await check('preview-details-retain-prompt-actions-and-downloads',async()=>{
   await selectFilter('collection','all');const item=items[0];await page.locator(`#gallery [data-preview="${item.slug}"]`).click();await page.waitForFunction(expected=>document.querySelector('.detail-prompt').textContent===expected,prompts.get(item.slug));
-  for(const filename of ['diagram.drawio','diagram.svg','scene.json'])assert.equal(await page.locator(`#preview-details a[download][href="${item.path}/${filename}"]`).count(),1);
+  for(const filename of ['diagram.svg','scene.json'])assert.equal(await page.locator(`#preview-details a[download][href="${item.path}/${filename}"]`).count(),1);
   const expected=await copiedBrief(item,prompts.get(item.slug));await page.locator(`#preview-details [data-copy="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).replace(/\r\n/g,'\n')===expected,expected);
   await page.locator(`#preview-details [data-replay="${item.slug}"]`).click();await page.waitForFunction(async expected=>(await navigator.clipboard.readText()).includes(expected),`https://raw.githubusercontent.com/KanJieTeam/MuseDraw/main/gallery/${item.slug}/scene.json`);await page.locator('#close-preview').click();
  });
- await check('real-drawio-svg-and-scene-downloads-match-published-bytes',async()=>{
-  await selectFilter('collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.drawio','diagram.svg','scene.json']){
+ await check('real-svg-and-scene-downloads-match-published-bytes',async()=>{
+  await selectFilter('collection','all');for(const item of [items[0],items.at(-1)])for(const filename of ['diagram.svg','scene.json']){
    const source=`${item.path}/${filename}`,locator=page.locator(`[data-item="${item.slug}"] a[download][href="${source}"]`);const [download]=await Promise.all([page.waitForEvent('download'),locator.click()]);assert.equal(await download.failure(),null);const target=path.join(scratch,`download-${report.downloads.length}-${filename}`);await download.saveAs(target);const bytes=await fs.readFile(target);assert.equal(hash(bytes),assets.get(source).sha256);report.downloads.push({source,filename:download.suggestedFilename(),bytes:bytes.length,sha256:hash(bytes)});
-  }return {byteExactDownloads:6,formats:['drawio','svg','json']};
+  }return {byteExactDownloads:4,formats:['svg','json']};
  });
  await check('restored-web-gallery-navigation-sharing-install-and-legacy-entry',async()=>{
   await page.setViewportSize({width:1440,height:1000});await page.locator('#reset-filters').click();assert.equal(await page.locator('#style-options [data-style]').count(),21);
@@ -202,6 +202,6 @@ try{
   assert.ok(bytes.length<1024*1024);assert.equal(bytes.readUInt32LE(0),0x04034b50);
   assert.equal(await page.locator('#download-skill').getAttribute('href'),'downloads/musedraw-skill.zip');
  });
- report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 108 cases, 20 themes, 6 byte-exact downloads.`);
+ report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 108 cases, 20 themes, ${report.downloads.length} byte-exact downloads.`);
 }catch(error){report.status='failed';report.error=error.message;if(page&&!page.isClosed())await screenshot('failure.png').catch(()=>{});console.error(error.stack);process.exitCode=1;}
 finally{await fs.writeFile(path.join(output,'report.json'),JSON.stringify(report,null,2)+'\n');await browser?.close();if(server)await new Promise(resolve=>server.close(resolve));const real=await fs.realpath(scratch).catch(()=>null),temp=await fs.realpath(os.tmpdir()),relative=real&&path.relative(temp,real);assert.ok(real===scratchReal&&relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&path.basename(scratch).startsWith('musedraw-gallery-qa-'),'Refusing an unverified scratch cleanup');await fs.rm(scratch,{recursive:true,force:true});}

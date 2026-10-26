@@ -21,7 +21,7 @@ for(const id of ['all',...themes]){const node=button('','style',id,'style-option
 function link(text,href,download=false){const a=element('a','',text);a.href=href;if(download)a.setAttribute('download','');return a;}
 function toast(text){$('status').textContent=text;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('status').textContent='',3200);}
 function favoriteButton(item){const saved=favorites.has(item.slug),node=button(saved?'♥':'♡','favorite',item.slug,'favorite-button');node.setAttribute('aria-label',`${saved?'取消收藏':'收藏'} ${item.title}`);node.setAttribute('aria-pressed',String(saved));return node;}
-function downloads(item,includeDrawio=true){const node=element('div','downloads');for(const [label,file]of [['drawio','diagram.drawio'],['SVG','diagram.svg'],['场景','scene.json']])if(includeDrawio||file!=='diagram.drawio')node.append(link(label,`${item.path}/${file}`,true));node.append(link('原始需求',`${item.path}/prompt.md`));return node;}
+function downloads(item){const node=element('div','downloads');for(const [label,file]of [['SVG','diagram.svg'],['场景','scene.json']])node.append(link(label,`${item.path}/${file}`,true));node.append(link('原始需求',`${item.path}/prompt.md`));return node;}
 function actions(item){const node=element('div','case-actions');node.append(button('复制简短需求','copy',item.slug,'copy-button'),button('快速 PNG','fast',item.slug,'replay-button'),button('原样复刻','replay',item.slug,'replay-button'));return node;}
 function card(item,index){
  const article=element('article','case-card');article.dataset.item=item.slug;
@@ -73,10 +73,9 @@ async function updateDetails(item){
  const meta=element('p','detail-meta',`${categories[item.category]} · ${themeNames[item.theme]} · ${statuses[item.status]}`);
  const title=element('div','detail-heading');title.append(element('h3','',themeNames[item.theme]),favoriteButton(item));
  const colors=element('div','detail-swatches');colors.append(swatches(item.theme));
- const download=link('下载可编辑 drawio ↓',`${item.path}/diagram.drawio`,true);download.className='detail-download';
  const share=button('复制这张图的链接 ↗','share',item.slug,'share-button');
  const request=link('这个风格还差点？提建议 ↗',issueUrl(item));request.id='request-detail';request.className='request-link';request.target='_blank';request.rel='noopener noreferrer';
- const prompt=element('p','detail-prompt','正在加载简短需求…');details.append(meta,title,colors,element('p','detail-description',item.subtitle),download,downloads(item,false),element('h4','','几句话，开始画图'),languageControls(),prompt,actions(item),element('p','detail-note','复制需求，换成你的内容；原样复刻则沿用完整场景。PNG 保留纹理与光效，drawio 用来继续编辑。'),share,request);updateLanguageButtons();
+ const prompt=element('p','detail-prompt','正在加载简短需求…');details.append(meta,title,colors,element('p','detail-description',item.subtitle),downloads(item),element('h4','','几句话，开始画图'),languageControls(),prompt,actions(item),element('p','detail-note','复制需求，换成你的内容；原样复刻则沿用完整场景。PNG 保留纹理与光效，SVG 与场景 JSON 用于继续创作。'),share,request);updateLanguageButtons();
  try{const text=await promptFor(item);if(activeItem?.slug===item.slug)prompt.textContent=text;}catch(error){prompt.textContent=error.message;}
 }
 async function handleAction(event){

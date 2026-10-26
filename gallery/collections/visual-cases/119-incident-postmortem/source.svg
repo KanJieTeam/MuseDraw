@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>故障复盘：缓存集中过期</title>
+<defs><pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3" cy="3" r="1.6" fill="#141414"/></pattern></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#ECE9E2"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="报头">
+<text x="800" y="108" font-family="'Noto Serif CJK SC', serif" font-size="76" font-weight="900" fill="#141414" text-anchor="middle" letter-spacing="12">运维日报</text>
+<line x1="60" y1="130" x2="1540" y2="130" stroke="#141414" stroke-width="3"/>
+<line x1="60" y1="137" x2="1540" y2="137" stroke="#141414" stroke-width="1"/>
+<text x="60" y="162" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414">2026 年 10 月 19 日　星期一</text>
+<text x="800" y="162" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#141414" text-anchor="middle">故障复盘专刊</text>
+<text x="1540" y="162" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414" text-anchor="end">第 113 期</text>
+<line x1="60" y1="176" x2="1540" y2="176" stroke="#141414" stroke-width="1"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="头条">
+<text x="800" y="250" font-family="'Noto Serif CJK SC', serif" font-size="58" font-weight="900" fill="#141414" text-anchor="middle">缓存集中过期，订单服务降级 47 分钟</text>
+<text x="800" y="296" font-family="'Noto Serif CJK SC', serif" font-size="21" fill="#555555" text-anchor="middle">一次配置发布把商品缓存的过期时间统一成 10 分钟；十分钟后缓存同时失效，数据库连接被打满。</text>
+<line x1="60" y1="322" x2="1540" y2="322" stroke="#141414" stroke-width="1.5"/>
+<line x1="450" y1="344" x2="450" y2="960" stroke="#2A2A2A" stroke-width="0.8"/>
+<line x1="1070" y1="344" x2="1070" y2="960" stroke="#2A2A2A" stroke-width="0.8"/>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="时间线">
+<text x="60" y="372" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">经过</text>
+<text x="60" y="412" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:02</text>
+<text x="136" y="412" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">配置发布：商品缓存的过期时间统一改</tspan><tspan x="136" dy="24.6">为 10 分钟</tspan></text>
+<text x="60" y="478" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:12</text>
+<text x="136" y="478" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">缓存同时过期，数据库 QPS 从 3,000</tspan><tspan x="136" dy="24.6">升到 21,000</tspan></text>
+<text x="60" y="544" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:15</text>
+<text x="136" y="544" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">告警：下单成功率低于 99%</tspan></text>
+<text x="60" y="585" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:19</text>
+<text x="136" y="585" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">值班确认告警</tspan></text>
+<text x="60" y="626" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:31</text>
+<text x="136" y="626" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">定位到缓存集中过期</tspan></text>
+<text x="60" y="667" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:46</text>
+<text x="136" y="667" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">回滚配置，预热热点商品</tspan></text>
+<text x="60" y="708" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="700" fill="#141414">14:59</text>
+<text x="136" y="708" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="136" dy="0">下单成功率回到 99.9% 以上</tspan></text>
+<line x1="60" y1="749" x2="430" y2="749" stroke="#141414" stroke-width="1"/>
+<text x="60" y="805" font-family="'Noto Serif CJK SC', serif" font-size="44" font-weight="900" fill="#141414">3</text>
+<text x="90.15" y="805" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#141414">分钟</text>
+<text x="60" y="831" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#555555">发现</text>
+<text x="185" y="805" font-family="'Noto Serif CJK SC', serif" font-size="44" font-weight="900" fill="#141414">4</text>
+<text x="215.15" y="805" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#141414">分钟</text>
+<text x="185" y="831" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#555555">确认</text>
+<text x="310" y="805" font-family="'Noto Serif CJK SC', serif" font-size="44" font-weight="900" fill="#141414">47</text>
+<text x="364.29" y="805" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#141414">分钟</text>
+<text x="310" y="831" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#555555">恢复</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="图表">
+<text x="470" y="372" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">下单成功率</text>
+<path d="M520.0,410.0 L520.0,410.3 L526.5,410.7 L533.0,410.5 L539.5,410.4 L546.0,410.2 L552.5,410.4 L559.0,410.6 L565.5,410.3 L572.0,410.6 L578.5,410.2 L585.0,410.4 L591.5,410.1 L598.0,410.4 L604.5,410.5 L611.0,410.6 L617.5,410.4 L624.0,410.3 L630.5,410.2 L637.0,410.3 L643.5,410.5 L650.0,410.3 L656.5,410.6 L663.0,410.4 L669.5,444.9 L676.0,479.4 L682.5,513.9 L689.0,548.4 L695.5,582.9 L702.0,616.2 L708.5,636.2 L715.0,599.4 L721.5,607.9 L728.0,618.5 L734.5,636.2 L741.0,615.4 L747.5,618.5 L754.0,633.9 L760.5,635.2 L767.0,603.2 L773.5,631.4 L780.0,617.2 L786.5,601.2 L793.0,636.2 L799.5,594.5 L806.0,607.6 L812.5,635.6 L819.0,636.2 L825.5,636.2 L832.0,608.9 L838.5,636.2 L845.0,608.9 L851.5,621.8 L858.0,636.2 L864.5,633.2 L871.0,630.9 L877.5,628.6 L884.0,624.7 L890.5,608.2 L897.0,591.8 L903.5,575.3 L910.0,558.9 L916.5,542.4 L923.0,525.9 L929.5,509.5 L936.0,493.0 L942.5,476.6 L949.0,460.1 L955.5,443.7 L962.0,427.2 L968.5,410.4 L975.0,410.7 L981.5,410.4 L988.0,410.4 L994.5,410.6 L1001.0,410.4 L1007.5,410.6 L1014.0,410.5 L1020.5,410.5 L1027.0,410.2 L1033.5,410.5 L1040.0,410.6 L1040.0,410.0 Z" fill="url(#ht)" opacity="0.85"/>
+<path d="M520.0,410.3 L526.5,410.7 L533.0,410.5 L539.5,410.4 L546.0,410.2 L552.5,410.4 L559.0,410.6 L565.5,410.3 L572.0,410.6 L578.5,410.2 L585.0,410.4 L591.5,410.1 L598.0,410.4 L604.5,410.5 L611.0,410.6 L617.5,410.4 L624.0,410.3 L630.5,410.2 L637.0,410.3 L643.5,410.5 L650.0,410.3 L656.5,410.6 L663.0,410.4 L669.5,444.9 L676.0,479.4 L682.5,513.9 L689.0,548.4 L695.5,582.9 L702.0,616.2 L708.5,636.2 L715.0,599.4 L721.5,607.9 L728.0,618.5 L734.5,636.2 L741.0,615.4 L747.5,618.5 L754.0,633.9 L760.5,635.2 L767.0,603.2 L773.5,631.4 L780.0,617.2 L786.5,601.2 L793.0,636.2 L799.5,594.5 L806.0,607.6 L812.5,635.6 L819.0,636.2 L825.5,636.2 L832.0,608.9 L838.5,636.2 L845.0,608.9 L851.5,621.8 L858.0,636.2 L864.5,633.2 L871.0,630.9 L877.5,628.6 L884.0,624.7 L890.5,608.2 L897.0,591.8 L903.5,575.3 L910.0,558.9 L916.5,542.4 L923.0,525.9 L929.5,509.5 L936.0,493.0 L942.5,476.6 L949.0,460.1 L955.5,443.7 L962.0,427.2 L968.5,410.4 L975.0,410.7 L981.5,410.4 L988.0,410.4 L994.5,410.6 L1001.0,410.4 L1007.5,410.6 L1014.0,410.5 L1020.5,410.5 L1027.0,410.2 L1033.5,410.5 L1040.0,410.6" fill="none" stroke="#141414" stroke-width="2.4"/>
+<line x1="520" y1="410" x2="1040" y2="410" stroke="#141414" stroke-width="1"/>
+<text x="510" y="645" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="end">70%</text>
+<text x="510" y="568.33" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="end">80%</text>
+<text x="510" y="491.67" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="end">90%</text>
+<text x="510" y="415" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="end">100%</text>
+<line x1="585" y1="640" x2="585" y2="646" stroke="#141414"/>
+<text x="585" y="666" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="middle">14:00</text>
+<line x1="715" y1="640" x2="715" y2="646" stroke="#141414"/>
+<text x="715" y="666" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="middle">14:20</text>
+<line x1="845" y1="640" x2="845" y2="646" stroke="#141414"/>
+<text x="845" y="666" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="middle">14:40</text>
+<line x1="975" y1="640" x2="975" y2="646" stroke="#141414"/>
+<text x="975" y="666" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#141414" text-anchor="middle">15:00</text>
+<line x1="520" y1="640" x2="1040" y2="640" stroke="#141414" stroke-width="1"/>
+<text x="470" y="700" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#555555">图：每分钟一个点，网点部分为失败的下单。</text>
+<text x="470" y="760" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">影响</text>
+<text x="470" y="798" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#141414"><tspan x="470" dy="0">14:12 至 14:59 共 47 分钟，约 11,400 笔下单失败，占这段时间下单</tspan><tspan x="470" dy="29.7">量的 22%。支付和物流没有受到影响。</tspan></text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="根因与改进">
+<text x="1090" y="372" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">根因</text>
+<text x="1090" y="410" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#141414"><tspan x="1090" dy="0">过期时间被统一成固定的 10 分钟，没有随机抖动；同一</tspan><tspan x="1090" dy="29.7">批写入的热点键在同一秒失效，请求全部穿透到数据库。</tspan><tspan x="1090" dy="29.7">连接池上限 200，被打满后下单接口超时。</tspan></text>
+<text x="1090" y="600" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">改进项</text>
+<line x1="1090" y1="616" x2="1540" y2="616" stroke="#141414" stroke-width="1.5"/>
+<text x="1090" y="652" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">过期时间加 ±20% 随机抖动</text>
+<text x="1090" y="676" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#555555">负责：缓存组　截止：10 月 23 日</text>
+<line x1="1090" y1="692" x2="1540" y2="692" stroke="#141414" stroke-width="0.6"/>
+<text x="1090" y="716" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">配置发布接入灰度和自动回滚</text>
+<text x="1090" y="740" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#555555">负责：平台组　截止：11 月 6 日</text>
+<line x1="1090" y1="756" x2="1540" y2="756" stroke="#141414" stroke-width="0.6"/>
+<text x="1090" y="780" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">连接池使用率超过 80% 告警</text>
+<text x="1090" y="804" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#555555">负责：DBA　截止：10 月 21 日</text>
+<line x1="1090" y1="820" x2="1540" y2="820" stroke="#141414" stroke-width="0.6"/>
+<text x="1090" y="844" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">热点键提前续期</text>
+<text x="1090" y="868" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#555555">负责：订单组　截止：10 月 30 日</text>
+<line x1="1090" y1="884" x2="1540" y2="884" stroke="#141414" stroke-width="0.6"/>
+</g>
+</svg>

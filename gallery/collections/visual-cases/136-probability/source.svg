@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>可能性</title>
+<defs><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#150A2E"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="像素网格">
+<line x1="0" y1="0" x2="0" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="40" y1="0" x2="40" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="80" y1="0" x2="80" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="120" y1="0" x2="120" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="160" y1="0" x2="160" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="200" y1="0" x2="200" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="240" y1="0" x2="240" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="280" y1="0" x2="280" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="320" y1="0" x2="320" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="360" y1="0" x2="360" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="400" y1="0" x2="400" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="440" y1="0" x2="440" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="480" y1="0" x2="480" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="520" y1="0" x2="520" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="560" y1="0" x2="560" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="600" y1="0" x2="600" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="640" y1="0" x2="640" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="680" y1="0" x2="680" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="720" y1="0" x2="720" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="760" y1="0" x2="760" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="800" y1="0" x2="800" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="840" y1="0" x2="840" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="880" y1="0" x2="880" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="920" y1="0" x2="920" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="960" y1="0" x2="960" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1000" y1="0" x2="1000" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1040" y1="0" x2="1040" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1080" y1="0" x2="1080" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1120" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1160" y1="0" x2="1160" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1200" y1="0" x2="1200" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1240" y1="0" x2="1240" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1280" y1="0" x2="1280" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1320" y1="0" x2="1320" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1360" y1="0" x2="1360" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1400" y1="0" x2="1400" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1440" y1="0" x2="1440" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1480" y1="0" x2="1480" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1520" y1="0" x2="1520" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1560" y1="0" x2="1560" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1600" y1="0" x2="1600" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="0" x2="1600" y2="0" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="40" x2="1600" y2="40" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="80" x2="1600" y2="80" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="120" x2="1600" y2="120" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="160" x2="1600" y2="160" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="200" x2="1600" y2="200" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="240" x2="1600" y2="240" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="280" x2="1600" y2="280" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="320" x2="1600" y2="320" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="360" x2="1600" y2="360" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="400" x2="1600" y2="400" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="440" x2="1600" y2="440" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="480" x2="1600" y2="480" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="520" x2="1600" y2="520" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="560" x2="1600" y2="560" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="600" x2="1600" y2="600" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="640" x2="1600" y2="640" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="680" x2="1600" y2="680" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="720" x2="1600" y2="720" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="760" x2="1600" y2="760" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="800" x2="1600" y2="800" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="840" x2="1600" y2="840" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="880" x2="1600" y2="880" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="920" x2="1600" y2="920" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="960" x2="1600" y2="960" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="1000" x2="1600" y2="1000" stroke="#211347" stroke-width="1"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="80" y="130" font-family="'Noto Sans CJK SC', sans-serif" font-size="88" font-weight="900" fill="#FFE45E" filter="url(#glow)" letter-spacing="8">可能性</text>
+<text x="84" y="178" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#E9E4FF">袋子里有 5 个红球、3 个蓝球、2 个黄球，摸一个再放回去，一共摸 100 次（程序模拟）</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="袋子">
+<path d="M120,300 H520 V700 H120 Z" fill="none" stroke="#2DE2E6" stroke-width="4" filter="url(#glow)"/>
+<path d="M150,300 L190,250 H450 L490,300" fill="none" stroke="#2DE2E6" stroke-width="4"/>
+<rect x="150" y="350" width="60" height="60" fill="#FF4D6D" filter="url(#glow)"/>
+<rect x="242" y="350" width="60" height="60" fill="#FF4D6D" filter="url(#glow)"/>
+<rect x="334" y="350" width="60" height="60" fill="#FF4D6D" filter="url(#glow)"/>
+<rect x="426" y="350" width="60" height="60" fill="#FF4D6D" filter="url(#glow)"/>
+<rect x="150" y="450" width="60" height="60" fill="#FF4D6D" filter="url(#glow)"/>
+<rect x="242" y="450" width="60" height="60" fill="#4DA6FF" filter="url(#glow)"/>
+<rect x="334" y="450" width="60" height="60" fill="#4DA6FF" filter="url(#glow)"/>
+<rect x="426" y="450" width="60" height="60" fill="#4DA6FF" filter="url(#glow)"/>
+<rect x="150" y="550" width="60" height="60" fill="#FFD84D" filter="url(#glow)"/>
+<rect x="242" y="550" width="60" height="60" fill="#FFD84D" filter="url(#glow)"/>
+<text x="320" y="750" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="800" fill="#2DE2E6" text-anchor="middle">10 个球</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="100 次结果">
+<text x="640" y="280" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#E9E4FF">每一格是一次摸球</text>
+<rect x="640" y="300" width="28" height="28" fill="#FFD84D"/>
+<rect x="674" y="300" width="28" height="28" fill="#4DA6FF"/>
+<rect x="708" y="300" width="28" height="28" fill="#FFD84D"/>
+<rect x="742" y="300" width="28" height="28" fill="#FF4D6D"/>
+<rect x="776" y="300" width="28" height="28" fill="#4DA6FF"/>
+<rect x="810" y="300" width="28" height="28" fill="#4DA6FF"/>
+<rect x="844" y="300" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="300" width="28" height="28" fill="#4DA6FF"/>
+<rect x="912" y="300" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="300" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="334" width="28" height="28" fill="#4DA6FF"/>
+<rect x="674" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="708" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="742" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="776" y="334" width="28" height="28" fill="#FFD84D"/>
+<rect x="810" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="844" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="912" y="334" width="28" height="28" fill="#FFD84D"/>
+<rect x="946" y="334" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="368" width="28" height="28" fill="#FFD84D"/>
+<rect x="674" y="368" width="28" height="28" fill="#4DA6FF"/>
+<rect x="708" y="368" width="28" height="28" fill="#4DA6FF"/>
+<rect x="742" y="368" width="28" height="28" fill="#4DA6FF"/>
+<rect x="776" y="368" width="28" height="28" fill="#FF4D6D"/>
+<rect x="810" y="368" width="28" height="28" fill="#FF4D6D"/>
+<rect x="844" y="368" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="368" width="28" height="28" fill="#FFD84D"/>
+<rect x="912" y="368" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="368" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="674" y="402" width="28" height="28" fill="#4DA6FF"/>
+<rect x="708" y="402" width="28" height="28" fill="#FFD84D"/>
+<rect x="742" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="776" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="810" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="844" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="402" width="28" height="28" fill="#4DA6FF"/>
+<rect x="912" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="402" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="436" width="28" height="28" fill="#FFD84D"/>
+<rect x="674" y="436" width="28" height="28" fill="#4DA6FF"/>
+<rect x="708" y="436" width="28" height="28" fill="#FF4D6D"/>
+<rect x="742" y="436" width="28" height="28" fill="#FFD84D"/>
+<rect x="776" y="436" width="28" height="28" fill="#FFD84D"/>
+<rect x="810" y="436" width="28" height="28" fill="#FFD84D"/>
+<rect x="844" y="436" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="436" width="28" height="28" fill="#FFD84D"/>
+<rect x="912" y="436" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="436" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="470" width="28" height="28" fill="#FFD84D"/>
+<rect x="674" y="470" width="28" height="28" fill="#4DA6FF"/>
+<rect x="708" y="470" width="28" height="28" fill="#FFD84D"/>
+<rect x="742" y="470" width="28" height="28" fill="#FFD84D"/>
+<rect x="776" y="470" width="28" height="28" fill="#FF4D6D"/>
+<rect x="810" y="470" width="28" height="28" fill="#FFD84D"/>
+<rect x="844" y="470" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="470" width="28" height="28" fill="#4DA6FF"/>
+<rect x="912" y="470" width="28" height="28" fill="#4DA6FF"/>
+<rect x="946" y="470" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="504" width="28" height="28" fill="#FF4D6D"/>
+<rect x="674" y="504" width="28" height="28" fill="#4DA6FF"/>
+<rect x="708" y="504" width="28" height="28" fill="#FF4D6D"/>
+<rect x="742" y="504" width="28" height="28" fill="#4DA6FF"/>
+<rect x="776" y="504" width="28" height="28" fill="#FF4D6D"/>
+<rect x="810" y="504" width="28" height="28" fill="#4DA6FF"/>
+<rect x="844" y="504" width="28" height="28" fill="#4DA6FF"/>
+<rect x="878" y="504" width="28" height="28" fill="#4DA6FF"/>
+<rect x="912" y="504" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="504" width="28" height="28" fill="#4DA6FF"/>
+<rect x="640" y="538" width="28" height="28" fill="#4DA6FF"/>
+<rect x="674" y="538" width="28" height="28" fill="#FF4D6D"/>
+<rect x="708" y="538" width="28" height="28" fill="#FF4D6D"/>
+<rect x="742" y="538" width="28" height="28" fill="#FF4D6D"/>
+<rect x="776" y="538" width="28" height="28" fill="#4DA6FF"/>
+<rect x="810" y="538" width="28" height="28" fill="#4DA6FF"/>
+<rect x="844" y="538" width="28" height="28" fill="#4DA6FF"/>
+<rect x="878" y="538" width="28" height="28" fill="#4DA6FF"/>
+<rect x="912" y="538" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="538" width="28" height="28" fill="#FF4D6D"/>
+<rect x="640" y="572" width="28" height="28" fill="#4DA6FF"/>
+<rect x="674" y="572" width="28" height="28" fill="#FF4D6D"/>
+<rect x="708" y="572" width="28" height="28" fill="#4DA6FF"/>
+<rect x="742" y="572" width="28" height="28" fill="#4DA6FF"/>
+<rect x="776" y="572" width="28" height="28" fill="#4DA6FF"/>
+<rect x="810" y="572" width="28" height="28" fill="#4DA6FF"/>
+<rect x="844" y="572" width="28" height="28" fill="#FFD84D"/>
+<rect x="878" y="572" width="28" height="28" fill="#FFD84D"/>
+<rect x="912" y="572" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="572" width="28" height="28" fill="#4DA6FF"/>
+<rect x="640" y="606" width="28" height="28" fill="#4DA6FF"/>
+<rect x="674" y="606" width="28" height="28" fill="#FF4D6D"/>
+<rect x="708" y="606" width="28" height="28" fill="#4DA6FF"/>
+<rect x="742" y="606" width="28" height="28" fill="#4DA6FF"/>
+<rect x="776" y="606" width="28" height="28" fill="#FF4D6D"/>
+<rect x="810" y="606" width="28" height="28" fill="#FFD84D"/>
+<rect x="844" y="606" width="28" height="28" fill="#FF4D6D"/>
+<rect x="878" y="606" width="28" height="28" fill="#FFD84D"/>
+<rect x="912" y="606" width="28" height="28" fill="#FF4D6D"/>
+<rect x="946" y="606" width="28" height="28" fill="#FF4D6D"/>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="计分板">
+<text x="1060" y="330" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="900" fill="#FF4D6D">红球</text>
+<rect x="1140" y="304" width="276" height="32" fill="#FF4D6D" filter="url(#glow)"/>
+<line x1="1440" y1="290" x2="1440" y2="348" stroke="#E9E4FF" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="1454" y="330" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#E9E4FF">46 次</text>
+<text x="1140" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#E9E4FF" opacity="0.7">虚线：按 5/10 估计约 50 次</text>
+<text x="1060" y="450" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="900" fill="#4DA6FF">蓝球</text>
+<rect x="1140" y="424" width="204" height="32" fill="#4DA6FF" filter="url(#glow)"/>
+<line x1="1320" y1="410" x2="1320" y2="468" stroke="#E9E4FF" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="1358" y="450" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#E9E4FF">34 次</text>
+<text x="1140" y="494" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#E9E4FF" opacity="0.7">虚线：按 3/10 估计约 30 次</text>
+<text x="1060" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="900" fill="#FFD84D">黄球</text>
+<rect x="1140" y="544" width="120" height="32" fill="#FFD84D" filter="url(#glow)"/>
+<line x1="1260" y1="530" x2="1260" y2="588" stroke="#E9E4FF" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="1274" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#E9E4FF">20 次</text>
+<text x="1140" y="614" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#E9E4FF" opacity="0.7">虚线：按 2/10 估计约 20 次</text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="结论">
+<text x="640" y="720" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#2DE2E6">红球最多，摸到红球的可能性最大；黄球最少，可能性最小。</text>
+<text x="640" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#FF3EA5">袋子里没有绿球，摸到绿球是不可能的。</text>
+<text x="640" y="812" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#E9E4FF">每次摸到什么不确定，次数多了，结果才接近估计。</text>
+</g>
+</svg>

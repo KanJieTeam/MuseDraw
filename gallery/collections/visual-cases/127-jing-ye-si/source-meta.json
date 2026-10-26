@@ -1,0 +1,38 @@
+{
+  "id": "127",
+  "title": "静夜思",
+  "use": "教学",
+  "style": "水墨宣纸",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "宣纸",
+    "月与夜",
+    "诗",
+    "注释"
+  ],
+  "fonts": [
+    "Noto Serif CJK SC（思源宋体）"
+  ],
+  "features": [
+    "渐变",
+    "半透明"
+  ],
+  "example_data": false,
+  "computed": [
+    "无数值计算；竖排字距按字号 1.18 倍排布，标点占 0.7 倍。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

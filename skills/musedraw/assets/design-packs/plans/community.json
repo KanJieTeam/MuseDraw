@@ -1,0 +1,15 @@
+{
+  "method": "plan",
+  "title": "社区阅读服务三年计划",
+  "periods": ["2027", "2028", "2029"],
+  "metrics": [
+    {"id":"sites","label":"服务点目标","unit":"个","values":[6,10,14]},
+    {"id":"loans","label":"月借阅目标","unit":"册","values":[1200,2100,3200]}
+  ],
+  "work": [
+    {"id":"routes","label":"路线规划","actions":["梳理服务半径","按借阅需求调整站点"]},
+    {"id":"collection","label":"馆藏运营","actions":["建立轮换书单","记录缺书反馈"]},
+    {"id":"volunteers","label":"志愿协作","actions":["统一交接清单","开展岗位培训"]}
+  ],
+  "support": ["借阅数据台账", "服务手册"]
+}

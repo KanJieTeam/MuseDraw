@@ -1,0 +1,43 @@
+<svg data-theme="pastel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+<title>看图写话五要素</title>
+<g data-md-layer="挂图">
+<rect width="1200" height="1600" fill="#FFFFFF"/>
+<text id="title" x="80" y="140" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="72" fill="#3A3A48" font-weight="900">看图写话五要素</text>
+<text x="84" y="196" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#6A6A7A" font-weight="500">二年级语文</text>
+<rect x="80" y="260" width="1040" height="160" rx="32" fill="#FBD6C6"/>
+<circle cx="170" cy="340" r="56" fill="#FFFFFF"/>
+<text x="170" y="356" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="52" fill="#C9583A" font-weight="700" text-anchor="middle">1</text>
+<text x="260" y="330" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" fill="#C9583A" font-weight="900">时间</text>
+<text x="380" y="330" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#3A3A48" font-weight="500">什么时候？</text>
+<text x="260" y="384" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3A3A48">例：星期天早上</text>
+<rect x="80" y="450" width="1040" height="160" rx="32" fill="#CFEBDD"/>
+<circle cx="170" cy="530" r="56" fill="#FFFFFF"/>
+<text x="170" y="546" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="52" fill="#2F8A5C" font-weight="700" text-anchor="middle">2</text>
+<text x="260" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" fill="#2F8A5C" font-weight="900">地点</text>
+<text x="380" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#3A3A48" font-weight="500">在哪里？</text>
+<text x="260" y="574" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3A3A48">例：在公园里</text>
+<rect x="80" y="640" width="1040" height="160" rx="32" fill="#CFE2F6"/>
+<circle cx="170" cy="720" r="56" fill="#FFFFFF"/>
+<text x="170" y="736" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="52" fill="#2F6BA8" font-weight="700" text-anchor="middle">3</text>
+<text x="260" y="710" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" fill="#2F6BA8" font-weight="900">人物</text>
+<text x="380" y="710" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#3A3A48" font-weight="500">有谁？</text>
+<text x="260" y="764" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3A3A48">例：小明和爸爸</text>
+<rect x="80" y="830" width="1040" height="160" rx="32" fill="#FBEFB8"/>
+<circle cx="170" cy="910" r="56" fill="#FFFFFF"/>
+<text x="170" y="926" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="52" fill="#A88A12" font-weight="700" text-anchor="middle">4</text>
+<text x="260" y="900" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" fill="#A88A12" font-weight="900">事情</text>
+<text x="380" y="900" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#3A3A48" font-weight="500">在做什么？</text>
+<text x="260" y="954" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3A3A48">例：放风筝</text>
+<rect x="80" y="1020" width="1040" height="160" rx="32" fill="#E3D8F3"/>
+<circle cx="170" cy="1100" r="56" fill="#FFFFFF"/>
+<text x="170" y="1116" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="52" fill="#6E4FA8" font-weight="700" text-anchor="middle">5</text>
+<text x="260" y="1090" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" fill="#6E4FA8" font-weight="900">结果</text>
+<text x="380" y="1090" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#3A3A48" font-weight="500">怎么样？心情呢？</text>
+<text x="260" y="1144" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3A3A48">例：风筝飞得很高，他们笑得很开心</text>
+<rect x="80" y="1240" width="1040" height="260" rx="32" fill="#F3F4F7"/>
+<text x="120" y="1304" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#6A6A7A" font-weight="700">连起来就是一段话</text>
+<text x="120" y="1374" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="700"><tspan fill="#C9583A">星期天早上，</tspan><tspan fill="#2F6BA8">小明和爸爸</tspan><tspan fill="#2F8A5C">在公园里</tspan><tspan fill="#A88A12">放风筝。</tspan></text>
+<text x="120" y="1436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="700"><tspan fill="#6E4FA8">风筝飞得很高，他们笑得很开心。</tspan></text>
+<text x="80" y="1560" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#6A6A7A">颜色和上面五张卡片一一对应，写完对照着检查有没有漏掉。</text>
+</g>
+</svg>

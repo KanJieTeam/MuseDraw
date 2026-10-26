@@ -7,7 +7,6 @@ import os from 'node:os';
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
 import { assertStaticSvg } from './safety.mjs';
-import { collectEditableScene, toDrawio } from './drawio.mjs';
 
 // Family -> npm package and stylesheet files (all OFL-licensed fonts).
 export const FONT_PACKAGES = {
@@ -67,7 +66,7 @@ export async function loadPlaywrightInfo(explicit) {
 
 export async function loadPlaywright(explicit) { return (await loadPlaywrightInfo(explicit)).pw; }
 
-export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, drawio = true, fontMode = 'bundled', previewFirst = false, readingProfile = null, onProgress = () => {} }) {
+export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, name = 'diagram', images = true, fontMode = 'bundled', previewFirst = false, readingProfile = null, onProgress = () => {} }) {
   assertStaticSvg(svg);
   const { links, missing } = fontMode === 'system' ? { links: [], missing: [] } : fontStylesheets(svg, fontDirs);
   const tmp = await fsp.mkdtemp(path.join(os.tmpdir(), 'musedraw-'));
@@ -100,7 +99,7 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
     onProgress('checked', { warnings: checks.warnings.length, fontLoads });
     if (previewFirst && images) {
       // Keep the first view small enough for chat/file previews. Restore CSS
-      // before collecting native geometry and making the full-size PNG.
+      // before making the full-size PNG.
       const style = await page.evaluate(({ W, H }) => {
         const svg = document.querySelector('svg'), previous = svg.getAttribute('style');
         const ratio = Math.min(1, 1200 / W, 1000 / H);
@@ -114,13 +113,6 @@ export async function exportScene({ svg, outDir, browser, fontDirs, scale = 2, n
       }
       onProgress('preview', { file: 'preview.jpg', passed: checks.passed });
     }
-    if (drawio) {
-      const started = performance.now();
-      const editable = await page.evaluate(collectEditableScene);
-      await fsp.writeFile(path.join(outDir, `${name}.drawio`), toDrawio(editable));
-      checks.drawio = { native: true, nodes: editable.groups.filter(g => g.kind === 'node').length, edges: editable.edges.length, texts: editable.texts.length, visualEffects: editable.visualEffects, durationMs: Math.round(performance.now() - started) };
-      onProgress('drawio', { file: `${name}.drawio`, durationMs: checks.drawio.durationMs });
-    } else checks.drawio = { skipped: true, reason: 'requested' };
     if (images) {
       const shot = path.join(outDir, `${name}@${scale}x.png`);
       await page.locator('svg').first().screenshot({ path: shot, omitBackground: false });

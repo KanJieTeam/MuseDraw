@@ -9,13 +9,5 @@
   "passed": true,
   "missingFonts": [],
   "fontMode": "system",
-  "drawio": {
-    "native": true,
-    "nodes": 9,
-    "edges": 0,
-    "texts": 46,
-    "visualEffects": [],
-    "durationMs": 14
-  },
   "theme": "pastel"
 }

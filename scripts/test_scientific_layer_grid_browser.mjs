@@ -1,5 +1,5 @@
 // Explicit browser regression; run separately from the offline suite.
-// Optional MUSEDRAW_GRID_EVIDENCE saves the four projection images and native XML.
+// Optional MUSEDRAW_GRID_EVIDENCE saves the four projection images and SVG.
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import fs from 'node:fs';
@@ -9,7 +9,7 @@ import {render} from '../skills/musedraw/scripts/engine/render.mjs';
 import {loadTheme} from '../skills/musedraw/scripts/musedraw.mjs';
 import {resolveBrowser,withSystemFonts} from '../skills/musedraw/scripts/engine/environment.mjs';
 import {loadPlaywrightInfo} from '../skills/musedraw/scripts/engine/export.mjs';
-import {collectEditableScene,toDrawio} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {collectMeasuredScene} from './measure_svg.mjs';
 const base={id:'stack',type:'scientific',kind:'layers'};
 const gridParts=out=>out.paths.filter(part=>part.id.includes('-grid-'));
 const options={};
@@ -65,15 +65,15 @@ test('Chromium confirms four-layer grid strokes are painted and not covered by l
       });
       assert.equal(visibility.gridLines,11);assert.equal(visibility.samples,33);
       assert.deepEqual(visibility.covered,[],`actual browser paint coverage for ${dx},${dy}`);
-      const native=await page.evaluate(collectEditableScene),xml=toDrawio(native);
+      const native=await page.evaluate(collectMeasuredScene);
       const grid=gridParts(scientificMotif(block,theme));
       for(const line of grid)assert.ok(native.shapes.some(shape=>shape.tag==='path'&&shape.attributes.d===line.d),'visible grid stroke must survive native collection');
-      assert.match(xml,/shape=stencil\(/);assert.doesNotMatch(svg+xml,/<image\b|foreignObject|data:image|shape=image/i);
+      assert.doesNotMatch(svg,/<image\b|foreignObject|data:image|shape=image/i);
       report.push({projection:[dx,dy],...visibility,nativeShapes:native.shapes.length,passed:true});
       if(evidence){
         const name=`projection-${dx}-${dy}`;
         await page.screenshot({path:path.join(evidence,`${name}.png`)});
-        fs.writeFileSync(path.join(evidence,`${name}.drawio`),xml);
+        fs.writeFileSync(path.join(evidence,`${name}.svg`),svg);
       }
     }
   }finally{

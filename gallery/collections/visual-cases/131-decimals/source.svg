@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1200" height="1600" viewBox="0 0 1200 1600">
+<title>小数的意义</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1200" height="1600" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="66" y="160" font-family="'Noto Sans CJK SC', sans-serif" font-size="118" font-weight="900" fill="#000000" letter-spacing="-2">小数的意义</text>
+<text x="72" y="214" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" fill="#000000">把 1 平均分成 10 份、100 份</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="百格图">
+<rect x="72" y="280" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="340" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="400" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="460" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="520" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="580" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="640" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="700" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="760" width="60" height="60" fill="#E3241B"/>
+<rect x="72" y="820" width="60" height="60" fill="#E3241B"/>
+<rect x="132" y="280" width="60" height="60" fill="#000000"/>
+<line x1="72" y1="280" x2="72" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="280" x2="672" y2="280" stroke="#000000" stroke-width="1"/>
+<line x1="132" y1="280" x2="132" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="340" x2="672" y2="340" stroke="#000000" stroke-width="1"/>
+<line x1="192" y1="280" x2="192" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="400" x2="672" y2="400" stroke="#000000" stroke-width="1"/>
+<line x1="252" y1="280" x2="252" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="460" x2="672" y2="460" stroke="#000000" stroke-width="1"/>
+<line x1="312" y1="280" x2="312" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="520" x2="672" y2="520" stroke="#000000" stroke-width="1"/>
+<line x1="372" y1="280" x2="372" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="580" x2="672" y2="580" stroke="#000000" stroke-width="1"/>
+<line x1="432" y1="280" x2="432" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="640" x2="672" y2="640" stroke="#000000" stroke-width="1"/>
+<line x1="492" y1="280" x2="492" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="700" x2="672" y2="700" stroke="#000000" stroke-width="1"/>
+<line x1="552" y1="280" x2="552" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="760" x2="672" y2="760" stroke="#000000" stroke-width="1"/>
+<line x1="612" y1="280" x2="612" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="820" x2="672" y2="820" stroke="#000000" stroke-width="1"/>
+<line x1="672" y1="280" x2="672" y2="880" stroke="#000000" stroke-width="1"/>
+<line x1="72" y1="880" x2="672" y2="880" stroke="#000000" stroke-width="1"/>
+<rect x="72" y="280" width="600" height="600" fill="none" stroke="#000000" stroke-width="4"/>
+<text x="72" y="920" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#000000">整个正方形表示 1</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="读数">
+<text x="730" y="450" font-family="'Noto Sans CJK SC', sans-serif" font-size="190" font-weight="900" fill="#E3241B" letter-spacing="-6">0.1</text>
+<text x="738" y="500" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#000000">红色一列：10 份里的 1 份</text>
+<text x="730" y="680" font-family="'Noto Sans CJK SC', sans-serif" font-size="120" font-weight="900" fill="#000000" letter-spacing="-4">0.01</text>
+<text x="738" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#000000">黑色一格：100 份里的 1 份</text>
+<text x="738" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="700" fill="#000000">0.3 = 3 个 0.1</text>
+<text x="738" y="870" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="700" fill="#000000">　　= 30 个 0.01</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="数位表">
+<line x1="72" y1="1000" x2="1128" y2="1000" stroke="#000000" stroke-width="3"/>
+<text x="72" y="1270" font-family="'Noto Sans CJK SC', sans-serif" font-size="240" font-weight="900" fill="#000000" data-ok="1">2</text>
+<text x="78" y="1034" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#767676" data-ok="1">个位</text>
+<text x="330" y="1270" font-family="'Noto Sans CJK SC', sans-serif" font-size="240" font-weight="900" fill="#E3241B" data-ok="1">.</text>
+<text x="450" y="1270" font-family="'Noto Sans CJK SC', sans-serif" font-size="240" font-weight="900" fill="#000000" data-ok="1">3</text>
+<text x="456" y="1034" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#767676" data-ok="1">十分位</text>
+<text x="760" y="1270" font-family="'Noto Sans CJK SC', sans-serif" font-size="240" font-weight="900" fill="#000000" data-ok="1">5</text>
+<text x="766" y="1034" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#767676" data-ok="1">百分位</text>
+<text x="72" y="1330" font-family="'Noto Sans CJK SC', sans-serif" font-size="32" font-weight="700" fill="#000000">2.35 = 2 个 1 + 3 个 0.1 + 5 个 0.01</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="生活中">
+<rect x="0" y="1420" width="1200" height="180" fill="#E3241B"/>
+<text x="72" y="1494" font-family="'Noto Sans CJK SC', sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">1 元 = 10 角 = 100 分</text>
+<text x="72" y="1546" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="500" fill="#FFFFFF">1 角 = 0.1 元　　1 分 = 0.01 元</text>
+</g>
+</svg>

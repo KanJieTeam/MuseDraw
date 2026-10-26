@@ -1,10 +1,10 @@
 # MuseDraw Gallery · 图库
 
-**[打开在线图库 ↗](https://kanjieteam.github.io/MuseDraw/)** · 按风格筛选、看大图、复制需求、下载可编辑 drawio。下面为源文件索引。
+**[打开在线图库 ↗](https://kanjieteam.github.io/MuseDraw/)** · 按风格筛选、看大图、复制需求、下载 SVG 与场景 JSON。下面为源文件索引。
 
 108 个案例全部出图：**20 精选** · **35 已审图** · **53 预览**。机器可读清单：[catalog.json](catalog.json)。
 
-All 108 cases are rendered. Each folder includes native editable `diagram.drawio`, `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
+All 108 main-gallery cases are rendered. The [complete visual case library](collections/visual-cases/index.html) adds all 180 author-supplied works. Each folder includes `scene.json`, `prompt.md`, SVG, preview and layout checks. Render a scene to obtain the full PNG.
 
 
 ## 科研对象与机制 · Original scientific schematics

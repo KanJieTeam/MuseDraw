@@ -8,7 +8,7 @@ import {prepareScene} from '../skills/musedraw/scripts/engine/validate.mjs';
 import {loadTheme} from '../skills/musedraw/scripts/musedraw.mjs';
 import {resolveBrowser,withSystemFonts} from '../skills/musedraw/scripts/engine/environment.mjs';
 import {loadPlaywrightInfo} from '../skills/musedraw/scripts/engine/export.mjs';
-import {collectEditableScene,toDrawio} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {collectMeasuredScene} from './measure_svg.mjs';
 
 const options={out:'output/laminate-contacts-browser'};
 for(let i=2;i<process.argv.length;i++){
@@ -57,26 +57,24 @@ try{
       const dir=path.join(out,spec.name+(dx?'-moved':'-original'));fs.mkdirSync(dir,{recursive:true});
       fs.writeFileSync(path.join(dir,'scene.json'),JSON.stringify(source,null,2)+'\n');fs.writeFileSync(path.join(dir,'diagram.svg'),svg);
       const page=await browser.newPage();await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(svg);await page.evaluate(async()=>await document.fonts.ready);
-      const native=await page.evaluate(collectEditableScene),xml=toDrawio(native);
-      fs.writeFileSync(path.join(dir,'native.json'),JSON.stringify(native,null,2)+'\n');fs.writeFileSync(path.join(dir,'diagram.drawio'),xml);
-      const cells=await page.evaluate(xml=>{const doc=new DOMParser().parseFromString(xml,'application/xml');if(doc.querySelector('parsererror'))throw Error('Invalid native XML');return Object.fromEntries([...doc.querySelectorAll('mxCell')].map(c=>[c.id,Object.fromEntries([...c.attributes].map(a=>[a.name,a.value]))]));},xml);
+      const native=await page.evaluate(collectMeasuredScene);
+      fs.writeFileSync(path.join(dir,'native.json'),JSON.stringify(native,null,2)+'\n');fs.writeFileSync(path.join(dir,'diagram.svg'),svg);
       assert.equal(native.edges.length,spec.contacts.length*2);
       const edges=[];
       for(const contact of spec.contacts){
         const group=native.groups.find(g=>g.kind==='module'&&g.sourceId==='scientific-'+contact.module);assert.ok(group);
         const layerId=contact.prefix+'-layer-active%2F%E8%86%9C';
         assert.ok(prepared.paths.some(p=>p.id===layerId));assert.ok(!prepared.nodes.some(p=>p.id===layerId));
-        for(const layer of layers){const id=contact.prefix+'-layer-'+encodeURIComponent(layer.id),shape=native.shapes.find(s=>s.attributes.id===id);assert.ok(shape,`Missing actual layer path ${id}`);assert.equal(shape.parent,group.id);assert.equal(cells[shape.id].parent,group.id);assert.equal(shape.fill,computedFill(layer.fill));}
+        for(const layer of layers){const id=contact.prefix+'-layer-'+encodeURIComponent(layer.id),shape=native.shapes.find(s=>s.attributes.id===id);assert.ok(shape,`Missing actual layer path ${id}`);assert.equal(shape.parent,group.id);assert.equal(shape.fill,computedFill(layer.fill));}
         for(const side of ['left','right']){
           const id=contact.prefix+'-electrode-'+side,node=prepared.nodes.find(n=>n.id===id),g=nativeNode(native,id);
-          assert.equal(g.parent,group.id);assert.equal(cells[g.id].parent,group.id);
+          assert.equal(g.parent,group.id);
           const inside=await page.evaluate(({layerId,x,y})=>document.getElementById(layerId).isPointInFill(new DOMPoint(x,y)),{layerId,x:node.x+node.w/2,y:node.y+node.h/2});assert.ok(inside,'Electrode centre must lie in the selected layer');
           const edge=native.edges.find(e=>e.from===id);assert.ok(edge);const target=prepared.nodes.find(n=>n.id===edge.to),targetGroup=nativeNode(native,edge.to);
-          assert.equal(targetGroup.parent,null);assert.equal(cells[targetGroup.id].parent,'1');
+          assert.equal(targetGroup.parent,null);
           near(edge.points[0],[node.x+node.w/2,node.y+node.h+2],'actual source contact');
           near(edge.points.at(-1),[target.x+target.w*(side==='left'?.3:.7),target.y-2],'independent fixed readout');
-          const index=native.edges.indexOf(edge),cell=cells['connector-'+(index+1)];assert.equal(cell.source,g.id);assert.equal(cell.target,targetGroup.id);assert.equal(cell.parent,'1');
-          edges.push({from:edge.from,to:edge.to,source:edge.points[0],target:edge.points.at(-1),nativeSource:cell.source,nativeTarget:cell.target});
+          edges.push({from:edge.from,to:edge.to,source:edge.points[0],target:edge.points.at(-1)});
         }
       }
       if(prior){

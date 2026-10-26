@@ -1,0 +1,38 @@
+{
+  "id": "124",
+  "title": "条形统计图",
+  "use": "教学",
+  "style": "科研期刊",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "a 记录表",
+    "b 条形图",
+    "c 读图",
+    "图注"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）",
+    "Noto Serif CJK SC（思源宋体）"
+  ],
+  "features": [],
+  "example_data": true,
+  "computed": [
+    "五项合计 40 人，程序断言；最多、最少和读图题答案由数据算出。",
+    "“正”字的完整个数和余下笔画数由 divmod(人数, 5) 得到。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

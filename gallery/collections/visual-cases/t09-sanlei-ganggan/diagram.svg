@@ -1,0 +1,266 @@
+<svg data-theme="blueprint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>三类杠杆</title>
+<g data-md-layer="图纸">
+<rect width="1600" height="1000" fill="#1F4E8C"/>
+<line x1="0" y1="0" x2="0" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="20" y1="0" x2="20" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="40" y1="0" x2="40" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="60" y1="0" x2="60" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="80" y1="0" x2="80" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="100" y1="0" x2="100" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="120" y1="0" x2="120" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="140" y1="0" x2="140" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="160" y1="0" x2="160" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="180" y1="0" x2="180" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="200" y1="0" x2="200" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="220" y1="0" x2="220" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="240" y1="0" x2="240" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="260" y1="0" x2="260" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="280" y1="0" x2="280" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="300" y1="0" x2="300" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="320" y1="0" x2="320" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="340" y1="0" x2="340" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="360" y1="0" x2="360" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="380" y1="0" x2="380" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="400" y1="0" x2="400" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="420" y1="0" x2="420" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="440" y1="0" x2="440" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="460" y1="0" x2="460" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="480" y1="0" x2="480" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="500" y1="0" x2="500" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="520" y1="0" x2="520" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="540" y1="0" x2="540" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="560" y1="0" x2="560" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="580" y1="0" x2="580" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="600" y1="0" x2="600" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="620" y1="0" x2="620" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="640" y1="0" x2="640" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="660" y1="0" x2="660" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="680" y1="0" x2="680" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="700" y1="0" x2="700" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="720" y1="0" x2="720" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="740" y1="0" x2="740" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="760" y1="0" x2="760" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="780" y1="0" x2="780" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="800" y1="0" x2="800" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="820" y1="0" x2="820" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="840" y1="0" x2="840" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="860" y1="0" x2="860" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="880" y1="0" x2="880" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="900" y1="0" x2="900" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="920" y1="0" x2="920" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="940" y1="0" x2="940" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="960" y1="0" x2="960" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="980" y1="0" x2="980" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1000" y1="0" x2="1000" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="1020" y1="0" x2="1020" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1040" y1="0" x2="1040" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1060" y1="0" x2="1060" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1080" y1="0" x2="1080" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1100" y1="0" x2="1100" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="1120" y1="0" x2="1120" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1140" y1="0" x2="1140" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1160" y1="0" x2="1160" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1180" y1="0" x2="1180" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1200" y1="0" x2="1200" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="1220" y1="0" x2="1220" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1240" y1="0" x2="1240" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1260" y1="0" x2="1260" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1280" y1="0" x2="1280" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1300" y1="0" x2="1300" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="1320" y1="0" x2="1320" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1340" y1="0" x2="1340" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1360" y1="0" x2="1360" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1380" y1="0" x2="1380" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1400" y1="0" x2="1400" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="1420" y1="0" x2="1420" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1440" y1="0" x2="1440" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1460" y1="0" x2="1460" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1480" y1="0" x2="1480" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1500" y1="0" x2="1500" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="1520" y1="0" x2="1520" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1540" y1="0" x2="1540" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1560" y1="0" x2="1560" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1580" y1="0" x2="1580" y2="1000" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="1600" y1="0" x2="1600" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="0" x2="1600" y2="0" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="20" x2="1600" y2="20" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="40" x2="1600" y2="40" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="60" x2="1600" y2="60" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="80" x2="1600" y2="80" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="100" x2="1600" y2="100" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="120" x2="1600" y2="120" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="140" x2="1600" y2="140" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="160" x2="1600" y2="160" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="180" x2="1600" y2="180" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="200" x2="1600" y2="200" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="220" x2="1600" y2="220" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="240" x2="1600" y2="240" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="260" x2="1600" y2="260" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="280" x2="1600" y2="280" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="300" x2="1600" y2="300" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="320" x2="1600" y2="320" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="340" x2="1600" y2="340" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="360" x2="1600" y2="360" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="380" x2="1600" y2="380" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="400" x2="1600" y2="400" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="420" x2="1600" y2="420" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="440" x2="1600" y2="440" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="460" x2="1600" y2="460" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="480" x2="1600" y2="480" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="500" x2="1600" y2="500" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="520" x2="1600" y2="520" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="540" x2="1600" y2="540" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="560" x2="1600" y2="560" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="580" x2="1600" y2="580" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="600" x2="1600" y2="600" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="620" x2="1600" y2="620" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="640" x2="1600" y2="640" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="660" x2="1600" y2="660" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="680" x2="1600" y2="680" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="700" x2="1600" y2="700" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="720" x2="1600" y2="720" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="740" x2="1600" y2="740" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="760" x2="1600" y2="760" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="780" x2="1600" y2="780" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="800" x2="1600" y2="800" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="820" x2="1600" y2="820" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="840" x2="1600" y2="840" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="860" x2="1600" y2="860" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="880" x2="1600" y2="880" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="900" x2="1600" y2="900" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<line x1="0" y1="920" x2="1600" y2="920" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="940" x2="1600" y2="940" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="960" x2="1600" y2="960" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="980" x2="1600" y2="980" stroke="#FFFFFF" stroke-opacity="0.05"/>
+<line x1="0" y1="1000" x2="1600" y2="1000" stroke="#FFFFFF" stroke-opacity="0.14"/>
+<rect x="30" y="30" width="1540" height="940" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+<rect x="40" y="40" width="1520" height="920" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+<text x="100" y="192" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="32" fill="#FFFFFF" font-weight="700">省力杠杆</text>
+<text x="100" y="232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF" opacity="0.85">例：撬棍</text>
+<line x1="100" y1="400" x2="500" y2="400" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+<path d="M180 403 L160 440 H200 Z" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="144" y1="440" x2="216" y2="440" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="146" y1="440" x2="138" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="156" y1="440" x2="148" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="166" y1="440" x2="158" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="176" y1="440" x2="168" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="186" y1="440" x2="178" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="196" y1="440" x2="188" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="206" y1="440" x2="198" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<text x="206" y="434" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#FFFFFF" font-weight="700">O</text>
+<line x1="500" y1="290" x2="500" y2="384.9" stroke="#FFFFFF" stroke-width="2.6"/>
+<path d="M500 394 L493.9 382.52 L506.1 382.52 Z" fill="#FFFFFF"/>
+<line x1="100" y1="320" x2="100" y2="384.9" stroke="#FFFFFF" stroke-width="2.6"/>
+<path d="M100 394 L93.9 382.52 L106.1 382.52 Z" fill="#FFFFFF"/>
+<text x="510" y="284" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF"><tspan dy="0" font-size="18" font-style="italic">F</tspan><tspan dy="5.4" font-size="12.24">1</tspan><tspan dy="-5.4" font-size="18"> 动力</tspan></text>
+<text x="110" y="314" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF"><tspan dy="0" font-size="18" font-style="italic">F</tspan><tspan dy="5.4" font-size="12.24">2</tspan><tspan dy="-5.4" font-size="18"> 阻力</tspan></text>
+<path d="M60 400 L70 340 L130 330 L144 390 Z" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="180" y1="530" x2="180" y2="550" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="500" y1="530" x2="500" y2="550" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="340" y1="540" x2="186.3" y2="540" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M180 540 L187.95 535.77 L187.95 544.23 Z" fill="#FFFFFF"/>
+<line x1="340" y1="540" x2="493.7" y2="540" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M500 540 L492.05 544.23 L492.05 535.77 Z" fill="#FFFFFF"/>
+<text x="340" y="528" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle"><tspan dy="0" font-size="18" font-style="italic">L</tspan><tspan dy="5.4" font-size="12.24">1</tspan><tspan dy="-5.4" font-size="18"> = 0.8 m</tspan></text>
+<line x1="180" y1="600" x2="180" y2="620" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="100" y1="600" x2="100" y2="620" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="140" y1="610" x2="173.7" y2="610" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M180 610 L172.05 614.23 L172.05 605.77 Z" fill="#FFFFFF"/>
+<line x1="140" y1="610" x2="106.3" y2="610" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M100 610 L107.95 605.77 L107.95 614.23 Z" fill="#FFFFFF"/>
+<text x="140" y="598" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle"><tspan dy="0" font-size="18" font-style="italic">L</tspan><tspan dy="5.4" font-size="12.24">2</tspan><tspan dy="-5.4" font-size="18"> = 0.2 m</tspan></text>
+<text x="100" y="730" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700"><tspan dy="0" font-size="22" font-style="italic">L</tspan><tspan dy="6.6" font-size="14.96">1</tspan><tspan dy="-6.6" font-size="22"> &gt; </tspan><tspan dy="0" font-size="22" font-style="italic">L</tspan><tspan dy="6.6" font-size="14.96">2</tspan><tspan dy="-6.6" font-size="22">　省力，费距离</tspan></text>
+<text x="100" y="766" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#FFFFFF"><tspan dy="0" font-size="20" font-style="italic">F</tspan><tspan dy="6" font-size="13.6">1</tspan><tspan dy="-6" font-size="20"> = 0.25 </tspan><tspan dy="0" font-size="20" font-style="italic">F</tspan><tspan dy="6" font-size="13.6">2</tspan></text>
+<text x="600" y="192" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="32" fill="#FFFFFF" font-weight="700">等臂杠杆</text>
+<text x="600" y="232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF" opacity="0.85">例：天平</text>
+<line x1="600" y1="400" x2="1000" y2="400" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+<path d="M800 403 L780 440 H820 Z" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="764" y1="440" x2="836" y2="440" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="766" y1="440" x2="758" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="776" y1="440" x2="768" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="786" y1="440" x2="778" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="796" y1="440" x2="788" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="806" y1="440" x2="798" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="816" y1="440" x2="808" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="826" y1="440" x2="818" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<text x="826" y="434" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#FFFFFF" font-weight="700">O</text>
+<line x1="1000" y1="290" x2="1000" y2="384.9" stroke="#FFFFFF" stroke-width="2.6"/>
+<path d="M1000 394 L993.9 382.52 L1006.1 382.52 Z" fill="#FFFFFF"/>
+<line x1="600" y1="290" x2="600" y2="384.9" stroke="#FFFFFF" stroke-width="2.6"/>
+<path d="M600 394 L593.9 382.52 L606.1 382.52 Z" fill="#FFFFFF"/>
+<text x="1010" y="284" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF"><tspan dy="0" font-size="18" font-style="italic">F</tspan><tspan dy="5.4" font-size="12.24">1</tspan><tspan dy="-5.4" font-size="18"> 动力</tspan></text>
+<text x="610" y="280" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF"><tspan dy="0" font-size="18" font-style="italic">F</tspan><tspan dy="5.4" font-size="12.24">2</tspan><tspan dy="-5.4" font-size="18"> 阻力</tspan></text>
+<path d="M600 400 L560 470 M600 400 L640 470 M550 470 Q600 500 650 470 Z" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="5 4"/>
+<path d="M1000 400 L960 470 M1000 400 L1040 470 M950 470 Q1000 500 1050 470 Z" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line x1="800" y1="550" x2="800" y2="570" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="1000" y1="550" x2="1000" y2="570" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="900" y1="560" x2="806.3" y2="560" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M800 560 L807.95 555.77 L807.95 564.23 Z" fill="#FFFFFF"/>
+<line x1="900" y1="560" x2="993.7" y2="560" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M1000 560 L992.05 564.23 L992.05 555.77 Z" fill="#FFFFFF"/>
+<text x="900" y="548" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle"><tspan dy="0" font-size="18" font-style="italic">L</tspan><tspan dy="5.4" font-size="12.24">1</tspan><tspan dy="-5.4" font-size="18"> = 0.5 m</tspan></text>
+<line x1="800" y1="620" x2="800" y2="640" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="600" y1="620" x2="600" y2="640" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="700" y1="630" x2="793.7" y2="630" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M800 630 L792.05 634.23 L792.05 625.77 Z" fill="#FFFFFF"/>
+<line x1="700" y1="630" x2="606.3" y2="630" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M600 630 L607.95 625.77 L607.95 634.23 Z" fill="#FFFFFF"/>
+<text x="700" y="618" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle"><tspan dy="0" font-size="18" font-style="italic">L</tspan><tspan dy="5.4" font-size="12.24">2</tspan><tspan dy="-5.4" font-size="18"> = 0.5 m</tspan></text>
+<text x="600" y="730" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700"><tspan dy="0" font-size="22" font-style="italic">L</tspan><tspan dy="6.6" font-size="14.96">1</tspan><tspan dy="-6.6" font-size="22"> = </tspan><tspan dy="0" font-size="22" font-style="italic">L</tspan><tspan dy="6.6" font-size="14.96">2</tspan><tspan dy="-6.6" font-size="22">　不省力，也不费力</tspan></text>
+<text x="600" y="766" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#FFFFFF"><tspan dy="0" font-size="20" font-style="italic">F</tspan><tspan dy="6" font-size="13.6">1</tspan><tspan dy="-6" font-size="20"> = </tspan><tspan dy="0" font-size="20" font-style="italic">F</tspan><tspan dy="6" font-size="13.6">2</tspan></text>
+<text x="1100" y="192" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="32" fill="#FFFFFF" font-weight="700">费力杠杆</text>
+<text x="1100" y="232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF" opacity="0.85">例：镊子、钓鱼竿</text>
+<line x1="1100" y1="400" x2="1500" y2="400" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+<path d="M1100 403 L1080 440 H1120 Z" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="1064" y1="440" x2="1136" y2="440" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="1066" y1="440" x2="1058" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="1076" y1="440" x2="1068" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="1086" y1="440" x2="1078" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="1096" y1="440" x2="1088" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="1106" y1="440" x2="1098" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="1116" y1="440" x2="1108" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="1126" y1="440" x2="1118" y2="450" stroke="#FFFFFF" stroke-width="1"/>
+<text x="1126" y="434" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#FFFFFF" font-weight="700">O</text>
+<line x1="1220" y1="510" x2="1220" y2="415.1" stroke="#FFFFFF" stroke-width="2.6"/>
+<path d="M1220 406 L1226.1 417.48 L1213.9 417.48 Z" fill="#FFFFFF"/>
+<line x1="1500" y1="310" x2="1500" y2="384.9" stroke="#FFFFFF" stroke-width="2.6"/>
+<path d="M1500 394 L1493.9 382.52 L1506.1 382.52 Z" fill="#FFFFFF"/>
+<text x="1234" y="530" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF"><tspan dy="0" font-size="18" font-style="italic">F</tspan><tspan dy="5.4" font-size="12.24">1</tspan><tspan dy="-5.4" font-size="18"> 动力</tspan></text>
+<text x="1510" y="304" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF"><tspan dy="0" font-size="18" font-style="italic">F</tspan><tspan dy="5.4" font-size="12.24">2</tspan><tspan dy="-5.4" font-size="18"> 阻力</tspan></text>
+<line x1="1100" y1="530" x2="1100" y2="550" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="1220" y1="530" x2="1220" y2="550" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="1160" y1="540" x2="1106.3" y2="540" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M1100 540 L1107.95 535.77 L1107.95 544.23 Z" fill="#FFFFFF"/>
+<line x1="1160" y1="540" x2="1213.7" y2="540" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M1220 540 L1212.05 544.23 L1212.05 535.77 Z" fill="#FFFFFF"/>
+<text x="1160" y="528" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle"><tspan dy="0" font-size="18" font-style="italic">L</tspan><tspan dy="5.4" font-size="12.24">1</tspan><tspan dy="-5.4" font-size="18"> = 0.3 m</tspan></text>
+<line x1="1100" y1="600" x2="1100" y2="620" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="1500" y1="600" x2="1500" y2="620" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="1300" y1="610" x2="1106.3" y2="610" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M1100 610 L1107.95 605.77 L1107.95 614.23 Z" fill="#FFFFFF"/>
+<line x1="1300" y1="610" x2="1493.7" y2="610" stroke="#FFFFFF" stroke-width="1.2"/>
+<path d="M1500 610 L1492.05 614.23 L1492.05 605.77 Z" fill="#FFFFFF"/>
+<text x="1300" y="598" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle"><tspan dy="0" font-size="18" font-style="italic">L</tspan><tspan dy="5.4" font-size="12.24">2</tspan><tspan dy="-5.4" font-size="18"> = 1.0 m</tspan></text>
+<text x="1100" y="730" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700"><tspan dy="0" font-size="22" font-style="italic">L</tspan><tspan dy="6.6" font-size="14.96">1</tspan><tspan dy="-6.6" font-size="22"> &lt; </tspan><tspan dy="0" font-size="22" font-style="italic">L</tspan><tspan dy="6.6" font-size="14.96">2</tspan><tspan dy="-6.6" font-size="22">　费力，省距离</tspan></text>
+<text x="1100" y="766" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#FFFFFF"><tspan dy="0" font-size="20" font-style="italic">F</tspan><tspan dy="6" font-size="13.6">1</tspan><tspan dy="-6" font-size="20"> = 3.3 </tspan><tspan dy="0" font-size="20" font-style="italic">F</tspan><tspan dy="6" font-size="13.6">2</tspan></text>
+<text id="title" x="100" y="120" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#FFFFFF" font-weight="700">三类杠杆</text>
+<text x="330" y="120" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#FFFFFF" font-weight="500"><tspan dy="0" font-size="26">平衡条件　</tspan><tspan dy="0" font-size="26" font-style="italic">F</tspan><tspan dy="7.8" font-size="17.68">1</tspan><tspan dy="-7.8" font-size="26" font-style="italic">L</tspan><tspan dy="7.8" font-size="17.68">1</tspan><tspan dy="-7.8" font-size="26"> = </tspan><tspan dy="0" font-size="26" font-style="italic">F</tspan><tspan dy="7.8" font-size="17.68">2</tspan><tspan dy="-7.8" font-size="26" font-style="italic">L</tspan><tspan dy="7.8" font-size="17.68">2</tspan></text>
+<rect x="1180" y="820" width="380" height="140" fill="#1F4E8C" stroke="#FFFFFF" stroke-width="1.6"/>
+<text x="1192" y="840" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500" opacity="0.8">图名</text>
+<text x="1270" y="840" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500">三类杠杆</text>
+<line x1="1180" y1="848" x2="1560" y2="848" stroke="#FFFFFF" stroke-width="0.8"/>
+<text x="1192" y="868" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500" opacity="0.8">用途</text>
+<text x="1270" y="868" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500">初二物理</text>
+<line x1="1180" y1="876" x2="1560" y2="876" stroke="#FFFFFF" stroke-width="0.8"/>
+<text x="1192" y="896" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500" opacity="0.8">比例</text>
+<text x="1270" y="896" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500">示意，400 px = 1 m</text>
+<line x1="1180" y1="904" x2="1560" y2="904" stroke="#FFFFFF" stroke-width="0.8"/>
+<text x="1192" y="924" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500" opacity="0.8">图号</text>
+<text x="1270" y="924" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500">T09</text>
+<line x1="1180" y1="932" x2="1560" y2="932" stroke="#FFFFFF" stroke-width="0.8"/>
+<text x="1192" y="952" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500" opacity="0.8">日期</text>
+<text x="1270" y="952" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#FFFFFF" font-weight="500">2026.10.24</text>
+<line x1="1260" y1="820" x2="1260" y2="960" stroke="#FFFFFF" stroke-width="0.8"/>
+</g>
+</svg>

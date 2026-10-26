@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
-  <meta name="description" content="MuseDraw 绘图作品：20 种视觉主题，108 个科研、办公、教学与工程示例。浏览全部作品，复制双语需求，下载 drawio，或提交你想要的新风格。">
+  <meta name="description" content="MuseDraw 绘图作品：20 种视觉主题，108 个科研、办公、教学与工程示例。浏览全部作品，复制双语需求，下载 SVG 与场景 JSON，或提交你想要的新风格。">
   <title>图集 · MuseDraw</title>
   <link rel="icon" href="assets/brand/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="gallery.css">
   <script type="module" src="gallery.mjs"></script>
 </head>
 <body>
-  <header class="site-header"><a href="./" class="brand" aria-label="MuseDraw 图集"><img src="assets/brand/mark.svg" alt="" width="32" height="32"><span>MuseDraw</span></a><nav aria-label="主导航"><a class="current" href="./">图集</a><a href="https://github.com/KanJieTeam/MuseDraw">GitHub ↗</a><button id="install" type="button" class="install-button">安装 Skill ↗</button></nav></header>
+  <header class="site-header"><a href="./" class="brand" aria-label="MuseDraw 图集"><img src="assets/brand/mark.svg" alt="" width="32" height="32"><span>MuseDraw</span></a><nav aria-label="主导航"><a class="current" href="./">图集</a><a href="collections/visual-cases/">视觉案例库 · 180 ↗</a><a href="https://github.com/KanJieTeam/MuseDraw">GitHub ↗</a><button id="install" type="button" class="install-button">安装 Skill ↗</button></nav></header>
   <main>
-    <section class="intro"><div><p class="eyebrow">MUSEDRAW / DESIGN COLLECTION</p><h1>选一种表达。</h1><p class="intro-copy">先看风格，再看内容。108 张图，20 种视觉表达。<br>找到喜欢的样子，换成你的想法。</p></div><div class="intro-note"><span>看图 · 取用 · 再创作</span><p>复制几句话，交给你的智能体。<br>图片之外，也有可编辑的 drawio。</p></div></section>
+    <section class="intro"><div><p class="eyebrow">MUSEDRAW / DESIGN COLLECTION</p><h1>选一种表达。</h1><p class="intro-copy">从图集与完整案例库中，找到适合内容的表达。<br>取用原稿，也用你的想法继续创作。</p></div><div class="intro-note"><span>看图 · 取用 · 再创作</span><p>复制几句话，交给你的智能体。<br>取用 SVG，也能继续修改场景源文件。</p></div></section>
     <section class="style-section" aria-labelledby="style-heading"><div class="section-heading"><h2 id="style-heading">风格索引</h2><p><a id="request-top" href="https://github.com/KanJieTeam/MuseDraw/issues/new?template=style-request.md" target="_blank" rel="noopener noreferrer">没有喜欢的风格？提需求 ↗</a></p></div><div id="style-options" class="style-options" role="group" aria-label="按视觉风格筛选"></div></section>
     <section aria-label="浏览作品">
       <div class="collection-tools"><div class="collection-switch" role="group" aria-label="图集范围"><button type="button" data-collection="all" aria-pressed="true" class="active">全部作品 <span>108</span></button><button type="button" data-collection="flagship" aria-pressed="false">编辑精选 <span>20</span></button></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索图名、内容、风格…" aria-label="搜索图名、内容或风格" autocomplete="off"><kbd>/</kbd></label></div>
@@ -24,7 +24,7 @@
       <div id="empty" hidden><p>没有找到合适的作品。试试其他关键词，或清除筛选。</p><a id="request-empty" class="request-link" href="https://github.com/KanJieTeam/MuseDraw/issues/new?template=style-request.md" target="_blank" rel="noopener noreferrer">告诉我们你想要的风格 ↗</a></div>
     </section>
     <section class="request-section" aria-labelledby="request-heading"><div><h2 id="request-heading">没找到喜欢的风格？</h2><p>说说你想画什么，或贴一张喜欢的参考图。下一张，也许就从你的需求开始。</p><p class="request-note">在 GitHub 提交需求，可用中文或英文；请勿上传保密资料。提交前可修改预填的筛选信息。</p></div><div class="request-actions"><a id="request-style" class="request-primary" href="https://github.com/KanJieTeam/MuseDraw/issues/new?template=style-request.md" target="_blank" rel="noopener noreferrer">提交绘图／风格需求 ↗</a><a href="https://github.com/KanJieTeam/MuseDraw/issues" target="_blank" rel="noopener noreferrer">看看大家的想法 ↗</a></div></section>
-    <section class="usage"><h2>图形可编辑，想法不设限。</h2><p>点开一张图，复制提示词，用你的内容继续创作。想直接改图？下载 drawio 即可编辑文字、图形与连线。</p><a href="https://github.com/KanJieTeam/MuseDraw#readme">安装与使用指南 ↗</a></section>
+    <section class="usage"><h2>图形可编辑，想法不设限。</h2><p>点开一张图，复制提示词，用你的内容继续创作。想直接改图？下载 SVG 与场景 JSON 即可编辑文字、图形与连线。</p><a href="https://github.com/KanJieTeam/MuseDraw#readme">安装与使用指南 ↗</a></section>
   </main>
   <footer class="site-footer"><span>MuseDraw · 把内容画清楚</span><a href="https://github.com/KanJieTeam/MuseDraw/blob/main/LICENSE">Apache-2.0</a></footer>
   <dialog id="preview" aria-labelledby="preview-title"><div class="preview-toolbar"><div><p id="preview-number" class="eyebrow"></p><h2 id="preview-title">图像预览</h2></div><div class="preview-controls"><button id="previous" aria-label="上一张">←</button><button id="next" aria-label="下一张">→</button><button id="close-preview" aria-label="关闭详情">×</button></div></div><div class="preview-body"><div class="preview-canvas"><div id="viewport" tabindex="0" role="region" aria-label="图纸预览，可缩放和拖动"><img id="preview-image" alt="" draggable="false"></div><div class="zoom-bar"><span>滚轮缩放 · 拖动平移</span><div><button id="zoom-out" aria-label="缩小">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="放大">+</button><button id="fit">全图</button><button id="preview-hd">高清</button><button id="fullscreen">全屏 ↗</button></div></div></div><aside id="preview-details" aria-label="作品详情"></aside></div></dialog>

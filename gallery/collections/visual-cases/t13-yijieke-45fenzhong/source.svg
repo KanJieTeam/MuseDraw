@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<title>一节课的 45 分钟</title>
+<g data-md-layer="课堂">
+<rect width="1600" height="900" fill="#F3E9DE"/>
+<text id="title" x="120" y="120" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="56" fill="#3B2418" font-weight="900">一节课的 45 分钟</text>
+<text x="124" y="170" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#7A3A26" font-weight="500">初二数学《勾股定理》</text>
+<rect x="121" y="300" width="149.11" height="70" fill="#B5553A"/>
+<text x="132" y="282" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3B2418" font-weight="700">导入</text>
+<text x="132" y="346" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700">5 分钟</text>
+<text x="130" y="470" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">出示方格纸上</text>
+<text x="130" y="498" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">的直角三角形</text>
+<text x="130" y="610" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">猜三条边有什</text>
+<text x="130" y="638" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">么关系</text>
+<rect x="272.11" y="300" width="542" height="70" fill="#D98A5F"/>
+<text x="283.11" y="282" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3B2418" font-weight="700">探究新知</text>
+<text x="283.11" y="346" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700">18 分钟</text>
+<text x="281.11" y="470" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">组织拼图、数方格</text>
+<text x="281.11" y="610" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">分组验证 a² + b² = c²</text>
+<line x1="271.11" y1="370" x2="271.11" y2="680" stroke="#7A3A26" stroke-opacity="0.25" stroke-dasharray="3 5"/>
+<rect x="816.11" y="300" width="360.67" height="70" fill="#B5553A"/>
+<text x="827.11" y="282" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3B2418" font-weight="700">练习巩固</text>
+<text x="827.11" y="346" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700">12 分钟</text>
+<text x="825.11" y="470" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">巡视，挑出典型错误讲评</text>
+<text x="825.11" y="610" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">求未知边，分层完成</text>
+<line x1="815.11" y1="370" x2="815.11" y2="680" stroke="#7A3A26" stroke-opacity="0.25" stroke-dasharray="3 5"/>
+<rect x="1178.78" y="300" width="149.11" height="70" fill="#EBC3A2"/>
+<text x="1189.78" y="282" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#3B2418" font-weight="700">课堂小结</text>
+<text x="1189.78" y="346" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#3B2418" font-weight="700">5 分钟</text>
+<text x="1187.78" y="470" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">追问：什么情</text>
+<text x="1187.78" y="498" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">况下能用</text>
+<text x="1187.78" y="610" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">用一句话说出</text>
+<text x="1187.78" y="638" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418">定理</text>
+<line x1="1177.78" y1="370" x2="1177.78" y2="680" stroke="#7A3A26" stroke-opacity="0.25" stroke-dasharray="3 5"/>
+<rect x="1329.89" y="300" width="88.67" height="70" fill="#D98A5F"/>
+<text x="1340.89" y="282" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="700">布置作业</text>
+<text x="1340.89" y="346" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700">3 分钟</text>
+<text x="1338.89" y="470" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#3B2418">布置实践</text>
+<text x="1338.89" y="498" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#3B2418">题</text>
+<text x="1338.89" y="610" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#3B2418">记作业</text>
+<line x1="1328.89" y1="370" x2="1328.89" y2="680" stroke="#7A3A26" stroke-opacity="0.25" stroke-dasharray="3 5"/>
+<rect x="1420.56" y="300" width="58.44" height="70" fill="#C9A58A"/>
+<text x="1431.56" y="282" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="700">机动</text>
+<text x="1431.56" y="346" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#3B2418" font-weight="700">2 分钟</text>
+<line x1="1419.56" y1="370" x2="1419.56" y2="680" stroke="#7A3A26" stroke-opacity="0.25" stroke-dasharray="3 5"/>
+<line x1="120" y1="374" x2="120" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="120" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">0′</text>
+<line x1="271.11" y1="374" x2="271.11" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="271.11" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">5′</text>
+<line x1="422.22" y1="374" x2="422.22" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="422.22" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">10′</text>
+<line x1="573.33" y1="374" x2="573.33" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="573.33" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">15′</text>
+<line x1="724.44" y1="374" x2="724.44" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="724.44" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">20′</text>
+<line x1="875.56" y1="374" x2="875.56" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="875.56" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">25′</text>
+<line x1="1026.67" y1="374" x2="1026.67" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="1026.67" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">30′</text>
+<line x1="1177.78" y1="374" x2="1177.78" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="1177.78" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">35′</text>
+<line x1="1328.89" y1="374" x2="1328.89" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="1328.89" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">40′</text>
+<line x1="1480" y1="374" x2="1480" y2="384" stroke="#7A3A26" stroke-width="1.5"/>
+<text x="1480" y="406" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16" fill="#7A3A26" text-anchor="middle">45′</text>
+<text x="70" y="488" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#7A3A26" font-weight="900" text-anchor="middle">教师</text>
+<text x="70" y="628" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#7A3A26" font-weight="900" text-anchor="middle">学生</text>
+<line x1="120" y1="440" x2="1480" y2="440" stroke="#7A3A26" stroke-opacity="0.35"/>
+<line x1="120" y1="580" x2="1480" y2="580" stroke="#7A3A26" stroke-opacity="0.35"/>
+<line x1="120" y1="680" x2="1480" y2="680" stroke="#7A3A26" stroke-opacity="0.35"/>
+<rect x="271.11" y="720" width="544" height="6" fill="#D98A5F"/>
+<text x="271.11" y="760" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#3B2418" font-weight="500">学生动手的时间占 30 分钟，是整节课的三分之二。</text>
+<rect x="815.11" y="720" width="362.67" height="6" fill="#B5553A"/>
+</g>
+</svg>

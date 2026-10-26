@@ -3,7 +3,12 @@
 Use for an original interface prototype, not a flowchart. Follow a supplied
 brand or existing design system before this guide. Implement with the project's
 normal stack; a small trial can be one self-contained HTML file. Deliver the
-runnable source and requested previews, without a default draw.io file.
+runnable source and requested previews.
+
+For a working application where people inspect records and act on exceptions,
+also read [work-apps.md](work-apps.md) for evidence placement, data readability,
+narrow-screen priorities and focus after an update. Its vanilla focus helper is
+optional; use the project's native framework and focus mechanisms first.
 
 ## Before implementation
 

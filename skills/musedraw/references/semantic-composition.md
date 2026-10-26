@@ -8,8 +8,8 @@ owns page geometry, readable type and role styling. No extra installation.
 node <skill>/scripts/musedraw.mjs compose composition.json --out output/diagram --strict
 ```
 
-Append `--no-drawio` for PNG only. Default output is PNG + native editable
-draw.io, with preview, checks, generated scene and a copy of the composition.
+Default output is PNG with preview, SVG, checks, generated scene and a copy of
+the composition.
 Read `checks.json`, fix actual failures and deliver. No mandatory vision/OCR.
 Reuse this command after editing the composition; use `render scene.json` for
 fine adjustments outside these methods. Recomposing regenerates `scene.json`,
@@ -136,6 +136,10 @@ scene for changes in shape/scale, complex sections and anchored detail views.
 It rejects unsupported fields instead of silently discarding them.
 
 ## Why these defaults
+
+For dated targets plus undated work and shared resources, use the separate
+[plan composition](plan-composition.md). It has a different input contract;
+flows/states fields must not be mixed with plan fields.
 
 The methods implement continuity, visible changes and final-size readability
 from Nature's [overview-figure guidance](https://www.nature.com/articles/nmeth0511-365)

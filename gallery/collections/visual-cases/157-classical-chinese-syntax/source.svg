@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>文言文特殊句式</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FAF8F3"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="120" font-family="'Noto Serif CJK SC', serif" font-size="60" font-weight="900" fill="#222222">文言文特殊句式</text>
+<text x="72" y="168" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">红色是辨认句式的标志</text>
+<line x1="70" y1="196" x2="1530" y2="196" stroke="#222222" stroke-width="1.5"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="句式">
+<text x="70" y="270" font-family="'Noto Serif CJK SC', serif" font-size="26" font-weight="900" fill="#222222">判断句</text>
+<line x1="70" y1="286" x2="510" y2="286" stroke="#222222" stroke-width="0.8"/>
+<text x="70" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">陈胜</text>
+<text x="150" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="900" fill="#C8102E">者</text>
+<line x1="152" y1="368" x2="188" y2="368" stroke="#C8102E" stroke-width="2.5"/>
+<text x="190" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">，阳城人</text>
+<text x="350" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="900" fill="#C8102E">也</text>
+<line x1="352" y1="368" x2="388" y2="368" stroke="#C8102E" stroke-width="2.5"/>
+<text x="390" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">。</text>
+<text x="70" y="400" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">《陈涉世家》</text>
+<text x="70" y="446" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#222222"><tspan x="70" dy="0">译：陈胜是阳城人。</tspan></text>
+<text x="70" y="516" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#C8102E"><tspan x="70" dy="0">“……者，……也”表示判断。</tspan></text>
+<text x="570" y="270" font-family="'Noto Serif CJK SC', serif" font-size="26" font-weight="900" fill="#222222">被动句</text>
+<line x1="570" y1="286" x2="1010" y2="286" stroke="#222222" stroke-width="0.8"/>
+<text x="570" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">茅屋</text>
+<text x="650" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="900" fill="#C8102E">为</text>
+<line x1="652" y1="368" x2="688" y2="368" stroke="#C8102E" stroke-width="2.5"/>
+<text x="690" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">秋风</text>
+<text x="770" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="900" fill="#C8102E">所</text>
+<line x1="772" y1="368" x2="808" y2="368" stroke="#C8102E" stroke-width="2.5"/>
+<text x="810" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">破</text>
+<text x="570" y="400" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">《茅屋为秋风所破歌》</text>
+<text x="570" y="446" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#222222"><tspan x="570" dy="0">译：茅屋被秋风吹破。</tspan></text>
+<text x="570" y="516" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#C8102E"><tspan x="570" dy="0">“为……所……”表示被动。</tspan></text>
+<text x="1070" y="270" font-family="'Noto Serif CJK SC', serif" font-size="26" font-weight="900" fill="#222222">宾语前置</text>
+<line x1="1070" y1="286" x2="1510" y2="286" stroke="#222222" stroke-width="0.8"/>
+<text x="1070" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">何陋</text>
+<text x="1150" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="900" fill="#C8102E">之</text>
+<line x1="1152" y1="368" x2="1188" y2="368" stroke="#C8102E" stroke-width="2.5"/>
+<text x="1190" y="356" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">有？</text>
+<text x="1070" y="400" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">《陋室铭》</text>
+<text x="1070" y="446" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#222222"><tspan x="1070" dy="0">译：有什么简陋的呢？</tspan></text>
+<text x="1070" y="516" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#C8102E"><tspan x="1070" dy="0">“之”把宾语“何陋”提到动词“有”前。</tspan></text>
+<text x="70" y="640" font-family="'Noto Serif CJK SC', serif" font-size="26" font-weight="900" fill="#222222">状语后置</text>
+<line x1="70" y1="656" x2="510" y2="656" stroke="#222222" stroke-width="0.8"/>
+<text x="70" y="726" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">战</text>
+<text x="110" y="726" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="900" fill="#C8102E">于</text>
+<line x1="112" y1="738" x2="148" y2="738" stroke="#C8102E" stroke-width="2.5"/>
+<text x="150" y="726" font-family="'Noto Serif CJK SC', serif" font-size="40" font-weight="500" fill="#222222">长勺</text>
+<text x="70" y="770" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">《曹刿论战》</text>
+<text x="70" y="816" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#222222"><tspan x="70" dy="0">译：在长勺作战。</tspan></text>
+<text x="70" y="886" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#C8102E"><tspan x="70" dy="0">介词短语“于长勺”放在动词后。</tspan></text>
+<text x="570" y="640" font-family="'Noto Serif CJK SC', serif" font-size="26" font-weight="900" fill="#222222">省略句</text>
+<line x1="570" y1="656" x2="1010" y2="656" stroke="#222222" stroke-width="0.8"/>
+<text x="570" y="726" font-family="'Noto Serif CJK SC', serif" font-size="34" font-weight="500" fill="#222222">再</text>
+<text x="604" y="726" font-family="'Noto Serif CJK SC', serif" font-size="34" font-weight="900" fill="#C8102E">（鼓）</text>
+<line x1="606" y1="738" x2="704" y2="738" stroke="#C8102E" stroke-width="2.5"/>
+<text x="706" y="726" font-family="'Noto Serif CJK SC', serif" font-size="34" font-weight="500" fill="#222222">而衰，三</text>
+<text x="842" y="726" font-family="'Noto Serif CJK SC', serif" font-size="34" font-weight="900" fill="#C8102E">（鼓）</text>
+<line x1="844" y1="738" x2="942" y2="738" stroke="#C8102E" stroke-width="2.5"/>
+<text x="944" y="726" font-family="'Noto Serif CJK SC', serif" font-size="34" font-weight="500" fill="#222222">而竭。</text>
+<text x="570" y="770" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">《曹刿论战》</text>
+<text x="570" y="816" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#222222"><tspan x="570" dy="0">译：第二次击鼓士气就衰减了，第三次击鼓士气就</tspan><tspan x="570" dy="30.4">耗尽了。</tspan></text>
+<text x="570" y="886" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#C8102E"><tspan x="570" dy="0">承前省略了动词“鼓”。</tspan></text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="批注">
+<text x="1124" y="660" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="700" fill="#222222"><tspan x="1124" dy="0">读文言文时，</tspan><tspan x="1124" dy="40.8">先找标志词，</tspan><tspan x="1124" dy="40.8">再把句子还原成</tspan><tspan x="1124" dy="40.8">现代汉语的语序。</tspan></text>
+<line x1="1108" y1="630" x2="1108" y2="830" stroke="#C8102E" stroke-width="3"/>
+</g>
+</svg>

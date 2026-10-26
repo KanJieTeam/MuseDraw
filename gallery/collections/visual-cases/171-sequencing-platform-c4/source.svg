@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>测序数据分析平台：容器图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="40" y="52" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="800" fill="#1A1A1A">测序数据分析平台</text>
+<text x="40" y="80" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#6B6B6B">[容器图] 从测序仪到变异结果</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="人员">
+<circle cx="460" cy="66" r="24" fill="#08427B"/>
+<rect x="380" y="92" width="160" height="76" rx="30" fill="#08427B"/>
+<text x="460" y="124" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">实验技术员</text>
+<text x="460" y="144" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.85">[人员] 登记样本</text>
+<circle cx="700" cy="66" r="24" fill="#08427B"/>
+<rect x="620" y="92" width="160" height="76" rx="30" fill="#08427B"/>
+<text x="700" y="124" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">生物信息分析员</text>
+<text x="700" y="144" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.85">[人员] 提交分析</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="边界">
+<rect x="290" y="240" width="1010" height="700" rx="10" fill="none" stroke="#888888" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="306" y="912" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">测序数据分析平台</text>
+<text x="306" y="930" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#6B6B6B">[软件系统]</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="容器">
+<rect x="330" y="280" width="240" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="450" y="308" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web 门户</text>
+<text x="450" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：React 单页应用]</text>
+<text x="450" y="350" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="450" dy="0">登记样本、提交分析、浏览结果</tspan></text>
+<rect x="690" y="280" width="240" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="810" y="308" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">API 服务</text>
+<text x="810" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Python，FastAPI]</text>
+<text x="810" y="350" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="810" dy="0">权限、样本与任务管理</tspan></text>
+<rect x="1030" y="280" width="240" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="1150" y="308" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">工作流引擎</text>
+<text x="1150" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Nextflow]</text>
+<text x="1150" y="350" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="1150" dy="0">比对、去重、变异检测流程</tspan></text>
+<rect x="330" y="500" width="240" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="450" y="528" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">数据接收服务</text>
+<text x="450" y="548" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Go]</text>
+<text x="450" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="450" dy="0">监听运行目录，校验 MD5 后上传</tspan></text>
+<rect x="1030" y="500" width="240" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="1150" y="528" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">消息队列</text>
+<text x="1150" y="548" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：RabbitMQ]</text>
+<text x="1150" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="1150" dy="0">传递“数据到达”等事件</tspan></text>
+<path d="M330,712 A120.0,12 0 0 1 570,712 V818 A120.0,12 0 0 1 330,818 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M330,712 A120.0,12 0 0 0 570,712" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="450" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">对象存储</text>
+<text x="450" y="764" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：S3 兼容存储]</text>
+<text x="450" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="450" dy="0">原始 FASTQ、BAM、VCF</tspan></text>
+<path d="M690,712 A120.0,12 0 0 1 930,712 V818 A120.0,12 0 0 1 690,818 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M690,712 A120.0,12 0 0 0 930,712" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="810" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">元数据库</text>
+<text x="810" y="764" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：PostgreSQL]</text>
+<text x="810" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="810" dy="0">样本、批次、任务状态</tspan></text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="外部系统">
+<rect x="40" y="500" width="210" height="110" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="145" y="528" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">测序仪</text>
+<text x="145" y="548" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="145" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="145" dy="0">按运行写出原始数据</tspan></text>
+<rect x="1360" y="40" width="200" height="110" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1460" y="68" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">LIMS</text>
+<text x="1460" y="88" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1460" y="110" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="1460" dy="0">实验室信息管理系统</tspan></text>
+<rect x="1360" y="500" width="200" height="110" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1460" y="528" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">计算集群</text>
+<text x="1460" y="548" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1460" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle"><tspan x="1460" dy="0">Slurm 调度的 CPU 与 GPU 节</tspan><tspan x="1460" dy="17.6">点</tspan></text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="关系">
+<path d="M460.0,168.0 L460.0,272.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M460.0,280.0 L455.9,270.9 L464.1,270.9 Z" fill="#707070"/>
+<text x="470" y="230" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">登记样本、看进度</text>
+<path d="M700.0,168.0 L536.7,275.6" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M530.0,280.0 L535.4,271.6 L539.9,278.4 Z" fill="#707070"/>
+<text x="600" y="212" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">提交分析、看结果</text>
+<path d="M570.0,335.0 L682.0,335.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M690.0,335.0 L680.9,339.1 L680.9,330.9 Z" fill="#707070"/>
+<text x="630" y="326" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">JSON/HTTPS</text>
+<path d="M930.0,335.0 L1022.0,335.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1030.0,335.0 L1020.9,339.1 L1020.9,330.9 Z" fill="#707070"/>
+<text x="980" y="326" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">提交、取消任务</text>
+<path d="M880.0,280.0 L880.0,200.0 L1352.1,111.5" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1360.0,110.0 L1351.8,115.7 L1350.3,107.7 Z" fill="#707070"/>
+<text x="1100" y="182" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">同步样本信息 [REST]</text>
+<path d="M810.0,390.0 L810.0,692.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810.0,700.0 L805.9,690.9 L814.1,690.9 Z" fill="#707070"/>
+<text x="820" y="560" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">读写样本与任务 [SQL]</text>
+<path d="M250.0,555.0 L322.0,555.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M330.0,555.0 L320.9,559.1 L320.9,550.9 Z" fill="#707070"/>
+<text x="290" y="546" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">写出运行目录</text>
+<path d="M450.0,610.0 L450.0,692.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M450.0,700.0 L445.9,690.9 L454.1,690.9 Z" fill="#707070"/>
+<text x="460" y="662" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">上传 FASTQ [S3 API]</text>
+<path d="M570.0,540.0 L1022.0,540.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1030.0,540.0 L1020.9,544.1 L1020.9,535.9 Z" fill="#707070"/>
+<text x="700" y="531" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">发布“数据到达” [AMQP]</text>
+<path d="M1150.0,500.0 L1150.0,398.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1150.0,390.0 L1154.1,399.1 L1145.9,399.1 Z" fill="#707070"/>
+<text x="1160" y="450" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">触发分析</text>
+<path d="M1270.0,360.0 L1320.0,360.0 L1320.0,530.0 L1352.0,530.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1360.0,530.0 L1350.9,534.1 L1350.9,525.9 Z" fill="#707070"/>
+<text x="1330" y="452" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">提交作业 [Slurm]</text>
+<path d="M1100.0,390.0 L1100.0,470.0 L960.0,470.0 L902.0,692.3" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M900.0,700.0 L898.4,690.1 L906.2,692.2 Z" fill="#707070"/>
+<text x="975" y="462" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">更新任务状态</text>
+<path d="M1460.0,610.0 L1460.0,880.0 L480.0,880.0 L480.0,838.0" fill="none" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M480.0,830.0 L484.1,839.1 L475.9,839.1 Z" fill="#707070"/>
+<rect x="907.72" y="859" width="144.56" height="18" fill="#FFFFFF"/>
+<text x="980" y="872" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">读写 BAM、VCF [S3 API]</text>
+</g>
+<g id="layer8" inkscape:groupmode="layer" inkscape:label="容量估算">
+<rect x="1330" y="680" width="250" height="160" fill="#F4F6F8" stroke="#C9D1DA"/>
+<text x="1346" y="708" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">容量估算</text>
+<text x="1346" y="734" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#1A1A1A"><tspan x="1346" dy="0">30× 全基因组 ≈ 93 Gb 碱基</tspan><tspan x="1346" dy="20.2">按 0.5 字节/碱基（压缩后）</tspan><tspan x="1346" dy="20.2">每样本 FASTQ ≈ 46.5 GB</tspan><tspan x="1346" dy="20.2">每批 48 个样本 ≈ 2.2 TB</tspan></text>
+</g>
+<g id="layer9" inkscape:groupmode="layer" inkscape:label="图例">
+<rect x="40" y="690" width="40" height="28" rx="10" fill="#08427B"/>
+<text x="92" y="710" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A">人员</text>
+<rect x="40" y="734" width="40" height="28" rx="4" fill="#438DD5"/>
+<text x="92" y="754" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A">容器</text>
+<rect x="40" y="778" width="40" height="28" rx="4" fill="#8C8C8C"/>
+<text x="92" y="798" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A">外部系统</text>
+<line x1="40" y1="836" x2="72.8" y2="836" stroke="#707070" stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+<path d="M80.0,836.0 L71.8,839.7 L71.8,832.3 Z" fill="#707070"/>
+<text x="92" y="842" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A">关系</text>
+</g>
+</svg>

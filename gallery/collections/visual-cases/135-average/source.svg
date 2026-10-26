@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>平均数</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="80" y="96" font-family="'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="800" fill="#13294B">平均数</text>
+<text x="82" y="134" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#5A6B85">第三小组 5 名同学一分钟跳绳成绩（示例数据）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="条形图">
+<line x1="140" y1="800" x2="960" y2="800" stroke="#D5DDE8" stroke-width="1"/>
+<text x="128" y="805" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">60</text>
+<line x1="140" y1="728" x2="960" y2="728" stroke="#D5DDE8" stroke-width="1"/>
+<text x="128" y="733" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">80</text>
+<line x1="140" y1="656" x2="960" y2="656" stroke="#D5DDE8" stroke-width="1"/>
+<text x="128" y="661" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">100</text>
+<line x1="140" y1="584" x2="960" y2="584" stroke="#D5DDE8" stroke-width="1"/>
+<text x="128" y="589" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">120</text>
+<line x1="140" y1="512" x2="960" y2="512" stroke="#D5DDE8" stroke-width="1"/>
+<text x="128" y="517" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">140</text>
+<line x1="140" y1="440" x2="960" y2="440" stroke="#D5DDE8" stroke-width="1"/>
+<text x="128" y="445" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">160</text>
+<text x="128" y="416" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#5A6B85" text-anchor="end">下</text>
+<rect x="180" y="555.2" width="90" height="244.8" fill="#13294B"/>
+<rect x="180" y="533.6" width="90" height="21.6" fill="none" stroke="#C77C2E" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="225" y="521.6" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#1B2638" text-anchor="middle">128</text>
+<text x="225" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#1B2638" text-anchor="middle">小明</text>
+<rect x="340" y="533.6" width="90" height="266.4" fill="#13294B"/>
+<rect x="340" y="504.8" width="90" height="28.8" fill="#C77C2E"/>
+<text x="385" y="492.8" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#1B2638" text-anchor="middle">142</text>
+<text x="385" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#1B2638" text-anchor="middle">小红</text>
+<rect x="500" y="598.4" width="90" height="201.6" fill="#13294B"/>
+<rect x="500" y="533.6" width="90" height="64.8" fill="none" stroke="#C77C2E" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="545" y="521.6" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#1B2638" text-anchor="middle">116</text>
+<text x="545" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#1B2638" text-anchor="middle">小刚</text>
+<rect x="660" y="533.6" width="90" height="266.4" fill="#13294B"/>
+<rect x="660" y="476" width="90" height="57.6" fill="#C77C2E"/>
+<text x="705" y="464" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#1B2638" text-anchor="middle">150</text>
+<text x="705" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#1B2638" text-anchor="middle">小丽</text>
+<rect x="820" y="533.6" width="90" height="266.4" fill="#13294B"/>
+<text x="865" y="521.6" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#1B2638" text-anchor="middle">134</text>
+<text x="865" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#1B2638" text-anchor="middle">小军</text>
+<line x1="140" y1="533.6" x2="960" y2="533.6" stroke="#C77C2E" stroke-width="2.5" stroke-dasharray="10 6"/>
+<text x="970" y="539.6" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#C77C2E">平均 134</text>
+<path d="M385.0,464.8 Q420.0,404.0 539.4,546.8" fill="none" stroke="#C77C2E" stroke-width="2" stroke-linecap="round"/>
+<path d="M545.0,553.6 L535.1,548.8 L542.0,543.0 Z" fill="#C77C2E"/>
+<path d="M705.0,436.0 Q460.0,386.0 232.2,548.5" fill="none" stroke="#C77C2E" stroke-width="2" stroke-linecap="round"/>
+<path d="M225.0,553.6 L230.6,544.1 L235.8,551.4 Z" fill="#C77C2E"/>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="计算">
+<rect x="1080" y="200" width="440" height="600" fill="#F3F6FA"/>
+<rect x="1080" y="200" width="6" height="600" fill="#13294B"/>
+<text x="1110" y="248" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="800" fill="#13294B">先合再分</text>
+<text x="1110" y="292" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" fill="#1B2638">128 + 142 + 116 + 150 + 134</text>
+<text x="1110" y="326" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" fill="#1B2638">= 670</text>
+<text x="1110" y="360" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="800" fill="#13294B">670 ÷ 5 = 134（下）</text>
+<line x1="1110" y1="400" x2="1490" y2="400" stroke="#D5DDE8"/>
+<text x="1110" y="446" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="800" fill="#13294B">移多补少</text>
+<text x="1110" y="490" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#C77C2E">高出平均：8 + 16 = 24</text>
+<text x="1110" y="524" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" fill="#1B2638">低于平均：6 + 18 = 24</text>
+<text x="1110" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#5A6B85"><tspan x="1110" dy="0">高出的部分正好能把低的补齐，补完后每人都是</tspan><tspan x="1110" dy="28.8">134 下。</tspan></text>
+<line x1="1110" y1="660" x2="1490" y2="660" stroke="#D5DDE8"/>
+<text x="1110" y="704" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#5A6B85"><tspan x="1110" dy="0">平均数不一定等于某个人的成绩，它代表这组数</tspan><tspan x="1110" dy="28.8">据的一般水平。</tspan></text>
+<text x="140" y="900" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#5A6B85">橙色实心：高出平均的部分；橙色虚线框：低于平均、需要补上的部分。</text>
+</g>
+</svg>

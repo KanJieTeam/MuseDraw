@@ -1,0 +1,127 @@
+<svg data-theme="neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>强化学习：智能体与环境</title>
+<g data-md-layer="图">
+<rect width="1600" height="1000" fill="#0E0620"/>
+<text id="title" x="80" y="110" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="52" fill="#FFE3F2" font-weight="900">强化学习　智能体与环境</text>
+<text x="84" y="156" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#B9A9E6">左边是每一步的循环，右边是一个 5 × 5 迷宫里学到的走法</text>
+<rect x="210" y="260" width="300" height="150" rx="16" fill="none" stroke="#2DE2E6" stroke-width="14" stroke-opacity="0.08"/>
+<rect x="210" y="260" width="300" height="150" rx="16" fill="none" stroke="#2DE2E6" stroke-width="7" stroke-opacity="0.2"/>
+<rect x="210" y="260" width="300" height="150" rx="16" fill="none" stroke="#2DE2E6" stroke-width="2"/>
+<text x="360" y="345" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="34" fill="#2DE2E6" font-weight="900" text-anchor="middle">智能体</text>
+<rect x="210" y="640" width="300" height="150" rx="16" fill="none" stroke="#FF3EA5" stroke-width="14" stroke-opacity="0.08"/>
+<rect x="210" y="640" width="300" height="150" rx="16" fill="none" stroke="#FF3EA5" stroke-width="7" stroke-opacity="0.2"/>
+<rect x="210" y="640" width="300" height="150" rx="16" fill="none" stroke="#FF3EA5" stroke-width="2"/>
+<text x="360" y="725" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="34" fill="#FF3EA5" font-weight="900" text-anchor="middle">环境</text>
+<path d="M510 335 C650 335 650 715 514 715" fill="none" stroke="#2DE2E6" stroke-width="3"/>
+<path d="M514 715 L526.36 708.43 L526.36 721.57 Z" fill="#2DE2E6"/>
+<text x="650" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#2DE2E6" font-weight="700"><tspan dy="0" font-size="24">动作 </tspan><tspan dy="0" font-size="24" font-style="italic">a</tspan><tspan dy="7.2" font-size="16.32">t</tspan></text>
+<path d="M210 715 C80 715 80 335 206 335" fill="none" stroke="#FF3EA5" stroke-width="3"/>
+<path d="M206 335 L193.64 341.57 L193.64 328.43 Z" fill="#FF3EA5"/>
+<text x="96" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FF3EA5" font-weight="700" text-anchor="end"><tspan dy="0" font-size="22">状态 </tspan><tspan dy="0" font-size="22" font-style="italic">s</tspan><tspan dy="6.6" font-size="14.96">t+1</tspan></text>
+<text x="96" y="580" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFE600" font-weight="700" text-anchor="end"><tspan dy="0" font-size="22">奖励 </tspan><tspan dy="0" font-size="22" font-style="italic">r</tspan><tspan dy="6.6" font-size="14.96">t+1</tspan></text>
+<text x="120" y="880" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="26" fill="#E9E4FF"><tspan dy="0" font-size="26">回报 </tspan><tspan dy="0" font-size="26" font-style="italic">G</tspan><tspan dy="0" font-size="26"> = </tspan><tspan dy="0" font-size="26" font-style="italic">r</tspan><tspan dy="7.8" font-size="17.68">1</tspan><tspan dy="-7.8" font-size="26"> + γ</tspan><tspan dy="0" font-size="26" font-style="italic">r</tspan><tspan dy="7.8" font-size="17.68">2</tspan><tspan dy="-7.8" font-size="26"> + γ</tspan><tspan dy="-10.4" font-size="17.68">2</tspan><tspan dy="10.4" font-size="26" font-style="italic">r</tspan><tspan dy="7.8" font-size="17.68">3</tspan><tspan dy="-7.8" font-size="26"> + …</tspan></text>
+<text x="120" y="924" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9A9E6">γ 是折扣因子，越远的奖励权重越小；这里取 γ = 0.9。</text>
+<rect x="824" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="824" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="884" y="308" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">→</text>
+<text x="832" y="256" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">4.6</text>
+<rect x="824" y="362" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="824" y="362" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="884" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">↑</text>
+<text x="832" y="384" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">3.1</text>
+<rect x="824" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="824" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="884" y="564" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">↑</text>
+<text x="832" y="512" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">1.8</text>
+<rect x="824" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="824" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="884" y="692" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">↑</text>
+<text x="832" y="640" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">0.6</text>
+<rect x="824" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="824" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="884" y="820" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">↑</text>
+<text x="832" y="768" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">-0.4</text>
+<rect x="952" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="952" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1012" y="308" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">→</text>
+<text x="960" y="256" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">6.2</text>
+<rect x="952" y="362" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="952" y="362" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1012" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="960" y="384" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">4.6</text>
+<rect x="952" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="952" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1012" y="564" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="960" y="512" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">3.1</text>
+<rect x="952" y="618" width="120" height="120" rx="6" fill="none" stroke="#FF3EA5" stroke-width="14" stroke-opacity="0.08"/>
+<rect x="952" y="618" width="120" height="120" rx="6" fill="none" stroke="#FF3EA5" stroke-width="7" stroke-opacity="0.2"/>
+<rect x="952" y="618" width="120" height="120" rx="6" fill="none" stroke="#FF3EA5" stroke-width="2"/>
+<text x="1012" y="682" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FF3EA5" font-weight="700" text-anchor="middle">−10</text>
+<text x="1012" y="712" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#FF3EA5" font-weight="700" text-anchor="middle">陷阱</text>
+<rect x="952" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="952" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1012" y="820" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">→</text>
+<text x="960" y="768" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">0.6</text>
+<rect x="1080" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1080" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1140" y="308" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">→</text>
+<text x="1088" y="256" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">8.0</text>
+<rect x="1080" y="362" width="120" height="120" rx="8" fill="#5B3F8C" fill-opacity="0.55"/>
+<rect x="1080" y="490" width="120" height="120" rx="8" fill="#5B3F8C" fill-opacity="0.55"/>
+<rect x="1080" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1080" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1140" y="692" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">→</text>
+<text x="1088" y="640" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">3.1</text>
+<rect x="1080" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1080" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1140" y="820" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1088" y="768" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">1.8</text>
+<rect x="1208" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1208" y="234" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1268" y="308" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#2DE2E6" font-weight="700" text-anchor="middle">→</text>
+<text x="1216" y="256" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">10.0</text>
+<rect x="1208" y="362" width="120" height="120" rx="6" fill="none" stroke="#FF3EA5" stroke-width="14" stroke-opacity="0.08"/>
+<rect x="1208" y="362" width="120" height="120" rx="6" fill="none" stroke="#FF3EA5" stroke-width="7" stroke-opacity="0.2"/>
+<rect x="1208" y="362" width="120" height="120" rx="6" fill="none" stroke="#FF3EA5" stroke-width="2"/>
+<text x="1268" y="426" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FF3EA5" font-weight="700" text-anchor="middle">−10</text>
+<text x="1268" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#FF3EA5" font-weight="700" text-anchor="middle">陷阱</text>
+<rect x="1208" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1208" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1268" y="564" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">→</text>
+<text x="1216" y="512" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">6.2</text>
+<rect x="1208" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1208" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1268" y="692" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1216" y="640" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">4.6</text>
+<rect x="1208" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1208" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1268" y="820" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1216" y="768" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">3.1</text>
+<rect x="1336" y="234" width="120" height="120" rx="6" fill="none" stroke="#FFE600" stroke-width="14" stroke-opacity="0.08"/>
+<rect x="1336" y="234" width="120" height="120" rx="6" fill="none" stroke="#FFE600" stroke-width="7" stroke-opacity="0.2"/>
+<rect x="1336" y="234" width="120" height="120" rx="6" fill="none" stroke="#FFE600" stroke-width="2"/>
+<text x="1396" y="298" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFE600" font-weight="700" text-anchor="middle">+10</text>
+<text x="1396" y="328" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#FFE600" font-weight="700" text-anchor="middle">终点</text>
+<rect x="1336" y="362" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1336" y="362" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1396" y="436" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1344" y="384" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">10.0</text>
+<rect x="1336" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1336" y="490" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1396" y="564" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1344" y="512" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">8.0</text>
+<rect x="1336" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1336" y="618" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1396" y="692" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1344" y="640" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">6.2</text>
+<rect x="1336" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="6" stroke-opacity="0.1"/>
+<rect x="1336" y="746" width="120" height="120" rx="6" fill="none" stroke="#5B3F8C" stroke-width="2"/>
+<text x="1396" y="820" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#8A73B8" font-weight="700" text-anchor="middle">↑</text>
+<text x="1344" y="768" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#B9A9E6">4.6</text>
+<text x="884" y="856" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#2DE2E6" font-weight="700" text-anchor="middle">起点</text>
+<path d="M884 806 L884 678 L884 550 L884 422 L884 294 L1012 294 L1140 294 L1268 294 L1396 294" fill="none" stroke="#2DE2E6" stroke-width="16" stroke-opacity="0.08" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M884 806 L884 678 L884 550 L884 422 L884 294 L1012 294 L1140 294 L1268 294 L1396 294" fill="none" stroke="#2DE2E6" stroke-width="8" stroke-opacity="0.18" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="820" y="916" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#E9E4FF">每走一步 −1，掉进陷阱 −10，到达终点 +10。格内小数是用价值迭代算出的状态价值。</text>
+<text x="820" y="946" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#B9A9E6">从起点出发按箭头走 8 步到达终点，绕开了两个陷阱和墙。</text>
+</g>
+</svg>

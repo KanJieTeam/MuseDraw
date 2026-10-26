@@ -30,7 +30,7 @@ MuseDraw 是一个开源视觉创作项目，将设计方法与绘图工具带�
 - **把修改留在对话里。** 补充一个步骤、调整一处重点，或沿着喜欢的方向继续打磨。
 - **拿到作品，也保留修改的余地。** 当前图示工作流提供高清图片与可编辑文件，方便使用、分享和继续完善。
 
-[浏览作品与可编辑文件](https://kanjieteam.github.io/MuseDraw/) · [了解当前使用方式](docs/usage.zh-CN.md)
+[浏览作品与源文件](https://kanjieteam.github.io/MuseDraw/) · [完整视觉案例库](https://kanjieteam.github.io/MuseDraw/collections/visual-cases/) · [了解当前使用方式](docs/usage.zh-CN.md)
 
 ## 开始创作
 
@@ -64,7 +64,7 @@ npx skills add KanJieTeam/MuseDraw
 颜色再克制一些，重点保留在主流程上。
 ```
 
-图示默认交付 PNG 和原生可编辑 draw.io；文字、图形与连线可以继续编辑。只需要图片时，说“只需 PNG”即可。保留随附的源文件，便于下次接着修改。
+图示默认交付 PNG，并保留场景源文件与 SVG。需要修改时，继续告诉智能体改哪里即可。
 
 [查看修改与交付说明](docs/usage.zh-CN.md#继续修改与交付)
 

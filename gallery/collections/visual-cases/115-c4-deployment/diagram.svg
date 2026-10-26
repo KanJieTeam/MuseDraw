@@ -1,0 +1,136 @@
+<svg data-theme="c4" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>订单服务部署图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="60" y="70" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#1A1A1A">订单服务部署图</text>
+<text x="60" y="102" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#6B6B6B">[部署图] 生产环境，华东 1 区域</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="人员">
+<circle cx="150" cy="236" r="34" fill="#08427B"/>
+<rect x="80" y="270" width="140" height="104" rx="40" fill="#08427B"/>
+<text x="150" y="322" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">顾客</text>
+<text x="150" y="346" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.85">[人员]</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="部署节点">
+<rect x="300" y="130" width="1260" height="860" fill="none" stroke="#888888" stroke-width="1.6" rx="8"/>
+<text x="314" y="960" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">华东 1</text>
+<text x="314" y="978" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：云区域]</text>
+<rect x="320" y="290" width="380" height="650" fill="none" stroke="#888888" stroke-width="1.6" rx="8"/>
+<text x="334" y="910" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">可用区 A</text>
+<text x="334" y="928" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：可用区]</text>
+<rect x="340" y="320" width="340" height="318" fill="none" stroke="#888888" stroke-width="1.6" rx="8" stroke-dasharray="5 4"/>
+<text x="354" y="608" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">K8s 节点池</text>
+<text x="354" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：Kubernetes 1.30]</text>
+<rect x="340" y="660" width="340" height="200" fill="none" stroke="#888888" stroke-width="1.6" rx="8" stroke-dasharray="5 4"/>
+<text x="354" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">云数据库实例</text>
+<text x="354" y="848" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：托管 PostgreSQL]</text>
+<rect x="740" y="290" width="380" height="650" fill="none" stroke="#888888" stroke-width="1.6" rx="8"/>
+<text x="754" y="910" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">可用区 B</text>
+<text x="754" y="928" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：可用区]</text>
+<rect x="760" y="320" width="340" height="318" fill="none" stroke="#888888" stroke-width="1.6" rx="8" stroke-dasharray="5 4"/>
+<text x="774" y="608" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">K8s 节点池</text>
+<text x="774" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：Kubernetes 1.30]</text>
+<rect x="760" y="660" width="340" height="200" fill="none" stroke="#888888" stroke-width="1.6" rx="8" stroke-dasharray="5 4"/>
+<text x="774" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">云数据库实例</text>
+<text x="774" y="848" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：托管 PostgreSQL]</text>
+<rect x="1160" y="290" width="380" height="650" fill="none" stroke="#888888" stroke-width="1.6" rx="8"/>
+<text x="1174" y="910" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">可用区 C</text>
+<text x="1174" y="928" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：可用区]</text>
+<rect x="1180" y="320" width="340" height="318" fill="none" stroke="#888888" stroke-width="1.6" rx="8" stroke-dasharray="5 4"/>
+<text x="1194" y="608" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">K8s 节点池</text>
+<text x="1194" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：Kubernetes 1.30]</text>
+<rect x="1180" y="660" width="340" height="200" fill="none" stroke="#888888" stroke-width="1.6" rx="8" stroke-dasharray="5 4"/>
+<text x="1194" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">云数据库实例</text>
+<text x="1194" y="848" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B6B6B">[部署节点：托管 PostgreSQL]</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="容器">
+<rect x="780" y="160" width="300" height="100" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="930" y="190" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">公网负载均衡</text>
+<text x="930" y="212" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[七层负载均衡]</text>
+<text x="930" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">分发 HTTPS 请求</text>
+<rect x="360" y="340" width="300" height="80" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="510" y="370" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web 前端</text>
+<text x="510" y="392" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Nginx]</text>
+<rect x="360" y="456" width="300" height="104" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="510" y="486" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">订单 API</text>
+<text x="510" y="508" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Java 21，Spring Boot]</text>
+<text x="510" y="532" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">下单、查询订单</text>
+<path d="M360,690 A150.0,14 0 0 1 660,690 V772 A150.0,14 0 0 1 360,772 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M360,690 A150.0,14 0 0 0 660,690" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="510" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">PostgreSQL 主库</text>
+<text x="510" y="754" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[数据库：PostgreSQL 16]</text>
+<rect x="780" y="340" width="300" height="80" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="930" y="370" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web 前端</text>
+<text x="930" y="392" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Nginx]</text>
+<rect x="780" y="456" width="300" height="104" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="930" y="486" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">订单 API</text>
+<text x="930" y="508" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Java 21，Spring Boot]</text>
+<text x="930" y="532" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">下单、查询订单</text>
+<path d="M780,690 A150.0,14 0 0 1 1080,690 V772 A150.0,14 0 0 1 780,772 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M780,690 A150.0,14 0 0 0 1080,690" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="930" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">同步备库</text>
+<text x="930" y="754" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[数据库：PostgreSQL 16]</text>
+<rect x="1200" y="340" width="300" height="80" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="1350" y="370" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web 前端</text>
+<text x="1350" y="392" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Nginx]</text>
+<rect x="1200" y="456" width="300" height="104" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2" rx="6"/>
+<text x="1350" y="486" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">订单 API</text>
+<text x="1350" y="508" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Java 21，Spring Boot]</text>
+<text x="1350" y="532" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">下单、查询订单</text>
+<path d="M1200,690 A150.0,14 0 0 1 1500,690 V772 A150.0,14 0 0 1 1200,772 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M1200,690 A150.0,14 0 0 0 1500,690" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="1350" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">只读副本</text>
+<text x="1350" y="754" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[数据库：PostgreSQL 16]</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="关系">
+<path d="M222.0,300.0 L772.1,215.2" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M780.0,214.0 L771.6,219.4 L770.4,211.4 Z" fill="#707070"/>
+<text x="500" y="238" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A" text-anchor="middle">访问 [HTTPS]</text>
+<path d="M930.0,260.0 L517.9,338.5" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M510.0,340.0 L518.2,334.3 L519.7,342.3 Z" fill="#707070"/>
+<path d="M510.0,420.0 L510.0,448.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M510.0,456.0 L505.9,446.9 L514.1,446.9 Z" fill="#707070"/>
+<path d="M930.0,260.0 L930.0,332.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M930.0,340.0 L925.9,330.9 L934.1,330.9 Z" fill="#707070"/>
+<path d="M930.0,420.0 L930.0,448.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M930.0,456.0 L925.9,446.9 L934.1,446.9 Z" fill="#707070"/>
+<path d="M930.0,260.0 L1342.1,338.5" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1350.0,340.0 L1340.3,342.3 L1341.8,334.3 Z" fill="#707070"/>
+<path d="M1350.0,420.0 L1350.0,448.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1350.0,456.0 L1345.9,446.9 L1354.1,446.9 Z" fill="#707070"/>
+<text x="1150" y="276" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A">转发 [HTTPS]</text>
+<text x="1360" y="444" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#1A1A1A" text-anchor="middle">调用 [JSON/HTTPS]</text>
+<path d="M930.0,560.0 L930.0,650.0 L560.0,650.0 L560.0,668.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560.0,676.0 L555.9,666.9 L564.1,666.9 Z" fill="#707070"/>
+<path d="M1350.0,560.0 L1350.0,650.0 L938.0,650.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M930.0,650.0 L939.1,645.9 L939.1,654.1 Z" fill="#707070"/>
+<path d="M510.0,560.0 L510.0,668.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M510.0,676.0 L505.9,666.9 L514.1,666.9 Z" fill="#707070"/>
+<rect x="796" y="641" width="88" height="18" fill="#FFFFFF"/>
+<text x="840" y="655" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A" text-anchor="middle">读写 [JDBC]</text>
+<path d="M660.0,735.0 L772.0,735.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M780.0,735.0 L770.9,739.1 L770.9,730.9 Z" fill="#707070"/>
+<text x="720" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A" text-anchor="middle">同步复制</text>
+<path d="M510.0,786.0 L510.0,876.0 L1350.0,876.0 L1350.0,794.0" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1350.0,786.0 L1354.1,795.1 L1345.9,795.1 Z" fill="#707070"/>
+<text x="930" y="868" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1A1A1A" text-anchor="middle">异步复制 [流复制]</text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="图例">
+<text x="60" y="470" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">图例</text>
+<rect x="60" y="500" width="40" height="30" rx="10" fill="#08427B"/>
+<text x="112" y="521" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#1A1A1A">人员</text>
+<rect x="60" y="548" width="40" height="30" rx="4" fill="#438DD5"/>
+<text x="112" y="569" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#1A1A1A">容器</text>
+<ellipse cx="80" cy="601" rx="20" ry="5" fill="#438DD5"/>
+<rect x="60" y="601" width="40" height="22" fill="#438DD5"/>
+<ellipse cx="80" cy="623" rx="20" ry="5" fill="#438DD5"/>
+<text x="112" y="617" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#1A1A1A">数据库容器</text>
+<rect x="60" y="644" width="40" height="30" rx="6" fill="none" stroke="#888888" stroke-width="1.6"/>
+<text x="112" y="665" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#1A1A1A">部署节点</text>
+<line x1="60" y1="707" x2="92.8" y2="707" stroke="#707070" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="round"/>
+<path d="M100.0,707.0 L91.8,710.7 L91.8,703.3 Z" fill="#707070"/>
+<text x="112" y="713" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#1A1A1A">关系（虚线箭头）</text>
+</g>
+</svg>

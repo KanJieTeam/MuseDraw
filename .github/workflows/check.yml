@@ -51,7 +51,7 @@ jobs:
         run: node output/browser-deps/node_modules/playwright/cli.js install --with-deps chromium
       - name: Install locked scene-engine fonts without lifecycle scripts
         run: npm ci --prefix skills/musedraw --ignore-scripts
-      - name: Unified checks including all 105 native drawio structures and SVG scenes
+      - name: Unified checks including current scene sources and SVG artwork
         run: python scripts/check.py
         env:
           PYTHONDONTWRITEBYTECODE: '1'
@@ -68,15 +68,10 @@ jobs:
               checks = json.loads((output / 'checks.json').read_text(encoding='utf-8'))
               assert checks['passed'] and not checks['warnings'] and not checks['missingFonts'], checks
               import xml.etree.ElementTree as ET
-              cells = ET.parse(output / 'diagram.drawio').getroot().findall('.//mxCell')
-              assert any(cell.get('vertex') == '1' and cell.get('value', '').strip() for cell in cells), 'Missing native text'
-              by_id = {cell.get('id'): cell for cell in cells}
-              assert len(by_id) == len(cells), 'Duplicate native object IDs'
-              for cell in cells:
-                  assert 'shape=image' not in cell.get('style', '') and 'image=' not in cell.get('style', ''), 'Embedded image'
-                  if cell.get('edge') == '1':
-                      assert cell.get('source') in by_id and cell.get('target') in by_id, 'Missing connected terminals'
-      - name: Check system-font quickstart, small preview, native export and cache invalidation
+              svg = ET.parse(output / 'diagram.svg').getroot()
+              assert any(el.tag.endswith('text') and ''.join(el.itertext()).strip() for el in svg.iter()), 'Missing SVG text'
+              assert (output / 'diagram@2x.png').stat().st_size > 0, 'Missing PNG'
+      - name: Check system-font quickstart, small preview, PNG/SVG export and cache invalidation
         run: node scripts/check_fast_browser.mjs --lang en --runs 1 --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/fast-qa
       - name: Check module layout and source-preserving text edits
         run: node scripts/check_edit_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/edit-qa

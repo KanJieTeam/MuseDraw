@@ -1,0 +1,12 @@
+{
+  "type": "vector",
+  "theme": "journal",
+  "size": [
+    600,
+    600
+  ],
+  "header": false,
+  "footer": false,
+  "autoFit": false,
+  "nativeSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"600\" height=\"600\" viewBox=\"0 0 600 600\" data-theme=\"journal\"><rect width=\"600\" height=\"600\" fill=\"#ffffff\"/><g id=\"instrument\"><rect x=\"210\" y=\"110\" width=\"180\" height=\"380\" rx=\"30\" fill=\"#e3e9e8\" stroke=\"#485c60\" stroke-width=\"2\"/><rect x=\"230\" y=\"155\" width=\"140\" height=\"250\" rx=\"12\" fill=\"#f9fbfa\" stroke=\"#93a7a8\"/><path d=\"M230,300 Q300,340 370,300\" fill=\"none\" stroke=\"#bd8f69\" stroke-width=\"8\"/><rect x=\"282\" y=\"235\" width=\"36\" height=\"28\" fill=\"#8eaca6\" stroke=\"#485c60\"/><path d=\"M300,263 V320 M300,235 V175\" fill=\"none\" stroke=\"#485c60\" stroke-width=\"2\"/><rect x=\"265\" y=\"425\" width=\"70\" height=\"30\" rx=\"4\" fill=\"#bdd2cf\" stroke=\"#485c60\"/><circle cx=\"242\" cy=\"132\" r=\"6\" fill=\"#ffffff\" stroke=\"#485c60\"/><circle cx=\"358\" cy=\"132\" r=\"6\" fill=\"#ffffff\" stroke=\"#485c60\"/></g></svg>"
+}

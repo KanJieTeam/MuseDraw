@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>离子键的形成</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071423" stop-opacity="1"/><stop offset="1" stop-color="#17112F" stop-opacity="1"/></linearGradient><filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="70"/></filter></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#081521"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="极光">
+<rect x="0" y="0" width="1600" height="1000" fill="url(#bg)"/>
+<ellipse cx="300" cy="120" rx="420" ry="110" fill="#2FE3A0" opacity="0.35" filter="url(#blur)"/>
+<ellipse cx="900" cy="60" rx="520" ry="120" fill="#7B61FF" opacity="0.4" filter="url(#blur)"/>
+<ellipse cx="1400" cy="180" rx="360" ry="130" fill="#FFB36B" opacity="0.22" filter="url(#blur)"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="80" y="100" font-family="'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="600" fill="#F2F6FF">离子键的形成</text>
+<text x="82" y="140" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#A9BAD6">以氯化钠为例：钠原子失去 1 个电子，氯原子得到 1 个电子</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="原子">
+<rect x="90" y="190" width="1040" height="330" rx="22" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.2"/>
+<circle cx="330" cy="350" r="26" fill="#FFB36B" opacity="0.9"/>
+<text x="330" y="357" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#0B1626" text-anchor="middle">+11</text>
+<circle cx="330" cy="350" r="52" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="330" cy="298" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="402" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="350" r="86" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="330" cy="264" r="5.5" fill="#FFFFFF"/>
+<circle cx="390.81" cy="289.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="416" cy="350" r="5.5" fill="#FFFFFF"/>
+<circle cx="390.81" cy="410.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="436" r="5.5" fill="#FFFFFF"/>
+<circle cx="269.19" cy="410.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="244" cy="350" r="5.5" fill="#FFFFFF"/>
+<circle cx="269.19" cy="289.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="350" r="120" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="330" cy="230" r="5.5" fill="#FFFFFF"/>
+<text x="330" y="516" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#F2F6FF" text-anchor="middle">钠原子 Na</text>
+<text x="330" y="542" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#A9BAD6" text-anchor="middle">电子排布 2 8 1</text>
+<circle cx="880" cy="350" r="26" fill="#6FE3B5" opacity="0.9"/>
+<text x="880" y="357" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#0B1626" text-anchor="middle">+17</text>
+<circle cx="880" cy="350" r="52" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="880" cy="298" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="402" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="350" r="86" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="880" cy="264" r="5.5" fill="#FFFFFF"/>
+<circle cx="940.81" cy="289.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="966" cy="350" r="5.5" fill="#FFFFFF"/>
+<circle cx="940.81" cy="410.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="436" r="5.5" fill="#FFFFFF"/>
+<circle cx="819.19" cy="410.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="794" cy="350" r="5.5" fill="#FFFFFF"/>
+<circle cx="819.19" cy="289.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="350" r="120" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="880" cy="230" r="5.5" fill="#FFFFFF"/>
+<circle cx="973.82" cy="275.18" r="5.5" fill="#FFFFFF"/>
+<circle cx="996.99" cy="376.7" r="5.5" fill="#FFFFFF"/>
+<circle cx="932.07" cy="458.12" r="5.5" fill="#FFFFFF"/>
+<circle cx="827.93" cy="458.12" r="5.5" fill="#FFFFFF"/>
+<circle cx="763.01" cy="376.7" r="5.5" fill="#FFFFFF"/>
+<circle cx="786.18" cy="275.18" r="5.5" fill="#FFFFFF"/>
+<text x="880" y="516" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#F2F6FF" text-anchor="middle">氯原子 Cl</text>
+<text x="880" y="542" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#A9BAD6" text-anchor="middle">电子排布 2 8 7</text>
+<path d="M456.0,340.0 Q620.0,210.0 742.8,312.3" fill="none" stroke="#FFB36B" stroke-width="3" stroke-linecap="round"/>
+<path d="M752.0,320.0 L737.6,315.9 L745.4,306.5 Z" fill="#FFB36B"/>
+<text x="620" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#FFB36B" text-anchor="middle">转移 1 个电子</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="离子">
+<rect x="90" y="560" width="1040" height="380" rx="22" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.2"/>
+<circle cx="330" cy="720" r="26" fill="#FFB36B" opacity="0.9"/>
+<text x="330" y="727" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#0B1626" text-anchor="middle">+11</text>
+<circle cx="330" cy="720" r="52" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="330" cy="668" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="772" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="720" r="86" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="330" cy="634" r="5.5" fill="#FFFFFF"/>
+<circle cx="390.81" cy="659.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="416" cy="720" r="5.5" fill="#FFFFFF"/>
+<circle cx="390.81" cy="780.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="330" cy="806" r="5.5" fill="#FFFFFF"/>
+<circle cx="269.19" cy="780.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="244" cy="720" r="5.5" fill="#FFFFFF"/>
+<circle cx="269.19" cy="659.19" r="5.5" fill="#FFFFFF"/>
+<text x="330" y="852" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#F2F6FF" text-anchor="middle">钠离子 Na⁺</text>
+<text x="330" y="878" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#A9BAD6" text-anchor="middle">电子排布 2 8</text>
+<text x="426" y="644" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#FFB36B">+</text>
+<circle cx="880" cy="720" r="26" fill="#6FE3B5" opacity="0.9"/>
+<text x="880" y="727" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#0B1626" text-anchor="middle">+17</text>
+<circle cx="880" cy="720" r="52" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="880" cy="668" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="772" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="720" r="86" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="880" cy="634" r="5.5" fill="#FFFFFF"/>
+<circle cx="940.81" cy="659.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="966" cy="720" r="5.5" fill="#FFFFFF"/>
+<circle cx="940.81" cy="780.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="806" r="5.5" fill="#FFFFFF"/>
+<circle cx="819.19" cy="780.81" r="5.5" fill="#FFFFFF"/>
+<circle cx="794" cy="720" r="5.5" fill="#FFFFFF"/>
+<circle cx="819.19" cy="659.19" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="720" r="120" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+<circle cx="880" cy="600" r="5.5" fill="#FFFFFF"/>
+<circle cx="964.85" cy="635.15" r="5.5" fill="#FFFFFF"/>
+<circle cx="1000" cy="720" r="5.5" fill="#FFFFFF"/>
+<circle cx="964.85" cy="804.85" r="5.5" fill="#FFFFFF"/>
+<circle cx="880" cy="840" r="5.5" fill="#FFFFFF"/>
+<circle cx="795.15" cy="804.85" r="5.5" fill="#FFFFFF"/>
+<circle cx="760" cy="720" r="5.5" fill="#FFFFFF"/>
+<circle cx="795.15" cy="635.15" r="5.5" fill="#FFFFFF"/>
+<text x="880" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#F2F6FF" text-anchor="middle">氯离子 Cl⁻</text>
+<text x="880" y="912" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#A9BAD6" text-anchor="middle">电子排布 2 8 8</text>
+<text x="1010" y="610" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#6FE3B5">−</text>
+<line x1="481.2" y1="720" x2="708.8" y2="720" stroke="#F2F6FF" stroke-width="3" stroke-linecap="round"/>
+<path d="M720.0,720.0 L707.2,725.7 L707.2,714.3 Z" fill="#F2F6FF"/>
+<path d="M470.0,720.0 L482.8,714.3 L482.8,725.7 Z" fill="#F2F6FF"/>
+<text x="595" y="704" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="700" fill="#F2F6FF" text-anchor="middle">静电作用</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="说明">
+<text x="1200" y="260" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#F2F6FF"><tspan x="1200" dy="0">钠：最外层 1 个电子，</tspan><tspan x="1200" dy="28.8">容易失去，</tspan><tspan x="1200" dy="28.8">成为带 1 个单位正电荷的 Na⁺。</tspan><tspan x="1200" dy="28.8"></tspan><tspan x="1200" dy="28.8">氯：最外层 7 个电子，</tspan><tspan x="1200" dy="28.8">容易得到 1 个，</tspan><tspan x="1200" dy="28.8">成为带 1 个单位负电荷的 Cl⁻。</tspan></text>
+<text x="1200" y="640" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#F2F6FF"><tspan x="1200" dy="0">阴、阳离子之间的</tspan><tspan x="1200" dy="32">静电作用叫离子键，</tspan><tspan x="1200" dy="32">由离子键构成的化合物</tspan><tspan x="1200" dy="32">叫离子化合物。</tspan></text>
+<text x="1200" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#A9BAD6">失电子后，两种离子的最外层</text>
+<text x="1200" y="856" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#A9BAD6">都达到 8 个电子的稳定结构。</text>
+</g>
+</svg>

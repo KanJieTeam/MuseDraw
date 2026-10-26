@@ -9,7 +9,7 @@ import {scientificMotif} from '../skills/musedraw/scripts/engine/scientific-moti
 import {prepareScene,validateScene} from '../skills/musedraw/scripts/engine/validate.mjs';
 import {loadTheme} from '../skills/musedraw/scripts/musedraw.mjs';
 import {render} from '../skills/musedraw/scripts/engine/render.mjs';
-import {pathCommands} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {pathCommands} from '../skills/musedraw/scripts/engine/svg-path.mjs';
 import {patchScene} from '../skills/musedraw/scripts/engine/patch.mjs';
 const theme=await loadTheme('journal');
 const base={type:'scientific',id:'object',x:50,y:50,w:260,h:160};

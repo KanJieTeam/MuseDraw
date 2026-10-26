@@ -1,0 +1,54 @@
+<svg data-theme="newsprint" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>辛亥革命</title>
+<defs><pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3" cy="3" r="1.5" fill="#141414"/></pattern></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#ECE9E2"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="报头">
+<text x="800" y="104" font-family="'Noto Serif CJK SC', serif" font-size="70" font-weight="900" fill="#141414" text-anchor="middle" letter-spacing="12">历史周刊</text>
+<line x1="60" y1="126" x2="1540" y2="126" stroke="#141414" stroke-width="3"/>
+<line x1="60" y1="133" x2="1540" y2="133" stroke="#141414" stroke-width="1"/>
+<text x="60" y="158" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414">八年级上册　近代化的探索</text>
+<text x="800" y="158" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#141414" text-anchor="middle">专题：辛亥革命</text>
+<text x="1540" y="158" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414" text-anchor="end">1911—1912</text>
+<line x1="60" y1="172" x2="1540" y2="172" stroke="#141414" stroke-width="1"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="头条">
+<text x="800" y="250" font-family="'Noto Serif CJK SC', serif" font-size="56" font-weight="900" fill="#141414" text-anchor="middle">武昌首义　民国肇建　清帝退位</text>
+<text x="800" y="294" font-family="'Noto Serif CJK SC', serif" font-size="22" fill="#555555" text-anchor="middle">从武昌起义到清帝退位，相隔 125 天</text>
+<line x1="60" y1="320" x2="1540" y2="320" stroke="#141414" stroke-width="1.5"/>
+<line x1="900" y1="344" x2="900" y2="960" stroke="#141414" stroke-width="0.8"/>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="大事记">
+<text x="60" y="372" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">大事记</text>
+<text x="60" y="418" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">1905 年 8 月 20 日</text>
+<text x="60" y="442" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#555555">星期日</text>
+<text x="260" y="418" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#141414">中国同盟会在东京成立</text>
+<text x="260" y="448" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="260" dy="0">提出“驱除鞑虏，恢复中华，创立民国，平均地权”的纲领。</tspan></text>
+<text x="60" y="522" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">1911 年 4 月 27 日</text>
+<text x="60" y="546" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#555555">星期四</text>
+<text x="260" y="522" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#141414">黄花岗起义</text>
+<text x="260" y="552" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="260" dy="0">同盟会在广州发动起义，失败。</tspan></text>
+<text x="60" y="626" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">1911 年 10 月 10 日</text>
+<text x="60" y="650" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#555555">星期二</text>
+<text x="260" y="626" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#141414">武昌起义</text>
+<text x="260" y="656" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="260" dy="0">湖北新军中的革命党人起义，各省随后纷纷响应。</tspan></text>
+<text x="60" y="730" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">1912 年 1 月 1 日</text>
+<text x="60" y="754" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#555555">星期一</text>
+<text x="260" y="730" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#141414">中华民国成立</text>
+<text x="260" y="760" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="260" dy="0">孙中山在南京就任临时大总统。</tspan></text>
+<text x="60" y="834" font-family="'Noto Serif CJK SC', serif" font-size="18" font-weight="700" fill="#141414">1912 年 2 月 12 日</text>
+<text x="60" y="858" font-family="'Noto Serif CJK SC', serif" font-size="14" fill="#555555">星期一</text>
+<text x="260" y="834" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#141414">清帝退位</text>
+<text x="260" y="864" font-family="'Noto Serif CJK SC', serif" font-size="17" fill="#141414"><tspan x="260" dy="0">宣统帝溥仪退位，清朝统治结束。</tspan></text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="意义">
+<text x="930" y="372" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">历史意义</text>
+<text x="930" y="414" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#141414"><tspan x="930" dy="0">辛亥革命推翻了统治中国两千多年的君主专制制度，建立了中华民国，</tspan><tspan x="930" dy="33.2">使民主共和观念深入人心。</tspan></text>
+<text x="930" y="560" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#141414">局限</text>
+<text x="930" y="602" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#141414"><tspan x="930" dy="0">革命果实被袁世凯窃取，没有改变中国半殖民地半封建社会的性质。</tspan></text>
+<rect x="930" y="720" width="610" height="200" fill="url(#ht)" opacity="0.18"/>
+<text x="950" y="760" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#141414">为什么叫“辛亥”</text>
+<text x="950" y="796" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#141414"><tspan x="950" dy="0">1911 年按干支纪年是辛亥年，所以这场革命称为辛亥革命。</tspan></text>
+</g>
+</svg>

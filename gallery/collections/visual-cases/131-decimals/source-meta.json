@@ -1,0 +1,36 @@
+{
+  "id": "131",
+  "title": "小数的意义",
+  "use": "教学",
+  "style": "瑞士海报",
+  "theme": "教学（小学）",
+  "canvas": [
+    1200,
+    1600
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "百格图",
+    "读数",
+    "数位表",
+    "生活中"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [],
+  "example_data": false,
+  "computed": [
+    "百格图按 10 × 10 精确绘制；程序断言 2 + 3 × 0.1 + 5 × 0.01 = 2.35。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

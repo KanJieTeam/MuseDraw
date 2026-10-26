@@ -1,0 +1,55 @@
+<svg data-theme="aurora" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>DACI 决策角色</title>
+<defs><radialGradient id="au0" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7B5CFF" stop-opacity="0.55"/><stop offset="1" stop-color="#7B5CFF" stop-opacity="0"/></radialGradient><radialGradient id="au1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#1FD1B2" stop-opacity="0.55"/><stop offset="1" stop-color="#1FD1B2" stop-opacity="0"/></radialGradient><radialGradient id="au2" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FF7EB6" stop-opacity="0.55"/><stop offset="1" stop-color="#FF7EB6" stop-opacity="0"/></radialGradient><radialGradient id="au3" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2B7CFF" stop-opacity="0.55"/><stop offset="1" stop-color="#2B7CFF" stop-opacity="0"/></radialGradient></defs>
+<g data-md-layer="图">
+<rect width="1600" height="1000" fill="#070B1A"/>
+<ellipse cx="400" cy="450" rx="420" ry="320" fill="url(#au0)"/>
+<ellipse cx="1150" cy="420" rx="460" ry="330" fill="url(#au1)"/>
+<ellipse cx="800" cy="900" rx="700" ry="200" fill="url(#au2)"/>
+<ellipse cx="1400" cy="120" rx="300" ry="200" fill="url(#au3)"/>
+<text id="title" x="90" y="110" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="52" fill="#F2F5FF" font-weight="900">DACI 决策角色</text>
+<text x="92" y="156" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#AEB9DE">以「是否更换公司报销系统」为例：每个决定只有一个推动者、一个批准者</text>
+<rect x="90" y="230" width="330" height="560" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+<rect x="102" y="238" width="306" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<circle cx="180" cy="330" r="62" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6"/>
+<text x="180" y="354" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="66" fill="#F2F5FF" font-weight="700" text-anchor="middle">D</text>
+<text x="262" y="312" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#AEB9DE" font-weight="500">Driver</text>
+<text x="262" y="356" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#F2F5FF" font-weight="900">推动者</text>
+<text x="120" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#9FF2E0" font-weight="900">1 人</text>
+<text x="120" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#F2F5FF" font-weight="700">财务部经理 王蕾</text>
+<text x="120" y="580" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">收集信息、组织讨论，</text>
+<text x="120" y="612" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">按时推动出结论</text>
+<rect x="455" y="230" width="330" height="560" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+<rect x="467" y="238" width="306" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<circle cx="545" cy="330" r="62" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6"/>
+<text x="545" y="354" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="66" fill="#F2F5FF" font-weight="700" text-anchor="middle">A</text>
+<text x="627" y="312" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#AEB9DE" font-weight="500">Approver</text>
+<text x="627" y="356" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#F2F5FF" font-weight="900">批准者</text>
+<text x="485" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#9FF2E0" font-weight="900">1 人</text>
+<text x="485" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#F2F5FF" font-weight="700">首席财务官</text>
+<text x="485" y="580" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">做最终决定，</text>
+<text x="485" y="612" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">对结果负责</text>
+<rect x="820" y="230" width="330" height="560" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+<rect x="832" y="238" width="306" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<circle cx="910" cy="330" r="62" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6"/>
+<text x="910" y="354" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="66" fill="#F2F5FF" font-weight="700" text-anchor="middle">C</text>
+<text x="992" y="312" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#AEB9DE" font-weight="500">Contributors</text>
+<text x="992" y="356" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#F2F5FF" font-weight="900">贡献者</text>
+<text x="850" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#F2F5FF" font-weight="900">若干人</text>
+<text x="850" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#F2F5FF" font-weight="700">IT、法务、两位部门助理</text>
+<text x="850" y="580" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">提供专业意见，</text>
+<text x="850" y="612" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">但不拍板</text>
+<rect x="1185" y="230" width="330" height="560" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.4"/>
+<rect x="1197" y="238" width="306" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.35"/>
+<circle cx="1275" cy="330" r="62" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6"/>
+<text x="1275" y="354" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="66" fill="#F2F5FF" font-weight="700" text-anchor="middle">I</text>
+<text x="1357" y="312" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#AEB9DE" font-weight="500">Informed</text>
+<text x="1357" y="356" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#F2F5FF" font-weight="900">知会者</text>
+<text x="1215" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#F2F5FF" font-weight="900">若干人</text>
+<text x="1215" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#F2F5FF" font-weight="700">全体员工</text>
+<text x="1215" y="580" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">决定后被通知，</text>
+<text x="1215" y="612" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#AEB9DE">不参与讨论</text>
+<text x="90" y="870" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#F2F5FF" font-weight="500">常见错误：两个人都以为自己是批准者，或者把所有人都列为贡献者。</text>
+<text x="90" y="906" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#AEB9DE">先定 D 和 A，再决定谁是 C、谁只需要 I。</text>
+</g>
+</svg>

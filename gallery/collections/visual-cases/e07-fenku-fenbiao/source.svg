@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>按用户 ID 分库分表</title>
+<g data-md-layer="图">
+<rect width="1600" height="1000" fill="#FFFFFF"/>
+<text id="title" x="80" y="100" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="44" fill="#14263B" font-weight="900">按用户 ID 分库分表</text>
+<text x="82" y="144" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#2F5D8A" font-weight="500">一张订单表拆到 4 个分片，路由层按规则把每条请求送到对的库</text>
+<rect x="80" y="220" width="260" height="120" rx="10" fill="#DCE6F0"/>
+<text x="210" y="272" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#14263B" font-weight="700" text-anchor="middle">订单服务</text>
+<text x="210" y="304" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A" text-anchor="middle">多个实例</text>
+<line x1="340" y1="280" x2="431.6" y2="280" stroke="#2F5D8A" stroke-width="2.4"/>
+<path d="M440 280 L429.4 285.63 L429.4 274.37 Z" fill="#2F5D8A"/>
+<rect x="440" y="200" width="320" height="160" rx="10" fill="#1B3A5C"/>
+<text x="600" y="250" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#FFFFFF" font-weight="700" text-anchor="middle">分片路由层</text>
+<text x="600" y="290" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">shard = user_id % 4</text>
+<text x="600" y="326" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#C8D6E6" text-anchor="middle">也可以放在客户端 SDK 中</text>
+<path d="M760 280 C810 280 880 230 920 230" fill="none" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M926 230 L916.29 235.16 L916.29 224.84 Z" fill="#2F5D8A"/>
+<path d="M760 280 C810 280 1050 230 1090 230" fill="none" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M1096 230 L1086.29 235.16 L1086.29 224.84 Z" fill="#2F5D8A"/>
+<path d="M760 280 C810 280 1220 230 1260 230" fill="none" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M1266 230 L1256.29 235.16 L1256.29 224.84 Z" fill="#2F5D8A"/>
+<path d="M760 280 C810 280 1390 230 1430 230" fill="none" stroke="#2F5D8A" stroke-width="2"/>
+<path d="M1436 230 L1426.29 235.16 L1426.29 224.84 Z" fill="#2F5D8A"/>
+<path d="M866 210 V310 A70 14 0 0 0 1006 310 V210" fill="#1B3A5C"/>
+<ellipse cx="936" cy="210" rx="70" ry="14" fill="#1B3A5C" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<text x="936" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">分片 0</text>
+<text x="936" y="288" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#C8D6E6" text-anchor="middle">orders_0</text>
+<rect x="876" y="340" width="120" height="34" rx="6" fill="#DCE6F0"/>
+<text x="936" y="363" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#14263B" font-weight="500" text-anchor="middle">一主一从</text>
+<path d="M1036 210 V310 A70 14 0 0 0 1176 310 V210" fill="#2F5D8A"/>
+<ellipse cx="1106" cy="210" rx="70" ry="14" fill="#2F5D8A" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<text x="1106" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">分片 1</text>
+<text x="1106" y="288" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#C8D6E6" text-anchor="middle">orders_1</text>
+<rect x="1046" y="340" width="120" height="34" rx="6" fill="#DCE6F0"/>
+<text x="1106" y="363" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#14263B" font-weight="500" text-anchor="middle">一主一从</text>
+<path d="M1206 210 V310 A70 14 0 0 0 1346 310 V210" fill="#1B3A5C"/>
+<ellipse cx="1276" cy="210" rx="70" ry="14" fill="#1B3A5C" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<text x="1276" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">分片 2</text>
+<text x="1276" y="288" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#C8D6E6" text-anchor="middle">orders_2</text>
+<rect x="1216" y="340" width="120" height="34" rx="6" fill="#DCE6F0"/>
+<text x="1276" y="363" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#14263B" font-weight="500" text-anchor="middle">一主一从</text>
+<path d="M1376 210 V310 A70 14 0 0 0 1516 310 V210" fill="#2F5D8A"/>
+<ellipse cx="1446" cy="210" rx="70" ry="14" fill="#2F5D8A" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<text x="1446" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">分片 3</text>
+<text x="1446" y="288" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#C8D6E6" text-anchor="middle">orders_3</text>
+<rect x="1386" y="340" width="120" height="34" rx="6" fill="#DCE6F0"/>
+<text x="1446" y="363" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#14263B" font-weight="500" text-anchor="middle">一主一从</text>
+<text x="80" y="470" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#14263B" font-weight="700">路由示例</text>
+<line x1="80" y1="490" x2="760" y2="490" stroke="#1B3A5C" stroke-width="1.6"/>
+<text x="100" y="524" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="19" fill="#2F5D8A" font-weight="700">user_id</text>
+<text x="330" y="524" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="19" fill="#2F5D8A" font-weight="700">user_id % 4</text>
+<text x="560" y="524" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#2F5D8A" font-weight="700">落到</text>
+<text x="100" y="562" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1001</text>
+<text x="330" y="562" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">1</text>
+<text x="560" y="562" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 1</text>
+<line x1="80" y1="574" x2="760" y2="574" stroke="#DCE6F0"/>
+<text x="100" y="600" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1002</text>
+<text x="330" y="600" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">2</text>
+<text x="560" y="600" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 2</text>
+<line x1="80" y1="612" x2="760" y2="612" stroke="#DCE6F0"/>
+<text x="100" y="638" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1003</text>
+<text x="330" y="638" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">3</text>
+<text x="560" y="638" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 3</text>
+<line x1="80" y1="650" x2="760" y2="650" stroke="#DCE6F0"/>
+<text x="100" y="676" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1004</text>
+<text x="330" y="676" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">0</text>
+<text x="560" y="676" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 0</text>
+<line x1="80" y1="688" x2="760" y2="688" stroke="#DCE6F0"/>
+<text x="100" y="714" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1005</text>
+<text x="330" y="714" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">1</text>
+<text x="560" y="714" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 1</text>
+<line x1="80" y1="726" x2="760" y2="726" stroke="#DCE6F0"/>
+<text x="100" y="752" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1006</text>
+<text x="330" y="752" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">2</text>
+<text x="560" y="752" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 2</text>
+<line x1="80" y1="764" x2="760" y2="764" stroke="#DCE6F0"/>
+<text x="100" y="790" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1007</text>
+<text x="330" y="790" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">3</text>
+<text x="560" y="790" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 3</text>
+<line x1="80" y1="802" x2="760" y2="802" stroke="#DCE6F0"/>
+<text x="100" y="828" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B">1008</text>
+<text x="330" y="828" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#14263B" font-weight="700">0</text>
+<text x="560" y="828" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#14263B" font-weight="500">分片 0</text>
+<rect x="860" y="470" width="660" height="400" rx="12" fill="#DCE6F0"/>
+<text x="890" y="520" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#14263B" font-weight="700">扩容时要搬多少数据</text>
+<text x="890" y="572" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#14263B" font-weight="500">4 片 → 8 片：约 50% 的行换了分片</text>
+<text x="890" y="606" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A">新分片必须分走一半数据，用什么算法都一样</text>
+<text x="890" y="660" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#14263B" font-weight="500">4 片 → 5 片：取模约 80% 的行要搬</text>
+<text x="890" y="694" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A">一致性哈希平均只搬约 20%（新节点分到的那份）</text>
+<text x="890" y="760" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#14263B" font-weight="700">跨分片查询要尽量避免：</text>
+<text x="890" y="794" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A">按用户查订单只访问一个分片；</text>
+<text x="890" y="826" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#2F5D8A">按日期统计全站订单则要查 4 个分片再汇总。</text>
+</g>
+</svg>

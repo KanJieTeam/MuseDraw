@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>用四象限排一周</title>
+<defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="13" cy="13" r="1.3" fill="#E1DCCF"/></pattern></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FBFAF6"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="点阵纸">
+<rect x="0" y="0" width="1600" height="1000" fill="url(#dots)"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="标题">
+<path d="M70.0,84.0 L470.0,78.0 L474.0,118.0 L72.0,124.0 Z" fill="#FFE38A" opacity="0.9"/>
+<text x="80" y="114" font-family="'Noto Sans CJK SC', sans-serif" font-size="46" font-weight="800" fill="#3B3A36">用四象限排一周</text>
+<text x="82" y="158" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" fill="#6B675F">先排“重要且紧急”，再按截止日塞进紧急小事，“重要不紧急”优先放上午；第四象限不排</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="四象限">
+<rect x="70" y="200" width="250" height="250" fill="#F8C8D0" rx="3"/>
+<path d="M66.0,199.9 C72.1,199.9 90.4,199.8 102.6,199.8 C114.8,199.7 127.0,199.4 139.1,199.6 C151.3,199.7 163.5,200.5 175.7,200.4 C187.9,200.3 200.1,199.0 212.3,199.0 C224.5,199.0 236.7,200.3 248.9,200.4 C261.0,200.5 273.2,199.8 285.4,199.7 C297.6,199.6 315.9,199.8 322.0,199.8" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M319.9,198.0 C319.9,204.1 319.4,222.4 319.5,234.6 C319.5,246.8 320.2,259.0 320.2,271.1 C320.3,283.3 320.1,295.5 320.0,307.7 C319.8,319.9 319.5,332.1 319.4,344.3 C319.4,356.5 319.5,368.7 319.6,380.9 C319.7,393.0 319.9,405.2 320.0,417.4 C320.1,429.6 320.2,447.9 320.2,454.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M321.2,450.0 C315.1,450.0 296.9,449.9 284.7,449.8 C272.6,449.7 260.4,449.2 248.3,449.3 C236.1,449.4 224.0,450.2 211.8,450.4 C199.7,450.5 187.5,450.4 175.4,450.2 C163.2,450.1 151.1,449.5 138.9,449.5 C126.8,449.5 114.6,450.1 102.5,450.1 C90.3,450.2 72.1,449.8 66.0,449.8" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M69.9,452.0 C69.8,445.9 69.3,427.6 69.4,415.4 C69.5,403.2 70.6,391.0 70.6,378.9 C70.7,366.7 69.6,354.5 69.6,342.3 C69.6,330.1 70.4,317.9 70.6,305.7 C70.8,293.5 71.0,281.3 70.9,269.1 C70.9,257.0 70.4,244.8 70.3,232.6 C70.1,220.4 70.1,202.1 70.0,196.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<text x="86" y="234" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="800" fill="#3B3A36">重要且紧急</text>
+<text x="86" y="274" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">修复线上支付问题</text>
+<text x="86" y="296" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">3 小时，周一前</text>
+<text x="86" y="324" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">季度汇报材料</text>
+<text x="86" y="346" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">4 小时，周三前</text>
+<rect x="330" y="200" width="250" height="250" fill="#BFE6D0" rx="3"/>
+<path d="M326.0,200.2 C332.1,200.2 350.4,200.0 362.6,200.1 C374.8,200.2 387.0,200.6 399.1,200.7 C411.3,200.8 423.5,201.0 435.7,200.8 C447.9,200.7 460.1,200.0 472.3,199.9 C484.5,199.7 496.7,200.3 508.9,200.1 C521.0,200.0 533.2,199.2 545.4,199.2 C557.6,199.2 575.9,199.9 582.0,200.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M579.9,198.0 C579.8,204.1 579.2,222.4 579.1,234.6 C579.0,246.8 579.2,259.0 579.5,271.1 C579.8,283.3 581.0,295.5 581.0,307.7 C581.0,319.9 579.5,332.1 579.5,344.3 C579.4,356.5 580.6,368.7 580.6,380.9 C580.7,393.0 579.7,405.2 579.5,417.4 C579.4,429.6 579.6,447.9 579.6,454.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M581.2,449.8 C575.1,449.8 556.9,449.7 544.7,449.9 C532.6,450.0 520.4,451.0 508.3,450.9 C496.1,450.8 484.0,449.3 471.8,449.3 C459.7,449.3 447.5,450.6 435.4,450.8 C423.2,451.1 411.1,451.0 398.9,450.8 C386.8,450.5 374.6,449.4 362.5,449.3 C350.3,449.1 332.1,449.8 326.0,449.9" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M330.2,452.0 C330.1,445.9 329.5,427.6 329.5,415.4 C329.5,403.2 330.0,391.0 330.0,378.9 C330.1,366.7 329.8,354.5 329.8,342.3 C329.8,330.1 329.9,317.9 330.0,305.7 C330.0,293.5 329.8,281.3 329.9,269.1 C330.0,257.0 330.7,244.8 330.7,232.6 C330.7,220.4 330.1,202.1 330.0,196.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<text x="346" y="234" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="800" fill="#3B3A36">重要不紧急</text>
+<text x="346" y="274" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">设计新版权限模型</text>
+<text x="346" y="296" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">6 小时</text>
+<text x="346" y="324" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">读两篇竞品分析</text>
+<text x="346" y="346" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">2 小时</text>
+<text x="346" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">辅导新同事</text>
+<text x="346" y="396" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">2 小时</text>
+<rect x="70" y="460" width="250" height="250" fill="#FFE38A" rx="3"/>
+<path d="M66.0,460.0 C72.1,460.2 90.4,460.7 102.6,460.9 C114.8,461.0 127.0,461.2 139.1,460.9 C151.3,460.7 163.5,459.6 175.7,459.4 C187.9,459.2 200.1,459.7 212.3,459.7 C224.5,459.6 236.7,458.9 248.9,459.1 C261.0,459.3 273.2,460.7 285.4,460.9 C297.6,461.1 315.9,460.3 322.0,460.2" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M319.9,458.0 C320.0,464.1 320.1,482.4 320.2,494.6 C320.2,506.8 320.6,519.0 320.4,531.1 C320.3,543.3 319.2,555.5 319.2,567.7 C319.2,579.9 320.2,592.1 320.5,604.3 C320.8,616.5 320.9,628.7 321.0,640.9 C321.0,653.0 320.9,665.2 320.8,677.4 C320.6,689.6 320.4,707.9 320.3,714.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M321.2,710.1 C315.1,710.2 296.9,710.3 284.7,710.4 C272.6,710.4 260.4,710.6 248.3,710.6 C236.1,710.5 224.0,710.4 211.8,710.3 C199.7,710.2 187.5,710.2 175.4,710.1 C163.2,710.1 151.1,709.8 138.9,710.0 C126.8,710.1 114.6,710.9 102.5,710.9 C90.3,710.9 72.1,710.0 66.0,709.8" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M70.1,712.0 C70.1,705.9 70.6,687.6 70.4,675.4 C70.3,663.2 69.2,651.0 69.1,638.9 C69.0,626.7 69.5,614.5 69.7,602.3 C70.0,590.1 70.6,577.9 70.6,565.7 C70.6,553.5 69.8,541.3 69.6,529.1 C69.4,517.0 69.3,504.8 69.4,492.6 C69.5,480.4 70.1,462.1 70.3,456.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<text x="86" y="494" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="800" fill="#3B3A36">紧急不重要</text>
+<text x="86" y="534" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">回复供应商询价</text>
+<text x="86" y="556" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">1 小时，周二前</text>
+<text x="86" y="584" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">整理报销单据</text>
+<text x="86" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">1 小时，周五前</text>
+<rect x="330" y="460" width="250" height="250" fill="#E3E0D8" rx="3"/>
+<path d="M326.0,459.8 C332.1,460.0 350.4,460.8 362.6,461.0 C374.8,461.2 387.0,461.0 399.1,460.8 C411.3,460.6 423.5,459.8 435.7,459.7 C447.9,459.5 460.1,459.9 472.3,460.1 C484.5,460.2 496.7,460.7 508.9,460.6 C521.0,460.4 533.2,459.3 545.4,459.3 C557.6,459.2 575.9,460.1 582.0,460.3" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M579.9,458.0 C579.9,464.1 579.9,482.4 579.8,494.6 C579.7,506.8 579.3,519.0 579.3,531.1 C579.3,543.3 579.9,555.5 579.9,567.7 C580.0,579.9 579.8,592.1 579.6,604.3 C579.5,616.5 579.2,628.7 579.1,640.9 C579.0,653.0 579.0,665.2 579.2,677.4 C579.3,689.6 579.7,707.9 579.8,714.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M581.2,709.7 C575.1,709.8 556.9,710.5 544.7,710.4 C532.6,710.3 520.4,709.1 508.3,709.1 C496.1,709.2 484.0,710.4 471.8,710.7 C459.7,711.0 447.5,711.3 435.4,711.0 C423.2,710.7 411.1,709.1 398.9,709.0 C386.8,708.9 374.6,710.0 362.5,710.1 C350.3,710.3 332.1,710.0 326.0,710.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M329.7,712.0 C329.7,705.9 329.4,687.6 329.6,675.4 C329.9,663.2 331.0,651.0 331.0,638.9 C331.0,626.7 330.0,614.5 329.7,602.3 C329.4,590.1 329.2,577.9 329.1,565.7 C329.0,553.5 329.1,541.3 329.1,529.1 C329.1,517.0 329.2,504.8 329.3,492.6 C329.4,480.4 329.6,462.1 329.7,456.0" stroke="#3B3A36" stroke-width="2" fill="none" stroke-linecap="round"/>
+<text x="346" y="494" font-family="'Noto Sans CJK SC', sans-serif" font-size="19" font-weight="800" fill="#3B3A36">不重要也不紧急</text>
+<text x="346" y="534" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">整理旧文档</text>
+<text x="346" y="556" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">2 小时</text>
+<text x="346" y="584" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3B3A36">试用新工具</text>
+<text x="346" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F">2 小时</text>
+<text x="70" y="750" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#C0587A">第四象限：删掉或交给别人</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="日程">
+<text x="728" y="188" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#3B3A36" text-anchor="middle">周一</text>
+<text x="904" y="188" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#3B3A36" text-anchor="middle">周二</text>
+<text x="1080" y="188" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#3B3A36" text-anchor="middle">周三</text>
+<text x="1256" y="188" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#3B3A36" text-anchor="middle">周四</text>
+<text x="1432" y="188" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#3B3A36" text-anchor="middle">周五</text>
+<text x="630" y="206" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">9:00</text>
+<line x1="640" y1="200" x2="1520" y2="200" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="276" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">10:00</text>
+<line x1="640" y1="270" x2="1520" y2="270" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="346" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">11:00</text>
+<line x1="640" y1="340" x2="1520" y2="340" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="416" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">12:00</text>
+<line x1="640" y1="410" x2="1520" y2="410" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="486" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">13:00</text>
+<line x1="640" y1="480" x2="1520" y2="480" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="556" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">14:00</text>
+<line x1="640" y1="550" x2="1520" y2="550" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">15:00</text>
+<line x1="640" y1="620" x2="1520" y2="620" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="696" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">16:00</text>
+<line x1="640" y1="690" x2="1520" y2="690" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">17:00</text>
+<line x1="640" y1="760" x2="1520" y2="760" stroke="#E6E2D8" stroke-width="1"/>
+<text x="630" y="836" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#6B675F" text-anchor="end">18:00</text>
+<line x1="640" y1="830" x2="1520" y2="830" stroke="#E6E2D8" stroke-width="1"/>
+<rect x="640" y="410" width="880" height="70" fill="#EFEDE7"/>
+<text x="1080" y="450" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#6B675F" text-anchor="middle">午饭</text>
+<rect x="644" y="271" width="168" height="68" fill="#9A968C" rx="4"/>
+<text x="654" y="292" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">周会</text>
+<rect x="820" y="551" width="168" height="103" fill="#9A968C" rx="4"/>
+<text x="830" y="572" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">评审</text>
+<rect x="996" y="271" width="168" height="68" fill="#9A968C" rx="4"/>
+<text x="1006" y="292" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">客户会</text>
+<rect x="1172" y="691" width="168" height="68" fill="#9A968C" rx="4"/>
+<text x="1182" y="712" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">一对一</text>
+<rect x="1348" y="621" width="168" height="68" fill="#9A968C" rx="4"/>
+<text x="1358" y="642" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">复盘</text>
+<rect x="644" y="236" width="168" height="15.5" fill="#9A968C" rx="4"/>
+<rect x="820" y="236" width="168" height="15.5" fill="#9A968C" rx="4"/>
+<rect x="996" y="236" width="168" height="15.5" fill="#9A968C" rx="4"/>
+<rect x="1172" y="236" width="168" height="15.5" fill="#9A968C" rx="4"/>
+<rect x="1348" y="236" width="168" height="15.5" fill="#9A968C" rx="4"/>
+<rect x="644" y="202" width="168" height="31" fill="#F8C8D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="652" y="222" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="652" dy="0">修复线上支付问题</tspan></text>
+<rect x="644" y="342" width="168" height="66" fill="#F8C8D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="652" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="652" dy="0">修复线上支付问题</tspan></text>
+<rect x="644" y="482" width="168" height="101" fill="#F8C8D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="652" y="502" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="652" dy="0">修复线上支付问题</tspan></text>
+<rect x="644" y="587" width="168" height="241" fill="#F8C8D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="652" y="607" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="652" dy="0">季度汇报材料</tspan></text>
+<rect x="820" y="202" width="168" height="31" fill="#F8C8D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="828" y="222" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="828" dy="0">季度汇报材料</tspan></text>
+<rect x="820" y="272" width="168" height="66" fill="#FFE38A" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="828" y="292" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="828" dy="0">回复供应商询价</tspan></text>
+<rect x="820" y="342" width="168" height="66" fill="#FFE38A" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="828" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="828" dy="0">整理报销单据</tspan></text>
+<rect x="820" y="482" width="168" height="66" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="828" y="502" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="828" dy="0">设计新版权限模型</tspan></text>
+<rect x="820" y="657" width="168" height="171" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="828" y="677" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="828" dy="0">设计新版权限模型</tspan></text>
+<rect x="996" y="202" width="168" height="31" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="1004" y="222" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="1004" dy="0">设计新版权限模型</tspan></text>
+<rect x="996" y="342" width="168" height="66" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="1004" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="1004" dy="0">设计新版权限模型</tspan></text>
+<rect x="996" y="482" width="168" height="66" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="1004" y="502" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="1004" dy="0">设计新版权限模型</tspan></text>
+<rect x="996" y="552" width="168" height="136" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="1004" y="572" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="1004" dy="0">读两篇竞品分析</tspan></text>
+<rect x="996" y="692" width="168" height="136" fill="#BFE6D0" stroke="#3B3A36" stroke-width="1.2" rx="6"/>
+<text x="1004" y="712" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#3B3A36"><tspan x="1004" dy="0">辅导新同事</tspan></text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="小结">
+<rect x="70" y="770" width="510" height="170" fill="#C9D8F5" rx="4"/>
+<text x="92" y="810" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#3B3A36"><tspan x="92" dy="0">可用时间 32 小时（扣除会议和午饭）</tspan><tspan x="92" dy="28.9">已安排任务 19 小时</tspan><tspan x="92" dy="28.9">留白 13 小时（41%），应付临时事项</tspan><tspan x="92" dy="28.9">有截止日的任务都排在截止日之前</tspan></text>
+</g>
+</svg>

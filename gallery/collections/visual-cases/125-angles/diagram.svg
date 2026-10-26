@@ -1,0 +1,46 @@
+<svg data-theme="bauhaus" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>认识角</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#ECE6DA"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="116" font-family="'Noto Sans CJK SC', sans-serif" font-size="58" font-weight="900" fill="#141414">认识角</text>
+<rect x="70" y="146" width="1460" height="12" fill="#141414"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="角">
+<path d="M160,470 L350.0,470.0 A190,190 0 0 0 294.4,335.6 Z" fill="#F2C230"/>
+<line x1="160" y1="470" x2="410" y2="470" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<line x1="160" y1="470" x2="336.78" y2="293.22" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<circle cx="160" cy="470" r="9" fill="#141414"/>
+<text x="160" y="534" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#141414">锐角</text>
+<text x="160" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#141414">小于 90°</text>
+<path d="M600,470 L790.0,470.0 A190,190 0 0 0 600.0,280.0 Z" fill="#1D4E9E"/>
+<line x1="600" y1="470" x2="850" y2="470" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<line x1="600" y1="470" x2="600" y2="220" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<circle cx="600" cy="470" r="9" fill="#141414"/>
+<path d="M634.0,470.0 L634.0,436.0 L600.0,436.0" fill="none" stroke="#141414" stroke-width="4"/>
+<text x="600" y="534" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#141414">直角</text>
+<text x="600" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#141414">等于 90°</text>
+<path d="M1130,470 L1320.0,470.0 A190,190 0 0 0 995.6,335.6 Z" fill="#D52B1E"/>
+<line x1="1130" y1="470" x2="1380" y2="470" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<line x1="1130" y1="470" x2="953.22" y2="293.22" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<circle cx="1130" cy="470" r="9" fill="#141414"/>
+<text x="1130" y="534" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#141414">钝角</text>
+<text x="1130" y="570" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#141414">大于 90°，小于 180°</text>
+<path d="M400,840 L560.0,840.0 A160,160 0 0 0 240.0,840.0 Z" fill="#1D4E9E"/>
+<line x1="400" y1="840" x2="620" y2="840" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<line x1="400" y1="840" x2="180" y2="840" stroke="#141414" stroke-width="8" stroke-linecap="square"/>
+<circle cx="400" cy="840" r="9" fill="#141414"/>
+<text x="660" y="780" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#141414">平角</text>
+<text x="660" y="816" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#141414">等于 180°，两条边成一条直线</text>
+<circle cx="1180" cy="780" r="130" fill="#D52B1E"/>
+<line x1="1180" y1="780" x2="1360" y2="780" stroke="#141414" stroke-width="8"/>
+<circle cx="1180" cy="780" r="9" fill="#141414"/>
+<text x="1340" y="700" font-family="'Noto Sans CJK SC', sans-serif" font-size="34" font-weight="800" fill="#141414">周角</text>
+<text x="1340" y="736" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#141414">等于 360°，转了一整圈</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="关系">
+<rect x="1000" y="930" width="530" height="50" fill="#141414"/>
+<text x="1265" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#F2C230" text-anchor="middle">1 周角 = 2 平角 = 4 直角</text>
+</g>
+</svg>

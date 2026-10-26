@@ -1,0 +1,36 @@
+{
+  "id": "143",
+  "title": "血液循环线路图",
+  "use": "教学",
+  "style": "地铁线路",
+  "theme": "教学（中学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "心脏底",
+    "线路",
+    "心脏",
+    "车站",
+    "标题与图例"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [],
+  "example_data": false,
+  "computed": [
+    "无数值计算；线路只走水平、竖直和 45 度。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1200" height="1600" viewBox="0 0 1200 1600">
+<title>客户留存队列分析</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1200" height="1600" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="66" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="120" font-weight="900" fill="#000000" letter-spacing="-4">客户留存</text>
+<text x="72" y="206" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" fill="#000000">按注册月份分组的月度留存（示例数据）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="主结论">
+<rect x="0" y="250" width="1200" height="210" fill="#E3241B"/>
+<text x="72" y="360" font-family="'Noto Sans CJK SC', sans-serif" font-size="110" font-weight="900" fill="#FFFFFF" letter-spacing="-4">42% → 55%</text>
+<text x="72" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="500" fill="#FFFFFF">第 3 个月留存率：新手引导改版（2026 年 4 月）前后的队列平均</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="热力表">
+<text x="268" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M0</text>
+<text x="344" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M1</text>
+<text x="420" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M2</text>
+<text x="496" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M3</text>
+<text x="572" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M4</text>
+<text x="648" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M5</text>
+<text x="724" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M6</text>
+<text x="800" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M7</text>
+<text x="876" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M8</text>
+<text x="952" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M9</text>
+<text x="1028" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M10</text>
+<text x="1104" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="middle">M11</text>
+<text x="70" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000">注册月份</text>
+<text x="216" y="526" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="end">人数</text>
+<text x="70" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2025-11</text>
+<text x="216" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">407</text>
+<rect x="230" y="540" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="540" width="74" height="38" fill="#EC716B"/>
+<text x="344" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">72%</text>
+<rect x="382" y="540" width="74" height="38" fill="#F3A6A3"/>
+<text x="420" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">52%</text>
+<rect x="458" y="540" width="74" height="38" fill="#F7C1BF"/>
+<text x="496" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">42%</text>
+<rect x="534" y="540" width="74" height="38" fill="#F9D3D1"/>
+<text x="572" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">36%</text>
+<rect x="610" y="540" width="74" height="38" fill="#FBE6E5"/>
+<text x="648" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">29%</text>
+<rect x="686" y="540" width="74" height="38" fill="#FCEAE9"/>
+<text x="724" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">28%</text>
+<rect x="762" y="540" width="74" height="38" fill="#FCEFEE"/>
+<text x="800" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">26%</text>
+<rect x="838" y="540" width="74" height="38" fill="#FDF0EF"/>
+<text x="876" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<rect x="914" y="540" width="74" height="38" fill="#FDF2F1"/>
+<text x="952" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<rect x="990" y="540" width="74" height="38" fill="#FDF3F2"/>
+<text x="1028" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">24%</text>
+<rect x="1066" y="540" width="74" height="38" fill="#FEFBFB"/>
+<text x="1104" y="566" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">21%</text>
+<text x="70" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2025-12</text>
+<text x="216" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">403</text>
+<rect x="230" y="580" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="580" width="74" height="38" fill="#ED7570"/>
+<text x="344" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">70%</text>
+<rect x="382" y="580" width="74" height="38" fill="#F3A29E"/>
+<text x="420" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">54%</text>
+<rect x="458" y="580" width="74" height="38" fill="#F7C2BF"/>
+<text x="496" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">42%</text>
+<rect x="534" y="580" width="74" height="38" fill="#F9D5D3"/>
+<text x="572" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">35%</text>
+<rect x="610" y="580" width="74" height="38" fill="#FBE0DE"/>
+<text x="648" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">31%</text>
+<rect x="686" y="580" width="74" height="38" fill="#FCECEB"/>
+<text x="724" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">27%</text>
+<rect x="762" y="580" width="74" height="38" fill="#FCEEED"/>
+<text x="800" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">26%</text>
+<rect x="838" y="580" width="74" height="38" fill="#FDF1F0"/>
+<text x="876" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<rect x="914" y="580" width="74" height="38" fill="#FDF5F4"/>
+<text x="952" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">24%</text>
+<rect x="990" y="580" width="74" height="38" fill="#FEF8F8"/>
+<text x="1028" y="606" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">22%</text>
+<text x="70" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-01</text>
+<text x="216" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">571</text>
+<rect x="230" y="620" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="620" width="74" height="38" fill="#EC6F69"/>
+<text x="344" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">72%</text>
+<rect x="382" y="620" width="74" height="38" fill="#F3A4A0"/>
+<text x="420" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">53%</text>
+<rect x="458" y="620" width="74" height="38" fill="#F6C0BD"/>
+<text x="496" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">43%</text>
+<rect x="534" y="620" width="74" height="38" fill="#F9D5D3"/>
+<text x="572" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">35%</text>
+<rect x="610" y="620" width="74" height="38" fill="#FBE5E4"/>
+<text x="648" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">29%</text>
+<rect x="686" y="620" width="74" height="38" fill="#FCEBEA"/>
+<text x="724" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">27%</text>
+<rect x="762" y="620" width="74" height="38" fill="#FCECEC"/>
+<text x="800" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">27%</text>
+<rect x="838" y="620" width="74" height="38" fill="#FDF1F0"/>
+<text x="876" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<rect x="914" y="620" width="74" height="38" fill="#FDF4F4"/>
+<text x="952" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">24%</text>
+<text x="70" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-02</text>
+<text x="216" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">598</text>
+<rect x="230" y="660" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="660" width="74" height="38" fill="#ED726C"/>
+<text x="344" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">71%</text>
+<rect x="382" y="660" width="74" height="38" fill="#F3A7A3"/>
+<text x="420" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">52%</text>
+<rect x="458" y="660" width="74" height="38" fill="#F7C4C2"/>
+<text x="496" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">41%</text>
+<rect x="534" y="660" width="74" height="38" fill="#F9D5D3"/>
+<text x="572" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">35%</text>
+<rect x="610" y="660" width="74" height="38" fill="#FBE4E3"/>
+<text x="648" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">30%</text>
+<rect x="686" y="660" width="74" height="38" fill="#FCE8E7"/>
+<text x="724" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">28%</text>
+<rect x="762" y="660" width="74" height="38" fill="#FDF2F1"/>
+<text x="800" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<rect x="838" y="660" width="74" height="38" fill="#FDF1F0"/>
+<text x="876" y="686" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<text x="70" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-03</text>
+<text x="216" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">380</text>
+<rect x="230" y="700" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="700" width="74" height="38" fill="#EC706A"/>
+<text x="344" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">72%</text>
+<rect x="382" y="700" width="74" height="38" fill="#F3A7A3"/>
+<text x="420" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">52%</text>
+<rect x="458" y="700" width="74" height="38" fill="#F6C0BD"/>
+<text x="496" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">43%</text>
+<rect x="534" y="700" width="74" height="38" fill="#FAD9D7"/>
+<text x="572" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">34%</text>
+<rect x="610" y="700" width="74" height="38" fill="#FBE1E0"/>
+<text x="648" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">31%</text>
+<rect x="686" y="700" width="74" height="38" fill="#FCE9E8"/>
+<text x="724" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">28%</text>
+<rect x="762" y="700" width="74" height="38" fill="#FDF2F1"/>
+<text x="800" y="726" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">25%</text>
+<text x="70" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#000000">2026-04</text>
+<text x="216" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">471</text>
+<rect x="230" y="740" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="740" width="74" height="38" fill="#E95A53"/>
+<text x="344" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">80%</text>
+<rect x="382" y="740" width="74" height="38" fill="#EF8782"/>
+<text x="420" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">64%</text>
+<rect x="458" y="740" width="74" height="38" fill="#F3A19D"/>
+<text x="496" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">54%</text>
+<rect x="534" y="740" width="74" height="38" fill="#F5B3B0"/>
+<text x="572" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">48%</text>
+<rect x="610" y="740" width="74" height="38" fill="#F6C0BD"/>
+<text x="648" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">43%</text>
+<rect x="686" y="740" width="74" height="38" fill="#F8CAC7"/>
+<text x="724" y="766" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">39%</text>
+<text x="70" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-05</text>
+<text x="216" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">457</text>
+<rect x="230" y="780" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="780" width="74" height="38" fill="#EA5D56"/>
+<text x="344" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">79%</text>
+<rect x="382" y="780" width="74" height="38" fill="#EF8782"/>
+<text x="420" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">64%</text>
+<rect x="458" y="780" width="74" height="38" fill="#F29E9A"/>
+<text x="496" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">55%</text>
+<rect x="534" y="780" width="74" height="38" fill="#F5B1AE"/>
+<text x="572" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">48%</text>
+<rect x="610" y="780" width="74" height="38" fill="#F6BEBC"/>
+<text x="648" y="806" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">44%</text>
+<text x="70" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-06</text>
+<text x="216" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">582</text>
+<rect x="230" y="820" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="820" width="74" height="38" fill="#EA5B54"/>
+<text x="344" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">80%</text>
+<rect x="382" y="820" width="74" height="38" fill="#EF847F"/>
+<text x="420" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">65%</text>
+<rect x="458" y="820" width="74" height="38" fill="#F3A39F"/>
+<text x="496" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">54%</text>
+<rect x="534" y="820" width="74" height="38" fill="#F5B2AF"/>
+<text x="572" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">48%</text>
+<text x="70" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-07</text>
+<text x="216" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">436</text>
+<rect x="230" y="860" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="860" width="74" height="38" fill="#EA5F58"/>
+<text x="344" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">78%</text>
+<rect x="382" y="860" width="74" height="38" fill="#EF8782"/>
+<text x="420" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">64%</text>
+<rect x="458" y="860" width="74" height="38" fill="#F29E9A"/>
+<text x="496" y="886" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="middle">55%</text>
+<text x="70" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-08</text>
+<text x="216" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">620</text>
+<rect x="230" y="900" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="900" width="74" height="38" fill="#EA5E57"/>
+<text x="344" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">79%</text>
+<rect x="382" y="900" width="74" height="38" fill="#EF847F"/>
+<text x="420" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">65%</text>
+<text x="70" y="966" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-09</text>
+<text x="216" y="966" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">589</text>
+<rect x="230" y="940" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="966" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<rect x="306" y="940" width="74" height="38" fill="#EA5E58"/>
+<text x="344" y="966" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">78%</text>
+<text x="70" y="1006" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#000000">2026-10</text>
+<text x="216" y="1006" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#767676" text-anchor="end">402</text>
+<rect x="230" y="980" width="74" height="38" fill="#E3241B"/>
+<text x="268" y="1006" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">100%</text>
+<line x1="60" y1="739" x2="1142" y2="739" stroke="#000000" stroke-width="3"/>
+<text x="1142" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#000000" text-anchor="end">引导改版</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="曲线">
+<line x1="130" y1="1430" x2="1128" y2="1430" stroke="#000000" stroke-width="2"/>
+<line x1="130" y1="1347.5" x2="1128" y2="1347.5" stroke="#E5E5E5" stroke-width="1"/>
+<text x="118" y="1352.5" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="end">25%</text>
+<line x1="130" y1="1265" x2="1128" y2="1265" stroke="#E5E5E5" stroke-width="1"/>
+<text x="118" y="1270" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="end">50%</text>
+<line x1="130" y1="1182.5" x2="1128" y2="1182.5" stroke="#E5E5E5" stroke-width="1"/>
+<text x="118" y="1187.5" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="end">75%</text>
+<line x1="130" y1="1100" x2="1128" y2="1100" stroke="#E5E5E5" stroke-width="1"/>
+<text x="118" y="1105" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#000000" text-anchor="end">100%</text>
+<text x="130" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M0</text>
+<text x="220.73" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M1</text>
+<text x="311.45" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M2</text>
+<text x="402.18" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M3</text>
+<text x="492.91" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M4</text>
+<text x="583.64" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M5</text>
+<text x="674.36" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M6</text>
+<text x="765.09" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M7</text>
+<text x="855.82" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M8</text>
+<text x="946.55" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M9</text>
+<text x="1037.27" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M10</text>
+<text x="1128" y="1456" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#767676" text-anchor="middle">M11</text>
+<path d="M130.0,1100.0 L220.7,1194.0 L311.5,1256.2 L402.2,1290.3 L492.9,1314.2 L583.6,1331.1 L674.4,1339.3 L765.1,1345.7 L855.8,1347.2 L946.5,1350.9 L1037.3,1353.1" fill="none" stroke="#767676" stroke-width="3"/>
+<text x="1047.27" y="1358.11" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#767676">改版前队列</text>
+<path d="M130.0,1100.0 L220.7,1169.0 L311.5,1218.3 L402.2,1249.9 L492.9,1271.6 L583.6,1287.4" fill="none" stroke="#E3241B" stroke-width="5"/>
+<text x="593.64" y="1292.44" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#E3241B">改版后队列</text>
+<text x="130" y="1080" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="800" fill="#000000">平均留存曲线（至少两个队列有数据的月份）</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="脚注">
+<line x1="72" y1="1500" x2="1128" y2="1500" stroke="#000000" stroke-width="3"/>
+<text x="72" y="1540" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#000000">留存率 = 第 M 个月仍有付费行为的客户 ÷ 该月注册的客户。最近的队列数据较少，阶梯状的空白是尚未发生的月份。</text>
+</g>
+</svg>

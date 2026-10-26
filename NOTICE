@@ -1,6 +1,12 @@
 MuseDraw
 Copyright 2026 MuseDraw contributors
 
+The visual case collection contains artwork and design notes supplied by the
+project author for inclusion. Original SVG and PNG files are retained alongside
+replay scenes; obsolete export notes have been omitted from the design text.
+Example data and simulations are illustrative, not independently certified results.
+The spatial interface experiment includes Three.js under its bundled MIT license.
+
 Project-authored instructions, helper code and example figures are provided under
 the Apache License, Version 2.0. External sites linked as visual references retain
 their own rights. Their screenshots, source templates, logos and author text are

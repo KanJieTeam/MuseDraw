@@ -1,0 +1,39 @@
+{
+  "id": "122",
+  "title": "植树问题",
+  "use": "教学",
+  "style": "白板手绘",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "白板",
+    "标题",
+    "三种情况",
+    "封闭图形",
+    "规律"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "渐变",
+    "半透明"
+  ],
+  "example_data": true,
+  "computed": [
+    "段数 20；三种直线种法 21、20、19 棵，程序断言；圆上 20 棵按等角度排布。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

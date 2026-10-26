@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1040" width="1600" height="1040">
+<title>多中心临床研究数据平台系统上下文图</title>
+<g data-md-layer="图">
+<rect width="1600" height="1040" fill="#FFFFFF"/>
+<text id="title" x="60" y="80" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="34" fill="#111111" font-weight="700">多中心临床研究数据平台　系统上下文图</text>
+<text x="62" y="116" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#666666">C4 模型第 1 层：平台与使用它的人、与它交换数据的外部系统</text>
+<circle cx="320" cy="190" r="30" fill="#08427B"/>
+<rect x="205.0" y="212" width="230" height="122" rx="26" fill="#08427B"/>
+<text x="320" y="252" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">研究护士</text>
+<text x="320" y="276" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#DCE6F2" text-anchor="middle">[人员]</text>
+<text x="320" y="298" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">在各中心录入病例报告表</text>
+<text x="320" y="320" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">回复数据质疑</text>
+<circle cx="800" cy="190" r="30" fill="#08427B"/>
+<rect x="685.0" y="212" width="230" height="122" rx="26" fill="#08427B"/>
+<text x="800" y="252" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">监查员</text>
+<text x="800" y="276" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#DCE6F2" text-anchor="middle">[人员]</text>
+<text x="800" y="298" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">远程核查源数据</text>
+<text x="800" y="320" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">发起数据质疑</text>
+<circle cx="1280" cy="190" r="30" fill="#08427B"/>
+<rect x="1165.0" y="212" width="230" height="122" rx="26" fill="#08427B"/>
+<text x="1280" y="252" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">统计师</text>
+<text x="1280" y="276" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#DCE6F2" text-anchor="middle">[人员]</text>
+<text x="1280" y="298" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">锁库后下载数据集</text>
+<text x="1280" y="320" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">完成统计分析</text>
+<rect x="600" y="470" width="400" height="170" rx="10" fill="#1168BD"/>
+<text x="800" y="506" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">临床研究数据平台</text>
+<text x="800" y="530" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[软件系统]</text>
+<text x="800" y="556" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">电子数据采集、质疑管理、</text>
+<text x="800" y="579" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">稽查轨迹、数据锁定与导出</text>
+<rect x="80" y="790" width="300" height="150" rx="10" fill="#8C8C8C"/>
+<text x="230" y="826" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">医院信息系统</text>
+<text x="230" y="850" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="230" y="876" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">提供检验结果与</text>
+<text x="230" y="899" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">既往病历</text>
+<rect x="460" y="790" width="300" height="150" rx="10" fill="#8C8C8C"/>
+<text x="610" y="826" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">中央随机化系统</text>
+<text x="610" y="850" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="610" y="876" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">分配受试者编号</text>
+<text x="610" y="899" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">与组别</text>
+<rect x="840" y="790" width="300" height="150" rx="10" fill="#8C8C8C"/>
+<text x="990" y="826" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">中心实验室系统</text>
+<text x="990" y="850" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="990" y="876" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">回传集中检测</text>
+<text x="990" y="899" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">的化验结果</text>
+<rect x="1220" y="790" width="300" height="150" rx="10" fill="#8C8C8C"/>
+<text x="1370" y="826" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">药物警戒数据库</text>
+<text x="1370" y="850" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[外部系统]</text>
+<text x="1370" y="876" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">接收严重不良</text>
+<text x="1370" y="899" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">事件报告</text>
+<path d="M320 324 L320 400 L660 470" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M660 470 L649.45 473.1 L651.53 462.98 Z" fill="#707070"/>
+<text x="400" y="420" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">录入病例报告表、回复质疑</text>
+<text x="400" y="439" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[HTTPS]</text>
+<path d="M800 324 L800 466" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M800 466 L794.84 456.29 L805.16 456.29 Z" fill="#707070"/>
+<text x="812" y="400" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">核查数据、发起质疑</text>
+<text x="812" y="419" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[HTTPS]</text>
+<path d="M940 470 L1280 400 L1280 328" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1280 328 L1285.16 337.71 L1274.84 337.71 Z" fill="#707070"/>
+<text x="1080" y="420" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">下载锁定后的数据集</text>
+<text x="1080" y="439" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[SFTP]</text>
+<path d="M230 790 L230 600 L596 600" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M596 600 L586.29 605.16 L586.29 594.84 Z" fill="#707070"/>
+<text x="246" y="690" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">导入检验结果</text>
+<text x="246" y="709" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[HL7]</text>
+<path d="M660 640 L610 786" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M610 786 L608.26 775.14 L618.03 778.48 Z" fill="#707070"/>
+<text x="520" y="720" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500" text-anchor="end">获取随机号</text>
+<text x="520" y="739" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777" text-anchor="end">[API]</text>
+<path d="M990 790 L900 644" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M900 644 L909.49 649.56 L900.7 654.98 Z" fill="#707070"/>
+<text x="1000" y="720" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">回传化验结果</text>
+<text x="1000" y="739" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[文件交换]</text>
+<path d="M1000 600 L1370 600 L1370 786" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1370 786 L1364.84 776.29 L1375.16 776.29 Z" fill="#707070"/>
+<text x="1386" y="690" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">上报严重不良事件</text>
+<text x="1386" y="709" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[E2B]</text>
+<text x="1400" y="60" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="700">图例</text>
+<circle cx="1412" cy="82" r="6" fill="#08427B"/>
+<rect x="1400" y="86" width="24" height="12" rx="5" fill="#08427B"/>
+<text x="1434" y="93" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">人员</text>
+<rect x="1400" y="106" width="24" height="22" rx="4" fill="#1168BD"/>
+<text x="1434" y="123" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">本系统</text>
+<rect x="1400" y="136" width="24" height="22" rx="4" fill="#8C8C8C"/>
+<text x="1434" y="153" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">外部系统</text>
+</g>
+</svg>

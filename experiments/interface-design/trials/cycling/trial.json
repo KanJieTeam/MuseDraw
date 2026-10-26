@@ -54,6 +54,5 @@
   "formats": [
     "self-contained HTML/CSS/JS",
     "desktop/mobile PNG previews"
-  ],
-  "drawio": false
+  ]
 }

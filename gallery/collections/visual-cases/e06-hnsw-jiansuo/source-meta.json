@@ -1,0 +1,13 @@
+{
+  "cid": "E06",
+  "title": "向量检索：HNSW 怎样一层层逼近",
+  "category": "工程 · 极光玻璃",
+  "features": {
+    "radial-gradient": 4,
+    "text": 14,
+    "elements": 306
+  },
+  "use": "工程",
+  "style": "极光玻璃",
+  "short": "极光玻璃风格讲 HNSW 向量检索：三层玻璃平面，查询从顶层入口出发，逐层贪心逼近最近邻。"
+}

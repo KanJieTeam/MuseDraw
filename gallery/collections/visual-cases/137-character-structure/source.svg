@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>汉字的结构</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FAF8F3"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="120" font-family="'Noto Serif CJK SC', serif" font-size="60" font-weight="900" fill="#222222">汉字的结构</text>
+<text x="72" y="168" font-family="'Noto Serif CJK SC', serif" font-size="20" fill="#857F75">看清每个部件在田字格里占的位置，字才写得匀称</text>
+<line x1="70" y1="196" x2="1530" y2="196" stroke="#222222" stroke-width="1.5"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="田字格">
+<rect x="70" y="240" width="220" height="220" fill="#E3E9F2"/>
+<rect x="70" y="240" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="180" y1="240" x2="180" y2="460" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="70" y1="350" x2="290" y2="350" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="180" y="416" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">人</text>
+<text x="70" y="504" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">独体字</text>
+<text x="70" y="538" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：口、山</text>
+<rect x="440" y="240" width="99" height="220" fill="#F2D9D4"/>
+<rect x="539" y="240" width="121" height="220" fill="#E3E9F2"/>
+<rect x="440" y="240" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="550" y1="240" x2="550" y2="460" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="440" y1="350" x2="660" y2="350" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="550" y="416" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">明</text>
+<text x="440" y="504" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">左右结构</text>
+<text x="440" y="538" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：好、林</text>
+<rect x="810" y="240" width="74.8" height="220" fill="#F2D9D4"/>
+<rect x="884.8" y="240" width="70.4" height="220" fill="#E3E9F2"/>
+<rect x="955.2" y="240" width="74.8" height="220" fill="#F2D9D4"/>
+<rect x="810" y="240" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="920" y1="240" x2="920" y2="460" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="810" y1="350" x2="1030" y2="350" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="920" y="416" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">树</text>
+<text x="810" y="504" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">左中右结构</text>
+<text x="810" y="538" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：湖、班</text>
+<rect x="1180" y="240" width="220" height="105.6" fill="#F2D9D4"/>
+<rect x="1180" y="345.6" width="220" height="114.4" fill="#E3E9F2"/>
+<rect x="1180" y="240" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="1290" y1="240" x2="1290" y2="460" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="1180" y1="350" x2="1400" y2="350" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="1290" y="416" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">男</text>
+<text x="1180" y="504" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">上下结构</text>
+<text x="1180" y="538" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：笔、岩</text>
+<rect x="70" y="620" width="220" height="74.8" fill="#F2D9D4"/>
+<rect x="70" y="694.8" width="220" height="70.4" fill="#E3E9F2"/>
+<rect x="70" y="765.2" width="220" height="74.8" fill="#F2D9D4"/>
+<rect x="70" y="620" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="180" y1="620" x2="180" y2="840" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="70" y1="730" x2="290" y2="730" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="180" y="796" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">意</text>
+<text x="70" y="884" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">上中下结构</text>
+<text x="70" y="918" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：竟、莫</text>
+<rect x="440" y="620" width="220" height="44" fill="#F2D9D4"/>
+<rect x="440" y="664" width="44" height="176" fill="#F2D9D4"/>
+<rect x="616" y="664" width="44" height="176" fill="#F2D9D4"/>
+<rect x="484" y="664" width="132" height="176" fill="#E3E9F2"/>
+<rect x="440" y="620" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="550" y1="620" x2="550" y2="840" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="440" y1="730" x2="660" y2="730" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="550" y="796" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">问</text>
+<text x="440" y="884" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">半包围结构</text>
+<text x="440" y="918" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：这、区</text>
+<rect x="810" y="620" width="220" height="220" fill="#F2D9D4"/>
+<rect x="854" y="664" width="132" height="132" fill="#E3E9F2"/>
+<rect x="810" y="620" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="920" y1="620" x2="920" y2="840" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="810" y1="730" x2="1030" y2="730" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="920" y="796" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">国</text>
+<text x="810" y="884" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">全包围结构</text>
+<text x="810" y="918" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：回、园</text>
+<rect x="1235" y="620" width="110" height="110" fill="#F2D9D4"/>
+<rect x="1180" y="730" width="110" height="110" fill="#E3E9F2"/>
+<rect x="1290" y="730" width="110" height="110" fill="#F2D9D4"/>
+<rect x="1180" y="620" width="220" height="220" fill="none" stroke="#C8102E" stroke-width="2"/>
+<line x1="1290" y1="620" x2="1290" y2="840" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<line x1="1180" y1="730" x2="1400" y2="730" stroke="#C8102E" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="1290" y="796" font-family="'Noto Serif CJK SC', serif" font-size="168" font-weight="500" fill="#222222" text-anchor="middle">品</text>
+<text x="1180" y="884" font-family="'Noto Serif CJK SC', serif" font-size="24" font-weight="900" fill="#222222">品字形结构</text>
+<text x="1180" y="918" font-family="'Noto Serif CJK SC', serif" font-size="18" fill="#857F75">还有：森、晶</text>
+<text x="70" y="980" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#857F75">浅红、浅蓝两种底色表示不同部件所占的区域，只是大致位置，写字时还要看具体的字。</text>
+</g>
+</svg>

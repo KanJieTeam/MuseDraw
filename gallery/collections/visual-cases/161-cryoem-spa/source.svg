@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="960" viewBox="0 0 1600 960">
+<title>冷冻电镜单颗粒分析流程</title>
+<defs><radialGradient id="pg" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#F2F2F2" stop-opacity="0.95"/><stop offset="0.6" stop-color="#BFBFBF" stop-opacity="0.55"/><stop offset="1" stop-color="#808080" stop-opacity="0"/></radialGradient></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="960" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="60" y="60" font-family="'Noto Sans CJK SC', sans-serif" font-size="28" font-weight="700" fill="#111111">冷冻电镜单颗粒分析流程</text>
+<text x="390" y="60" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#666666">一个约 300 kDa 膜蛋白复合物的数据处理（示例数据）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="a 流程">
+<text x="60" y="112" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="800" fill="#111111">a</text>
+<text x="90" y="110" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#666666">从样品到三维密度图</text>
+<rect x="60" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="72" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">1　玻璃化</text>
+<text x="72" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">3 µL 样品，吸水 3 s</text>
+<text x="72" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">液态乙烷速冻</text>
+<line x1="214" y1="188" x2="223.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M229.0,188.0 L222.6,190.8 L222.6,185.2 Z" fill="#111111"/>
+<rect x="231" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="243" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">2　数据收集</text>
+<text x="243" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">300 kV，0.83 Å/像素</text>
+<text x="243" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">总剂量 50 e⁻/Å²</text>
+<line x1="385" y1="188" x2="394.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M400.0,188.0 L393.6,190.8 L393.6,185.2 Z" fill="#111111"/>
+<rect x="402" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="414" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">3　运动校正</text>
+<text x="414" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">每张 40 帧</text>
+<text x="414" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">逐帧剂量加权</text>
+<line x1="556" y1="188" x2="565.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M571.0,188.0 L564.6,190.8 L564.6,185.2 Z" fill="#111111"/>
+<rect x="573" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="585" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">4　CTF 估计</text>
+<text x="585" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">离焦 −0.8 至 −2.2 µm</text>
+<text x="585" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">剔除拟合差的显微图</text>
+<line x1="727" y1="188" x2="736.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M742.0,188.0 L735.6,190.8 L735.6,185.2 Z" fill="#111111"/>
+<rect x="744" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="756" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">5　颗粒挑选</text>
+<text x="756" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">模板匹配</text>
+<text x="756" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">箱尺寸 320 像素</text>
+<line x1="898" y1="188" x2="907.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M913.0,188.0 L906.6,190.8 L906.6,185.2 Z" fill="#111111"/>
+<rect x="915" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="927" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">6　二维分类</text>
+<text x="927" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">150 类</text>
+<text x="927" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">剔除冰污染和碎片</text>
+<line x1="1069" y1="188" x2="1078.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M1084.0,188.0 L1077.6,190.8 L1077.6,185.2 Z" fill="#111111"/>
+<rect x="1086" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="1098" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">7　从头建模</text>
+<text x="1098" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">3 个初始模型</text>
+<text x="1098" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">无对称性假设</text>
+<line x1="1240" y1="188" x2="1249.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M1255.0,188.0 L1248.6,190.8 L1248.6,185.2 Z" fill="#111111"/>
+<rect x="1257" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="1269" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">8　三维分类</text>
+<text x="1269" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">4 类</text>
+<text x="1269" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">保留完整构象</text>
+<line x1="1411" y1="188" x2="1420.4" y2="188" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M1426.0,188.0 L1419.6,190.8 L1419.6,185.2 Z" fill="#111111"/>
+<rect x="1428" y="136" width="152" height="104" rx="6" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.2"/>
+<text x="1440" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#111111">9　精修与验证</text>
+<text x="1440" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">非均一精修</text>
+<text x="1440" y="218" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666">金标准 FSC</text>
+<line x1="231" y1="252" x2="725" y2="252" stroke="#2F6690" stroke-width="2"/>
+<text x="478" y="274" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#2F6690" text-anchor="middle">4,812 → 4,390 张显微图</text>
+<line x1="744" y1="252" x2="896" y2="252" stroke="#2F6690" stroke-width="2"/>
+<text x="820" y="274" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#2F6690" text-anchor="middle">2,946,120 个颗粒</text>
+<line x1="915" y1="252" x2="1409" y2="252" stroke="#2F6690" stroke-width="2"/>
+<text x="1162" y="274" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#2F6690" text-anchor="middle">1,184,300 → 412,880 个颗粒</text>
+<line x1="1428" y1="252" x2="1580" y2="252" stroke="#2F6690" stroke-width="2"/>
+<text x="1504" y="274" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#2F6690" text-anchor="middle">2.60 Å</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="b 颗粒数">
+<text x="60" y="340" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="800" fill="#111111">b</text>
+<text x="90" y="338" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#666666">每一步保留的数量（对数坐标）</text>
+<text x="218" y="402" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111111" text-anchor="end">采集的显微图</text>
+<rect x="230" y="386" width="52.88" height="26" fill="#9A9A9A"/>
+<text x="290.88" y="405" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#111111">4,812</text>
+<text x="218" y="468" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111111" text-anchor="end">保留的显微图</text>
+<rect x="230" y="452" width="49.79" height="26" fill="#9A9A9A"/>
+<text x="287.79" y="471" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#111111">4,390</text>
+<text x="218" y="534" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111111" text-anchor="end">挑选的颗粒</text>
+<rect x="230" y="518" width="268.87" height="26" fill="#2F6690"/>
+<text x="506.87" y="537" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#111111">2,946,120</text>
+<text x="218" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111111" text-anchor="end">二维分类后</text>
+<rect x="230" y="584" width="238.19" height="26" fill="#2F6690"/>
+<text x="476.19" y="603" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#111111">1,184,300</text>
+<text x="218" y="666" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111111" text-anchor="end">三维分类后</text>
+<rect x="230" y="650" width="202.73" height="26" fill="#2F6690"/>
+<text x="440.73" y="669" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#111111">412,880</text>
+<line x1="230" y1="372" x2="230" y2="712" stroke="#DDDDDD" stroke-width="1"/>
+<text x="230" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">10^3</text>
+<line x1="307.5" y1="372" x2="307.5" y2="712" stroke="#DDDDDD" stroke-width="1"/>
+<text x="307.5" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">10^4</text>
+<line x1="385" y1="372" x2="385" y2="712" stroke="#DDDDDD" stroke-width="1"/>
+<text x="385" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">10^5</text>
+<line x1="462.5" y1="372" x2="462.5" y2="712" stroke="#DDDDDD" stroke-width="1"/>
+<text x="462.5" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">10^6</text>
+<line x1="540" y1="372" x2="540" y2="712" stroke="#DDDDDD" stroke-width="1"/>
+<text x="540" y="732" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">10^7</text>
+<text x="60" y="770" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#111111">颗粒保留率：14.0%</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="c FSC">
+<text x="620" y="340" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="800" fill="#111111">c</text>
+<text x="650" y="338" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#666666">傅里叶壳层相关（FSC）</text>
+<line x1="680" y1="720" x2="680" y2="726" stroke="#111" stroke-width="1"/>
+<text x="680" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0</text>
+<line x1="746.4" y1="720" x2="746.4" y2="726" stroke="#111" stroke-width="1"/>
+<text x="746.4" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0.1</text>
+<line x1="812.8" y1="720" x2="812.8" y2="726" stroke="#111" stroke-width="1"/>
+<text x="812.8" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0.2</text>
+<line x1="879.2" y1="720" x2="879.2" y2="726" stroke="#111" stroke-width="1"/>
+<text x="879.2" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0.3</text>
+<line x1="945.6" y1="720" x2="945.6" y2="726" stroke="#111" stroke-width="1"/>
+<text x="945.6" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0.4</text>
+<line x1="1012" y1="720" x2="1012" y2="726" stroke="#111" stroke-width="1"/>
+<text x="1012" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0.5</text>
+<line x1="1078.4" y1="720" x2="1078.4" y2="726" stroke="#111" stroke-width="1"/>
+<text x="1078.4" y="744" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="middle">0.6</text>
+<line x1="674" y1="720" x2="680" y2="720" stroke="#111" stroke-width="1"/>
+<text x="670" y="725" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="end">0</text>
+<line x1="680" y1="720" x2="1080" y2="720" stroke="#DDDDDD" stroke-width="1"/>
+<line x1="674" y1="671.38" x2="680" y2="671.38" stroke="#111" stroke-width="1"/>
+<text x="670" y="676.38" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="end">0.143</text>
+<line x1="680" y1="671.38" x2="1080" y2="671.38" stroke="#DDDDDD" stroke-width="1"/>
+<line x1="674" y1="550" x2="680" y2="550" stroke="#111" stroke-width="1"/>
+<text x="670" y="555" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="end">0.5</text>
+<line x1="680" y1="550" x2="1080" y2="550" stroke="#DDDDDD" stroke-width="1"/>
+<line x1="674" y1="380" x2="680" y2="380" stroke="#111" stroke-width="1"/>
+<text x="670" y="385" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#111" text-anchor="end">1</text>
+<line x1="680" y1="380" x2="1080" y2="380" stroke="#DDDDDD" stroke-width="1"/>
+<line x1="680" y1="720" x2="1080" y2="720" stroke="#111" stroke-width="1.2"/>
+<line x1="680" y1="380" x2="680" y2="720" stroke="#111" stroke-width="1.2"/>
+<text x="880" y="772" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#111" text-anchor="middle">空间频率（1/Å）</text>
+<text x="626" y="550" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#111" text-anchor="middle" transform="rotate(-90 626 550.0)">FSC</text>
+<line x1="746.4" y1="374" x2="746.4" y2="380" stroke="#111111"/>
+<text x="746.4" y="368" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">10</text>
+<line x1="812.8" y1="374" x2="812.8" y2="380" stroke="#111111"/>
+<text x="812.8" y="368" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">5</text>
+<line x1="846" y1="374" x2="846" y2="380" stroke="#111111"/>
+<text x="846" y="368" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">4</text>
+<line x1="901.33" y1="374" x2="901.33" y2="380" stroke="#111111"/>
+<text x="901.33" y="368" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">3</text>
+<line x1="945.6" y1="374" x2="945.6" y2="380" stroke="#111111"/>
+<text x="945.6" y="368" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">2.5</text>
+<line x1="1012" y1="374" x2="1012" y2="380" stroke="#111111"/>
+<text x="1012" y="368" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#666666" text-anchor="middle">2</text>
+<text x="1080" y="350" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#666666" text-anchor="end">分辨率（Å）</text>
+<line x1="680" y1="671.38" x2="1080" y2="671.38" stroke="#C8414F" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M680.0,380.0 L681.0,380.0 L682.0,380.0 L683.0,380.0 L684.0,380.0 L685.0,380.0 L686.0,380.0 L687.0,380.0 L688.0,380.0 L689.0,380.0 L690.0,380.0 L691.0,380.0 L692.0,380.0 L693.0,380.0 L694.0,380.0 L695.0,380.0 L696.0,380.0 L697.0,380.0 L698.0,380.0 L699.0,380.0 L700.0,380.0 L701.0,380.0 L702.0,380.0 L703.0,380.0 L704.0,380.0 L705.0,380.0 L706.0,380.0 L707.0,380.0 L708.0,380.0 L709.0,380.0 L710.0,380.0 L711.0,380.0 L712.0,380.0 L713.0,380.0 L714.0,380.0 L715.0,380.0 L716.0,380.0 L717.0,380.0 L718.0,380.0 L719.0,380.0 L720.0,380.0 L721.0,380.0 L722.0,380.0 L723.0,380.0 L724.0,380.0 L725.0,380.0 L726.0,380.0 L727.0,380.0 L728.0,380.0 L729.0,380.0 L730.0,380.0 L731.0,380.0 L732.0,380.0 L733.0,380.0 L734.0,380.0 L735.0,380.0 L736.0,380.0 L737.0,380.0 L738.0,380.0 L739.0,380.0 L740.0,380.0 L741.0,380.0 L742.0,380.0 L743.0,380.0 L744.0,380.0 L745.0,380.0 L746.0,380.0 L747.0,380.0 L748.0,380.0 L749.0,380.0 L750.0,380.0 L751.0,380.0 L752.0,380.0 L753.0,380.0 L754.0,380.0 L755.0,380.0 L756.0,380.0 L757.0,380.0 L758.0,380.0 L759.0,380.0 L760.0,380.0 L761.0,380.0 L762.0,380.0 L763.0,380.0 L764.0,380.0 L765.0,380.0 L766.0,380.0 L767.0,380.0 L768.0,380.0 L769.0,380.0 L770.0,380.0 L771.0,380.0 L772.0,380.0 L773.0,380.0 L774.0,380.0 L775.0,380.0 L776.0,380.0 L777.0,380.0 L778.0,380.0 L779.0,380.0 L780.0,380.0 L781.0,380.1 L782.0,380.1 L783.0,380.1 L784.0,380.1 L785.0,380.1 L786.0,380.1 L787.0,380.1 L788.0,380.1 L789.0,380.1 L790.0,380.1 L791.0,380.1 L792.0,380.1 L793.0,380.1 L794.0,380.1 L795.0,380.1 L796.0,380.1 L797.0,380.2 L798.0,380.2 L799.0,380.2 L800.0,380.2 L801.0,380.2 L802.0,380.2 L803.0,380.2 L804.0,380.3 L805.0,380.3 L806.0,380.3 L807.0,380.3 L808.0,380.3 L809.0,380.4 L810.0,380.4 L811.0,380.4 L812.0,380.4 L813.0,380.5 L814.0,380.5 L815.0,380.5 L816.0,380.6 L817.0,380.6 L818.0,380.7 L819.0,380.7 L820.0,380.8 L821.0,380.8 L822.0,380.9 L823.0,380.9 L824.0,381.0 L825.0,381.1 L826.0,381.1 L827.0,381.2 L828.0,381.3 L829.0,381.4 L830.0,381.5 L831.0,381.6 L832.0,381.7 L833.0,381.9 L834.0,382.0 L835.0,382.1 L836.0,382.3 L837.0,382.4 L838.0,382.6 L839.0,382.8 L840.0,383.0 L841.0,383.2 L842.0,383.4 L843.0,383.6 L844.0,383.9 L845.0,384.2 L846.0,384.5 L847.0,384.8 L848.0,385.1 L849.0,385.5 L850.0,385.9 L851.0,386.3 L852.0,386.7 L853.0,387.2 L854.0,387.7 L855.0,388.2 L856.0,388.8 L857.0,389.4 L858.0,390.0 L859.0,390.7 L860.0,391.4 L861.0,392.2 L862.0,393.0 L863.0,393.9 L864.0,394.9 L865.0,395.9 L866.0,396.9 L867.0,398.1 L868.0,399.3 L869.0,400.6 L870.0,401.9 L871.0,403.4 L872.0,404.9 L873.0,406.5 L874.0,408.2 L875.0,410.1 L876.0,412.0 L877.0,414.0 L878.0,416.2 L879.0,418.5 L880.0,420.9 L881.0,423.4 L882.0,426.0 L883.0,428.8 L884.0,431.8 L885.0,434.9 L886.0,438.1 L887.0,441.4 L888.0,445.0 L889.0,448.6 L890.0,452.5 L891.0,456.4 L892.0,460.6 L893.0,464.9 L894.0,469.3 L895.0,473.9 L896.0,478.6 L897.0,483.5 L898.0,488.5 L899.0,493.6 L900.0,498.8 L901.0,504.1 L902.0,509.6 L903.0,515.1 L904.0,520.7 L905.0,526.4 L906.0,532.1 L907.0,537.9 L908.0,543.7 L909.0,549.5 L910.0,555.4 L911.0,561.2 L912.0,566.9 L913.0,572.7 L914.0,578.4 L915.0,584.0 L916.0,589.5 L917.0,595.0 L918.0,600.3 L919.0,605.6 L920.0,610.7 L921.0,615.8 L922.0,620.6 L923.0,625.4 L924.0,630.0 L925.0,634.4 L926.0,638.7 L927.0,642.9 L928.0,646.9 L929.0,650.8 L930.0,654.5 L931.0,658.0 L932.0,661.4 L933.0,664.6 L934.0,667.7 L935.0,670.7 L936.0,673.5 L937.0,676.2 L938.0,678.7 L939.0,681.2 L940.0,683.5 L941.0,685.6 L942.0,687.7 L943.0,689.6 L944.0,691.5 L945.0,693.2 L946.0,694.9 L947.0,696.4 L948.0,697.9 L949.0,699.2 L950.0,700.5 L951.0,701.8 L952.0,702.9 L953.0,704.0 L954.0,705.0 L955.0,705.9 L956.0,706.8 L957.0,707.7 L958.0,708.5 L959.0,709.2 L960.0,709.9 L961.0,710.5 L962.0,711.2 L963.0,711.7 L964.0,712.3 L965.0,712.8 L966.0,713.2 L967.0,713.7 L968.0,714.1 L969.0,714.5 L970.0,714.8 L971.0,715.2 L972.0,715.5 L973.0,715.8 L974.0,716.1 L975.0,716.3 L976.0,716.6 L977.0,716.8 L978.0,717.0 L979.0,717.2 L980.0,717.4 L981.0,717.5 L982.0,717.7 L983.0,717.9 L984.0,718.0 L985.0,718.1 L986.0,718.3 L987.0,718.4 L988.0,718.5 L989.0,718.6 L990.0,718.7 L991.0,718.8 L992.0,718.8 L993.0,718.9 L994.0,719.0 L995.0,719.1 L996.0,719.1 L997.0,719.2 L998.0,719.2 L999.0,719.3 L1000.0,719.3 L1001.0,719.4 L1002.0,719.4 L1003.0,719.5 L1004.0,719.5 L1005.0,719.5 L1006.0,719.6 L1007.0,719.6 L1008.0,719.6 L1009.0,719.6 L1010.0,719.7 L1011.0,719.7 L1012.0,719.7 L1013.0,719.7 L1014.0,719.7 L1015.0,719.8 L1016.0,719.8 L1017.0,719.8 L1018.0,719.8 L1019.0,719.8 L1020.0,719.8 L1021.0,719.8 L1022.0,719.9 L1023.0,719.9 L1024.0,719.9 L1025.0,719.9 L1026.0,719.9 L1027.0,719.9 L1028.0,719.9 L1029.0,719.9 L1030.0,719.9 L1031.0,719.9 L1032.0,719.9 L1033.0,719.9 L1034.0,719.9 L1035.0,719.9 L1036.0,719.9 L1037.0,719.9 L1038.0,720.0 L1039.0,720.0 L1040.0,720.0 L1041.0,720.0 L1042.0,720.0 L1043.0,720.0 L1044.0,720.0 L1045.0,720.0 L1046.0,720.0 L1047.0,720.0 L1048.0,720.0 L1049.0,720.0 L1050.0,720.0 L1051.0,720.0 L1052.0,720.0 L1053.0,720.0 L1054.0,720.0 L1055.0,720.0 L1056.0,720.0 L1057.0,720.0 L1058.0,720.0 L1059.0,720.0 L1060.0,720.0 L1061.0,720.0 L1062.0,720.0 L1063.0,720.0 L1064.0,720.0 L1065.0,720.0 L1066.0,720.0 L1067.0,720.0 L1068.0,720.0 L1069.0,720.0 L1070.0,720.0 L1071.0,720.0 L1072.0,720.0 L1073.0,720.0 L1074.0,720.0 L1075.0,720.0 L1076.0,720.0 L1077.0,720.0 L1078.0,720.0 L1079.0,720.0 L1080.0,720.0" fill="none" stroke="#2F6690" stroke-width="2.4"/>
+<circle cx="935.24" cy="671.38" r="5" fill="#2F6690"/>
+<path d="M680.0,380.0 L681.0,380.0 L682.0,380.0 L683.0,380.0 L684.0,380.0 L685.0,380.0 L686.0,380.0 L687.0,380.0 L688.0,380.0 L689.0,380.0 L690.0,380.0 L691.0,380.0 L692.0,380.0 L693.0,380.0 L694.0,380.0 L695.0,380.0 L696.0,380.0 L697.0,380.0 L698.0,380.0 L699.0,380.0 L700.0,380.0 L701.0,380.0 L702.0,380.0 L703.0,380.0 L704.0,380.0 L705.0,380.0 L706.0,380.0 L707.0,380.0 L708.0,380.0 L709.0,380.0 L710.0,380.0 L711.0,380.0 L712.0,380.0 L713.0,380.0 L714.0,380.0 L715.0,380.0 L716.0,380.0 L717.0,380.0 L718.0,380.0 L719.0,380.0 L720.0,380.0 L721.0,380.0 L722.0,380.0 L723.0,380.0 L724.0,380.0 L725.0,380.0 L726.0,380.0 L727.0,380.0 L728.0,380.0 L729.0,380.0 L730.0,380.0 L731.0,380.0 L732.0,380.0 L733.0,380.0 L734.0,380.0 L735.0,380.0 L736.0,380.0 L737.0,380.0 L738.0,380.0 L739.0,380.0 L740.0,380.0 L741.0,380.0 L742.0,380.0 L743.0,380.0 L744.0,380.0 L745.0,380.0 L746.0,380.0 L747.0,380.0 L748.0,380.0 L749.0,380.0 L750.0,380.0 L751.0,380.1 L752.0,380.1 L753.0,380.1 L754.0,380.1 L755.0,380.1 L756.0,380.1 L757.0,380.1 L758.0,380.1 L759.0,380.1 L760.0,380.1 L761.0,380.1 L762.0,380.1 L763.0,380.1 L764.0,380.1 L765.0,380.1 L766.0,380.1 L767.0,380.2 L768.0,380.2 L769.0,380.2 L770.0,380.2 L771.0,380.2 L772.0,380.2 L773.0,380.2 L774.0,380.3 L775.0,380.3 L776.0,380.3 L777.0,380.3 L778.0,380.3 L779.0,380.4 L780.0,380.4 L781.0,380.4 L782.0,380.4 L783.0,380.5 L784.0,380.5 L785.0,380.5 L786.0,380.6 L787.0,380.6 L788.0,380.7 L789.0,380.7 L790.0,380.8 L791.0,380.8 L792.0,380.9 L793.0,380.9 L794.0,381.0 L795.0,381.1 L796.0,381.1 L797.0,381.2 L798.0,381.3 L799.0,381.4 L800.0,381.5 L801.0,381.6 L802.0,381.7 L803.0,381.8 L804.0,382.0 L805.0,382.1 L806.0,382.3 L807.0,382.4 L808.0,382.6 L809.0,382.8 L810.0,383.0 L811.0,383.2 L812.0,383.4 L813.0,383.6 L814.0,383.9 L815.0,384.1 L816.0,384.4 L817.0,384.7 L818.0,385.1 L819.0,385.4 L820.0,385.8 L821.0,386.2 L822.0,386.6 L823.0,387.1 L824.0,387.6 L825.0,388.1 L826.0,388.7 L827.0,389.3 L828.0,389.9 L829.0,390.6 L830.0,391.3 L831.0,392.1 L832.0,392.9 L833.0,393.8 L834.0,394.7 L835.0,395.7 L836.0,396.8 L837.0,397.9 L838.0,399.1 L839.0,400.4 L840.0,401.7 L841.0,403.2 L842.0,404.7 L843.0,406.3 L844.0,408.0 L845.0,409.8 L846.0,411.8 L847.0,413.8 L848.0,415.9 L849.0,418.2 L850.0,420.6 L851.0,423.1 L852.0,425.7 L853.0,428.5 L854.0,431.4 L855.0,434.5 L856.0,437.7 L857.0,441.0 L858.0,444.5 L859.0,448.2 L860.0,452.0 L861.0,456.0 L862.0,460.1 L863.0,464.3 L864.0,468.8 L865.0,473.3 L866.0,478.0 L867.0,482.9 L868.0,487.8 L869.0,492.9 L870.0,498.2 L871.0,503.5 L872.0,508.9 L873.0,514.5 L874.0,520.1 L875.0,525.7 L876.0,531.5 L877.0,537.2 L878.0,543.0 L879.0,548.8 L880.0,554.7 L881.0,560.5 L882.0,566.2 L883.0,572.0 L884.0,577.7 L885.0,583.3 L886.0,588.9 L887.0,594.3 L888.0,599.7 L889.0,605.0 L890.0,610.1 L891.0,615.2 L892.0,620.1 L893.0,624.8 L894.0,629.4 L895.0,633.9 L896.0,638.2 L897.0,642.4 L898.0,646.4 L899.0,650.3 L900.0,654.0 L901.0,657.6 L902.0,661.0 L903.0,664.3 L904.0,667.4 L905.0,670.4 L906.0,673.2 L907.0,675.9 L908.0,678.4 L909.0,680.9 L910.0,683.2 L911.0,685.4 L912.0,687.4 L913.0,689.4 L914.0,691.3 L915.0,693.0 L916.0,694.7 L917.0,696.2 L918.0,697.7 L919.0,699.1 L920.0,700.4 L921.0,701.6 L922.0,702.8 L923.0,703.8 L924.0,704.9 L925.0,705.8 L926.0,706.7 L927.0,707.6 L928.0,708.4 L929.0,709.1 L930.0,709.8 L931.0,710.5 L932.0,711.1 L933.0,711.7 L934.0,712.2 L935.0,712.7 L936.0,713.2 L937.0,713.6 L938.0,714.0 L939.0,714.4 L940.0,714.8 L941.0,715.1 L942.0,715.4 L943.0,715.7 L944.0,716.0 L945.0,716.3 L946.0,716.5 L947.0,716.8 L948.0,717.0 L949.0,717.2 L950.0,717.4 L951.0,717.5 L952.0,717.7 L953.0,717.8 L954.0,718.0 L955.0,718.1 L956.0,718.2 L957.0,718.4 L958.0,718.5 L959.0,718.6 L960.0,718.7 L961.0,718.7 L962.0,718.8 L963.0,718.9 L964.0,719.0 L965.0,719.0 L966.0,719.1 L967.0,719.2 L968.0,719.2 L969.0,719.3 L970.0,719.3 L971.0,719.4 L972.0,719.4 L973.0,719.4 L974.0,719.5 L975.0,719.5 L976.0,719.6 L977.0,719.6 L978.0,719.6 L979.0,719.6 L980.0,719.7 L981.0,719.7 L982.0,719.7 L983.0,719.7 L984.0,719.7 L985.0,719.8 L986.0,719.8 L987.0,719.8 L988.0,719.8 L989.0,719.8 L990.0,719.8 L991.0,719.8 L992.0,719.8 L993.0,719.9 L994.0,719.9 L995.0,719.9 L996.0,719.9 L997.0,719.9 L998.0,719.9 L999.0,719.9 L1000.0,719.9 L1001.0,719.9 L1002.0,719.9 L1003.0,719.9 L1004.0,719.9 L1005.0,719.9 L1006.0,719.9 L1007.0,719.9 L1008.0,719.9 L1009.0,720.0 L1010.0,720.0 L1011.0,720.0 L1012.0,720.0 L1013.0,720.0 L1014.0,720.0 L1015.0,720.0 L1016.0,720.0 L1017.0,720.0 L1018.0,720.0 L1019.0,720.0 L1020.0,720.0 L1021.0,720.0 L1022.0,720.0 L1023.0,720.0 L1024.0,720.0 L1025.0,720.0 L1026.0,720.0 L1027.0,720.0 L1028.0,720.0 L1029.0,720.0 L1030.0,720.0 L1031.0,720.0 L1032.0,720.0 L1033.0,720.0 L1034.0,720.0 L1035.0,720.0 L1036.0,720.0 L1037.0,720.0 L1038.0,720.0 L1039.0,720.0 L1040.0,720.0 L1041.0,720.0 L1042.0,720.0 L1043.0,720.0 L1044.0,720.0 L1045.0,720.0 L1046.0,720.0 L1047.0,720.0 L1048.0,720.0 L1049.0,720.0 L1050.0,720.0 L1051.0,720.0 L1052.0,720.0 L1053.0,720.0 L1054.0,720.0 L1055.0,720.0 L1056.0,720.0 L1057.0,720.0 L1058.0,720.0 L1059.0,720.0 L1060.0,720.0 L1061.0,720.0 L1062.0,720.0 L1063.0,720.0 L1064.0,720.0 L1065.0,720.0 L1066.0,720.0 L1067.0,720.0 L1068.0,720.0 L1069.0,720.0 L1070.0,720.0 L1071.0,720.0 L1072.0,720.0 L1073.0,720.0 L1074.0,720.0 L1075.0,720.0 L1076.0,720.0 L1077.0,720.0 L1078.0,720.0 L1079.0,720.0 L1080.0,720.0" fill="none" stroke="#9A9A9A" stroke-width="2.4"/>
+<circle cx="905.36" cy="671.38" r="5" fill="#9A9A9A"/>
+<text x="696" y="610" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#2F6690">加掩膜 2.60 Å</text>
+<text x="696" y="632" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#9A9A9A">不加掩膜 2.95 Å</text>
+<text x="1074" y="663.38" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#C8414F" text-anchor="end">0.143</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="d 二维分类">
+<text x="1140" y="340" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="800" fill="#111111">d</text>
+<text x="1170" y="338" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#666666">二维分类平均（20 类示例）</text>
+<rect x="1150" y="372" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(27 1186 408)">
+<ellipse cx="1186" cy="408" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1189.62" cy="401.16" rx="7.14" ry="5.1" fill="url(#pg)"/>
+<ellipse cx="1175.39" cy="408.12" rx="5.15" ry="5.3" fill="url(#pg)"/>
+<ellipse cx="1175.68" cy="401.45" rx="6.7" ry="6.48" fill="url(#pg)"/>
+<rect x="1170" y="402" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1230" y="372" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1253.82" cy="413.61" r="7.74" fill="url(#pg)"/>
+<circle cx="1269.39" cy="403.45" r="7.88" fill="url(#pg)"/>
+<circle cx="1246.05" cy="423.77" r="4.45" fill="url(#pg)"/>
+<circle cx="1250.35" cy="391.18" r="4.54" fill="url(#pg)"/>
+<circle cx="1279.91" cy="393.95" r="5.91" fill="url(#pg)"/>
+<circle cx="1272.11" cy="402.39" r="5.74" fill="url(#pg)"/>
+<line x1="1236" y1="378" x2="1296" y2="438" stroke="#C8414F" stroke-width="2"/>
+<line x1="1296" y1="378" x2="1236" y2="438" stroke="#C8414F" stroke-width="2"/>
+<rect x="1310" y="372" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1326.62" cy="395.06" r="6.4" fill="url(#pg)"/>
+<circle cx="1342.81" cy="399.82" r="5.93" fill="url(#pg)"/>
+<circle cx="1343.94" cy="399.19" r="6.97" fill="url(#pg)"/>
+<circle cx="1354.76" cy="396.74" r="5.87" fill="url(#pg)"/>
+<circle cx="1347.11" cy="424.51" r="6.65" fill="url(#pg)"/>
+<circle cx="1336.67" cy="429.13" r="3.59" fill="url(#pg)"/>
+<line x1="1316" y1="378" x2="1376" y2="438" stroke="#C8414F" stroke-width="2"/>
+<line x1="1376" y1="378" x2="1316" y2="438" stroke="#C8414F" stroke-width="2"/>
+<rect x="1390" y="372" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(136 1426 408)">
+<ellipse cx="1426" cy="408" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1417.65" cy="407.82" rx="5.16" ry="6" fill="url(#pg)"/>
+<ellipse cx="1432.35" cy="409.17" rx="8.5" ry="4.94" fill="url(#pg)"/>
+<ellipse cx="1430.69" cy="409.51" rx="7.32" ry="5.37" fill="url(#pg)"/>
+<rect x="1410" y="402" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1470" y="372" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(170 1506 408)">
+<ellipse cx="1506" cy="408" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1505.38" cy="410.63" rx="5.24" ry="6.1" fill="url(#pg)"/>
+<ellipse cx="1509.53" cy="415.89" rx="8.29" ry="4.85" fill="url(#pg)"/>
+<ellipse cx="1503.26" cy="410.7" rx="5.09" ry="5.39" fill="url(#pg)"/>
+<rect x="1490" y="402" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1150" y="452" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1169.15" cy="468.59" r="6.84" fill="url(#pg)"/>
+<circle cx="1169.69" cy="476.9" r="4.95" fill="url(#pg)"/>
+<circle cx="1202.34" cy="469.55" r="5.25" fill="url(#pg)"/>
+<circle cx="1188.18" cy="504.87" r="7.1" fill="url(#pg)"/>
+<circle cx="1202.02" cy="478.25" r="5.08" fill="url(#pg)"/>
+<circle cx="1179.79" cy="504.9" r="7.79" fill="url(#pg)"/>
+<line x1="1156" y1="458" x2="1216" y2="518" stroke="#C8414F" stroke-width="2"/>
+<line x1="1216" y1="458" x2="1156" y2="518" stroke="#C8414F" stroke-width="2"/>
+<rect x="1230" y="452" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1251.75" cy="476.21" r="4.17" fill="url(#pg)"/>
+<circle cx="1265.34" cy="491.92" r="4.31" fill="url(#pg)"/>
+<circle cx="1244.18" cy="484.43" r="4.85" fill="url(#pg)"/>
+<circle cx="1268.92" cy="507.94" r="6.45" fill="url(#pg)"/>
+<circle cx="1266.68" cy="493.17" r="6.38" fill="url(#pg)"/>
+<circle cx="1246.38" cy="505.58" r="6.9" fill="url(#pg)"/>
+<line x1="1236" y1="458" x2="1296" y2="518" stroke="#C8414F" stroke-width="2"/>
+<line x1="1296" y1="458" x2="1236" y2="518" stroke="#C8414F" stroke-width="2"/>
+<rect x="1310" y="452" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(144 1346 488)">
+<ellipse cx="1346" cy="488" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1343.42" cy="486.38" rx="5.41" ry="5.9" fill="url(#pg)"/>
+<ellipse cx="1335.49" cy="481.08" rx="5.84" ry="4.49" fill="url(#pg)"/>
+<ellipse cx="1342.16" cy="480.84" rx="5" ry="4.45" fill="url(#pg)"/>
+<rect x="1330" y="482" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1390" y="452" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1420" cy="467.12" r="7.37" fill="url(#pg)"/>
+<circle cx="1431.02" cy="472.54" r="4.26" fill="url(#pg)"/>
+<circle cx="1419.29" cy="482.02" r="3.61" fill="url(#pg)"/>
+<circle cx="1441.35" cy="509.7" r="5.33" fill="url(#pg)"/>
+<circle cx="1425.29" cy="469.78" r="3.51" fill="url(#pg)"/>
+<circle cx="1419.08" cy="477.65" r="7.14" fill="url(#pg)"/>
+<line x1="1396" y1="458" x2="1456" y2="518" stroke="#C8414F" stroke-width="2"/>
+<line x1="1456" y1="458" x2="1396" y2="518" stroke="#C8414F" stroke-width="2"/>
+<rect x="1470" y="452" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1485.02" cy="507.84" r="5.64" fill="url(#pg)"/>
+<circle cx="1490.45" cy="489.9" r="3.14" fill="url(#pg)"/>
+<circle cx="1507.24" cy="509.05" r="7.32" fill="url(#pg)"/>
+<circle cx="1514.63" cy="477.49" r="4.83" fill="url(#pg)"/>
+<circle cx="1491.35" cy="499.97" r="5.66" fill="url(#pg)"/>
+<circle cx="1518.28" cy="480.51" r="4.12" fill="url(#pg)"/>
+<line x1="1476" y1="458" x2="1536" y2="518" stroke="#C8414F" stroke-width="2"/>
+<line x1="1536" y1="458" x2="1476" y2="518" stroke="#C8414F" stroke-width="2"/>
+<rect x="1150" y="532" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(177 1186 568)">
+<ellipse cx="1186" cy="568" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1194.46" cy="572.9" rx="8.27" ry="6.22" fill="url(#pg)"/>
+<ellipse cx="1179.44" cy="568.28" rx="6.42" ry="4.09" fill="url(#pg)"/>
+<ellipse cx="1174.67" cy="564.47" rx="6.04" ry="6.08" fill="url(#pg)"/>
+<rect x="1170" y="562" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1230" y="532" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(81 1266 568)">
+<ellipse cx="1266" cy="568" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1276.49" cy="575.81" rx="8.82" ry="5.09" fill="url(#pg)"/>
+<ellipse cx="1259.29" cy="563.63" rx="5.79" ry="4.61" fill="url(#pg)"/>
+<ellipse cx="1268.98" cy="574.4" rx="8.36" ry="5.44" fill="url(#pg)"/>
+<rect x="1250" y="562" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1310" y="532" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(144 1346 568)">
+<ellipse cx="1346" cy="568" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1336.03" cy="570.57" rx="8.64" ry="6.35" fill="url(#pg)"/>
+<ellipse cx="1352" cy="567.65" rx="5.71" ry="6.37" fill="url(#pg)"/>
+<ellipse cx="1341.98" cy="572.81" rx="8.89" ry="5.19" fill="url(#pg)"/>
+<rect x="1330" y="562" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1390" y="532" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(170 1426 568)">
+<ellipse cx="1426" cy="568" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1431.4" cy="562.72" rx="5.51" ry="4.45" fill="url(#pg)"/>
+<ellipse cx="1435.72" cy="572.9" rx="5.58" ry="6.48" fill="url(#pg)"/>
+<ellipse cx="1437.53" cy="570.52" rx="6.4" ry="5.65" fill="url(#pg)"/>
+<rect x="1410" y="562" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1470" y="532" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1484.63" cy="588.72" r="6.25" fill="url(#pg)"/>
+<circle cx="1507.17" cy="587.08" r="5.17" fill="url(#pg)"/>
+<circle cx="1522.36" cy="582.35" r="4.06" fill="url(#pg)"/>
+<circle cx="1495.08" cy="558.89" r="4.2" fill="url(#pg)"/>
+<circle cx="1509.8" cy="557.41" r="5.1" fill="url(#pg)"/>
+<circle cx="1489.77" cy="586.04" r="4.77" fill="url(#pg)"/>
+<line x1="1476" y1="538" x2="1536" y2="598" stroke="#C8414F" stroke-width="2"/>
+<line x1="1536" y1="538" x2="1476" y2="598" stroke="#C8414F" stroke-width="2"/>
+<rect x="1150" y="612" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(105 1186 648)">
+<ellipse cx="1186" cy="648" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1195.7" cy="646.73" rx="8.67" ry="5.5" fill="url(#pg)"/>
+<ellipse cx="1186.76" cy="648.38" rx="5.07" ry="5.32" fill="url(#pg)"/>
+<ellipse cx="1178.39" cy="640.06" rx="8.2" ry="4.52" fill="url(#pg)"/>
+<rect x="1170" y="642" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1230" y="612" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(131 1266 648)">
+<ellipse cx="1266" cy="648" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1267.36" cy="645.22" rx="7.07" ry="5.67" fill="url(#pg)"/>
+<ellipse cx="1272.82" cy="641.7" rx="7.24" ry="4.75" fill="url(#pg)"/>
+<ellipse cx="1260.65" cy="652.36" rx="7.03" ry="5.69" fill="url(#pg)"/>
+<rect x="1250" y="642" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1310" y="612" width="72" height="72" fill="#2B2B2B"/>
+<g transform="rotate(164 1346 648)">
+<ellipse cx="1346" cy="648" rx="24" ry="15" fill="url(#pg)"/>
+<ellipse cx="1344.64" cy="649.8" rx="7.02" ry="5.54" fill="url(#pg)"/>
+<ellipse cx="1350.63" cy="647.24" rx="7.13" ry="5.43" fill="url(#pg)"/>
+<ellipse cx="1356.6" cy="651.19" rx="8.51" ry="6.83" fill="url(#pg)"/>
+<rect x="1330" y="642" width="32" height="12" fill="#9A9A9A" opacity="0.25"/>
+</g>
+<rect x="1390" y="612" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1428.62" cy="667.5" r="7.2" fill="url(#pg)"/>
+<circle cx="1410.03" cy="631.35" r="5.21" fill="url(#pg)"/>
+<circle cx="1407.19" cy="636.59" r="3.37" fill="url(#pg)"/>
+<circle cx="1433.46" cy="660.49" r="7.49" fill="url(#pg)"/>
+<circle cx="1410.8" cy="657.51" r="6.3" fill="url(#pg)"/>
+<circle cx="1410.29" cy="664.84" r="7.84" fill="url(#pg)"/>
+<line x1="1396" y1="618" x2="1456" y2="678" stroke="#C8414F" stroke-width="2"/>
+<line x1="1456" y1="618" x2="1396" y2="678" stroke="#C8414F" stroke-width="2"/>
+<rect x="1470" y="612" width="72" height="72" fill="#2B2B2B"/>
+<circle cx="1525.91" cy="643.52" r="5.44" fill="url(#pg)"/>
+<circle cx="1527.55" cy="662.63" r="3.81" fill="url(#pg)"/>
+<circle cx="1502.99" cy="648.69" r="4.7" fill="url(#pg)"/>
+<circle cx="1492.61" cy="640.02" r="6.61" fill="url(#pg)"/>
+<circle cx="1484.86" cy="650.38" r="5.2" fill="url(#pg)"/>
+<circle cx="1484.8" cy="640.59" r="6.12" fill="url(#pg)"/>
+<line x1="1476" y1="618" x2="1536" y2="678" stroke="#C8414F" stroke-width="2"/>
+<line x1="1536" y1="618" x2="1476" y2="678" stroke="#C8414F" stroke-width="2"/>
+<text x="1150" y="712" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#111111">保留 11 类，剔除 9 类（红叉）</text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="图注">
+<text x="60" y="830" font-family="'Noto Serif CJK SC', serif" font-size="16" fill="#111111"><tspan x="60" dy="0">图 1｜单颗粒冷冻电镜的数据处理。a，九个步骤及关键参数；蓝线标出各阶段的数量。b，从显微图到最终颗粒集的筛选，挑选的颗粒中最终保留 14.0%。c，两个独立半数据集重建的 FSC 曲线，按 0.143 阈值</tspan><tspan x="60" dy="27.2">估计分辨率：加掩膜 2.60 Å，不加掩膜 2.95 Å；像素尺寸 0.83 Å，奈奎斯特极限 1.66 Å。d，二维分类平均的示意，红叉为冰污染、碎片或聚集体等被剔除的类。数据与图像均为示例。</tspan></text>
+</g>
+</svg>

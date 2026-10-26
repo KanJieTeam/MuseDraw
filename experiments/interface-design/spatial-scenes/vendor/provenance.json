@@ -1,0 +1,7 @@
+{
+  "library": "three",
+  "version": "0.180.0",
+  "license": "MIT",
+  "url": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
+  "purpose": "Pinned local rendering dependency, no external reference artwork"
+}

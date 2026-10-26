@@ -5,9 +5,9 @@
 Read the complete [MuseDraw Skill](skills/musedraw/SKILL.md) before drawing.
 Use its bundled `skills/musedraw/scripts/musedraw.mjs` scene engine: `quickstart
 rag` for the shared-index RAG starter, or `render scene.json` for other diagrams.
-The engine produces PNG and native editable draw.io directly; do not handwrite
-draw.io XML or install third-party drawio exporters to make the PNG. A PNG-only
-request selects `--no-drawio`. Keep execution details in the Skill, not in copied
+The engine produces PNG, SVG and scene JSON. Use the bundled renderer; do not
+install unrelated exporters.
+Keep execution details in the Skill, not in copied
 user prompts. Read `checks.json`; passing ordinary drawings can be delivered with
 `preview.jpg` immediately. Image reading, CDN uploads, OCR and external vision
 calls are not mandatory. Follow the Skill's optional visual-review policy and

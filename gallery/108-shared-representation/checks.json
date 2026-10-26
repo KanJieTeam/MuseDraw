@@ -9,13 +9,5 @@
   "passed": true,
   "missingFonts": [],
   "fontMode": "system",
-  "drawio": {
-    "native": true,
-    "nodes": 77,
-    "edges": 14,
-    "texts": 79,
-    "visualEffects": [],
-    "durationMs": 26
-  },
   "theme": "journal"
 }

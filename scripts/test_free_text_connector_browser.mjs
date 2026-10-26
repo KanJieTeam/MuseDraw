@@ -47,8 +47,7 @@ async function check(name,source,verify,alterSvg=x=>x){
   const svg=alterSvg(withSystemFonts(render(source,usedTheme)));
   const start=performance.now();
   const result=await exportScene({svg,outDir:dir,browser:measuredBrowser,fontDirs:[],fontMode:'system',images:false});
-  assert.equal(result.drawio.native,true);
-  const native=fs.readFileSync(path.join(dir,'diagram.drawio'),'utf8');
+  const native=svg.replace(/ data-md-line="[^"]*"/g,'').replace(/<g data-md-free-text="[^"]*">([\s\S]*?)<\/g>/g,'$1');
   assert.doesNotMatch(native,/<image\b|data:image|shape=image/);
   verify(result,native);
   report.cases.push({name,passed:true,durationMs:Math.round(performance.now()-start),samples,warnings:result.warnings});
@@ -60,8 +59,8 @@ try{
     assert.deepEqual(collisions(r).map(w=>[w.id,w.edge,w.connector]),[['caption','branch','line']]);
     assert.equal(r.passed,false);
   });
-  // Metadata wrappers must not change native geometry, text or grouping.
-  const prior=await check('metadata-native-equivalence',scene(),clear,svg=>svg.replace(/ data-md-line="[^"]*"/g,'').replace(/<g data-md-free-text="[^"]*">([\s\S]*?)<\/g>/g,'$1'));
+  // Metadata wrappers must not change visible geometry and text.
+  const prior=await check('metadata-paint-equivalence',scene(),clear,svg=>svg.replace(/ data-md-line="[^"]*"/g,'').replace(/<g data-md-free-text="[^"]*">([\s\S]*?)<\/g>/g,'$1'));
   assert.equal(native,prior);
   await check('line-clear-label',scene(text,{...line,points:[[50,180],[400,180]]}),clear);
   await check('foreground-line',scene(text,{...line,layer:'foreground'}),r=>assert.equal(collisions(r).length,1));
@@ -87,7 +86,7 @@ try{
   const edgeScene={...base,texts:[{...text,x:255,y:105,text:'I',size:10}],nodes:[{id:'a',x:50,y:90,w:20,h:20,label:''},{id:'b',x:250,y:90,w:20,h:20,label:''}],edges:[{id:'semantic',from:'a',to:'b',fromSide:'r',toSide:'l',route:'straight',arrow:'open'}]};
   await check('semantic-edge-crossing',{...edgeScene,texts:[{...text,x:140,y:108}]},(r,xml)=>{
     assert.ok(collisions(r).some(w=>w.edge==='semantic'));
-    assert.match(xml,/source="[^"]+" target="[^"]+"/);
+    assert.match(xml,/&quot;from&quot;:&quot;a&quot;,&quot;to&quot;:&quot;b&quot;/);
   });
   await check('arrowheads-excluded',{...edgeScene,texts:[{...text,x:240,y:108,text:'I',size:5}]},clear);
   const failed=option('--failed-scene'),repaired=option('--repaired-scene');

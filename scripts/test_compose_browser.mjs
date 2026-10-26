@@ -7,12 +7,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {inflateRawSync} from 'node:zlib';
 import {composeStates} from '../skills/musedraw/scripts/engine/compose.mjs';
 import {render} from '../skills/musedraw/scripts/engine/render.mjs';
 import {loadTheme} from '../skills/musedraw/scripts/musedraw.mjs';
 import {resolveBrowser,withSystemFonts} from '../skills/musedraw/scripts/engine/environment.mjs';
-import {collectEditableScene,toDrawio} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {collectMeasuredScene} from './measure_svg.mjs';
 import {exportScene,loadPlaywrightInfo} from '../skills/musedraw/scripts/engine/export.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
@@ -36,7 +35,7 @@ if(options.out) {
  fs.mkdirSync(evidenceRoot,{recursive:true});
  out=fs.mkdtempSync(path.join(evidenceRoot,new Date().toISOString().replace(/[:.]/g,'-')+'-'));
 }
-const report={scope:'Actual Chromium SVG geometry and native collector/XML; no official mxGraph import',startedUTC:new Date().toISOString(),cases:[]};
+const report={scope:'Actual Chromium SVG geometry, paint coverage and responsive frame probes',startedUTC:new Date().toISOString(),cases:[]};
 const opening=theme=>({method:'states',theme,entities:[
  {id:'backdrop',label:'Panel behind frame',shape:'box',extent:[.8,.75],role:'focus'},
  {id:'frame',label:'Frame on panel',shape:'frame',extent:[.7,.6],role:'constraint'}],
@@ -141,16 +140,9 @@ try {
     await page.setContent(`<html><head><meta charset="utf-8"><style>body{margin:0}svg{display:block}</style></head><body>${svg}</body></html>`);
     await page.evaluate(()=>document.fonts.ready);
     await page.screenshot({path:path.join(dir,'diagram.png')});
-    const native=await page.evaluate(collectEditableScene);fs.writeFileSync(path.join(dir,'native.json'),JSON.stringify(native,null,2));
-    const xml=toDrawio(native);fs.writeFileSync(path.join(dir,'diagram.drawio'),xml);
-    assert.doesNotMatch(svg+xml,/<image\b|foreignObject|data:image|shape=image/);
-    const stencils=[...xml.matchAll(/shape=stencil\(([^)]*)\)/g)].map(m=>decodeURIComponent(inflateRawSync(Buffer.from(m[1],'base64')).toString()));
-    assert.equal(stencils.length,native.shapes.length,'every captured primitive must have a native stencil');
-    assert.ok(stencils.every(s=>s.includes('<path>')&&/<(?:move|line|quad|curve)/.test(s)),'native stencils must contain actual vector commands');
-    result.native={groups:native.groups.length,shapes:native.shapes.length,texts:native.texts.length,stencils:stencils.length};
+    const native=await page.evaluate(collectMeasuredScene);fs.writeFileSync(path.join(dir,'native.json'),JSON.stringify(native,null,2));
     for(const n of scene.nodes.filter(n=>n.id.startsWith('states-'))) {
      const group=native.groups.find(g=>g.sourceId===n.id);assert.ok(group,`missing editable object ${n.id}`);
-     assert.ok(xml.includes(`<mxCell id="${group.id}"`));
      assert.ok(native.shapes.some(s=>s.parent===group.id),`object ${n.id} must contain native geometry`);
     }
     if(kind==='frame') {
@@ -230,36 +222,8 @@ try {
     fs.writeFileSync(path.join(variantDir,'browser-probe.json'),JSON.stringify(browserProbe,null,2));
     assertOpenFrame(browserProbe,side,`${name} width ${width} browser`,theme==='journal');
 
-    const native=await page.evaluate(collectEditableScene),xml=toDrawio(native);
-    fs.writeFileSync(path.join(variantDir,'native.json'),JSON.stringify(native,null,2));
-    fs.writeFileSync(path.join(variantDir,'diagram.drawio'),xml);
-    assert.doesNotMatch(svg+xml,/<image\b|foreignObject|data:image|shape=image/);
-    const stencils=[...xml.matchAll(/shape=stencil\(([^)]*)\)/g)].map(m=>decodeURIComponent(inflateRawSync(Buffer.from(m[1],'base64')).toString()));
-    assert.equal(stencils.length,native.shapes.length,'every native primitive must have a vector stencil');
-    assert.ok(stencils.every(s=>s.includes('<path>')&&/<(?:move|line|quad|curve)/.test(s)),'native stencils must contain vector commands');
-    const group=native.groups.find(g=>g.sourceId===frame.id);assert.ok(group,'open frame must remain an editable native object');
-    const frameShapes=native.shapes.filter(s=>s.parent===group.id);
-    assert.ok(frameShapes.some(s=>s.tag==='path'&&s.attributes.d),'native frame must retain actual path geometry');
-    assert.ok(frameShapes.every(s=>xml.includes(`<mxCell id="${s.id}"`)),'every frame primitive must survive native serialization');
-    // Rebuild the collected native primitives independently in the browser.
-    // Bounding boxes alone cannot prove that a U-shaped polygon has a gap.
-    await page.evaluate(shapes=>{
-     const ns='http://www.w3.org/2000/svg',group=document.createElementNS(ns,'g');group.id='native-frame-probe';
-     for(const shape of shapes) {
-      const el=document.createElementNS(ns,shape.tag);
-      for(const [key,value] of Object.entries(shape.attributes))if(key!=='id'&&key!=='transform')el.setAttribute(key,value);
-      el.setAttribute('transform',`matrix(${shape.matrix.join(' ')})`);
-      for(const [key,value] of Object.entries({fill:shape.fill,stroke:shape.stroke,'stroke-width':shape.width,opacity:shape.opacity,
-       'fill-opacity':shape.fillOpacity,'stroke-opacity':shape.strokeOpacity,'stroke-dasharray':shape.dash,'stroke-linecap':shape.cap,'stroke-linejoin':shape.join}))el.setAttribute(key,value);
-      group.appendChild(el);
-     }
-     document.querySelector('svg').appendChild(group);
-    },frameShapes);
-    const nativeProbe=await probeFrameSides(page,'native-frame-probe',frame);
-    fs.writeFileSync(path.join(variantDir,'native-probe.json'),JSON.stringify(nativeProbe,null,2));
-    assertOpenFrame(nativeProbe,side,`${name} width ${width} native`,theme==='journal');
-    result.widths.push({width,frame:{x:frame.x,y:frame.y,w:frame.w,h:frame.h},browserProbe,nativeProbe,
-     native:{groupId:group.id,frameShapes:frameShapes.length,totalStencils:stencils.length}});
+    assert.doesNotMatch(svg,/<image\b|foreignObject|data:image/);
+    result.widths.push({width,frame:{x:frame.x,y:frame.y,w:frame.w,h:frame.h},browserProbe});
    }
    assert.ok(result.widths[1].frame.w>result.widths[0].frame.w,'width variants must exercise different object geometry');
    result.passed=true;
@@ -276,7 +240,7 @@ try {
     const variantDir=path.join(dir,`font-${fontSize}`);fs.mkdirSync(variantDir,{recursive:true});
     const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="300" viewBox="0 0 1800 300"><text x="60" y="100" font-family="sans-serif" font-size="${fontSize}">Readable final-size type</text></svg>`;
     fs.writeFileSync(path.join(variantDir,'diagram.svg'),svg);
-    const checks=await exportScene({svg,outDir:variantDir,browser,fontDirs:[],images:false,drawio:false,fontMode:'system',
+    const checks=await exportScene({svg,outDir:variantDir,browser,fontDirs:[],images:false,fontMode:'system',
      readingProfile:{maxWidth:1200,maxHeight:1000,min:14}});
     fs.writeFileSync(path.join(variantDir,'checks.json'),JSON.stringify(checks,null,2));
     const tooSmall=checks.warnings.filter(w=>w.type==='text-too-small');
@@ -292,7 +256,6 @@ try {
      assert.equal(checks.readability.smallestTextPx,15);
     }
     assert.equal(fs.existsSync(path.join(variantDir,'diagram@2x.png')),false,'this check must not write an unnecessary screenshot');
-    assert.equal(fs.existsSync(path.join(variantDir,'diagram.drawio')),false);
     result.variants.push({fontSize,checks});
    }
    result.passed=true;

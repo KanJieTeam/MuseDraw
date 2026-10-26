@@ -1,0 +1,104 @@
+<svg data-theme="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>季度 OKR 对齐图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FAF8F3"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="92" font-family="'Noto Serif CJK SC', serif" font-size="50" font-weight="900" fill="#222222">季度 OKR 对齐图</text>
+<text x="72" y="132" font-family="'Noto Serif CJK SC', serif" font-size="19" fill="#857F75">2026 年第四季度，第 8 周进度（示例）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="公司目标">
+<rect x="430" y="170" width="740" height="120" fill="#FFFFFF" stroke="#222222" stroke-width="2"/>
+<text x="450" y="204" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">公司目标</text>
+<text x="450" y="246" font-family="'Noto Serif CJK SC', serif" font-size="30" font-weight="900" fill="#222222">让中小企业三天内用上数字化账务</text>
+<text x="1150" y="204" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75" text-anchor="end">综合得分</text>
+<text x="1150" y="270" font-family="'Noto Serif CJK SC', serif" font-size="44" font-weight="900" fill="#B8860B" text-anchor="end">0.62</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="部门">
+<path d="M800.0,290.0 L800.0,320.0 L290.0,320.0 L290.0,350.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<line x1="70" y1="350" x2="520" y2="350" stroke="#222222" stroke-width="2"/>
+<text x="70" y="384" font-family="'Noto Serif CJK SC', serif" font-size="16" font-weight="700" fill="#857F75">产品部</text>
+<text x="70" y="418" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#222222"><tspan x="70" dy="0">新客户第一周就能完成首次记账</tspan></text>
+<text x="520" y="418" font-family="'Noto Serif CJK SC', serif" font-size="30" font-weight="900" fill="#B8860B" text-anchor="end">0.67</text>
+<line x1="70" y1="480" x2="520" y2="480" stroke="#CFC9BE" stroke-width="1"/>
+<text x="70" y="510" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR1　新手引导完成率</text>
+<text x="520" y="510" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 40%</text>
+<text x="70" y="540" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 42%　目标 75%　当前 63%</text>
+<rect x="70" y="556" width="380" height="12" fill="#ECE8E0"/>
+<rect x="70" y="556" width="241.82" height="12" fill="#B8860B"/>
+<text x="520" y="568" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#B8860B" text-anchor="end">0.64</text>
+<line x1="70" y1="610" x2="520" y2="610" stroke="#CFC9BE" stroke-width="1"/>
+<text x="70" y="640" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR2　首次记账中位时长（天）</text>
+<text x="520" y="640" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 40%</text>
+<text x="70" y="670" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 3.5　目标 1　当前 1.8</text>
+<rect x="70" y="686" width="380" height="12" fill="#ECE8E0"/>
+<rect x="70" y="686" width="258.4" height="12" fill="#B8860B"/>
+<text x="520" y="698" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#B8860B" text-anchor="end">0.68</text>
+<line x1="70" y1="740" x2="520" y2="740" stroke="#CFC9BE" stroke-width="1"/>
+<text x="70" y="770" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR3　引导相关工单降幅</text>
+<text x="520" y="770" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 20%</text>
+<text x="70" y="800" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 0%　目标 50%　当前 35%</text>
+<rect x="70" y="816" width="380" height="12" fill="#ECE8E0"/>
+<rect x="70" y="816" width="266" height="12" fill="#2E6B4F"/>
+<text x="520" y="828" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#2E6B4F" text-anchor="end">0.70</text>
+<path d="M800.0,290.0 L800.0,320.0 L790.0,320.0 L790.0,350.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<line x1="570" y1="350" x2="1020" y2="350" stroke="#222222" stroke-width="2"/>
+<text x="570" y="384" font-family="'Noto Serif CJK SC', serif" font-size="16" font-weight="700" fill="#857F75">销售部</text>
+<text x="570" y="418" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#222222"><tspan x="570" dy="0">让渠道伙伴带来更多新客户</tspan></text>
+<text x="1020" y="418" font-family="'Noto Serif CJK SC', serif" font-size="30" font-weight="900" fill="#2E6B4F" text-anchor="end">0.71</text>
+<line x1="570" y1="480" x2="1020" y2="480" stroke="#CFC9BE" stroke-width="1"/>
+<text x="570" y="510" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR1　渠道新签客户数</text>
+<text x="1020" y="510" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 50%</text>
+<text x="570" y="540" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 0　目标 120　当前 78</text>
+<rect x="570" y="556" width="380" height="12" fill="#ECE8E0"/>
+<rect x="570" y="556" width="247" height="12" fill="#B8860B"/>
+<text x="1020" y="568" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#B8860B" text-anchor="end">0.65</text>
+<line x1="570" y1="610" x2="1020" y2="610" stroke="#CFC9BE" stroke-width="1"/>
+<text x="570" y="640" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR2　渠道客户 30 天激活率</text>
+<text x="1020" y="640" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 30%</text>
+<text x="570" y="670" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 40%　目标 60%　当前 52%</text>
+<rect x="570" y="686" width="380" height="12" fill="#ECE8E0"/>
+<rect x="570" y="686" width="228" height="12" fill="#B8860B"/>
+<text x="1020" y="698" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#B8860B" text-anchor="end">0.60</text>
+<line x1="570" y1="740" x2="1020" y2="740" stroke="#CFC9BE" stroke-width="1"/>
+<text x="570" y="770" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR3　新增渠道伙伴</text>
+<text x="1020" y="770" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 20%</text>
+<text x="570" y="800" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 0　目标 15　当前 15</text>
+<rect x="570" y="816" width="380" height="12" fill="#ECE8E0"/>
+<rect x="570" y="816" width="380" height="12" fill="#2E6B4F"/>
+<text x="1020" y="828" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#2E6B4F" text-anchor="end">1.00</text>
+<path d="M800.0,290.0 L800.0,320.0 L1290.0,320.0 L1290.0,350.0" fill="none" stroke="#222222" stroke-width="1.4"/>
+<line x1="1070" y1="350" x2="1520" y2="350" stroke="#222222" stroke-width="2"/>
+<text x="1070" y="384" font-family="'Noto Serif CJK SC', serif" font-size="16" font-weight="700" fill="#857F75">客服部</text>
+<text x="1070" y="418" font-family="'Noto Serif CJK SC', serif" font-size="22" font-weight="900" fill="#222222"><tspan x="1070" dy="0">客户的问题当天解决</tspan></text>
+<text x="1520" y="418" font-family="'Noto Serif CJK SC', serif" font-size="30" font-weight="900" fill="#B8860B" text-anchor="end">0.50</text>
+<line x1="1070" y1="480" x2="1520" y2="480" stroke="#CFC9BE" stroke-width="1"/>
+<text x="1070" y="510" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR1　5 分钟内首次响应占比</text>
+<text x="1520" y="510" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 30%</text>
+<text x="1070" y="540" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 70%　目标 90%　当前 86%</text>
+<rect x="1070" y="556" width="380" height="12" fill="#ECE8E0"/>
+<rect x="1070" y="556" width="304" height="12" fill="#2E6B4F"/>
+<text x="1520" y="568" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#2E6B4F" text-anchor="end">0.80</text>
+<line x1="1070" y1="610" x2="1520" y2="610" stroke="#CFC9BE" stroke-width="1"/>
+<text x="1070" y="640" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR2　当日解决率</text>
+<text x="1520" y="640" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 40%</text>
+<text x="1070" y="670" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 61%　目标 80%　当前 66%</text>
+<rect x="1070" y="686" width="380" height="12" fill="#ECE8E0"/>
+<rect x="1070" y="686" width="100" height="12" fill="#C8102E"/>
+<text x="1520" y="698" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#C8102E" text-anchor="end">0.26</text>
+<path d="M1064.0,713.6 C1070.4,713.8 1089.5,715.0 1102.2,715.3 C1115.0,715.6 1127.7,715.5 1140.5,715.3 C1153.2,715.1 1166.0,714.1 1178.8,714.0 C1191.5,714.0 1204.3,714.8 1217.0,715.0 C1229.7,715.2 1242.5,714.9 1255.3,715.1 C1268.0,715.3 1280.7,715.7 1293.5,716.0 C1306.2,716.2 1319.0,716.7 1331.7,716.6 C1344.5,716.5 1363.6,715.7 1370.0,715.5" stroke="#C8102E" stroke-width="2" fill="none" stroke-linecap="round"/>
+<text x="1380" y="720" font-family="'Noto Serif CJK SC', serif" font-size="14" font-weight="700" fill="#C8102E">需要支援</text>
+<line x1="1070" y1="740" x2="1520" y2="740" stroke="#CFC9BE" stroke-width="1"/>
+<text x="1070" y="770" font-family="'Noto Serif CJK SC', serif" font-size="17" font-weight="700" fill="#222222">KR3　客户满意度（5 分制）</text>
+<text x="1520" y="770" font-family="'Noto Serif CJK SC', serif" font-size="13" fill="#857F75" text-anchor="end">权重 30%</text>
+<text x="1070" y="800" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">基线 4.2　目标 4.6　当前 4.4</text>
+<rect x="1070" y="816" width="380" height="12" fill="#ECE8E0"/>
+<rect x="1070" y="816" width="190" height="12" fill="#B8860B"/>
+<text x="1520" y="828" font-family="'Noto Serif CJK SC', serif" font-size="20" font-weight="900" fill="#B8860B" text-anchor="end">0.50</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="规则">
+<line x1="70" y1="900" x2="1530" y2="900" stroke="#222222" stroke-width="1"/>
+<text x="70" y="934" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">得分 = (当前 − 基线) ÷ (目标 − 基线)，截取到 0–1；部门得分按权重加权，公司得分取三个部门平均。0.7 以上绿色，0.4–0.7 琥珀色，0.4 以下红色。</text>
+<text x="70" y="962" font-family="'Noto Serif CJK SC', serif" font-size="15" fill="#857F75">节奏：第 1 周制定，第 6 周中期检查，第 13 周评分复盘。OKR 得分不与绩效直接挂钩。</text>
+</g>
+</svg>

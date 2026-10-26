@@ -1,0 +1,39 @@
+{
+  "id": "158",
+  "title": "牛顿第二定律",
+  "use": "教学",
+  "style": "产品发布",
+  "theme": "教学（中学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "公式",
+    "例题",
+    "图像",
+    "参数"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "渐变",
+    "半透明"
+  ],
+  "example_data": false,
+  "computed": [
+    "例题 a = (10 − 2) ÷ 2 = 4 m/s²，程序断言；三条直线斜率分别为 1/m。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

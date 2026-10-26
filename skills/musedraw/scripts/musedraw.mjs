@@ -5,7 +5,7 @@
 //   node scripts/musedraw.mjs themes
 //   node scripts/musedraw.mjs validate scene.json [more.json ...] [--theme id]
 //
-// Writes diagram@2x.png, diagram.drawio, diagram.svg and checks.json next to each scene
+// Writes diagram@2x.png, diagram.svg and checks.json.
 // (or into --out). Needs `npm install` in this skill folder for fonts and
 // Playwright; use --svg-only when no browser is available.
 import fs from 'node:fs';
@@ -72,7 +72,7 @@ function merge(a, b) {
 
 function args(argv) {
   const flags = {}, rest = [];
-  const booleans = new Set(['svg-only', 'strict', 'cache', 'no-cache', 'preview-first', 'json', 'no-drawio']);
+  const booleans = new Set(['svg-only', 'strict', 'cache', 'no-cache', 'preview-first', 'json']);
   const values = new Set(['theme', 'out', 'playwright', 'browser', 'fonts', 'font-mode', 'lang']);
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -157,7 +157,7 @@ async function main() {
     composition = JSON.parse(await fsp.readFile(input, 'utf8'));
     starter = compose(composition);
     const target = path.resolve(flags.out, 'scene.json');
-    for (const name of ['scene.json','diagram.svg','diagram@2x.png','diagram.drawio','preview.jpg','checks.json','run.json','.musedraw-cache.json']) {
+    for (const name of ['scene.json','diagram.svg','diagram@2x.png','preview.jpg','checks.json','run.json','.musedraw-cache.json']) {
       if (sameFilePath(input,path.resolve(flags.out,name))) throw new Error(`Composition input conflicts with generated ${name}; keep the source outside reserved output filenames`);
     }
     rest.splice(0, 1, target);
@@ -182,11 +182,10 @@ async function main() {
     rest.splice(0, 1, sceneFile);
   }
   if (!['render', 'validate', 'quickstart', 'patch', 'compose', 'design'].includes(cmd) || !rest.length) {
-    console.log('Usage: musedraw.mjs designs [relationship query] [--json]\n       musedraw.mjs design <id> --out <directory>\n       musedraw.mjs compose composition.json --out <directory>\n       musedraw.mjs quickstart rag --out <directory> [--lang zh|en]\n       musedraw.mjs patch source.json changes.json --out new-directory\n       musedraw.mjs doctor [--json]\n       musedraw.mjs render scene.json [...] [--font-mode system|bundled] [--no-cache] [--no-drawio] [--theme id] [--out dir] [--svg-only] [--playwright module] [--browser exe] [--fonts node_modules]\n       musedraw.mjs validate scene.json [...] [--theme id]\n       musedraw.mjs themes');
+    console.log('Usage: musedraw.mjs designs [relationship query] [--json]\n       musedraw.mjs design <id> --out <directory>\n       musedraw.mjs compose composition.json --out <directory>\n       musedraw.mjs quickstart rag --out <directory> [--lang zh|en]\n       musedraw.mjs patch source.json changes.json --out new-directory\n       musedraw.mjs doctor [--json]\n       musedraw.mjs render scene.json [...] [--font-mode system|bundled] [--no-cache] [--theme id] [--out dir] [--svg-only] [--playwright module] [--browser exe] [--fonts node_modules]\n       musedraw.mjs validate scene.json [...] [--theme id]\n       musedraw.mjs themes');
     process.exitCode = cmd ? 1 : 0;
     return;
   }
-  const drawio = !flags['no-drawio'];
   const fontDirs = [flags.fonts, path.join(SKILL, 'node_modules'), path.join(process.cwd(), 'node_modules'), path.join(SKILL, '../../node_modules')].filter(Boolean).filter((d) => fs.existsSync(d));
   let browser = null;
   let runtime = null;
@@ -231,8 +230,8 @@ async function main() {
         let key = null;
         if (useCache) {
           cacheContext ??= { renderer: rendererStamp(), browser: fileStamp(runtime.executablePath), fonts: fontEnvironmentStamp(), node: process.versions.node, platform: process.platform, playwright: fileStamp(runtime.modulePath), package: fs.existsSync(path.join(path.dirname(runtime.modulePath), 'package.json')) ? fileStamp(path.join(path.dirname(runtime.modulePath), 'package.json')) : null };
-          key = renderKey({ source, svg, cacheContext, drawio });
-          const cached = readRenderCache(outDir, key, { drawio });
+          key = renderKey({ source, svg, cacheContext });
+          const cached = readRenderCache(outDir, key);
           if (cached) {
             if (composition) {
               await fsp.writeFile(file, JSON.stringify(starter, null, 2) + '\n');
@@ -255,11 +254,11 @@ async function main() {
         await fsp.writeFile(path.join(outDir, 'diagram.svg'), svg + '\n');
         let checks = { svgOnly: true };
         if (fontMode === 'system') checks.fontMode = 'system';
-        if (browser) checks = await exportScene({ svg, outDir, browser, fontDirs, fontMode, drawio, previewFirst,
+        if (browser) checks = await exportScene({ svg, outDir, browser, fontDirs, fontMode, previewFirst,
           readingProfile: scene.meta?.composition ? {maxWidth:1200,maxHeight:1000,min:14} : null, onProgress: progress });
         checks.theme = theme.id;
         await fsp.writeFile(path.join(outDir, 'checks.json'), JSON.stringify(checks, null, 2) + '\n');
-        if (key) writeRenderCache(outDir, key, checks, { drawio });
+        if (key) writeRenderCache(outDir, key, checks);
         if (previewFirst) await fsp.writeFile(path.join(outDir, 'run.json'), JSON.stringify({ cached: false, fontMode, events, elapsedMs: Math.round(performance.now() - started) }, null, 2) + '\n');
         const w = checks.warnings?.length ?? 0;
         if (checks.missingFonts?.length) console.warn(`  ! fonts not installed (falling back to system fonts): ${checks.missingFonts.join(', ')}`);

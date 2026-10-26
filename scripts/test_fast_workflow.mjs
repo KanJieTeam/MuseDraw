@@ -53,7 +53,7 @@ test('system font environment changes invalidate the fingerprint', () => scratch
 }));
 
 test('cache rejects changed inputs, missing or modified artifacts and failed checks', () => scratch((dir) => {
-  const files = ['diagram.svg', 'diagram@2x.png', 'diagram.drawio', 'preview.jpg'];
+  const files = ['diagram.svg', 'diagram@2x.png', 'preview.jpg'];
   files.forEach((file) => fs.writeFileSync(path.join(dir, file), file));
   const checks = { passed: true, missingFonts: [], warnings: [] };
   fs.writeFileSync(path.join(dir, 'checks.json'), JSON.stringify(checks));
@@ -61,9 +61,9 @@ test('cache rejects changed inputs, missing or modified artifacts and failed che
   writeRenderCache(dir, key, checks);
   assert.deepEqual(readRenderCache(dir, key), checks);
   assert.equal(readRenderCache(dir, renderKey({ source: 'b' })), null);
-  fs.writeFileSync(path.join(dir, 'diagram.drawio'), 'edited externally');
+  fs.writeFileSync(path.join(dir, 'diagram.svg'), 'edited externally');
   assert.equal(readRenderCache(dir, key), null);
-  fs.writeFileSync(path.join(dir, 'diagram.drawio'), 'diagram.drawio');
+  fs.writeFileSync(path.join(dir, 'diagram.svg'), 'diagram.svg');
   assert.deepEqual(readRenderCache(dir, key), checks);
   fs.unlinkSync(path.join(dir, 'preview.jpg'));
   assert.equal(readRenderCache(dir, key), null);
@@ -79,18 +79,9 @@ test('renderer code changes invalidate cached results', () => scratch((dir) => {
   assert.notEqual(rendererStamp(dir), first);
 }));
 
-test('PNG-only cache needs no drawio and cannot satisfy a dual-format request', () => scratch((dir) => {
-  for(const name of ['diagram.svg','diagram@2x.png','preview.jpg'])fs.writeFileSync(path.join(dir,name),name);
-  const checks={passed:true,missingFonts:[],warnings:[],drawio:{skipped:true,reason:'requested'}};
-  fs.writeFileSync(path.join(dir,'checks.json'),JSON.stringify(checks));
-  writeRenderCache(dir,'same-key',checks,{drawio:false});
-  assert.deepEqual(readRenderCache(dir,'same-key',{drawio:false}),checks);
-  assert.equal(readRenderCache(dir,'same-key'),null);
-  fs.writeFileSync(path.join(dir,'diagram.drawio'),'edited by user');
-  assert.deepEqual(readRenderCache(dir,'same-key',{drawio:false}),checks);
-  assert.equal(fs.readFileSync(path.join(dir,'diagram.drawio'),'utf8'),'edited by user');
-  fs.appendFileSync(path.join(dir,'preview.jpg'),'changed');
-  assert.equal(readRenderCache(dir,'same-key',{drawio:false}),null);
+test('old cache versions are invalidated after an artifact contract change', () => scratch((dir) => {
+  fs.writeFileSync(path.join(dir,'.musedraw-cache.json'),JSON.stringify({version:1,key:'old',files:{}}));
+  assert.equal(readRenderCache(dir,'old'),null);
 }));
 
 for (const lang of ['zh', 'en']) test(`${lang} starter has valid structure and no inherited example metrics`, async () => {

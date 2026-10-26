@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1080" width="1600" height="1080">
+<title>短链接服务 API 容器组件图</title>
+<g data-md-layer="图">
+<rect width="1600" height="1080" fill="#FFFFFF"/>
+<text id="title" x="60" y="80" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="34" fill="#111111" font-weight="700">短链接服务　API 容器的组件图</text>
+<text x="62" y="116" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#666666">C4 模型第 3 层：一个容器内部的组件，以及它们依赖的其他容器</text>
+<circle cx="180" cy="170" r="30" fill="#08427B"/>
+<rect x="65.0" y="192" width="230" height="122" rx="26" fill="#08427B"/>
+<text x="180" y="232" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">访问者</text>
+<text x="180" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#DCE6F2" text-anchor="middle">[人员]</text>
+<text x="180" y="278" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">点击短链接</text>
+<rect x="1180" y="170" width="300" height="140" rx="10" fill="#438DD5"/>
+<text x="1330" y="206" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">Web 前端</text>
+<text x="1330" y="230" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：Vue]</text>
+<text x="1330" y="256" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">用户粘贴长链接</text>
+<rect x="80" y="380" width="1440" height="420" rx="14" fill="none" stroke="#5A5A5A" stroke-width="1.6" stroke-dasharray="10 7"/>
+<text x="100" y="782" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#333333" font-weight="700">API 服务</text>
+<text x="186" y="782" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#666666">[容器：Go]</text>
+<rect x="120" y="420" width="260" height="140" rx="10" fill="#85BBF0"/>
+<text x="250" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#111111" font-weight="700" text-anchor="middle">跳转控制器</text>
+<text x="250" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#333333" text-anchor="middle">[组件]</text>
+<text x="250" y="510" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#111111" text-anchor="middle">查短码，返回 302</text>
+<rect x="1160" y="420" width="260" height="140" rx="10" fill="#85BBF0"/>
+<text x="1290" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#111111" font-weight="700" text-anchor="middle">创建控制器</text>
+<text x="1290" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#333333" text-anchor="middle">[组件]</text>
+<text x="1290" y="510" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#111111" text-anchor="middle">收长链接，返回短码</text>
+<rect x="820" y="420" width="260" height="140" rx="10" fill="#85BBF0"/>
+<text x="950" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#111111" font-weight="700" text-anchor="middle">短码生成器</text>
+<text x="950" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#333333" text-anchor="middle">[组件]</text>
+<text x="950" y="510" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#111111" text-anchor="middle">发号器 + Base62 编码</text>
+<rect x="470" y="420" width="260" height="140" rx="10" fill="#85BBF0"/>
+<text x="600" y="456" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#111111" font-weight="700" text-anchor="middle">链接仓库</text>
+<text x="600" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#333333" text-anchor="middle">[组件]</text>
+<text x="600" y="510" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#111111" text-anchor="middle">读写短码与长链接映射</text>
+<rect x="470" y="620" width="260" height="140" rx="10" fill="#85BBF0"/>
+<text x="600" y="656" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#111111" font-weight="700" text-anchor="middle">缓存客户端</text>
+<text x="600" y="680" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#333333" text-anchor="middle">[组件]</text>
+<text x="600" y="710" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#111111" text-anchor="middle">热门短码放进缓存</text>
+<rect x="120" y="620" width="260" height="140" rx="10" fill="#85BBF0"/>
+<text x="250" y="656" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="21" fill="#111111" font-weight="700" text-anchor="middle">点击事件发布器</text>
+<text x="250" y="680" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#333333" text-anchor="middle">[组件]</text>
+<text x="250" y="710" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#111111" text-anchor="middle">异步记录每次访问</text>
+<rect x="470" y="880" width="260" height="150" rx="10" fill="#438DD5"/>
+<text x="600" y="916" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">Redis</text>
+<text x="600" y="940" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：缓存]</text>
+<text x="600" y="966" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">短码 → 长链接</text>
+<path d="M820 896 V1014 A130.0 16 0 0 0 1080 1014 V896" fill="#438DD5"/>
+<ellipse cx="950.0" cy="896" rx="130.0" ry="16" fill="#438DD5" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="950" y="924" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">MySQL</text>
+<text x="950" y="948" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：数据库]</text>
+<text x="950" y="974" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">全部映射记录</text>
+<rect x="120" y="880" width="260" height="150" rx="10" fill="#438DD5"/>
+<text x="250" y="916" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">消息队列</text>
+<text x="250" y="940" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：Kafka]</text>
+<text x="250" y="966" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">点击事件</text>
+<rect x="1160" y="880" width="300" height="150" rx="10" fill="#8C8C8C"/>
+<text x="1310" y="916" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">统计服务</text>
+<text x="1310" y="940" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#E6EEF7" text-anchor="middle">[容器：Python]</text>
+<text x="1310" y="966" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">按天汇总点击量</text>
+<path d="M180 314 L180 416" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M180 416 L174.84 406.29 L185.16 406.29 Z" fill="#707070"/>
+<text x="194" y="370" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">打开 /4c92</text>
+<text x="194" y="389" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[HTTPS]</text>
+<path d="M1330 310 L1330 416" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1330 416 L1324.84 406.29 L1335.16 406.29 Z" fill="#707070"/>
+<text x="1344" y="360" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">提交长链接</text>
+<text x="1344" y="379" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[JSON/HTTPS]</text>
+<path d="M1160 490 L1084 490" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1084 490 L1093.71 484.84 L1093.71 495.16 Z" fill="#707070"/>
+<text x="1122" y="476" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500" text-anchor="middle">申请短码</text>
+<path d="M1160 530 L1050 530 L1050 600 L600 600 L600 564" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M600 564 L605.16 573.71 L594.84 573.71 Z" fill="#707070"/>
+<text x="820" y="592" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500" text-anchor="middle">保存映射</text>
+<path d="M380 490 L466 490" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M466 490 L456.29 495.16 L456.29 484.84 Z" fill="#707070"/>
+<text x="424" y="476" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500" text-anchor="middle">按短码查询</text>
+<path d="M600 560 L600 616" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M600 616 L594.84 606.29 L605.16 606.29 Z" fill="#707070"/>
+<text x="612" y="596" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">先查缓存</text>
+<path d="M600 760 L600 876" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M600 876 L594.84 866.29 L605.16 866.29 Z" fill="#707070"/>
+<text x="612" y="830" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">读写</text>
+<text x="612" y="849" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[RESP]</text>
+<path d="M730 500 L950 500 L950 876" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M950 876 L944.84 866.29 L955.16 866.29 Z" fill="#707070"/>
+<text x="962" y="830" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">缓存未命中时</text>
+<text x="962" y="849" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#777777">[SQL]</text>
+<path d="M250 560 L250 616" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M250 616 L244.84 606.29 L255.16 606.29 Z" fill="#707070"/>
+<path d="M250 760 L250 876" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M250 876 L244.84 866.29 L255.16 866.29 Z" fill="#707070"/>
+<text x="262" y="830" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500">发布事件</text>
+<path d="M380 955 L430 955 L430 1050 L1310 1050 L1310 1034" fill="none" stroke="#707070" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M1310 1034 L1315.16 1043.71 L1304.84 1043.71 Z" fill="#707070"/>
+<text x="870" y="1044" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="500" text-anchor="middle">订阅点击事件</text>
+<text x="1160" y="650" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#333333" font-weight="700">例：第 1,000,000 条链接</text>
+<text x="1160" y="676" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#333333">编码为 Base62「4c92」，只有 4 个字符</text>
+<text x="1160" y="712" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#333333">用 302 而不是 301：浏览器不会</text>
+<text x="1160" y="736" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#333333">永久缓存跳转，每次点击都能统计</text>
+<text x="1400" y="60" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#333333" font-weight="700">图例</text>
+<rect x="1400" y="76" width="24" height="22" rx="4" fill="#85BBF0"/>
+<text x="1434" y="93" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">组件</text>
+<rect x="1400" y="106" width="24" height="22" rx="4" fill="#438DD5"/>
+<text x="1434" y="123" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">其他容器</text>
+<rect x="1400" y="136" width="24" height="22" rx="4" fill="#8C8C8C"/>
+<text x="1434" y="153" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" fill="#333333">外部容器</text>
+</g>
+</svg>

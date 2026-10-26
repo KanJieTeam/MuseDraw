@@ -1,0 +1,34 @@
+{
+  "id": "157",
+  "title": "文言文特殊句式",
+  "use": "教学",
+  "style": "纸墨编辑",
+  "theme": "教学（中学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "句式",
+    "批注"
+  ],
+  "fonts": [
+    "Noto Serif CJK SC（思源宋体）"
+  ],
+  "features": [],
+  "example_data": false,
+  "computed": [
+    "无数值计算；原句中各片段的位置按字宽估算拼接。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

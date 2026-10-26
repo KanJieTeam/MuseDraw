@@ -1,0 +1,125 @@
+<svg data-theme="metro" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>2027 年度经营节奏线路图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="线路">
+<path d="M120.0,250.0 L363.0,250.0 L440.0,443.6 L560.0,443.6 L637.0,250.0 L703.0,250.0 L780.0,443.6 L900.0,443.6 L977.0,250.0 L1043.0,250.0 L1120.0,443.6 L1240.0,443.6 L1317.0,250.0 L1353.0,250.0 L1430.0,443.6 L1490.0,443.6" fill="none" stroke="#D7282F" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120.0,360.0 L401.5,360.0 L440.0,456.8 L560.0,456.8 L598.5,360.0 L741.5,360.0 L780.0,456.8 L900.0,456.8 L938.5,360.0 L1081.5,360.0 L1120.0,456.8 L1240.0,456.8 L1278.5,360.0 L1391.5,360.0 L1430.0,456.8 L1490.0,456.8" fill="none" stroke="#1E9E5A" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120.0,580.0 L401.5,580.0 L440.0,483.2 L560.0,483.2 L598.5,580.0 L741.5,580.0 L780.0,483.2 L900.0,483.2 L938.5,580.0 L1081.5,580.0 L1120.0,483.2 L1240.0,483.2 L1278.5,580.0 L1391.5,580.0 L1430.0,483.2 L1490.0,483.2" fill="none" stroke="#1D6FB8" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M120.0,690.0 L363.0,690.0 L440.0,496.4 L560.0,496.4 L637.0,690.0 L703.0,690.0 L780.0,496.4 L900.0,496.4 L977.0,690.0 L1043.0,690.0 L1120.0,496.4 L1240.0,496.4 L1317.0,690.0 L1353.0,690.0 L1430.0,496.4 L1490.0,496.4" fill="none" stroke="#F29400" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="季度经营会">
+<rect x="466" y="422" width="68" height="96" rx="34" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="500" y="408" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="800" fill="#1A1A1A" text-anchor="middle">Q1 经营会</text>
+<text x="500" y="542" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#777777" text-anchor="middle">4 月 5 日（一）</text>
+<rect x="806" y="422" width="68" height="96" rx="34" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="840" y="408" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="800" fill="#1A1A1A" text-anchor="middle">Q2 经营会</text>
+<text x="840" y="542" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#777777" text-anchor="middle">7 月 5 日（一）</text>
+<rect x="1146" y="422" width="68" height="96" rx="34" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="1180" y="408" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="800" fill="#1A1A1A" text-anchor="middle">Q3 经营会</text>
+<text x="1180" y="542" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#777777" text-anchor="middle">10 月 4 日（一）</text>
+<rect x="1456" y="422" width="68" height="96" rx="34" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="1490" y="408" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="800" fill="#1A1A1A" text-anchor="middle">Q4 经营会</text>
+<text x="1490" y="542" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#777777" text-anchor="middle">1 月 3 日（一）</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="车站">
+<circle cx="219.33" cy="250" r="9" fill="#FFFFFF" stroke="#D7282F" stroke-width="4"/>
+<text x="219.33" y="228" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">年度预算下达</text>
+<circle cx="332.67" cy="250" r="9" fill="#FFFFFF" stroke="#D7282F" stroke-width="4"/>
+<text x="332.67" y="228" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">年报审计</text>
+<circle cx="604.67" cy="250" r="9" fill="#FFFFFF" stroke="#D7282F" stroke-width="4"/>
+<text x="604.67" y="228" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">一季报</text>
+<circle cx="944.67" cy="250" r="9" fill="#FFFFFF" stroke="#D7282F" stroke-width="4"/>
+<text x="944.67" y="228" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">半年报</text>
+<circle cx="1284.67" cy="250" r="9" fill="#FFFFFF" stroke="#D7282F" stroke-width="4"/>
+<text x="1284.67" y="228" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">三季报</text>
+<circle cx="1352.67" cy="250" r="9" fill="#FFFFFF" stroke="#D7282F" stroke-width="4"/>
+<text x="1352.67" y="228" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">下年预算启动</text>
+<circle cx="344" cy="360" r="9" fill="#FFFFFF" stroke="#1E9E5A" stroke-width="4"/>
+<text x="344" y="394" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">春招启动</text>
+<circle cx="378" cy="580" r="9" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="4"/>
+<text x="378" y="558" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">春季版本</text>
+<circle cx="718" cy="580" r="9" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="4"/>
+<text x="718" y="558" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">年中大版本</text>
+<circle cx="1058" cy="580" r="9" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="4"/>
+<text x="1058" y="558" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">秋季版本</text>
+<circle cx="1398" cy="580" r="9" fill="#FFFFFF" stroke="#1D6FB8" stroke-width="4"/>
+<text x="1398" y="558" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">年终版本</text>
+<circle cx="230.67" cy="690" r="9" fill="#FFFFFF" stroke="#F29400" stroke-width="4"/>
+<text x="230.67" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">开年誓师</text>
+<circle cx="423.33" cy="690" r="9" fill="#FFFFFF" stroke="#F29400" stroke-width="4"/>
+<text x="423.33" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Q1 冲刺</text>
+<circle cx="650" cy="690" r="9" fill="#FFFFFF" stroke="#F29400" stroke-width="4"/>
+<text x="650" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">年中大促</text>
+<circle cx="990" cy="690" r="9" fill="#FFFFFF" stroke="#F29400" stroke-width="4"/>
+<text x="990" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Q3 冲刺</text>
+<circle cx="1386.67" cy="690" r="9" fill="#FFFFFF" stroke="#F29400" stroke-width="4"/>
+<text x="1386.67" y="724" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">年末冲刺</text>
+<rect x="40" y="243" width="70" height="14" rx="7" fill="#D7282F"/>
+<text x="40" y="234" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="800" fill="#D7282F">财务线</text>
+<rect x="40" y="353" width="70" height="14" rx="7" fill="#1E9E5A"/>
+<text x="40" y="344" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="800" fill="#1E9E5A">人力线</text>
+<rect x="40" y="573" width="70" height="14" rx="7" fill="#1D6FB8"/>
+<text x="40" y="564" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="800" fill="#1D6FB8">产品线</text>
+<rect x="40" y="683" width="70" height="14" rx="7" fill="#F29400"/>
+<text x="40" y="674" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="800" fill="#F29400">销售线</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="月份">
+<text x="196.67" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">1 月</text>
+<line x1="140" y1="160" x2="140" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="310" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">2 月</text>
+<line x1="253.33" y1="160" x2="253.33" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="423.33" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">3 月</text>
+<line x1="366.67" y1="160" x2="366.67" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="536.67" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">4 月</text>
+<line x1="480" y1="160" x2="480" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="650" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">5 月</text>
+<line x1="593.33" y1="160" x2="593.33" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="763.33" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">6 月</text>
+<line x1="706.67" y1="160" x2="706.67" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="876.67" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">7 月</text>
+<line x1="820" y1="160" x2="820" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="990" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">8 月</text>
+<line x1="933.33" y1="160" x2="933.33" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="1103.33" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">9 月</text>
+<line x1="1046.67" y1="160" x2="1046.67" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="1216.67" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">10 月</text>
+<line x1="1160" y1="160" x2="1160" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="1330" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">11 月</text>
+<line x1="1273.33" y1="160" x2="1273.33" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+<text x="1443.33" y="150" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#777777" text-anchor="middle">12 月</text>
+<line x1="1386.67" y1="160" x2="1386.67" y2="760" stroke="#EEEEEE" stroke-width="1"/>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="60" y="80" font-family="'Noto Sans CJK SC', sans-serif" font-size="36" font-weight="800" fill="#1A1A1A">2027 年度经营节奏线路图</text>
+<text x="62" y="112" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#777777">四条业务线每个季度在经营会“换乘”一次（示例日程）</text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="工作日">
+<text x="60" y="820" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">各月工作日（周一至周五，未扣法定节假日），全年 261 天</text>
+<rect x="174.67" y="856" width="44" height="84" fill="#C9D2DC"/>
+<text x="196.67" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">21</text>
+<rect x="288" y="860" width="44" height="80" fill="#C9D2DC"/>
+<text x="310" y="854" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">20</text>
+<rect x="401.33" y="848" width="44" height="92" fill="#C9D2DC"/>
+<text x="423.33" y="842" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">23</text>
+<rect x="514.67" y="852" width="44" height="88" fill="#C9D2DC"/>
+<text x="536.67" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">22</text>
+<rect x="628" y="856" width="44" height="84" fill="#C9D2DC"/>
+<text x="650" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">21</text>
+<rect x="741.33" y="852" width="44" height="88" fill="#C9D2DC"/>
+<text x="763.33" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">22</text>
+<rect x="854.67" y="852" width="44" height="88" fill="#C9D2DC"/>
+<text x="876.67" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">22</text>
+<rect x="968" y="852" width="44" height="88" fill="#C9D2DC"/>
+<text x="990" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">22</text>
+<rect x="1081.33" y="852" width="44" height="88" fill="#C9D2DC"/>
+<text x="1103.33" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">22</text>
+<rect x="1194.67" y="856" width="44" height="84" fill="#C9D2DC"/>
+<text x="1216.67" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">21</text>
+<rect x="1308" y="852" width="44" height="88" fill="#C9D2DC"/>
+<text x="1330" y="846" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">22</text>
+<rect x="1421.33" y="848" width="44" height="92" fill="#C9D2DC"/>
+<text x="1443.33" y="842" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">23</text>
+</g>
+</svg>

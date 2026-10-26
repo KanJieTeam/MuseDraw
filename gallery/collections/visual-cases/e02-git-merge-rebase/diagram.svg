@@ -1,0 +1,87 @@
+<svg data-theme="terminal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>Git merge 与 rebase 的区别</title>
+<g data-md-layer="终端">
+<rect width="1600" height="1000" fill="#0D1117"/>
+<text id="title" x="80" y="96" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="34" fill="#8B949E" font-weight="700"># merge 和 rebase 有什么不同</text>
+<text x="80" y="138" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="22" fill="#8B949E"># 同样的起点：main 在 E，feature 从 B 分出并提交了 C、D</text>
+<rect x="80" y="190" width="680" height="640" rx="10" fill="#161B22" stroke="#30363D"/>
+<text x="104" y="234" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="19" fill="#3FB950" font-weight="500">$ git checkout main &amp;&amp; git merge feature</text>
+<line x1="200" y1="770" x2="200" y2="700" stroke="#8B949E" stroke-width="3"/>
+<line x1="200" y1="700" x2="200" y2="560" stroke="#8B949E" stroke-width="3"/>
+<line x1="200" y1="560" x2="200" y2="400" stroke="#8B949E" stroke-width="3"/>
+<path d="M200 700 C200 665.0 310 665.0 310 630" fill="none" stroke="#8B949E" stroke-width="3"/>
+<line x1="310" y1="630" x2="310" y2="490" stroke="#8B949E" stroke-width="3"/>
+<path d="M310 490 C310 445.0 200 445.0 200 400" fill="none" stroke="#8B949E" stroke-width="3"/>
+<circle cx="200" cy="770" r="16" fill="#0D1117" stroke="#C9D1D9" stroke-width="3"/>
+<text x="200" y="776" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#C9D1D9" font-weight="700" text-anchor="middle">A</text>
+<line x1="220" y1="770" x2="398" y2="770" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="410" y="776" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">122b598</text>
+<circle cx="200" cy="700" r="16" fill="#0D1117" stroke="#C9D1D9" stroke-width="3"/>
+<text x="200" y="706" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#C9D1D9" font-weight="700" text-anchor="middle">B</text>
+<line x1="220" y1="700" x2="398" y2="700" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="410" y="706" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">615dcbe</text>
+<circle cx="310" cy="630" r="16" fill="#0D1117" stroke="#79C0FF" stroke-width="3"/>
+<text x="310" y="636" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#79C0FF" font-weight="700" text-anchor="middle">C</text>
+<line x1="330" y1="630" x2="398" y2="630" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="410" y="636" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#79C0FF">810beac</text>
+<circle cx="200" cy="560" r="16" fill="#0D1117" stroke="#C9D1D9" stroke-width="3"/>
+<text x="200" y="566" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#C9D1D9" font-weight="700" text-anchor="middle">E</text>
+<line x1="220" y1="560" x2="398" y2="560" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="410" y="566" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">d557705</text>
+<circle cx="310" cy="490" r="16" fill="#0D1117" stroke="#79C0FF" stroke-width="3"/>
+<text x="310" y="496" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#79C0FF" font-weight="700" text-anchor="middle">D</text>
+<line x1="330" y1="490" x2="398" y2="490" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="410" y="496" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#79C0FF">a54b5ed</text>
+<text x="506" y="496" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#79C0FF" font-weight="700">(feature)</text>
+<circle cx="200" cy="400" r="16" fill="#0D1117" stroke="#E3B341" stroke-width="3"/>
+<text x="200" y="406" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#E3B341" font-weight="700" text-anchor="middle">M</text>
+<line x1="220" y1="400" x2="398" y2="400" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="410" y="406" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#E3B341">bbbe5ce</text>
+<text x="506" y="406" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#E3B341" font-weight="700">(main, HEAD)</text>
+<text x="410" y="432" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#8B949E">合并提交：有两个父提交</text>
+<rect x="840" y="190" width="680" height="640" rx="10" fill="#161B22" stroke="#30363D"/>
+<text x="864" y="234" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="19" fill="#3FB950" font-weight="500">$ git checkout feature &amp;&amp; git rebase main</text>
+<line x1="960" y1="770" x2="960" y2="700" stroke="#8B949E" stroke-width="3"/>
+<line x1="960" y1="700" x2="960" y2="560" stroke="#8B949E" stroke-width="3"/>
+<line x1="960" y1="560" x2="960" y2="420" stroke="#8B949E" stroke-width="3"/>
+<line x1="960" y1="420" x2="960" y2="340" stroke="#8B949E" stroke-width="3"/>
+<path d="M960 700 C960 665.0 1070 665.0 1070 630" fill="none" stroke="#484F58" stroke-width="3"/>
+<line x1="1070" y1="630" x2="1070" y2="490" stroke="#484F58" stroke-width="3"/>
+<circle cx="960" cy="770" r="16" fill="#0D1117" stroke="#C9D1D9" stroke-width="3"/>
+<text x="960" y="776" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#C9D1D9" font-weight="700" text-anchor="middle">A</text>
+<line x1="980" y1="770" x2="1158" y2="770" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="776" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">7f8fbee</text>
+<circle cx="960" cy="700" r="16" fill="#0D1117" stroke="#C9D1D9" stroke-width="3"/>
+<text x="960" y="706" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#C9D1D9" font-weight="700" text-anchor="middle">B</text>
+<line x1="980" y1="700" x2="1158" y2="700" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="706" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">bef7a58</text>
+<circle cx="1070" cy="630" r="16" fill="#0D1117" stroke="#484F58" stroke-width="3"/>
+<text x="1070" y="636" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#484F58" font-weight="700" text-anchor="middle">C</text>
+<line x1="1090" y1="630" x2="1158" y2="630" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="636" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#484F58">f99d96f</text>
+<circle cx="960" cy="560" r="16" fill="#0D1117" stroke="#C9D1D9" stroke-width="3"/>
+<text x="960" y="566" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#C9D1D9" font-weight="700" text-anchor="middle">E</text>
+<line x1="980" y1="560" x2="1158" y2="560" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="566" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#8B949E">b2a0631</text>
+<text x="1266" y="566" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#C9D1D9" font-weight="700">(main)</text>
+<circle cx="1070" cy="490" r="16" fill="#0D1117" stroke="#484F58" stroke-width="3"/>
+<text x="1070" y="496" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#484F58" font-weight="700" text-anchor="middle">D</text>
+<line x1="1090" y1="490" x2="1158" y2="490" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="496" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#484F58">1873487</text>
+<text x="1170" y="522" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#8B949E">原来的 C、D 不再被分支引用</text>
+<circle cx="960" cy="420" r="16" fill="#0D1117" stroke="#E3B341" stroke-width="3"/>
+<text x="960" y="426" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#E3B341" font-weight="700" text-anchor="middle">C'</text>
+<line x1="980" y1="420" x2="1158" y2="420" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="426" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#E3B341">61d11bb</text>
+<circle cx="960" cy="340" r="16" fill="#0D1117" stroke="#E3B341" stroke-width="3"/>
+<text x="960" y="346" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="15" fill="#E3B341" font-weight="700" text-anchor="middle">D'</text>
+<line x1="980" y1="340" x2="1158" y2="340" stroke="#30363D" stroke-dasharray="2 4"/>
+<text x="1170" y="346" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#E3B341">5702320</text>
+<text x="1266" y="346" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="18" fill="#E3B341" font-weight="700">(feature, HEAD)</text>
+<text x="1170" y="372" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="16" fill="#8B949E">提交被重新生成，哈希变了</text>
+<text x="104" y="878" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#C9D1D9">保留真实的分叉与合并，历史不被改写</text>
+<text x="104" y="910" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#3FB950" font-weight="700">适合多人共享的分支</text>
+<text x="864" y="878" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#C9D1D9">历史变成一条直线，更好读</text>
+<text x="864" y="910" font-family="'Noto Sans Mono CJK SC','Noto Sans Mono','DejaVu Sans Mono',monospace" font-size="20" fill="#FF7B72" font-weight="700">只对自己本地、未推送的分支这样做</text>
+</g>
+</svg>

@@ -1,0 +1,112 @@
+# Frontend decisions · make the subject recognisable
+
+Use for an original interface prototype, not a flowchart. Follow a supplied
+brand or existing design system before this guide. Implement with the project's
+normal stack; a small prototype can be one self-contained HTML file with HTML, CSS and
+JavaScript. Deliver the runnable source and a browser preview at the intended
+desktop and narrow sizes. Use the scene engine only for a diagram or scene
+embedded in that interface; the interface itself uses browser layout.
+
+For a working application where people inspect records and act on exceptions,
+also read [working applications](frontend-work-apps.md) for evidence placement, data readability,
+narrow-screen priorities and focus after an update. Its vanilla focus helper is
+optional; use the project's native framework and focus mechanisms first.
+
+## Runnable delivery
+
+For a new standalone prototype, write `index.html` with its CSS and JavaScript
+inline or in adjacent files. Reuse the existing app structure when editing an
+application. Keep asset paths relative to the delivered folder and include every
+local dependency. A simple file can open directly in a browser; use the project's
+existing local development server when imports or routing require HTTP.
+
+Open the actual page, exercise the primary action and keyboard path, and inspect
+both desktop and narrow previews. Check errors, empty results and the longest
+real content where applicable. Save or expose a browser preview with the source;
+a mock screenshot alone does not establish working controls. Report the checks
+actually completed and any unavailable backend or browser step. Publication is a
+separate action that requires the user's request.
+
+## Before implementation
+
+Write a short private direction: who is using this page, what they must decide,
+which content should lead, and what visual choice belongs specifically to this
+subject. Use the actual facts to choose structure. A reservation page should
+expose the event and registration path; an analyst workspace should expose the
+working data and decisions. They should not share a generic marketing shell.
+
+Choose one focal expression, such as an unusually strong title, a real product
+view or a purposeful composition. Keep supporting controls disciplined. The
+focal element must help recognise the subject; an abstract glowing object does
+not become relevant merely because it is impressive.
+
+## While composing
+
+- Give the first screen an obvious primary task and enough concrete information
+  to act. Do not bury it under slogans, proof badges or a row of generic feature
+  cards. Preserve the actual facts and exceptions.
+- Give type clear jobs: primary statement, working labels and supporting detail.
+  Establish size, weight, line length and spacing before adding ornament. Reuse
+  suitable installed fonts. Neither a fashionable serif nor banning a common
+  sans-serif establishes taste.
+- Let blocks follow the content: a route, product comparison, editorial list,
+  table, working canvas or form. Matching cards are useful for actual peers;
+  unrelated facts need not become equal rounded tiles.
+- Define colour roles for this interface: reading surface, text, primary action,
+  supporting category and feedback. Preserve enough contrast and useful quiet
+  space. A particular cream, purple, black or fluorescent palette is not required.
+- Make borders, numbering, icons and shadows earn their space. Use numbering for
+  real order, icons for recognisable actions and depth for an actual overlay or
+  layer. Do not decorate every section into equal visual importance.
+- Keep imagery tied to the subject. Use authorised assets when supplied. If a
+  trial has none, compose with honest text and original geometry; do not invent
+  charts, customer logos, testimonials or performance metrics to fill space.
+- Keep a short visual vocabulary across the page, including radii, spacing,
+  controls and alignment. Deliberate asymmetry can clarify a focal object;
+  arbitrary offsets and oversized empty bands do not.
+
+## Make the task work
+
+Use real labels and meaningful action names. The same action keeps the same
+name across its trigger, progress and confirmation. Show input errors beside
+the affected field and preserve correct input. Distinguish an actual submission
+from a local demo; do not imply a backend accepted data when none exists.
+
+Keep keyboard focus visible, controls usable on a narrow screen and content
+ordered without horizontal scrolling. Respect reduced motion. Add animation
+where it explains a change; avoid making every section arrive with a spectacle.
+These are implementation requirements, not marketing claims to print on the page.
+
+## Review the actual first draft
+
+When studying a gallery cover, separate its promotional composition from the
+interface inside it. A brand-only cover is not a viewed UI example. A cropped
+or tilted screen can support limited composition notes, not claims about exact
+type sizes, accessibility or interaction quality.
+
+Separate component style from page composition. A perspective stack of charts
+does not demonstrate a usable dashboard; a phone mockup does not demonstrate
+an interface. Record only what is actually visible. Depth can clarify a real
+control (for example, a musical key or knob), but a row of shadowed information
+cards should not inherit it merely because the effect looks polished.
+
+Record visible failures as well as useful choices: overlapping glyphs, broken
+states or a cover labelled as a login page without a visible login form. A
+consistent palette is not evidence of a complete interface. A bundle advertised
+as hundreds of screens is one observed reference until its individual screens
+have actually been inspected and distinguished.
+
+At the intended desktop and mobile sizes, identify what the eye sees first and
+whether the next action is clear. Check the longest text, empty/error/success
+states and keyboard path. A passing browser test does not decide whether it
+looks good. Preserve the first draft before aesthetic feedback.
+
+Compare against a different subject: if the same hero, three cards, colours,
+headline rhythm and button layout would work unchanged, revisit the direction.
+Do not solve this by forcing every next page to be a magazine layout instead.
+
+Method source: [Anthropic's public frontend-design Skill](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md).
+This original, scoped guide has been exercised in a small same-brief comparison
+and an unfamiliar-subject trial. Those trials support this workflow, not a
+universal aesthetic advantage or a guarantee of finished visual quality. Continue
+to judge the actual interface and the user's task.

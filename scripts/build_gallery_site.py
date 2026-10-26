@@ -11,8 +11,56 @@ import time
 import zipfile
 
 PAGE_FILES = ("index.html", "gallery.css", "gallery.mjs", "styles.json", "previews.json")
-CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json", "diagram.drawio")
+CASE_FILES = ("scene.json", "prompt.md", "diagram.svg", "preview.jpg", "checks.json")
 DOWNLOAD_FILES = ("downloads/musedraw-skill.zip", "downloads/musedraw-skill.json")
+VISUAL_CASE_FILES = ("scene.json", "diagram.svg", "source.svg", "original.png", "preview.jpg", "prompt.md", "design.md", "author-notes.md", "source-meta.json")
+VISUAL_CASE_DOWNLOADS = ("downloads/musedraw-visual-cases.zip", "downloads/musedraw-visual-cases.json")
+
+
+def visual_case_files(root):
+    """Return only declared, portable resources from the optional complete collection."""
+    source = Path(root) / "gallery/collections/visual-cases"
+    if not source.exists():
+        return {}
+    if source.is_symlink():
+        raise ValueError("Refusing a linked visual collection")
+    catalog = json.loads((source / "catalog.json").read_text(encoding="utf-8"))
+    items = catalog["items"]
+    if not items or len({item["id"] for item in items}) != len(items) or catalog["count"] != len(items):
+        raise ValueError("Expected distinct declared visual cases")
+    files = {name: source / name for name in ("catalog.json", "index.html", "selection.json", "static-checks.json")}
+    for item in items:
+        case_id = item["id"]
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", case_id) or item["path"] != case_id:
+            raise ValueError("Expected a contained visual case ID")
+        folder = source / case_id
+        if folder.is_symlink() or not folder.resolve().is_relative_to(source.resolve()):
+            raise ValueError("Refusing a linked visual case")
+        files.update({f"{case_id}/{name}": folder / name for name in VISUAL_CASE_FILES})
+    for file in files.values():
+        if file.is_symlink() or not file.is_file() or not file.resolve().is_relative_to(source.resolve()):
+            raise ValueError("Refusing a missing or linked visual resource")
+    return files
+
+
+def build_visual_case_collection(root, staging):
+    files = visual_case_files(root)
+    if not files:
+        return
+    for relative, source in files.items():
+        target = staging / "collections/visual-cases" / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+    archive = staging / VISUAL_CASE_DOWNLOADS[0]
+    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
+        for relative, source in sorted(files.items()):
+            info = zipfile.ZipInfo("visual-cases/" + relative, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            bundle.writestr(info, source.read_bytes())
+    data = archive.read_bytes()
+    count = json.loads(files["catalog.json"].read_text(encoding="utf-8"))["count"]
+    (staging / VISUAL_CASE_DOWNLOADS[1]).write_text(json.dumps({"archive": archive.name, "caseCount": count, "files": len(files), "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}, indent=2) + "\n", encoding="utf-8")
 
 
 def build_skill_download(root, staging):
@@ -21,7 +69,7 @@ def build_skill_download(root, staging):
     if source.is_symlink() or not source.is_dir():
         raise ValueError("Expected a local MuseDraw Skill directory")
     files = {name: source / name for name in ("SKILL.md", "package.json", "package-lock.json")}
-    for folder in ("scripts", "references", "themes", "assets"):
+    for folder in ("scripts", "references", "themes", "assets", "tests/frontend-focus"):
         if (source / folder).is_symlink():
             raise ValueError("Refusing a linked Skill resource directory")
         for directory, names, filenames in os.walk(source / folder, followlinks=False):
@@ -99,6 +147,7 @@ def build_site(root, output_name="site"):
                 shutil.copyfile(source / filename, target / filename)
         shutil.copytree(root / "assets/brand", staging / "assets/brand")
         build_skill_download(root, staging)
+        build_visual_case_collection(root, staging)
         legacy = staging / "docs/gallery"
         legacy.mkdir(parents=True)
         (legacy / "index.html").write_text(

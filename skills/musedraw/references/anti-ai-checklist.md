@@ -23,6 +23,22 @@ these defaults. These rules reduce known failure patterns; they do not certify t
   大框套中框再套小卡片，让读者先看到框架、后费力寻找关系。
 - **规整要有依据。** 同级对象可以等宽、等色、对齐；有时间、数量或层级差异时，
   用位置、尺度或分区表达差异。不要为了「不呆板」随机错位、缩放或倾斜。
+- **对齐也会暗示关系。** 年度目标可以共享年份列；没有日期的工作线单独组织，
+  不因数量恰好相同就排在年份正下方，暗示未给出的逐年安排。已有目标、工作线与
+  共同支撑符合 [计划构图](plan-composition.md) 的条件时，可以直接用该方法。
+
+### 让动作落到对象上
+
+- 起笔时先在内部确定「对象 → 操作 → 实际部位 → 可见证据」。例如闸门下降
+  应由通道被实体截断表现，数组复制应落到对应单元；不把这行构图要求写进图里。
+  已给出实体接触、穿过或容纳关系时，先画使关系成立的轮廓、开口或内外边界。
+  纯模块依赖仍可用矩形，不能从一个名称猜测器件或分子结构。
+- 用较少细节表现辅助源、读出和背景，让主要操作区清楚；不靠统一放大主体
+  决定主次。若问题包含装入、置入、取出、再封装等对象变化，保留读者需要追踪的
+  中间状态，不能为了一个大主体把必需过程压成含混的箭头说明。
+- 部件引线落到部件，开口标注落到实际空隙，不能落在附近的运输箭头上。
+  路径类型可直接标在相应线段旁；图中已经清楚表达时，不再用重复图例争抢注意力。
+  内部思路看似正确不等于输出成立，图上的边界、落点和标签仍要与输入事实对应。
 
 ### 层级要对应信息，不能靠涂黑制造重点
 
@@ -51,6 +67,10 @@ these defaults. These rules reduce known failure patterns; they do not certify t
   数字、责任人或限定。删掉反复解释同一件事的副标题、口号、角标和套话。
 - **不靠删事实换简洁。** 保留用户要求的名称、金额、阈值、时间、例外和关系；
   长句可拆成节点与分支条件，不能偷换含义。用户提供占位名称时也要原样保留。
+- 名称能在部件或网格内完整读清时，就近放置；不要为了外侧对齐，增加穿过其他
+  对象的查找引线。确需长部件标注且原生矢量两侧留空时，可用
+  [实测标注排版](callout-layout.md) 换行与排布；空间不足调整构图，不缩字或删名。
+  工具只能排文字，标注仍须落在真实部位或开口，不能用运输箭头代替落点。
 - 不为了图显得「丰富」虚构指标、技术选型、百分比或政策。没有时长的数据用
   顺序表达；有明确时长再用比例。简短的事实列表也不必硬改成条形图。
 - 默认没有图外标题、副标题、图号、Logo、生成工具署名。分区名、泳道角色、
@@ -83,8 +103,9 @@ Found in our own gallery (OKR tree, onboarding columns) and removed:
 3. **Slogan titles** — “目标拆到人，进度看得见”, “Where the 120,000 go”. A
    figure title names the thing: “2027 年度 OKR 进度”, “PRISMA 2020 flow diagram”.
    Omit page headings by default; add a title/subtitle only when requested.
-4. **Quantities written as text** — progress, durations and shares belong on a
-   scale: bars with a time marker, a day axis, a proportional width.
+4. **Numbers without a readable comparison** — align exact values for a short
+   summary; use common scales within a unit when magnitude or duration matters.
+   Do not invent a percentage, completion track or shared scale for unlike units.
 5. **Equal pastel columns** — three identical cards in blue / green / orange.
    If the content has time, use a time axis; if it has rank, use size.
 6. **Decorative arrows** — a dashed arrow from a heading down to a box through
@@ -111,8 +132,9 @@ Found in our own gallery (OKR tree, onboarding columns) and removed:
   remain distinguishable. Give emphasis to content, not an arbitrary dark card.
 - [ ] **Reading direction is obvious** — left→right, top→bottom, or a loop
   with numbered steps. A stranger can find step 1 in two seconds.
-- [ ] **Whitespace is structural.** No dead band under the header, no empty
-  quarter of the canvas, no boxes crammed against a zone edge.
+- [ ] **Whitespace is structural.** Remove accidental dead bands and crowding;
+  deliberate empty space may give a focal object room. Do not fill it merely to
+  satisfy an area quota.
 - [ ] **Alignment.** Peers share a baseline or a column; connectors are
   straight where they can be (ports align with the target’s centre).
 - [ ] **No orphans.** Every node is connected, grouped or explained.
@@ -120,7 +142,9 @@ Found in our own gallery (OKR tree, onboarding columns) and removed:
 ## Craft 工艺
 
 - [ ] `checks.json` has no warnings — or each remaining one is deliberate.
-- [ ] Text at the intended display size is readable; body ≥ 12 px at 1×.
+- [ ] Text is readable at the intended delivery size, after preview scaling.
+  Branch guards, role names, supplied actions and units are required content,
+  not tiny footnotes. Reflow or increase space before reducing those labels.
   When visual review is requested, use the bounded preview first.
 - [ ] Line crossings are few and cross at right angles; no line runs under a label.
 - [ ] Colour has meaning; add a legend only where needed to understand encoding.

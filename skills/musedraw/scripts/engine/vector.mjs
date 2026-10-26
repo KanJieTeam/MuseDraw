@@ -1,4 +1,4 @@
-// Exact replay of art-directed vector scenes through the normal PNG/draw.io
+// Exact replay of art-directed vector scenes through the normal PNG/SVG
 // exporter. The artwork stays native text and geometry, never a raster embed.
 import { assertStaticSvg } from './safety.mjs';
 import { validateScene, SceneValidationError } from './validate.mjs';

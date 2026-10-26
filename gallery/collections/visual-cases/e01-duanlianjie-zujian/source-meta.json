@@ -1,0 +1,12 @@
+{
+  "cid": "E01",
+  "title": "短链接服务　API 容器的组件图",
+  "category": "工程 · C4 标准",
+  "features": {
+    "text": 62,
+    "elements": 103
+  },
+  "use": "工程",
+  "style": "C4 标准",
+  "short": "用 C4 组件图拆开短链接服务的 API 容器：创建、跳转、发号、缓存、事件发布，以及 Redis、MySQL、Kafka 三个依赖。"
+}

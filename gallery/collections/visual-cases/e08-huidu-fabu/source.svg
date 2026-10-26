@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<title>灰度发布</title>
+<g data-md-layer="页面">
+<rect width="1600" height="900" fill="#FAFBFC"/>
+<text id="title" x="100" y="140" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="64" fill="#1C1F24" font-weight="900">灰度发布</text>
+<text x="104" y="194" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#6B7280">先给 1% 的用户，指标正常再放大；任何一步超出阈值，自动回滚</text>
+<line x1="100" y1="430" x2="1320" y2="430" stroke="#E5E8EE" stroke-width="2"/>
+<circle cx="108" cy="430" r="8" fill="#2F6BFF"/>
+<text x="100" y="390" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="88" fill="#1C1F24" font-weight="700" letter-spacing="-3">1%</text>
+<text x="100" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#1C1F24" font-weight="700">观察 30 分钟</text>
+<text x="100" y="516" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#6B7280">内部员工与白名单</text>
+<text x="250" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#2F6BFF" font-weight="700">检查</text>
+<circle cx="398" cy="430" r="8" fill="#2F6BFF"/>
+<text x="390" y="390" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="88" fill="#1C1F24" font-weight="700" letter-spacing="-3">5%</text>
+<text x="390" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#1C1F24" font-weight="700">观察 2 小时</text>
+<text x="390" y="516" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#6B7280">随机抽取用户</text>
+<text x="540" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#2F6BFF" font-weight="700">检查</text>
+<circle cx="688" cy="430" r="8" fill="#2F6BFF"/>
+<text x="680" y="390" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="88" fill="#1C1F24" font-weight="700" letter-spacing="-3">25%</text>
+<text x="680" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#1C1F24" font-weight="700">观察 1 天</text>
+<text x="680" y="516" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#6B7280">覆盖主要地区</text>
+<text x="830" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#2F6BFF" font-weight="700">检查</text>
+<circle cx="978" cy="430" r="8" fill="#2F6BFF"/>
+<text x="970" y="390" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="88" fill="#1C1F24" font-weight="700" letter-spacing="-3">50%</text>
+<text x="970" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#1C1F24" font-weight="700">观察 1 天</text>
+<text x="970" y="516" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#6B7280">与旧版对比转化率</text>
+<text x="1120" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#2F6BFF" font-weight="700">检查</text>
+<circle cx="1268" cy="430" r="8" fill="#2F6BFF"/>
+<text x="1260" y="390" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="96" fill="#2F6BFF" font-weight="700" letter-spacing="-3">100%</text>
+<text x="1260" y="480" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#1C1F24" font-weight="700">观察 —</text>
+<text x="1260" y="516" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#6B7280">全量，旧版下线</text>
+<rect x="100" y="600" width="1400" height="1" fill="#E5E8EE"/>
+<text x="100" y="660" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#1C1F24" font-weight="700">每一步放大之前都要看</text>
+<text x="100" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#6B7280" font-weight="500">错误率</text>
+<text x="100" y="760" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#1C1F24" font-weight="900">&lt; 0.1%</text>
+<text x="440" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#6B7280" font-weight="500">P99 延迟</text>
+<text x="440" y="760" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#1C1F24" font-weight="900">&lt; 300 毫秒</text>
+<text x="780" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#6B7280" font-weight="500">崩溃率</text>
+<text x="780" y="760" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#1C1F24" font-weight="900">不高于旧版</text>
+<text x="1120" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#6B7280" font-weight="500">核心转化</text>
+<text x="1120" y="760" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#1C1F24" font-weight="900">不低于旧版</text>
+<rect x="100" y="800" width="10" height="44" fill="#E5484D"/>
+<text x="126" y="832" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#1C1F24" font-weight="500">任一指标越线：流量切回旧版，5 分钟内完成，再排查原因。</text>
+</g>
+</svg>

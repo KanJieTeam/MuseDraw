@@ -23,8 +23,8 @@ explicitly licensed; original prototypes may be shared for review.
 
 Use [frontend decisions](frontend-method.md) for an interface trial and
 [dashboard decisions](dashboard-method.md) for a screen trial. Only load the
-matching guide. No default `.drawio` export is needed for either track. Ordinary
-diagrams continue to use MuseDraw's PNG + native editable draw.io workflow.
+matching guide. Interfaces use HTML/CSS/JS and previews. Ordinary diagrams use
+MuseDraw's PNG, SVG and scene JSON workflow.
 
 ## Compare the capability, not two cherry-picked screenshots
 

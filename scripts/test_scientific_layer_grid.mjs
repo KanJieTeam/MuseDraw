@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {scientificMotif} from '../skills/musedraw/scripts/engine/scientific-motifs.mjs';
-import {pathCommands} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {pathCommands} from '../skills/musedraw/scripts/engine/svg-path.mjs';
 
 const base={id:'stack',type:'scientific',kind:'layers',x:35,y:40,w:420,h:240,separation:18,
   layers:[{label:'Cover',fill:'soft'},{label:'Conductive mesh',fill:'warm',pattern:'grid'},{label:'Base',fill:'neutral'}]};

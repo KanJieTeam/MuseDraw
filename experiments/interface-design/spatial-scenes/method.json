@@ -1,0 +1,112 @@
+{
+  "createdAt": "2026-10-25T06:36:13.009692+00:00",
+  "status": "experimental; local spatial dashboard capability, not globally proven taste",
+  "evidenceSources": [
+    "EasyV D00429 港口货运监管可视化",
+    "EasyV D00437 农业数智化管控系统",
+    "EasyV D00127 智能工业生产质量监测(浅色)"
+  ],
+  "decisionToCode": [
+    {
+      "observedGap": "首轮设施像二维纸片，不能通过形体识别船岸与设备。",
+      "operation": "围绕设施轮廓、中层构造与小型功能构件分三级建模；统一尺度、光源、投影和接地阴影。",
+      "code": [
+        "stage.mjs",
+        "harbor-scene.mjs",
+        "water-scene.mjs"
+      ],
+      "limit": "几何是展示示意，不是CAD/真实测绘或工程仿真。"
+    },
+    {
+      "observedGap": "水厂池壁、栏杆、地面白对白；港口高亮桁架形成线网。",
+      "operation": "模型使用墙/地/屋顶/水/结构分开的材质角色；先降低非焦点结构明度，再将选中对象在原有色相内提亮。",
+      "code": [
+        "stage.mjs",
+        "harbor-scene.mjs",
+        "water-scene.mjs"
+      ],
+      "limit": "颜色要经过实际渲染检查；同一RGB在曝光和环境光下不等于同样的视觉明度。"
+    },
+    {
+      "observedGap": "固定纵向取景使窄屏裁掉主场景与标注。",
+      "operation": "正交取景同时维持最小横向包围范围；尺寸变化重新投影。",
+      "code": [
+        "stage.mjs:resize"
+      ],
+      "formula": "visibleHeight = baseSpan * max(1, 1.8 / hostAspect)",
+      "limit": "1.8适用于当前两种模型边界，更多纵向或超长模型需提供自身取景约束。"
+    },
+    {
+      "observedGap": "水厂圆池和泵房在窄屏标注重叠。",
+      "operation": "以真实投影锚点尝试有限的近邻位置，检查矩形间距及画布边界，保留引线到真实对象；不缩小字和伪造锚点。",
+      "code": [
+        "app.mjs:projectAnchors"
+      ],
+      "limit": "只验证当前三个对象；更高密度需要更多标注位置或选择性展开，不能宣称任意规模已解决。"
+    },
+    {
+      "observedGap": "静态漂亮图不能证明当前选择与证据一致。",
+      "operation": "ID同时绑定场景实体、标签、选择按钮和详情；切换对象保留焦点，状态说明不因查看而被消除。",
+      "code": [
+        "app.mjs:select"
+      ],
+      "limit": "本地虚构快照，未连接实时后台。"
+    },
+    {
+      "observedGap": "斜向岸线让相邻岸桥的桁架和拉索在投影中堆叠。",
+      "operation": "固定设施数量及数据，实际渲染正面斜俯与更高俯角候选；选择能分离三组船桥的镜头，而非仅选更戏剧化的角度。",
+      "code": [
+        "harbor-scene.mjs:recommendedCamera"
+      ],
+      "limit": "是当前模型经看图选出的镜头；尚无通用自动镜头选择器。"
+    },
+    {
+      "observedGap": "水厂仅靠标牌和细地线表示选择，实体关注点不清晰。",
+      "operation": "entityFocus为每个实体拥有独立材质副本；选中保留原明度，其余适度降低；每次从原色计算，语义状态材质不变。",
+      "code": [
+        "stage.mjs:entityFocus",
+        "water-scene.mjs:select"
+      ],
+      "limit": "对当前设施验证了切换和复原，不代表对所有材质和多材质数组自动成立。"
+    },
+    {
+      "observedGap": "窄屏标题与副标题挤在同一行导致难读断行。",
+      "operation": "将品牌与页面标题改为两行，给时间保留固定宽度；用320px复测。",
+      "code": [
+        "index.html:mobile masthead"
+      ],
+      "limit": "当前中文标签，更多语言和超长名称需另测。"
+    },
+    {
+      "observedGap": "切换选择时待复核对象的标牌回到普通色，掩盖局部状态。",
+      "operation": "状态颜色独立于选择永久显示；实/虚边和按压状态表达当前查看对象。跨对象切换检查计算后的颜色不变。",
+      "code": [
+        "index.html:.scene-pin.attention",
+        "app.mjs:scene-labels"
+      ],
+      "limit": "当前是快照状态，真实状态更新仍需要独立事件和数据源。"
+    }
+  ],
+  "scope": [
+    "Only use scene-led rendering when spatial relationships help the task. It is not the default for statistical or workflow dashboards.",
+    "Native text, charts and operational values are separate from the 3D scene.",
+    "No external artwork or original EasyV models copied.",
+    "Three.js 0.180.0 is pinned locally with MIT license."
+  ],
+  "validation": "regression.json",
+  "requiresMoreEvidence": [
+    "用户对修订后视觉质量的判断",
+    "不同密度/不同比例的新主题",
+    "真实屏幕观看距离与性能",
+    "没有三维需求的其他大屏类型提升"
+  ],
+  "files": {
+    "app.mjs": "e9d9126cd2e273fc4a2993d3bff87d645c86a8432cd3a86508a90bfd98ce40e0",
+    "harbor-scene.mjs": "96b3abb7ce7b67c279eae8acbf8ae6a4c5624db0a7294330e32e077a6d813ec9",
+    "stage.mjs": "1ee6f24bb5344f8463724a844fbd77e0d2717704b4bb2ca717f076df4e6e895f",
+    "water-scene.mjs": "55f309f0bbe90d7354e9561b900377958ac8da1f075b3484aba0895fad7df363",
+    "index.html": "01bc4ea4aa854837c6070ce7c8ae7a5d0a210e9870402dd08d2facc4c4d2ac16"
+  },
+  "updatedAt": "2026-10-25T06:44:33.510053+00:00",
+  "refinementValidation": "refinement-checks.json"
+}

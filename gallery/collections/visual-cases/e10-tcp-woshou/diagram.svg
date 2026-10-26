@@ -1,0 +1,59 @@
+<svg data-theme="newsprint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+<title>TCP 的三次握手与四次挥手</title>
+<g data-md-layer="版面">
+<rect width="1600" height="1100" fill="#FFFFFF"/>
+<rect x="80" y="70" width="1440" height="8" fill="#111111"/>
+<text id="title" x="80" y="160" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="60" fill="#111111" font-weight="900">TCP 的三次握手与四次挥手</text>
+<text x="1520" y="160" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="24" fill="#111111" font-weight="500" text-anchor="end">计算机网络</text>
+<line x1="80" y1="190" x2="1520" y2="190" stroke="#111111" stroke-width="1.5"/>
+<text x="80" y="250" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="32" fill="#111111" font-weight="900">建立连接：三次握手</text>
+<text x="200" y="300" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="22" fill="#111111" font-weight="700" text-anchor="middle">客户端</text>
+<text x="640" y="300" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="22" fill="#111111" font-weight="700" text-anchor="middle">服务器</text>
+<line x1="200" y1="316" x2="200" y2="900" stroke="#111111" stroke-width="2"/>
+<line x1="640" y1="316" x2="640" y2="900" stroke="#111111" stroke-width="2"/>
+<line x1="200" y1="360" x2="630.98" y2="418.77" stroke="#111111" stroke-width="2"/>
+<path d="M640 420 L627.8 424.5 L629.45 412.4 Z" fill="#111111"/>
+<text x="420" y="380" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">SYN，seq = x</text>
+<line x1="640" y1="500" x2="209.02" y2="558.77" stroke="#111111" stroke-width="2"/>
+<path d="M200 560 L210.55 552.4 L212.2 564.5 Z" fill="#111111"/>
+<text x="420" y="520" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">SYN + ACK，seq = y，ack = x + 1</text>
+<line x1="200" y1="640" x2="630.98" y2="698.77" stroke="#111111" stroke-width="2"/>
+<path d="M640 700 L627.8 704.5 L629.45 692.4 Z" fill="#111111"/>
+<text x="420" y="660" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">ACK，ack = y + 1</text>
+<text x="184" y="340" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">CLOSED</text>
+<text x="184" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">SYN_SENT</text>
+<text x="184" y="580" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">ESTABLISHED</text>
+<text x="656" y="340" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700">LISTEN</text>
+<text x="656" y="520" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700">SYN_RCVD</text>
+<text x="656" y="720" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700">ESTABLISHED</text>
+<text x="80" y="960" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="20" fill="#111111" font-weight="500">第三次握手让服务器确认：客户端收到了它的 SYN。</text>
+<text x="80" y="992" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="20" fill="#111111" font-weight="500">只握两次，迟到的旧 SYN 可能让服务器白白建立连接。</text>
+<line x1="800" y1="230" x2="800" y2="1040" stroke="#111111" stroke-width="1"/>
+<text x="860" y="250" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="32" fill="#111111" font-weight="900">断开连接：四次挥手</text>
+<text x="980" y="300" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="22" fill="#111111" font-weight="700" text-anchor="middle">客户端</text>
+<text x="1420" y="300" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="22" fill="#111111" font-weight="700" text-anchor="middle">服务器</text>
+<line x1="980" y1="316" x2="980" y2="900" stroke="#111111" stroke-width="2"/>
+<line x1="1420" y1="316" x2="1420" y2="900" stroke="#111111" stroke-width="2"/>
+<line x1="980" y1="360" x2="1410.98" y2="418.77" stroke="#111111" stroke-width="2"/>
+<path d="M1420 420 L1407.8 424.5 L1409.45 412.4 Z" fill="#111111"/>
+<text x="1200" y="380" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">FIN，seq = u</text>
+<line x1="1420" y1="480" x2="989.02" y2="538.77" stroke="#111111" stroke-width="2"/>
+<path d="M980 540 L990.55 532.4 L992.2 544.5 Z" fill="#111111"/>
+<text x="1200" y="500" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">ACK，ack = u + 1</text>
+<line x1="1420" y1="620" x2="989.02" y2="678.77" stroke="#111111" stroke-width="2"/>
+<path d="M980 680 L990.55 672.4 L992.2 684.5 Z" fill="#111111"/>
+<text x="1200" y="640" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">FIN，seq = w</text>
+<line x1="980" y1="740" x2="1410.98" y2="798.77" stroke="#111111" stroke-width="2"/>
+<path d="M1420 800 L1407.8 804.5 L1409.45 792.4 Z" fill="#111111"/>
+<text x="1200" y="760" font-family="'TeX Gyre Pagella','Palatino Linotype',Palatino,serif" font-size="19" fill="#111111" font-weight="700" text-anchor="middle">ACK，ack = w + 1</text>
+<text x="964" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">FIN_WAIT_1</text>
+<text x="964" y="540" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">FIN_WAIT_2</text>
+<text x="964" y="780" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">TIME_WAIT</text>
+<text x="964" y="860" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700" text-anchor="end">等待 2MSL 后 CLOSED</text>
+<text x="1436" y="520" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700">CLOSE_WAIT</text>
+<text x="1436" y="660" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700">LAST_ACK</text>
+<text x="1436" y="800" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#111111" font-weight="700">CLOSED</text>
+<text x="860" y="960" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="20" fill="#111111" font-weight="500">服务器收到 FIN 后可能还有数据要发，所以 ACK 和 FIN 分两次。</text>
+<text x="860" y="992" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="20" fill="#111111" font-weight="500">TIME_WAIT 等待 2MSL，确保最后的 ACK 能被重传。</text>
+</g>
+</svg>

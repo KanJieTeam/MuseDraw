@@ -1,0 +1,38 @@
+{
+  "id": "110",
+  "title": "3-2-1 备份规则",
+  "use": "工程",
+  "style": "包豪斯",
+  "pack": 6,
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "数字",
+    "几何",
+    "说明",
+    "底部色带"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "半透明"
+  ],
+  "example_data": true,
+  "computed": [
+    "2 TB = 2,000,000 MB，÷ 400 MB/s = 5,000 秒 = 1 小时 23 分 20 秒，程序断言。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

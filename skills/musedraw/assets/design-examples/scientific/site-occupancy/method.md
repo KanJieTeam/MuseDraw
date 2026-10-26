@@ -18,6 +18,6 @@ Name-only edits can use `patch` with the canonical site ID and `field:"name"`.
 Keep the abstract crossbars schematic; they encode no nucleotide length.
 
 Render the scene with the bundled engine, read checks and deliver the PNG and
-native drawio. All parts and names remain separately editable. This original
+SVG. All parts and names remain separately editable. This original
 worked example demonstrates composition; it is not a user-approved manuscript
 figure or evidence of a biochemical mechanism.

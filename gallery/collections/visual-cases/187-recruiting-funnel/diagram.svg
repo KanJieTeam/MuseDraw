@@ -1,0 +1,343 @@
+<svg data-theme="neon" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>招聘漏斗</title>
+<defs><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#150A2E"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="像素网格">
+<line x1="0" y1="0" x2="0" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="40" y1="0" x2="40" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="80" y1="0" x2="80" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="120" y1="0" x2="120" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="160" y1="0" x2="160" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="200" y1="0" x2="200" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="240" y1="0" x2="240" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="280" y1="0" x2="280" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="320" y1="0" x2="320" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="360" y1="0" x2="360" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="400" y1="0" x2="400" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="440" y1="0" x2="440" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="480" y1="0" x2="480" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="520" y1="0" x2="520" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="560" y1="0" x2="560" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="600" y1="0" x2="600" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="640" y1="0" x2="640" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="680" y1="0" x2="680" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="720" y1="0" x2="720" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="760" y1="0" x2="760" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="800" y1="0" x2="800" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="840" y1="0" x2="840" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="880" y1="0" x2="880" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="920" y1="0" x2="920" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="960" y1="0" x2="960" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1000" y1="0" x2="1000" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1040" y1="0" x2="1040" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1080" y1="0" x2="1080" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1120" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1160" y1="0" x2="1160" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1200" y1="0" x2="1200" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1240" y1="0" x2="1240" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1280" y1="0" x2="1280" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1320" y1="0" x2="1320" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1360" y1="0" x2="1360" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1400" y1="0" x2="1400" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1440" y1="0" x2="1440" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1480" y1="0" x2="1480" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1520" y1="0" x2="1520" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1560" y1="0" x2="1560" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="1600" y1="0" x2="1600" y2="1000" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="0" x2="1600" y2="0" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="40" x2="1600" y2="40" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="80" x2="1600" y2="80" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="120" x2="1600" y2="120" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="160" x2="1600" y2="160" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="200" x2="1600" y2="200" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="240" x2="1600" y2="240" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="280" x2="1600" y2="280" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="320" x2="1600" y2="320" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="360" x2="1600" y2="360" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="400" x2="1600" y2="400" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="440" x2="1600" y2="440" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="480" x2="1600" y2="480" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="520" x2="1600" y2="520" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="560" x2="1600" y2="560" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="600" x2="1600" y2="600" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="640" x2="1600" y2="640" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="680" x2="1600" y2="680" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="720" x2="1600" y2="720" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="760" x2="1600" y2="760" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="800" x2="1600" y2="800" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="840" x2="1600" y2="840" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="880" x2="1600" y2="880" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="920" x2="1600" y2="920" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="960" x2="1600" y2="960" stroke="#211347" stroke-width="1"/>
+<line x1="0" y1="1000" x2="1600" y2="1000" stroke="#211347" stroke-width="1"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="110" font-family="'Noto Sans CJK SC', sans-serif" font-size="80" font-weight="900" fill="#FFE45E" filter="url(#glow)" letter-spacing="6">招聘漏斗</text>
+<text x="74" y="152" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" fill="#E9E4FF">2026 年下半年研发岗位招聘（示例数据）</text>
+<text x="1530" y="100" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="900" fill="#2DE2E6" text-anchor="end" filter="url(#glow)">总通过率 0.71%</text>
+<text x="1530" y="136" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#E9E4FF" text-anchor="end">2,400 份简历 → 17 人入职</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="关卡">
+<text x="310" y="230" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 1 关</text>
+<text x="240" y="230" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">投递</text>
+<rect x="330" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.37"/>
+<rect x="350" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.38"/>
+<rect x="370" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.4"/>
+<rect x="390" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.41"/>
+<rect x="410" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.43"/>
+<rect x="430" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.45"/>
+<rect x="450" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.46"/>
+<rect x="470" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.48"/>
+<rect x="490" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.49"/>
+<rect x="510" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.51"/>
+<rect x="530" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.52"/>
+<rect x="550" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.54"/>
+<rect x="570" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.56"/>
+<rect x="590" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.57"/>
+<rect x="610" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.59"/>
+<rect x="630" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.6"/>
+<rect x="650" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.62"/>
+<rect x="670" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.64"/>
+<rect x="690" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.65"/>
+<rect x="710" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.67"/>
+<rect x="730" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.68"/>
+<rect x="750" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.7"/>
+<rect x="770" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.71"/>
+<rect x="790" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.73"/>
+<rect x="810" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.75"/>
+<rect x="830" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.76"/>
+<rect x="850" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.78"/>
+<rect x="870" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.79"/>
+<rect x="890" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.81"/>
+<rect x="910" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.83"/>
+<rect x="930" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.84"/>
+<rect x="950" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.86"/>
+<rect x="970" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.87"/>
+<rect x="990" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.89"/>
+<rect x="1010" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.9"/>
+<rect x="1030" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.92"/>
+<rect x="1050" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.94"/>
+<rect x="1070" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.95"/>
+<rect x="1090" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.97"/>
+<rect x="1110" y="210" width="16" height="28" fill="#2DE2E6" opacity="0.98"/>
+<rect x="1130" y="210" width="16" height="28" fill="#2DE2E6" opacity="1"/>
+<text x="1164" y="233" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">2,400</text>
+<text x="310" y="296" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 2 关</text>
+<text x="240" y="296" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">简历筛选通过</text>
+<rect x="330" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.37"/>
+<rect x="350" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.39"/>
+<rect x="370" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.41"/>
+<rect x="390" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.43"/>
+<rect x="410" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.45"/>
+<rect x="430" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.47"/>
+<rect x="450" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.49"/>
+<rect x="470" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.51"/>
+<rect x="490" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.53"/>
+<rect x="510" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.55"/>
+<rect x="530" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.57"/>
+<rect x="550" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.59"/>
+<rect x="570" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.61"/>
+<rect x="590" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.63"/>
+<rect x="610" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.65"/>
+<rect x="630" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.68"/>
+<rect x="650" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.7"/>
+<rect x="670" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.72"/>
+<rect x="690" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.74"/>
+<rect x="710" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.76"/>
+<rect x="730" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.78"/>
+<rect x="750" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.8"/>
+<rect x="770" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.82"/>
+<rect x="790" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.84"/>
+<rect x="810" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.86"/>
+<rect x="830" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.88"/>
+<rect x="850" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.9"/>
+<rect x="870" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.92"/>
+<rect x="890" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.94"/>
+<rect x="910" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.96"/>
+<rect x="930" y="276" width="16" height="28" fill="#2DE2E6" opacity="0.98"/>
+<rect x="950" y="276" width="16" height="28" fill="#2DE2E6" opacity="1"/>
+<text x="994.44" y="299" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">480</text>
+<text x="1080.44" y="299" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#E9E4FF">通过 20%</text>
+<text x="310" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 3 关</text>
+<text x="240" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">电话面试</text>
+<rect x="330" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.37"/>
+<rect x="350" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.4"/>
+<rect x="370" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.42"/>
+<rect x="390" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.44"/>
+<rect x="410" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.47"/>
+<rect x="430" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.49"/>
+<rect x="450" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.51"/>
+<rect x="470" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.54"/>
+<rect x="490" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.56"/>
+<rect x="510" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.58"/>
+<rect x="530" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.61"/>
+<rect x="550" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.63"/>
+<rect x="570" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.65"/>
+<rect x="590" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.68"/>
+<rect x="610" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.7"/>
+<rect x="630" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.72"/>
+<rect x="650" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.74"/>
+<rect x="670" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.77"/>
+<rect x="690" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.79"/>
+<rect x="710" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.81"/>
+<rect x="730" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.84"/>
+<rect x="750" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.86"/>
+<rect x="770" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.88"/>
+<rect x="790" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.91"/>
+<rect x="810" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.93"/>
+<rect x="830" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.95"/>
+<rect x="850" y="342" width="16" height="28" fill="#2DE2E6" opacity="0.98"/>
+<rect x="870" y="342" width="16" height="28" fill="#2DE2E6" opacity="1"/>
+<text x="907.34" y="365" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">210</text>
+<text x="993.34" y="365" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3DFF8A">通过 44%</text>
+<text x="310" y="428" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 4 关</text>
+<text x="240" y="428" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">技术面试</text>
+<rect x="330" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.38"/>
+<rect x="350" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.4"/>
+<rect x="370" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.43"/>
+<rect x="390" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.46"/>
+<rect x="410" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.49"/>
+<rect x="430" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.51"/>
+<rect x="450" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.54"/>
+<rect x="470" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.57"/>
+<rect x="490" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.59"/>
+<rect x="510" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.62"/>
+<rect x="530" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.65"/>
+<rect x="550" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.68"/>
+<rect x="570" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.7"/>
+<rect x="590" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.73"/>
+<rect x="610" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.76"/>
+<rect x="630" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.78"/>
+<rect x="650" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.81"/>
+<rect x="670" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.84"/>
+<rect x="690" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.86"/>
+<rect x="710" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.89"/>
+<rect x="730" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.92"/>
+<rect x="750" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.95"/>
+<rect x="770" y="408" width="16" height="28" fill="#2DE2E6" opacity="0.97"/>
+<rect x="790" y="408" width="16" height="28" fill="#2DE2E6" opacity="1"/>
+<text x="824.88" y="431" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">96</text>
+<text x="910.88" y="431" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3DFF8A">通过 46%</text>
+<text x="310" y="494" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 5 关</text>
+<text x="240" y="494" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">终面</text>
+<rect x="330" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.38"/>
+<rect x="350" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.42"/>
+<rect x="370" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.45"/>
+<rect x="390" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.49"/>
+<rect x="410" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.52"/>
+<rect x="430" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.56"/>
+<rect x="450" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.59"/>
+<rect x="470" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.62"/>
+<rect x="490" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.66"/>
+<rect x="510" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.69"/>
+<rect x="530" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.73"/>
+<rect x="550" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.76"/>
+<rect x="570" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.79"/>
+<rect x="590" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.83"/>
+<rect x="610" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.86"/>
+<rect x="630" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.9"/>
+<rect x="650" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.93"/>
+<rect x="670" y="474" width="16" height="28" fill="#2DE2E6" opacity="0.97"/>
+<rect x="690" y="474" width="16" height="28" fill="#2DE2E6" opacity="1"/>
+<text x="727.24" y="497" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">38</text>
+<text x="813.24" y="497" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#E9E4FF">通过 40%</text>
+<text x="310" y="560" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 6 关</text>
+<text x="240" y="560" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">发出录用</text>
+<rect x="330" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.39"/>
+<rect x="350" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.43"/>
+<rect x="370" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.47"/>
+<rect x="390" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.51"/>
+<rect x="410" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.55"/>
+<rect x="430" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.59"/>
+<rect x="450" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.63"/>
+<rect x="470" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.68"/>
+<rect x="490" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.72"/>
+<rect x="510" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.76"/>
+<rect x="530" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.8"/>
+<rect x="550" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.84"/>
+<rect x="570" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.88"/>
+<rect x="590" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.92"/>
+<rect x="610" y="540" width="16" height="28" fill="#2DE2E6" opacity="0.96"/>
+<rect x="630" y="540" width="16" height="28" fill="#2DE2E6" opacity="1"/>
+<text x="669.66" y="563" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">22</text>
+<text x="755.66" y="563" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3DFF8A">通过 58%</text>
+<text x="310" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" text-anchor="end" opacity="0.7">第 7 关</text>
+<text x="240" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" font-weight="800" fill="#2DE2E6" text-anchor="end">接受录用</text>
+<rect x="330" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.4"/>
+<rect x="350" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.44"/>
+<rect x="370" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.49"/>
+<rect x="390" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.54"/>
+<rect x="410" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.58"/>
+<rect x="430" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.63"/>
+<rect x="450" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.68"/>
+<rect x="470" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.72"/>
+<rect x="490" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.77"/>
+<rect x="510" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.81"/>
+<rect x="530" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.86"/>
+<rect x="550" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.91"/>
+<rect x="570" y="606" width="16" height="28" fill="#FF3EA5" opacity="0.95"/>
+<rect x="590" y="606" width="16" height="28" fill="#FF3EA5" opacity="1"/>
+<text x="642.49" y="629" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">17</text>
+<text x="728.49" y="629" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#3DFF8A">通过 77%</text>
+<text x="330" y="680" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#E9E4FF" opacity="0.7">条长按对数刻度：每少一格，人数大约少 30%</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="来源">
+<text x="70" y="740" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">按来源</text>
+<text x="70" y="776" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#E9E4FF" opacity="0.7">来源</text>
+<text x="250" y="776" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#E9E4FF" opacity="0.7">投递</text>
+<text x="360" y="776" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#E9E4FF" opacity="0.7">入职</text>
+<text x="470" y="776" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#E9E4FF" opacity="0.7">转化率</text>
+<text x="600" y="776" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" font-weight="700" fill="#E9E4FF" opacity="0.7">每人成本</text>
+<text x="70" y="812" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="800" fill="#FF3EA5">员工内推</text>
+<text x="250" y="812" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">180</text>
+<text x="360" y="812" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">6</text>
+<text x="470" y="812" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="800" fill="#FF3EA5">3.3%</text>
+<text x="600" y="812" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">¥8,000</text>
+<text x="70" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="800" fill="#2DE2E6">招聘网站</text>
+<text x="250" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">1,600</text>
+<text x="360" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">5</text>
+<text x="470" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">0.3%</text>
+<text x="600" y="850" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">¥24,000</text>
+<text x="70" y="888" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="800" fill="#2DE2E6">猎头</text>
+<text x="250" y="888" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">120</text>
+<text x="360" y="888" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">4</text>
+<text x="470" y="888" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">3.3%</text>
+<text x="600" y="888" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">¥90,000</text>
+<text x="70" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="800" fill="#2DE2E6">校园招聘</text>
+<text x="250" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">500</text>
+<text x="360" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">2</text>
+<text x="470" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">0.4%</text>
+<text x="600" y="926" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#E9E4FF">¥30,000</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="用时">
+<text x="900" y="740" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFE45E">入职用时（投递到接受录用，天）</text>
+<text x="955" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">10–19</text>
+<rect x="1006" y="936" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1006" y="910" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1006" y="884" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1006" y="858" width="70" height="22" fill="#2DE2E6"/>
+<text x="1041" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">20–29</text>
+<rect x="1092" y="936" width="70" height="22" fill="#2DE2E6" filter="url(#glow)"/>
+<rect x="1092" y="910" width="70" height="22" fill="#2DE2E6" filter="url(#glow)"/>
+<rect x="1092" y="884" width="70" height="22" fill="#2DE2E6" filter="url(#glow)"/>
+<rect x="1092" y="858" width="70" height="22" fill="#2DE2E6" filter="url(#glow)"/>
+<rect x="1092" y="832" width="70" height="22" fill="#2DE2E6" filter="url(#glow)"/>
+<rect x="1092" y="806" width="70" height="22" fill="#2DE2E6" filter="url(#glow)"/>
+<text x="1127" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">30–39</text>
+<rect x="1178" y="936" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1178" y="910" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1178" y="884" width="70" height="22" fill="#2DE2E6"/>
+<text x="1213" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">40–49</text>
+<rect x="1264" y="936" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1264" y="910" width="70" height="22" fill="#2DE2E6"/>
+<rect x="1264" y="884" width="70" height="22" fill="#2DE2E6"/>
+<text x="1299" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">50–59</text>
+<rect x="1350" y="936" width="70" height="22" fill="#2DE2E6"/>
+<text x="1385" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">60–69</text>
+<text x="1471" y="964" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#E9E4FF" text-anchor="middle" opacity="0.8">70–79</text>
+<text x="1530" y="790" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="900" fill="#FF3EA5" text-anchor="end" filter="url(#glow)">中位数 34 天</text>
+<text x="1530" y="822" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#E9E4FF" text-anchor="end">最快 22 天，最慢 64 天</text>
+</g>
+</svg>

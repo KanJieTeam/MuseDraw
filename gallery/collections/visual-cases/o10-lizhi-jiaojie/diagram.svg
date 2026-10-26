@@ -1,0 +1,67 @@
+<svg data-theme="terracotta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<title>员工离职交接</title>
+<g data-md-layer="旅程">
+<rect width="1600" height="1000" fill="#F3E9DE"/>
+<text id="title" x="80" y="110" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="54" fill="#3B2418" font-weight="900">员工离职交接</text>
+<text x="84" y="158" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#7A3A26" font-weight="500">七步走完，人走得体面，公司也不留尾巴</text>
+<path d="M160 300 C240 290 320 252.5 480 260 C640 267.5 640 327.5 800 330 C960 332.5 965 257.5 1120 270 C1275 282.5 1405 287.5 1420 380 C1435 472.5 1345 560 1180 640 C1015 720 865 685 760 700" fill="none" stroke="#E2C9B3" stroke-width="40" stroke-linecap="round"/>
+<path d="M160 300 C240 290 320 252.5 480 260 C640 267.5 640 327.5 800 330 C960 332.5 965 257.5 1120 270 C1275 282.5 1405 287.5 1420 380 C1435 472.5 1345 560 1180 640 C1015 720 865 685 760 700" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="14 12"/>
+<circle cx="160" cy="300" r="34" fill="#B5553A"/>
+<text x="160" y="311" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="160" y="376" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">提交离职申请</text>
+<text x="160" y="408" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">提前 30 天书面通知</text>
+<rect x="117" y="422" width="80" height="28" rx="14" fill="#B5553A"/>
+<text x="157" y="442" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">员工</text>
+<circle cx="480" cy="260" r="34" fill="#D98A5F"/>
+<text x="480" y="271" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="480" y="336" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">离职面谈</text>
+<text x="480" y="368" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">了解原因，确认最后工作日</text>
+<rect x="394" y="382" width="80" height="28" rx="14" fill="#D98A5F"/>
+<text x="434" y="402" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">直属上级</text>
+<rect x="480" y="382" width="80" height="28" rx="14" fill="#8C3B22"/>
+<text x="520" y="402" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">HR</text>
+<circle cx="800" cy="330" r="34" fill="#B5553A"/>
+<text x="800" y="341" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="800" y="406" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">工作交接</text>
+<text x="800" y="438" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">交接清单双方签字</text>
+<rect x="714" y="452" width="80" height="28" rx="14" fill="#B5553A"/>
+<text x="754" y="472" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">员工</text>
+<rect x="800" y="452" width="80" height="28" rx="14" fill="#D98A5F"/>
+<text x="840" y="472" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">直属上级</text>
+<circle cx="1120" cy="270" r="34" fill="#C9A58A"/>
+<text x="1120" y="281" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="1120" y="346" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">归还资产</text>
+<text x="1120" y="378" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">电脑、门禁卡、工牌</text>
+<rect x="1077" y="392" width="80" height="28" rx="14" fill="#C9A58A"/>
+<text x="1117" y="412" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">IT</text>
+<circle cx="1420" cy="380" r="34" fill="#C9A58A"/>
+<text x="1420" y="391" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="1420" y="456" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">关闭账号</text>
+<text x="1420" y="488" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">邮箱与各系统权限</text>
+<rect x="1377" y="502" width="80" height="28" rx="14" fill="#C9A58A"/>
+<text x="1417" y="522" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">IT</text>
+<circle cx="1180" cy="640" r="34" fill="#E3B08A"/>
+<text x="1180" y="651" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="1180" y="720" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">结清工资</text>
+<text x="1180" y="752" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">离职时一次付清</text>
+<rect x="1137" y="766" width="80" height="28" rx="14" fill="#E3B08A"/>
+<text x="1177" y="786" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">财务</text>
+<circle cx="760" cy="700" r="34" fill="#8C3B22"/>
+<text x="760" y="711" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="760" y="780" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="26" fill="#3B2418" font-weight="900" text-anchor="middle">离职证明</text>
+<text x="760" y="812" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" font-weight="500" text-anchor="middle">当天出具；15 日内转档案社保</text>
+<rect x="717" y="826" width="80" height="28" rx="14" fill="#8C3B22"/>
+<text x="757" y="846" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">HR</text>
+<rect x="80" y="900" width="28" height="28" rx="14" fill="#B5553A"/>
+<text x="118" y="921" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="500">员工</text>
+<rect x="250" y="900" width="28" height="28" rx="14" fill="#D98A5F"/>
+<text x="288" y="921" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="500">直属上级</text>
+<rect x="420" y="900" width="28" height="28" rx="14" fill="#8C3B22"/>
+<text x="458" y="921" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="500">HR</text>
+<rect x="590" y="900" width="28" height="28" rx="14" fill="#C9A58A"/>
+<text x="628" y="921" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="500">IT</text>
+<rect x="760" y="900" width="28" height="28" rx="14" fill="#E3B08A"/>
+<text x="798" y="921" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3B2418" font-weight="500">财务</text>
+<text x="1520" y="921" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#7A3A26" text-anchor="end">依据《劳动合同法》第三十七条、第五十条</text>
+</g>
+</svg>

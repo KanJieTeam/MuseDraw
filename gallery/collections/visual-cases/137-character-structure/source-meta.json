@@ -1,0 +1,33 @@
+{
+  "id": "137",
+  "title": "汉字的结构",
+  "use": "教学",
+  "style": "纸墨编辑",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "田字格"
+  ],
+  "fonts": [
+    "Noto Serif CJK SC（思源宋体）"
+  ],
+  "features": [],
+  "example_data": false,
+  "computed": [
+    "无数值计算；部件区域按田字格边长的比例绘制。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

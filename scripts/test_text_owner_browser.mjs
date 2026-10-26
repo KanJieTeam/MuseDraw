@@ -18,7 +18,7 @@ for(let i=2;i<process.argv.length;i++){
 const out=path.resolve(options.out);fs.mkdirSync(out,{recursive:true});
 const theme=await loadTheme('journal'),{pw}=await loadPlaywrightInfo(),found=resolveBrowser(pw);
 const browser=await pw.chromium.launch({executablePath:found.executablePath,headless:true});
-const report={scope:'Real browser text ownership and genuine overlap checks; no images or draw.io emitted',cases:[]};
+const report={scope:'Real browser text ownership and genuine overlap checks; no image output',cases:[]};
 const base={theme:'journal',size:[600,400],header:false,footer:false,autoFit:false};
 const child=(id,module)=>({id,nativeModule:module,label:id,x:80,y:120,w:140,h:50,size:20,overlap:true});
 const direct=(y=80)=>({id:'direct',nativeModule:'m',x:150,y,text:'Direct',size:20,anchor:'middle'});
@@ -33,7 +33,7 @@ const cases=[
 ];
 async function check(name,svg,expected){
   const dir=path.join(out,name);fs.mkdirSync(dir,{recursive:true});
-  const checks=await exportScene({svg,outDir:dir,browser,fontDirs:[],fontMode:'system',images:false,drawio:false});
+  const checks=await exportScene({svg,outDir:dir,browser,fontDirs:[],fontMode:'system',images:false});
   fs.writeFileSync(path.join(dir,'checks.json'),JSON.stringify(checks,null,2)+'\n');
   const collisions=checks.warnings.filter(w=>w.type==='text-collision');
   assert.equal(collisions.length,expected,`${name}: ${JSON.stringify(checks.warnings)}`);

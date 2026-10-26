@@ -1,0 +1,27 @@
+{
+  "status": "experimental",
+  "route": "spatial facility visualisation with native HTML evidence",
+  "input": "geometry module implementing buildScene(stage); stable entity IDs and separately declared local demonstration data",
+  "output": "local HTML/CSS/JS/WebGL, browser preview",
+  "renderer": "stage.mjs",
+  "examples": [
+    "harbor-scene.mjs",
+    "water-scene.mjs"
+  ],
+  "tests": "regression.json",
+  "limits": [
+    "not natural language to arbitrary facilities without modeling work",
+    "not all dashboard genres",
+    "not field visibility or engineering accuracy",
+    "not independent human endorsement of taste"
+  ],
+  "licenseDependency": "vendor/LICENSE",
+  "mainSkillModified": false,
+  "reproduction": "npm install; npx playwright install chromium; npm test",
+  "browserTest": "test-browser.mjs",
+  "refinements": [
+    "camera candidate comparison with fixed entity/data counts",
+    "per-entity owned materials with preserved status color",
+    "320px title/time header"
+  ]
+}

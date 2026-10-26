@@ -26,7 +26,7 @@ try{
   const dir=path.join(out,name);fs.mkdirSync(dir,{recursive:true});
   const scene={header:false,footer:false,autoFit:false,size:[600,400],nodes:[{id:'folder',shape:'folder',x:100,y:100,w:360,h:height,label:'正文必须留在分隔线下',size:20,tag:'目录',tagSize:10,sub:'状态需继续核对',subSize:12}],edges:[]};
   const svg=withSystemFonts(render(scene,theme));fs.writeFileSync(path.join(dir,'diagram.svg'),svg);
-  const checks=await exportScene({svg,outDir:dir,browser,fontDirs:[],images:false,drawio:false,fontMode:'system'});
+  const checks=await exportScene({svg,outDir:dir,browser,fontDirs:[],images:false,fontMode:'system'});
   const overflow=checks.warnings.filter(w=>w.type==='text-overflow'&&w.id==='folder');
   assert.equal(overflow.length>0,expectOverflow,JSON.stringify(checks));
   if(!expectOverflow)assert.equal(checks.passed,true,JSON.stringify(checks));

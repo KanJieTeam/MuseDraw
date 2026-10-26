@@ -1,0 +1,12 @@
+{
+  "cid": "E09",
+  "title": "HTTP 状态码",
+  "category": "工程 · 瑞士海报",
+  "features": {
+    "text": 67,
+    "elements": 74
+  },
+  "use": "工程",
+  "style": "瑞士海报",
+  "short": "瑞士海报风格的 HTTP 状态码速查：1xx 到 5xx 五栏，每栏列常用状态码和一句话含义。"
+}

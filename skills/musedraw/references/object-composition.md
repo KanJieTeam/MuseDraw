@@ -141,6 +141,13 @@ Use native `parallelogram`, `box`, `cylinder` and original `paths`, or repeated
 `object-views` for assembly states. Contacts and return paths must still follow
 the brief. A shadow cannot substitute for layer order.
 
+For supplied perforated or cut-out parts, define actual material and empty
+regions before adding depth or surface effects. Reuse that footprint across
+views instead of painting white patches over separate solid sheets. The optional
+[polygon footprint helper](material-footprint.md) transforms an explicit outer
+polygon and named holes; it does not infer shapes, extrude solids or simulate
+contact. Source edits require regenerating each view.
+
 Reference: [elastocaloric device, Fig. 1](https://www.nature.com/articles/s41560-026-02122-6).
 
 ## Visual roles that survive a change

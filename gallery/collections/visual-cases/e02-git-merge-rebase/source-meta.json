@@ -1,0 +1,12 @@
+{
+  "cid": "E02",
+  "title": "merge 和 rebase 有什么不同",
+  "category": "工程 · 终端暗色",
+  "features": {
+    "text": 41,
+    "elements": 82
+  },
+  "use": "工程",
+  "style": "终端暗色",
+  "short": "终端风格对比 git merge 和 git rebase：同一个起点，两种操作后的提交图。"
+}

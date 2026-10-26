@@ -1,0 +1,37 @@
+{
+  "id": "117",
+  "title": "值班升级流程",
+  "use": "工程",
+  "style": "暖陶",
+  "pack": 6,
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "小路",
+    "卵石",
+    "级别"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "半透明"
+  ],
+  "example_data": true,
+  "computed": [
+    "无数值计算；时间节点 0、5、15、30 分钟为输入的策略参数。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

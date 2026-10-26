@@ -1,0 +1,34 @@
+{
+  "id": "135",
+  "title": "平均数",
+  "use": "教学",
+  "style": "商务墨蓝",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "条形图",
+    "计算"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [],
+  "example_data": true,
+  "computed": [
+    "总和 670、平均 134；高出部分 8 + 16 = 24，低出部分 6 + 18 = 24，程序断言相等。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

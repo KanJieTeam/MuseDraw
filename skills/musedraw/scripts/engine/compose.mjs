@@ -4,6 +4,7 @@
 import { objectViews, viewNodeId } from './object-views.mjs';
 import { measure, wrap } from './text.mjs';
 import { composeFlow } from './compose-flow.mjs';
+import { composePlan } from './compose-plan.mjs';
 
 const object = v => v && typeof v === 'object' && !Array.isArray(v);
 const fail = (path, message) => { throw new Error(`Invalid composition ${path}: ${message}`); };
@@ -221,5 +222,6 @@ export function compose(b) {
   if (!object(b)) fail('/', 'must be an object');
   if (b.method === 'states') return composeStates(b);
   if (b.method === 'flow') return composeFlow(b);
-  fail('/method', 'use states or flow; other compositions use render scene.json');
+  if (b.method === 'plan') return composePlan(b);
+  fail('/method', 'use states, flow or plan; other compositions use render scene.json');
 }

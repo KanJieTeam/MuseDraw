@@ -1,0 +1,110 @@
+<svg data-theme="swiss" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1200" height="1600" viewBox="0 0 1200 1600">
+<title>数量级</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1200" height="1600" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="66" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="150" font-weight="900" fill="#000000" letter-spacing="-4">数量级</text>
+<text x="72" y="252" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" fill="#000000">从原子到可观测宇宙，刻度每往上一格就大 10 倍</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="刻度">
+<rect x="0" y="340" width="40" height="1120" fill="#E3241B"/>
+<line x1="140" y1="360" x2="140" y2="1440" stroke="#000000" stroke-width="4"/>
+<line x1="140" y1="1440" x2="174" y2="1440" stroke="#000000" stroke-width="2"/>
+<text x="126" y="1448.0" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">-10</tspan></text>
+<line x1="140" y1="1410.81" x2="156" y2="1410.81" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1381.62" x2="156" y2="1381.62" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1352.43" x2="156" y2="1352.43" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1323.24" x2="156" y2="1323.24" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1294.05" x2="174" y2="1294.05" stroke="#000000" stroke-width="2"/>
+<text x="126" y="1302.1" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">-5</tspan></text>
+<line x1="140" y1="1264.86" x2="156" y2="1264.86" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1235.68" x2="156" y2="1235.68" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1206.49" x2="156" y2="1206.49" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1177.3" x2="156" y2="1177.3" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1148.11" x2="174" y2="1148.11" stroke="#000000" stroke-width="2"/>
+<text x="126" y="1156.1" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">0</tspan></text>
+<line x1="140" y1="1118.92" x2="156" y2="1118.92" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1089.73" x2="156" y2="1089.73" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1060.54" x2="156" y2="1060.54" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1031.35" x2="156" y2="1031.35" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="1002.16" x2="174" y2="1002.16" stroke="#000000" stroke-width="2"/>
+<text x="126" y="1010.2" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">5</tspan></text>
+<line x1="140" y1="972.97" x2="156" y2="972.97" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="943.78" x2="156" y2="943.78" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="914.59" x2="156" y2="914.59" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="885.41" x2="156" y2="885.41" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="856.22" x2="174" y2="856.22" stroke="#000000" stroke-width="2"/>
+<text x="126" y="864.2" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">10</tspan></text>
+<line x1="140" y1="827.03" x2="156" y2="827.03" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="797.84" x2="156" y2="797.84" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="768.65" x2="156" y2="768.65" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="739.46" x2="156" y2="739.46" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="710.27" x2="174" y2="710.27" stroke="#000000" stroke-width="2"/>
+<text x="126" y="718.3" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">15</tspan></text>
+<line x1="140" y1="681.08" x2="156" y2="681.08" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="651.89" x2="156" y2="651.89" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="622.7" x2="156" y2="622.7" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="593.51" x2="156" y2="593.51" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="564.32" x2="174" y2="564.32" stroke="#000000" stroke-width="2"/>
+<text x="126" y="572.3" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">20</tspan></text>
+<line x1="140" y1="535.14" x2="156" y2="535.14" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="505.95" x2="156" y2="505.95" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="476.76" x2="156" y2="476.76" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="447.57" x2="156" y2="447.57" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="418.38" x2="174" y2="418.38" stroke="#000000" stroke-width="2"/>
+<text x="126" y="426.4" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="end">10<tspan dy="-11" font-size="15">25</tspan></text>
+<line x1="140" y1="389.19" x2="156" y2="389.19" stroke="#000000" stroke-width="1"/>
+<line x1="140" y1="360" x2="156" y2="360" stroke="#000000" stroke-width="1"/>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="事物">
+<circle cx="140" cy="361.62" r="8" fill="#E3241B"/>
+<line x1="148" y1="361.62" x2="330" y2="361.62" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="370.62" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">可观测宇宙直径</text>
+<text x="1128" y="370.6" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 8.8 × 10<tspan dy="-12" font-size="17">26</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="535.79" r="8" fill="#E3241B"/>
+<line x1="148" y1="535.79" x2="330" y2="535.79" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="544.79" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">银河系直径</text>
+<text x="1128" y="544.8" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 9.5 × 10<tspan dy="-12" font-size="17">20</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="681.78" r="8" fill="#E3241B"/>
+<line x1="148" y1="681.78" x2="330" y2="681.78" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="690.78" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">1 光年</text>
+<text x="1128" y="690.8" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 9.46 × 10<tspan dy="-12" font-size="17">15</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="821.89" r="8" fill="#E3241B"/>
+<line x1="148" y1="821.89" x2="330" y2="821.89" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="830.89" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">日地距离</text>
+<text x="1128" y="830.9" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 1.5 × 10<tspan dy="-12" font-size="17">11</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="940.75" r="8" fill="#E3241B"/>
+<line x1="148" y1="940.75" x2="330" y2="940.75" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="949.75" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">地球直径</text>
+<text x="1128" y="949.8" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 1.27 × 10<tspan dy="-12" font-size="17">7</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="1032.9" r="8" fill="#E3241B"/>
+<line x1="148" y1="1032.9" x2="330" y2="1032.9" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="1041.9" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">珠穆朗玛峰高</text>
+<text x="1128" y="1041.9" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 8.849 × 10<tspan dy="-12" font-size="17">3</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="1141.38" r="8" fill="#E3241B"/>
+<line x1="148" y1="1141.38" x2="330" y2="1141.38" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="1150.38" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">人的身高</text>
+<text x="1128" y="1150.4" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 1.7 × 10<tspan dy="-12" font-size="17">0</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="1235.68" r="8" fill="#E3241B"/>
+<line x1="148" y1="1235.68" x2="330" y2="1235.68" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="1244.68" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">一粒沙</text>
+<text x="1128" y="1244.7" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 1 × 10<tspan dy="-12" font-size="17">-3</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="1298.58" r="8" fill="#E3241B"/>
+<line x1="148" y1="1298.58" x2="330" y2="1298.58" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="1307.58" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">红细胞直径</text>
+<text x="1128" y="1307.6" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 7 × 10<tspan dy="-12" font-size="17">-6</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="1352.43" r="8" fill="#E3241B"/>
+<line x1="148" y1="1352.43" x2="330" y2="1352.43" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="1361.43" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">病毒</text>
+<text x="1128" y="1361.4" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 1 × 10<tspan dy="-12" font-size="17">-7</tspan><tspan dy="12"> 米</tspan></text>
+<circle cx="140" cy="1440" r="8" fill="#E3241B"/>
+<line x1="148" y1="1440" x2="330" y2="1440" stroke="#000000" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="340" y="1449" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#000000">氢原子直径</text>
+<text x="1128" y="1449.0" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="500" fill="#000000" text-anchor="end">约 1 × 10<tspan dy="-12" font-size="17">-10</tspan><tspan dy="12"> 米</tspan></text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="脚注">
+<line x1="72" y1="1500" x2="1128" y2="1500" stroke="#000000" stroke-width="3"/>
+<text x="72" y="1546" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#000000">科学记数法写成 a × 10 的 n 次方（1 ≤ a &lt; 10）。最大和最小相差约 37 个数量级。</text>
+</g>
+</svg>

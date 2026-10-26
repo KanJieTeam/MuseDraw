@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {laminateParts} from '../skills/musedraw/scripts/engine/scientific-laminate.mjs';
-import {pathCommands} from '../skills/musedraw/scripts/engine/drawio.mjs';
+import {pathCommands} from '../skills/musedraw/scripts/engine/svg-path.mjs';
 
 const palette = {ink: '#334455', soft: '#E5E5E5', focus: '#55AABB'};
 const base = {id: 'sample', type: 'scientific', kind: 'laminate', x: 15, y: 20, w: 380, h: 180,

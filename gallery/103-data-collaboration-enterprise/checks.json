@@ -8,14 +8,6 @@
   "warnings": [],
   "passed": true,
   "missingFonts": [],
-  "drawio": {
-    "native": true,
-    "nodes": 20,
-    "edges": 0,
-    "texts": 48,
-    "visualEffects": [],
-    "durationMs": 33
-  },
   "theme": "enterprise",
   "editability": {
     "text": true,

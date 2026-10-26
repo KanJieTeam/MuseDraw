@@ -1,0 +1,154 @@
+<svg data-theme="c4" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>差旅与费用报销系统：容器图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="40" y="52" font-family="'Noto Sans CJK SC', sans-serif" font-size="30" font-weight="800" fill="#1A1A1A">差旅与费用报销系统</text>
+<text x="40" y="80" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#6B6B6B">[容器图] 从拍照上传发票到银行付款</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="人员">
+<circle cx="440" cy="52" r="20" fill="#08427B"/>
+<rect x="370" y="74" width="140" height="66" rx="26" fill="#08427B"/>
+<text x="440" y="102" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">员工</text>
+<text x="440" y="122" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.85">[人员] 提交报销</text>
+<circle cx="640" cy="52" r="20" fill="#08427B"/>
+<rect x="570" y="74" width="140" height="66" rx="26" fill="#08427B"/>
+<text x="640" y="102" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">审批人</text>
+<text x="640" y="122" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.85">[人员] 审批单据</text>
+<circle cx="840" cy="52" r="20" fill="#08427B"/>
+<rect x="770" y="74" width="140" height="66" rx="26" fill="#08427B"/>
+<text x="840" y="102" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">财务人员</text>
+<text x="840" y="122" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.85">[人员] 复核与付款</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="边界">
+<rect x="200" y="200" width="1000" height="740" rx="10" fill="none" stroke="#888888" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="216" y="914" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">费用报销系统</text>
+<text x="216" y="932" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#6B6B6B">[软件系统]</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="容器">
+<rect x="240" y="240" width="200" height="100" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="340" y="266" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">移动端 App</text>
+<text x="340" y="285" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Flutter]</text>
+<text x="340" y="306" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="340" dy="0">拍照上传发票、填写报销单</tspan></text>
+<rect x="480" y="240" width="200" height="100" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="580" y="266" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web 管理端</text>
+<text x="580" y="285" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Vue]</text>
+<text x="580" y="306" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="580" dy="0">审批、财务复核、报表</tspan></text>
+<rect x="720" y="240" width="200" height="100" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="820" y="266" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">即时通知服务</text>
+<text x="820" y="285" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Node.js]</text>
+<text x="820" y="306" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="820" dy="0">把待办推送到即时通讯</tspan></text>
+<rect x="360" y="420" width="240" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="480" y="446" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">业务后端</text>
+<text x="480" y="465" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Java，Spring Boot]</text>
+<text x="480" y="486" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="480" dy="0">报销单、预算占用、对账</tspan></text>
+<rect x="680" y="420" width="220" height="110" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="790" y="446" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">审批流引擎</text>
+<text x="790" y="465" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Flowable]</text>
+<text x="790" y="486" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="790" dy="0">按金额和类型路由审批人</tspan></text>
+<rect x="240" y="610" width="200" height="100" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="340" y="636" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">发票识别服务</text>
+<text x="340" y="655" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Python]</text>
+<text x="340" y="676" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="340" dy="0">OCR 识别发票要素</tspan></text>
+<rect x="480" y="610" width="200" height="100" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="580" y="636" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">规则引擎</text>
+<text x="580" y="655" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Drools]</text>
+<text x="580" y="676" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="580" dy="0">差旅标准、重复报销、预算校验</tspan></text>
+<rect x="720" y="610" width="200" height="100" rx="6" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<text x="820" y="636" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">消息队列</text>
+<text x="820" y="655" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：Kafka]</text>
+<text x="820" y="676" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="820" dy="0">单据状态变更事件</tspan></text>
+<path d="M300,801 A110.0,11 0 0 1 520,801 V899 A110.0,11 0 0 1 300,899 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M300,801 A110.0,11 0 0 0 520,801" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="410" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">业务数据库</text>
+<text x="410" y="848" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：PostgreSQL]</text>
+<text x="410" y="868" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="410" dy="0">报销单、审批记录、预算</tspan></text>
+<path d="M620,801 A110.0,11 0 0 1 840,801 V899 A110.0,11 0 0 1 620,899 Z" fill="#438DD5" stroke="#3C7FC0" stroke-width="1.2"/>
+<path d="M620,801 A110.0,11 0 0 0 840,801" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
+<text x="730" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">影像存储</text>
+<text x="730" y="848" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[容器：对象存储]</text>
+<text x="730" y="868" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="730" dy="0">发票与附件原件</tspan></text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="外部系统">
+<rect x="1250" y="240" width="300" height="90" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1400" y="266" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">差旅预订平台</text>
+<text x="1400" y="285" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1400" y="306" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="1400" dy="0">机票酒店订单</tspan></text>
+<rect x="1250" y="400" width="300" height="90" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1400" y="426" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">发票查验平台</text>
+<text x="1400" y="445" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1400" y="466" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="1400" dy="0">税务部门的真伪查验</tspan></text>
+<rect x="1250" y="560" width="300" height="90" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1400" y="586" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">ERP 系统</text>
+<text x="1400" y="605" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1400" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="1400" dy="0">凭证与总账</tspan></text>
+<rect x="1250" y="720" width="300" height="90" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1400" y="746" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">企业网银</text>
+<text x="1400" y="765" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1400" y="786" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="1400" dy="0">批量付款</tspan></text>
+<rect x="1250" y="100" width="300" height="90" rx="6" fill="#8C8C8C" stroke="#6E6E6E" stroke-width="1.2"/>
+<text x="1400" y="126" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">即时通讯平台</text>
+<text x="1400" y="145" font-family="'Noto Sans CJK SC', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">[外部系统]</text>
+<text x="1400" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan x="1400" dy="0">待办消息</tspan></text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="关系">
+<path d="M420.0,140.0 L363.7,233.8" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M360.0,240.0 L361.1,231.1 L367.4,234.8 Z" fill="#707070"/>
+<text x="384" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="end">拍照上传</text>
+<path d="M630.0,140.0 L602.1,233.1" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.0,240.0 L598.9,231.1 L605.9,233.2 Z" fill="#707070"/>
+<text x="624" y="196" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">审批</text>
+<path d="M840.0,140.0 L840.0,180.0 L650.0,180.0 L650.0,232.8" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M650.0,240.0 L646.3,231.8 L653.7,231.8 Z" fill="#707070"/>
+<text x="760" y="172" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">复核、付款</text>
+<path d="M340.0,340.0 L414.9,414.9" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M420.0,420.0 L411.6,416.8 L416.8,411.6 Z" fill="#707070"/>
+<text x="336" y="390" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="end">JSON/HTTPS</text>
+<path d="M580.0,340.0 L543.2,413.6" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M540.0,420.0 L540.4,411.0 L547.0,414.3 Z" fill="#707070"/>
+<text x="600" y="390" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">JSON/HTTPS</text>
+<path d="M600.0,475.0 L672.8,475.0" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M680.0,475.0 L671.8,478.7 L671.8,471.3 Z" fill="#707070"/>
+<text x="640" y="466" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">发起审批</text>
+<path d="M400.0,530.0 L344.3,604.2" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M340.0,610.0 L342.0,601.2 L347.9,605.6 Z" fill="#707070"/>
+<text x="360" y="580" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="end">识别请求</text>
+<path d="M520.0,530.0 L556.8,603.6" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560.0,610.0 L553.0,604.3 L559.6,601.0 Z" fill="#707070"/>
+<text x="548" y="580" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">校验</text>
+<path d="M800.0,530.0 L800.0,602.8" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M800.0,610.0 L796.3,601.8 L803.7,601.8 Z" fill="#707070"/>
+<text x="810" y="580" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">发布事件</text>
+<path d="M820.0,610.0 L820.0,347.2" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M820.0,340.0 L823.7,348.2 L816.3,348.2 Z" fill="#707070"/>
+<text x="830" y="380" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">订阅事件</text>
+<path d="M920.0,280.0 L1100.0,280.0 L1100.0,145.0 L1242.8,145.0" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1250.0,145.0 L1241.8,148.7 L1241.8,141.3 Z" fill="#707070"/>
+<text x="1110" y="210" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">推送待办</text>
+<path d="M1250.0,285.0 L1060.0,285.0 L1060.0,450.0 L907.2,450.0" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M900.0,450.0 L908.2,446.3 L908.2,453.7 Z" fill="#707070"/>
+<text x="1070" y="380" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">同步行程订单</text>
+<path d="M340.0,710.0 L340.0,782.8" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M340.0,790.0 L336.3,781.8 L343.7,781.8 Z" fill="#707070"/>
+<path d="M560.0,710.0 L560.0,740.0 L430.0,740.0 L430.0,782.8" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M430.0,790.0 L426.3,781.8 L433.7,781.8 Z" fill="#707070"/>
+<text x="470" y="734" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">读写 [SQL]</text>
+<path d="M440.0,660.0 L520.0,660.0 L520.0,760.0 L700.0,760.0 L700.0,782.8" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M700.0,790.0 L696.3,781.8 L703.7,781.8 Z" fill="#707070"/>
+<text x="610" y="754" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">存影像 [S3]</text>
+<path d="M440.0,640.0 L460.0,640.0 L460.0,580.0 L1180.0,580.0 L1180.0,445.0 L1242.8,445.0" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1250.0,445.0 L1241.8,448.7 L1241.8,441.3 Z" fill="#707070"/>
+<text x="960" y="572" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="middle">查验真伪 [HTTPS]</text>
+<path d="M900.0,500.0 L1150.0,500.0 L1150.0,605.0 L1242.8,605.0" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1250.0,605.0 L1241.8,608.7 L1241.8,601.3 Z" fill="#707070"/>
+<text x="1160" y="560" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">生成凭证</text>
+<path d="M900.0,515.0 L1130.0,515.0 L1130.0,765.0 L1242.8,765.0" fill="none" stroke="#707070" stroke-width="1.4" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1250.0,765.0 L1241.8,768.7 L1241.8,761.3 Z" fill="#707070"/>
+<text x="1140" y="700" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#1A1A1A" text-anchor="start">付款指令</text>
+</g>
+<g id="layer8" inkscape:groupmode="layer" inkscape:label="容量">
+<rect x="40" y="360" width="150" height="300" fill="#F4F6F8" stroke="#C9D1DA"/>
+<text x="52" y="390" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#1A1A1A"><tspan x="52" dy="0">每月单据</tspan><tspan x="52" dy="18.8">18,000 张</tspan><tspan x="52" dy="18.8"></tspan><tspan x="52" dy="18.8">OCR 自动识别</tspan><tspan x="52" dy="18.8">92%</tspan><tspan x="52" dy="18.8">人工补录 1,440</tspan><tspan x="52" dy="18.8"></tspan><tspan x="52" dy="18.8">规则自动通过</tspan><tspan x="52" dy="18.8">75%</tspan><tspan x="52" dy="18.8">人工复核 4,500</tspan></text>
+</g>
+</svg>

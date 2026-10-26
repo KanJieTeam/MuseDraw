@@ -1,0 +1,280 @@
+<svg data-theme="bauhaus" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>办公空间利用率</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#ECE6DA"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="60" y="100" font-family="'Noto Sans CJK SC', sans-serif" font-size="56" font-weight="900" fill="#141414">办公空间利用率</text>
+<rect x="60" y="128" width="1480" height="10" fill="#141414"/>
+<text x="1540" y="100" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#141414" text-anchor="end">120 人，100 个工位，一周传感器数据（模拟）</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="平面图">
+<rect x="60" y="170" width="880" height="572" fill="#F6F2EA" stroke="#141414" stroke-width="6"/>
+<rect x="90" y="200" width="36" height="36" fill="#D52B1E" opacity="0.69"/>
+<rect x="134" y="200" width="36" height="36" fill="#D52B1E" opacity="0.61"/>
+<rect x="188" y="200" width="36" height="36" fill="#D52B1E" opacity="0.77"/>
+<rect x="232" y="200" width="36" height="36" fill="#D52B1E" opacity="0.81"/>
+<rect x="286" y="200" width="36" height="36" fill="#D52B1E" opacity="0.66"/>
+<rect x="330" y="200" width="36" height="36" fill="#D52B1E" opacity="0.98"/>
+<rect x="384" y="200" width="36" height="36" fill="#D52B1E" opacity="0.64"/>
+<rect x="428" y="200" width="36" height="36" fill="#D52B1E" opacity="0.29"/>
+<rect x="482" y="200" width="36" height="36" fill="#D52B1E" opacity="0.16"/>
+<rect x="526" y="200" width="36" height="36" fill="#D52B1E" opacity="0.51"/>
+<rect x="580" y="200" width="36" height="36" fill="#D52B1E" opacity="0.49"/>
+<rect x="624" y="200" width="36" height="36" fill="#D52B1E" opacity="0.84"/>
+<rect x="90" y="252" width="36" height="36" fill="#D52B1E" opacity="0.49"/>
+<rect x="134" y="252" width="36" height="36" fill="#D52B1E" opacity="0.47"/>
+<rect x="188" y="252" width="36" height="36" fill="#D52B1E" opacity="0.84"/>
+<rect x="232" y="252" width="36" height="36" fill="#D52B1E" opacity="0.84"/>
+<rect x="286" y="252" width="36" height="36" fill="#D52B1E" opacity="0.68"/>
+<rect x="330" y="252" width="36" height="36" fill="#D52B1E" opacity="0.75"/>
+<rect x="384" y="252" width="36" height="36" fill="#D52B1E" opacity="0.57"/>
+<rect x="428" y="252" width="36" height="36" fill="#D52B1E" opacity="0.63"/>
+<rect x="482" y="252" width="36" height="36" fill="#D52B1E" opacity="0.58"/>
+<rect x="526" y="252" width="36" height="36" fill="#D52B1E" opacity="0.78"/>
+<rect x="580" y="252" width="36" height="36" fill="#D52B1E" opacity="0.77"/>
+<rect x="624" y="252" width="36" height="36" fill="#D52B1E" opacity="0.73"/>
+<rect x="90" y="304" width="36" height="36" fill="#D52B1E" opacity="0.68"/>
+<rect x="134" y="304" width="36" height="36" fill="#D52B1E" opacity="0.39"/>
+<rect x="188" y="304" width="36" height="36" fill="#D52B1E" opacity="0.87"/>
+<rect x="232" y="304" width="36" height="36" fill="#D52B1E" opacity="0.98"/>
+<rect x="286" y="304" width="36" height="36" fill="#D52B1E" opacity="0.26"/>
+<rect x="330" y="304" width="36" height="36" fill="#D52B1E" opacity="0.74"/>
+<rect x="384" y="304" width="36" height="36" fill="#D52B1E" opacity="0.64"/>
+<rect x="428" y="304" width="36" height="36" fill="#D52B1E" opacity="0.59"/>
+<rect x="482" y="304" width="36" height="36" fill="#D52B1E" opacity="0.92"/>
+<rect x="526" y="304" width="36" height="36" fill="#D52B1E" opacity="0.64"/>
+<rect x="580" y="304" width="36" height="36" fill="#D52B1E" opacity="0.5"/>
+<rect x="624" y="304" width="36" height="36" fill="#D52B1E" opacity="0.63"/>
+<rect x="90" y="356" width="36" height="36" fill="#D52B1E" opacity="0.49"/>
+<rect x="134" y="356" width="36" height="36" fill="#D52B1E" opacity="0.77"/>
+<rect x="188" y="356" width="36" height="36" fill="#D52B1E" opacity="0.57"/>
+<rect x="232" y="356" width="36" height="36" fill="#D52B1E" opacity="0.63"/>
+<rect x="286" y="356" width="36" height="36" fill="#D52B1E" opacity="0.6"/>
+<rect x="330" y="356" width="36" height="36" fill="#D52B1E" opacity="0.41"/>
+<rect x="384" y="356" width="36" height="36" fill="#D52B1E" opacity="0.58"/>
+<rect x="428" y="356" width="36" height="36" fill="#D52B1E" opacity="0.93"/>
+<rect x="482" y="356" width="36" height="36" fill="#D52B1E" opacity="0.49"/>
+<rect x="526" y="356" width="36" height="36" fill="#D52B1E" opacity="0.9"/>
+<rect x="580" y="356" width="36" height="36" fill="#D52B1E" opacity="0.57"/>
+<rect x="624" y="356" width="36" height="36" fill="#D52B1E" opacity="0.64"/>
+<rect x="90" y="408" width="36" height="36" fill="#D52B1E" opacity="0.49"/>
+<rect x="134" y="408" width="36" height="36" fill="#D52B1E" opacity="0.98"/>
+<rect x="188" y="408" width="36" height="36" fill="#D52B1E" opacity="0.61"/>
+<rect x="232" y="408" width="36" height="36" fill="#D52B1E" opacity="0.97"/>
+<rect x="286" y="408" width="36" height="36" fill="#D52B1E" opacity="0.84"/>
+<rect x="330" y="408" width="36" height="36" fill="#D52B1E" opacity="0.84"/>
+<rect x="384" y="408" width="36" height="36" fill="#D52B1E" opacity="0.71"/>
+<rect x="428" y="408" width="36" height="36" fill="#D52B1E" opacity="0.57"/>
+<rect x="482" y="408" width="36" height="36" fill="#D52B1E" opacity="0.61"/>
+<rect x="526" y="408" width="36" height="36" fill="#D52B1E" opacity="0.71"/>
+<rect x="580" y="408" width="36" height="36" fill="#D52B1E" opacity="0.69"/>
+<rect x="624" y="408" width="36" height="36" fill="#D52B1E" opacity="0.59"/>
+<rect x="90" y="500" width="36" height="36" fill="#D52B1E" opacity="0.67"/>
+<rect x="134" y="500" width="36" height="36" fill="#D52B1E" opacity="0.58"/>
+<rect x="188" y="500" width="36" height="36" fill="#D52B1E" opacity="0.47"/>
+<rect x="232" y="500" width="36" height="36" fill="#D52B1E" opacity="0.8"/>
+<rect x="286" y="500" width="36" height="36" fill="#D52B1E" opacity="0.43"/>
+<rect x="330" y="500" width="36" height="36" fill="#D52B1E" opacity="0.79"/>
+<rect x="384" y="500" width="36" height="36" fill="#D52B1E" opacity="0.79"/>
+<rect x="428" y="500" width="36" height="36" fill="#D52B1E" opacity="0.86"/>
+<rect x="90" y="552" width="36" height="36" fill="#D52B1E" opacity="0.62"/>
+<rect x="134" y="552" width="36" height="36" fill="#D52B1E" opacity="0.72"/>
+<rect x="188" y="552" width="36" height="36" fill="#D52B1E" opacity="0.64"/>
+<rect x="232" y="552" width="36" height="36" fill="#D52B1E" opacity="0.71"/>
+<rect x="286" y="552" width="36" height="36" fill="#D52B1E" opacity="0.64"/>
+<rect x="330" y="552" width="36" height="36" fill="#D52B1E" opacity="0.67"/>
+<rect x="384" y="552" width="36" height="36" fill="#D52B1E" opacity="0.61"/>
+<rect x="428" y="552" width="36" height="36" fill="#D52B1E" opacity="0.73"/>
+<rect x="90" y="604" width="36" height="36" fill="#D52B1E" opacity="0.4"/>
+<rect x="134" y="604" width="36" height="36" fill="#D52B1E" opacity="0.82"/>
+<rect x="188" y="604" width="36" height="36" fill="#D52B1E" opacity="0.38"/>
+<rect x="232" y="604" width="36" height="36" fill="#D52B1E" opacity="0.75"/>
+<rect x="286" y="604" width="36" height="36" fill="#D52B1E" opacity="0.4"/>
+<rect x="330" y="604" width="36" height="36" fill="#D52B1E" opacity="0.86"/>
+<rect x="384" y="604" width="36" height="36" fill="#D52B1E" opacity="0.57"/>
+<rect x="428" y="604" width="36" height="36" fill="#D52B1E" opacity="0.43"/>
+<rect x="90" y="656" width="36" height="36" fill="#D52B1E" opacity="0.48"/>
+<rect x="134" y="656" width="36" height="36" fill="#D52B1E" opacity="0.66"/>
+<rect x="188" y="656" width="36" height="36" fill="#D52B1E" opacity="0.73"/>
+<rect x="232" y="656" width="36" height="36" fill="#D52B1E" opacity="0.67"/>
+<rect x="286" y="656" width="36" height="36" fill="#D52B1E" opacity="0.43"/>
+<rect x="330" y="656" width="36" height="36" fill="#D52B1E" opacity="0.62"/>
+<rect x="384" y="656" width="36" height="36" fill="#D52B1E" opacity="0.75"/>
+<rect x="428" y="656" width="36" height="36" fill="#D52B1E" opacity="0.98"/>
+<rect x="90" y="708" width="36" height="36" fill="#D52B1E" opacity="0.6"/>
+<rect x="134" y="708" width="36" height="36" fill="#D52B1E" opacity="0.67"/>
+<rect x="188" y="708" width="36" height="36" fill="#D52B1E" opacity="0.46"/>
+<rect x="232" y="708" width="36" height="36" fill="#D52B1E" opacity="0.55"/>
+<rect x="286" y="708" width="36" height="36" fill="#D52B1E" opacity="0.6"/>
+<rect x="330" y="708" width="36" height="36" fill="#D52B1E" opacity="0.38"/>
+<rect x="384" y="708" width="36" height="36" fill="#D52B1E" opacity="0.54"/>
+<rect x="428" y="708" width="36" height="36" fill="#D52B1E" opacity="0.66"/>
+<text x="90" y="192" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#141414">开放工位区 A（60 位）</text>
+<text x="90" y="492" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="700" fill="#141414">开放工位区 B（40 位）</text>
+<rect x="660" y="200" width="110" height="120" fill="#1D4E9E" opacity="0.49"/>
+<rect x="660" y="200" width="110" height="120" fill="none" stroke="#141414" stroke-width="3"/>
+<text x="668" y="222" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">A</text>
+<text x="668" y="246" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF">4 人</text>
+<text x="668" y="290" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">均 1.6 人</text>
+<text x="668" y="308" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF">预订 84%</text>
+<rect x="780" y="200" width="110" height="120" fill="#1D4E9E" opacity="0.54"/>
+<rect x="780" y="200" width="110" height="120" fill="none" stroke="#141414" stroke-width="3"/>
+<text x="788" y="222" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">B</text>
+<text x="788" y="246" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF">4 人</text>
+<text x="788" y="290" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">均 1.9 人</text>
+<text x="788" y="308" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF">预订 72%</text>
+<rect x="660" y="330" width="110" height="120" fill="#1D4E9E" opacity="0.51"/>
+<rect x="660" y="330" width="110" height="120" fill="none" stroke="#141414" stroke-width="3"/>
+<text x="668" y="352" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">C</text>
+<text x="668" y="376" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF">6 人</text>
+<text x="668" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">均 2.6 人</text>
+<text x="668" y="438" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF">预订 81%</text>
+<rect x="780" y="330" width="110" height="120" fill="#1D4E9E" opacity="0.54"/>
+<rect x="780" y="330" width="110" height="120" fill="none" stroke="#141414" stroke-width="3"/>
+<text x="788" y="352" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">D</text>
+<text x="788" y="376" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF">8 人</text>
+<text x="788" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">均 3.9 人</text>
+<text x="788" y="438" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF">预订 57%</text>
+<rect x="660" y="460" width="110" height="120" fill="#1D4E9E" opacity="0.47"/>
+<rect x="660" y="460" width="110" height="120" fill="none" stroke="#141414" stroke-width="3"/>
+<text x="668" y="482" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">E</text>
+<text x="668" y="506" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF">10 人</text>
+<text x="668" y="550" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">均 3.7 人</text>
+<text x="668" y="568" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF">预订 59%</text>
+<rect x="780" y="460" width="110" height="120" fill="#1D4E9E" opacity="0.55"/>
+<rect x="780" y="460" width="110" height="120" fill="none" stroke="#141414" stroke-width="3"/>
+<text x="788" y="482" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">F</text>
+<text x="788" y="506" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" fill="#FFFFFF">12 人</text>
+<text x="788" y="550" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">均 6.1 人</text>
+<text x="788" y="568" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#FFFFFF">预订 77%</text>
+<rect x="660" y="600" width="50" height="50" fill="#F2C230"/>
+<text x="685" y="632" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="900" fill="#141414" text-anchor="middle">亭</text>
+<rect x="718" y="600" width="50" height="50" fill="#F2C230"/>
+<text x="743" y="632" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="900" fill="#141414" text-anchor="middle">亭</text>
+<rect x="776" y="600" width="50" height="50" fill="#F2C230"/>
+<text x="801" y="632" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="900" fill="#141414" text-anchor="middle">亭</text>
+<rect x="834" y="600" width="50" height="50" fill="#F2C230"/>
+<text x="859" y="632" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="900" fill="#141414" text-anchor="middle">亭</text>
+<text x="660" y="674" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414">电话亭 ×4</text>
+<circle cx="850" cy="640" r="48" fill="#F2C230"/>
+<text x="850" y="646" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" font-weight="900" fill="#141414" text-anchor="middle">休息</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="热度">
+<text x="1000" y="190" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="900" fill="#141414">工位占用人数（每小时）</text>
+<text x="1000" y="234" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#141414">周一</text>
+<rect x="1050" y="210" width="48" height="40" fill="#D52B1E" opacity="0.22"/>
+<text x="1074" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">22</text>
+<rect x="1102" y="210" width="48" height="40" fill="#D52B1E" opacity="0.44"/>
+<text x="1126" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">44</text>
+<rect x="1154" y="210" width="48" height="40" fill="#D52B1E" opacity="0.4"/>
+<text x="1178" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">40</text>
+<rect x="1206" y="210" width="48" height="40" fill="#D52B1E" opacity="0.47"/>
+<text x="1230" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">47</text>
+<rect x="1258" y="210" width="48" height="40" fill="#D52B1E" opacity="0.29"/>
+<text x="1282" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">29</text>
+<rect x="1310" y="210" width="48" height="40" fill="#D52B1E" opacity="0.34"/>
+<text x="1334" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">34</text>
+<rect x="1362" y="210" width="48" height="40" fill="#D52B1E" opacity="0.4"/>
+<text x="1386" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">40</text>
+<rect x="1414" y="210" width="48" height="40" fill="#D52B1E" opacity="0.36"/>
+<text x="1438" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">36</text>
+<rect x="1466" y="210" width="48" height="40" fill="#D52B1E" opacity="0.34"/>
+<text x="1490" y="236" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">34</text>
+<text x="1000" y="280" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#141414">周二</text>
+<rect x="1050" y="256" width="48" height="40" fill="#D52B1E" opacity="0.27"/>
+<text x="1074" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">27</text>
+<rect x="1102" y="256" width="48" height="40" fill="#D52B1E" opacity="0.4"/>
+<text x="1126" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">40</text>
+<rect x="1154" y="256" width="48" height="40" fill="#D52B1E" opacity="0.55"/>
+<text x="1178" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">55</text>
+<rect x="1206" y="256" width="48" height="40" fill="#D52B1E" opacity="0.53"/>
+<text x="1230" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">53</text>
+<rect x="1258" y="256" width="48" height="40" fill="#D52B1E" opacity="0.37"/>
+<text x="1282" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">37</text>
+<rect x="1310" y="256" width="48" height="40" fill="#D52B1E" opacity="0.6"/>
+<text x="1334" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">60</text>
+<rect x="1362" y="256" width="48" height="40" fill="#D52B1E" opacity="0.55"/>
+<text x="1386" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">55</text>
+<rect x="1414" y="256" width="48" height="40" fill="#D52B1E" opacity="0.5"/>
+<text x="1438" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">50</text>
+<rect x="1466" y="256" width="48" height="40" fill="#D52B1E" opacity="0.33"/>
+<text x="1490" y="282" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">33</text>
+<text x="1000" y="326" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#141414">周三</text>
+<rect x="1050" y="302" width="48" height="40" fill="#D52B1E" opacity="0.31"/>
+<text x="1074" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">31</text>
+<rect x="1102" y="302" width="48" height="40" fill="#D52B1E" opacity="0.46"/>
+<text x="1126" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">46</text>
+<rect x="1154" y="302" width="48" height="40" fill="#D52B1E" opacity="0.54"/>
+<text x="1178" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">54</text>
+<rect x="1206" y="302" width="48" height="40" fill="#D52B1E" opacity="0.53"/>
+<text x="1230" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">53</text>
+<rect x="1258" y="302" width="48" height="40" fill="#D52B1E" opacity="0.37"/>
+<text x="1282" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">37</text>
+<rect x="1310" y="302" width="48" height="40" fill="#D52B1E" opacity="0.55"/>
+<text x="1334" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">55</text>
+<rect x="1362" y="302" width="48" height="40" fill="#D52B1E" opacity="0.62"/>
+<text x="1386" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">62</text>
+<rect x="1414" y="302" width="48" height="40" fill="#D52B1E" opacity="0.48"/>
+<text x="1438" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">48</text>
+<rect x="1466" y="302" width="48" height="40" fill="#D52B1E" opacity="0.3"/>
+<text x="1490" y="328" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">30</text>
+<text x="1000" y="372" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#141414">周四</text>
+<rect x="1050" y="348" width="48" height="40" fill="#D52B1E" opacity="0.27"/>
+<text x="1074" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">27</text>
+<rect x="1102" y="348" width="48" height="40" fill="#D52B1E" opacity="0.48"/>
+<text x="1126" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">48</text>
+<rect x="1154" y="348" width="48" height="40" fill="#D52B1E" opacity="0.55"/>
+<text x="1178" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">55</text>
+<rect x="1206" y="348" width="48" height="40" fill="#D52B1E" opacity="0.52"/>
+<text x="1230" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">52</text>
+<rect x="1258" y="348" width="48" height="40" fill="#D52B1E" opacity="0.43"/>
+<text x="1282" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">43</text>
+<rect x="1310" y="348" width="48" height="40" fill="#D52B1E" opacity="0.52"/>
+<text x="1334" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">52</text>
+<rect x="1362" y="348" width="48" height="40" fill="#D52B1E" opacity="0.51"/>
+<text x="1386" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">51</text>
+<rect x="1414" y="348" width="48" height="40" fill="#D52B1E" opacity="0.47"/>
+<text x="1438" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">47</text>
+<rect x="1466" y="348" width="48" height="40" fill="#D52B1E" opacity="0.35"/>
+<text x="1490" y="374" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">35</text>
+<text x="1000" y="418" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" font-weight="700" fill="#141414">周五</text>
+<rect x="1050" y="394" width="48" height="40" fill="#D52B1E" opacity="0.12"/>
+<text x="1074" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">12</text>
+<rect x="1102" y="394" width="48" height="40" fill="#D52B1E" opacity="0.32"/>
+<text x="1126" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">32</text>
+<rect x="1154" y="394" width="48" height="40" fill="#D52B1E" opacity="0.28"/>
+<text x="1178" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">28</text>
+<rect x="1206" y="394" width="48" height="40" fill="#D52B1E" opacity="0.25"/>
+<text x="1230" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">25</text>
+<rect x="1258" y="394" width="48" height="40" fill="#D52B1E" opacity="0.23"/>
+<text x="1282" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">23</text>
+<rect x="1310" y="394" width="48" height="40" fill="#D52B1E" opacity="0.3"/>
+<text x="1334" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">30</text>
+<rect x="1362" y="394" width="48" height="40" fill="#D52B1E" opacity="0.34"/>
+<text x="1386" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">34</text>
+<rect x="1414" y="394" width="48" height="40" fill="#D52B1E" opacity="0.24"/>
+<text x="1438" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">24</text>
+<rect x="1466" y="394" width="48" height="40" fill="#D52B1E" opacity="0.2"/>
+<text x="1490" y="420" font-family="'Noto Sans CJK SC', sans-serif" font-size="13" font-weight="700" fill="#141414" text-anchor="middle">20</text>
+<text x="1074" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">9</text>
+<text x="1126" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">10</text>
+<text x="1178" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">11</text>
+<text x="1230" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">12</text>
+<text x="1282" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">13</text>
+<text x="1334" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">14</text>
+<text x="1386" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">15</text>
+<text x="1438" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">16</text>
+<text x="1490" y="460" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#141414" text-anchor="middle">17</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="结论">
+<rect x="1000" y="520" width="540" height="400" fill="#141414"/>
+<text x="1030" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="64" font-weight="900" fill="#D52B1E">62</text>
+<text x="1200" y="590" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#ECE6DA">峰值同时在座</text>
+<text x="1030" y="700" font-family="'Noto Sans CJK SC', sans-serif" font-size="64" font-weight="900" fill="#ECE6DA">40</text>
+<text x="1200" y="690" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#ECE6DA">平均同时在座</text>
+<text x="1030" y="800" font-family="'Noto Sans CJK SC', sans-serif" font-size="64" font-weight="900" fill="#F2C230">70</text>
+<text x="1200" y="790" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#ECE6DA">建议工位数（峰值 + 10%）</text>
+<text x="1030" y="900" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" font-weight="700" fill="#ECE6DA">可释放 30 个工位的面积，改作协作区或电话亭。</text>
+</g>
+</svg>

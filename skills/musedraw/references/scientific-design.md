@@ -116,7 +116,7 @@ Use the reference's object/category mappings; do not assign a new hue per box.
 
 | kind | Parameters | What it depicts |
 |---|---|---|
-| `graph` | `points:[{id,x,y,label?,fill?,stroke?,diameter?}]`, `links:[{from,to,directed?,color?,width?,dash?}]`, optional `diameter` | An explicitly supplied graph; point positions are frame fractions |
+| `graph` | `points:[{id,x,y,label?,labelPos?,labelGap?,fill?,stroke?,diameter?}]`, `links:[{from,to,directed?,color?,width?,dash?}]`, optional `diameter` | An explicitly supplied graph; point positions are frame fractions |
 | `network` | `layers:[3,5,4,2]`, optional `diameter` | A fully connected adjacent-layer schematic; unsuitable for arbitrary GNN topology |
 | `manifold` | optional explicit `points:[{id,x,y,fill?,stroke?,diameter?}]` in the unit disk and `links:[{from,to,color?,width?}]` | A spherical wireframe with visible great circles; a conceptual coordinate representation, not a plain circle or a calculated embedding |
 | `tensor` | rectangular `cells` of colour-role names or CSS colours, `depth` 1–6, pixel `offset:[dx,dy]`, `cellStroke` | Explicit feature cells/sheets; no inferred numerical scale |
@@ -126,6 +126,11 @@ Use the reference's object/category mappings; do not assign a new hue per box.
 | `formula` | `runs:[{text,sub?,sup?,vector?,italic?}]`; each script is a string or another run array, at most two script levels; optional `enclosure:"circle"` or `"box"` | Native text with real script positions and a separate vector arrow; no TeX runtime |
 | `laminate` | `layers:[{id,fill,label?,thickness?}]` (2–8), `deflection` 0–0.4, `gap` px, optional `electrodes:{layer,width?,fill?}`, `labelSide:"none"` or `"right"`, explicit `load:"F"` | A layered section with fixed ends and a smooth central bend; no material simulation |
 | `duplex` | explicit `sites:[{id,at,marks:[strandId],fill?,label?}]`; optional `strands:[{id,fill},{id,fill}]`, `turns`, `phase`, `amplitude`, `strandWidth`, `markerRadius`, `markerOffset`, `rungs` | Two continuous native backbones and independently editable paired site markers; no inferred sequence, methylation outcome or binding mechanism |
+
+Graph point captions default above the point. Use a point's `labelPos` to choose
+a side clear of its incident links; use `labelGap` for clearance rather than
+moving the point or changing topology. The supported sides, defaults and
+collision response are in [point caption placement](scientific-details.md#derived-graph-view).
 
 For paired site markers and condition comparisons, read the short
 [substrate comparison method](scientific-comparisons.md). Reuse one substrate

@@ -28,10 +28,7 @@ async function check(name,source,verify,alterSvg=x=>x){
   const dir=path.join(out,name);fs.mkdirSync(dir,{recursive:true});
   const svg=alterSvg(withSystemFonts(render(source,theme)));
   const result=await exportScene({svg,outDir:dir,browser,fontDirs:[],fontMode:'system',images:false});
-  assert.equal(result.drawio.native,true);
-  const xml=fs.readFileSync(path.join(dir,'diagram.drawio'),'utf8');
-  assert.doesNotMatch(xml,/<image\b|data:image|shape=image/);
-  assert.match(xml,/source="[^"]+" target="[^"]+"/,'edges keep native terminals');
+  assert.match(svg,/data-connection=/);
   verify(result);
   report.cases.push({name,passed:true,warnings:result.warnings});
 }

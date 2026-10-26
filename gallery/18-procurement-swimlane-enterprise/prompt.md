@@ -18,7 +18,7 @@
 node skills/musedraw/scripts/musedraw.mjs render gallery/18-procurement-swimlane-enterprise/scene.json
 ```
 
-`scene.json` 保存内容、布局与本例的配色及模块样式。默认交付 PNG 和原生可编辑 draw.io。
+`scene.json` 保存内容、布局与本例的配色及模块样式。默认交付 PNG，并保留 SVG 与场景 JSON。
 示例中的数字与机构设定用于说明；按自己的事实替换内容即可。图面默认不显示页眉、图号或署名。
 
-The scene preserves content, layout and this case's local visual tokens. Its default exports are PNG and native editable draw.io. Example values are illustrative.
+The scene preserves content, layout and this case's local visual tokens. Its default exports are PNG, SVG and scene JSON. Example values are illustrative.

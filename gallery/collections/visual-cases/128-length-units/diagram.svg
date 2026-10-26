@@ -1,0 +1,323 @@
+<svg data-theme="blueprint" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>长度单位</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#1C4F8A"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="网格">
+<line x1="0" y1="0" x2="0" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="20" y1="0" x2="20" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="40" y1="0" x2="40" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="60" y1="0" x2="60" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="80" y1="0" x2="80" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="100" y1="0" x2="100" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="120" y1="0" x2="120" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="140" y1="0" x2="140" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="160" y1="0" x2="160" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="180" y1="0" x2="180" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="200" y1="0" x2="200" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="220" y1="0" x2="220" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="240" y1="0" x2="240" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="260" y1="0" x2="260" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="280" y1="0" x2="280" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="300" y1="0" x2="300" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="320" y1="0" x2="320" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="340" y1="0" x2="340" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="360" y1="0" x2="360" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="380" y1="0" x2="380" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="400" y1="0" x2="400" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="420" y1="0" x2="420" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="440" y1="0" x2="440" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="460" y1="0" x2="460" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="480" y1="0" x2="480" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="500" y1="0" x2="500" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="520" y1="0" x2="520" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="540" y1="0" x2="540" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="560" y1="0" x2="560" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="580" y1="0" x2="580" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="600" y1="0" x2="600" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="620" y1="0" x2="620" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="640" y1="0" x2="640" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="660" y1="0" x2="660" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="680" y1="0" x2="680" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="700" y1="0" x2="700" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="720" y1="0" x2="720" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="740" y1="0" x2="740" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="760" y1="0" x2="760" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="780" y1="0" x2="780" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="800" y1="0" x2="800" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="820" y1="0" x2="820" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="840" y1="0" x2="840" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="860" y1="0" x2="860" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="880" y1="0" x2="880" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="900" y1="0" x2="900" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="920" y1="0" x2="920" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="940" y1="0" x2="940" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="960" y1="0" x2="960" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="980" y1="0" x2="980" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1000" y1="0" x2="1000" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="1020" y1="0" x2="1020" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1040" y1="0" x2="1040" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1060" y1="0" x2="1060" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1080" y1="0" x2="1080" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1100" y1="0" x2="1100" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1120" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1140" y1="0" x2="1140" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1160" y1="0" x2="1160" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1180" y1="0" x2="1180" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1200" y1="0" x2="1200" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="1220" y1="0" x2="1220" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1240" y1="0" x2="1240" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1260" y1="0" x2="1260" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1280" y1="0" x2="1280" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1300" y1="0" x2="1300" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="1320" y1="0" x2="1320" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1340" y1="0" x2="1340" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1360" y1="0" x2="1360" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1380" y1="0" x2="1380" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1400" y1="0" x2="1400" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="1420" y1="0" x2="1420" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1440" y1="0" x2="1440" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1460" y1="0" x2="1460" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1480" y1="0" x2="1480" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1500" y1="0" x2="1500" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="1520" y1="0" x2="1520" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1540" y1="0" x2="1540" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1560" y1="0" x2="1560" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1580" y1="0" x2="1580" y2="1000" stroke="#285C97" stroke-width="1"/>
+<line x1="1600" y1="0" x2="1600" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="0" x2="1600" y2="0" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="20" x2="1600" y2="20" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="40" x2="1600" y2="40" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="60" x2="1600" y2="60" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="80" x2="1600" y2="80" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="100" x2="1600" y2="100" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="120" x2="1600" y2="120" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="140" x2="1600" y2="140" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="160" x2="1600" y2="160" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="180" x2="1600" y2="180" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="200" x2="1600" y2="200" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="220" x2="1600" y2="220" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="240" x2="1600" y2="240" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="260" x2="1600" y2="260" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="280" x2="1600" y2="280" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="300" x2="1600" y2="300" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="320" x2="1600" y2="320" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="340" x2="1600" y2="340" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="360" x2="1600" y2="360" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="380" x2="1600" y2="380" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="400" x2="1600" y2="400" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="420" x2="1600" y2="420" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="440" x2="1600" y2="440" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="460" x2="1600" y2="460" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="480" x2="1600" y2="480" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="500" x2="1600" y2="500" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="520" x2="1600" y2="520" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="540" x2="1600" y2="540" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="560" x2="1600" y2="560" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="580" x2="1600" y2="580" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="600" x2="1600" y2="600" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="620" x2="1600" y2="620" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="640" x2="1600" y2="640" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="660" x2="1600" y2="660" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="680" x2="1600" y2="680" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="700" x2="1600" y2="700" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="720" x2="1600" y2="720" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="740" x2="1600" y2="740" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="760" x2="1600" y2="760" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="780" x2="1600" y2="780" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="800" x2="1600" y2="800" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="820" x2="1600" y2="820" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="840" x2="1600" y2="840" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="860" x2="1600" y2="860" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="880" x2="1600" y2="880" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="900" x2="1600" y2="900" stroke="#3A70AD" stroke-width="1"/>
+<line x1="0" y1="920" x2="1600" y2="920" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="940" x2="1600" y2="940" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="960" x2="1600" y2="960" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="980" x2="1600" y2="980" stroke="#285C97" stroke-width="1"/>
+<line x1="0" y1="1000" x2="1600" y2="1000" stroke="#3A70AD" stroke-width="1"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="图框">
+<rect x="28" y="28" width="1544" height="944" fill="none" stroke="#EAF3FF" stroke-width="2.5"/>
+<rect x="38" y="38" width="1524" height="924" fill="none" stroke="#EAF3FF" stroke-width="1"/>
+<text x="70" y="106" font-family="'Noto Sans CJK SC', sans-serif" font-size="40" font-weight="700" fill="#EAF3FF">长度单位</text>
+<text x="70" y="142" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#A9C4E6">毫米、厘米、分米、米、千米</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="直尺">
+<rect x="130" y="330" width="1260" height="110" fill="none" stroke="#EAF3FF" stroke-width="2.5"/>
+<line x1="160" y1="330" x2="160" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="160" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">0</text>
+<line x1="172" y1="330" x2="172" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="184" y1="330" x2="184" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="196" y1="330" x2="196" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="208" y1="330" x2="208" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="220" y1="330" x2="220" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="232" y1="330" x2="232" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="244" y1="330" x2="244" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="256" y1="330" x2="256" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="268" y1="330" x2="268" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="280" y1="330" x2="280" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="280" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">1</text>
+<line x1="292" y1="330" x2="292" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="304" y1="330" x2="304" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="316" y1="330" x2="316" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="328" y1="330" x2="328" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="340" y1="330" x2="340" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="352" y1="330" x2="352" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="364" y1="330" x2="364" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="376" y1="330" x2="376" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="388" y1="330" x2="388" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="400" y1="330" x2="400" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="400" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">2</text>
+<line x1="412" y1="330" x2="412" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="424" y1="330" x2="424" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="436" y1="330" x2="436" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="448" y1="330" x2="448" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="460" y1="330" x2="460" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="472" y1="330" x2="472" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="484" y1="330" x2="484" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="496" y1="330" x2="496" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="508" y1="330" x2="508" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="520" y1="330" x2="520" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="520" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">3</text>
+<line x1="532" y1="330" x2="532" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="544" y1="330" x2="544" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="556" y1="330" x2="556" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="568" y1="330" x2="568" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="580" y1="330" x2="580" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="592" y1="330" x2="592" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="604" y1="330" x2="604" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="616" y1="330" x2="616" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="628" y1="330" x2="628" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="640" y1="330" x2="640" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="640" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">4</text>
+<line x1="652" y1="330" x2="652" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="664" y1="330" x2="664" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="676" y1="330" x2="676" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="688" y1="330" x2="688" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="700" y1="330" x2="700" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="712" y1="330" x2="712" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="724" y1="330" x2="724" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="736" y1="330" x2="736" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="748" y1="330" x2="748" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="760" y1="330" x2="760" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="760" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">5</text>
+<line x1="772" y1="330" x2="772" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="784" y1="330" x2="784" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="796" y1="330" x2="796" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="808" y1="330" x2="808" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="820" y1="330" x2="820" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="832" y1="330" x2="832" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="844" y1="330" x2="844" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="856" y1="330" x2="856" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="868" y1="330" x2="868" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="880" y1="330" x2="880" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="880" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">6</text>
+<line x1="892" y1="330" x2="892" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="904" y1="330" x2="904" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="916" y1="330" x2="916" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="928" y1="330" x2="928" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="940" y1="330" x2="940" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="952" y1="330" x2="952" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="964" y1="330" x2="964" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="976" y1="330" x2="976" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="988" y1="330" x2="988" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1000" y1="330" x2="1000" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="1000" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">7</text>
+<line x1="1012" y1="330" x2="1012" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1024" y1="330" x2="1024" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1036" y1="330" x2="1036" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1048" y1="330" x2="1048" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1060" y1="330" x2="1060" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1072" y1="330" x2="1072" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1084" y1="330" x2="1084" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1096" y1="330" x2="1096" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1108" y1="330" x2="1108" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1120" y1="330" x2="1120" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="1120" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">8</text>
+<line x1="1132" y1="330" x2="1132" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1144" y1="330" x2="1144" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1156" y1="330" x2="1156" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1168" y1="330" x2="1168" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1180" y1="330" x2="1180" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1192" y1="330" x2="1192" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1204" y1="330" x2="1204" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1216" y1="330" x2="1216" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1228" y1="330" x2="1228" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1240" y1="330" x2="1240" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="1240" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">9</text>
+<line x1="1252" y1="330" x2="1252" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1264" y1="330" x2="1264" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1276" y1="330" x2="1276" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1288" y1="330" x2="1288" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1300" y1="330" x2="1300" y2="356" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1312" y1="330" x2="1312" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1324" y1="330" x2="1324" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1336" y1="330" x2="1336" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1348" y1="330" x2="1348" y2="344" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1360" y1="330" x2="1360" y2="370" stroke="#EAF3FF" stroke-width="2"/>
+<text x="1360" y="400" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">10</text>
+<text x="1382" y="428" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#A9C4E6" text-anchor="end">厘米</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="橡皮">
+<rect x="160" y="230" width="540" height="92" fill="none" stroke="#EAF3FF" stroke-width="2.5" rx="8"/>
+<line x1="310" y1="230" x2="310" y2="322" stroke="#EAF3FF" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="460" y="286" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF" text-anchor="middle">橡皮</text>
+<line x1="160" y1="222" x2="160" y2="186" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="700" y1="222" x2="700" y2="186" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="160" y1="196" x2="700" y2="196" stroke="#EAF3FF" stroke-width="1.2"/>
+<path d="M160.0,196.0 L169.1,191.9 L169.1,200.1 Z" fill="#EAF3FF"/>
+<path d="M700.0,196.0 L690.9,200.1 L690.9,191.9 Z" fill="#EAF3FF"/>
+<text x="430" y="184" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF" text-anchor="middle">4 厘米 5 毫米 = 45 毫米</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="详图">
+<circle cx="940" cy="372" r="70" fill="none" stroke="#EAF3FF" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="1006" y="300" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="800" fill="#EAF3FF">A</text>
+<text x="160" y="530" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF">详图 A　放大 3 倍：1 厘米里有 10 个 1 毫米</text>
+<rect x="140" y="560" width="400" height="120" fill="none" stroke="#EAF3FF" stroke-width="2"/>
+<line x1="160" y1="560" x2="160" y2="620" stroke="#EAF3FF" stroke-width="2"/>
+<line x1="196" y1="560" x2="196" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="232" y1="560" x2="232" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="268" y1="560" x2="268" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="304" y1="560" x2="304" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="340" y1="560" x2="340" y2="600" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="376" y1="560" x2="376" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="412" y1="560" x2="412" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="448" y1="560" x2="448" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="484" y1="560" x2="484" y2="586" stroke="#EAF3FF" stroke-width="1.2"/>
+<line x1="520" y1="560" x2="520" y2="620" stroke="#EAF3FF" stroke-width="2"/>
+<text x="160" y="650" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF" text-anchor="middle">6</text>
+<text x="520" y="650" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF" text-anchor="middle">7</text>
+<line x1="160" y1="668" x2="196" y2="668" stroke="#EAF3FF" stroke-width="1.2"/>
+<text x="206" y="672" font-family="'Noto Sans CJK SC', sans-serif" font-size="16" fill="#EAF3FF">1 毫米</text>
+</g>
+<g id="layer7" inkscape:groupmode="layer" inkscape:label="换算">
+<text x="760" y="530" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF">相邻单位之间的进率</text>
+<rect x="760" y="548" width="360" height="46" fill="none" stroke="#EAF3FF" stroke-width="1.5"/>
+<text x="780" y="580" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">1 千米</text>
+<text x="900" y="580" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#EAF3FF" text-anchor="middle">=</text>
+<text x="930" y="580" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">1000 米</text>
+<rect x="760" y="604" width="360" height="46" fill="none" stroke="#EAF3FF" stroke-width="1.5"/>
+<text x="780" y="636" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">1 米</text>
+<text x="900" y="636" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#EAF3FF" text-anchor="middle">=</text>
+<text x="930" y="636" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">10 分米</text>
+<rect x="760" y="660" width="360" height="46" fill="none" stroke="#EAF3FF" stroke-width="1.5"/>
+<text x="780" y="692" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">1 分米</text>
+<text x="900" y="692" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#EAF3FF" text-anchor="middle">=</text>
+<text x="930" y="692" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">10 厘米</text>
+<rect x="760" y="716" width="360" height="46" fill="none" stroke="#EAF3FF" stroke-width="1.5"/>
+<text x="780" y="748" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">1 厘米</text>
+<text x="900" y="748" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#EAF3FF" text-anchor="middle">=</text>
+<text x="930" y="748" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#EAF3FF">10 毫米</text>
+<text x="760" y="830" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF">所以 1 米 = 100 厘米 = 1000 毫米</text>
+<rect x="1150" y="846" width="410" height="116" fill="#1C4F8A" stroke="#EAF3FF" stroke-width="1.5"/>
+<line x1="1150" y1="904" x2="1560" y2="904" stroke="#EAF3FF" stroke-width="1"/>
+<line x1="1355" y1="904" x2="1355" y2="962" stroke="#EAF3FF" stroke-width="1"/>
+<text x="1164" y="870" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#A9C4E6">图名</text>
+<text x="1164" y="894" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#EAF3FF">长度单位与直尺</text>
+<text x="1164" y="924" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#A9C4E6">比例</text>
+<text x="1164" y="950" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#EAF3FF">直尺 1 厘米 = 120 像素</text>
+<text x="1369" y="924" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#A9C4E6">图号　日期</text>
+<text x="1369" y="950" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#EAF3FF">EDU-128　2026-10-26</text>
+</g>
+</svg>

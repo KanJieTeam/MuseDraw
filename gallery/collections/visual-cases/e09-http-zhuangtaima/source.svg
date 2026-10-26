@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+<title>HTTP 状态码</title>
+<g data-md-layer="海报">
+<rect width="1600" height="1100" fill="#FFFFFF"/>
+<text id="title" x="60" y="110" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="76" fill="#111111" font-weight="900">HTTP 状态码</text>
+<text x="64" y="160" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="26" fill="#111111">看第一位数字就知道是谁的问题</text>
+<text x="60" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="150" fill="#111111" font-weight="700" letter-spacing="-6">1xx</text>
+<rect x="60" y="420" width="276" height="6" fill="#111111"/>
+<text x="60" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#111111" font-weight="900">信息</text>
+<text x="60" y="530" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">100</text>
+<text x="136" y="522" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Continue</text>
+<text x="136" y="544" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">继续发送请求体</text>
+<text x="60" y="616" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">101</text>
+<text x="136" y="608" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Switching Protocols</text>
+<text x="136" y="630" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">切换协议</text>
+<text x="356" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="150" fill="#111111" font-weight="700" letter-spacing="-6">2xx</text>
+<rect x="356" y="420" width="276" height="6" fill="#111111"/>
+<text x="356" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#111111" font-weight="900">成功</text>
+<text x="356" y="530" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">200</text>
+<text x="432" y="522" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">OK</text>
+<text x="432" y="544" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">请求成功</text>
+<text x="356" y="616" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">201</text>
+<text x="432" y="608" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Created</text>
+<text x="432" y="630" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">已创建新资源</text>
+<text x="356" y="702" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">204</text>
+<text x="432" y="694" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">No Content</text>
+<text x="432" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">成功，但没有返回内容</text>
+<text x="652" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="150" fill="#111111" font-weight="700" letter-spacing="-6">3xx</text>
+<rect x="652" y="420" width="276" height="6" fill="#111111"/>
+<text x="652" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#111111" font-weight="900">重定向</text>
+<text x="652" y="530" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">301</text>
+<text x="728" y="522" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Moved Permanently</text>
+<text x="728" y="544" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">永久搬家</text>
+<text x="652" y="616" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">302</text>
+<text x="728" y="608" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Found</text>
+<text x="728" y="630" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">临时跳转</text>
+<text x="652" y="702" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">304</text>
+<text x="728" y="694" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Not Modified</text>
+<text x="728" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">没变，用你的缓存</text>
+<text x="948" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="150" fill="#E30613" font-weight="700" letter-spacing="-6">4xx</text>
+<rect x="948" y="420" width="276" height="6" fill="#E30613"/>
+<text x="948" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#E30613" font-weight="900">客户端错误</text>
+<text x="948" y="530" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">400</text>
+<text x="1024" y="522" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Bad Request</text>
+<text x="1024" y="544" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">请求格式不对</text>
+<text x="948" y="616" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">401</text>
+<text x="1024" y="608" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Unauthorized</text>
+<text x="1024" y="630" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">没登录或令牌无效</text>
+<text x="948" y="702" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">403</text>
+<text x="1024" y="694" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Forbidden</text>
+<text x="1024" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">登录了，但没权限</text>
+<text x="948" y="788" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">404</text>
+<text x="1024" y="780" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Not Found</text>
+<text x="1024" y="802" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">资源不存在</text>
+<text x="948" y="874" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">409</text>
+<text x="1024" y="866" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Conflict</text>
+<text x="1024" y="888" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">与当前状态冲突</text>
+<text x="948" y="960" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">429</text>
+<text x="1024" y="952" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Too Many Requests</text>
+<text x="1024" y="974" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">请求太频繁，被限流</text>
+<text x="1244" y="400" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="150" fill="#E30613" font-weight="700" letter-spacing="-6">5xx</text>
+<rect x="1244" y="420" width="276" height="6" fill="#E30613"/>
+<text x="1244" y="466" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" fill="#E30613" font-weight="900">服务端错误</text>
+<text x="1244" y="530" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">500</text>
+<text x="1320" y="522" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Internal Server Error</text>
+<text x="1320" y="544" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">服务器内部出错</text>
+<text x="1244" y="616" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">502</text>
+<text x="1320" y="608" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Bad Gateway</text>
+<text x="1320" y="630" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">网关收到上游的错误响应</text>
+<text x="1244" y="702" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">503</text>
+<text x="1320" y="694" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Service Unavailable</text>
+<text x="1320" y="716" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">暂时不可用，如过载或维护</text>
+<text x="1244" y="788" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" fill="#111111" font-weight="700">504</text>
+<text x="1320" y="780" font-family="'TeX Gyre Heros','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" fill="#666666">Gateway Timeout</text>
+<text x="1320" y="802" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#111111" font-weight="500">网关等上游超时</text>
+<rect x="60" y="1040" width="1480" height="2" fill="#111111"/>
+<text x="60" y="1076" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="22" fill="#111111" font-weight="500">4 开头先查请求本身；5 开头先查服务器和上游。</text>
+</g>
+</svg>

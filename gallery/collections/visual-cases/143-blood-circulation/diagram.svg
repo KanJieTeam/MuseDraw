@@ -1,0 +1,61 @@
+<svg data-theme="metro" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>血液循环线路图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#FFFFFF"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="心脏底">
+<rect x="560" y="350" width="480" height="280" rx="40" fill="#FBEDEE" stroke="#E3B5B8" stroke-width="2"/>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="线路">
+<path d="M640.0,560.0 L500.0,560.0 L500.0,220.0 L560.0,160.0 L800.0,160.0" fill="none" stroke="#1D6FB8" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M800.0,160.0 L1040.0,160.0 L1100.0,220.0 L1100.0,420.0 L960.0,420.0" fill="none" stroke="#D7282F" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M960.0,560.0 L1300.0,560.0 L1300.0,820.0 L1240.0,880.0 L800.0,880.0" fill="none" stroke="#D7282F" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M800.0,880.0 L360.0,880.0 L300.0,820.0 L300.0,480.0 L360.0,420.0 L640.0,420.0" fill="none" stroke="#1D6FB8" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="心脏">
+<text x="800" y="336" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="800" fill="#B04A52" text-anchor="middle">心脏</text>
+<line x1="640" y1="420" x2="640" y2="560" stroke="#1A1A1A" stroke-width="8"/>
+<text x="624" y="496" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="end">房室瓣</text>
+<line x1="960" y1="420" x2="960" y2="560" stroke="#1A1A1A" stroke-width="8"/>
+<text x="976" y="496" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="start">房室瓣</text>
+<circle cx="640" cy="420" r="20" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="672" y="428" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" font-weight="800" fill="#1A1A1A" text-anchor="start">右心房</text>
+<circle cx="640" cy="560" r="20" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="672" y="568" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" font-weight="800" fill="#1A1A1A" text-anchor="start">右心室</text>
+<circle cx="960" cy="420" r="20" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="928" y="428" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" font-weight="800" fill="#1A1A1A" text-anchor="end">左心房</text>
+<circle cx="960" cy="560" r="20" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="5"/>
+<text x="928" y="568" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" font-weight="800" fill="#1A1A1A" text-anchor="end">左心室</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="车站">
+<circle cx="500" cy="360" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="474" y="362" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="end">肺动脉</text>
+<text x="474" y="384" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="end">静脉血</text>
+<circle cx="800" cy="160" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="800" y="118" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">肺部毛细血管</text>
+<text x="800" y="138" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">气体交换</text>
+<circle cx="1100" cy="300" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1126" y="302" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A">肺静脉</text>
+<text x="1126" y="324" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777">动脉血</text>
+<circle cx="1300" cy="690" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1326" y="692" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A">主动脉</text>
+<text x="1326" y="714" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777">动脉血</text>
+<circle cx="800" cy="880" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="800" y="924" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">全身毛细血管</text>
+<text x="800" y="944" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="middle">物质交换</text>
+<circle cx="300" cy="650" r="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="274" y="652" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="end">上、下腔静脉</text>
+<text x="274" y="674" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#777777" text-anchor="end">静脉血</text>
+<text x="800" y="270" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#8A9AB0" text-anchor="middle">肺循环</text>
+<text x="800" y="780" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#8A9AB0" text-anchor="middle">体循环</text>
+</g>
+<g id="layer6" inkscape:groupmode="layer" inkscape:label="标题与图例">
+<text x="70" y="90" font-family="'Noto Sans CJK SC', sans-serif" font-size="40" font-weight="800" fill="#1A1A1A">血液循环线路图</text>
+<text x="72" y="126" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#777777">线的颜色表示血液成分</text>
+<rect x="1180" y="70" width="54" height="14" fill="#D7282F" rx="7"/>
+<text x="1246" y="83" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#1A1A1A">动脉血：含氧丰富，鲜红</text>
+<rect x="1180" y="110" width="54" height="14" fill="#1D6FB8" rx="7"/>
+<text x="1246" y="123" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#1A1A1A">静脉血：含氧较少，暗红</text>
+<text x="340" y="660" font-family="'Noto Sans CJK SC', sans-serif" font-size="17" fill="#1A1A1A"><tspan x="340" dy="0">注意：肺动脉里流的是静脉血，肺静脉里流的是动脉</tspan><tspan x="340" dy="27.2">血——名称看血管连着心脏的哪一侧，不看血液成分。</tspan></text>
+</g>
+</svg>

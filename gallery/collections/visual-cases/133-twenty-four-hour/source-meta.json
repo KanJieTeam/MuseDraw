@@ -1,0 +1,35 @@
+{
+  "id": "133",
+  "title": "24 时计时法",
+  "use": "教学",
+  "style": "终端暗色",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "窗口",
+    "命令",
+    "表盘"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）",
+    "DejaVu Sans Mono"
+  ],
+  "features": [],
+  "example_data": false,
+  "computed": [
+    "经过时间按分钟相减后对 1440 取模，处理跨过 0 时的情况；程序断言 8:30 到 15:10 为 6 小时 40 分，21:30 到 6:45 为 9 小时 15 分。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

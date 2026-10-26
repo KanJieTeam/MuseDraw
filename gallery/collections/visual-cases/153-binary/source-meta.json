@@ -1,0 +1,37 @@
+{
+  "id": "153",
+  "title": "二进制",
+  "use": "教学",
+  "style": "终端暗色",
+  "theme": "教学（中学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "窗口",
+    "除二取余",
+    "按权展开",
+    "八位指示灯"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）",
+    "DejaVu Sans Mono"
+  ],
+  "features": [],
+  "example_data": false,
+  "computed": [
+    "除二取余步骤由循环生成，程序断言余数倒序为 1101，且等于 bin(13)；断言 0101 + 0011 = 1000。",
+    "0 到 8 的二进制对照表由 format(i, \"04b\") 生成。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

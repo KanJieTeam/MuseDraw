@@ -1,0 +1,37 @@
+{
+  "id": "104",
+  "title": "Pod 调度：过滤与打分",
+  "use": "工程",
+  "style": "纸墨编辑",
+  "pack": 6,
+  "canvas": [
+    1400,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题与导语",
+    "节点表",
+    "脚注"
+  ],
+  "fonts": [
+    "Noto Serif CJK SC（思源宋体）"
+  ],
+  "features": [
+    "半透明"
+  ],
+  "example_data": true,
+  "computed": [
+    "逐个节点按污点、标签、CPU、内存判断是否通过过滤，并生成批注文字。",
+    "通过的三个节点得分：node-b 21.9，node-e 53.1，node-g 39.1；断言最高分为 node-e。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "155",
+  "title": "频数分布直方图",
+  "use": "教学",
+  "style": "商务墨蓝",
+  "theme": "教学（中学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "直方图",
+    "统计量",
+    "说明"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [],
+  "example_data": true,
+  "computed": [
+    "频数 [0, 5, 12, 21, 6, 6]，合计 50，程序断言；平均数 74.3，中位数 72.5，极差 47。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "subjectBBox": {
+    "x": 210,
+    "y": 110,
+    "w": 180,
+    "h": 380
+  },
+  "blankSides": [
+    "left",
+    "right"
+  ],
+  "fontSize": 18,
+  "fontFamily": "Segoe UI, Microsoft YaHei, sans-serif",
+  "margin": 18,
+  "gutter": 20,
+  "gap": 14,
+  "annotations": [
+    {
+      "id": "housing",
+      "text": "Outer housing keeps the illustrated assembly together",
+      "anchor": [
+        214,
+        190
+      ],
+      "side": "left"
+    },
+    {
+      "id": "seal",
+      "text": "Upper seal around the internal instrument chamber",
+      "anchor": [
+        232,
+        165
+      ],
+      "side": "left"
+    },
+    {
+      "id": "membrane",
+      "text": "Flexible membrane shown as a curved section",
+      "anchor": [
+        270,
+        316
+      ],
+      "side": "left"
+    },
+    {
+      "id": "mount",
+      "text": "Lower mounting section of this schematic instrument",
+      "anchor": [
+        240,
+        460
+      ],
+      "side": "left"
+    },
+    {
+      "id": "screw",
+      "text": "Fastener at the upper corner of the housing",
+      "anchor": [
+        358,
+        132
+      ],
+      "side": "right"
+    },
+    {
+      "id": "probe",
+      "text": "Central probe and its straight vertical support",
+      "anchor": [
+        300,
+        245
+      ],
+      "side": "right"
+    },
+    {
+      "id": "chamber",
+      "text": "Open chamber around the probe and membrane",
+      "anchor": [
+        365,
+        285
+      ],
+      "side": "right"
+    },
+    {
+      "id": "readout",
+      "text": "Readout connector at the bottom of the assembly",
+      "anchor": [
+        330,
+        440
+      ],
+      "side": "right"
+    }
+  ]
+}

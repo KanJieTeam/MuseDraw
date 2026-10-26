@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>三视图</title>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#ECE6DA"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="70" y="116" font-family="'Noto Sans CJK SC', sans-serif" font-size="58" font-weight="900" fill="#141414">三视图</text>
+<rect x="70" y="146" width="1460" height="12" fill="#141414"/>
+<text x="1530" y="116" font-family="'Noto Sans CJK SC', sans-serif" font-size="26" font-weight="800" fill="#141414" text-anchor="end">长对正　高平齐　宽相等</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="立体图">
+<path d="M280.0,690.0 L315.0,655.0 L315.0,585.0 L280.0,620.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,620.0 L280.0,620.0 L315.0,585.0 L245.0,585.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,690.0 L280.0,690.0 L280.0,620.0 L210.0,620.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M280.0,620.0 L315.0,585.0 L315.0,515.0 L280.0,550.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,550.0 L280.0,550.0 L315.0,515.0 L245.0,515.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,620.0 L280.0,620.0 L280.0,550.0 L210.0,550.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M280.0,550.0 L315.0,515.0 L315.0,445.0 L280.0,480.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,480.0 L280.0,480.0 L315.0,445.0 L245.0,445.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,550.0 L280.0,550.0 L280.0,480.0 L210.0,480.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M245.0,725.0 L280.0,690.0 L280.0,620.0 L245.0,655.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M175.0,655.0 L245.0,655.0 L280.0,620.0 L210.0,620.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M175.0,725.0 L245.0,725.0 L245.0,655.0 L175.0,655.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M315.0,725.0 L350.0,690.0 L350.0,620.0 L315.0,655.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M245.0,655.0 L315.0,655.0 L350.0,620.0 L280.0,620.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M245.0,725.0 L315.0,725.0 L315.0,655.0 L245.0,655.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M245.0,655.0 L280.0,620.0 L280.0,550.0 L245.0,585.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M175.0,585.0 L245.0,585.0 L280.0,550.0 L210.0,550.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M175.0,655.0 L245.0,655.0 L245.0,585.0 L175.0,585.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,760.0 L245.0,725.0 L245.0,655.0 L210.0,690.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M140.0,690.0 L210.0,690.0 L245.0,655.0 L175.0,655.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M140.0,760.0 L210.0,760.0 L210.0,690.0 L140.0,690.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M280.0,760.0 L315.0,725.0 L315.0,655.0 L280.0,690.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,690.0 L280.0,690.0 L315.0,655.0 L245.0,655.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M210.0,760.0 L280.0,760.0 L280.0,690.0 L210.0,690.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M350.0,760.0 L385.0,725.0 L385.0,655.0 L350.0,690.0 Z" fill="#1D4E9E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M280.0,690.0 L350.0,690.0 L385.0,655.0 L315.0,655.0 Z" fill="#F2C230" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<path d="M280.0,760.0 L350.0,760.0 L350.0,690.0 L280.0,690.0 Z" fill="#D52B1E" stroke="#141414" stroke-width="3" stroke-linejoin="round"/>
+<line x1="245" y1="880" x2="245" y2="804.4" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+<path d="M245.0,790.0 L252.3,806.4 L237.7,806.4 Z" fill="#141414"/>
+<text x="245" y="918" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="800" fill="#141414" text-anchor="middle">从正面看</text>
+<text x="140" y="240" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="700" fill="#141414">由 9 个同样的小正方体搭成</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="三视图">
+<rect x="820" y="372" width="56" height="56" fill="#D52B1E" stroke="#141414" stroke-width="3"/>
+<rect x="820" y="316" width="56" height="56" fill="#D52B1E" stroke="#141414" stroke-width="3"/>
+<rect x="820" y="260" width="56" height="56" fill="#D52B1E" stroke="#141414" stroke-width="3"/>
+<rect x="876" y="372" width="56" height="56" fill="#D52B1E" stroke="#141414" stroke-width="3"/>
+<rect x="932" y="372" width="56" height="56" fill="#D52B1E" stroke="#141414" stroke-width="3"/>
+<rect x="1108" y="372" width="56" height="56" fill="#1D4E9E" stroke="#141414" stroke-width="3"/>
+<rect x="1108" y="316" width="56" height="56" fill="#1D4E9E" stroke="#141414" stroke-width="3"/>
+<rect x="1108" y="260" width="56" height="56" fill="#1D4E9E" stroke="#141414" stroke-width="3"/>
+<rect x="1164" y="372" width="56" height="56" fill="#1D4E9E" stroke="#141414" stroke-width="3"/>
+<rect x="1164" y="316" width="56" height="56" fill="#1D4E9E" stroke="#141414" stroke-width="3"/>
+<rect x="1220" y="372" width="56" height="56" fill="#1D4E9E" stroke="#141414" stroke-width="3"/>
+<rect x="820" y="548" width="56" height="56" fill="#F2C230" stroke="#141414" stroke-width="3"/>
+<rect x="820" y="604" width="56" height="56" fill="#F2C230" stroke="#141414" stroke-width="3"/>
+<rect x="820" y="660" width="56" height="56" fill="#F2C230" stroke="#141414" stroke-width="3"/>
+<rect x="876" y="604" width="56" height="56" fill="#F2C230" stroke="#141414" stroke-width="3"/>
+<rect x="876" y="660" width="56" height="56" fill="#F2C230" stroke="#141414" stroke-width="3"/>
+<rect x="932" y="660" width="56" height="56" fill="#F2C230" stroke="#141414" stroke-width="3"/>
+<line x1="820" y1="436" x2="820" y2="540" stroke="#141414" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="988" y1="436" x2="988" y2="540" stroke="#141414" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="996" y1="260" x2="1100" y2="260" stroke="#141414" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="820" y="240" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#141414">主视图</text>
+<text x="1108" y="240" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#141414">左视图</text>
+<text x="820" y="756" font-family="'Noto Sans CJK SC', sans-serif" font-size="24" font-weight="800" fill="#141414">俯视图</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="口诀">
+<rect x="1200" y="640" width="330" height="250" fill="#141414"/>
+<text x="1226" y="690" font-family="'Noto Sans CJK SC', sans-serif" font-size="21" font-weight="700" fill="#ECE6DA"><tspan x="1226" dy="0">主视图与俯视图</tspan><tspan x="1226" dy="31.5">　长对正</tspan><tspan x="1226" dy="31.5">主视图与左视图</tspan><tspan x="1226" dy="31.5">　高平齐</tspan><tspan x="1226" dy="31.5">俯视图与左视图</tspan><tspan x="1226" dy="31.5">　宽相等</tspan></text>
+</g>
+</svg>

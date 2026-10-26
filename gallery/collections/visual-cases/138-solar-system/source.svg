@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1600" height="1000" viewBox="0 0 1600 1000">
+<title>太阳系八大行星</title>
+<defs><radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE9A8" stop-opacity="1"/><stop offset="0.6" stop-color="#FFB347" stop-opacity="1"/><stop offset="1" stop-color="#FF7A1A" stop-opacity="0"/></radialGradient></defs>
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="背景">
+<rect x="0" y="0" width="1600" height="1000" fill="#000000"/>
+</g>
+<g id="layer2" inkscape:groupmode="layer" inkscape:label="标题">
+<text x="90" y="120" font-family="'Noto Sans CJK SC', sans-serif" font-size="60" font-weight="700" fill="#FFFFFF">太阳系八大行星</text>
+<text x="92" y="166" font-family="'Noto Sans CJK SC', sans-serif" font-size="22" fill="#8E8E93">大小按同一比例，距离按另一个比例</text>
+</g>
+<g id="layer3" inkscape:groupmode="layer" inkscape:label="大小">
+<circle cx="123.64" cy="420" r="3.64" fill="#9C9C9C"/>
+<text x="123.64" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">水星</text>
+<text x="123.64" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">0.383 倍</text>
+<circle cx="236.29" cy="420" r="9.02" fill="#E3C07A"/>
+<text x="236.29" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">金星</text>
+<text x="236.29" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">0.949 倍</text>
+<circle cx="354.81" cy="420" r="9.5" fill="#3C7DD9"/>
+<text x="354.81" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">地球</text>
+<text x="354.81" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">基准</text>
+<circle cx="469.36" cy="420" r="5.05" fill="#C1440E"/>
+<text x="469.36" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">火星</text>
+<text x="469.36" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">0.532 倍</text>
+<circle cx="680.91" cy="420" r="106.5" fill="#D8B48A"/>
+<text x="680.91" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">木星</text>
+<text x="680.91" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">11.21 倍</text>
+<ellipse cx="1024.91" cy="420" rx="197.5" ry="40.4" fill="none" stroke="#CDBB8C" stroke-width="7" opacity="0.85"/>
+<circle cx="1024.91" cy="420" r="89.77" fill="#E3D2A0"/>
+<text x="1024.91" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">土星</text>
+<text x="1024.91" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">9.45 倍</text>
+<circle cx="1300.51" cy="420" r="38.09" fill="#9FD8E0"/>
+<text x="1300.51" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">天王星</text>
+<text x="1300.51" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">4.01 倍</text>
+<circle cx="1415.47" cy="420" r="36.86" fill="#4F6FD6"/>
+<text x="1415.47" y="600" font-family="'Noto Sans CJK SC', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">海王星</text>
+<text x="1415.47" y="626" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="middle">3.88 倍</text>
+<text x="120" y="660" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93">直径：以地球为 1</text>
+</g>
+<g id="layer4" inkscape:groupmode="layer" inkscape:label="距离">
+<circle cx="60" cy="760" r="70" fill="url(#sun)"/>
+<line x1="120" y1="760" x2="1480" y2="760" stroke="#3A3A3C" stroke-width="2"/>
+<circle cx="136.98" cy="760" r="6" fill="#9C9C9C"/>
+<path d="M137.0,752.0 L137.0,730.0 L200.0,730.0" fill="none" stroke="#48484A" stroke-width="1"/>
+<text x="206" y="735" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93">水星 0.387</text>
+<circle cx="151.72" cy="760" r="6" fill="#E3C07A"/>
+<path d="M151.7,752.0 L151.7,716.0 L310.0,716.0" fill="none" stroke="#48484A" stroke-width="1"/>
+<text x="316" y="721" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93">金星 0.723</text>
+<circle cx="163.87" cy="760" r="6" fill="#3C7DD9"/>
+<path d="M163.9,752.0 L163.9,702.0 L420.0,702.0" fill="none" stroke="#48484A" stroke-width="1"/>
+<text x="426" y="707" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93">地球 1</text>
+<circle cx="186.86" cy="760" r="6" fill="#C1440E"/>
+<path d="M186.9,752.0 L186.9,688.0 L530.0,688.0" fill="none" stroke="#48484A" stroke-width="1"/>
+<text x="536" y="693" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93">火星 1.524</text>
+<circle cx="348.26" cy="760" r="6" fill="#D8B48A"/>
+<text x="348.26" y="792" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#8E8E93" text-anchor="middle">木星 5.203</text>
+<circle cx="538.4" cy="760" r="6" fill="#E3D2A0"/>
+<text x="538.4" y="792" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#8E8E93" text-anchor="middle">土星 9.537</text>
+<circle cx="961.88" cy="760" r="6" fill="#9FD8E0"/>
+<text x="961.88" y="792" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#8E8E93" text-anchor="middle">天王星 19.19</text>
+<circle cx="1439.2" cy="760" r="6" fill="#4F6FD6"/>
+<text x="1439.2" y="792" font-family="'Noto Sans CJK SC', sans-serif" font-size="15" fill="#8E8E93" text-anchor="middle">海王星 30.07</text>
+<text x="1480" y="824" font-family="'Noto Sans CJK SC', sans-serif" font-size="14" fill="#8E8E93" text-anchor="end">距离单位：天文单位（日地平均距离 = 1）</text>
+</g>
+<g id="layer5" inkscape:groupmode="layer" inkscape:label="光速">
+<text x="90" y="900" font-family="'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="600" fill="#FFFFFF">8 分 19 秒</text>
+<text x="90" y="940" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#8E8E93">阳光走到地球</text>
+<text x="500" y="900" font-family="'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="600" fill="#FFFFFF">约 4 小时 10 分</text>
+<text x="500" y="940" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#8E8E93">阳光走到海王星</text>
+<text x="1000" y="900" font-family="'Noto Sans CJK SC', sans-serif" font-size="44" font-weight="600" fill="#FFFFFF">1,300 倍</text>
+<text x="1000" y="940" font-family="'Noto Sans CJK SC', sans-serif" font-size="18" fill="#8E8E93">木星体积大约是地球的倍数</text>
+</g>
+</svg>

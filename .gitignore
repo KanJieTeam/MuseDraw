@@ -13,3 +13,6 @@ Thumbs.db
 # Large renders: regenerate with `npm run gallery` (preview.jpg and diagram.svg are committed)
 gallery/*/diagram@2x.png
 skills/musedraw/node_modules
+# Private contributor queue databases
+experiments/visual-study/*.sqlite3
+experiments/visual-study/*.sqlite3-*

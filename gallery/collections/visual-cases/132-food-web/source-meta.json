@@ -1,0 +1,37 @@
+{
+  "id": "132",
+  "title": "食物链与食物网",
+  "use": "教学",
+  "style": "暖陶",
+  "theme": "教学（小学）",
+  "canvas": [
+    1600,
+    1000
+  ],
+  "layers": [
+    "背景",
+    "标题",
+    "箭头",
+    "生物",
+    "食物链清单"
+  ],
+  "fonts": [
+    "Noto Sans CJK SC（思源黑体）"
+  ],
+  "features": [
+    "半透明"
+  ],
+  "example_data": true,
+  "computed": [
+    "从“草”出发做深度优先搜索，枚举到没有天敌的动物为止，得到 6 条食物链，最长 5 个环节，程序断言。"
+  ],
+  "files": [
+    "final.svg",
+    "final.png",
+    "README.md",
+    "meta.json"
+  ],
+  "checks": {
+    "文字越界与重叠（程序检查）": "通过"
+  }
+}

@@ -1,0 +1,70 @@
+<svg data-theme="editorial" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+<title>补书：古籍修复工作坊海报</title>
+<g data-md-layer="背景">
+<rect id="paper" width="1200" height="1600" fill="#DCE1DA"/>
+</g>
+<g data-md-layer="书衣">
+<rect id="cover" x="150" y="110" width="900" height="1180" fill="#2A3957"/>
+<line x1="176" y1="110" x2="176" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="202" y1="110" x2="202" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="228" y1="110" x2="228" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="254" y1="110" x2="254" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="280" y1="110" x2="280" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="306" y1="110" x2="306" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="332" y1="110" x2="332" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="358" y1="110" x2="358" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="384" y1="110" x2="384" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="410" y1="110" x2="410" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="436" y1="110" x2="436" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="462" y1="110" x2="462" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="488" y1="110" x2="488" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="514" y1="110" x2="514" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="540" y1="110" x2="540" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="566" y1="110" x2="566" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="592" y1="110" x2="592" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="618" y1="110" x2="618" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="644" y1="110" x2="644" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="670" y1="110" x2="670" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="696" y1="110" x2="696" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="722" y1="110" x2="722" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="748" y1="110" x2="748" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="774" y1="110" x2="774" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="800" y1="110" x2="800" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="826" y1="110" x2="826" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="852" y1="110" x2="852" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="878" y1="110" x2="878" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="904" y1="110" x2="904" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="930" y1="110" x2="930" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+<line x1="956" y1="110" x2="956" y2="1290" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+</g>
+<g data-md-layer="修补">
+<path id="paste-margin" d="M150 1290 L150 1037 L165.16 1036.33 L174.75 1034.13 L181.99 1035.1 L188.49 1037.07 L196.74 1036.68 L201.5 1040.98 L207.95 1043.01 L211.28 1049.24 L215.2 1054.67 L219.94 1059 L225.18 1062.65 L227.7 1069.98 L233.16 1073.33 L239.83 1075.07 L246.16 1077.27 L249.99 1082.82 L253.84 1088.34 L259.59 1091.31 L260.87 1100.29 L267.86 1101.6 L271.57 1107.31 L277.43 1110.14 L284.2 1111.74 L291.61 1112.48 L299.34 1112.8 L302.57 1119.15 L307.73 1122.92 L310.98 1129.26 L312.93 1137.33 L316.49 1143.25 L318.77 1150.88 L323.28 1155.52 L328.77 1158.84 L335.3 1160.78 L339.24 1166.18 L342.95 1171.89 L347.27 1176.79 L350.27 1183.45 L353.7 1189.54 L360.09 1191.66 L365.99 1194.43 L371.95 1197.11 L380.94 1195.73 L388.85 1195.81 L397.42 1194.98 L403.69 1197.26 L408.27 1201.8 L415.74 1202.46 L418.5 1209.45 L425 1211.42 L431.99 1212.73 L436.37 1217.55 L443.41 1218.78 L447.56 1223.9 L454.15 1225.74 L458.36 1230.79 L461.15 1237.74 L465.22 1242.96 L466.89 1251.43 L471.71 1255.65 L475.37 1261.43 L479.28 1266.88 L482.34 1273.46 L489 1290 Z" fill="#37486C"/>
+<path id="repair-patch" d="M150 1290 L150 1046 L159.78 1043.55 L169.38 1041.35 L176.62 1042.32 L183.11 1044.29 L191.37 1043.9 L196.13 1048.2 L202.58 1050.23 L205.91 1056.46 L209.83 1061.89 L214.57 1066.22 L219.81 1069.87 L222.33 1077.2 L227.79 1080.55 L234.46 1082.29 L240.78 1084.49 L244.62 1090.04 L248.47 1095.56 L254.22 1098.53 L255.5 1107.51 L262.49 1108.82 L266.2 1114.53 L272.06 1117.36 L278.83 1118.96 L286.24 1119.7 L293.96 1120.02 L297.2 1126.37 L302.36 1130.14 L305.61 1136.48 L307.56 1144.55 L311.11 1150.47 L313.4 1158.11 L317.91 1162.74 L323.4 1166.07 L329.92 1168 L333.87 1173.4 L337.58 1179.11 L341.89 1184.01 L344.9 1190.67 L348.33 1196.76 L354.72 1198.88 L360.62 1201.65 L366.58 1204.33 L375.57 1202.95 L383.47 1203.03 L392.05 1202.2 L398.32 1204.48 L402.9 1209.02 L410.37 1209.68 L413.13 1216.67 L419.63 1218.64 L426.61 1219.95 L430.99 1224.77 L438.04 1226 L442.19 1231.12 L448.78 1232.96 L452.98 1238.01 L455.77 1244.97 L459.85 1250.18 L461.52 1258.65 L466.34 1262.87 L470 1268.65 L473.9 1274.1 L476.97 1280.68 L478 1290 Z" fill="#4B5F86"/>
+<path id="patch-fibres" d="M150 1046 L159.78 1043.55 L169.38 1041.35 L176.62 1042.32 L183.11 1044.29 L191.37 1043.9 L196.13 1048.2 L202.58 1050.23 L205.91 1056.46 L209.83 1061.89 L214.57 1066.22 L219.81 1069.87 L222.33 1077.2 L227.79 1080.55 L234.46 1082.29 L240.78 1084.49 L244.62 1090.04 L248.47 1095.56 L254.22 1098.53 L255.5 1107.51 L262.49 1108.82 L266.2 1114.53 L272.06 1117.36 L278.83 1118.96 L286.24 1119.7 L293.96 1120.02 L297.2 1126.37 L302.36 1130.14 L305.61 1136.48 L307.56 1144.55 L311.11 1150.47 L313.4 1158.11 L317.91 1162.74 L323.4 1166.07 L329.92 1168 L333.87 1173.4 L337.58 1179.11 L341.89 1184.01 L344.9 1190.67 L348.33 1196.76 L354.72 1198.88 L360.62 1201.65 L366.58 1204.33 L375.57 1202.95 L383.47 1203.03 L392.05 1202.2 L398.32 1204.48 L402.9 1209.02 L410.37 1209.68 L413.13 1216.67 L419.63 1218.64 L426.61 1219.95 L430.99 1224.77 L438.04 1226 L442.19 1231.12 L448.78 1232.96 L452.98 1238.01 L455.77 1244.97 L459.85 1250.18 L461.52 1258.65 L466.34 1262.87 L470 1268.65 L473.9 1274.1 L476.97 1280.68 L478 1290" fill="none" stroke="#AEB9CF" stroke-width="1.4" stroke-dasharray="2 3" stroke-opacity="0.85"/>
+</g>
+<g data-md-layer="装订线">
+<line id="thread-spine" x1="1002" y1="110" x2="1002" y2="1290" stroke="#E8E5DC" stroke-width="5" stroke-linecap="round"/>
+<line x1="1002" y1="232" x2="1050" y2="232" stroke="#E8E5DC" stroke-width="5" stroke-linecap="round"/>
+<circle id="hole-1" cx="1002" cy="232" r="7" fill="#18213A"/>
+<line x1="1002" y1="540" x2="1050" y2="540" stroke="#E8E5DC" stroke-width="5" stroke-linecap="round"/>
+<circle id="hole-2" cx="1002" cy="540" r="7" fill="#18213A"/>
+<line x1="1002" y1="860" x2="1050" y2="860" stroke="#E8E5DC" stroke-width="5" stroke-linecap="round"/>
+<circle id="hole-3" cx="1002" cy="860" r="7" fill="#18213A"/>
+<line x1="1002" y1="1168" x2="1050" y2="1168" stroke="#E8E5DC" stroke-width="5" stroke-linecap="round"/>
+<circle id="hole-4" cx="1002" cy="1168" r="7" fill="#18213A"/>
+</g>
+<g data-md-layer="题签">
+<rect id="title-slip" x="232" y="190" width="210" height="640" fill="#EDE6D3"/>
+<rect x="244" y="202" width="186" height="616" fill="none" stroke="#8C8169" stroke-width="1.5"/>
+<text id="title" x="337" y="236" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="150" fill="#1F1F1F" writing-mode="vertical-rl" font-weight="900" letter-spacing="6">补书</text>
+<text id="subtitle" x="337" y="598" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="30" fill="#4A443A" writing-mode="vertical-rl" font-weight="600" letter-spacing="4">古籍修复体验</text>
+</g>
+<g data-md-layer="信息">
+<text id="date" x="560" y="1062" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="42" fill="#F1EEE6" font-weight="700">10月31日　周六</text>
+<text x="560" y="1114" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="29" fill="#E3E0D8">下午 14:00 与 16:00 两场</text>
+<text x="560" y="1160" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="29" fill="#E3E0D8">市图书馆古籍部　三楼修复室</text>
+<text x="560" y="1206" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="29" fill="#E3E0D8" opacity="0.78">每场限 12 人，需提前预约</text>
+<text id="tagline" x="150" y="1394" font-family="'Noto Serif CJK SC','Noto Serif SC','Source Han Serif SC','Songti SC',serif" font-size="36" fill="#2A3957" font-weight="600">补书，是让一本书还能再被读下去。</text>
+<text x="150" y="1450" font-family="'Noto Sans CJK SC','Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="24" fill="#566070">主办：市图书馆古籍部　预约：图书馆公众号「古籍部」</text>
+</g>
+</svg>
