@@ -288,7 +288,9 @@ def run_node_checks(root, playwright=None, browser=None):
     print(f"PASS Node syntax: {len(modules)} modules (not browser layout tests).")
     geometry_tests = [root / "skills/musedraw/tests/callout-layout/layout.test.mjs",
                       root / "skills/musedraw/tests/material-footprint/material-footprint.test.mjs",
-                      root / "scripts/test_compose_plan.mjs"]
+                      root / "scripts/test_compose_plan.mjs",
+                      root / "scripts/test_compose_flow.mjs",
+                      root / "scripts/test_flow_contract_detail.mjs"]
     result = subprocess.run([node, "--test", "--test-reporter=tap", *map(str, geometry_tests)], capture_output=True, text=True, encoding="utf-8", timeout=30)
     print(result.stdout, end="")
     if result.returncode:
@@ -297,6 +299,14 @@ def run_node_checks(root, playwright=None, browser=None):
     if not playwright:
         print("SKIP browser layout/security fixtures: opt in with --playwright MODULE [--browser EXECUTABLE].")
         return True
+    command = [node, str(root / "scripts/test_detail_browser.mjs"), "--playwright", str(Path(playwright).resolve())]
+    if browser:
+        command.extend(["--browser", str(Path(browser).resolve())])
+    result = subprocess.run(command, cwd=root, capture_output=True, text=True, encoding="utf-8", timeout=60)
+    print(result.stdout, end="")
+    if result.returncode:
+        print(result.stderr, file=sys.stderr)
+        return False
     command = [node, str(root / "skills/musedraw/scripts/test_preview.mjs"), "--playwright", str(Path(playwright).resolve())]
     if browser:
         command += ["--browser", str(Path(browser).resolve())]

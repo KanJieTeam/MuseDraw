@@ -1,4 +1,6 @@
 // Semantic flow brief -> native scene. No browser, network or drawing format code.
+import {composeLaneFlow} from './compose-flow-lanes.mjs';
+import {attachFlowContract} from './flow-contract.mjs';
 const round = n => Math.round(n * 100) / 100;
 const fail = (where, message) => { throw new Error(`Flow brief ${where}: ${message}`); };
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -128,7 +130,10 @@ export function composeFlow(brief) {
   const cols = Math.max(...rank.values()) + 1, margin = 40, roleWidth = hasLanes ? 74 : 0;
   const plotX = margin + roleWidth, plotW = width - plotX - margin;
   const gap = 58, available = plotW - (cols - 1) * gap;
-  if (available < cols * 92) fail('/nodes', `this ${cols}-column flow exceeds the readable 1200px composition; split the flow into subprocesses (width changes resolution only)`);
+  if (available < cols * 92) {
+    if (hasLanes) return composeLaneFlow(input,brief,rank,{wrap,units});
+    fail('/nodes', `this ${cols}-column flow exceeds the readable 1200px composition; split the flow into subprocesses (width changes resolution only)`);
+  }
   // Give verbose columns more room instead of making every column equally
   // narrow. A nine-character action can retain two balanced readable lines.
   const preferred = Array.from({ length: cols }, (_, col) => Math.max(92, ...nodes.filter(n => rank.get(n.id) === col).map(n => {
@@ -358,5 +363,5 @@ export function composeFlow(brief) {
   // These affect port gaps / arrowheads even with a named theme override.
   scene.style.edge.arrowSize ??= round(7 * scale); scene.style.edge.gap ??= round(2 * scale);
   scene.meta.contentBottom = round(scene.meta.contentBottom * scale);
-  return scene;
+  return attachFlowContract(scene,input,laneFrames.map(f=>({id:f.id,x:round(plotX*scale),y:round(f.y*scale),w:round(plotW*scale),h:round(f.h*scale)})));
 }

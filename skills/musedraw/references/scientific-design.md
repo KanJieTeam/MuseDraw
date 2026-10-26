@@ -24,6 +24,18 @@ subordinate detail. Repeated states keep the same identities, geometry and
 palette; use a separate encoding for the change. A material colour is not a
 generic "focus" colour that can be swapped independently in each panel.
 
+Before selecting a physical primitive, check what the reader will infer from
+its position, attachment and boundary. A reagent present in a flow does not
+establish a deposited coating, immobilisation, binding or reaction mechanism.
+When the brief supplies only a reagent's identity, encode it with labelled
+markers in the fluid or a categorical colour; do not turn it into a wall layer.
+An apparatus outline may establish containment without claiming a material,
+measured thickness or fabricated construction. Likewise, reusing geometry for
+comparison is not evidence that two specimens or chambers have identical
+physical structures. Only assert that equivalence when the source supplies it.
+Preserve this distinction in both the overview and its detail; removing a
+sentence while retaining the unsupported physical depiction does not fix it.
+
 The shipped original worked examples demonstrate composition rather than prescribing
 a universal palette or exact model topology:
 

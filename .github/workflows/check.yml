@@ -78,6 +78,7 @@ jobs:
       - name: Check composition, scientific objects and native state modules
         run: |
           node scripts/test_compose_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/compose-qa
+          node scripts/test_detail_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/detail-qa
           node scripts/test_scientific_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/scientific-qa
           node scripts/test_scientific_layer_grid_browser.mjs --playwright output/browser-deps/node_modules/playwright/index.mjs --out output/layer-grid-qa
       - name: Check current catalog, copied prompts, theme filters and downloads
@@ -95,5 +96,6 @@ jobs:
             output/fast-qa
             output/edit-qa
             output/compose-qa
+            output/detail-qa
             output/scientific-qa
             output/layer-grid-qa

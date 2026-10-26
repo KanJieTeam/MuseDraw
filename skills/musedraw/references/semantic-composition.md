@@ -53,6 +53,15 @@ input grammar only. Do not copy its facts into unrelated diagrams.
   edges `feedback:true` so the forward graph can be laid out without a cycle.
 - Optional `width` starts at 1200. Layout grows rows for long labels, keeps
   conditions on their paths and routes long/returning connections in channels.
+- Long flows with up to four roles automatically switch to responsibility
+  columns and a downward sequence when the horizontal reading view is too wide.
+  Keep the semantic brief intact; changing output resolution does not add room.
+- Generated scenes retain `meta.flowContract`: operation text, decision shapes,
+  conditions, relationships and responsibility bounds. Visual edits may change
+  styling or move a node within its role. Moving it outside, removing an action
+  or adding a shortcut fails validation. For a real content change, edit the
+  composition and recompose; do not delete the contract to get a passing render.
+  This protects the declared brief, not its interpretation of the user's facts.
 - Don't hide branches or rework in explanatory notes. Don't add durations,
   metrics, states or conditions absent from the request. If a brief is too wide,
   the compiler reports the limit; simplify wording without deleting facts or

@@ -7,6 +7,7 @@ import { wrap } from './text.mjs';
 import { objectViews } from './object-views.mjs';
 import { scientificMotif } from './scientific-motifs.mjs';
 import { graphView } from './graph-view.mjs';
+import { detailLink } from './detail-link.mjs';
 const PI = Math.PI;
 const r2 = (n) => Math.round(n * 100) / 100;
 
@@ -442,4 +443,4 @@ function grid(b, theme) {
   return { nodes, texts, paths };
 }
 
-export const BLOCKS = { tree, mindmap, timeline, gantt, matrix, funnel, cycle, fishbone, swimlane, table, grid, 'object-views': objectViews, scientific: scientificMotif, 'graph-view': graphView };
+export const BLOCKS = { tree, mindmap, timeline, gantt, matrix, funnel, cycle, fishbone, swimlane, table, grid, 'object-views': objectViews, scientific: scientificMotif, 'graph-view': graphView, 'detail-link': detailLink };

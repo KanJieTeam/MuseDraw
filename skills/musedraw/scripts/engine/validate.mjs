@@ -6,6 +6,7 @@ import { expandBlocks } from './layouts.mjs';
 import { layoutSequence } from './sequence.mjs';
 import { objectViews } from './object-views.mjs';
 import { graphView } from './graph-view.mjs';
+import { checkFlowContract } from './flow-contract.mjs';
 
 const schema = JSON.parse(fs.readFileSync(new URL('../../references/scene.schema.json', import.meta.url), 'utf8'));
 const own = (o, key) => Object.hasOwn(o, key) && o[key] !== undefined;
@@ -97,6 +98,7 @@ export function validateScene(scene) {
   const issues = [];
   check(scene, schema, '', issues);
   if (issues.length) return issues;
+  issues.push(...checkFlowContract(scene));
   unique(scene.nodes ?? [], '/nodes', issues);
   unique(scene.blocks ?? [], '/blocks', issues, (i) => `b${i + 1}`);
   if (scene.type === 'sequence') {

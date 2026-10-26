@@ -1136,7 +1136,8 @@
             "grid",
             "object-views",
             "scientific",
-            "graph-view"
+            "graph-view",
+            "detail-link"
           ]
         },
         "x": {
@@ -1930,6 +1931,19 @@
                 "type": "number",
                 "exclusiveMinimum": 0
               }
+            }
+          }
+        },
+        {
+          "if": {"properties":{"type":{"const":"detail-link"}},"required":["type"]},
+          "then": {
+            "required":["id","roi","detail"],
+            "properties":{
+              "roi":{"type":"array","minItems":4,"maxItems":4,"items":{"type":"number"}},
+              "detail":{"type":"array","minItems":4,"maxItems":4,"items":{"type":"number"}},
+              "side":{"enum":["l","r","t","b"]},
+              "width":{"type":"number","exclusiveMinimum":0},
+              "color":{"type":"string"}
             }
           }
         },

@@ -14,6 +14,27 @@ A microscopy image, molecular structure, simulation field or measured curve
 needs its source asset/data. A native schematic is not evidence that these have
 been reconstructed. Do not infer a physical magnification from display size.
 
+## Material ROI and an authored detail
+
+For a schematic material region and a separately authored detail, use an
+annotation block rather than loose lines below opaque material paths:
+
+```json
+{"type":"detail-link","id":"chamber-detail",
+ "roi":[260,140,90,50],"detail":[520,340,300,180],"side":"b"}
+```
+
+Both rectangles are `[x,y,width,height]` in scene coordinates. The block draws
+the ROI frame, detail frame and two non-directional leaders in the foreground.
+Choose `side` (`l/r/t/b`) toward the detail, leaving a clear corridor; it does
+not avoid intervening labels or objects. Default is the nearest separated side.
+It supplies annotations only: author the detail contents separately, preserve
+part/channel identities, and do not call it a derived crop or assign a physical
+magnification. For a true crop, derive both views from the same source geometry.
+If custom leaders are necessary, set `layer:"foreground"` on their lines and
+the ROI frame. Inspect the rendered source frame over the actual material,
+not just whether its coordinates exist in JSON.
+
 ## Derived graph view
 
 For a scientific graph with explicit points and links, define the topology once.

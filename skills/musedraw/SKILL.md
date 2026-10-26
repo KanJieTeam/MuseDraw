@@ -104,6 +104,9 @@ the actual task. Diagnose once only if a needed read or render command fails.
   when the content fits its quiet journal default. Use a requested named style
   via `theme`; for a reference or richer scientific composition use the routes
   above rather than forcing the semantic layout. Preserve every fact and exception.
+  Long role-based flows can use automatic responsibility columns. Keep the
+  generated flow contract during visual edits; change facts in the composition,
+  not by moving actions into another person's lane or adding a shorter route.
 - **Dated targets with undated work and shared support:** read
   [plan composition](references/plan-composition.md), supply the exact periods,
   metrics, work and support, then run `compose`. It provides readable typography
