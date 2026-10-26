@@ -93,7 +93,8 @@ test('ported CLI output renders through the existing engine to PNG and SVG',{ski
   const run=spawnSync(process.execPath,[path.join(root,'scripts/musedraw.mjs'),'render',path.join(output,'scene.json'),'--out',render,'--playwright',runtime,'--strict'],{encoding:'utf8',cwd:root});
   assert.equal(run.status,0,run.stdout+'\n'+run.stderr);
   const checks=JSON.parse(await fs.readFile(path.join(render,'checks.json'),'utf8'));
-  assert.equal(checks.passed,true);assert.ok(checks.texts>0);assert.deepEqual(checks.warnings,[]);
+  assert.equal(checks.passed,true);assert.deepEqual(checks.warnings,[]);
+  assert.match(await fs.readFile(path.join(render,'diagram.svg'),'utf8'), /id="callout-text-/);
   const png=await fs.readFile(path.join(render,'diagram@2x.png'));assert.deepEqual([...png.subarray(0,8)],[137,80,78,71,13,10,26,10]);
   assert.ok((await fs.stat(path.join(render,'diagram.svg'))).size>0);
   console.log(JSON.stringify({calloutEngineArtifacts:path.relative(root,render).replaceAll('\\','/'),checksPassed:checks.passed,formats:['png','svg']}));
