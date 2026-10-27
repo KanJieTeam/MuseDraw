@@ -1,4 +1,4 @@
 interface:
   display_name: "MuseDraw"
-  short_description: "Journal- and boardroom-grade diagrams in 20 styles"
-  default_prompt: "Use $musedraw to draw a research roadmap, flow or architecture diagram from my description, render it, inspect the PNG and fix any layout warnings."
+  short_description: "Visual creation from briefs and reference examples"
+  default_prompt: "Use $musedraw to turn my brief or selected example into a finished visual, choosing the medium and output format that fit the work."

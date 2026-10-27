@@ -15,6 +15,32 @@ SCRIPT = ROOT / "skills/musedraw/scripts/case-library.mjs"
 
 
 class CaseLibraryTests(unittest.TestCase):
+    def test_cli_exact_replay_keeps_authored_fonts_in_both_modes(self):
+        # The CLI used to rewrite Arial as a theme sans stack, and Arial without
+        # a generic fallback as a serif stack. Rendering the scene alone did not
+        # exercise this export-time change.
+        svg = ('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" '
+               'viewBox="0 0 600 400" data-theme="editorial">'
+               '<text x="30" y="50" font-family="Arial">OPEN HOUSE</text>'
+               '<text x="30" y="90" font-family="Georgia, serif" font-style="italic">Space for ideas</text>'
+               '<path d="M30 120L400 120" stroke="black"/></svg>')
+        scene = {"type": "vector", "theme": "editorial", "size": [600, 400], "nativeSvg": svg}
+        with tempfile.TemporaryDirectory(prefix="musedraw-case-fonts-") as temp:
+            folder = Path(temp) / "case with spaces"
+            folder.mkdir()
+            source = folder / "scene.json"
+            source.write_text(json.dumps(scene), encoding="utf-8")
+            for mode in ("system", "bundled"):
+                with self.subTest(mode=mode):
+                    output = folder / mode
+                    result = subprocess.run(["node", str(ROOT / "skills/musedraw/scripts/musedraw.mjs"),
+                                             "render", str(source), "--out", str(output), "--svg-only",
+                                             "--font-mode", mode], cwd=folder, capture_output=True,
+                                            text=True, encoding="utf-8", timeout=30)
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    self.assertEqual((output / "diagram.svg").read_text(encoding="utf-8"), svg + "\n")
+                    self.assertEqual(json.loads(source.read_text(encoding="utf-8")), scene)
+
     def test_every_supplied_case_is_reachable_with_original_sources(self):
         catalog = json.loads((LIBRARY / "catalog.json").read_text(encoding="utf-8"))
         registry = json.loads((ROOT / "skills/musedraw/assets/case-library/index.json").read_text(encoding="utf-8"))

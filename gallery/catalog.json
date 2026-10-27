@@ -1,10 +1,10 @@
 {
  "version": 1,
- "description": "MuseDraw gallery: 108 original cases. flagship = curated front-page set; reviewed = visually inspected; preview = rendered, passes layout checks, awaiting design review.",
+ "description": "MuseDraw gallery: 120 original cases. flagship = curated front-page set; reviewed = visually inspected; preview = rendered and awaiting author design review.",
  "summary": {
   "engineering": {
    "flagship": 3,
-   "preview": 12,
+   "preview": 13,
    "reviewed": 8
   },
   "research": {
@@ -21,6 +21,12 @@
    "flagship": 1,
    "preview": 2,
    "reviewed": 1
+  },
+  "poster": {
+   "preview": 10
+  },
+  "data": {
+   "preview": 1
   }
  },
  "items": [
@@ -1392,6 +1398,150 @@
     "scientific"
    ],
    "path": "gallery/108-shared-representation"
+  },
+  {
+   "id": "109",
+   "slug": "109-vermilion-type",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Art / 字体与尺度",
+   "subtitle": "One monumental word carries the composition; a small figure makes its scale legible.",
+   "blocks": [],
+   "path": "gallery/109-vermilion-type"
+  },
+  {
+   "id": "110",
+   "slug": "110-herbarium-ink",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Herbarium / 植物图谱",
+   "subtitle": "A single branching specimen provides the hierarchy; veins and flower clusters reward closer reading.",
+   "blocks": [],
+   "path": "gallery/110-herbarium-ink"
+  },
+  {
+   "id": "111",
+   "slug": "111-cobalt-pavilion",
+   "status": "preview",
+   "category": "engineering",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Open House / 钴蓝轴测建筑",
+   "subtitle": "Setbacks and connected stair landings turn a stack of planes into an inhabited spatial sequence.",
+   "blocks": [],
+   "path": "gallery/111-cobalt-pavilion"
+  },
+  {
+   "id": "112",
+   "slug": "112-orbital-study",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Orbit / 轨道图版",
+   "subtitle": "Fine orbital paths surround one tactile focal sphere.",
+   "blocks": [],
+   "path": "gallery/112-orbital-study"
+  },
+  {
+   "id": "113",
+   "slug": "113-cyan-terrain",
+   "status": "preview",
+   "category": "data",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Terrain / 青色等高线",
+   "subtitle": "Nested contours share a continuous shape field; the landform remains recognizable at every level.",
+   "blocks": [],
+   "path": "gallery/113-cyan-terrain"
+  },
+  {
+   "id": "114",
+   "slug": "114-yellow-ginkgo",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Ginkgo / 黄色剪影海报",
+   "subtitle": "Oversized asymmetric fan shapes create the structure; fine veins add a quieter second scale.",
+   "blocks": [],
+   "path": "gallery/114-yellow-ginkgo"
+  },
+  {
+   "id": "115",
+   "slug": "115-silent-range",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Silent Range / 黑白山岳",
+   "subtitle": "An engraved mountain study uses line density and a real mist gap to separate foreground, middle distance and peak.",
+   "blocks": [],
+   "path": "gallery/115-silent-range"
+  },
+  {
+   "id": "116",
+   "slug": "116-first-light",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "First Light / 彩色山岳版画",
+   "subtitle": "Warm summit facets meet cool shadow planes; a quiet lake separates mountains from foreground pines.",
+   "blocks": [],
+   "path": "gallery/116-first-light"
+  },
+  {
+   "id": "117",
+   "slug": "117-still-water",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Still Water / 鹤与水草",
+   "subtitle": "The uninterrupted neck curve and fine legs carry the gesture; layered feathers provide a second reading scale.",
+   "blocks": [],
+   "path": "gallery/117-still-water"
+  },
+  {
+   "id": "118",
+   "slug": "118-ink-gesture",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Gesture / 抽象墨势",
+   "subtitle": "A pressure envelope gives each stroke weight; clipped dry streaks expose the paper without decorative noise over the whole image.",
+   "blocks": [],
+   "path": "gallery/118-ink-gesture"
+  },
+  {
+   "id": "119",
+   "slug": "119-botanical-blue",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Afterimage / 蓝晒枝叶",
+   "subtitle": "A diagonal exposed branch and one finer fern establish two botanical scales.",
+   "blocks": [],
+   "path": "gallery/119-botanical-blue"
+  },
+  {
+   "id": "120",
+   "slug": "120-lunar-atlas",
+   "status": "preview",
+   "category": "poster",
+   "theme": "editorial",
+   "lang": "zh",
+   "title": "Light and Shadow / 月相图版",
+   "subtitle": "One large split disc carries contrast; a narrow eight-symbol strip introduces sequence without competing for focus.",
+   "blocks": [],
+   "path": "gallery/120-lunar-atlas"
   }
  ]
 }

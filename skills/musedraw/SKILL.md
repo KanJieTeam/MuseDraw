@@ -1,9 +1,27 @@
 ---
 name: musedraw
-description: Draw publication-quality diagrams for office work, research and engineering from a few sentences — research roadmaps, PRISMA/CONSORT flows, model architectures, OKR trees, swimlanes, Gantt plans, fishbone/PDCA, customer journeys, system architecture. PNG and SVG, reproducible and revisable from a scene.json. Also create runnable frontend prototypes and work interfaces with HTML/CSS/JavaScript and browser previews. Includes an on-demand library of native-vector posters, information graphics and teaching examples; statistical analysis of raw datasets requires an appropriate analysis tool.
+description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 ---
 
 # MuseDraw
+
+Choose the production route from the requested work and its editing needs.
+The bundled scene renderer is one tool within MuseDraw; it does not define the
+scope of the assistant or require every artifact to be a diagram.
+
+- **Painting, photographic imagery, textured illustration or image editing:**
+  read [image work](references/image-work.md) and use an available host image
+  generation/editing tool. Deliver the resulting PNG/JPEG or requested image
+  format with useful source prompts/assets; do not manufacture an SVG or scene
+  solely to satisfy the diagram workflow. Actual image synthesis requires that
+  host capability; the scene engine does not generate painterly pixels.
+- **Poster, brand visual or mixed composition:** choose native vector/HTML
+  typography, image assets or a combination as the subject and editing needs
+  require. Use the image route for raster imagery and the scene route for a
+  native-vector example. Preserve the selected example's production medium.
+- **Diagrams, structured information graphics and editable scientific figures:**
+  use the scene routes below when they fit the content. Keep facts and
+  relationships intact. SVG is an editable output here, not a global format rule.
 
 For an interface prototype or work UI, read [frontend decisions](references/frontend-design.md).
 For record review, coordination or operations, also read
@@ -12,7 +30,7 @@ HTML/CSS/JavaScript or use the project's existing frontend stack, then deliver
 source and browser previews. This route does not require a scene or scene-engine
 render. The diagram instructions below apply to drawings and scene artifacts.
 
-For an art-directed poster, information graphic, teaching explanation or scientific
+For a native-vector poster, information graphic, teaching explanation or scientific
 multi-panel artwork, use the [visual case library](references/case-library.md) to
 find a relevant example and its design method. The small registry covers 180
 included cases; read only the selected case. Approved native-vector artwork uses
@@ -31,7 +49,7 @@ use the matching [object-composition method](references/object-composition.md).
 Make the relationship visible in the drawing; don't replace it with explanatory
 cards. The engine's `object-views` block keeps repeated native objects consistent.
 
-## Drawings · required execution route
+## Scene drawings · required execution route
 
 Create a composition or edit `scene.json`, run `scripts/musedraw.mjs`, read `checks.json`,
 then deliver with the small `preview.jpg`. For the shared-index RAG workflow,
@@ -57,7 +75,7 @@ the actual task. Diagnose once only if a needed read or render command fails.
 - **Gallery case / approved template:** reuse its `scene.json` directly. Render
   unchanged scenes immediately; adapt requested content and affected modules.
   Preserve the approved composition, hierarchy, spacing and visual details.
-- **Reference image:** view the supplied image and build a scene using the
+- **Reference diagram or native-vector artwork:** view the supplied image and build a scene using the
   appropriate composition pattern and primitives. For scientific mechanisms,
   method overviews, device sections and Nature-style reference figures, use
   [scientific composition](references/scientific-design.md) before selecting
@@ -121,9 +139,10 @@ the actual task. Diagnose once only if a needed read or render command fails.
   and editor completion. Layout/renderer source is not a drawing prerequisite;
   inspect it only when a reported failure cannot be resolved from this reference.
 
-## Default delivery · every drawing, every style
+## Default delivery · scene drawings
 
-These rules apply automatically to new drawings, replays and revisions. Users
+These rules apply to scene-based drawings, replays and revisions. Image work and
+frontend pages follow their selected production route. Users
 only need to describe the content and style; do not ask them to repeat these
 rules or append them to copied gallery prompts.
 

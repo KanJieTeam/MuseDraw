@@ -13,8 +13,8 @@ class UnifiedGalleryTests(unittest.TestCase):
         original=json.loads((ROOT/'gallery/catalog.json').read_text(encoding='utf-8'))
         merged=gallery_catalog(ROOT)['items']
         self.assertEqual(len(merged),len(source['items'])+len(original['items']))
-        self.assertEqual(len({i['slug'] for i in merged}),288)
-        self.assertEqual(sum(sum(counts.values()) for counts in gallery_catalog(ROOT)['summary'].values()),288)
+        self.assertEqual(len({i['slug'] for i in merged}),300)
+        self.assertEqual(sum(sum(counts.values()) for counts in gallery_catalog(ROOT)['summary'].values()),300)
         self.assertEqual(merged[180:],original['items'])
         for item,author in zip(merged[:180],source['items']):
             self.assertEqual(item['title'],author['title'])
