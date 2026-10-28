@@ -7,6 +7,33 @@ const longFlow=()=>({method:'flow',lanes:[{id:'requester',label:'申请方'},{id
   nodes:['提交清单','核对状态','修改清单','确认交接','安排取件','送回物品','验收物品','处理损伤','登记入库','关闭记录'].map((label,i)=>({id:`n${i}`,label,lane:i===0||i===2?'requester':i===4||i===5?'carrier':'owner',...([1,6].includes(i)?{shape:'diamond'}:{})})),
   links:[[0,1],[1,2,'不可用'],[2,0,'重新提交',true],[1,3,'可用'],[3,4],[4,5],[5,6],[6,7,'有损伤'],[6,8,'无损伤'],[7,8,'处理完成'],[8,9]].map(([a,b,label,feedback])=>({from:`n${a}`,to:`n${b}`,...(label?{label}:{}),...(feedback?{feedback}:{})}))});
 
+const purchase=()=>({method:'flow',lanes:[{id:'staff',label:'申请人'},{id:'manager',label:'主管'},{id:'head',label:'负责人'},{id:'finance',label:'财务'}],
+ nodes:[['submit','提交采购单','staff'],['review','核对资料','manager'],['complete','资料齐全？','manager','diamond'],['amend','补齐资料','staff'],['limit','金额超过5000元？','manager','diamond'],['approve','审批采购','head'],['approved','审批通过？','head','diamond'],['withdraw','撤回申请','staff'],['pay','财务付款','finance'],['archive','归档付款凭证','finance']].map(([id,label,lane,shape])=>({id,label,lane,...(shape?{shape}:{})})),
+ links:[['submit','review'],['review','complete'],['complete','amend','缺资料'],['amend','review','补齐后复审',true],['complete','limit','齐全'],['limit','pay','≤5000元'],['limit','approve','>5000元'],['approve','approved'],['approved','pay','通过'],['approved','withdraw','不通过'],['pay','archive']].map(([from,to,label,feedback])=>({from,to,...(label?{label}:{}),...(feedback?{feedback}:{})}))});
+
+test('office amounts, decimals and dates remain whole when responsibility labels wrap',()=>{
+ for(const [label,value]of [['金额超过5000元？','5000元'],['金额超过4.5万元？','4.5万元'],['截止2026-12-31','2026-12-31']]){
+  const brief=purchase();brief.nodes.find(n=>n.id==='limit').label=label;
+  const scene=composeFlow(brief),actual=scene.nodes.find(n=>n.id==='limit').label;
+  assert.equal(actual.replaceAll('\n',''),label);assert.ok(actual.split('\n').some(line=>line.includes(value)));
+ }
+});
+
+test('office decision branches leave distinct ports and bypass unrelated operation boundaries',()=>{
+ const scene=composeFlow(purchase()),nodes=new Map(scene.nodes.map(n=>[n.id,n]));
+ for(const from of ['complete','limit','approved'])assert.equal(new Set(scene.edges.filter(e=>e.from===from).map(e=>e.fromSide)).size,2);
+ const port=(n,side)=>side==='l'?[n.x,n.y+n.h/2]:side==='r'?[n.x+n.w,n.y+n.h/2]:side==='b'?[n.x+n.w/2,n.y+n.h]:[n.x+n.w/2,n.y];
+ for(const edge of scene.edges){
+  const points=[port(nodes.get(edge.from),edge.fromSide),...edge.via,port(nodes.get(edge.to),edge.toSide)];
+  for(let i=1;i<points.length;i++)for(const n of scene.nodes){
+   if(n.id===edge.from||n.id===edge.to)continue;
+   const [a,b]=[points[i-1],points[i]],pad=5;
+   const hit=Math.abs(a[0]-b[0])<.02?a[0]>n.x-pad&&a[0]<n.x+n.w+pad&&Math.max(a[1],b[1])>n.y-pad&&Math.min(a[1],b[1])<n.y+n.h+pad:a[1]>n.y-pad&&a[1]<n.y+n.h+pad&&Math.max(a[0],b[0])>n.x-pad&&Math.min(a[0],b[0])<n.x+n.w+pad;
+   assert.equal(hit,false,`${edge.from}->${edge.to} touches unrelated ${n.id}`);
+  }
+ }
+});
+
 test('long process keeps every declared action and relation in readable responsibility columns',()=>{
   const input=longFlow(),original=structuredClone(input),scene=composeFlow(input);
   assert.deepEqual(input,original);assert.equal(scene.meta.orientation,'vertical');assert.equal(scene.nodes.length,10);assert.equal(scene.edges.length,11);

@@ -10,7 +10,13 @@ const simplify = points => points.filter((p,i,a)=>!i || i===a.length-1 || !((a[i
 // Breadth first search minimises grid steps; coordinate axes include free rails.
 function route(a,b,nodes,width,height) {
   const middle=(a[1]+b[1])/2;
-  for(const p of [[a,[a[0],middle],[b[0],middle],b],[a,[b[0],a[1]],b],[a,[a[0],b[1]],b]])
+  // Prefer a free row near the middle of the handoff before taking an elbow
+  // immediately beside its source. The latter can put a bypass condition on
+  // top of a sibling's short incoming connector.
+  const rows=[...new Set([middle,...nodes.flatMap(n=>[n.y-12,n.y+n.h+12])])]
+    .filter(y=>y>=Math.min(a[1],b[1])&&y<=Math.max(a[1],b[1]))
+    .sort((u,v)=>Math.abs(u-middle)-Math.abs(v-middle)||u-v);
+  for(const p of [...rows.map(y=>[a,[a[0],y],[b[0],y],b]),[a,[b[0],a[1]],b],[a,[a[0],b[1]],b]])
     if(clear(p,nodes))return simplify(p);
   const xs=[...new Set([a[0],b[0],24,width-24,...nodes.flatMap(n=>[n.x-20,n.x+n.w+20])])].filter(x=>x>=12&&x<=width-12).sort((a,b)=>a-b);
   const ys=[...new Set([a[1],b[1],76,height-24,...nodes.flatMap(n=>[n.y-20,n.y+n.h+20])])].filter(y=>y>=64&&y<=height-12).sort((a,b)=>a-b);
@@ -51,16 +57,33 @@ export function composeLaneFlow(input, brief, rank, {wrap,units}) {
   const labels=[],edges=[];
   const box=(text,at)=>({x:at[0]-Math.max(...text.split('\n').map(units))*15/2-8,y:at[1]-text.split('\n').length*19/2-3,w:Math.max(...text.split('\n').map(units))*15+16,h:text.split('\n').length*19+6});
   const overlap=(a,b,g=5)=>a.x<b.x+b.w+g&&a.x+a.w+g>b.x&&a.y<b.y+b.h+g&&a.y+a.h+g>b.y;
+  const branchSides=new Map();
+  for(const n of shapes){
+    const outgoing=links.filter(l=>l.from===n.id&&!l.feedback);
+    if(outgoing.length<2||outgoing.length>3)continue;
+    const used=new Set();
+    outgoing.sort((u,v)=>Math.abs(byId.get(u.to).x-n.x)-Math.abs(byId.get(v.to).x-n.x)||u.key.localeCompare(v.key)).forEach(l=>{
+      const child=byId.get(l.to),preferred=child.x<n.x?'l':child.x>n.x?'r':'b';
+      const side=[preferred,'b','r','l'].find(side=>!used.has(side));
+      used.add(side);branchSides.set(l.key,side);
+    });
+  }
   [...links].sort((a,b)=>a.key.localeCompare(b.key)).forEach(l=>{
     const a=byId.get(l.from),b=byId.get(l.to),feedback=l.feedback;
     const skip=!feedback&&rank.get(l.to)-rank.get(l.from)>1&&a.x===b.x;
     const rail=Math.max(44,l.label?Math.min(140,units(l.label)*15)/2+24:44);
-    const start=feedback?[a.x,a.y+a.h/2]:skip?[a.x+a.w,a.y+a.h/2]:[a.x+a.w/2,a.y+a.h];
+    const fromSide=feedback?'l':branchSides.get(l.key)??(skip?'r':'b');
+    const start=fromSide==='l'?[a.x,a.y+a.h/2]:fromSide==='r'?[a.x+a.w,a.y+a.h/2]:[a.x+a.w/2,a.y+a.h];
     const end=feedback?[b.x,b.y+b.h/2]:skip?[b.x+b.w,b.y+b.h/2]:[b.x+b.w/2,b.y];
-    const stubA=feedback?[start[0]-rail,start[1]]:skip?[start[0]+rail,start[1]]:[start[0],start[1]+18];
+    const stubA=fromSide==='l'?[start[0]-rail,start[1]]:fromSide==='r'?[start[0]+rail,start[1]]:[start[0],start[1]+18];
     const stubB=feedback?[end[0]-rail,end[1]]:skip?[end[0]+rail,end[1]]:[end[0],end[1]-18];
-    const points=[start,...route(stubA,stubB,shapes,width,height),end];
+    // A line touching an unrelated diamond's tip can look like a new branch,
+    // even though it does not enter the shape's interior. Reserve a small
+    // visible gap around unrelated operations, not just their filled pixels.
+    const obstacles=shapes.map(n=>({...n,x:n.x-8,y:n.y-8,w:n.w+16,h:n.h+16}));
+    const points=[start,...route(stubA,stubB,obstacles,width,height),end];
     if(!clear(points,shapes))throw new Error(`Flow brief /links: obstructed port ${l.from} -> ${l.to}`);
+    if(!clear(points,obstacles.filter(n=>n.id!==l.from&&n.id!==l.to)))throw new Error(`Flow brief /links: route touches an unrelated operation ${l.from} -> ${l.to}`);
     const label=l.label?wrap(l.label,140,15):undefined;let labelAt;
     if(label){
       const candidates=[];
@@ -73,7 +96,7 @@ export function composeLaneFlow(input, brief, rank, {wrap,units}) {
       labels.push(box(label,labelAt));
     }
     let id=`lane-flow-${encodeURIComponent(l.key)}`;while(nodes.some(n=>n.id===id)||edges.some(e=>e.id===id))id='_'+id;
-    edges.push({id,from:l.from,to:l.to,fromSide:feedback?'l':skip?'r':'b',toSide:feedback?'l':skip?'r':'t',fromAt:.5,toAt:.5,via:points.slice(1,-1).map(p=>p.map(r)),route:'ortho',kind:feedback?'feedback':'default',...(feedback?{dash:'5 4'}:{}),...(label?{label,labelAt:labelAt.map(r)}:{})});
+    edges.push({id,from:l.from,to:l.to,fromSide,toSide:feedback?'l':skip?'r':'t',fromAt:.5,toAt:.5,via:points.slice(1,-1).map(p=>p.map(r)),route:'ortho',kind:feedback?'feedback':'default',...(feedback?{dash:'5 4'}:{}),...(label?{label,labelAt:labelAt.map(r)}:{})});
   });
   const scene={theme:brief.theme??'journal',size:[width,height],header:false,footer:false,autoFit:false,nodes:shapes,edges,
     lines:frames.flatMap((f,i)=>[{points:[[r(f.x),40],[r(f.x),height-40]],color:'line',width:1},...(i===frames.length-1?[{points:[[width-margin,40],[width-margin,height-40]],color:'line',width:1}]:[])]),

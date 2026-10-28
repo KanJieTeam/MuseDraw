@@ -33,9 +33,18 @@ function wrap(text, width, fontSize) {
     const capacity = Math.max(1, Math.floor(width / fontSize));
     const balancedWidth = Math.min(width, Math.max(1, Math.ceil(units(paragraph) / Math.max(1, Math.ceil(units(paragraph) / capacity)))) * fontSize);
     let line = '';
-    for (const ch of paragraph) {
-      if (line && units(line + ch) * fontSize > balancedWidth) { result.push(line.trimEnd()); line = ch.trimStart(); }
-      else line += ch;
+    // Amounts, decimal values and dates must not become different-looking
+    // quantities across lines. Keep their unit with them when it fits a line.
+    const tokens = /\d/.test(paragraph)
+      ? paragraph.match(/[A-Za-z0-9]+(?:[.,:/-][A-Za-z0-9]+)*(?:\s*(?:亿元|万元|元|工作日|小时|分钟|秒|天|周|月|年|%|％))?|./gu) ?? []
+      : [...paragraph];
+    for (const token of tokens) {
+      if (/\d/.test(token) && units(token) * fontSize > width) fail('/nodes', 'a numeric value or date exceeds the label width; use a wider custom composition rather than splitting the quantity');
+      const parts = units(token) * fontSize > width ? [...token] : [token];
+      for (const part of parts) {
+        if (line && units(line + part) * fontSize > balancedWidth) { result.push(line.trimEnd()); line = part.trimStart(); }
+        else line += part;
+      }
     }
     result.push(line.trimEnd());
   }

@@ -1,0 +1,133 @@
+{
+  "method": "flow",
+  "theme": "enterprise",
+  "width": 1600,
+  "lanes": [
+    {
+      "id": "staff",
+      "label": "申请人"
+    },
+    {
+      "id": "manager",
+      "label": "直属主管"
+    },
+    {
+      "id": "head",
+      "label": "部门负责人"
+    },
+    {
+      "id": "finance",
+      "label": "财务"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "submit",
+      "label": "提交采购单",
+      "lane": "staff"
+    },
+    {
+      "id": "review",
+      "label": "核对采购资料",
+      "lane": "manager"
+    },
+    {
+      "id": "complete",
+      "label": "资料齐全？",
+      "shape": "diamond",
+      "lane": "manager"
+    },
+    {
+      "id": "amend",
+      "label": "补齐资料",
+      "lane": "staff"
+    },
+    {
+      "id": "limit",
+      "label": "金额超过5000元？",
+      "shape": "diamond",
+      "lane": "manager"
+    },
+    {
+      "id": "approve",
+      "label": "审批采购申请",
+      "lane": "head"
+    },
+    {
+      "id": "approved",
+      "label": "审批通过？",
+      "shape": "diamond",
+      "lane": "head"
+    },
+    {
+      "id": "withdraw",
+      "label": "撤回申请",
+      "lane": "staff"
+    },
+    {
+      "id": "pay",
+      "label": "财务付款",
+      "lane": "finance",
+      "emphasis": true
+    },
+    {
+      "id": "archive",
+      "label": "归档付款凭证",
+      "lane": "finance"
+    }
+  ],
+  "links": [
+    {
+      "from": "submit",
+      "to": "review"
+    },
+    {
+      "from": "review",
+      "to": "complete"
+    },
+    {
+      "from": "complete",
+      "to": "amend",
+      "label": "缺资料"
+    },
+    {
+      "from": "amend",
+      "to": "review",
+      "label": "补齐后复审",
+      "feedback": true
+    },
+    {
+      "from": "complete",
+      "to": "limit",
+      "label": "齐全"
+    },
+    {
+      "from": "limit",
+      "to": "pay",
+      "label": "≤5000元"
+    },
+    {
+      "from": "limit",
+      "to": "approve",
+      "label": ">5000元"
+    },
+    {
+      "from": "approve",
+      "to": "approved"
+    },
+    {
+      "from": "approved",
+      "to": "pay",
+      "label": "通过"
+    },
+    {
+      "from": "approved",
+      "to": "withdraw",
+      "label": "不通过"
+    },
+    {
+      "from": "pay",
+      "to": "archive"
+    }
+  ]
+}

@@ -29,6 +29,11 @@ an additional mandatory stage for ordinary scene delivery.
   use the scene routes below when they fit the content. Keep facts and
   relationships intact. SVG is an editable output here, not a global format rule.
 
+For everyday office processes, task ownership and project plans, read
+[office diagrams](references/office-diagrams.md). Choose the appropriate flow,
+responsibility matrix or time-based composition from the actual work; do not
+turn every office brief into the same card grid or infer missing assignments.
+
 For an interface prototype or work UI, read [frontend decisions](references/frontend-design.md).
 For record review, coordination or operations, also read
 [working applications](references/frontend-work-apps.md). Implement runnable

@@ -290,6 +290,7 @@ def run_node_checks(root, playwright=None, browser=None):
                       root / "skills/musedraw/tests/open-channel/open-channel.test.mjs",
                       root / "skills/musedraw/tests/material-footprint/material-footprint.test.mjs",
                       root / "scripts/test_compose_plan.mjs",
+                      root / "scripts/test_compose_responsibility.mjs",
                       root / "scripts/test_compose_flow.mjs",
                       root / "scripts/test_flow_contract_detail.mjs"]
     result = subprocess.run([node, "--test", "--test-reporter=tap", *map(str, geometry_tests)], capture_output=True, text=True, encoding="utf-8", timeout=30)

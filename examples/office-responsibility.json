@@ -1,0 +1,19 @@
+{
+  "method": "responsibility",
+  "title": "产品上线 · 职责分工",
+  "roles": [
+    {"id":"product","label":"产品"},
+    {"id":"engineering","label":"研发"},
+    {"id":"design","label":"设计"},
+    {"id":"qa","label":"测试"},
+    {"id":"operations","label":"运营"}
+  ],
+  "items": [
+    {"id":"scope","label":"需求范围","assignments":{"product":["A","R"],"engineering":["C"],"design":["C"],"qa":["I"],"operations":["I"]}},
+    {"id":"prototype","label":"交互原型","assignments":{"product":["A"],"engineering":["C"],"design":["R"],"qa":["C"],"operations":["I"]}},
+    {"id":"solution","label":"技术方案","assignments":{"product":["C"],"engineering":["A","R"],"design":["C"],"qa":["C"],"operations":["I"]}},
+    {"id":"acceptance","label":"验收用例","assignments":{"product":["A"],"engineering":["C"],"design":["C"],"qa":["R"],"operations":["I"]}},
+    {"id":"release","label":"上线评审","assignments":{"product":["A"],"engineering":["R"],"design":["I"],"qa":["C"],"operations":["C"]}},
+    {"id":"announcement","label":"发布公告","assignments":{"product":["A"],"engineering":["C"],"design":["C"],"qa":["I"],"operations":["R"]}}
+  ]
+}

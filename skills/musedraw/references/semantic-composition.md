@@ -1,7 +1,7 @@
 # Semantic composition
 
 Use this route for ordinary directed flows (with or without responsibility
-lanes) and matched object states. Describe content and relationships; the code
+lanes), matched object states and explicit RACI responsibility matrices. Describe content and relationships; the code
 owns page geometry, readable type and role styling. No extra installation.
 
 ```sh
@@ -15,7 +15,7 @@ Reuse this command after editing the composition; use `render scene.json` for
 fine adjustments outside these methods. Recomposing regenerates `scene.json`,
 so edit one source consistently rather than expecting hand edits to survive it.
 
-Both methods default to `journal`, a white field with precise lines. Don't
+These methods default to `journal`, a white field with precise lines. Don't
 invent a style-selection task when the user hasn't requested a style. All 20
 named styles remain available via `theme` or `--theme`; a requested style takes
 precedence. A method is not an interpreter for arbitrary natural language.
@@ -145,6 +145,11 @@ scene for changes in shape/scale, complex sections and anchored detail views.
 It rejects unsupported fields instead of silently discarding them.
 
 ## Why these defaults
+
+For a RACI matrix use `method:"responsibility"` with supplied role IDs,
+deliverables and assignments, as described in [office diagrams](office-diagrams.md#responsibility-for-deliverables).
+This is separate from flow ownership: being consulted on a deliverable does
+not put its execution in that person's lane.
 
 For dated targets plus undated work and shared resources, use the separate
 [plan composition](plan-composition.md). It has a different input contract;
