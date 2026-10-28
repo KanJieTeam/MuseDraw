@@ -1,11 +1,9 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/brand/wordmark-dark.svg">
-  <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
-</picture>
+<a href="https://kanjieteam.github.io/MuseDraw/">
+  <img src="assets/brand/musedraw-cover.png" alt="MuseDraw — Draw anything. Design with taste." width="1200">
+</a>
 
-<p><strong>Draw anything. Design with taste.</strong></p>
 <p>Help everyone give their ideas a better form.</p>
 
 <p>
@@ -19,8 +17,6 @@
 
 MuseDraw is an open-source visual creation project that brings design methods and drawing tools to the AI agent you already use. Describe an idea in your own words, share some material or a reference image, then keep shaping the work through conversation.
 
-[![MuseDraw: different subjects, distinct visual expressions](assets/gallery/readme-showcase.jpg)](https://kanjieteam.github.io/MuseDraw/)
-
 ## Find the right form for your idea
 
 You bring what you want to express. MuseDraw helps work out how to present it: what to notice first, what belongs together, where to add emphasis, and where to leave space.
@@ -29,6 +25,8 @@ You bring what you want to express. MuseDraw helps work out how to present it: w
 - **Let the content guide the design.** We focus on how composition, typography, color, and detail work together, giving each piece a clear hierarchy and a character of its own.
 - **Keep revising through conversation.** Add a step, shift the emphasis, or develop a direction you like.
 - **Use the work and keep the freedom to change it.** Diagrams retain source files, images retain prompts and useful assets, and web work retains HTML/CSS/JavaScript for sharing, using, and refining.
+
+[![MuseDraw: different subjects, distinct visual expressions](assets/gallery/readme-showcase.jpg)](https://kanjieteam.github.io/MuseDraw/)
 
 [Explore the work and source files](https://kanjieteam.github.io/MuseDraw/) · [See how it works today](docs/usage.md)
 

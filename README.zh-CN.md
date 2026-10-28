@@ -1,11 +1,9 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/brand/wordmark-dark.svg">
-  <img src="assets/brand/wordmark-light.svg" alt="MuseDraw" width="360">
-</picture>
+<a href="https://kanjieteam.github.io/MuseDraw/">
+  <img src="assets/brand/musedraw-cover.png" alt="MuseDraw — Draw anything. Design with taste." width="1200">
+</a>
 
-<p><strong>Draw anything. Design with taste.</strong></p>
 <p>让每个人，都能把想法表达得更好。</p>
 
 <p>
@@ -19,8 +17,6 @@
 
 MuseDraw 是一个开源视觉创作项目，将设计方法与绘图工具带进你熟悉的 AI 智能体。用自己的语言描述想法，或提供资料与参考图，开始创作，再用对话继续修改。
 
-[![MuseDraw 作品：不同内容，不同的视觉表达](assets/gallery/readme-showcase.jpg)](https://kanjieteam.github.io/MuseDraw/)
-
 ## 为你的想法，找到合适的表达
 
 你负责想表达什么，MuseDraw 帮你考虑怎么呈现：先看到什么，哪些内容放在一起，哪里需要强调，哪里应该留白。
@@ -29,6 +25,8 @@ MuseDraw 是一个开源视觉创作项目，将设计方法与绘图工具带�
 - **让设计贴合内容。** 我们关注构图、文字、色彩与细节的配合，让作品有清楚的主次，也有自己的性格。
 - **把修改留在对话里。** 补充一个步骤、调整一处重点，或沿着喜欢的方向继续打磨。
 - **拿到作品，也保留修改的余地。** 图示保留源文件，图像保留制作提示与素材，网页保留 HTML/CSS/JavaScript，方便使用、分享和继续完善。
+
+[![MuseDraw 作品：不同内容，不同的视觉表达](assets/gallery/readme-showcase.jpg)](https://kanjieteam.github.io/MuseDraw/)
 
 [浏览作品与源文件](https://kanjieteam.github.io/MuseDraw/) · [了解当前使用方式](docs/usage.zh-CN.md)
 
