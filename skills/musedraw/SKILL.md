@@ -9,6 +9,12 @@ Choose the production route from the requested work and its editing needs.
 The bundled scene renderer is one tool within MuseDraw; it does not define the
 scope of the assistant or require every artifact to be a diagram.
 
+When the user requests sustained visual improvement or comparative design
+review, use [visual revision](references/design-review.md) with actual renders,
+separate factual/functional checks and a preserved best version. Independent
+critique depends on the host; do not label self-review independent. This is not
+an additional mandatory stage for ordinary scene delivery.
+
 - **Painting, photographic imagery, textured illustration or image editing:**
   read [image work](references/image-work.md) and use an available host image
   generation/editing tool. Deliver the resulting PNG/JPEG or requested image
