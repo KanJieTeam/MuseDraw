@@ -16,6 +16,7 @@ Include how that relationship changes on a phone. For example:
 | A real schedule; compare duration and availability | Shared time axis, bookings positioned by start and duration; names and full time ranges alongside. On a phone keep the axis and reflow labels, or use a readable agenda with explicit times. | Equal-height booking cards imply no duration; tiny scaled-down desktop labels destroy reading. |
 | An object whose construction matters | Give the object the dominant area; align one supporting text column to its meaningful boundary. Put details next to the relevant parts, not in a detached feature grid. | A decorative cutaway adds no explanation; the object is too small to identify. |
 | A collection; choose and inspect one item | Large selected work with an index of real peers; selection changes the displayed work and its facts. Stack the selected work and index in a deliberate mobile order. | The index dominates the work; a collage crops away what visitors need to judge. |
+| A route; understand stops and their sequence | One continuous path joins the actual stops; selection reveals the nearby explanation. Connect the overview to a readable itinerary rather than repeating isolated destination cards. | Diagrammatic placement looks like measured geography; map, selected detail and times disagree. |
 | An event; decide whether to attend | Combine its title with its specific subject material; keep date, location and attendance action readable in the first useful view. Use the same motif for the programme instead of generic feature cards. | A spectacular image obscures dates or replaces the subject with an unrelated mood. |
 | A working queue; act on an exception | Lead with the unresolved condition and its source evidence, then the records and action. Give ordinary and resolved values less emphasis. | A promotional hero delays work; a resolved zero still looks more urgent than an unknown value. |
 
@@ -28,6 +29,12 @@ the first relationship with a fictional workshop: a shared 09:00–15:00 scale,
 90/90/30-minute bookings, room filtering and an honest local request form. Open
 the HTML directly. Its geometry is one worked decision, not a default page to
 reskin for every subject. It has no backend, external imagery or network imports.
+
+The [runnable route example](../assets/frontend/island-walk/index.html) joins an
+original three-stop schematic to a selected description and two actual demo
+itineraries. Its [method and limits](../assets/frontend/island-walk/method.md)
+explain what can transfer. It is a worked spatial decision, not an approved
+travel service or a new default visual style.
 
 ## Make material carry the identity
 
@@ -61,10 +68,27 @@ node <skill>/scripts/capture-ui.mjs path/to/index.html --out output/review-01 --
 
 The output directory must be empty so a later run cannot erase first evidence.
 Optionally pass `--targets targets.json`, a JSON array of CSS selectors for the
-actual subject, action or evidence. The report records whether each unique target
-fits in the first screen; being below the fold is not automatically wrong.
-The collector does not click controls, score taste, prove accessibility or catch
-clipped descendants hidden by CSS. Inspect the PNGs and exercise the real task.
+actual subject, action or evidence. Strings collect evidence only. An explicit
+object requires one visible match and can set a minimum bounding-box width or
+height in CSS pixels for this task; `atWidths` limits it to a nonempty subset of
+the configured viewport widths (omitting it applies the contract at every width).
+For example, this task-specific phone requirement catches a schedule squeezed
+into a narrow desktop-grid column even when the page has no horizontal overflow:
+
+```json
+[".reserve", { "selector": ".schedule", "minWidth": 320, "minHeight": 200, "atWidths": [390] }]
+```
+
+Missing, multiple, hidden or undersized contract targets appear in
+`view.contractDefects`, add to `measuredDefects` and make the CLI exit with status
+1. Invalid contract fields, dimensions or viewport scopes are rejected before an
+output directory is created. These conditional thresholds are supplied by the
+task, not built-in aesthetic rules; passing them proves neither readability nor
+visual quality. The report also records whether each unique target fits in the
+first screen; being below the fold is not automatically wrong.
+The collector does not click controls, score taste, prove accessibility or assess
+occlusion, contrast and clipped descendants. Inspect the PNGs and exercise the
+real task.
 For animated work, also inspect its normal motion; these captures use reduced
 motion to keep the still comparison legible.
 
