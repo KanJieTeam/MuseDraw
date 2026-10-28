@@ -185,6 +185,9 @@ def build_figure(spec, width=1800, height=1100, font=None):
                 'text.usetex': False, 'text.parse_math': False}
     with plt.rc_context(settings):
         fig, ax = plt.subplots(figsize=(width / 150, height / 150), dpi=150, layout='constrained')
+        # A label can pass clipping checks while almost touching the canvas.
+        # Reserve a modest outer margin for standalone report figures.
+        fig.get_layout_engine().set(w_pad=.18, h_pad=.18)
         fig.set_facecolor('white')
         colors = ['#245C82', '#AC542B', '#3F7768', '#755C91']
         markers = ['o', 's', '^', 'D']

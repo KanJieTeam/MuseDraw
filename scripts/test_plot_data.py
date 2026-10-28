@@ -186,6 +186,7 @@ class PlotRenderingTests(unittest.TestCase):
             fig.canvas.draw()
             renderer=fig.canvas.get_renderer()
             self.assertFalse(ax._left_title.get_window_extent(renderer).overlaps(ax.get_legend().get_window_extent(renderer)))
+            self.assertGreaterEqual(fig.bbox.height-ax._left_title.get_window_extent(renderer).y1,24)
 
     def test_raw_distribution_keeps_repeats_extremes_and_unequal_counts(self):
         fig, ax, _=plot.build_figure(OBSERVATIONS)
