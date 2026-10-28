@@ -32,7 +32,8 @@ an additional mandatory stage for ordinary scene delivery.
 For measured data, report charts and statistical figures, read
 [data figures](references/data-figures.md). Use an available plotting tool;
 the supplied data-plot helper handles line, scatter, bar, explicit intervals,
-paired observations and measured heatmaps. This route does not require scene geometry. For mechanisms and physical
+paired changes, raw observation distributions and measured heatmaps. This route
+does not require scene geometry. For mechanisms and physical
 objects use the scientific composition route below.
 
 For everyday office processes, task ownership and project plans, read

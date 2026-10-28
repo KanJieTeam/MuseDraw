@@ -16,8 +16,8 @@ frame establishes those facts.
 
 ## Reusable plotting route
 
-For a line, scatter, grouped bar, supplied interval, paired observation or
-measured heatmap, translate the
+For a line, scatter, grouped bar, supplied interval, paired change, raw observation
+distribution or measured heatmap, translate the
 actual data into the corresponding JSON below and run:
 
 ```sh
@@ -112,6 +112,32 @@ or paired rows, or a 12×12 measured matrix. Larger plots,
 logarithmic axes, dates, distributions, survival and multiple panels
 need an appropriate custom Matplotlib/R/host plotting implementation, not a
 mislabelled use of one of these grammars.
+
+## Raw distributions
+
+Use `observations` to show each supplied measurement in its group without
+collapsing the distribution into a mean. This route supports 1–4 named groups
+with 1–80 finite observations each. Duplicates remain separate points. A
+deterministic horizontal spread avoids concealing repeated or nearby values;
+only the categorical position moves, never the measured value. The common
+numeric axis contains every observation, including extreme values. No fitted
+density, outlier deletion, quartile convention or test is inferred.
+
+```json
+{
+  "kind":"observations", "xLabel":"Group", "yLabel":"Task time / min",
+  "series":[{"name":"A","values":[4,5,5,6,6,7,7,8]},
+            {"name":"B","values":[3,4,5,6,7,14]}]
+}
+```
+
+Do not connect unrelated subjects across groups. Conversely, keep actual
+pairing with `paired` or a suitable custom repeated-measure plot. The number
+of displayed dots is the number of supplied observations; it does not establish
+the number of independent experimental units. Preserve that distinction in the
+report. Explicit nulls and overcrowded points fail instead of silently dropping
+observations or reducing their visibility; use a plot that supports the actual
+missingness or density when this bounded route cannot fit it.
 
 ## Paired observations
 

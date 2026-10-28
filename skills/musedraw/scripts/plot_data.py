@@ -33,7 +33,7 @@ def validate(spec):
     fields(spec, ['kind', 'title', 'xLabel', 'yLabel', 'xDomain', 'yDomain', 'series', 'categories', 'rows', 'intervalLabel', 'reference',
                   'rowLabels', 'columnLabels', 'values', 'colorLabel', 'colorDomain', 'colorCenter', 'missingLabel', 'conditions'], '/')
     kind = spec.get('kind')
-    require(kind in ['line', 'scatter', 'bar', 'interval', 'heatmap', 'paired'], 'kind: use line, scatter, bar, interval, heatmap or paired; use a custom plotting script for other relationships')
+    require(kind in ['line', 'scatter', 'bar', 'interval', 'heatmap', 'paired', 'observations'], 'kind: use line, scatter, bar, interval, heatmap, paired or observations; use a custom plotting script for other relationships')
     heatmap_fields = ['rowLabels', 'columnLabels', 'values', 'colorLabel', 'colorDomain', 'colorCenter', 'missingLabel']
     if kind != 'heatmap':
         require(not any(k in spec for k in heatmap_fields), 'heatmap fields do not apply to this chart kind')
@@ -116,15 +116,22 @@ def validate(spec):
             require(len(set(categories)) == len(categories), 'categories: duplicate labels would conceal a repeated category')
             require('xDomain' not in spec, 'bar: x is categorical; xDomain is not applicable')
             ys.append(0)
+        elif kind == 'observations':
+            require(not any(k in spec for k in ['categories', 'xDomain']), 'observations: groups are categorical; do not supply categories or xDomain')
         else:
             require('categories' not in spec, 'categories: only applies to bar charts')
         for item in series:
-            fields(item, ['name', 'values'] if kind == 'bar' else ['name', 'points'], '/series')
+            fields(item, ['name', 'values'] if kind in ['bar', 'observations'] else ['name', 'points'], '/series')
             require(label(item.get('name')) and item['name'] not in names, 'series: require unique supplied names')
             names.add(item['name'])
             if kind == 'bar':
                 values = item.get('values')
                 require(isinstance(values, list) and len(values) == len(spec['categories']) and all(number(v) for v in values), 'values: one finite value for each category; no inferred zeros')
+                ys.extend(values)
+            elif kind == 'observations':
+                values = item.get('values')
+                require(isinstance(values, list) and 1 <= len(values) <= 80 and all(number(v) for v in values),
+                        'observations: supply 1..80 actual values per group; no missing-value removal, summary or imputation')
                 ys.extend(values)
             else:
                 points = item.get('points')
@@ -209,6 +216,34 @@ def build_figure(spec, width=1800, height=1100, font=None):
                 ax.set_ylim(0, high)
             elif max(values) <= 0:
                 ax.set_ylim(low, 0)
+        elif kind == 'observations':
+            values = [v for series in spec['series'] for v in series['values']]
+            low, high = min(values), max(values)
+            margin = (high-low)*.12 if low != high else max(abs(low)*.05, .5)
+            ax.set_ylim(*spec.get('yDomain', [low-margin, high+margin]))
+            ax.set_xlim(-.65, len(spec['series'])-.35)
+            ax.set_xticks(range(len(spec['series'])), [s['name'] for s in spec['series']])
+            # Placement shifts only along the categorical dimension. Measurements
+            # remain exact. Work in rendered pixels so duplicate/nearby values
+            # cannot silently conceal one another at a different axis scale.
+            fig.canvas.draw()
+            radius = 7.0
+            for i, series in enumerate(spec['series']):
+                placed, offsets = [], []
+                centre = ax.transData.transform((i, low))[0]
+                halfwidth = abs(ax.transData.transform((i+.35, low))[0]-centre)
+                for value in series['values']:
+                    py = ax.transData.transform((i,value))[1]
+                    candidates = [0.0]
+                    for step in range(1, int(halfwidth/(radius*2))+1):
+                        candidates.extend([step*radius*2, -step*radius*2])
+                    chosen = next((offset for offset in candidates
+                                   if all((centre+offset-px)**2+(py-y)**2 >= (radius*2)**2-.001 for px,y in placed)), None)
+                    require(chosen is not None, 'observations: points cannot fit without overlap; use a larger plot or an appropriate custom distribution layout')
+                    placed.append((centre+chosen,py))
+                    offsets.append(ax.transData.inverted().transform((centre+chosen,py))[0])
+                ax.scatter(offsets,series['values'],s=36,color=colors[0],edgecolor='white',linewidth=.5,
+                           gid='observations-'+str(i),zorder=3)
         elif kind == 'paired':
             from matplotlib.lines import Line2D
             for i, row in enumerate(spec['rows']):
@@ -279,7 +314,7 @@ def build_figure(spec, width=1800, height=1100, font=None):
         ax.set_axisbelow(True)
         if kind != 'heatmap':
             ax.grid(axis='x' if kind in ['interval', 'paired'] else 'y', color='#E1E7EB', linewidth=.7)
-        if kind not in ['interval', 'heatmap', 'paired']:
+        if kind not in ['interval', 'heatmap', 'paired', 'observations']:
             ax.legend(loc='best', frameon=True, facecolor='white', edgecolor='none', framealpha=.95)
         elif 'reference' in spec:
             ax.legend(loc='best', frameon=False)

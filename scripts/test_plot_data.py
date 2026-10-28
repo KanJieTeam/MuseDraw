@@ -15,10 +15,22 @@ LINE = json.loads((ROOT/'examples/data-line-missing.json').read_text())
 INTERVAL = json.loads((ROOT/'examples/data-interval-estimates.json').read_text())
 HEATMAP = json.loads((ROOT/'examples/data-heatmap-missing.json').read_text(encoding='utf-8'))
 PAIRED = json.loads((ROOT/'examples/data-paired-observations.json').read_text(encoding='utf-8'))
+OBSERVATIONS = json.loads((ROOT/'examples/data-observed-distribution.json').read_text(encoding='utf-8'))
 HAS_MATPLOTLIB = importlib.util.find_spec('matplotlib') is not None
 
 
 class PlotContractTests(unittest.TestCase):
+    def test_raw_observations_do_not_accept_missing_values_or_hide_extremes(self):
+        self.assertEqual(plot.validate(OBSERVATIONS), OBSERVATIONS)
+        for mutate in [lambda b: b['series'][0]['values'].append(None),
+                       lambda b: b.update(yDomain=[0,10]),
+                       lambda b: b.update(xDomain=[0,2]),
+                       lambda b: b['series'][0].update(mean=6)]:
+            b=copy.deepcopy(OBSERVATIONS)
+            mutate(b)
+            with self.assertRaises(ValueError):
+                plot.validate(b)
+
     def test_pairs_require_identities_and_both_original_measurements(self):
         self.assertEqual(plot.validate(PAIRED), PAIRED)
         for mutate in [lambda b: b['rows'][0].update(after=None),
@@ -167,6 +179,28 @@ class PlotRenderingTests(unittest.TestCase):
             fig.canvas.draw()
             renderer=fig.canvas.get_renderer()
             self.assertFalse(ax._left_title.get_window_extent(renderer).overlaps(ax.get_legend().get_window_extent(renderer)))
+
+    def test_raw_distribution_keeps_repeats_extremes_and_unequal_counts(self):
+        fig, ax, _=plot.build_figure(OBSERVATIONS)
+        self.assertEqual(len(ax.collections), 2)
+        self.assertEqual(len(ax.lines), 0)
+        for collection, series in zip(ax.collections,OBSERVATIONS['series']):
+            offsets=collection.get_offsets()
+            self.assertEqual(offsets[:,1].tolist(),series['values'])
+            pixels=ax.transData.transform(offsets)
+            for i,p in enumerate(pixels):
+                for q in pixels[i+1:]:
+                    self.assertGreaterEqual(float(sum((p-q)**2)),14**2-.01)
+        self.assertEqual([len(c.get_offsets()) for c in ax.collections],[8,6])
+        self.assertGreater(ax.get_ylim()[1],14)
+        with tempfile.TemporaryDirectory() as folder:
+            self.assertTrue(plot.export(OBSERVATIONS,folder)['passed'])
+
+    def test_overcrowded_raw_values_fail_instead_of_concealing_replicates(self):
+        b=copy.deepcopy(OBSERVATIONS)
+        b['series']=[{'name':'A','values':[2]*80},{'name':'B','values':[2]}]
+        with self.assertRaisesRegex(ValueError,'cannot fit without overlap'):
+            plot.build_figure(b,1200,700)
 
     def test_asymmetric_interval_uses_true_endpoints(self):
         fig, ax, _ = plot.build_figure(INTERVAL)
