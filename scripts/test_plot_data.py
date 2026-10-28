@@ -109,6 +109,15 @@ class PlotRenderingTests(unittest.TestCase):
             self.assertNotIn('<!DOCTYPE', (out/'figure.svg').read_text(encoding='utf-8'))
             self.assertEqual(json.loads((out/'data.json').read_text()), INTERVAL)
 
+    def test_scientific_unit_glyph_survives_the_available_primary_font(self):
+        # A real first-draft comparison lost the superscript minus despite an
+        # installed CJK font. Rendering the full unit exercises the fallback.
+        with tempfile.TemporaryDirectory() as folder:
+            checks=plot.export(LINE,folder)
+            self.assertTrue(checks['passed'], checks)
+            self.assertIn('DejaVu Sans', checks['font_families'])
+            self.assertIn('mg L⁻¹', (Path(folder)/'figure.svg').read_text(encoding='utf-8'))
+
 
 if __name__ == '__main__':
     unittest.main()

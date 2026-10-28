@@ -23,6 +23,12 @@ actual data into the corresponding JSON below and run:
 python <skill>/scripts/plot_data.py data.json --out output/figure
 ```
 
+Use this helper for the data field when its grammar fits. A report heading or
+an explanatory note alone is not a reason to rebuild coordinate handling,
+missing-value segmentation and font fallback from scratch. For a custom
+composition, `plot_data.py` also exposes `build_figure(spec, width, height)`;
+extend the returned figure rather than replacing the measured data artists.
+
 This route uses Matplotlib in the selected Python environment. Reuse an
 available plotting environment; it is not installed by the scene renderer.
 If missing, report the unavailable dependency or use another already available
@@ -30,6 +36,15 @@ statistical plotting tool. Do not replace measured data with illustrative
 geometry just to get a PNG. `--font` selects an installed font; the default
 tries common CJK fonts before DejaVu Sans. Missing-glyph warnings fail the
 export check. No font download or installation is implicit.
+
+For a custom Matplotlib script, keep a glyph fallback chain. A CJK font file
+existing on disk does not mean it contains scientific unit characters: a
+Chinese font can render the label while omitting `⁻` in `mg L⁻¹`. With an
+installed primary font use `font.family: [primary_font, "DejaVu Sans"]` before
+creating text. The helper already does this; its returned `font_families`
+metadata can be reused for added annotations. Inspect render warnings and
+the final unit. Outlining a missing glyph or suppressing its warning does
+not repair it; do not change the supplied unit to hide the defect.
 
 Outputs: `figure.png`, `figure.svg` with live text, retained `data.json`, and
 `checks.json`. Default PNG is 1800×1100; `--width` and `--height` choose the
