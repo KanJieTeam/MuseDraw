@@ -2,7 +2,15 @@
 
 [简体中文](usage.zh-CN.md) · [Back to README](../README.en.md) · [Live gallery](https://kanjieteam.github.io/MuseDraw/)
 
-MuseDraw is a professional drawing Skill for AI agents working on research, office, teaching and engineering diagrams. The main workflow uses the scene engine: the agent interprets a short request, chooses composition and style, creates a scene, renders it and checks the report before delivering PNG, retaining the scene source and SVG.
+MuseDraw is a visual creation Skill for AI agents. Start with a brief, supplied material or selected example; choose the production medium the work needs, then continue editing in conversation.
+
+## Choose the medium
+
+- Painting, photographic imagery, textured illustration and image edits use an available host image-generation/editing tool. Deliver the requested image and useful prompts/assets. A missing host image tool is not a restriction of MuseDraw to architecture diagrams.
+- Websites, UI and working interfaces use runnable HTML/CSS/JavaScript or the existing project stack, with source and browser previews.
+- Diagrams, structured information graphics, editable scientific schematics and native-vector cases can use the scene engine: PNG by default, with scene JSON and SVG retained.
+
+SVG is not mandatory for every artifact. The rendering commands and scene checks below concern the third route; the other media follow the relevant [Skill instructions](../skills/musedraw/SKILL.md). Use the Skill matched by a copied gallery prompt instead of remembered export instructions from an older installation or conversation.
 
 ## Install and start
 
