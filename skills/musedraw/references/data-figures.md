@@ -164,6 +164,12 @@ a `colorDomain` that contains it; this selects a diverging scale. The domain
 cannot clip measurements. Do not substitute a row-relative percentage for
 absolute measurements, or treat visually blank cells as zero. Cell labels keep
 their supplied numerical values rather than rounding nearby values together.
+For these bounded matrices the helper exports individual vector cells, hatching,
+live labels and a vector colour scale. In a custom Matplotlib implementation,
+`imshow` embeds a bitmap in SVG; use a non-rasterised `pcolormesh` and colourbar
+when editable vector cells are actually required. An embedded `data:image` is
+self-contained, but it is still a raster region; distinguish those requirements
+instead of calling every SVG fully vector or every embedded image external.
 If dense or long values fail the cell bounds check, adjust the actual plot
 size or use a custom layout; do not round away a distinction without agreement.
 

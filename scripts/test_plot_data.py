@@ -111,7 +111,7 @@ class PlotRenderingTests(unittest.TestCase):
     def test_heatmap_does_not_turn_missing_into_zero_or_normalise_rows(self):
         import numpy as np
         _, ax, _=plot.build_figure(HEATMAP)
-        image=ax.images[0]
+        image=ax.collections[0]
         data=image.get_array()
         self.assertEqual(int(np.ma.getmaskarray(data).sum()), 2)
         self.assertEqual(float(data[0, 0]), 0)
@@ -125,18 +125,19 @@ class PlotRenderingTests(unittest.TestCase):
             checks=plot.export(HEATMAP, folder)
             self.assertTrue(checks['passed'], checks)
             self.assertEqual(json.loads((Path(folder)/'data.json').read_text(encoding='utf-8')), HEATMAP)
+            self.assertNotIn('<image', (Path(folder)/'figure.svg').read_text(encoding='utf-8'))
 
     def test_heatmap_diverging_center_and_constant_matrix_are_finite(self):
         b=copy.deepcopy(HEATMAP)
         b.update(colorCenter=3)
         _, ax, _=plot.build_figure(b)
-        self.assertAlmostEqual(float(ax.images[0].norm(3)), .5)
+        self.assertAlmostEqual(float(ax.collections[0].norm(3)), .5)
         b.pop('colorCenter')
         b.pop('colorDomain')
         b['values']=[[2]*4 for _ in range(3)]
         _, ax, _=plot.build_figure(b)
-        self.assertLess(ax.images[0].norm.vmin, 2)
-        self.assertGreater(ax.images[0].norm.vmax, 2)
+        self.assertLess(ax.collections[0].norm.vmin, 2)
+        self.assertGreater(ax.collections[0].norm.vmax, 2)
 
     def test_pair_links_keep_identity_order_and_unchanged_observations(self):
         _, ax, _=plot.build_figure(PAIRED)

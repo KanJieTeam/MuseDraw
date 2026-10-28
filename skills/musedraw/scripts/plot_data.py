@@ -245,7 +245,11 @@ def build_figure(spec, width=1800, height=1100, font=None):
             center = spec.get('colorCenter')
             norm = Normalize(low, high) if center is None else TwoSlopeNorm(vcenter=center, vmin=low, vmax=high)
             cmap = plt.get_cmap('viridis' if center is None else 'coolwarm').with_extremes(bad='#E9ECEF')
-            image = ax.imshow(np.ma.masked_invalid(values), cmap=cmap, norm=norm, interpolation='none', aspect='auto', gid='measured-matrix')
+            image = ax.pcolormesh(np.arange(values.shape[1]+1)-.5, np.arange(values.shape[0]+1)-.5,
+                                  np.ma.masked_invalid(values), cmap=cmap, norm=norm,
+                                  shading='flat', edgecolors='white', linewidth=1, rasterized=False, gid='measured-matrix')
+            ax.set_xlim(-.5, values.shape[1]-.5)
+            ax.set_ylim(values.shape[0]-.5, -.5)
             ax.set_xticks(range(len(spec['columnLabels'])), spec['columnLabels'])
             ax.set_yticks(range(len(spec['rowLabels'])), spec['rowLabels'])
             ax.tick_params(length=0, pad=10)
@@ -266,6 +270,8 @@ def build_figure(spec, width=1800, height=1100, font=None):
                         ax.text(c, r, str(value), ha='center', va='center',
                                 color='black' if luminance > .179 else 'white', fontsize=12, gid='cell-value')
             colorbar = fig.colorbar(image, ax=ax, pad=.03, fraction=.05)
+            if colorbar.solids is not None:
+                colorbar.solids.set_rasterized(False)
             colorbar.set_label(spec['colorLabel'], labelpad=14)
             if np.isnan(values).any():
                 ax.legend(handles=[Patch(facecolor='#E9ECEF', edgecolor='#9BA6AE', hatch='///', label=spec['missingLabel'])],
