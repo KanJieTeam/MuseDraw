@@ -219,7 +219,9 @@ async function main() {
         drawing.header ??= false;
         drawing.footer ??= false;
         let svg = render(drawing, theme);
-        if (fontMode === 'system') svg = withSystemFonts(svg);
+        // Approved native artwork already declares its typefaces and fallback
+        // stack. Theme font substitution would silently redesign exact replays.
+        if (fontMode === 'system' && drawing.type !== 'vector') svg = withSystemFonts(svg);
         progress('scene-ready');
         const outDir = path.resolve(flags.out ?? path.dirname(file));
         if (!flags['svg-only'] && !runtime) {

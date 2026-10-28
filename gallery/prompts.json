@@ -432,6 +432,54 @@
     "108-shared-representation": {
       "en": "Use MuseDraw to draw a seven-node graph method: edges 0–1, 1–2, 1–3, 3–4, 3–5 and 5–6. Three symbolic components per node enter one neighbourhood aggregation and one shared 7×3 representation H, which branches into seven node readout slots and a three-component global sum. Below, expand only node 3 and neighbours 1, 4 and 5 with native scripted update notation. Preserve row identities and topology; no fabricated results or process cards.",
       "zh": "用 MuseDraw 画七节点分支图的共享邻域表征：边为0–1、1–2、1–3、3–4、3–5、5–6。逐节点三分量特征经过一次聚合，唯一7×3表征H分出7槽逐节点读出和三分量整体求和。下方只展开节点3与邻居1、4、5，原生下标展示更新公式。示意符号计算，不展示实验或性能结果。"
+    },
+    "109-vermilion-type": {
+      "zh": "用 MuseDraw 设计一张朱红色艺术海报。奶油色衬线 Art 字形越出画框；下方一条斜向石桥和极小行人建立尺度。不要加卡片、图标或装饰信息栏。",
+      "en": "Use MuseDraw to create a vermilion art poster. Oversized cropped cream serif lettering is the main event; a tiny walker on a diagonal masonry bridge establishes scale. Keep the three-color palette and clear type hierarchy."
+    },
+    "110-herbarium-ink": {
+      "zh": "用 MuseDraw 深林绿色植物学图版，以一株原创想象植物为主体。画出连续分枝、锯齿叶缘、主脉支脉、小伞形花序和种子细节；米黄与鼠尾草绿墨色。保留图谱的细读层次，不虚构物种名称。",
+      "en": "Use MuseDraw to draw an imagined botanical specimen on forest-green paper. Build coherent branches, serrated leaves, structural veins, clustered flowers and seed details in sage and cream. Identify it as an invented drawing rather than a species key."
+    },
+    "111-cobalt-pavilion": {
+      "zh": "用 MuseDraw 设计钴蓝色创作空间轴测插画：三层不同用途空间、后退的屋顶露台、书架、工作台、沙发、连接各层平台的折返外楼梯，以及水院与植物。全部几何遵守同一投影，注意遮挡顺序、光影层次与材料区分。",
+      "en": "Use MuseDraw to draw a cobalt-blue creative pavilion in a consistent axonometric projection. Include three open floors, slender columns, furniture, exterior stairs, roof planting and a ground-level pool. Label it as a concept illustration, not a construction drawing."
+    },
+    "112-orbital-study": {
+      "zh": "用 MuseDraw 制作黑金色轨道艺术图版。八条不同偏角椭圆围绕一个有蚀刻表面的球体；疏密有层次，精确细线，小型编号与刻度。明确为几何示意，不把虚构轨道当作科学数据。",
+      "en": "Use MuseDraw to draw a dark astronomical-looking art plate with eight fine elliptical paths around an etched sphere. Use sparse identifiers and warm restrained lines. Explicitly identify it as a geometric schematic, not an astronomical model."
+    },
+    "113-cyan-terrain": {
+      "zh": "用 MuseDraw 黑色底的青色虚构地形图版。相互连续的密集等高线、少量地形层级色块、斜向剖面线与下方剖面图。控制线条粗细，注明合成地形，不声称真实测绘数据。",
+      "en": "Use MuseDraw to draw a synthetic cyan terrain map on a dark ground. Derive dense contours and the section profile from the same invented height field. Include a narrow watercourse, sparse survey labels and clear separation between the map and its section."
+    },
+    "114-yellow-ginkgo": {
+      "zh": "用 MuseDraw 明黄色植物形态海报。黑色巨幅扇形叶片从边缘进入，形成不对称节奏；细密放射叶脉与少量线稿藏在负空间里。标题简短有力量，不用等距图标网格。",
+      "en": "Use MuseDraw to create a bright-yellow Ginkgo poster. Build the composition from oversized asymmetric black fan shapes, delicate radial veins and a few fine-line specimens in the negative space. Keep the short headline clear and avoid a uniform icon grid."
+    },
+    "115-silent-range": {
+      "zh": "用 MuseDraw 以原创虚构山脉制作黑白版画：不对称主峰、断续积雪、顺山体方向的排线；淡灰远山、雾带与深色针叶林前景形成距离。保留纸张留白，不使用照片。",
+      "en": "Use MuseDraw to draw an original monochrome engraved mountain landscape. A dominant asymmetric peak, broken snow, directional hatching, pale distant ridges, mist and dark conifers should establish depth. Keep this an imagined place, rather than a photograph."
+    },
+    "116-first-light": {
+      "zh": "用 MuseDraw 创作暖橙晨光、群青阴影与青绿色山麓的原创山岳版画。主峰偏左，多层山脊、克制的短排线、明亮湖面与前景针叶林构成深度。不要把它描述为实景摄影或油画。",
+      "en": "Use MuseDraw to create an original alpine vector print. Warm summit light meets cool blue shadow planes; foothills, a quiet lake and dark foreground conifers establish distance. Keep continuous lighting across neighboring facets rather than random confetti colors."
+    },
+    "117-still-water": {
+      "zh": "用 MuseDraw 在暖宣纸色上画一只原创长颈鹤，红日置于远处。用颈部曲线、羽毛层次、纤细足部和水草构图，给鹤头与喙留出空气。水墨式原生矢量插画，不伪称传统手绘原作。",
+      "en": "Use MuseDraw to draw a stylized crane and reeds on warm paper. Prioritize a clear continuous neck curve, layered feather directions, fine legs and space around the head. A distant vermilion sun balances the composition. This is an original vector illustration."
+    },
+    "118-ink-gesture": {
+      "zh": "用 MuseDraw 创作一张抽象墨势海报：一笔连续曲线，在大转折处蓄力变厚，提笔时收窄；露白细短、不均匀，避免平行条带和规则数字轮廓。暖纸色、炭黑和一个小朱红色圆形。",
+      "en": "Use MuseDraw to create an abstract ink poster on warm paper. Use large pressure-sensitive gestures, short dry-brush streaks and one vermilion circular counterweight. Do not invent Chinese characters or assign calligraphic meanings to abstract marks."
+    },
+    "119-botanical-blue": {
+      "zh": "用 MuseDraw 用深钴蓝底和乳白透明枝叶，创作蓝晒感植物海报。主枝斜向伸展，叶片长短、方向、透明度有变化；较小蕨叶作为次层，不采用等距排列。明确是矢量演绎，非实际感光工艺。",
+      "en": "Use MuseDraw to create an original botanical blue print. A diagonal branch with varied translucent pale leaves meets a smaller delicate fern on cobalt-blue paper. Keep the stems and leaf attachments connected. This is a vector interpretation, not a physical cyanotype."
+    },
+    "120-lunar-atlas": {
+      "zh": "用 MuseDraw 在奶油色测量网格上画一枚大型半明半暗月面图案，表面有手绘式环坑和细小刻痕。右侧用八个小型月相符号形成节奏；明确是图形示意，不虚构观测日期或数据。",
+      "en": "Use MuseDraw to create a cream-paper lunar graphic atlas. A large half-lit disc with etched craters rests on a quiet measuring grid; eight small phase symbols form a secondary sequence. This is a schematic illustration, not an observation record."
     }
   }
 }

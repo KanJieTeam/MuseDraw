@@ -111,6 +111,11 @@ through endpoint, line treatment and placement, rather than banning all such
 crossings. Ordinary checks do not infer material membership or validate a
 transport mechanism; free paths also do not follow an edited material boundary.
 
+For an explicitly supplied two-port section with serial, full-span layers, the
+experimental [open-section constructor](open-channel.md) emits open wall paths
+and shared fixed geometry for removal states. It covers that narrow geometry;
+it does not validate transport physics or arbitrary apparatus.
+
 ## Editable scientific object vocabulary
 
 In a normal scene, a block is a frame containing a native illustration:

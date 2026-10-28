@@ -42,6 +42,10 @@ not become relevant merely because it is impressive.
 
 ## While composing
 
+If the direction remains a list of adjectives or the page feels interchangeable,
+use [composition decisions](frontend-composition.md) to turn the subject's actual
+material into a spatial relationship and inspect that key composition first.
+
 - Give the first screen an obvious primary task and enough concrete information
   to act. Do not bury it under slogans, proof badges or a row of generic feature
   cards. Preserve the actual facts and exceptions.

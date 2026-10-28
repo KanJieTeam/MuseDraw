@@ -2,13 +2,19 @@
 
 [简体中文](CONTRIBUTING.zh-CN.md)
 
-MuseDraw is a professional drawing assistant for research, office work, teaching and engineering. Contributions can improve scenes, styles, layout blocks, design guidance or documentation. You need not be a programmer to contribute an original example or clearer instructions.
+MuseDraw brings visual creation and design methods to AI agents. Contributions can improve artwork, interfaces, scenes, composition methods, design guidance or documentation. You need not be a programmer to contribute an original example or clearer instructions.
 
 ## Start with a focused change
 
 Choose a concrete improvement. Small fixes need no prior issue; discuss larger engine or workflow changes when useful. Read the [Skill](skills/musedraw/SKILL.md), [scene schema](skills/musedraw/references/scene-schema.md) and [gallery](gallery/README.md) for the current scene-engine workflow.
 
-For a new case, copy a suitable gallery directory and supply:
+Choose the medium the work needs. A painting can retain its raster asset and
+production prompt; an interface needs runnable HTML/CSS/JavaScript and browser
+previews. Neither needs to be converted into SVG. Include supplied facts, asset
+rights, actual tool requirements and checks so another contributor can reproduce
+the workflow. Treat image regeneration and reuse of a saved asset separately.
+
+For a new native-scene gallery case, copy a suitable gallery directory and supply:
 
 ```text
 gallery/<case>/

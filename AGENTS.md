@@ -3,10 +3,13 @@
 ## Drawing requests
 
 Read the complete [MuseDraw Skill](skills/musedraw/SKILL.md) before drawing.
-Use its bundled `skills/musedraw/scripts/musedraw.mjs` scene engine: `quickstart
+For scene-based drawings use its bundled `skills/musedraw/scripts/musedraw.mjs` scene engine: `quickstart
 rag` for the shared-index RAG starter, or `render scene.json` for other diagrams.
-The engine produces PNG, SVG and scene JSON. Use the bundled renderer; do not
-install unrelated exporters.
+The engine produces PNG and SVG while the scene JSON remains the editable source.
+Use the bundled renderer for this route; do not install unrelated exporters.
+For painting, photographic imagery, image edits and frontend/UI work, follow the
+Skill's appropriate route and deliver the requested medium rather than forcing
+the result into a scene or SVG.
 Keep execution details in the Skill, not in copied
 user prompts. Read `checks.json`; passing ordinary drawings can be delivered with
 `preview.jpg` immediately. Image reading, CDN uploads, OCR and external vision

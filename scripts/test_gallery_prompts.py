@@ -16,7 +16,7 @@ class GalleryPromptTests(unittest.TestCase):
 
     def test_exact_catalog_coverage_and_two_languages(self):
         self.assertEqual(self.document["version"], 1)
-        self.assertEqual(len(self.catalog), 108)
+        self.assertEqual(len(self.catalog), 120)
         self.assertEqual(set(self.document["items"]), {item["slug"] for item in self.catalog})
         for item in self.catalog:
             with self.subTest(slug=item["slug"]):

@@ -58,8 +58,8 @@ class GalleryTests(unittest.TestCase):
             self.assertIn(heading, template)
 
     def test_current_catalog_and_original_artwork(self):
-        self.assertEqual(len(self.items), 108)
-        self.assertEqual(len({item["slug"] for item in self.items}), 108)
+        self.assertEqual(len(self.items), 120)
+        self.assertEqual(len({item["slug"] for item in self.items}), 120)
         self.assertEqual(len({item["theme"] for item in self.items}), 20)
         self.assertEqual(sum(item["status"] == "flagship" for item in self.items), 20)
         themes = {file.stem for file in (ROOT / "skills/musedraw/themes").glob("*.json")}
@@ -106,8 +106,8 @@ class GalleryTests(unittest.TestCase):
             result = subprocess.run([shutil.which("node"), "--input-type=module", "-e", script],
                                     capture_output=True, text=True, encoding="utf-8", timeout=120)
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(json.loads(result.stdout)["rendered"], 108)
-            self.assertEqual(len(list(Path(scratch).glob("*.svg"))), 108)
+            self.assertEqual(json.loads(result.stdout)["rendered"], 120)
+            self.assertEqual(len(list(Path(scratch).glob("*.svg"))), 120)
             for file in Path(scratch).glob("*.svg"):
                 svg_dimensions(file.read_text(encoding="utf-8"))
 
@@ -168,7 +168,7 @@ class GalleryTests(unittest.TestCase):
     def test_small_previews_match_current_sources_and_have_a_bounded_payload(self):
         index = json.loads((ROOT / "assets/gallery/previews.json").read_text(encoding="utf-8"))
         all_items = gallery_catalog(ROOT)["items"]
-        self.assertEqual(len(all_items), 288)
+        self.assertEqual(len(all_items), 300)
         self.assertEqual(set(index["items"]), {item["slug"] for item in all_items})
         total = source_total = 0
         expected = set()
@@ -236,11 +236,13 @@ class GalleryTests(unittest.TestCase):
                 for required in ("SKILL.md", "LICENSE", "scripts/musedraw.mjs", "scripts/vendor/ROUGHJS-LICENSE", "assets/starters/rag.zh.json", "assets/starters/rag.en.json", "references/scene.schema.json", "references/frontend-design.md", "references/frontend-work-apps.md", "scripts/ui/focus-preservation.js", "tests/frontend-focus/focus.test.mjs"):
                     self.assertIn("musedraw/" + required, names)
                 self.assertEqual(len([name for name in names if name.startswith("musedraw/themes/")]), 20)
+                for required in ("references/frontend-composition.md", "scripts/capture-ui.mjs", "tests/ui-capture/capture.test.mjs", "assets/frontend/latch/index.html"):
+                    self.assertIn("musedraw/" + required, names)
                 self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
                 self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
                 extracted = staging / "extracted"
                 bundle.extractall(extracted)
-                for reference in ("frontend-design.md", "frontend-work-apps.md"):
+                for reference in ("frontend-design.md", "frontend-work-apps.md", "frontend-composition.md"):
                     document = extracted / "musedraw/references" / reference
                     self.assertEqual(check_markdown(document.read_text(encoding="utf-8"), document, extracted / "musedraw"), [])
 
@@ -249,6 +251,10 @@ class GalleryTests(unittest.TestCase):
                 for example in catalog["examples"]:
                     for key in ("scene", "method", "preview"):
                         self.assertIn(design_root + example[key], names)
+                self.assertFalse(any("drawio" in name.lower() or "draw.io" in name.lower() for name in names))
+                for name in names:
+                    if name.lower().endswith((".md", ".yaml", ".json", ".mjs", ".js")):
+                        self.assertNotRegex(bundle.read(name).decode("utf-8", "ignore"), r"draw\.?io")
             second = staging / "second"
             second.mkdir()
             build_skill_download(ROOT, second)

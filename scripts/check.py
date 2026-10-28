@@ -287,6 +287,7 @@ def run_node_checks(root, playwright=None, browser=None):
             return False
     print(f"PASS Node syntax: {len(modules)} modules (not browser layout tests).")
     geometry_tests = [root / "skills/musedraw/tests/callout-layout/layout.test.mjs",
+                      root / "skills/musedraw/tests/open-channel/open-channel.test.mjs",
                       root / "skills/musedraw/tests/material-footprint/material-footprint.test.mjs",
                       root / "scripts/test_compose_plan.mjs",
                       root / "scripts/test_compose_flow.mjs",
@@ -327,6 +328,17 @@ def run_node_checks(root, playwright=None, browser=None):
     if browser:
         command += ["--browser", str(Path(browser).resolve())]
     result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", timeout=60)
+    print(result.stdout, end="")
+    if result.returncode:
+        print(result.stderr, file=sys.stderr)
+    if result.returncode:
+        return False
+    capture_env = os.environ.copy()
+    capture_env["MUSEDRAW_PLAYWRIGHT"] = str(Path(playwright).resolve())
+    if browser:
+        capture_env["MUSEDRAW_BROWSER"] = str(Path(browser).resolve())
+    command = [node, str(root / "skills/musedraw/tests/ui-capture/capture.test.mjs")]
+    result = subprocess.run(command, cwd=root, env=capture_env, capture_output=True, text=True, encoding="utf-8", timeout=90)
     print(result.stdout, end="")
     if result.returncode:
         print(result.stderr, file=sys.stderr)
