@@ -89,6 +89,11 @@ than inventing durations, completion percentages or calendar positions.
 
 ## Inspect the office question
 
+Measured trends, category comparisons, survey results and research-report
+charts use [data figures](data-figures.md). Draw their actual observations,
+scales and uncertainty with a plotting tool; an architecture or process
+diagram does not substitute for those data.
+
 Trace one normal route and one exception in a process, one deliverable across
 its actual roles, or one parallel section of a schedule. Check those facts
 separately from the actual rendered labels and line routes. Passing geometry

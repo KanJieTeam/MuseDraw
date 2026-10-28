@@ -1,5 +1,10 @@
 # Scientific composition · objects before process boxes
 
+For measured results, statistical comparisons and report charts, use
+[data figures](data-figures.md) and an available plotting tool. This reference
+addresses scientific objects and mechanisms; those are not substitutes for
+the report's actual data plots.
+
 Use for reference-led Nature-style method figures, mechanisms, devices and
 multi-panel scientific schematics. Read this short guide and the matching
 example's method; ordinary responsibility flows still use semantic flow.

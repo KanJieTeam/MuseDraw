@@ -1,0 +1,10 @@
+{
+  "kind": "interval",
+  "xLabel": "Mean difference / s",
+  "intervalLabel": "Supplied 95% confidence intervals",
+  "reference": 0,
+  "rows": [
+    {"label":"Procedure A", "estimate":-1.2, "lower":-2.0, "upper":-0.3},
+    {"label":"Procedure B", "estimate":0.4, "lower":-0.2, "upper":1.5}
+  ]
+}

@@ -1,0 +1,111 @@
+# Measured data and report charts
+
+Use a statistical plotting tool for measured data, not a collection of manually
+positioned bars or a workflow that merely mentions the measurements. Keep the
+input table and plotting code. A scientific report may need data plots,
+study diagrams, apparatus drawings and a composed evidence figure; these are
+different decisions. Use [scientific composition](scientific-design.md) for
+mechanisms and physical objects.
+
+Choose the visual comparison from the question. Trends need actual time
+spacing; paired changes need the pairing; distributions need observations or
+supplied summaries; intervals need their stated meaning. A heatmap needs a
+meaningful common colour scale. Survival curves need censoring information
+and the supplied risk-set convention. Neither a chart name nor a polished
+frame establishes those facts.
+
+## Reusable plotting route
+
+For a line, scatter, grouped bar or supplied interval plot, translate the
+actual data into the corresponding JSON below and run:
+
+```sh
+python <skill>/scripts/plot_data.py data.json --out output/figure
+```
+
+This route uses Matplotlib in the selected Python environment. Reuse an
+available plotting environment; it is not installed by the scene renderer.
+If missing, report the unavailable dependency or use another already available
+statistical plotting tool. Do not replace measured data with illustrative
+geometry just to get a PNG. `--font` selects an installed font; the default
+tries common CJK fonts before DejaVu Sans. Missing-glyph warnings fail the
+export check. No font download or installation is implicit.
+
+Outputs: `figure.png`, `figure.svg` with live text, retained `data.json`, and
+`checks.json`. Default PNG is 1800×1100; `--width` and `--height` choose the
+requested output size. A supplied `title` is optional. This plotting route is
+separate from `render scene.json`; it does not require a scene or an additional
+PNG exporter. Continue edits in the data specification or plotting code.
+
+Line/scatter series have explicit numeric x/y pairs. A line requires increasing
+x and leaves `null` observations as gaps; it never replaces a missing result
+with zero or connects through it. Scatter points are not connected and have
+no inferred trend line, correlation coefficient or causal arrow.
+
+```json
+{
+  "kind":"line",
+  "xLabel":"Elapsed time / h",
+  "yLabel":"Concentration / mg L⁻¹",
+  "series":[
+    {"name":"Control","points":[{"x":0,"y":1.2},{"x":2,"y":null},{"x":6,"y":2.1},{"x":10,"y":1.8}]},
+    {"name":"Treatment","points":[{"x":0,"y":1.1},{"x":2,"y":1.6},{"x":6,"y":2.8},{"x":10,"y":2.4}]}
+  ]
+}
+```
+
+For scatter use `kind:"scatter"` with the same series structure and finite
+observations. Do not turn independent observations into a paired trajectory.
+
+Bar series supply one value per category. The baseline includes zero, even
+with negative values. Values already expressed as percentages stay in their
+supplied units; the helper does not choose a denominator or normalise them.
+
+```json
+{
+  "kind":"bar", "xLabel":"Workstream", "yLabel":"Hours",
+  "categories":["Preparation","Review","Delivery"],
+  "series":[{"name":"Planned","values":[18,12,9]},
+            {"name":"Actual","values":[21,10,11]}]
+}
+```
+
+Intervals keep the supplied endpoints, including asymmetric intervals.
+`intervalLabel` must state their actual meaning. `reference` is optional and
+must come from the request; zero is not inserted as a meaningful null value
+for ratios or other scales. This helper does not estimate an interval or
+infer sample sizes, significance or an appropriate comparison model.
+
+```json
+{
+  "kind":"interval", "xLabel":"Mean difference / s",
+  "intervalLabel":"Supplied 95% confidence intervals", "reference":0,
+  "rows":[
+    {"label":"Procedure A","estimate":-1.2,"lower":-2.0,"upper":-0.3},
+    {"label":"Procedure B","estimate":0.4,"lower":-0.2,"upper":1.5}
+  ]
+}
+```
+
+Optional `xDomain:[min,max]` and `yDomain:[min,max]` preserve an explicit linear
+scale. They cannot hide supplied values/endpoints; bar y ranges must contain
+zero. Unsupported fields fail rather than being silently ignored. The helper
+supports 1–4 series, 12 bar categories or 16 interval rows. Larger plots,
+logarithmic axes, dates, distributions, survival, heatmaps and multiple panels
+need an appropriate custom Matplotlib/R/host plotting implementation, not a
+mislabelled use of one of these four grammars.
+
+## Preserve the evidence
+
+Keep SD, SE, CI, ranges and quantiles distinct. Show the stated sample unit,
+denominator, pairing and missing-data convention when they affect the reading
+task. Do not add fitted curves, significance stars, sample sizes, causal claims
+or precision that the data did not provide. A crop or inset must preserve its
+link to the overview and disclose a changed scale.
+
+For a report or multi-panel figure, make linked conditions share the same
+encoding; share an axis only when units and comparisons justify it. Compose
+the real plots with the explanatory schematic rather than replacing them with
+summary cards. Inspect the final figure at its delivery size. Export checks
+only report clipping/font warnings; they do not certify the statistical
+analysis, all label collisions or visual quality.

@@ -29,6 +29,12 @@ an additional mandatory stage for ordinary scene delivery.
   use the scene routes below when they fit the content. Keep facts and
   relationships intact. SVG is an editable output here, not a global format rule.
 
+For measured data, report charts and statistical figures, read
+[data figures](references/data-figures.md). Use an available plotting tool;
+the supplied data-plot helper handles line, scatter, bar and explicit interval
+plots. This route does not require scene geometry. For mechanisms and physical
+objects use the scientific composition route below.
+
 For everyday office processes, task ownership and project plans, read
 [office diagrams](references/office-diagrams.md). Choose the appropriate flow,
 responsibility matrix or time-based composition from the actual work; do not
@@ -152,8 +158,8 @@ the actual task. Diagnose once only if a needed read or render command fails.
 
 ## Default delivery · scene drawings
 
-These rules apply to scene-based drawings, replays and revisions. Image work and
-frontend pages follow their selected production route. Users
+These rules apply to scene-based drawings, replays and revisions. Image work,
+statistical plots and frontend pages follow their selected production route. Users
 only need to describe the content and style; do not ask them to repeat these
 rules or append them to copied gallery prompts.
 
