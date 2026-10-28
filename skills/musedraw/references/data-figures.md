@@ -166,6 +166,15 @@ participants or invent partners. The row layout trades the common before/after
 slope view for traceable identities and a shared measurement axis. Choose a
 custom slope plot when temporal direction itself is the intended comparison.
 
+Choose a second panel only for a second reading task. If the main task is to
+compare change magnitudes, a zero-referenced change plot aligned by sample ID
+can make the subtraction visible while the paired plot keeps original values.
+A full before/after table may instead suit detailed numerical reconciliation.
+Repeating every already-labelled endpoint in a large table uses space without
+necessarily making magnitude comparison easier. Conversely, do not discard a
+requested audit table merely to make the page more graphical. Keep any supplied
+or calculated changes traceable to the same pairs, units and subtraction order.
+
 ## Measured matrices
 
 Heatmap `values` is a full row-by-column matrix, with a finite measurement or
@@ -206,6 +215,15 @@ denominator, pairing and missing-data convention when they affect the reading
 task. Do not add fitted curves, significance stars, sample sizes, causal claims
 or precision that the data did not provide. A crop or inset must preserve its
 link to the overview and disclose a changed scale.
+
+In study-selection and screening diagrams, keep the counted entity on each
+stage: records, reports, independent studies, participants and measurements
+are different units. Check branch arithmetic within the same unit. Equal
+numbers alone do not establish a one-to-one mapping when the entity changes;
+use the supplied mapping or leave that conversion unresolved. For example,
+30 eligible reports need not represent 30 independent studies. Do not turn
+technical replicates into additional independent experimental units. These
+are content checks, not something that a correctly routed flow can establish.
 
 For a report or multi-panel figure, make linked conditions share the same
 encoding; share an axis only when units and comparisons justify it. Compose
