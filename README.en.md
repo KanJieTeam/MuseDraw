@@ -1,8 +1,6 @@
 <div align="center">
 
-<a href="https://kanjieteam.github.io/MuseDraw/">
-  <img src="assets/brand/musedraw-cover.png" alt="MuseDraw — Draw anything. Design with taste." width="1200">
-</a>
+<img src="assets/brand/musedraw-cover.png" alt="MuseDraw — Draw anything. Design with taste." width="1200">
 
 <p>Help everyone give their ideas a better form.</p>
 
@@ -35,7 +33,7 @@ You bring what you want to express. MuseDraw helps work out how to present it: w
 Install in a Skill-capable AI agent that can read and write files and run commands:
 
 ```bash
-npx skills add KanJieTeam/MuseDraw
+npx skills add KanJieTeam/MuseDraw --skill musedraw
 ```
 
 Then describe what you need. For example:
@@ -66,6 +64,16 @@ Use a quieter palette and keep the emphasis on the main flow.
 MuseDraw chooses a medium that fits the task: structured work usually keeps a scene source with SVG/PNG; painting, photography, and textured imagery use PNG/JPEG or another requested image format; frontend and work interfaces use HTML/CSS/JavaScript. To continue editing, tell your agent what you want to change.
 
 [Read about editing and delivery](docs/usage.md)
+
+## Visual design judgment
+
+For composition, reading rhythm, emotional expression or visual storytelling, optionally install [visual-design-judgment](skills/visual-design-judgment/SKILL.md):
+
+```bash
+npx skills add KanJieTeam/MuseDraw --skill visual-design-judgment
+```
+
+It offers task-specific design methods drawn from cross-media, literary, classical and Romantic studies, using your existing creation tools. See the [original information-design comparison](examples/visual-judgment-event/review.md) and [research and validation scope](skills/visual-design-judgment/references/evidence.md).
 
 ## Make good design more accessible
 

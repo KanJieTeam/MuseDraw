@@ -1,8 +1,6 @@
 <div align="center">
 
-<a href="https://kanjieteam.github.io/MuseDraw/">
-  <img src="assets/brand/musedraw-cover.png" alt="MuseDraw — Draw anything. Design with taste." width="1200">
-</a>
+<img src="assets/brand/musedraw-cover.png" alt="MuseDraw — Draw anything. Design with taste." width="1200">
 
 <p>让每个人，都能把想法表达得更好。</p>
 
@@ -35,7 +33,7 @@ MuseDraw 是一个开源视觉创作项目，将设计方法与绘图工具带�
 在支持 Skill、能读写文件并执行命令的 AI 智能体中安装：
 
 ```bash
-npx skills add KanJieTeam/MuseDraw
+npx skills add KanJieTeam/MuseDraw --skill musedraw
 ```
 
 安装后，直接描述需求。例如：
@@ -65,6 +63,16 @@ npx skills add KanJieTeam/MuseDraw
 MuseDraw 会按任务选择合适的媒介：结构化内容通常使用场景源文件与 SVG/PNG；绘画、摄影和纹理图像使用 PNG/JPEG 等图像格式；前端和工作界面使用 HTML/CSS/JavaScript。需要修改时，继续告诉智能体改哪里即可。
 
 [查看修改与交付说明](docs/usage.zh-CN.md#继续修改与交付)
+
+## 设计判断 Skill
+
+需要改善构图、阅读节奏、情绪表达或叙事时，可另外安装 [visual-design-judgment](skills/visual-design-judgment/SKILL.md)：
+
+```bash
+npx skills add KanJieTeam/MuseDraw --skill visual-design-judgment
+```
+
+它把跨媒介、文学、古典与浪漫主义研究整理为按任务读取的设计方法，沿用当前创作工具。查看[原创信息组织对照](examples/visual-judgment-event/review.md)及[研究与验证范围](skills/visual-design-judgment/references/evidence.md)。
 
 ## 让好的设计，更容易获得
 
