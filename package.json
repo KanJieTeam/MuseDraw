@@ -1,7 +1,7 @@
 {
   "name": "musedraw",
   "private": true,
-  "description": "MuseDraw — art-directed diagrams for AI agents.",
+  "description": "MuseDraw — visual creation and design methods for AI agents.",
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {

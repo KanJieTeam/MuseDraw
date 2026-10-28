@@ -330,6 +330,17 @@ def run_node_checks(root, playwright=None, browser=None):
     print(result.stdout, end="")
     if result.returncode:
         print(result.stderr, file=sys.stderr)
+    if result.returncode:
+        return False
+    capture_env = os.environ.copy()
+    capture_env["MUSEDRAW_PLAYWRIGHT"] = str(Path(playwright).resolve())
+    if browser:
+        capture_env["MUSEDRAW_BROWSER"] = str(Path(browser).resolve())
+    command = [node, str(root / "skills/musedraw/tests/ui-capture/capture.test.mjs")]
+    result = subprocess.run(command, cwd=root, env=capture_env, capture_output=True, text=True, encoding="utf-8", timeout=90)
+    print(result.stdout, end="")
+    if result.returncode:
+        print(result.stderr, file=sys.stderr)
     return result.returncode == 0
 
 

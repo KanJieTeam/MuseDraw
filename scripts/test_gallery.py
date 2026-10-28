@@ -236,11 +236,13 @@ class GalleryTests(unittest.TestCase):
                 for required in ("SKILL.md", "LICENSE", "scripts/musedraw.mjs", "scripts/vendor/ROUGHJS-LICENSE", "assets/starters/rag.zh.json", "assets/starters/rag.en.json", "references/scene.schema.json", "references/frontend-design.md", "references/frontend-work-apps.md", "scripts/ui/focus-preservation.js", "tests/frontend-focus/focus.test.mjs"):
                     self.assertIn("musedraw/" + required, names)
                 self.assertEqual(len([name for name in names if name.startswith("musedraw/themes/")]), 20)
+                for required in ("references/frontend-composition.md", "scripts/capture-ui.mjs", "tests/ui-capture/capture.test.mjs", "assets/frontend/latch/index.html"):
+                    self.assertIn("musedraw/" + required, names)
                 self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
                 self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
                 extracted = staging / "extracted"
                 bundle.extractall(extracted)
-                for reference in ("frontend-design.md", "frontend-work-apps.md"):
+                for reference in ("frontend-design.md", "frontend-work-apps.md", "frontend-composition.md"):
                     document = extracted / "musedraw/references" / reference
                     self.assertEqual(check_markdown(document.read_text(encoding="utf-8"), document, extracted / "musedraw"), [])
 
