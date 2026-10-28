@@ -108,6 +108,13 @@ class PlotContractTests(unittest.TestCase):
 
 @unittest.skipUnless(HAS_MATPLOTLIB, 'Matplotlib rendering is a separate optional capability')
 class PlotRenderingTests(unittest.TestCase):
+    def test_unsupported_matplotlib_reports_a_runtime_problem_before_rendering(self):
+        import matplotlib
+        from unittest.mock import patch
+        with patch.object(matplotlib,'__version__','3.5.3'):
+            with self.assertRaisesRegex(RuntimeError,'Matplotlib 3.6 or later'):
+                plot.build_figure(LINE)
+
     def tearDown(self):
         from matplotlib import pyplot as plt
         plt.close('all')

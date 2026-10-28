@@ -30,7 +30,8 @@ missing-value segmentation and font fallback from scratch. For a custom
 composition, `plot_data.py` also exposes `build_figure(spec, width, height)`;
 extend the returned figure rather than replacing the measured data artists.
 
-This route uses Matplotlib in the selected Python environment. Reuse an
+This route uses Matplotlib 3.6 or later in the selected Python environment,
+including its per-glyph font fallback. Reuse an
 available plotting environment; it is not installed by the scene renderer.
 If missing, report the unavailable dependency or use another already available
 statistical plotting tool. Do not replace measured data with illustrative

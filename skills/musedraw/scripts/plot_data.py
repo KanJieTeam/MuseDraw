@@ -163,6 +163,9 @@ def build_figure(spec, width=1800, height=1100, font=None):
     require(isinstance(width, int) and 1200 <= width <= 4000 and isinstance(height, int) and 700 <= height <= 3000, 'figure size: width 1200..4000, height 700..3000 pixels')
     try:
         import matplotlib
+        release = re.match(r'^(\d+)\.(\d+)', matplotlib.__version__)
+        if release is None or tuple(map(int, release.groups())) < (3, 6):
+            raise RuntimeError('This plotting helper needs Matplotlib 3.6 or later for per-glyph font fallback and layout support. Select an available compatible plotting environment; an installed older version is not a working runtime for this route.')
         matplotlib.use('Agg')
         from matplotlib import font_manager, pyplot as plt
     except ImportError as error:
