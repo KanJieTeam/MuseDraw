@@ -16,7 +16,8 @@ frame establishes those facts.
 
 ## Reusable plotting route
 
-For a line, scatter, grouped bar or supplied interval plot, translate the
+For a line, scatter, grouped bar, supplied interval, paired observation or
+measured heatmap, translate the
 actual data into the corresponding JSON below and run:
 
 ```sh
@@ -104,11 +105,67 @@ infer sample sizes, significance or an appropriate comparison model.
 
 Optional `xDomain:[min,max]` and `yDomain:[min,max]` preserve an explicit linear
 scale. They cannot hide supplied values/endpoints; bar y ranges must contain
-zero. Unsupported fields fail rather than being silently ignored. The helper
-supports 1–4 series, 12 bar categories or 16 interval rows. Larger plots,
-logarithmic axes, dates, distributions, survival, heatmaps and multiple panels
+zero. Heatmaps use labelled positions and a separate `colorDomain`; paired
+rows use a shared numeric x axis. Unsupported fields fail rather than being
+silently ignored. The helper supports 1–4 series, 12 bar categories, 16 interval
+or paired rows, or a 12×12 measured matrix. Larger plots,
+logarithmic axes, dates, distributions, survival and multiple panels
 need an appropriate custom Matplotlib/R/host plotting implementation, not a
-mislabelled use of one of these four grammars.
+mislabelled use of one of these grammars.
+
+## Paired observations
+
+Use `paired` when the same identified unit was measured twice in comparable
+units. Each row remains the same unit; the helper joins its two observations
+on a common numeric axis without independently sorting either condition.
+Rows preserve the supplied identity order. Open circles and filled diamonds
+also distinguish conditions when printed without colour. An unchanged pair
+keeps both concentric marks. No change estimate, p-value or interval is added.
+
+```json
+{
+  "kind":"paired", "xLabel":"Task time / min",
+  "conditions":["Before","After"],
+  "rows":[{"id":"P01","before":8,"after":7},
+          {"id":"P02","before":12,"after":9},
+          {"id":"P03","before":10,"after":13},
+          {"id":"P04","before":11,"after":11}]
+}
+```
+
+Both observations and unique identities are required. Independent groups,
+unknown pairings, incomplete pairs, unequal units and more than two conditions
+need a plot that explicitly supports that structure; do not silently discard
+participants or invent partners. The row layout trades the common before/after
+slope view for traceable identities and a shared measurement axis. Choose a
+custom slope plot when temporal direction itself is the intended comparison.
+
+## Measured matrices
+
+Heatmap `values` is a full row-by-column matrix, with a finite measurement or
+explicit `null` in every cell. `colorLabel` carries the measured variable and
+unit. One scale covers all rows; no row normalisation, clustering or reordering
+is performed. `null` uses a hatched neutral cell and a required `missingLabel`;
+an observed zero stays numeric and uses the same scale as other measurements.
+
+```json
+{
+  "kind":"heatmap", "xLabel":"Sampling time / h", "yLabel":"Site",
+  "rowLabels":["East","South"], "columnLabels":["08","10","12"],
+  "values":[[0,2,null],[1,0,5]],
+  "colorLabel":"Concentration / mg L⁻¹", "colorDomain":[0,6],
+  "missingLabel":"Not measured; not imputed"
+}
+```
+
+The default sequential scale encodes the measured magnitudes. Set
+`colorCenter` only when the brief supplies a meaningful centre, together with
+a `colorDomain` that contains it; this selects a diverging scale. The domain
+cannot clip measurements. Do not substitute a row-relative percentage for
+absolute measurements, or treat visually blank cells as zero. Cell labels keep
+their supplied numerical values rather than rounding nearby values together.
+If dense or long values fail the cell bounds check, adjust the actual plot
+size or use a custom layout; do not round away a distinction without agreement.
 
 ## Preserve the evidence
 

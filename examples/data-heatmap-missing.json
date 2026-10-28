@@ -1,0 +1,11 @@
+{
+  "kind": "heatmap",
+  "xLabel": "采样时间 / h",
+  "yLabel": "采样点",
+  "rowLabels": ["东点", "南点", "西点"],
+  "columnLabels": ["08", "10", "12", "14"],
+  "values": [[0, 2, null, 6], [1, 0, 5, 3], [null, 4, 6, 0]],
+  "colorLabel": "浓度 / mg L⁻¹",
+  "colorDomain": [0, 6],
+  "missingLabel": "缺测，未补值"
+}

@@ -13,10 +13,44 @@ plot = importlib.util.module_from_spec(MODULE)
 MODULE.loader.exec_module(plot)
 LINE = json.loads((ROOT/'examples/data-line-missing.json').read_text())
 INTERVAL = json.loads((ROOT/'examples/data-interval-estimates.json').read_text())
+HEATMAP = json.loads((ROOT/'examples/data-heatmap-missing.json').read_text(encoding='utf-8'))
+PAIRED = json.loads((ROOT/'examples/data-paired-observations.json').read_text(encoding='utf-8'))
 HAS_MATPLOTLIB = importlib.util.find_spec('matplotlib') is not None
 
 
 class PlotContractTests(unittest.TestCase):
+    def test_pairs_require_identities_and_both_original_measurements(self):
+        self.assertEqual(plot.validate(PAIRED), PAIRED)
+        for mutate in [lambda b: b['rows'][0].update(after=None),
+                       lambda b: b['rows'][1].update(id='P01'),
+                       lambda b: b.update(conditions=['Before', 'Before']),
+                       lambda b: b.update(xDomain=[8,14]),
+                       lambda b: b['rows'][0].update(pValue=.01),
+                       lambda b: b.update(yLabel='Different units')]:
+            b=copy.deepcopy(PAIRED)
+            mutate(b)
+            with self.assertRaises(ValueError):
+                plot.validate(b)
+
+    def test_heatmap_requires_explicit_cells_common_scale_and_missing_meaning(self):
+        self.assertEqual(plot.validate(HEATMAP), HEATMAP)
+        for mutate in [lambda b: b.pop('missingLabel'),
+                       lambda b: b['values'][0].pop(),
+                       lambda b: b.update(colorDomain=[1, 6]),
+                       lambda b: b['values'][0].__setitem__(0, True),
+                       lambda b: b.update(colorCenter=7),
+                       lambda b: b.update(xDomain=[0, 24]),
+                       lambda b: b.update(rowLabels=['东点', '东点', '西点']),
+                       lambda b: b.update(values=[[None]*4 for _ in range(3)])]:
+            b=copy.deepcopy(HEATMAP)
+            mutate(b)
+            with self.assertRaises(ValueError):
+                plot.validate(b)
+        mixed=copy.deepcopy(LINE)
+        mixed['colorDomain']=[0, 6]
+        with self.assertRaises(ValueError):
+            plot.validate(mixed)
+
     def test_preserves_measurements_missingness_and_original_input(self):
         original = copy.deepcopy(LINE)
         validated = plot.validate(LINE)
@@ -73,6 +107,65 @@ class PlotRenderingTests(unittest.TestCase):
         self.assertTrue(math.isnan(y[1]))
         self.assertEqual(y[2], 2.1)
         self.assertEqual(len(ax.lines), 2)
+
+    def test_heatmap_does_not_turn_missing_into_zero_or_normalise_rows(self):
+        import numpy as np
+        _, ax, _=plot.build_figure(HEATMAP)
+        image=ax.images[0]
+        data=image.get_array()
+        self.assertEqual(int(np.ma.getmaskarray(data).sum()), 2)
+        self.assertEqual(float(data[0, 0]), 0)
+        self.assertEqual(float(data[0, 3]), 6)
+        self.assertEqual(float(data[2, 1]), 4)
+        self.assertEqual((image.norm.vmin,image.norm.vmax), (0,6))
+        self.assertEqual(len(ax.patches), 2)
+        self.assertEqual([t.get_text() for t in ax.get_legend().get_texts()], ['缺测，未补值'])
+        self.assertEqual([t.get_text() for t in ax.get_yticklabels()], HEATMAP['rowLabels'])
+        with tempfile.TemporaryDirectory() as folder:
+            checks=plot.export(HEATMAP, folder)
+            self.assertTrue(checks['passed'], checks)
+            self.assertEqual(json.loads((Path(folder)/'data.json').read_text(encoding='utf-8')), HEATMAP)
+
+    def test_heatmap_diverging_center_and_constant_matrix_are_finite(self):
+        b=copy.deepcopy(HEATMAP)
+        b.update(colorCenter=3)
+        _, ax, _=plot.build_figure(b)
+        self.assertAlmostEqual(float(ax.images[0].norm(3)), .5)
+        b.pop('colorCenter')
+        b.pop('colorDomain')
+        b['values']=[[2]*4 for _ in range(3)]
+        _, ax, _=plot.build_figure(b)
+        self.assertLess(ax.images[0].norm.vmin, 2)
+        self.assertGreater(ax.images[0].norm.vmax, 2)
+
+    def test_pair_links_keep_identity_order_and_unchanged_observations(self):
+        _, ax, _=plot.build_figure(PAIRED)
+        self.assertEqual(len(ax.lines), 6)
+        self.assertEqual([list(line.get_xdata()) for line in ax.lines],
+                         [[r['before'],r['after']] for r in PAIRED['rows']])
+        self.assertEqual([list(line.get_ydata()) for line in ax.lines], [[i,i] for i in range(6)])
+        self.assertEqual([t.get_text() for t in ax.get_yticklabels()], [r['id'] for r in PAIRED['rows']])
+        self.assertEqual(len(ax.collections), 12)
+        self.assertEqual(ax.collections[8].get_offsets().tolist(), [[11,4]])
+        self.assertEqual(ax.collections[9].get_offsets().tolist(), [[11,4]])
+        with tempfile.TemporaryDirectory() as folder:
+            checks=plot.export(PAIRED, folder)
+            self.assertTrue(checks['passed'], checks)
+            self.assertEqual(json.loads((Path(folder)/'data.json').read_text(encoding='utf-8')), PAIRED)
+
+    def test_matrix_keeps_close_values_distinct_and_optional_titles_clear_of_legend(self):
+        b=copy.deepcopy(HEATMAP)
+        b['values'][0][:2]=[1.000001, 1.000002]
+        _, ax, _=plot.build_figure(b)
+        self.assertIn('1.000001', [t.get_text() for t in ax.texts])
+        self.assertIn('1.000002', [t.get_text() for t in ax.texts])
+        for spec in [HEATMAP, PAIRED]:
+            spec=copy.deepcopy(spec)
+            spec['title']='Measured observations'
+            fig, ax, _=plot.build_figure(spec)
+            fig.canvas.draw()
+            renderer=fig.canvas.get_renderer()
+            self.assertFalse(ax._left_title.get_window_extent(renderer).overlaps(ax.get_legend().get_window_extent(renderer)))
 
     def test_asymmetric_interval_uses_true_endpoints(self):
         fig, ax, _ = plot.build_figure(INTERVAL)
