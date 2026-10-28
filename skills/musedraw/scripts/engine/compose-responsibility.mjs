@@ -5,19 +5,25 @@ const fail=(path,message)=>{throw new Error(`Invalid composition ${path}: ${mess
 const fields=(o,keys,path)=>{if(!o||typeof o!=='object'||Array.isArray(o))fail(path,'expected an object');for(const key of Object.keys(o))if(!keys.includes(key))fail(`${path}/${key}`,'unsupported field')};
 const text=(s,path,max=120)=>{if(typeof s!=='string'||!s.trim()||s.length>max)fail(path,`requires nonempty text, at most ${max} characters`)};
 const rd=n=>Math.round(n*100)/100;
+const wordBreaks=new Intl.Segmenter('zh',{granularity:'word'});
 function lines(text,width,size,weight=400){
  const result=[];
  const advance=s=>Math.max(measure(s,size,'sans-serif',0,weight)*1.15,[...s].reduce((n,c)=>n+(/[^\x00-\xff]/u.test(c)?1.08:/[MW@]/.test(c)?1:.75),0)*size);
  // Wrap once using the actual conservative estimate. Wrapping an already
  // wrapped line a second time can orphan its last CJK character on a new row.
  for(const paragraph of text.split('\n')){
-  const tokens=paragraph.match(/[⺀-鿿豈-﫿＀-￯　-〿]|[^\s⺀-鿿豈-﫿＀-￯　-〿]+|\s+/gu)??[];
+  const firstLine=result.length;
+  const tokens=[...wordBreaks.segment(paragraph)].map(part=>part.segment);
   let part='';
   for(const token of tokens)for(const piece of advance(token)>width?[...token]:[token]){
    if(part&&advance(part+piece)>width&&!/^[，。、；：！？）」』》〉,.;:!?)\]]/.test(piece)){result.push(part.trimEnd());part=piece.trimStart()}
    else part+=piece;
   }
   result.push(part.trimEnd());
+  if(result.length>firstLine+1&&/^[⺀-鿿豈-﫿]$/u.test(result.at(-1))){
+   const previous=[...wordBreaks.segment(result.at(-2))].map(part=>part.segment),tail=previous.pop(),rest=previous.join('').trimEnd(),last=tail+result.at(-1);
+   if([...rest].length>=2&&advance(last)<=width){result[result.length-2]=rest;result[result.length-1]=last;}
+  }
  }
  return result;
 }

@@ -36,6 +36,8 @@ test('long deliverables and role names wrap and grow the actual row/header, with
  b.roles.push({id:'security',label:'信息安全与合规评审负责人'});
  const six=compose(b);
  for(const id of ['role-product','role-security'])assert.ok(six.texts.find(t=>t.id===id).text.split('\n').every(line=>[...line].length>=2));
+ assert.ok(six.texts.find(t=>t.id==='role-product').text.includes('业务'));
+ assert.ok(six.texts.find(t=>t.id==='role-security').text.includes('评审'));
 });
 
 test('changes in task count, roles and theme retain valid geometry and unchanged semantics',async()=>{
