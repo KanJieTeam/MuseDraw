@@ -1,0 +1,40 @@
+{
+  "root": "request",
+  "spans": [
+    {
+      "id": "request",
+      "label": "入口请求",
+      "start": 0,
+      "end": 480,
+      "kind": "teal"
+    },
+    {
+      "id": "auth",
+      "label": "身份检查",
+      "start": 15,
+      "end": 70,
+      "kind": "teal"
+    },
+    {
+      "id": "search",
+      "label": "检索服务",
+      "start": 82,
+      "end": 420,
+      "kind": "amber"
+    },
+    {
+      "id": "document",
+      "label": "原文读取",
+      "start": 100,
+      "end": 345,
+      "kind": "violet"
+    },
+    {
+      "id": "response",
+      "label": "组装响应",
+      "start": 425,
+      "end": 475,
+      "kind": "teal"
+    }
+  ]
+}

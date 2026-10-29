@@ -269,6 +269,13 @@ class GalleryTests(unittest.TestCase):
                         relative = f"assets/visual-language/office-{family}/{filename}"
                         self.assertEqual(bundle.read("musedraw/" + relative),
                                          (ROOT / "skills/musedraw" / relative).read_bytes())
+                style_registry = json.loads(bundle.read("musedraw/assets/visual-language/index.json"))
+                for item in style_registry["items"]:
+                    for resource in item["files"]:
+                        relative = "assets/visual-language/" + resource
+                        self.assertEqual(bundle.read("musedraw/" + relative),
+                                         (ROOT / "skills/musedraw" / relative).read_bytes())
+                self.assertIn("musedraw/tests/style-library/browser.mjs", names)
                 extracted = staging / "extracted"
                 bundle.extractall(extracted)
                 for reference in ("frontend-design.md", "frontend-work-apps.md", "frontend-composition.md"):

@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "count": 23,
+  "families": 20,
+  "status": "original-production-studies",
+  "items": [
+    {
+      "id": "swiss",
+      "theme": "swiss",
+      "title": "种子交换 / 瑞士海报",
+      "medium": "html",
+      "entry": "swiss/index.html",
+      "brief": "swiss/prompt.md",
+      "preview": "swiss/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "swiss/artwork.png",
+        "swiss/asset-prompt.txt",
+        "swiss/index.html",
+        "swiss/preview.jpg",
+        "swiss/prompt.md",
+        "shared.css"
+      ]
+    },
+    {
+      "id": "riso",
+      "theme": "riso",
+      "title": "种子交换 / 孔版套印",
+      "medium": "html",
+      "entry": "riso/index.html",
+      "brief": "riso/prompt.md",
+      "preview": "riso/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "riso/artwork.png",
+        "riso/asset-prompt.txt",
+        "riso/index.html",
+        "riso/preview.jpg",
+        "riso/prompt.md",
+        "shared.css"
+      ]
+    },
+    {
+      "id": "ink-wash",
+      "theme": "ink-wash",
+      "title": "种子交换 / 水墨宣纸",
+      "medium": "html",
+      "entry": "ink-wash/index.html",
+      "brief": "ink-wash/prompt.md",
+      "preview": "ink-wash/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "ink-wash/artwork.png",
+        "ink-wash/asset-prompt.txt",
+        "ink-wash/index.html",
+        "ink-wash/preview.jpg",
+        "ink-wash/prompt.md",
+        "shared.css"
+      ]
+    },
+    {
+      "id": "swiss-repair",
+      "theme": "swiss",
+      "title": "修补日 / 瑞士海报",
+      "medium": "html",
+      "entry": "swiss-repair/index.html",
+      "brief": "swiss-repair/prompt.md",
+      "preview": "swiss-repair/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "swiss-repair/artwork.png",
+        "swiss-repair/asset-prompt.txt",
+        "swiss-repair/index.html",
+        "swiss-repair/preview.jpg",
+        "swiss-repair/prompt.md",
+        "shared.css"
+      ]
+    },
+    {
+      "id": "riso-report",
+      "theme": "riso",
+      "title": "空间使用节律报告",
+      "medium": "html",
+      "entry": "riso-report/index.html",
+      "brief": "riso-report/prompt.md",
+      "preview": "riso-report/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "riso-report/chart.png",
+        "riso-report/chart.svg",
+        "riso-report/data.json",
+        "riso-report/derived.json",
+        "riso-report/index.html",
+        "riso-report/preview.jpg",
+        "riso-report/prompt.md",
+        "riso-report/report.css"
+      ]
+    },
+    {
+      "id": "ink-report",
+      "theme": "ink-wash",
+      "title": "雨水花园报告",
+      "medium": "html",
+      "entry": "ink-report/index.html",
+      "brief": "ink-report/prompt.md",
+      "preview": "ink-report/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "ink-report/artwork.png",
+        "ink-report/asset-prompt.txt",
+        "ink-report/chart.png",
+        "ink-report/chart.svg",
+        "ink-report/data.json",
+        "ink-report/derived.json",
+        "ink-report/index.html",
+        "ink-report/preview.jpg",
+        "ink-report/prompt.md",
+        "ink-report/report.css"
+      ]
+    },
+    {
+      "id": "office-business",
+      "theme": "editorial",
+      "title": "经营观察",
+      "medium": "html",
+      "entry": "office-business/index.html",
+      "brief": "office-business/prompt.md",
+      "preview": "office-business/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "office-business/data.json",
+        "office-business/derived.json",
+        "office-business/index.html",
+        "office-business/preview.jpg",
+        "office-business/prompt.md",
+        "office-business/rates.png",
+        "office-business/study.css",
+        "office-business/totals.png"
+      ]
+    },
+    {
+      "id": "office-project",
+      "theme": "bauhaus",
+      "title": "项目推进简报",
+      "medium": "html",
+      "entry": "office-project/index.html",
+      "brief": "office-project/prompt.md",
+      "preview": "office-project/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "office-project/data.json",
+        "office-project/derived.json",
+        "office-project/index.html",
+        "office-project/preview.jpg",
+        "office-project/prompt.md",
+        "office-project/study.css",
+        "office-project/timeline.png",
+        "office-project/work.png"
+      ]
+    },
+    {
+      "id": "office-research",
+      "theme": "journal",
+      "title": "科研配对观察",
+      "medium": "html",
+      "entry": "office-research/index.html",
+      "brief": "office-research/prompt.md",
+      "preview": "office-research/preview.jpg",
+      "design": "references/visual-language.md",
+      "files": [
+        "office-research/changes.png",
+        "office-research/data.json",
+        "office-research/derived.json",
+        "office-research/index.html",
+        "office-research/paired.png",
+        "office-research/preview.jpg",
+        "office-research/prompt.md",
+        "office-research/study.css"
+      ]
+    },
+    {
+      "id": "newsprint-chair",
+      "theme": "newsprint",
+      "title": "一把椅子的结构观察",
+      "medium": "vector",
+      "entry": "newsprint-chair/scene.json",
+      "brief": "newsprint-chair/prompt.md",
+      "preview": "newsprint-chair/preview.jpg",
+      "design": "newsprint-chair/design.md",
+      "files": [
+        "newsprint-chair/design.md",
+        "newsprint-chair/preview.jpg",
+        "newsprint-chair/prompt.md",
+        "newsprint-chair/scene.json"
+      ]
+    },
+    {
+      "id": "blueprint-rainwater",
+      "theme": "blueprint",
+      "title": "雨水利用概念剖面",
+      "medium": "vector",
+      "entry": "blueprint-rainwater/scene.json",
+      "brief": "blueprint-rainwater/prompt.md",
+      "preview": "blueprint-rainwater/preview.jpg",
+      "design": "blueprint-rainwater/design.md",
+      "files": [
+        "blueprint-rainwater/design.md",
+        "blueprint-rainwater/preview.jpg",
+        "blueprint-rainwater/prompt.md",
+        "blueprint-rainwater/scene.json"
+      ]
+    },
+    {
+      "id": "metro-learning",
+      "theme": "metro",
+      "title": "研究训练路径",
+      "medium": "vector",
+      "entry": "metro-learning/scene.json",
+      "brief": "metro-learning/prompt.md",
+      "preview": "metro-learning/preview.jpg",
+      "design": "metro-learning/design.md",
+      "files": [
+        "metro-learning/design.md",
+        "metro-learning/preview.jpg",
+        "metro-learning/prompt.md",
+        "metro-learning/scene.json"
+      ]
+    },
+    {
+      "id": "chalkboard-area",
+      "theme": "chalkboard",
+      "title": "面积中的分配律",
+      "medium": "vector",
+      "entry": "chalkboard-area/scene.json",
+      "brief": "chalkboard-area/prompt.md",
+      "preview": "chalkboard-area/preview.jpg",
+      "design": "chalkboard-area/design.md",
+      "files": [
+        "chalkboard-area/design.md",
+        "chalkboard-area/preview.jpg",
+        "chalkboard-area/prompt.md",
+        "chalkboard-area/scene.json"
+      ]
+    },
+    {
+      "id": "whiteboard-fieldwork",
+      "theme": "whiteboard",
+      "title": "外勤记录的一天",
+      "medium": "vector",
+      "entry": "whiteboard-fieldwork/scene.json",
+      "brief": "whiteboard-fieldwork/prompt.md",
+      "preview": "whiteboard-fieldwork/preview.jpg",
+      "design": "whiteboard-fieldwork/design.md",
+      "files": [
+        "whiteboard-fieldwork/design.md",
+        "whiteboard-fieldwork/preview.jpg",
+        "whiteboard-fieldwork/prompt.md",
+        "whiteboard-fieldwork/scene.json"
+      ]
+    },
+    {
+      "id": "c4-literature",
+      "theme": "c4",
+      "title": "文献工作台容器视图",
+      "medium": "vector",
+      "entry": "c4-literature/scene.json",
+      "brief": "c4-literature/prompt.md",
+      "preview": "c4-literature/preview.jpg",
+      "design": "c4-literature/design.md",
+      "files": [
+        "c4-literature/design.md",
+        "c4-literature/preview.jpg",
+        "c4-literature/prompt.md",
+        "c4-literature/scene.json"
+      ]
+    },
+    {
+      "id": "enterprise-renewals",
+      "theme": "enterprise",
+      "title": "续签议事简报",
+      "medium": "html",
+      "entry": "enterprise-renewals/index.html",
+      "brief": "enterprise-renewals/prompt.md",
+      "preview": "enterprise-renewals/preview.jpg",
+      "design": "enterprise-renewals/design.md",
+      "files": [
+        "enterprise-renewals/data.json",
+        "enterprise-renewals/design.md",
+        "enterprise-renewals/index.html",
+        "enterprise-renewals/preview.jpg",
+        "enterprise-renewals/prompt.md"
+      ]
+    },
+    {
+      "id": "product-minutes",
+      "theme": "product",
+      "title": "会议讨论与决定",
+      "medium": "html",
+      "entry": "product-minutes/index.html",
+      "brief": "product-minutes/prompt.md",
+      "preview": "product-minutes/preview.jpg",
+      "design": "product-minutes/design.md",
+      "files": [
+        "product-minutes/data.json",
+        "product-minutes/design.md",
+        "product-minutes/index.html",
+        "product-minutes/preview.jpg",
+        "product-minutes/prompt.md"
+      ]
+    },
+    {
+      "id": "pastel-hypothesis",
+      "theme": "pastel",
+      "title": "观察与实验构思笔记",
+      "medium": "html",
+      "entry": "pastel-hypothesis/index.html",
+      "brief": "pastel-hypothesis/prompt.md",
+      "preview": "pastel-hypothesis/preview.jpg",
+      "design": "pastel-hypothesis/design.md",
+      "files": [
+        "pastel-hypothesis/data.json",
+        "pastel-hypothesis/design.md",
+        "pastel-hypothesis/index.html",
+        "pastel-hypothesis/preview.jpg",
+        "pastel-hypothesis/prompt.md"
+      ]
+    },
+    {
+      "id": "terracotta-repair",
+      "theme": "terracotta",
+      "title": "社区修补活动",
+      "medium": "html",
+      "entry": "terracotta-repair/index.html",
+      "brief": "terracotta-repair/prompt.md",
+      "preview": "terracotta-repair/preview.jpg",
+      "design": "terracotta-repair/design.md",
+      "files": [
+        "terracotta-repair/data.json",
+        "terracotta-repair/design.md",
+        "terracotta-repair/index.html",
+        "terracotta-repair/preview.jpg",
+        "terracotta-repair/prompt.md"
+      ]
+    },
+    {
+      "id": "observatory-trace",
+      "theme": "observatory",
+      "title": "同一请求的调用追踪",
+      "medium": "html",
+      "entry": "observatory-trace/index.html",
+      "brief": "observatory-trace/prompt.md",
+      "preview": "observatory-trace/preview.jpg",
+      "design": "observatory-trace/design.md",
+      "files": [
+        "observatory-trace/data.json",
+        "observatory-trace/design.md",
+        "observatory-trace/index.html",
+        "observatory-trace/preview.jpg",
+        "observatory-trace/prompt.md",
+        "observatory-trace/trace.png",
+        "observatory-trace/trace-mobile.png"
+      ]
+    },
+    {
+      "id": "aurora-sound",
+      "theme": "aurora",
+      "title": "本地正弦音合成器",
+      "medium": "html",
+      "entry": "aurora-sound/index.html",
+      "brief": "aurora-sound/prompt.md",
+      "preview": "aurora-sound/preview.jpg",
+      "design": "aurora-sound/design.md",
+      "files": [
+        "aurora-sound/data.json",
+        "aurora-sound/design.md",
+        "aurora-sound/index.html",
+        "aurora-sound/preview.jpg",
+        "aurora-sound/prompt.md"
+      ]
+    },
+    {
+      "id": "neon-night-ride",
+      "theme": "neon",
+      "title": "夜骑路线选择",
+      "medium": "html",
+      "entry": "neon-night-ride/index.html",
+      "brief": "neon-night-ride/prompt.md",
+      "preview": "neon-night-ride/preview.jpg",
+      "design": "neon-night-ride/design.md",
+      "files": [
+        "neon-night-ride/data.json",
+        "neon-night-ride/design.md",
+        "neon-night-ride/index.html",
+        "neon-night-ride/preview.jpg",
+        "neon-night-ride/prompt.md"
+      ]
+    },
+    {
+      "id": "terminal-release",
+      "theme": "terminal",
+      "title": "本地发行预演",
+      "medium": "html",
+      "entry": "terminal-release/index.html",
+      "brief": "terminal-release/prompt.md",
+      "preview": "terminal-release/preview.jpg",
+      "design": "terminal-release/design.md",
+      "files": [
+        "terminal-release/data.json",
+        "terminal-release/design.md",
+        "terminal-release/index.html",
+        "terminal-release/preview.jpg",
+        "terminal-release/prompt.md"
+      ]
+    }
+  ]
+}

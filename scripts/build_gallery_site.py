@@ -70,7 +70,7 @@ def build_skill_download(root, staging):
     if source.is_symlink() or not source.is_dir():
         raise ValueError("Expected a local MuseDraw Skill directory")
     files = {name: source / name for name in ("SKILL.md", "package.json", "package-lock.json")}
-    for folder in ("agents", "scripts", "references", "themes", "assets", "tests/frontend-focus", "tests/ui-capture", "tests/open-channel"):
+    for folder in ("agents", "scripts", "references", "themes", "assets", "tests/frontend-focus", "tests/ui-capture", "tests/open-channel", "tests/style-library"):
         if (source / folder).is_symlink():
             raise ValueError("Refusing a linked Skill resource directory")
         for directory, names, filenames in os.walk(source / folder, followlinks=False):

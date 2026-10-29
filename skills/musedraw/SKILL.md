@@ -14,6 +14,8 @@ use [MuseDraw visual language](references/visual-language.md): develop the exist
 twenty families through their typography, imagery, spatial rhythm and material.
 Read only the relevant family and, when useful, its complete composition.
 Keep the requested medium; a style name does not require a scene or box layout.
+Find a complete editable style example with [style compositions](references/style-studies.md)
+when a working source would help; it includes twenty families in their chosen media.
 
 Use the known installed Skill directly. Read only the reference for the chosen
 route, rather than scanning every style or example. When the user says that

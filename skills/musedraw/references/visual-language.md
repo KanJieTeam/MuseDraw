@@ -5,6 +5,11 @@ is a starting vocabulary for making an appropriate composition, not a request
 to turn the subject into nodes, recolour a fixed layout or combine every available
 effect. Keep the user's chosen style and the requested production medium.
 
+For a ready-to-open work in any of the twenty families, use the
+[complete style compositions](style-studies.md). Its small registry searches
+23 original editable works by style or subject; read only the chosen work's
+brief and design decisions.
+
 ## What a style should carry into a new work
 
 Carry a recognisable relationship between **type, image, space and material**.
