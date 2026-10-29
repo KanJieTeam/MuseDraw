@@ -42,20 +42,25 @@ print process labels, checklists or art-direction claims inside the artwork.
 
 ## Make relationships visible without tracing a reference
 
-Give the composition a relationship to communicate before choosing its container:
+For an original explanatory composition whose central relationship is not yet
+resolved, use the matching [relationship construction](relation-operations.md)
+before taking a whole style example or theme component as the spatial answer.
+It supplies alternative operations, their semantic limits, and small editable
+SVG/HTML/scene studies. Choose the reader's first useful relationship and one
+construction that makes it visible; change the construction when it asserts a
+relationship the brief did not supply. A style choice still shapes the proposal
+alongside this decision. Simple sequences, data encodings, exact replays and
+settled compositions retain their existing routes.
 
-| Relationship in the brief | Possible visual construction | Condition to preserve |
-| --- | --- | --- |
-| Several contributions jointly form one result | Contributions visibly meet in, act on, or make up the same result | A ring alone can imply a cycle; intersecting areas can imply shared membership. Choose the construction that matches the actual meaning. |
-| One requirement applies throughout several activities | A shared field, enclosure or repeated local treatment spans those activities | A separate caption or final-stage box does not by itself show the scope. |
-| A proposal selects different production routes | One proposal branches to the actual alternatives; routes rejoin where delivery is shared | Distinguish alternatives from mandatory parallel tasks and sequential stages. |
-| Experience updates future work | A return route reaches the resource or decision that changes | Keep it subordinate to the current creation path; distinguish project facts from general methods. |
-
-These are choices, not required motifs. Spatial contact is not appropriate for
-every abstract dependency. An overlap must not imply mixing, a measured quantity
-or an exclusive capability assignment that was not supplied. A familiar cycle,
-table or rectangular module is appropriate when it expresses the real relationship.
-Use [object composition](object-composition.md) for the corresponding constructions.
+Keep a short working note when it helps: **relation; visible operation; what it
+asserts and must not imply; where the essential words sit**. For example,
+converging inputs show a common destination but do not by themselves show mutual
+influence. This note is not artwork copy or a mandatory plan file. Give supporting
+relationships less emphasis than the one the reader needs first. Colour can mark
+the relationship or an actual object; a coloured label container is not evidence
+that the relationship has been drawn. Do not force a metaphor, a no-text test or
+a colour-area quota. Use [object composition](object-composition.md) for object
+identity, transformations and the corresponding constructions.
 
 When learning from a supplied reference, retain the **linked decisions** that
 make it work: what dominates, how objects differ, where density changes, what

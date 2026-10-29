@@ -1,0 +1,75 @@
+{
+  "status": "candidate; semantic construction studies, not aesthetic validation",
+  "operations": [
+    {
+      "id": "joint-surface",
+      "relation": "Several contributions jointly affect the same result",
+      "operation": "Distinct continuous marks extend across one shared result surface",
+      "asserts": ["The result is shared", "Each depicted contribution acts across that surface"],
+      "doesNotAssert": ["Measured contribution weights", "Exclusive ownership of parts", "Separate tool calls", "Temporal order"],
+      "useWhen": "The brief supports joint influence across the represented result, rather than assigning its parts to separate contributors.",
+      "failure": "A set of adjacent owned stripes, or marks ending at different result fields, can imply exclusive responsibility. Do not add field-wise effects that the facts do not support.",
+      "adapt": "Marks can become traces, transparent planes or aligned interventions. Preserve the common object; change their material and spacing for the selected style."
+    },
+    {
+      "id": "converge",
+      "relation": "Several inputs reach the same receiver",
+      "operation": "Independent paths enter one shared receiver",
+      "asserts": ["A common destination", "Distinct incoming contributions"],
+      "doesNotAssert": ["Mutual influence before arrival", "Simultaneity", "Equal influence", "A measured mixture"],
+      "useWhen": "Combining inputs or sharing a destination is the intended meaning. It may be insufficient when collaboration itself must be explained.",
+      "failure": "Calling an ordinary fork-in 'collaboration' adds meaning that its geometry does not communicate.",
+      "adapt": "Keep the destination unambiguous. Vary direction, line character and receiver material rather than inventing different input roles."
+    },
+    {
+      "id": "scope-field",
+      "relation": "One requirement applies throughout several activities",
+      "operation": "A quiet common field extends beneath all affected activities",
+      "asserts": ["Shared scope over the enclosed activities"],
+      "doesNotAssert": ["A final activity", "A causal transformation", "A required reading order"],
+      "useWhen": "An obligation, operating condition or judgement applies to multiple activities.",
+      "failure": "Moving the field into a separate final box turns scope into a last stage; a dominant field can drown out the activity being explained.",
+      "adapt": "Use an enclosure, substrate or repeated edge treatment when a fill conflicts with the work. Keep the scope label outside activity labels."
+    },
+    {
+      "id": "choice-rejoin",
+      "relation": "A proposal selects one or more routes before shared checking and delivery",
+      "operation": "Split into alternatives, rejoin, then enter the common check",
+      "asserts": ["Available alternatives", "A shared downstream check"],
+      "doesNotAssert": ["Every route is mandatory", "Routes run in sequence", "Checking is an alternative production route"],
+      "useWhen": "The brief explicitly allows selection or combination and names a common downstream stage.",
+      "failure": "Putting the check on the branching spine makes it a sibling option instead of a shared consequence. Use words to distinguish one-of from combinable choices.",
+      "adapt": "Change route count and route labels from facts. Preserve the split and the later join; do not infer an execution schedule from alignment."
+    },
+    {
+      "id": "feedback-target",
+      "relation": "An outcome updates a resource that informs later decisions",
+      "operation": "A subordinate return lands on the resource being changed",
+      "asserts": ["The stated resource changes", "The updated resource supports a later decision"],
+      "doesNotAssert": ["An extra step in every present execution", "An update to an unrelated adjacent object"],
+      "useWhen": "Feedback has a named destination, such as a method library, model, dataset or prior decision.",
+      "failure": "A neat loop into an arbitrary corner hides what changes. An oversized return competes with the main path.",
+      "adapt": "Keep the target object and arrow endpoint explicit; use a lighter return corridor when the current task is the main story."
+    },
+    {
+      "id": "sequence",
+      "relation": "One stated activity follows another",
+      "operation": "Successive objects share a readable directional axis",
+      "asserts": ["The supplied order"],
+      "doesNotAssert": ["Equal duration", "Equal effort", "Extra dependencies or activities"],
+      "useWhen": "The main relationship is genuinely an ordinary ordered process. This is the direct route, not a failure of originality.",
+      "failure": "An elaborate metaphor can obscure a simple process. Equal spacing is not a time scale.",
+      "adapt": "Use steps, a continuous track or ordinary nodes and edges as appropriate. Retain any supplied branches and exceptions."
+    },
+    {
+      "id": "matched-change",
+      "relation": "A condition changes a property of the same object",
+      "operation": "Corresponding views preserve identity, scale and position while only the stated feature changes",
+      "asserts": ["The views correspond", "The marked feature is the stated change"],
+      "doesNotAssert": ["A measured effect size", "An invented scientific result", "A change in identity"],
+      "useWhen": "A before/after, controlled comparison or mechanism needs the unchanged substrate to stay recognizable.",
+      "failure": "Redrawing the whole object introduces accidental differences, and decorative bars can look like fabricated measurements.",
+      "adapt": "Use real supplied data for quantitative comparisons. For conceptual diagrams, keep changes schematic and explicitly labelled."
+    }
+  ]
+}
