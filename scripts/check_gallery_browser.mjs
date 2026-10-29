@@ -210,7 +210,7 @@ try{
   const manifest=JSON.parse((await fetchBytes(new URL('downloads/musedraw-skill.json',url))).toString('utf8'));
   const bytes=await fetchBytes(new URL('downloads/musedraw-skill.zip',url));
   assert.equal(bytes.length,manifest.bytes);assert.equal(hash(bytes),manifest.sha256);
-  assert.ok(bytes.length<20*1024*1024);assert.equal(bytes.readUInt32LE(0),0x04034b50);
+  assert.ok(bytes.length<32*1024*1024);assert.equal(bytes.readUInt32LE(0),0x04034b50);
   assert.equal(await page.locator('#download-skill').getAttribute('href'),'downloads/musedraw-skill.zip');
  });
  report.status='passed';console.log(`Gallery browser QA passed: ${report.checks.length} checks; 300 cases, 20 themes, ${report.downloads.length} byte-exact downloads.`);

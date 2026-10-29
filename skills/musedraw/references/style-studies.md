@@ -1,7 +1,7 @@
 # Complete compositions in the existing twenty styles
 
 Use a complete work to make a named style concrete. The small registry includes
-27 original compositions across the twenty existing families: editable reports,
+28 original compositions across the twenty existing families: editable reports,
 posters, concept drawings, teaching figures and runnable pages. These are starting
 works with explicit production media, not a universal style switch or proof that
 every host/model will produce the same quality.
@@ -61,6 +61,17 @@ Choose between these moves from what the new content needs to explain. A shared
 palette and letterform relationship can survive while decomposition becomes a
 continuous object, a path becomes a section, or a sequence becomes correspondence.
 
+## Let material belong to the subject
+
+[Mend what matters](../assets/visual-language/terracotta-material/design.md)
+adds an original photographic asset to the same Terracotta family as the graphic
+repair event. Linen fibres, a visible patch and worn wood make the specific
+subject readable. Keep text outside the bitmap when exact wording must remain
+editable. A diagram of causal relationships needs its own appropriate medium;
+this is an asset choice for tactile event/brand work, not a request to photograph
+every report. The saved image, its source prompt and the complete layout ship
+together so a receiving agent can replay the chosen work before making changes.
+
 ## Keep the medium usable
 
 For the vector studies, render the copied `scene.json` using the existing scene
@@ -94,9 +105,9 @@ aspect ratio and increases label size rather than stretching its geometry. These
 are three content-specific adaptations; merely shrinking the desktop artifact
 would lose the information or expression that made it useful.
 
-The eight HTML works were checked at desktop/narrow widths; seven include
+The nine newer HTML works were checked at desktop/narrow widths; eight include
 operable controls tested with pointer and keyboard. These are local production
-and interaction checks, not independent aesthetic rankings. The six vector
+and interaction checks, not independent aesthetic rankings. The ten vector
 works were rendered and self-reviewed; generic geometry checks do not certify
 their conceptual accuracy or beauty. System-font fallbacks can alter a replay.
 

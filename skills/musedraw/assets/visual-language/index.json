@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 27,
+  "count": 28,
   "families": 20,
   "status": "original-production-studies",
   "items": [
@@ -474,6 +474,24 @@
         "whiteboard-review/preview.jpg",
         "whiteboard-review/prompt.md",
         "whiteboard-review/scene.json"
+      ]
+    },
+    {
+      "id": "terracotta-material",
+      "theme": "terracotta",
+      "title": "Mend what matters / 摄影式材质",
+      "medium": "html",
+      "entry": "terracotta-material/index.html",
+      "brief": "terracotta-material/prompt.md",
+      "preview": "terracotta-material/preview.jpg",
+      "design": "terracotta-material/design.md",
+      "files": [
+        "terracotta-material/asset-prompt.txt",
+        "terracotta-material/design.md",
+        "terracotta-material/index.html",
+        "terracotta-material/preview.jpg",
+        "terracotta-material/prompt.md",
+        "terracotta-material/workshop.png"
       ]
     }
   ]

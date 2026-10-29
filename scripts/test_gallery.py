@@ -231,7 +231,8 @@ class GalleryTests(unittest.TestCase):
             self.assertEqual(manifest["sha256"], hashlib.sha256(first).hexdigest())
             # The complete starter artworks are shipped with their editable layouts.
             # Keep the archive bounded without dropping the assets those layouts use.
-            self.assertLess(len(first), 20 * 1024 * 1024)
+            # Keep complete original raster assets replayable, alongside cheap metadata search.
+            self.assertLess(len(first), 32 * 1024 * 1024)
             with zipfile.ZipFile(archive) as bundle:
                 names = bundle.namelist()
                 self.assertEqual(len(names), manifest["files"])
