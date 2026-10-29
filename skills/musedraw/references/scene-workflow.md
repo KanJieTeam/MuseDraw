@@ -267,7 +267,7 @@ need a visible distinction. Preserve user facts while reducing decorative prose.
 | Brainstorms, early design, retros | `whiteboard` | 白板手绘 |
 | Lessons, classroom explanations | `chalkboard` | 黑板教学 |
 | Step-by-step processes people must remember | `swiss` | 瑞士海报 |
-| Roles shown by shape, team structures | `bauhaus` | 包豪斯 |
+| Geometric composition and strong typographic contrast | `bauhaus` | 包豪斯 |
 | Roadmaps, lineage, curricula, parallel journeys | `metro` | 地铁线路 |
 | SaaS docs, product pages, investor decks | `product` | 产品发布 |
 | C4 model, formal architecture review | `c4` | C4 标准 |

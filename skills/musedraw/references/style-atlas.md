@@ -21,7 +21,7 @@ Midnight canvas with aurora glows, frosted cards and luminous curved links. For 
 
 ## 包豪斯 · Bauhaus — `bauhaus`
 
-Primary colours, hard shadows, and shape that carries meaning — circle, square, diamond. For explaining a system's roles at a glance.
+Asymmetric geometric composition, primary-colour area balance and strong typographic contrast. Let the subject determine which forms meet, align or contrast; component effects are optional.
 
 - **Fonts:** display `Archivo`, body `Archivo`, mono `Space Mono`
 - **Node tones:** `default`, `red`, `blue`, `yellow`, `ink`

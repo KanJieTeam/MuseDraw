@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-29.1
+  instructions-version: musecore-2026-10-29.2
 ---
 
 # MuseDraw
@@ -59,10 +59,14 @@ scope of the assistant or require every artifact to be a diagram.
 For a named style, original visual direction or a more expressive poster/report,
 use [MuseDraw visual language](references/visual-language.md): develop the existing
 twenty families through their typography, imagery, spatial rhythm and material.
-Read only the relevant family and, when useful, its complete composition.
+For an original named-style work, first inspect a relevant complete composition
+and its design decisions using [style compositions](references/style-studies.md).
+Use it to resolve the relationship between objects, type, colour area and space;
+then use the theme JSON for production settings. Carry over decisions that fit
+the new content, not its subject, measurements or page coordinates. If no work
+fits the task, use the family guidance and make the new spatial argument directly.
 Keep the requested medium; a style name does not require a scene or box layout.
-Find a complete editable style example with [style compositions](references/style-studies.md)
-when a working source would help; it includes twenty families in their chosen media.
+Exact replays, local edits and semantic composers retain their fast paths.
 
 Use the known installed Skill directly. Read only the reference for the chosen
 route, rather than scanning every style or example. When the user says that

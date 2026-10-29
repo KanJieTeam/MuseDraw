@@ -35,10 +35,17 @@ the style: what stretches, opens, accumulates, connects, folds or contrasts?
 Let that decision organise the image and headline. Ordinary informational work
 can keep a straightforward structure; a metaphor is not required everywhere.
 
-Use the selected JSON under `themes/` for the exact existing palette and font
-roles. In HTML, plotting or image work, translate those roles to that medium;
-do not copy scene-node dimensions into a poster or shrink a report to fit a theme.
-Preserve chart encodings, distinctions and legibility when choosing a palette.
+For an original named-style work, inspect one relevant complete source and its
+design decisions before choosing component treatments from `themes/`. In the
+Bauhaus project study, a large circle carries an actual completion quantity,
+while a separate typographic field carries the work and dates. The transferable
+decision is the contrast between those reading roles; a diagram with three
+capabilities does not thereby need three different primary-colour shapes.
+Use the selected theme JSON for exact palette and font settings after deciding
+the spatial argument. Shape, border, shadow and heading defaults are available
+component treatments, not instructions to apply every treatment to every object.
+In HTML, plotting or image work, translate the roles to that medium. Preserve
+chart encodings, distinctions and legibility when choosing a palette.
 
 ## The existing twenty families, expanded beyond boxes
 

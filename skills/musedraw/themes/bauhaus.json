@@ -3,7 +3,7 @@
   "name": "Bauhaus",
   "nameZh": "包豪斯",
   "aliases": ["bauhaus", "包豪斯", "geometric"],
-  "summary": "Primary colours, hard shadows, and shape that carries meaning — circle, square, diamond. For explaining a system's roles at a glance.",
+  "summary": "Asymmetric geometric composition, primary-colour area balance and strong typographic contrast. Let the subject determine which forms meet, align or contrast; component effects are optional.",
   "palette": { "bg": "#F0E8D8", "ink": "#151515", "muted": "#4A463F", "red": "#D7263D", "blue": "#1D4FB8", "yellow": "#F2B705", "white": "#FFFBF2", "accent": "#D7263D" },
   "fonts": { "display": "Archivo, Noto Sans SC, sans-serif", "body": "Archivo, Noto Sans SC, sans-serif", "mono": "Space Mono, Noto Sans SC, monospace" },
   "canvas": { "bg": "bg", "margin": 64 },
