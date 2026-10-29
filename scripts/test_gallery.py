@@ -262,6 +262,13 @@ class GalleryTests(unittest.TestCase):
                         relative = f"assets/visual-language/{family}/{filename}"
                         self.assertEqual(bundle.read("musedraw/" + relative),
                                          (ROOT / "skills/musedraw" / relative).read_bytes())
+                for family, plots in (("business", ("totals.png", "rates.png")),
+                                      ("project", ("timeline.png", "work.png")),
+                                      ("research", ("paired.png", "changes.png"))):
+                    for filename in ("index.html", "study.css", "data.json", "derived.json", "preview.jpg", "prompt.md", *plots):
+                        relative = f"assets/visual-language/office-{family}/{filename}"
+                        self.assertEqual(bundle.read("musedraw/" + relative),
+                                         (ROOT / "skills/musedraw" / relative).read_bytes())
                 extracted = staging / "extracted"
                 bundle.extractall(extracted)
                 for reference in ("frontend-design.md", "frontend-work-apps.md", "frontend-composition.md"):

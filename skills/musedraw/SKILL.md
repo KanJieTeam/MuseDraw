@@ -54,8 +54,9 @@ responsibility matrix or time-based composition from the actual work; do not
 turn every office brief into the same card grid or infer missing assignments.
 
 For a composed office or research report page, [report spreads](references/report-spreads.md)
-provides two complete editable seeds combining typography, artwork and actual
-data charts. Choose and adapt a seed when its content structure fits; standalone
+provides editable compositions for business, project and research reports,
+with typography, actual data charts and optional artwork. Adapt a composition
+when its content structure fits; standalone
 data figures keep the plotting route above.
 
 For an interface prototype or work UI, read [frontend decisions](references/frontend-design.md).

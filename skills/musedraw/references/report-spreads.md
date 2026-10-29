@@ -74,3 +74,8 @@ into reserve.
 All supplied demonstration measurements and budget figures are fictional.
 Retain that identification when replaying them. Replace the factual content
 and its provenance together when producing a real report.
+
+
+For reports led by typography and data rather than an illustration, see the
+[Editorial business, Bauhaus project and Journal paired-evidence compositions](visual-language.md#reports-whose-typography-and-data-carry-the-visual-idea).
+They include their original data and a rebuilding script.

@@ -1,0 +1,63 @@
+{
+  "theme": "bauhaus",
+  "publication": "项目推进简报",
+  "edition": "OCTOBER / 2026",
+  "title": [
+    "推进，",
+    "也交接。"
+  ],
+  "start": "2026-10-01",
+  "end": "2026-10-31",
+  "asOf": "2026-10-18",
+  "milestones": [
+    {
+      "name": "需求冻结",
+      "planned": "2026-10-04",
+      "actual": "2026-10-04"
+    },
+    {
+      "name": "样机联调",
+      "planned": "2026-10-12",
+      "actual": "2026-10-15"
+    },
+    {
+      "name": "现场验证",
+      "planned": "2026-10-21",
+      "actual": null
+    },
+    {
+      "name": "上线验收",
+      "planned": "2026-10-30",
+      "actual": null
+    }
+  ],
+  "work": [
+    {
+      "name": "需求",
+      "weight": 15,
+      "completion": 1
+    },
+    {
+      "name": "方案",
+      "weight": 25,
+      "completion": 1
+    },
+    {
+      "name": "样机",
+      "weight": 20,
+      "completion": 0.5
+    },
+    {
+      "name": "验证",
+      "weight": 25,
+      "completion": 0
+    },
+    {
+      "name": "交接",
+      "weight": 15,
+      "completion": 0
+    }
+  ],
+  "note": "虚构项目。完成度按给定工作包权重计算，独立于日历经过比例和里程碑完成个数；未完成节点不填入实际日期。",
+  "layout": "project"
+}

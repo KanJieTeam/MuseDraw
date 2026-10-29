@@ -1,0 +1,11 @@
+{
+  "earned_weight_pct": 50.0,
+  "completed_milestones": 2,
+  "late_completed": [
+    {
+      "name": "样机联调",
+      "days": 3
+    }
+  ],
+  "overdue_unfinished": []
+}

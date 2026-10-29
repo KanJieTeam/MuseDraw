@@ -1,0 +1,49 @@
+{
+  "theme": "journal",
+  "publication": "材料观察",
+  "edition": "PAIRED STUDY / 03",
+  "title": [
+    "同样的方向，",
+    "不同的幅度。"
+  ],
+  "unit": "g/g",
+  "conditions": [
+    "处理前",
+    "处理后"
+  ],
+  "rows": [
+    {
+      "id": "S01",
+      "before": 0.76,
+      "after": 1.12
+    },
+    {
+      "id": "S02",
+      "before": 0.82,
+      "after": 1.08
+    },
+    {
+      "id": "S03",
+      "before": 0.9,
+      "after": 0.96
+    },
+    {
+      "id": "S04",
+      "before": 0.69,
+      "after": 0.93
+    },
+    {
+      "id": "S05",
+      "before": 0.84,
+      "after": 1.1
+    },
+    {
+      "id": "S06",
+      "before": 0.88,
+      "after": 1.04
+    }
+  ],
+  "note": "虚构配对数据：每个编号对应同一样本的两次读数。仅作描述展示，不推断独立实验单位、因果、显著性或总体效应。",
+  "layout": "research",
+  "measure": "吸水率"
+}

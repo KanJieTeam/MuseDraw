@@ -59,16 +59,19 @@ relevant to the brief instead of loading the whole table for every job.
 | `whiteboard` 白板手绘 | A visible drawing action, alternative sketch or spatial argument leads the explanation | Marker gestures and informal grouping; roughness should clarify intention rather than simulate mistakes |
 | `c4` C4 标准 | Use the domain's typed architectural views and notation, with layout supporting the actual relationships | Familiar semantic notation and explicit system boundaries; this specialised language is not a general poster treatment |
 
-## Six complete starting compositions
+## Nine complete starting compositions
 
 Bundled original studies in [visual-language assets](../assets/visual-language/)
 apply Swiss, Riso and Ink Wash to the same fictional seed-exchange brief, then
-extend the families to a different poster and two report reading tasks.
+extend the families to a different poster and two report reading tasks. Three
+additional office/science compositions use Editorial, Bauhaus and Journal
+without a generated illustration.
 Open the selected `index.html` and `prompt.md`; the text and placement are editable.
-The supplied artwork is an original generated raster asset, not an external
+Where illustration is used, the supplied artwork is an original generated raster asset, not an external
 artist's image or an SVG placeholder. Read its matching `asset-prompt.txt` when
 new imagery is needed. Keep asset generation and editorial typography separate
-when exact, editable wording matters.
+when exact, editable wording matters. The three office examples require no
+image-generation tool and include their own copied `study.css`.
 
 | Family | Complete source | What to adapt |
 | --- | --- | --- |
@@ -78,14 +81,18 @@ when exact, editable wording matters.
 | Swiss / repair | [source](../assets/visual-language/swiss-repair/index.html) · [brief](../assets/visual-language/swiss-repair/prompt.md) | Move the signal red into a meaningful repaired join; a specimen and a tactile object need different image/type balances |
 | Riso / rhythm report | [source](../assets/visual-language/riso-report/index.html) · [brief and data](../assets/visual-language/riso-report/prompt.md) | Overprint actual data fields rather than distressing measured marks; compare peak times and maintain a shared zero |
 | Ink Wash / evidence report | [source](../assets/visual-language/ink-report/index.html) · [brief and data](../assets/visual-language/ink-report/prompt.md) | Give the brush-language scene a broad field, with precise evidence in a separate readable column; chart labels retain a readable data font |
+| Editorial / business | [source](../assets/visual-language/office-business/index.html) · [brief and data](../assets/visual-language/office-business/prompt.md) | Let the conclusion headline and one large derived rate lead; keep the full income/cost comparison readable |
+| Bauhaus / project | [source](../assets/visual-language/office-project/index.html) · [brief and data](../assets/visual-language/office-project/prompt.md) | Give a circle a real quantity and a side field a typographic role; distinguish weighted work from calendar dates and milestone counts |
+| Journal / paired evidence | [source](../assets/visual-language/office-research/index.html) · [brief and data](../assets/visual-language/office-research/prompt.md) | Align paired observations and differences by sample identity; use the second panel only when it answers another reading question |
 
-Copy the selected directory together with its parent `shared.css` and adapt the
-source, or rebuild the relevant relationship in the user's own stack. The saved
-image reproduces the supplied study; a fresh image requires an available host
-image-generation tool and will vary. If the named display font is unavailable,
+Copy the selected directory and the CSS referenced by its HTML, then adapt the
+source or rebuild the relevant relationship in the user's own stack. The office
+examples include their CSS; poster studies also need the parent `shared.css`.
+The saved artwork reproduces the supplied study; new generated artwork requires
+an available host image-generation tool and will vary. If a display font is unavailable,
 use a documented fallback and recheck its line breaks. No font is bundled here.
 
-These six compositions are visual studies, not an independently measured
+These nine compositions are visual studies, not an independently measured
 quality improvement or a general layout solver. The twenty-family table is
 authoring guidance; it does not mean all twenty received new cross-host tests.
 
@@ -125,6 +132,34 @@ or composition, not invented values. Zero reference peaks have no relative
 percentage change. The examples identify all observations as fictional.
 Positive and negative peak changes preserve their sign; neither means a proven
 benefit. Keep an illustration's concept role distinct from measured evidence.
+
+## Reports whose typography and data carry the visual idea
+
+The three office compositions make the style visible through scale and placement,
+without requiring a decorative image. Editorial puts the argument at display
+scale and the derived rate at another focal scale. Bauhaus lets an actual
+completion quantity occupy a primary-colour circle while the right field carries
+dates and work. Journal pairs a view of observations with a view of differences;
+shared row identity carries the relationship. These are three task-specific
+solutions, not instructions to add giant numbers or a second chart everywhere.
+
+```sh
+python <skill>/scripts/build_office_report.py <skill>/assets/visual-language/office-business/data.json --out output/business
+python <skill>/scripts/build_office_report.py <skill>/assets/visual-language/office-project/data.json --out output/project
+python <skill>/scripts/build_office_report.py <skill>/assets/visual-language/office-research/data.json --out output/research
+```
+
+Use a fresh directory. It contains editable HTML/CSS, PNG plots, original data
+and derived values. Plots remain editable through the data and Python source.
+Use the installed plotting environment and check installed Chinese fonts before
+browser export. Recheck headline claims after changing data: the builder updates
+numbers, not editorial judgement. These bounded layouts accept 3–8 income/cost
+periods with positive income, 3–6 project milestones/work packages, or 3–10
+nonnegative paired observations. Missing scientific values, signed absolute
+observations, other measures or denser content call for an appropriate adaptation.
+An unfinished milestone has no invented actual date. Project completion uses
+supplied work weights; late completions and overdue unfinished nodes remain
+distinct. An increase in a paired reading establishes neither benefit nor cause.
 
 ## Develop the family without making everything look the same
 
