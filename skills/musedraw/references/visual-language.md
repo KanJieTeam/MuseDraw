@@ -5,6 +5,11 @@ is a starting vocabulary for making an appropriate composition, not a request
 to turn the subject into nodes, recolour a fixed layout or combine every available
 effect. Keep the user's chosen style and the requested production medium.
 
+Within [MuseCore](musecore.md), style orchestration works with expression and
+visual conception to form one work proposal. Establish its type/image/space/
+material relationship while composing; a named theme is not a finishing filter
+on an unrelated layout. The family resources below remain choices, not steps.
+
 For a ready-to-open work in any of the twenty families, use the
 [complete style compositions](style-studies.md). Its small registry searches
 28 original editable works by style or subject; read only the chosen work's

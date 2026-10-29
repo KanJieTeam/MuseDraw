@@ -1,9 +1,56 @@
 ---
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
+metadata:
+  instructions-version: musecore-2026-10-29.1
 ---
 
 # MuseDraw
+
+## MuseCore · the shared creative workflow
+
+**Understand the brief → jointly decide the work → make and deliver it.**
+MuseCore is the design method used by this Skill, not a separate model or an
+autonomous aesthetic engine. Apply it across production media.
+
+1. **Understand the brief.** Identify the audience, use, content facts, supplied
+   assets/style and delivery requirements. Carry forward decisions the user has
+   already made. Ask only when a missing fact materially changes the work.
+2. **Form one work proposal through three collaborating capabilities:**
+   **表达判断 / expression judgement** decides emphasis, information, relationships
+   and evidence; **视觉立意 / visual conception** decides the subject, composition
+   and reading path; **风格编排 / visual orchestration** coordinates type, imagery,
+   colour, space and material. Work on them together: they are neither three
+   sequential passes nor three required agents. A new visual idea can change the
+   information arrangement; the evidence and medium can change the visual idea.
+   The proposal resolves **content structure, the main visual, visual language,
+   and asset/medium responsibilities**. Keep this proportionate and internal;
+   a simple task does not need a plan file or a planning speech.
+3. **Make and deliver the work** through the appropriate route below. Check facts,
+   functioning and actual appearance separately; keep the finished work, useful
+   editable source and assets. Passing an exporter is not an aesthetic verdict.
+
+**去 AI 味 runs through the decisions and production.** Replace a default treatment
+when it weakens this subject; do not substitute a compulsory sparse layout,
+black disk, muted palette or overlapping-circle motif. Preserve richness and
+detail that help the work. For original explanatory work, a difficult composition
+or a visible design failure, read [MuseCore decisions](references/musecore.md)
+before choosing the composition, together with only the relevant production
+reference. Exact replay, a local text edit and the RAG starter retain their fast paths.
+
+**Enhance on demand.** When the direction is unresolved, test a sketch or key
+region and return to the affected decision or production step. Do not make every
+request wait for multiple full designs or extra reviewers. Preserve first drafts
+and failed attempts during sustained testing; the user's aesthetic judgement
+governs when they are reviewing the work.
+
+**Accumulate separately from the main creation path.** Project facts and user
+preferences stay in project memory. Candidate design methods record their
+conditions, evidence and failures; try them with new content before promoting
+them into shared method/style resources. A downloaded case, replay or corrected
+development subject is not evidence of general improvement.
+
+## Choose the production medium
 
 Choose the production route from the requested work and its editing needs.
 The bundled scene renderer is one tool within MuseDraw; it does not define the
@@ -21,6 +68,9 @@ Use the known installed Skill directly. Read only the reference for the chosen
 route, rather than scanning every style or example. When the user says that
 installed copy was updated, reread this entrypoint and the selected reference;
 older conversation descriptions may refer to a different workflow.
+To verify the installed revision, run `node scripts/skill-info.mjs` from that
+Skill directory. It reports its version and hashes; a running chat must reread
+the updated entrypoint and selected references to use them.
 
 When the user requests sustained visual improvement or comparative design
 review, use [visual revision](references/design-review.md) with actual renders,

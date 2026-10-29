@@ -4,6 +4,24 @@
 
 MuseDraw is a visual creation Skill for AI agents. Start with a brief, supplied material or selected example; choose the production medium the work needs, then continue editing in conversation.
 
+## The MuseCore creation workflow
+
+**Understand the brief → jointly form a work proposal → make and deliver it.**
+Expression judgement, visual conception and visual orchestration jointly resolve
+content structure, the main visual, visual language, and asset/medium responsibilities;
+they are not three serial model calls. Anti-default judgement runs throughout.
+Sketches and deeper review are used on demand. Project facts/preferences stay
+separate from candidate methods, which need new-content evidence before becoming
+shared resources. See [MuseCore](../skills/musedraw/references/musecore.md).
+This is the Skill's creation method; the existing tools automate only the layouts,
+production and checks they actually support, not arbitrary aesthetic decisions.
+
+After updating to 0.4.1, run `node scripts/skill-info.mjs` in the **installed Skill
+directory**. It should report `musecore-2026-10-29.1` and entrypoint hashes. Updating
+the repository does not refresh other installed copies. Update the copy the host
+loads, then have the agent reread its entrypoint and selected references or start
+a new chat; an existing conversation does not automatically forget old instructions.
+
 ## Choose the medium
 
 - Painting, photographic imagery, textured illustration and image edits use an available host image-generation/editing tool. Deliver the requested image and useful prompts/assets. A missing host image tool is not a restriction of MuseDraw to architecture diagrams.

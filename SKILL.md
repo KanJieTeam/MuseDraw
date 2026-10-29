@@ -7,7 +7,15 @@ one production tool, not the boundary of the Skill's creative work.
 To use this repository for a drawing task, read
 [the MuseDraw skill](skills/musedraw/SKILL.md) and keep the whole
 `skills/musedraw/` directory available (engine, themes, fonts manifest,
-references). Use only the route needed for the task: image-generation/editing
+references). Its shared creative workflow is MuseCore: understand the brief,
+jointly decide expression, visual conception and style, then make and deliver
+the work. The proposal resolves content structure, main visual, visual language
+and medium/asset responsibilities. Anti-default judgement runs throughout;
+sketches and deeper review are used on demand. Project memory and validated
+general methods are accumulated separately. See the Skill for the executable
+routes and [MuseCore decisions](skills/musedraw/references/musecore.md) for complex
+original compositions; this method is not a separately implemented AI model.
+Use only the route needed for the task: image-generation/editing
 tools for raster work, HTML/CSS/JavaScript for interfaces and suitable mixed
 layouts, and the bundled scene engine for structured diagrams or native-vector
 cases. Preserve the medium of an approved example. Do not force paintings or

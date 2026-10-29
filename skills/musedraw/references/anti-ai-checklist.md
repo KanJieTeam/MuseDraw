@@ -7,6 +7,13 @@ automatic-first policy in SKILL.md, without mandatory image reading, uploads,
 OCR or external vision calls. Follow an explicit user style/reference over
 these defaults. These rules reduce known failure patterns; they do not certify taste.
 
+Apply this guidance throughout the [MuseCore workflow](musecore.md), where the
+work proposal and production are developed together. The examples below are
+contextual failure patterns, not automatic bans on cards, large type, colour,
+icons, symmetry or ornament. Preserve a coherent treatment when it serves the
+brief. Replacing all such choices with a dark circle and fine print creates
+another default rather than resolving the design.
+
 ## 创作时先判断这些 · Design decisions before drawing
 
 需要表现闭环、对象变化、共用主干、条件对照、局部放大或分层关系时，读

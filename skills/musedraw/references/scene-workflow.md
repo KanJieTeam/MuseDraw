@@ -221,6 +221,12 @@ first render. Use the workflow below for custom composition and automatic checks
 
 ## 1 · Read the request like an editor
 
+For a new conceptual or explanatory composition, form the work proposal using
+[MuseCore](musecore.md). Expression, visual conception and style are collaborating
+decisions, not three rendering stages. The theme table below is a vocabulary
+after the subject and relationships are understood; it does not choose the
+composition. Exact replay, local edits and the RAG starter keep their fast paths.
+
 Use the anti-AI guidance to make the diagram serve its relationships. Muted
 colours, fewer words, a dark highlight or perfectly aligned cards alone do not
 make a design professional. Peers can share a visual treatment; different roles

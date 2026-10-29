@@ -1,4 +1,4 @@
-# Visual revision with a separate critic
+# Visual revision
 
 Use when the user requests sustained visual improvement, a design comparison or
 critique of a rendered work. This is an experimental production method, not a
@@ -17,7 +17,10 @@ Keep the first source and rendered output. Run factual and functional checks
 separately from visual judgement. A screenshot cannot prove that a form works;
 an error-free browser cannot prove that the composition is good.
 
-Where the host supports independent contexts, give a new critic only:
+The user's requested review mode takes precedence. When the user wants to judge
+the work themselves, show the real images and preserve their feedback; do not
+substitute a model score. A separate critic is optional. When independent review
+is requested and the host supports independent contexts, give a new critic only:
 
 - the unchanged user brief and required facts;
 - actual same-scale renders, including the relevant narrow/detail view;
