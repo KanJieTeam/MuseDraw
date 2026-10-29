@@ -1,0 +1,15 @@
+{
+  "layout": "ledger-report",
+  "publication": "项目手册",
+  "edition": "RESOURCE PLAN / 02",
+  "topic": "项目预算配置",
+  "title": ["安排有先后，", "预算留余地。"],
+  "intro": "把已配置与尚未分配的储备分开呈现。预算安排不等于已经发生的支出。",
+  "unit": "万元",
+  "total": 120,
+  "reserve": 12,
+  "chartTitle": "配置结构 / 全部金额使用同一尺度",
+  "items": [{"name":"人员","value":58},{"name":"设备","value":26},{"name":"外协","value":18},{"name":"差旅","value":6}],
+  "notes": [{"title":"按用途逐项配置","body":"横向比较每项安排的金额；预算配置不表示已经付款。"},{"title":"为变化保留空间","body":"储备独立列示，具体启用条件由项目实际规则确定。"}],
+  "limitation": "虚构预算示例，不代表实际机构或项目；金额是预算配置，不是付款、成本确认或承诺金额。"
+}

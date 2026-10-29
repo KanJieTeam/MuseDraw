@@ -1,0 +1,19 @@
+{
+  "peaks": [
+    {
+      "name": "工作日示例",
+      "value": 57,
+      "times": [
+        17
+      ]
+    },
+    {
+      "name": "周末示例",
+      "value": 63,
+      "times": [
+        13
+      ]
+    }
+  ],
+  "peak_time_gap": 4
+}

@@ -220,7 +220,7 @@ class GalleryTests(unittest.TestCase):
             self.assertEqual(text.count("assets/gallery/readme-showcase.jpg"), 1)
             self.assertNotIn("flagship-grid.jpg", text)
 
-    def test_skill_download_is_small_complete_reproducible_and_runtime_free(self):
+    def test_skill_download_is_complete_reproducible_and_runtime_free(self):
         with tempfile.TemporaryDirectory(prefix="musedraw-download-") as scratch:
             staging = Path(scratch)
             build_skill_download(ROOT, staging)
@@ -229,7 +229,9 @@ class GalleryTests(unittest.TestCase):
             manifest = json.loads((staging / DOWNLOAD_FILES[1]).read_text())
             self.assertEqual(manifest["bytes"], len(first))
             self.assertEqual(manifest["sha256"], hashlib.sha256(first).hexdigest())
-            self.assertLess(len(first), 1024 * 1024)
+            # The complete starter artworks are shipped with their editable layouts.
+            # Keep the archive bounded without dropping the assets those layouts use.
+            self.assertLess(len(first), 20 * 1024 * 1024)
             with zipfile.ZipFile(archive) as bundle:
                 names = bundle.namelist()
                 self.assertEqual(len(names), manifest["files"])
@@ -240,6 +242,26 @@ class GalleryTests(unittest.TestCase):
                     self.assertIn("musedraw/" + required, names)
                 self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
                 self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
+                for relative in (
+                    "assets/visual-language/shared.css",
+                    "assets/report-spreads/seed.css",
+                    "assets/report-spreads/urban-block.png",
+                    "assets/report-spreads/illustration-prompt.txt",
+                    "assets/report-spreads/preview-urban.png",
+                    "assets/report-spreads/preview-budget.png",
+                ):
+                    self.assertEqual(bundle.read("musedraw/" + relative),
+                                     (ROOT / "skills/musedraw" / relative).read_bytes())
+                for family in ("swiss", "riso", "ink-wash", "swiss-repair"):
+                    for filename in ("index.html", "artwork.png", "preview.jpg", "prompt.md", "asset-prompt.txt"):
+                        relative = f"assets/visual-language/{family}/{filename}"
+                        self.assertEqual(bundle.read("musedraw/" + relative),
+                                         (ROOT / "skills/musedraw" / relative).read_bytes())
+                for family in ("riso-report", "ink-report"):
+                    for filename in ("index.html", "report.css", "chart.png", "chart.svg", "data.json", "derived.json", "preview.jpg", "prompt.md"):
+                        relative = f"assets/visual-language/{family}/{filename}"
+                        self.assertEqual(bundle.read("musedraw/" + relative),
+                                         (ROOT / "skills/musedraw" / relative).read_bytes())
                 extracted = staging / "extracted"
                 bundle.extractall(extracted)
                 for reference in ("frontend-design.md", "frontend-work-apps.md", "frontend-composition.md"):

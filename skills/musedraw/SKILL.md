@@ -9,6 +9,12 @@ Choose the production route from the requested work and its editing needs.
 The bundled scene renderer is one tool within MuseDraw; it does not define the
 scope of the assistant or require every artifact to be a diagram.
 
+For a named style, original visual direction or a more expressive poster/report,
+use [MuseDraw visual language](references/visual-language.md): develop the existing
+twenty families through their typography, imagery, spatial rhythm and material.
+Read only the relevant family and, when useful, its complete composition.
+Keep the requested medium; a style name does not require a scene or box layout.
+
 Use the known installed Skill directly. Read only the reference for the chosen
 route, rather than scanning every style or example. When the user says that
 installed copy was updated, reread this entrypoint and the selected reference;
@@ -46,6 +52,11 @@ For everyday office processes, task ownership and project plans, read
 [office diagrams](references/office-diagrams.md). Choose the appropriate flow,
 responsibility matrix or time-based composition from the actual work; do not
 turn every office brief into the same card grid or infer missing assignments.
+
+For a composed office or research report page, [report spreads](references/report-spreads.md)
+provides two complete editable seeds combining typography, artwork and actual
+data charts. Choose and adapt a seed when its content structure fits; standalone
+data figures keep the plotting route above.
 
 For an interface prototype or work UI, read [frontend decisions](references/frontend-design.md).
 For record review, coordination or operations, also read

@@ -82,7 +82,12 @@ def build_skill_download(root, staging):
                 file = Path(directory) / name
                 design_preview = file.name == "preview.jpg" and file.is_relative_to(source / "assets/design-examples")
                 frontend_example = file.suffix == ".html" and file.is_relative_to(source / "assets/frontend")
-                if file.suffix in {".md", ".json", ".mjs", ".js", ".py", ".yaml"} or name.endswith("LICENSE") or design_preview or frontend_example:
+                composed_example = (
+                    any(file.is_relative_to(source / "assets" / family)
+                        for family in ("report-spreads", "visual-language"))
+                    and file.suffix in {".html", ".css", ".png", ".jpg", ".svg", ".txt"}
+                )
+                if file.suffix in {".md", ".json", ".mjs", ".js", ".py", ".yaml"} or name.endswith("LICENSE") or design_preview or frontend_example or composed_example:
                     files[file.relative_to(source).as_posix()] = file
     files["LICENSE"] = root / "LICENSE"
     if (root / "NOTICE").is_file():

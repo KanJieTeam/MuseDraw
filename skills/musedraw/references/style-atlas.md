@@ -1,8 +1,13 @@
 # Style atlas · 风格图谱
 
-Twenty visual systems. Each one fixes type, colour, line, texture and label grammar; the scene decides content and layout. Swap `theme` and the same scene re-renders.
+Twenty visual systems. Each one provides type, colour, line, texture and label grammar. In a theme-aware native scene, swapping `theme` re-renders those roles; it does not restyle fixed embedded artwork.
 
-二十套视觉系统。风格决定字体、颜色、线条、质感与标注方式；scene 决定内容与构图。只换 `theme` 就能整图换风格。
+二十套视觉系统。风格提供字体、颜色、线条、质感与标注语言。原生 scene 可以通过 `theme` 切换这些角色；固定嵌入的作品不随之重绘。
+
+For posters, reports, illustrations and pages, develop the same families using
+[visual language](visual-language.md). It adds image/type relationships and
+subject-specific composition beyond the scene roles listed below, including
+three complete original studies. The requested work decides its production medium.
 
 ## 极光玻璃 · Aurora Glass — `aurora`
 

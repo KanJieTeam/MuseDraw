@@ -1,0 +1,19 @@
+{
+  "peaks": [
+    {
+      "name": "示例 A",
+      "value": 68,
+      "times": [
+        30
+      ]
+    },
+    {
+      "name": "示例 B",
+      "value": 36,
+      "times": [
+        30
+      ]
+    }
+  ],
+  "relative_peak_change_pct": -47.05882352941176
+}

@@ -1,0 +1,53 @@
+/* Original MuseDraw compositions. The family palettes come from themes/*.json. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { width: 900px; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+.poster { width: 900px; height: 1260px; position: relative; overflow: hidden; }
+h1, h2, p { margin: 0; }
+.mono { font-family: "Space Mono", "JetBrains Mono", Consolas, monospace; }
+.eyebrow { font-size: 16px; letter-spacing: 1.6px; line-height: 1.4; }
+.art { position: absolute; object-fit: contain; }
+.legal { font-size: 12px; letter-spacing: 1px; }
+.swiss { background: var(--paper); color: var(--ink); font-family: Archivo, "Arial Black", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+.swiss .masthead { position: absolute; left: 48px; right: 48px; top: 40px; display: flex; justify-content: space-between; border-top: 3px solid var(--ink); padding-top: 14px; }
+.swiss .word { position: absolute; left: 32px; top: 94px; font-size: 262px; line-height: 1; font-weight: 900; letter-spacing: -23px; }
+.swiss .side { position: absolute; right: 45px; top: 376px; writing-mode: vertical-rl; font-weight: 700; font-size: 17px; letter-spacing: 5px; }
+.swiss .art { left: 315px; top: 330px; width: 500px; height: 600px; transform: rotate(5deg); }
+.swiss .headline { position: absolute; left: 48px; top: 750px; z-index: 2; font-size: 64px; letter-spacing: -4px; line-height: 1.2; font-weight: 800; }
+.swiss .deck { position: absolute; left: 51px; top: 941px; width: 730px; font-size: 21px; line-height: 1.6; }
+.swiss .footer { position: absolute; left: 0; right: 0; top: 1030px; bottom: 0; padding: 32px 48px; background: var(--accent); color: var(--paper); display: grid; grid-template-columns: 270px 1fr; column-gap: 35px; }
+.swiss .date { font-size: 76px; font-weight: 800; letter-spacing: -4px; line-height: 1.15; }
+.swiss .time { font-size: 24px; margin-top: 8px; letter-spacing: -1px; }
+.swiss .venue { font-size: 28px; line-height: 1.5; font-weight: 700; padding-top: 5px; }
+.swiss .detail { font-size: 19px; margin-top: 6px; line-height: 1.6; }
+.swiss .legal { position: absolute; right: 48px; bottom: 18px; }
+.riso { background: var(--paper); color: var(--ink); font-family: "Space Grotesk", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+.riso .masthead { position: absolute; top: 45px; left: 52px; right: 52px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--ink); padding-bottom: 15px; }
+.riso .edition { color: var(--accent); }
+.riso .headline { position: absolute; top: 120px; left: 50px; font-size: 92px; font-weight: 800; letter-spacing: -5px; line-height: 1.08; z-index: 2; }
+.riso .headline span { color: var(--accent); }
+.riso .english { position: absolute; right: 45px; top: 158px; width: 50px; writing-mode: vertical-rl; font-size: 17px; font-weight: 700; letter-spacing: 3px; }
+.riso .art { left: 82px; top: 348px; width: 790px; height: 733px; }
+.riso .margin { position: absolute; top: 510px; left: 43px; font-size: 16px; line-height: 1.8; writing-mode: vertical-rl; letter-spacing: 3px; }
+.riso .footer { position: absolute; left: 52px; right: 52px; top: 1085px; border-top: 3px solid var(--ink); padding-top: 19px; display: grid; grid-template-columns: 340px 1fr; gap: 30px; }
+.riso .date { font-size: 49px; font-weight: 700; letter-spacing: -2px; line-height: 1.1; }
+.riso .time { font-size: 21px; margin-top: 12px; }
+.riso .venue { font-size: 25px; font-weight: 700; }
+.riso .detail { font-size: 18px; line-height: 1.7; margin-top: 8px; }
+.riso .legal { position: absolute; bottom: 20px; left: 52px; }
+.ink-wash { background: var(--paper); color: var(--ink); font-family: "Noto Serif SC", SimSun, serif; }
+.ink-wash .masthead { position: absolute; left: 50px; right: 50px; top: 43px; display: flex; justify-content: space-between; font-size: 16px; letter-spacing: 3px; }
+.ink-wash .art { left: -8px; top: 170px; width: 650px; height: 925px; }
+.ink-wash .headline { position: absolute; top: 143px; right: 86px; font-family: "Ma Shan Zheng", KaiTi, "STKaiti", serif; font-size: 88px; font-weight: 400; writing-mode: vertical-rl; letter-spacing: 15px; line-height: 1.22; z-index: 2; }
+.ink-wash .headline .second { display: inline-block; padding-top: 105px; }
+.ink-wash .red-note { position: absolute; top: 656px; right: 126px; font-size: 19px; letter-spacing: 5px; writing-mode: vertical-rl; color: var(--accent); }
+.ink-wash .poem { position: absolute; top: 143px; left: 405px; writing-mode: vertical-rl; font-size: 20px; letter-spacing: 5px; line-height: 2.05; }
+.ink-wash .poem p + p { margin-top: 45px; }
+.ink-wash .english { position: absolute; bottom: 201px; right: 59px; font-size: 13px; line-height: 1.8; letter-spacing: 2px; }
+.ink-wash .footer { position: absolute; left: 50px; right: 50px; bottom: 50px; border-top: 1px solid var(--ink); padding-top: 23px; display: grid; grid-template-columns: 285px 1fr; gap: 38px; }
+.ink-wash .date { font-size: 37px; line-height: 1.15; letter-spacing: -1px; }
+.ink-wash .time { font-size: 18px; margin-top: 12px; }
+.ink-wash .venue { font-size: 25px; letter-spacing: 3px; }
+.ink-wash .detail { font-size: 17px; line-height: 1.8; margin-top: 6px; }
+.ink-wash .legal { position: absolute; bottom: 20px; left: 50px; color: var(--muted); }
+@media print { @page { size: 900px 1260px; margin: 0; } body { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
