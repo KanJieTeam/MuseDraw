@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "count": 23,
+  "count": 27,
   "families": 20,
   "status": "original-production-studies",
   "items": [
@@ -410,6 +410,70 @@
         "terminal-release/index.html",
         "terminal-release/preview.jpg",
         "terminal-release/prompt.md"
+      ]
+    },
+    {
+      "id": "newsprint-umbrella",
+      "theme": "newsprint",
+      "title": "伞的连续结构",
+      "medium": "vector",
+      "entry": "newsprint-umbrella/scene.json",
+      "brief": "newsprint-umbrella/prompt.md",
+      "preview": "newsprint-umbrella/preview.jpg",
+      "design": "newsprint-umbrella/design.md",
+      "files": [
+        "newsprint-umbrella/design.md",
+        "newsprint-umbrella/preview.jpg",
+        "newsprint-umbrella/prompt.md",
+        "newsprint-umbrella/scene.json"
+      ]
+    },
+    {
+      "id": "blueprint-heat",
+      "theme": "blueprint",
+      "title": "独立流体回路的换热",
+      "medium": "vector",
+      "entry": "blueprint-heat/scene.json",
+      "brief": "blueprint-heat/prompt.md",
+      "preview": "blueprint-heat/preview.jpg",
+      "design": "blueprint-heat/design.md",
+      "files": [
+        "blueprint-heat/design.md",
+        "blueprint-heat/preview.jpg",
+        "blueprint-heat/prompt.md",
+        "blueprint-heat/scene.json"
+      ]
+    },
+    {
+      "id": "chalkboard-slope",
+      "theme": "chalkboard",
+      "title": "从一段线读出斜率",
+      "medium": "vector",
+      "entry": "chalkboard-slope/scene.json",
+      "brief": "chalkboard-slope/prompt.md",
+      "preview": "chalkboard-slope/preview.jpg",
+      "design": "chalkboard-slope/design.md",
+      "files": [
+        "chalkboard-slope/design.md",
+        "chalkboard-slope/preview.jpg",
+        "chalkboard-slope/prompt.md",
+        "chalkboard-slope/scene.json"
+      ]
+    },
+    {
+      "id": "whiteboard-review",
+      "theme": "whiteboard",
+      "title": "审阅意见的实际落点",
+      "medium": "vector",
+      "entry": "whiteboard-review/scene.json",
+      "brief": "whiteboard-review/prompt.md",
+      "preview": "whiteboard-review/preview.jpg",
+      "design": "whiteboard-review/design.md",
+      "files": [
+        "whiteboard-review/design.md",
+        "whiteboard-review/preview.jpg",
+        "whiteboard-review/prompt.md",
+        "whiteboard-review/scene.json"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 # Complete compositions in the existing twenty styles
 
 Use a complete work to make a named style concrete. The small registry includes
-23 original compositions across the twenty existing families: editable reports,
+27 original compositions across the twenty existing families: editable reports,
 posters, concept drawings, teaching figures and runnable pages. These are starting
 works with explicit production media, not a universal style switch or proof that
 every host/model will produce the same quality.
@@ -42,6 +42,24 @@ and rebuild the spatial argument when the task needs another arrangement.
 
 Swiss, Riso, Ink Wash, Editorial, Bauhaus and Journal have complete poster/report
 examples in [visual language](visual-language.md#nine-complete-starting-compositions).
+
+## A second subject can change the composition
+
+Four same-creator development works explore another spatial argument inside
+their existing families. They are not independent preference tests:
+
+- [Newsprint / umbrella](../assets/visual-language/newsprint-umbrella/design.md)
+  keeps one continuous silhouette and its shaft instead of decomposing the chair.
+- [Blueprint / heat transfer](../assets/visual-language/blueprint-heat/design.md)
+  uses two isolated channels and a separating wall instead of the rainwater site.
+- [Chalkboard / slope](../assets/visual-language/chalkboard-slope/design.md)
+  reads changes from coordinates instead of counting area tiles.
+- [Whiteboard / review](../assets/visual-language/whiteboard-review/design.md)
+  aligns an annotated source and responses instead of a four-step journey.
+
+Choose between these moves from what the new content needs to explain. A shared
+palette and letterform relationship can survive while decomposition becomes a
+continuous object, a path becomes a section, or a sequence becomes correspondence.
 
 ## Keep the medium usable
 
