@@ -1733,6 +1733,78 @@
           "sourceSha256": "b925997ea4e784668dd3df343b26604e0425901a398d2c825acd4991a6a87414"
         }
       ]
+    },
+    {
+      "id": "aisle-layout",
+      "family": "aisle-layout",
+      "file": "aisle-layout.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "e03-jifang-lengre",
+          "sourceSha256": "4d225ad084d4c26c36dfd4983c5e019d3d8617b1f2a2e59e8e1712fac2fe22bd"
+        }
+      ]
+    },
+    {
+      "id": "http-status",
+      "family": "http-status",
+      "file": "http-status.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "e09-http-zhuangtaima",
+          "sourceSha256": "40a90b601d587648d18ad06a8b04136fabb68b6a37aa8977373a49cf1bc455de"
+        }
+      ]
+    },
+    {
+      "id": "rl-trajectory",
+      "family": "rl-trajectory",
+      "file": "rl-trajectory.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "s08-qianghua-xuexi",
+          "sourceSha256": "5b477c28e75f01859992d704fb3e5ea854c08ed04dc6b0c482e9949e9a69f9e7"
+        }
+      ]
+    },
+    {
+      "id": "earth-coupling",
+      "family": "earth-coupling",
+      "file": "earth-coupling.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "167-earth-system-coupling",
+          "sourceSha256": "55382e51dc17b78a0db6505e895e916ea4c916614588eb5d738b5e853df79033"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-ring-poster",
+      "family": "synthetic-ring-poster",
+      "file": "synthetic-ring-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p06-heidong-yingzi",
+          "sourceSha256": "c89fe02b47c2547539a593c8c36f14abe55537a55abea9c54c76f4941ca4f34d"
+        }
+      ]
+    },
+    {
+      "id": "silent-cinema-poster",
+      "family": "silent-cinema-poster",
+      "file": "silent-cinema-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p07-mopian-zhiye",
+          "sourceSha256": "6a0e963b637e41ed0d16eb81d6efe491000592fadc6ab9f8f9087cc4caa44b21"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2139,6 +2211,27 @@
       "ids": [
         "river-run-poster",
         "lunar-night-poster"
+      ]
+    },
+    {
+      "reference": "references/musecore-aisles-http.md",
+      "ids": [
+        "aisle-layout",
+        "http-status"
+      ]
+    },
+    {
+      "reference": "references/musecore-learning-earth.md",
+      "ids": [
+        "rl-trajectory",
+        "earth-coupling"
+      ]
+    },
+    {
+      "reference": "references/musecore-shadow-cinema.md",
+      "ids": [
+        "synthetic-ring-poster",
+        "silent-cinema-poster"
       ]
     }
   ]

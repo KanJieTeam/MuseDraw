@@ -1,0 +1,17 @@
+{
+  "family":"silent-cinema-poster",
+  "title":"默片之夜",
+  "stageCue":"（钢琴，现场演奏。）",
+  "venue":"光影艺术影院（示例）",
+  "address":"地址示例：银幕路 8 号",
+  "performer":"现场钢琴示例：陈默",
+  "admission":"票价示例：全票 40 元，学生 25 元",
+  "sessions":[
+    {"id":"caligari","date":"2026-12-01","start":"19:30","durationMinutes":80,"filmTitle":"卡里加利博士的小屋","year":1920},
+    {"id":"nosferatu","date":"2026-12-02","start":"19:30","durationMinutes":95,"filmTitle":"诺斯费拉图","year":1922},
+    {"id":"gold-rush","date":"2026-12-03","start":"19:30","durationMinutes":90,"filmTitle":"淘金记","year":1925},
+    {"id":"general","date":"2026-12-04","start":"19:30","durationMinutes":80,"filmTitle":"将军号","year":1926},
+    {"id":"metropolis","date":"2026-12-05","start":"19:30","durationMinutes":150,"filmTitle":"大都会","year":1927}
+  ],
+  "note":"活动信息为示例；时长由排片输入，不代表特定修复版片长。"
+}

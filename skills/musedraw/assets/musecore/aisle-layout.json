@@ -1,0 +1,183 @@
+{
+  "family": "aisle-layout",
+  "title": "机房冷热通道布局",
+  "subtitle": "平面与同一对象剖面：机柜正面相对形成冷通道，背面相对形成热通道",
+  "rackAirflow": "front-to-back",
+  "rows": [
+    {
+      "id": "row1",
+      "label": "第 1 排",
+      "front": "down",
+      "racks": [
+        {
+          "id": "A01",
+          "label": "A01"
+        },
+        {
+          "id": "A02",
+          "label": "A02"
+        },
+        {
+          "id": "A03",
+          "label": "A03"
+        },
+        {
+          "id": "A04",
+          "label": "A04"
+        },
+        {
+          "id": "A05",
+          "label": "A05"
+        },
+        {
+          "id": "A06",
+          "label": "A06"
+        },
+        {
+          "id": "A07",
+          "label": "A07"
+        },
+        {
+          "id": "A08",
+          "label": "A08"
+        },
+        {
+          "id": "A09",
+          "label": "A09"
+        },
+        {
+          "id": "A10",
+          "label": "A10"
+        }
+      ]
+    },
+    {
+      "id": "row2",
+      "label": "第 2 排",
+      "front": "up",
+      "racks": [
+        {
+          "id": "B01",
+          "label": "B01"
+        },
+        {
+          "id": "B02",
+          "label": "B02"
+        },
+        {
+          "id": "B03",
+          "label": "B03"
+        },
+        {
+          "id": "B04",
+          "label": "B04"
+        },
+        {
+          "id": "B05",
+          "label": "B05"
+        },
+        {
+          "id": "B06",
+          "label": "B06"
+        },
+        {
+          "id": "B07",
+          "label": "B07"
+        },
+        {
+          "id": "B08",
+          "label": "B08"
+        },
+        {
+          "id": "B09",
+          "label": "B09"
+        },
+        {
+          "id": "B10",
+          "label": "B10"
+        }
+      ]
+    },
+    {
+      "id": "row3",
+      "label": "第 3 排",
+      "front": "down",
+      "racks": [
+        {
+          "id": "C01",
+          "label": "C01"
+        },
+        {
+          "id": "C02",
+          "label": "C02"
+        },
+        {
+          "id": "C03",
+          "label": "C03"
+        },
+        {
+          "id": "C04",
+          "label": "C04"
+        },
+        {
+          "id": "C05",
+          "label": "C05"
+        },
+        {
+          "id": "C06",
+          "label": "C06"
+        },
+        {
+          "id": "C07",
+          "label": "C07"
+        },
+        {
+          "id": "C08",
+          "label": "C08"
+        },
+        {
+          "id": "C09",
+          "label": "C09"
+        },
+        {
+          "id": "C10",
+          "label": "C10"
+        }
+      ]
+    }
+  ],
+  "aisles": [
+    {
+      "id": "cold1",
+      "label": "开孔地板区域",
+      "supply": "floor",
+      "return": "none",
+      "containment": "none"
+    },
+    {
+      "id": "hot1",
+      "label": "顶部封闭区域",
+      "supply": "none",
+      "return": "ceiling",
+      "containment": "roof"
+    }
+  ],
+  "focus": {
+    "aisle": "cold1",
+    "slot": 4
+  },
+  "units": [
+    {
+      "id": "ac-left",
+      "label": "左侧空调",
+      "side": "left"
+    },
+    {
+      "id": "ac-right",
+      "label": "右侧空调",
+      "side": "right"
+    }
+  ],
+  "sectionNote": "正面进风，背面排风；本剖面外侧回风路径未登记。",
+  "note": "运维培训示意；每个机柜符号对应一个给定对象，箭头不表示实测风量。"
+}

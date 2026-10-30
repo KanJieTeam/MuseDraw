@@ -1,0 +1,10 @@
+{
+  "family":"synthetic-ring-poster",
+  "title":"看见黑洞的影子",
+  "subtitle":"事件视界望远镜如何把整个地球变成一台望远镜",
+  "figureLabel":"合成亮环 · 参数示例，非观测图",
+  "dataStatus":"synthetic-analytic-ring",
+  "ring":{"diameterMicroarcsec":42,"sigmaMicroarcsec":2.2,"fieldMicroarcsec":70,"asymmetry":0.55,"brightAngleDegrees":110,"scaleBarMicroarcsec":20,"radialBands":28,"angularSectors":96},
+  "event":{"speaker":"主讲示例：林知远 · 天文系教授","date":"2026-11-20","start":"19:00","venue":"地点示例：理科楼 101 报告厅","admission":"入场示例：免费，无需预约","series":"天文系公众讲座 · 第 7 讲（活动示例）"},
+  "note":"亮环由给定解析强度计算，不是实测重建；角尺度来自参数。"
+}

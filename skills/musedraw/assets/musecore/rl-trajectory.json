@@ -1,0 +1,319 @@
+{
+  "family": "rl-trajectory",
+  "title": "强化学习 · 智能体与环境",
+  "subtitle": "循环对应一条给定动作记录；空间图显示同一组状态与走法。",
+  "view": "overview",
+  "evidenceKind": "illustrative",
+  "agent": "智能体",
+  "environment": "示例迷宫环境",
+  "rewardUnit": "奖励单位",
+  "gamma": 0.9,
+  "grid": {
+    "rows": 5,
+    "columns": 5,
+    "cells": [
+      {
+        "id": "s00",
+        "label": "(0,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 4.6
+      },
+      {
+        "id": "s01",
+        "label": "(0,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 6.2
+      },
+      {
+        "id": "s02",
+        "label": "(0,2)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 8
+      },
+      {
+        "id": "s03",
+        "label": "(0,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 10
+      },
+      {
+        "id": "s04",
+        "label": "终点",
+        "blocked": false,
+        "terminal": true,
+        "marker": "goal",
+        "entryReward": 10,
+        "stateValue": null
+      },
+      {
+        "id": "s10",
+        "label": "(1,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 3.1
+      },
+      {
+        "id": "s11",
+        "label": "(1,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 4.6
+      },
+      {
+        "id": "s12",
+        "label": "墙",
+        "blocked": true,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": null,
+        "stateValue": null
+      },
+      {
+        "id": "s13",
+        "label": "陷阱",
+        "blocked": false,
+        "terminal": true,
+        "marker": "trap",
+        "entryReward": -10,
+        "stateValue": null
+      },
+      {
+        "id": "s14",
+        "label": "(1,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 10
+      },
+      {
+        "id": "s20",
+        "label": "(2,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 1.8
+      },
+      {
+        "id": "s21",
+        "label": "(2,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 3.1
+      },
+      {
+        "id": "s22",
+        "label": "墙",
+        "blocked": true,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": null,
+        "stateValue": null
+      },
+      {
+        "id": "s23",
+        "label": "(2,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 6.2
+      },
+      {
+        "id": "s24",
+        "label": "(2,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 8
+      },
+      {
+        "id": "s30",
+        "label": "(3,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 0.6
+      },
+      {
+        "id": "s31",
+        "label": "陷阱",
+        "blocked": false,
+        "terminal": true,
+        "marker": "trap",
+        "entryReward": -10,
+        "stateValue": null
+      },
+      {
+        "id": "s32",
+        "label": "(3,2)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 3.1
+      },
+      {
+        "id": "s33",
+        "label": "(3,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 4.6
+      },
+      {
+        "id": "s34",
+        "label": "(3,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 6.2
+      },
+      {
+        "id": "s40",
+        "label": "起点",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": -0.4
+      },
+      {
+        "id": "s41",
+        "label": "(4,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 0.6
+      },
+      {
+        "id": "s42",
+        "label": "(4,2)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 1.8
+      },
+      {
+        "id": "s43",
+        "label": "(4,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 3.1
+      },
+      {
+        "id": "s44",
+        "label": "(4,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": 4.6
+      }
+    ]
+  },
+  "initial": "s40",
+  "steps": [
+    {
+      "id": "step1",
+      "state": "s40",
+      "action": "north",
+      "reward": -1,
+      "nextState": "s30",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step2",
+      "state": "s30",
+      "action": "north",
+      "reward": -1,
+      "nextState": "s20",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step3",
+      "state": "s20",
+      "action": "north",
+      "reward": -1,
+      "nextState": "s10",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step4",
+      "state": "s10",
+      "action": "north",
+      "reward": -1,
+      "nextState": "s00",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step5",
+      "state": "s00",
+      "action": "east",
+      "reward": -1,
+      "nextState": "s01",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step6",
+      "state": "s01",
+      "action": "east",
+      "reward": -1,
+      "nextState": "s02",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step7",
+      "state": "s02",
+      "action": "east",
+      "reward": -1,
+      "nextState": "s03",
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "id": "step8",
+      "state": "s03",
+      "action": "east",
+      "reward": 10,
+      "nextState": "s04",
+      "terminated": true,
+      "truncated": false
+    }
+  ],
+  "focusStep": "step8",
+  "note": "显式示例轨迹；路径与 V 值均来自输入，不表示本图完成训练或找到最优策略。"
+}

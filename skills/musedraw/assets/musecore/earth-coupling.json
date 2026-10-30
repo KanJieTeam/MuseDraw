@@ -1,0 +1,273 @@
+{
+  "family": "earth-coupling",
+  "title": "地球系统模式的耦合结构",
+  "subtitle": "分量、接口与步进计划 · 示例配置，未执行真实模式或守恒验证",
+  "evidenceKind": "illustrative-configuration",
+  "windowMinutes": 360,
+  "referenceMinutes": 1440,
+  "components": [
+    {
+      "id": "atm",
+      "label": "大气模式",
+      "grid": "约100 km网格，32层（声明）",
+      "stepMinutes": 30,
+      "position": "north",
+      "kind": "model"
+    },
+    {
+      "id": "land",
+      "label": "陆面模式",
+      "grid": "与大气同网格（声明）",
+      "stepMinutes": 30,
+      "position": "west",
+      "kind": "model"
+    },
+    {
+      "id": "ice",
+      "label": "海冰模式",
+      "grid": "与海洋同网格（声明）",
+      "stepMinutes": 60,
+      "position": "east",
+      "kind": "model"
+    },
+    {
+      "id": "ocean",
+      "label": "海洋模式",
+      "grid": "约1°网格，60层（声明）",
+      "stepMinutes": 60,
+      "position": "south",
+      "kind": "model"
+    },
+    {
+      "id": "river",
+      "label": "河流汇流模块",
+      "grid": "输入陆面径流，向耦合器传递入海径流",
+      "stepMinutes": null,
+      "position": "southwest",
+      "kind": "module"
+    }
+  ],
+  "coupler": {
+    "id": "hub",
+    "label": "耦合器",
+    "tasks": [
+      "网格间守恒重映射",
+      "界面通量计算",
+      "时间平均与累积",
+      "全局守恒检查"
+    ]
+  },
+  "exchanges": [
+    {
+      "id": "atm-send",
+      "from": "atm",
+      "to": "hub",
+      "quantities": [
+        {
+          "label": "降水",
+          "unit": "kg m⁻² s⁻¹"
+        },
+        {
+          "label": "近地面风",
+          "unit": "m s⁻¹"
+        },
+        {
+          "label": "下行短波/长波辐射",
+          "unit": "W m⁻²"
+        },
+        {
+          "label": "近地面气温",
+          "unit": "K"
+        },
+        {
+          "label": "比湿",
+          "unit": "kg kg⁻¹"
+        }
+      ]
+    },
+    {
+      "id": "atm-receive",
+      "from": "hub",
+      "to": "atm",
+      "quantities": [
+        {
+          "label": "地表温度",
+          "unit": "K"
+        },
+        {
+          "label": "反照率",
+          "unit": "1"
+        },
+        {
+          "label": "感热/潜热通量",
+          "unit": "W m⁻²"
+        },
+        {
+          "label": "动量通量",
+          "unit": "Pa"
+        },
+        {
+          "label": "上行长波辐射",
+          "unit": "W m⁻²"
+        }
+      ]
+    },
+    {
+      "id": "land-send",
+      "from": "land",
+      "to": "hub",
+      "quantities": [
+        {
+          "label": "地表温度",
+          "unit": "K"
+        },
+        {
+          "label": "反照率",
+          "unit": "1"
+        },
+        {
+          "label": "界面通量",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "id": "land-receive",
+      "from": "hub",
+      "to": "land",
+      "quantities": [
+        {
+          "label": "降水",
+          "unit": "kg m⁻² s⁻¹"
+        },
+        {
+          "label": "辐射",
+          "unit": "W m⁻²"
+        },
+        {
+          "label": "近地面状态",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "id": "ice-send",
+      "from": "ice",
+      "to": "hub",
+      "quantities": [
+        {
+          "label": "冰覆盖率",
+          "unit": "1"
+        },
+        {
+          "label": "冰面温度",
+          "unit": "K"
+        }
+      ]
+    },
+    {
+      "id": "ice-receive",
+      "from": "hub",
+      "to": "ice",
+      "quantities": [
+        {
+          "label": "热通量",
+          "unit": "W m⁻²"
+        },
+        {
+          "label": "风应力",
+          "unit": "Pa"
+        },
+        {
+          "label": "淡水通量",
+          "unit": "kg m⁻² s⁻¹"
+        }
+      ]
+    },
+    {
+      "id": "ocean-send",
+      "from": "ocean",
+      "to": "hub",
+      "quantities": [
+        {
+          "label": "海表温度",
+          "unit": "K"
+        },
+        {
+          "label": "表层洋流",
+          "unit": "m s⁻¹"
+        }
+      ]
+    },
+    {
+      "id": "ocean-receive",
+      "from": "hub",
+      "to": "ocean",
+      "quantities": [
+        {
+          "label": "风应力",
+          "unit": "Pa"
+        },
+        {
+          "label": "热通量",
+          "unit": "W m⁻²"
+        },
+        {
+          "label": "淡水通量（含径流）",
+          "unit": "kg m⁻² s⁻¹"
+        }
+      ]
+    },
+    {
+      "id": "land-river",
+      "from": "land",
+      "to": "river",
+      "quantities": [
+        {
+          "label": "径流",
+          "unit": "kg s⁻¹"
+        }
+      ]
+    },
+    {
+      "id": "river-hub",
+      "from": "river",
+      "to": "hub",
+      "quantities": [
+        {
+          "label": "入海径流",
+          "unit": "kg s⁻¹"
+        }
+      ]
+    }
+  ],
+  "cadences": [
+    {
+      "id": "fast",
+      "label": "快速交换",
+      "intervalMinutes": 30,
+      "includeInitial": true,
+      "exchanges": [
+        "atm-send",
+        "atm-receive",
+        "land-send",
+        "land-receive",
+        "ice-send",
+        "ice-receive",
+        "land-river"
+      ]
+    },
+    {
+      "id": "slow",
+      "label": "海洋交换",
+      "intervalMinutes": 180,
+      "includeInitial": true,
+      "exchanges": [
+        "ocean-send",
+        "ocean-receive",
+        "river-hub"
+      ]
+    }
+  ],
+  "note": "交换变量与单位为本例声明；箭头只表示接口方向，方格表示给定时间步。"
+}
