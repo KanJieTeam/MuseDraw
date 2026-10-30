@@ -27,6 +27,14 @@ test('actual browser: changed participants, long labels, removed branch and cros
   const stacked=clone(long);stacked.panels.push({...clone(long.panels[0]),id:'second'});
   const results=[];for(const input of [seed,simple(),long,removed,stacked]){const r=await page.evaluate(b=>window.drawSequence(b),input);assert.deepEqual(r.findings,[]);assert.equal(r.geometry.messageCount,messageSequenceModel(input).messageCount);for(const panel of r.geometry.panels)for(const m of panel.messages){assert.equal(m.points[0][0],panel.participants[m.fromIndex].globalX);assert.equal(m.points[1][0],panel.participants[m.toIndex].globalX);assert.equal(m.points[0][1],m.points[1][1]);assert.ok(m.statePlan.top>m.arrowY)}results.push(r.geometry)}
   assert.ok(results[2].height>results[1].height);assert.equal(results[3].panels[0].participants.length,2);assert.equal(results[4].arrangement,'stacked');assert.ok(results[4].panels[1].y>results[4].panels[0].y+results[4].panels[0].height);
+  // Exercise the allocation/drawing contract even on a machine with shorter
+  // font boxes. Linux's CJK serif fallback exposed fixed 38px line spacing.
+  const tall=await page.evaluate(input=>{
+   const original=CanvasRenderingContext2D.prototype.measureText;
+   CanvasRenderingContext2D.prototype.measureText=function(text){const metrics=original.call(this,text);return new Proxy(metrics,{get(target,key){if(key==='fontBoundingBoxAscent')return Reflect.get(target,key,target)+40;return Reflect.get(target,key,target)}})};
+   try{return window.drawSequence(input)}finally{CanvasRenderingContext2D.prototype.measureText=original}
+  },simple());
+  assert.deepEqual(tall.findings,[]);assert(tall.geometry.typeSteps.message>=results[1].typeSteps.message+20);assert(tall.geometry.height>results[1].height);
   const tooManyLines=clone(long);tooManyLines.panels[0].messages=[{id:'overBudget',from:'a',to:'b',label:'长'.repeat(120)}];await assert.rejects(page.evaluate(b=>window.drawSequence(b),tooManyLines),/exceeds 8 lines/);
   await page.evaluate(b=>window.drawSequence(b),simple());const backing=await page.locator('[data-role="label-backing"]').count();assert.ok(backing>0);
   await page.evaluate(()=>{const svg=document.querySelector('svg');for(const r of svg.querySelectorAll('[data-role="label-backing"]'))r.remove();window.withoutMasks=MuseCore.audit(svg)});assert.ok((await page.evaluate(()=>window.withoutMasks.findings)).some(f=>f.type==='line-through-text'));
