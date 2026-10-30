@@ -1,0 +1,9 @@
+{
+ "family":"two-quantities",
+ "title":"两种箱子，各有多少箱？",
+ "subtitle":"虚构教学数据 · 每箱装量不同，已知总箱数和总件数。",
+ "types":[{"id":"small","label":"小箱","coefficient":3},{"id":"large","label":"大箱","coefficient":7}],
+ "totalObjects":12,"totalQuantity":52,
+ "objectUnit":"箱","quantityUnit":"件","discrete":true,
+ "note":"每个外框代表一箱，每个小点代表一件；白点是按小箱装量计算的基准，黄点是大箱增加的装量。"
+}

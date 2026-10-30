@@ -1,0 +1,9 @@
+{
+  "family":"benefit-wallet","title":"弹性福利积分，确认与计划各去了哪里？",
+  "subtitle":"虚构个人教学清单 · 单价、份数和状态均为显式输入",
+  "unit":"points","budget":2000,
+  "categories":[{"id":"health","label":"健康"},{"id":"family","label":"家庭"},{"id":"learning","label":"学习"},{"id":"life","label":"生活"}],
+  "options":[{"id":"fitness","label":"健身服务","category":"health","unit":"points","unitPrice":300},{"id":"exam","label":"家庭体检升级","category":"family","unit":"points","unitPrice":450},{"id":"course","label":"专业课程","category":"learning","unit":"points","unitPrice":500},{"id":"books","label":"图书选购","category":"learning","unit":"points","unitPrice":120},{"id":"transit","label":"交通服务","category":"life","unit":"points","unitPrice":80}],
+  "selections":[{"id":"s1","option":"fitness","quantity":2,"status":"confirmed"},{"id":"s2","option":"exam","quantity":1,"status":"planned"},{"id":"s3","option":"course","quantity":1,"status":"confirmed"},{"id":"s4","option":"books","quantity":2,"status":"planned"},{"id":"s5","option":"transit","quantity":1,"status":"confirmed"}],
+  "note":"仅核对积分账本与状态，不推断税务、福利资格、供应商合规或积分兑换货币价值。未选项目不产生支出。"
+}

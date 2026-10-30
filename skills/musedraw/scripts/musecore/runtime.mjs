@@ -38,6 +38,12 @@ import {orbitFamilies} from './orbit-figures.mjs';
 import {phaseFamilies} from './phase-figures.mjs';
 import {categoryFamilies} from './category-figures.mjs';
 import {sampleFamilies} from './sample-figures.mjs';
+import {priorityFamilies} from './priority-figures.mjs';
+import {benefitFamilies} from './benefit-figures.mjs';
+import {circuitFamilies} from './circuit-figures.mjs';
+import {forceFamilies} from './force-figures.mjs';
+import {equationFamilies} from './equation-figures.mjs';
+import {quantityFamilies} from './quantity-figures.mjs';
 export const MuseCore=(()=>{
  const need=(yes,msg)=>{if(!yes)throw Error(msg)};
  const list=(x,min,max,p)=>need(Array.isArray(x)&&x.length>=min&&x.length<=max,`${p}: requires ${min}–${max} items`);
@@ -149,7 +155,7 @@ export const MuseCore=(()=>{
    return finish(f,{family:'schedule',width:720,height:bottom+12,taskWidth:taskW,slotWidth:cw,rowHeights:rowH,bars});
  }
  const helpers={need,list,fields,str,unique,width,wrap,track,finish,labelBox};
- const families={lanes,schedule,...reportFamilies(helpers),...visualFamilies(helpers),...dataVisualFamilies(helpers),...spatialFamilies(helpers),...comparisonFamilies(helpers),...distributionFamilies(helpers),...amountFlowFamilies(helpers),...workflowStructureFamilies(helpers),...officeTimeFamilies(helpers),...collaborationFamilies(helpers),...formulaFamilies(helpers),...stateFamilies(helpers),...deploymentFamilies(helpers),...chalkFamilies(helpers),...blueprintFigureFamilies(helpers),...solidFamilies(helpers),...magnitudeFamilies(helpers),...officeCostFamilies(helpers),...officeObjectiveFamilies(helpers),...officeAuditFamilies(helpers),...reliabilityFamilies(helpers),...requestFamilies(helpers),...hashFamilies(helpers),...mathShapeFamilies(helpers),...binaryFamilies(helpers),...probabilityFamilies(helpers),...architectureFamilies(helpers),...messageSequenceFamilies(helpers),...responsibilityFamilies(helpers),...backupFamilies(helpers),...historyFamilies(helpers),...loopFamilies(helpers),...workforceFamilies(helpers),...leaveFamilies(helpers),...orbitFamilies(helpers),...phaseFamilies(helpers),...categoryFamilies(helpers),...sampleFamilies(helpers)};
+ const families={lanes,schedule,...reportFamilies(helpers),...visualFamilies(helpers),...dataVisualFamilies(helpers),...spatialFamilies(helpers),...comparisonFamilies(helpers),...distributionFamilies(helpers),...amountFlowFamilies(helpers),...workflowStructureFamilies(helpers),...officeTimeFamilies(helpers),...collaborationFamilies(helpers),...formulaFamilies(helpers),...stateFamilies(helpers),...deploymentFamilies(helpers),...chalkFamilies(helpers),...blueprintFigureFamilies(helpers),...solidFamilies(helpers),...magnitudeFamilies(helpers),...officeCostFamilies(helpers),...officeObjectiveFamilies(helpers),...officeAuditFamilies(helpers),...reliabilityFamilies(helpers),...requestFamilies(helpers),...hashFamilies(helpers),...mathShapeFamilies(helpers),...binaryFamilies(helpers),...probabilityFamilies(helpers),...architectureFamilies(helpers),...messageSequenceFamilies(helpers),...responsibilityFamilies(helpers),...backupFamilies(helpers),...historyFamilies(helpers),...loopFamilies(helpers),...workforceFamilies(helpers),...leaveFamilies(helpers),...orbitFamilies(helpers),...phaseFamilies(helpers),...categoryFamilies(helpers),...sampleFamilies(helpers),...priorityFamilies(helpers),...benefitFamilies(helpers),...circuitFamilies(helpers),...forceFamilies(helpers),...equationFamilies(helpers),...quantityFamilies(helpers)};
  function report(b){
    fields(b,['family','title','columns','sections'],'report');str(b.title,'report.title');list(b.sections,2,6,'sections');unique(b.sections,'sections');
    const columns=b.columns??1;need([1,2].includes(columns),'report.columns must be 1 or 2');

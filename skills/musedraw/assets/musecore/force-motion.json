@@ -1,0 +1,14 @@
+{
+ "family":"force-motion",
+ "title":"合力改变加速度",
+ "subtitle":"牛顿第二定律 · 同样的水平外力作用在不同质量的物体上",
+ "units":"SI",
+ "dimension":"horizontal-1d",
+ "verticalBalance":true,
+ "cases":[
+  {"id":"light","label":"较小质量","massKg":1,"forces":[{"id":"pull","label":"给定拉力","newtons":10},{"id":"drag","label":"给定阻力","newtons":-2}],"detail":"水平合力由全部给定力相加"},
+  {"id":"middle","label":"参考质量","massKg":2,"forces":[{"id":"pull","label":"给定拉力","newtons":10},{"id":"drag","label":"给定阻力","newtons":-2}],"detail":"保持同样的水平外力"},
+  {"id":"heavy","label":"较大质量","massKg":4,"forces":[{"id":"pull","label":"给定拉力","newtons":10},{"id":"drag","label":"给定阻力","newtons":-2}],"detail":"质量增加，加速度减小"}
+ ],
+ "note":"仅分析水平方向，已明确给定竖直力平衡；向右为正。所有力箭头共用一个 N 比例尺，加速度另用 m/s² 比例尺。图中没有推断物体的速度或位移。"
+}

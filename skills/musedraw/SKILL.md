@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.16
+  instructions-version: musecore-2026-10-31.17
 ---
 
 # MuseDraw
@@ -100,6 +100,9 @@ family's encodings, coordinated geometry and placement.
 | Declared workload, fixed-offset shift coverage and monthly leave use | [Workdays and capacity](references/musecore-workdays.md) |
 | Equal-time ideal orbits and geometrically consistent lunar illumination | [Sky geometry](references/musecore-sky-geometry.md) |
 | Categorical series, observed samples, means and explicit thresholds | [Small-sample evidence](references/musecore-small-samples.md) |
+| Ideal fixed-resistance circuits and complete given horizontal forces | [Circuits and force](references/musecore-circuit-force.md) |
+| Structured affine equations and two discrete object quantities | [Exact teaching algebra](references/musecore-algebra.md) |
+| Declared service-priority policies and integer benefit-point allocations | [Office decisions](references/musecore-office-decisions.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

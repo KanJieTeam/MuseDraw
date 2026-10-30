@@ -1,0 +1,11 @@
+{
+  "family":"service-priority","title":"这张工单，按哪条政策处理？",
+  "subtitle":"虚构团队政策示例 · 影响与紧急程度均来自明确输入",
+  "policyName":"内部服务台 · 教学政策 A",
+  "impacts":[{"id":"large","label":"跨部门影响"},{"id":"medium","label":"单一团队影响"},{"id":"small","label":"单人或单设备影响"}],
+  "urgencies":[{"id":"high","label":"立即影响当前工作"},{"id":"medium","label":"短期内需要处理"},{"id":"low","label":"可安排处理窗口"}],
+  "priorities":[{"id":"p1","label":"P1","action":"通知当前值班负责人，优先评估影响与处置。"},{"id":"p2","label":"P2","action":"进入加急处理队列。"},{"id":"p3","label":"P3","action":"按团队约定安排处理。"},{"id":"p4","label":"P4","action":"在常规计划中排期。"}],
+  "matrix":[["p1","p2","p3"],["p2","p3","p4"],["p3","p4","p4"]],
+  "tickets":[{"id":"T-01","title":"邮件服务连接异常","impact":"large","urgency":"high"},{"id":"T-02","title":"报表导出功能不可用","impact":"medium","urgency":"medium"},{"id":"T-03","title":"申请安装设计软件","impact":"small","urgency":"low"},{"id":"T-04","title":"共享打印设备故障","impact":"medium","urgency":"high"}],
+  "note":"所有分类与处理文案均为输入政策；不是通用 ITIL 优先级标准。程序不从标题猜测影响、紧急程度或恢复承诺。"
+}

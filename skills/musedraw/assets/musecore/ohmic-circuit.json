@@ -1,0 +1,11 @@
+{
+ "family":"ohmic-circuit",
+ "title":"固定电阻的电流—电压关系",
+ "subtitle":"理想模型预测 · 同一组电压下比较两个定值电阻",
+ "model":"ideal-ohmic",
+ "units":"SI",
+ "voltagesV":[0,0.5,1,1.5,2,2.5,3],
+ "series":[{"id":"r5","label":"定值电阻一","resistanceOhm":5},{"id":"r10","label":"定值电阻二","resistanceOhm":10}],
+ "selected":{"seriesId":"r5","voltageIndex":6},
+ "note":"图中数值全部由 I = U/R 计算，不是测量数据。每次电路只接入一个给定定值电阻；电流表理想串联、电压表理想并联，忽略理想电表对电路的影响与温度效应。"
+}

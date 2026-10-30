@@ -825,6 +825,78 @@
           "sourceSha256": "a1ec01e3bc8221c75b32808a99a98fea30ffeab587739ebd924ebbeb9e8cd72b"
         }
       ]
+    },
+    {
+      "id": "ohmic-circuit",
+      "family": "ohmic-circuit",
+      "file": "ohmic-circuit.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "144-ohms-law",
+          "sourceSha256": "6eca1e2d229cfb0f8de9989ec15f826925b1ae0d36efff3404e892e077861150"
+        }
+      ]
+    },
+    {
+      "id": "force-motion",
+      "family": "force-motion",
+      "file": "force-motion.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "158-newtons-second-law",
+          "sourceSha256": "b6334e9d29962d00f8658fb173fc1015d0f020fd5ba394b2ee7117fd2eb10f8a"
+        }
+      ]
+    },
+    {
+      "id": "equation-balance",
+      "family": "equation-balance",
+      "file": "equation-balance.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "t03-yiyuan-yici",
+          "sourceSha256": "e21943bdc4e617fb837b49c504a793a9e5093dfa23ba9a5118890daf786ae8e0"
+        }
+      ]
+    },
+    {
+      "id": "two-quantities",
+      "family": "two-quantities",
+      "file": "two-quantities.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "121-chicken-rabbit",
+          "sourceSha256": "f7074dec80822738b4106cdee008b78f259a3b2d29f73546fb3e37222e7538df"
+        }
+      ]
+    },
+    {
+      "id": "service-priority",
+      "family": "service-priority",
+      "file": "service-priority.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "o02-gongdan-youxianji",
+          "sourceSha256": "24a395bebe98f64f6f32669498fc02df2f82d24366f2f614eb0bb700266c5fa6"
+        }
+      ]
+    },
+    {
+      "id": "benefit-wallet",
+      "family": "benefit-wallet",
+      "file": "benefit-wallet.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "196-flexible-benefits",
+          "sourceSha256": "253f741f6aa03e23db3c3383bb130f4f0da04a3a0372c1fcdc06e26ae9220c76"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -974,6 +1046,27 @@
       "ids": [
         "categorical-bars",
         "sample-summary"
+      ]
+    },
+    {
+      "reference": "references/musecore-circuit-force.md",
+      "ids": [
+        "ohmic-circuit",
+        "force-motion"
+      ]
+    },
+    {
+      "reference": "references/musecore-algebra.md",
+      "ids": [
+        "equation-balance",
+        "two-quantities"
+      ]
+    },
+    {
+      "reference": "references/musecore-office-decisions.md",
+      "ids": [
+        "service-priority",
+        "benefit-wallet"
       ]
     }
   ]
