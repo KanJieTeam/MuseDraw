@@ -1445,6 +1445,78 @@
           "sourceSha256": "4dc06d5fa09fd07545005532c751f0ae4b3fc107b53ec93c475f8fb0dd2cbf85"
         }
       ]
+    },
+    {
+      "id": "typed-system",
+      "family": "typed-system",
+      "file": "typed-system.json",
+      "contentStatus": "bounded development example; supplied or explicitly illustrative content, not a validated real-world outcome",
+      "sourceCases": [
+        {
+          "id": "191-expense-system-c4",
+          "sourceSha256": "0ec55976b980b653a21227dd0c523f01836118d6d9afdff5f000bee924c6640a"
+        }
+      ]
+    },
+    {
+      "id": "typed-context",
+      "family": "typed-system",
+      "file": "typed-context.json",
+      "contentStatus": "bounded development example; supplied or explicitly illustrative content, not a validated real-world outcome",
+      "sourceCases": [
+        {
+          "id": "s01-linchuang-shujupingtai",
+          "sourceSha256": "3f331a69007554654e7e908f37424ca50d5c4ae6330b3ea611cd87bb112409f1"
+        }
+      ]
+    },
+    {
+      "id": "quadrat-density",
+      "family": "quadrat-density",
+      "file": "quadrat-density.json",
+      "contentStatus": "bounded development example; supplied or explicitly illustrative content, not a validated real-world outcome",
+      "sourceCases": [
+        {
+          "id": "s03-yangfangfa",
+          "sourceSha256": "5aa55c5ea160fb2a3de7d2132a6a7f1f043604b256a4d38c676850b705d962c7"
+        }
+      ]
+    },
+    {
+      "id": "gwas-overview",
+      "family": "gwas-overview",
+      "file": "gwas-overview.json",
+      "contentStatus": "bounded development example; supplied or explicitly illustrative content, not a validated real-world outcome",
+      "sourceCases": [
+        {
+          "id": "162-gwas-overview",
+          "sourceSha256": "6055f4efdd7fcbb046a87da7b56c12399dab4ebbd85d7271f355e2e3228f4aad"
+        }
+      ]
+    },
+    {
+      "id": "character-structure",
+      "family": "character-structure",
+      "file": "character-structure.json",
+      "contentStatus": "bounded development example; supplied or explicitly illustrative content, not a validated real-world outcome",
+      "sourceCases": [
+        {
+          "id": "137-character-structure",
+          "sourceSha256": "e18c55c7fe1de91ab23dec414e8fc142e937a04e8f47bf3fc0e5a3c2f12c8091"
+        }
+      ]
+    },
+    {
+      "id": "tense-timeline",
+      "family": "tense-timeline",
+      "file": "tense-timeline.json",
+      "contentStatus": "bounded development example; supplied or explicitly illustrative content, not a validated real-world outcome",
+      "sourceCases": [
+        {
+          "id": "159-english-tenses",
+          "sourceSha256": "bab35550c54fe31cde95eb5bbd5dc66eab21207f66aea8c97424fab74bae43bb"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1768,6 +1840,26 @@
       "ids": [
         "wind-tunnel",
         "light-sheet"
+      ]
+    },
+    {
+      "reference": "references/musecore-typed-systems.md",
+      "ids": [
+        "typed-system"
+      ]
+    },
+    {
+      "reference": "references/musecore-field-genomics.md",
+      "ids": [
+        "quadrat-density",
+        "gwas-overview"
+      ]
+    },
+    {
+      "reference": "references/musecore-language-structure.md",
+      "ids": [
+        "character-structure",
+        "tense-timeline"
       ]
     }
   ]

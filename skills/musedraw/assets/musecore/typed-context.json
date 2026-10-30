@@ -1,0 +1,115 @@
+{
+  "family": "typed-system",
+  "title": "多中心临床研究数据平台 · 系统上下文",
+  "subtitle": "示例架构 · 聚焦一个软件系统、三类使用者和四个外部系统；不展开内部容器",
+  "level": "context",
+  "scope": {
+    "id": "clinical",
+    "label": "临床研究数据平台",
+    "kind": "system",
+    "detail": "电子数据采集、质疑管理、稽查轨迹、数据锁定与导出（示例职责）"
+  },
+  "elements": [
+    {
+      "id": "nurse",
+      "label": "研究护士",
+      "kind": "person",
+      "detail": "在各中心录入病例报告表、回复数据质疑",
+      "parent": null
+    },
+    {
+      "id": "monitor",
+      "label": "监查员",
+      "kind": "person",
+      "detail": "远程核查源数据、发起数据质疑",
+      "parent": null
+    },
+    {
+      "id": "analyst",
+      "label": "统计师",
+      "kind": "person",
+      "detail": "接收锁定后的数据集并完成统计分析",
+      "parent": null
+    },
+    {
+      "id": "his",
+      "label": "医院信息系统",
+      "kind": "system",
+      "detail": "提供检验结果与既往病历",
+      "parent": null
+    },
+    {
+      "id": "random",
+      "label": "中央随机化系统",
+      "kind": "system",
+      "detail": "分配受试者编号与组别",
+      "parent": null
+    },
+    {
+      "id": "lab",
+      "label": "中心实验室系统",
+      "kind": "system",
+      "detail": "回传集中检测的化验结果",
+      "parent": null
+    },
+    {
+      "id": "pv",
+      "label": "药物警戒数据库",
+      "kind": "system",
+      "detail": "接收严重不良事件报告",
+      "parent": null
+    }
+  ],
+  "links": [
+    {
+      "id": "nurse-clinical",
+      "from": "nurse",
+      "to": "clinical",
+      "label": "录入病例报告表、回复质疑",
+      "technology": "HTTPS"
+    },
+    {
+      "id": "monitor-clinical",
+      "from": "monitor",
+      "to": "clinical",
+      "label": "核查数据、发起质疑",
+      "technology": "HTTPS"
+    },
+    {
+      "id": "clinical-analyst",
+      "from": "clinical",
+      "to": "analyst",
+      "label": "提供锁定后的数据集",
+      "technology": "SFTP"
+    },
+    {
+      "id": "his-clinical",
+      "from": "his",
+      "to": "clinical",
+      "label": "导入检验结果",
+      "technology": "HL7"
+    },
+    {
+      "id": "clinical-random",
+      "from": "clinical",
+      "to": "random",
+      "label": "获取随机号",
+      "technology": "API"
+    },
+    {
+      "id": "lab-clinical",
+      "from": "lab",
+      "to": "clinical",
+      "label": "回传化验结果",
+      "technology": "文件交换"
+    },
+    {
+      "id": "clinical-pv",
+      "from": "clinical",
+      "to": "pv",
+      "label": "上报严重不良事件",
+      "technology": "E2B"
+    }
+  ],
+  "note": "对接系统、职责和协议均为示例声明，不代表实际临床数据流、伦理批准、安全措施、标准符合性或研究结论。箭头表示给定关系方向，不推断其运行成功。"
+}

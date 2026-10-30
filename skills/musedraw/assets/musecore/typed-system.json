@@ -1,0 +1,334 @@
+{
+  "family": "typed-system",
+  "title": "差旅与费用报销系统 · 容器关系",
+  "subtitle": "示例架构 · 单一软件系统边界内的十个容器；所有箭头均来自声明关系",
+  "level": "container",
+  "scope": {
+    "id": "expense",
+    "label": "费用报销系统",
+    "kind": "system",
+    "detail": "本图打开此软件系统边界，展示应用与数据存储的职责和通信。"
+  },
+  "bands": [
+    {
+      "id": "front",
+      "label": "用户入口与通知"
+    },
+    {
+      "id": "service",
+      "label": "业务服务"
+    },
+    {
+      "id": "capability",
+      "label": "能力与事件"
+    },
+    {
+      "id": "storage",
+      "label": "数据存储"
+    }
+  ],
+  "elements": [
+    {
+      "id": "employee",
+      "label": "员工",
+      "kind": "person",
+      "detail": "提交报销",
+      "parent": null
+    },
+    {
+      "id": "approver",
+      "label": "审批人",
+      "kind": "person",
+      "detail": "审批单据",
+      "parent": null
+    },
+    {
+      "id": "finance",
+      "label": "财务人员",
+      "kind": "person",
+      "detail": "复核与付款",
+      "parent": null
+    },
+    {
+      "id": "app",
+      "label": "移动端 App",
+      "kind": "container",
+      "detail": "拍照上传发票、填写报销单",
+      "parent": "expense",
+      "technology": "Flutter",
+      "containerType": "application",
+      "band": "front"
+    },
+    {
+      "id": "web",
+      "label": "Web 管理端",
+      "kind": "container",
+      "detail": "审批、财务复核、报表",
+      "parent": "expense",
+      "technology": "Vue",
+      "containerType": "application",
+      "band": "front"
+    },
+    {
+      "id": "notify",
+      "label": "即时通知服务",
+      "kind": "container",
+      "detail": "把待办推送到即时通讯",
+      "parent": "expense",
+      "technology": "Node.js",
+      "containerType": "application",
+      "band": "front"
+    },
+    {
+      "id": "backend",
+      "label": "业务后端",
+      "kind": "container",
+      "detail": "报销单、预算占用、对账",
+      "parent": "expense",
+      "technology": "Java / Spring Boot",
+      "containerType": "application",
+      "band": "service"
+    },
+    {
+      "id": "flow",
+      "label": "审批流引擎",
+      "kind": "container",
+      "detail": "按明确的金额和类型政策路由审批人",
+      "parent": "expense",
+      "technology": "Flowable",
+      "containerType": "application",
+      "band": "service"
+    },
+    {
+      "id": "ocr",
+      "label": "发票识别服务",
+      "kind": "container",
+      "detail": "OCR 识别发票要素",
+      "parent": "expense",
+      "technology": "Python",
+      "containerType": "application",
+      "band": "capability"
+    },
+    {
+      "id": "rules",
+      "label": "规则引擎",
+      "kind": "container",
+      "detail": "差旅标准、重复报销、预算校验",
+      "parent": "expense",
+      "technology": "Drools",
+      "containerType": "application",
+      "band": "capability"
+    },
+    {
+      "id": "queue",
+      "label": "消息队列",
+      "kind": "container",
+      "detail": "单据状态变更事件",
+      "parent": "expense",
+      "technology": "Kafka",
+      "containerType": "queue",
+      "band": "capability"
+    },
+    {
+      "id": "db",
+      "label": "业务数据库",
+      "kind": "container",
+      "detail": "报销单、审批记录、预算",
+      "parent": "expense",
+      "technology": "PostgreSQL",
+      "containerType": "data",
+      "band": "storage"
+    },
+    {
+      "id": "images",
+      "label": "影像存储",
+      "kind": "container",
+      "detail": "发票与附件原件",
+      "parent": "expense",
+      "technology": "对象存储",
+      "containerType": "data",
+      "band": "storage"
+    },
+    {
+      "id": "chat",
+      "label": "即时通讯平台",
+      "kind": "system",
+      "detail": "待办消息",
+      "parent": null
+    },
+    {
+      "id": "travel",
+      "label": "差旅预订平台",
+      "kind": "system",
+      "detail": "机票酒店订单",
+      "parent": null
+    },
+    {
+      "id": "invoice",
+      "label": "发票查验平台",
+      "kind": "system",
+      "detail": "示例对接的真伪查验",
+      "parent": null
+    },
+    {
+      "id": "erp",
+      "label": "ERP 系统",
+      "kind": "system",
+      "detail": "凭证与总账",
+      "parent": null
+    },
+    {
+      "id": "bank",
+      "label": "企业网银",
+      "kind": "system",
+      "detail": "批量付款",
+      "parent": null
+    }
+  ],
+  "links": [
+    {
+      "id": "employee-app",
+      "from": "employee",
+      "to": "app",
+      "label": "拍照上传",
+      "technology": null
+    },
+    {
+      "id": "approver-web",
+      "from": "approver",
+      "to": "web",
+      "label": "审批",
+      "technology": null
+    },
+    {
+      "id": "finance-web",
+      "from": "finance",
+      "to": "web",
+      "label": "复核、付款",
+      "technology": null
+    },
+    {
+      "id": "app-backend",
+      "from": "app",
+      "to": "backend",
+      "label": "提交报销数据",
+      "technology": "JSON / HTTPS"
+    },
+    {
+      "id": "web-backend",
+      "from": "web",
+      "to": "backend",
+      "label": "提交管理请求",
+      "technology": "JSON / HTTPS"
+    },
+    {
+      "id": "backend-flow",
+      "from": "backend",
+      "to": "flow",
+      "label": "发起审批",
+      "technology": null
+    },
+    {
+      "id": "backend-ocr",
+      "from": "backend",
+      "to": "ocr",
+      "label": "识别请求",
+      "technology": null
+    },
+    {
+      "id": "backend-rules",
+      "from": "backend",
+      "to": "rules",
+      "label": "校验",
+      "technology": null
+    },
+    {
+      "id": "flow-queue",
+      "from": "flow",
+      "to": "queue",
+      "label": "发布事件",
+      "technology": null
+    },
+    {
+      "id": "queue-notify",
+      "from": "queue",
+      "to": "notify",
+      "label": "订阅事件",
+      "technology": null
+    },
+    {
+      "id": "notify-chat",
+      "from": "notify",
+      "to": "chat",
+      "label": "推送待办",
+      "technology": null
+    },
+    {
+      "id": "travel-flow",
+      "from": "travel",
+      "to": "flow",
+      "label": "同步行程订单",
+      "technology": null
+    },
+    {
+      "id": "ocr-db",
+      "from": "ocr",
+      "to": "db",
+      "label": "用途未给出",
+      "technology": null
+    },
+    {
+      "id": "rules-db",
+      "from": "rules",
+      "to": "db",
+      "label": "读写",
+      "technology": "SQL"
+    },
+    {
+      "id": "ocr-images",
+      "from": "ocr",
+      "to": "images",
+      "label": "存影像",
+      "technology": "S3"
+    },
+    {
+      "id": "ocr-invoice",
+      "from": "ocr",
+      "to": "invoice",
+      "label": "查验真伪",
+      "technology": "HTTPS"
+    },
+    {
+      "id": "flow-erp",
+      "from": "flow",
+      "to": "erp",
+      "label": "生成凭证",
+      "technology": null
+    },
+    {
+      "id": "flow-bank",
+      "from": "flow",
+      "to": "bank",
+      "label": "付款指令",
+      "technology": null
+    }
+  ],
+  "estimate": {
+    "label": "每月处理量 · 独立假设",
+    "total": 18000,
+    "unit": "张",
+    "steps": [
+      {
+        "id": "ocr-est",
+        "label": "OCR 自动识别",
+        "automaticBasisPoints": 9200
+      },
+      {
+        "id": "rules-est",
+        "label": "规则自动通过",
+        "automaticBasisPoints": 7500
+      }
+    ]
+  },
+  "note": "技术、对接与数量均为示例。两项人工量分别相对同一总量计算，不能相加当作独立单据总数；图不表示审批或付款已经完成。"
+}

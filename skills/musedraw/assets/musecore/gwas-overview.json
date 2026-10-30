@@ -1,0 +1,2705 @@
+{
+  "family": "gwas-overview",
+  "title": "全基因组关联分析 · 给定结果总览",
+  "subtitle": "示例汇总统计的前向展示 · 不重新计算关联、质控或临床风险",
+  "assemblyLabel": "GRCh38 主染色体长度（NCBI GRC），位置为 1-based bp",
+  "dataKind": "illustrative-summary-statistics",
+  "study": {
+    "label": "给定病例对照示例",
+    "sampleSize": 11962,
+    "testsPerformed": 7100000,
+    "coverage": "subset"
+  },
+  "chromosomes": [
+    {
+      "id": "1",
+      "lengthBp": 248956422
+    },
+    {
+      "id": "2",
+      "lengthBp": 242193529
+    },
+    {
+      "id": "3",
+      "lengthBp": 198295559
+    },
+    {
+      "id": "4",
+      "lengthBp": 190214555
+    },
+    {
+      "id": "5",
+      "lengthBp": 181538259
+    },
+    {
+      "id": "6",
+      "lengthBp": 170805979
+    },
+    {
+      "id": "7",
+      "lengthBp": 159345973
+    },
+    {
+      "id": "8",
+      "lengthBp": 145138636
+    },
+    {
+      "id": "9",
+      "lengthBp": 138394717
+    },
+    {
+      "id": "10",
+      "lengthBp": 133797422
+    },
+    {
+      "id": "11",
+      "lengthBp": 135086622
+    },
+    {
+      "id": "12",
+      "lengthBp": 133275309
+    },
+    {
+      "id": "13",
+      "lengthBp": 114364328
+    },
+    {
+      "id": "14",
+      "lengthBp": 107043718
+    },
+    {
+      "id": "15",
+      "lengthBp": 101991189
+    },
+    {
+      "id": "16",
+      "lengthBp": 90338345
+    },
+    {
+      "id": "17",
+      "lengthBp": 83257441
+    },
+    {
+      "id": "18",
+      "lengthBp": 80373285
+    },
+    {
+      "id": "19",
+      "lengthBp": 58617616
+    },
+    {
+      "id": "20",
+      "lengthBp": 64444167
+    },
+    {
+      "id": "21",
+      "lengthBp": 46709983
+    },
+    {
+      "id": "22",
+      "lengthBp": 50818468
+    }
+  ],
+  "variants": [
+    {
+      "id": "example-1-1",
+      "chromosome": "1",
+      "positionBp": 6915456,
+      "p": 0.01
+    },
+    {
+      "id": "example-1-2",
+      "chromosome": "1",
+      "positionBp": 20746369,
+      "p": 0.38
+    },
+    {
+      "id": "example-1-3",
+      "chromosome": "1",
+      "positionBp": 34577281,
+      "p": 0.75
+    },
+    {
+      "id": "example-1-4",
+      "chromosome": "1",
+      "positionBp": 48408193,
+      "p": 0.15
+    },
+    {
+      "id": "example-1-5",
+      "chromosome": "1",
+      "positionBp": 62239106,
+      "p": 0.52
+    },
+    {
+      "id": "example-1-6",
+      "chromosome": "1",
+      "positionBp": 76070018,
+      "p": 0.89
+    },
+    {
+      "id": "example-1-7",
+      "chromosome": "1",
+      "positionBp": 89900930,
+      "p": 0.29
+    },
+    {
+      "id": "example-1-8",
+      "chromosome": "1",
+      "positionBp": 103731843,
+      "p": 0.66
+    },
+    {
+      "id": "example-1-9",
+      "chromosome": "1",
+      "positionBp": 117562755,
+      "p": 0.06
+    },
+    {
+      "id": "example-1-10",
+      "chromosome": "1",
+      "positionBp": 131393667,
+      "p": 0.43
+    },
+    {
+      "id": "example-1-11",
+      "chromosome": "1",
+      "positionBp": 145224580,
+      "p": 0.8
+    },
+    {
+      "id": "example-1-12",
+      "chromosome": "1",
+      "positionBp": 159055492,
+      "p": 0.2
+    },
+    {
+      "id": "example-1-13",
+      "chromosome": "1",
+      "positionBp": 172886404,
+      "p": 0.57
+    },
+    {
+      "id": "example-1-14",
+      "chromosome": "1",
+      "positionBp": 186717317,
+      "p": 0.94
+    },
+    {
+      "id": "example-1-15",
+      "chromosome": "1",
+      "positionBp": 200548229,
+      "p": 0.34
+    },
+    {
+      "id": "example-1-16",
+      "chromosome": "1",
+      "positionBp": 214379141,
+      "p": 0.71
+    },
+    {
+      "id": "example-1-17",
+      "chromosome": "1",
+      "positionBp": 228210054,
+      "p": 0.11
+    },
+    {
+      "id": "example-1-18",
+      "chromosome": "1",
+      "positionBp": 242040966,
+      "p": 0.48
+    },
+    {
+      "id": "example-2-1",
+      "chromosome": "2",
+      "positionBp": 6727598,
+      "p": 0.2
+    },
+    {
+      "id": "example-2-2",
+      "chromosome": "2",
+      "positionBp": 20182794,
+      "p": 0.57
+    },
+    {
+      "id": "example-2-3",
+      "chromosome": "2",
+      "positionBp": 33637990,
+      "p": 0.94
+    },
+    {
+      "id": "example-2-4",
+      "chromosome": "2",
+      "positionBp": 47093186,
+      "p": 0.34
+    },
+    {
+      "id": "example-2-5",
+      "chromosome": "2",
+      "positionBp": 60548382,
+      "p": 0.71
+    },
+    {
+      "id": "example-2-6",
+      "chromosome": "2",
+      "positionBp": 74003578,
+      "p": 0.11
+    },
+    {
+      "id": "example-2-7",
+      "chromosome": "2",
+      "positionBp": 87458774,
+      "p": 0.48
+    },
+    {
+      "id": "example-2-8",
+      "chromosome": "2",
+      "positionBp": 100913970,
+      "p": 0.85
+    },
+    {
+      "id": "example-2-9",
+      "chromosome": "2",
+      "positionBp": 114369166,
+      "p": 0.25
+    },
+    {
+      "id": "example-2-10",
+      "chromosome": "2",
+      "positionBp": 127824363,
+      "p": 0.62
+    },
+    {
+      "id": "example-2-11",
+      "chromosome": "2",
+      "positionBp": 141279559,
+      "p": 0.02
+    },
+    {
+      "id": "example-2-12",
+      "chromosome": "2",
+      "positionBp": 154734755,
+      "p": 0.39
+    },
+    {
+      "id": "example-2-13",
+      "chromosome": "2",
+      "positionBp": 168189951,
+      "p": 0.76
+    },
+    {
+      "id": "example-2-14",
+      "chromosome": "2",
+      "positionBp": 181645147,
+      "p": 0.16
+    },
+    {
+      "id": "example-2-15",
+      "chromosome": "2",
+      "positionBp": 195100343,
+      "p": 0.53
+    },
+    {
+      "id": "example-2-16",
+      "chromosome": "2",
+      "positionBp": 208555539,
+      "p": 0.9
+    },
+    {
+      "id": "example-2-17",
+      "chromosome": "2",
+      "positionBp": 222010735,
+      "p": 0.3
+    },
+    {
+      "id": "example-2-18",
+      "chromosome": "2",
+      "positionBp": 235465931,
+      "p": 0.67
+    },
+    {
+      "id": "example-3-1",
+      "chromosome": "3",
+      "positionBp": 5508210,
+      "p": 0.39
+    },
+    {
+      "id": "example-3-2",
+      "chromosome": "3",
+      "positionBp": 16524630,
+      "p": 0.76
+    },
+    {
+      "id": "example-3-3",
+      "chromosome": "3",
+      "positionBp": 27541050,
+      "p": 0.16
+    },
+    {
+      "id": "example-3-4",
+      "chromosome": "3",
+      "positionBp": 38557470,
+      "p": 0.53
+    },
+    {
+      "id": "example-3-5",
+      "chromosome": "3",
+      "positionBp": 49573890,
+      "p": 0.9
+    },
+    {
+      "id": "example-3-6",
+      "chromosome": "3",
+      "positionBp": 60590310,
+      "p": 0.3
+    },
+    {
+      "id": "example-3-7",
+      "chromosome": "3",
+      "positionBp": 71606730,
+      "p": 0.67
+    },
+    {
+      "id": "example-3-8",
+      "chromosome": "3",
+      "positionBp": 82623150,
+      "p": 0.07
+    },
+    {
+      "id": "example-3-9",
+      "chromosome": "3",
+      "positionBp": 93639570,
+      "p": 0.44
+    },
+    {
+      "id": "example-3-10",
+      "chromosome": "3",
+      "positionBp": 104655989,
+      "p": 0.81
+    },
+    {
+      "id": "example-3-11",
+      "chromosome": "3",
+      "positionBp": 115672409,
+      "p": 0.21
+    },
+    {
+      "id": "example-3-12",
+      "chromosome": "3",
+      "positionBp": 126688829,
+      "p": 0.58
+    },
+    {
+      "id": "example-3-13",
+      "chromosome": "3",
+      "positionBp": 137705249,
+      "p": 0.95
+    },
+    {
+      "id": "example-3-14",
+      "chromosome": "3",
+      "positionBp": 148721669,
+      "p": 0.35
+    },
+    {
+      "id": "example-3-15",
+      "chromosome": "3",
+      "positionBp": 159738089,
+      "p": 0.72
+    },
+    {
+      "id": "example-3-16",
+      "chromosome": "3",
+      "positionBp": 170754509,
+      "p": 0.12
+    },
+    {
+      "id": "example-3-17",
+      "chromosome": "3",
+      "positionBp": 181770929,
+      "p": 0.49
+    },
+    {
+      "id": "example-3-18",
+      "chromosome": "3",
+      "positionBp": 192787349,
+      "p": 0.86
+    },
+    {
+      "id": "example-4-1",
+      "chromosome": "4",
+      "positionBp": 5283738,
+      "p": 0.58
+    },
+    {
+      "id": "example-4-2",
+      "chromosome": "4",
+      "positionBp": 15851213,
+      "p": 0.95
+    },
+    {
+      "id": "example-4-3",
+      "chromosome": "4",
+      "positionBp": 26418688,
+      "p": 0.35
+    },
+    {
+      "id": "example-4-4",
+      "chromosome": "4",
+      "positionBp": 36986163,
+      "p": 0.72
+    },
+    {
+      "id": "example-4-5",
+      "chromosome": "4",
+      "positionBp": 47553639,
+      "p": 0.12
+    },
+    {
+      "id": "example-4-6",
+      "chromosome": "4",
+      "positionBp": 58121114,
+      "p": 0.49
+    },
+    {
+      "id": "example-4-7",
+      "chromosome": "4",
+      "positionBp": 68688589,
+      "p": 0.86
+    },
+    {
+      "id": "example-4-8",
+      "chromosome": "4",
+      "positionBp": 79256065,
+      "p": 0.26
+    },
+    {
+      "id": "example-4-9",
+      "chromosome": "4",
+      "positionBp": 89823540,
+      "p": 0.63
+    },
+    {
+      "id": "example-4-10",
+      "chromosome": "4",
+      "positionBp": 100391015,
+      "p": 0.03
+    },
+    {
+      "id": "example-4-11",
+      "chromosome": "4",
+      "positionBp": 110958490,
+      "p": 0.4
+    },
+    {
+      "id": "example-4-12",
+      "chromosome": "4",
+      "positionBp": 121525966,
+      "p": 0.77
+    },
+    {
+      "id": "example-4-13",
+      "chromosome": "4",
+      "positionBp": 132093441,
+      "p": 0.17
+    },
+    {
+      "id": "example-4-14",
+      "chromosome": "4",
+      "positionBp": 142660916,
+      "p": 0.54
+    },
+    {
+      "id": "example-4-15",
+      "chromosome": "4",
+      "positionBp": 153228392,
+      "p": 0.91
+    },
+    {
+      "id": "example-4-16",
+      "chromosome": "4",
+      "positionBp": 163795867,
+      "p": 0.31
+    },
+    {
+      "id": "example-4-17",
+      "chromosome": "4",
+      "positionBp": 174363342,
+      "p": 0.68
+    },
+    {
+      "id": "example-4-18",
+      "chromosome": "4",
+      "positionBp": 184930817,
+      "p": 0.08
+    },
+    {
+      "id": "example-5-1",
+      "chromosome": "5",
+      "positionBp": 5042729,
+      "p": 0.77
+    },
+    {
+      "id": "example-5-2",
+      "chromosome": "5",
+      "positionBp": 15128188,
+      "p": 0.17
+    },
+    {
+      "id": "example-5-3",
+      "chromosome": "5",
+      "positionBp": 25213647,
+      "p": 0.54
+    },
+    {
+      "id": "example-5-4",
+      "chromosome": "5",
+      "positionBp": 35299106,
+      "p": 0.91
+    },
+    {
+      "id": "example-5-5",
+      "chromosome": "5",
+      "positionBp": 45384565,
+      "p": 0.31
+    },
+    {
+      "id": "example-5-6",
+      "chromosome": "5",
+      "positionBp": 55470024,
+      "p": 0.68
+    },
+    {
+      "id": "example-5-7",
+      "chromosome": "5",
+      "positionBp": 65555482,
+      "p": 0.08
+    },
+    {
+      "id": "example-5-8",
+      "chromosome": "5",
+      "positionBp": 75640941,
+      "p": 0.45
+    },
+    {
+      "id": "example-5-9",
+      "chromosome": "5",
+      "positionBp": 85726400,
+      "p": 0.82
+    },
+    {
+      "id": "example-5-10",
+      "chromosome": "5",
+      "positionBp": 95811859,
+      "p": 0.22
+    },
+    {
+      "id": "example-5-11",
+      "chromosome": "5",
+      "positionBp": 105897318,
+      "p": 0.59
+    },
+    {
+      "id": "example-5-12",
+      "chromosome": "5",
+      "positionBp": 115982777,
+      "p": 0.96
+    },
+    {
+      "id": "example-5-13",
+      "chromosome": "5",
+      "positionBp": 126068235,
+      "p": 0.36
+    },
+    {
+      "id": "example-5-14",
+      "chromosome": "5",
+      "positionBp": 136153694,
+      "p": 0.73
+    },
+    {
+      "id": "example-5-15",
+      "chromosome": "5",
+      "positionBp": 146239153,
+      "p": 0.13
+    },
+    {
+      "id": "example-5-16",
+      "chromosome": "5",
+      "positionBp": 156324612,
+      "p": 0.5
+    },
+    {
+      "id": "example-5-17",
+      "chromosome": "5",
+      "positionBp": 166410071,
+      "p": 0.87
+    },
+    {
+      "id": "example-5-18",
+      "chromosome": "5",
+      "positionBp": 176495530,
+      "p": 0.27
+    },
+    {
+      "id": "example-6-1",
+      "chromosome": "6",
+      "positionBp": 4744611,
+      "p": 0.96
+    },
+    {
+      "id": "example-6-2",
+      "chromosome": "6",
+      "positionBp": 14233832,
+      "p": 0.36
+    },
+    {
+      "id": "example-6-3",
+      "chromosome": "6",
+      "positionBp": 23723053,
+      "p": 0.73
+    },
+    {
+      "id": "example-6-4",
+      "chromosome": "6",
+      "positionBp": 33212274,
+      "p": 0.13
+    },
+    {
+      "id": "example-6-5",
+      "chromosome": "6",
+      "positionBp": 42701495,
+      "p": 0.5
+    },
+    {
+      "id": "example-6-6",
+      "chromosome": "6",
+      "positionBp": 52190716,
+      "p": 0.87
+    },
+    {
+      "id": "example-6-7",
+      "chromosome": "6",
+      "positionBp": 61679937,
+      "p": 0.27
+    },
+    {
+      "id": "example-6-8",
+      "chromosome": "6",
+      "positionBp": 71169158,
+      "p": 0.64
+    },
+    {
+      "id": "example-6-9",
+      "chromosome": "6",
+      "positionBp": 80658379,
+      "p": 0.04
+    },
+    {
+      "id": "example-6-10",
+      "chromosome": "6",
+      "positionBp": 90147600,
+      "p": 0.41
+    },
+    {
+      "id": "example-6-11",
+      "chromosome": "6",
+      "positionBp": 99636821,
+      "p": 0.78
+    },
+    {
+      "id": "example-6-12",
+      "chromosome": "6",
+      "positionBp": 109126042,
+      "p": 0.18
+    },
+    {
+      "id": "example-6-13",
+      "chromosome": "6",
+      "positionBp": 118615263,
+      "p": 0.55
+    },
+    {
+      "id": "example-6-14",
+      "chromosome": "6",
+      "positionBp": 128104484,
+      "p": 0.92
+    },
+    {
+      "id": "example-6-15",
+      "chromosome": "6",
+      "positionBp": 137593705,
+      "p": 0.32
+    },
+    {
+      "id": "example-6-16",
+      "chromosome": "6",
+      "positionBp": 147082926,
+      "p": 0.69
+    },
+    {
+      "id": "example-6-17",
+      "chromosome": "6",
+      "positionBp": 156572147,
+      "p": 0.09
+    },
+    {
+      "id": "example-6-18",
+      "chromosome": "6",
+      "positionBp": 166061368,
+      "p": 0.46
+    },
+    {
+      "id": "example-7-1",
+      "chromosome": "7",
+      "positionBp": 4426277,
+      "p": 0.18
+    },
+    {
+      "id": "example-7-2",
+      "chromosome": "7",
+      "positionBp": 13278831,
+      "p": 0.55
+    },
+    {
+      "id": "example-7-3",
+      "chromosome": "7",
+      "positionBp": 22131385,
+      "p": 0.92
+    },
+    {
+      "id": "example-7-4",
+      "chromosome": "7",
+      "positionBp": 30983939,
+      "p": 0.32
+    },
+    {
+      "id": "example-7-5",
+      "chromosome": "7",
+      "positionBp": 39836493,
+      "p": 0.69
+    },
+    {
+      "id": "example-7-6",
+      "chromosome": "7",
+      "positionBp": 48689047,
+      "p": 0.09
+    },
+    {
+      "id": "example-7-7",
+      "chromosome": "7",
+      "positionBp": 57541601,
+      "p": 0.46
+    },
+    {
+      "id": "example-7-8",
+      "chromosome": "7",
+      "positionBp": 66394155,
+      "p": 0.83
+    },
+    {
+      "id": "example-7-9",
+      "chromosome": "7",
+      "positionBp": 75246709,
+      "p": 0.23
+    },
+    {
+      "id": "example-7-10",
+      "chromosome": "7",
+      "positionBp": 84099264,
+      "p": 0.6
+    },
+    {
+      "id": "example-7-11",
+      "chromosome": "7",
+      "positionBp": 92951818,
+      "p": 0.97
+    },
+    {
+      "id": "example-7-12",
+      "chromosome": "7",
+      "positionBp": 101804372,
+      "p": 0.37
+    },
+    {
+      "id": "example-7-13",
+      "chromosome": "7",
+      "positionBp": 110656926,
+      "p": 0.74
+    },
+    {
+      "id": "example-7-14",
+      "chromosome": "7",
+      "positionBp": 119509480,
+      "p": 0.14
+    },
+    {
+      "id": "example-7-15",
+      "chromosome": "7",
+      "positionBp": 128362034,
+      "p": 0.51
+    },
+    {
+      "id": "example-7-16",
+      "chromosome": "7",
+      "positionBp": 137214588,
+      "p": 0.88
+    },
+    {
+      "id": "example-7-17",
+      "chromosome": "7",
+      "positionBp": 146067142,
+      "p": 0.28
+    },
+    {
+      "id": "example-7-18",
+      "chromosome": "7",
+      "positionBp": 154919696,
+      "p": 0.65
+    },
+    {
+      "id": "example-8-1",
+      "chromosome": "8",
+      "positionBp": 4031629,
+      "p": 0.37
+    },
+    {
+      "id": "example-8-2",
+      "chromosome": "8",
+      "positionBp": 12094886,
+      "p": 0.74
+    },
+    {
+      "id": "example-8-3",
+      "chromosome": "8",
+      "positionBp": 20158144,
+      "p": 0.14
+    },
+    {
+      "id": "example-8-4",
+      "chromosome": "8",
+      "positionBp": 28221401,
+      "p": 0.51
+    },
+    {
+      "id": "example-8-5",
+      "chromosome": "8",
+      "positionBp": 36284659,
+      "p": 0.88
+    },
+    {
+      "id": "example-8-6",
+      "chromosome": "8",
+      "positionBp": 44347917,
+      "p": 0.28
+    },
+    {
+      "id": "example-8-7",
+      "chromosome": "8",
+      "positionBp": 52411174,
+      "p": 0.65
+    },
+    {
+      "id": "example-8-8",
+      "chromosome": "8",
+      "positionBp": 60474432,
+      "p": 0.05
+    },
+    {
+      "id": "example-8-9",
+      "chromosome": "8",
+      "positionBp": 68537689,
+      "p": 0.42
+    },
+    {
+      "id": "example-8-10",
+      "chromosome": "8",
+      "positionBp": 76600947,
+      "p": 0.79
+    },
+    {
+      "id": "example-8-11",
+      "chromosome": "8",
+      "positionBp": 84664204,
+      "p": 0.19
+    },
+    {
+      "id": "example-8-12",
+      "chromosome": "8",
+      "positionBp": 92727462,
+      "p": 0.56
+    },
+    {
+      "id": "example-8-13",
+      "chromosome": "8",
+      "positionBp": 100790719,
+      "p": 0.93
+    },
+    {
+      "id": "example-8-14",
+      "chromosome": "8",
+      "positionBp": 108853977,
+      "p": 0.33
+    },
+    {
+      "id": "example-8-15",
+      "chromosome": "8",
+      "positionBp": 116917235,
+      "p": 0.7
+    },
+    {
+      "id": "example-8-16",
+      "chromosome": "8",
+      "positionBp": 124980492,
+      "p": 0.1
+    },
+    {
+      "id": "example-8-17",
+      "chromosome": "8",
+      "positionBp": 133043750,
+      "p": 0.47
+    },
+    {
+      "id": "example-8-18",
+      "chromosome": "8",
+      "positionBp": 141107007,
+      "p": 0.84
+    },
+    {
+      "id": "example-9-1",
+      "chromosome": "9",
+      "positionBp": 3844298,
+      "p": 0.56
+    },
+    {
+      "id": "example-9-2",
+      "chromosome": "9",
+      "positionBp": 11532893,
+      "p": 0.93
+    },
+    {
+      "id": "example-9-3",
+      "chromosome": "9",
+      "positionBp": 19221488,
+      "p": 0.33
+    },
+    {
+      "id": "example-9-4",
+      "chromosome": "9",
+      "positionBp": 26910084,
+      "p": 0.7
+    },
+    {
+      "id": "example-9-5",
+      "chromosome": "9",
+      "positionBp": 34598679,
+      "p": 0.1
+    },
+    {
+      "id": "example-9-6",
+      "chromosome": "9",
+      "positionBp": 42287275,
+      "p": 0.47
+    },
+    {
+      "id": "example-9-7",
+      "chromosome": "9",
+      "positionBp": 49975870,
+      "p": 0.84
+    },
+    {
+      "id": "example-9-8",
+      "chromosome": "9",
+      "positionBp": 57664465,
+      "p": 0.24
+    },
+    {
+      "id": "example-9-9",
+      "chromosome": "9",
+      "positionBp": 65353061,
+      "p": 0.61
+    },
+    {
+      "id": "example-9-10",
+      "chromosome": "9",
+      "positionBp": 73041656,
+      "p": 0.01
+    },
+    {
+      "id": "example-9-11",
+      "chromosome": "9",
+      "positionBp": 80730252,
+      "p": 0.38
+    },
+    {
+      "id": "example-9-12",
+      "chromosome": "9",
+      "positionBp": 88418847,
+      "p": 0.75
+    },
+    {
+      "id": "example-9-13",
+      "chromosome": "9",
+      "positionBp": 96107442,
+      "p": 0.15
+    },
+    {
+      "id": "example-9-14",
+      "chromosome": "9",
+      "positionBp": 103796038,
+      "p": 0.52
+    },
+    {
+      "id": "example-9-15",
+      "chromosome": "9",
+      "positionBp": 111484633,
+      "p": 0.89
+    },
+    {
+      "id": "example-9-16",
+      "chromosome": "9",
+      "positionBp": 119173229,
+      "p": 0.29
+    },
+    {
+      "id": "example-9-17",
+      "chromosome": "9",
+      "positionBp": 126861824,
+      "p": 0.66
+    },
+    {
+      "id": "example-9-18",
+      "chromosome": "9",
+      "positionBp": 134550419,
+      "p": 0.06
+    },
+    {
+      "id": "example-10-1",
+      "chromosome": "10",
+      "positionBp": 3716595,
+      "p": 0.75
+    },
+    {
+      "id": "example-10-2",
+      "chromosome": "10",
+      "positionBp": 11149785,
+      "p": 0.15
+    },
+    {
+      "id": "example-10-3",
+      "chromosome": "10",
+      "positionBp": 18582975,
+      "p": 0.52
+    },
+    {
+      "id": "example-10-4",
+      "chromosome": "10",
+      "positionBp": 26016165,
+      "p": 0.89
+    },
+    {
+      "id": "example-10-5",
+      "chromosome": "10",
+      "positionBp": 33449356,
+      "p": 0.29
+    },
+    {
+      "id": "example-10-6",
+      "chromosome": "10",
+      "positionBp": 40882546,
+      "p": 0.66
+    },
+    {
+      "id": "example-10-7",
+      "chromosome": "10",
+      "positionBp": 48315736,
+      "p": 0.06
+    },
+    {
+      "id": "example-10-8",
+      "chromosome": "10",
+      "positionBp": 55748926,
+      "p": 0.43
+    },
+    {
+      "id": "example-10-9",
+      "chromosome": "10",
+      "positionBp": 63182116,
+      "p": 0.8
+    },
+    {
+      "id": "example-10-10",
+      "chromosome": "10",
+      "positionBp": 70615306,
+      "p": 0.2
+    },
+    {
+      "id": "example-10-11",
+      "chromosome": "10",
+      "positionBp": 78048496,
+      "p": 0.57
+    },
+    {
+      "id": "example-10-12",
+      "chromosome": "10",
+      "positionBp": 85481686,
+      "p": 0.94
+    },
+    {
+      "id": "example-10-13",
+      "chromosome": "10",
+      "positionBp": 92914876,
+      "p": 0.34
+    },
+    {
+      "id": "example-10-14",
+      "chromosome": "10",
+      "positionBp": 100348067,
+      "p": 0.71
+    },
+    {
+      "id": "example-10-15",
+      "chromosome": "10",
+      "positionBp": 107781257,
+      "p": 0.11
+    },
+    {
+      "id": "example-10-16",
+      "chromosome": "10",
+      "positionBp": 115214447,
+      "p": 0.48
+    },
+    {
+      "id": "example-10-17",
+      "chromosome": "10",
+      "positionBp": 122647637,
+      "p": 0.85
+    },
+    {
+      "id": "example-10-18",
+      "chromosome": "10",
+      "positionBp": 130080827,
+      "p": 0.25
+    },
+    {
+      "id": "example-11-1",
+      "chromosome": "11",
+      "positionBp": 3752406,
+      "p": 0.94
+    },
+    {
+      "id": "example-11-2",
+      "chromosome": "11",
+      "positionBp": 11257219,
+      "p": 0.34
+    },
+    {
+      "id": "example-11-3",
+      "chromosome": "11",
+      "positionBp": 18762031,
+      "p": 0.71
+    },
+    {
+      "id": "example-11-4",
+      "chromosome": "11",
+      "positionBp": 26266843,
+      "p": 0.11
+    },
+    {
+      "id": "example-11-5",
+      "chromosome": "11",
+      "positionBp": 33771656,
+      "p": 0.48
+    },
+    {
+      "id": "example-11-6",
+      "chromosome": "11",
+      "positionBp": 41276468,
+      "p": 0.85
+    },
+    {
+      "id": "example-11-7",
+      "chromosome": "11",
+      "positionBp": 48781280,
+      "p": 0.25
+    },
+    {
+      "id": "example-11-8",
+      "chromosome": "11",
+      "positionBp": 56286093,
+      "p": 0.62
+    },
+    {
+      "id": "example-11-9",
+      "chromosome": "11",
+      "positionBp": 63790905,
+      "p": 0.02
+    },
+    {
+      "id": "example-11-10",
+      "chromosome": "11",
+      "positionBp": 71295717,
+      "p": 0.39
+    },
+    {
+      "id": "example-11-11",
+      "chromosome": "11",
+      "positionBp": 78800530,
+      "p": 0.76
+    },
+    {
+      "id": "example-11-12",
+      "chromosome": "11",
+      "positionBp": 86305342,
+      "p": 0.16
+    },
+    {
+      "id": "example-11-13",
+      "chromosome": "11",
+      "positionBp": 93810154,
+      "p": 0.53
+    },
+    {
+      "id": "example-11-14",
+      "chromosome": "11",
+      "positionBp": 101314967,
+      "p": 0.9
+    },
+    {
+      "id": "example-11-15",
+      "chromosome": "11",
+      "positionBp": 108819779,
+      "p": 0.3
+    },
+    {
+      "id": "example-11-16",
+      "chromosome": "11",
+      "positionBp": 116324591,
+      "p": 0.67
+    },
+    {
+      "id": "example-11-17",
+      "chromosome": "11",
+      "positionBp": 123829404,
+      "p": 0.07
+    },
+    {
+      "id": "example-11-18",
+      "chromosome": "11",
+      "positionBp": 131334216,
+      "p": 0.44
+    },
+    {
+      "id": "example-12-1",
+      "chromosome": "12",
+      "positionBp": 3702092,
+      "p": 0.16
+    },
+    {
+      "id": "example-12-2",
+      "chromosome": "12",
+      "positionBp": 11106276,
+      "p": 0.53
+    },
+    {
+      "id": "example-12-3",
+      "chromosome": "12",
+      "positionBp": 18510460,
+      "p": 0.9
+    },
+    {
+      "id": "example-12-4",
+      "chromosome": "12",
+      "positionBp": 25914643,
+      "p": 0.3
+    },
+    {
+      "id": "example-12-5",
+      "chromosome": "12",
+      "positionBp": 33318827,
+      "p": 0.67
+    },
+    {
+      "id": "example-12-6",
+      "chromosome": "12",
+      "positionBp": 40723011,
+      "p": 0.07
+    },
+    {
+      "id": "example-12-7",
+      "chromosome": "12",
+      "positionBp": 48127195,
+      "p": 0.44
+    },
+    {
+      "id": "example-12-8",
+      "chromosome": "12",
+      "positionBp": 55531379,
+      "p": 0.81
+    },
+    {
+      "id": "example-12-9",
+      "chromosome": "12",
+      "positionBp": 62935563,
+      "p": 0.21
+    },
+    {
+      "id": "example-12-10",
+      "chromosome": "12",
+      "positionBp": 70339746,
+      "p": 0.58
+    },
+    {
+      "id": "example-12-11",
+      "chromosome": "12",
+      "positionBp": 77743930,
+      "p": 0.95
+    },
+    {
+      "id": "example-12-12",
+      "chromosome": "12",
+      "positionBp": 85148114,
+      "p": 0.35
+    },
+    {
+      "id": "example-12-13",
+      "chromosome": "12",
+      "positionBp": 92552298,
+      "p": 0.72
+    },
+    {
+      "id": "example-12-14",
+      "chromosome": "12",
+      "positionBp": 99956482,
+      "p": 0.12
+    },
+    {
+      "id": "example-12-15",
+      "chromosome": "12",
+      "positionBp": 107360666,
+      "p": 0.49
+    },
+    {
+      "id": "example-12-16",
+      "chromosome": "12",
+      "positionBp": 114764849,
+      "p": 0.86
+    },
+    {
+      "id": "example-12-17",
+      "chromosome": "12",
+      "positionBp": 122169033,
+      "p": 0.26
+    },
+    {
+      "id": "example-12-18",
+      "chromosome": "12",
+      "positionBp": 129573217,
+      "p": 0.63
+    },
+    {
+      "id": "example-13-1",
+      "chromosome": "13",
+      "positionBp": 3176787,
+      "p": 0.35
+    },
+    {
+      "id": "example-13-2",
+      "chromosome": "13",
+      "positionBp": 9530361,
+      "p": 0.72
+    },
+    {
+      "id": "example-13-3",
+      "chromosome": "13",
+      "positionBp": 15883934,
+      "p": 0.12
+    },
+    {
+      "id": "example-13-4",
+      "chromosome": "13",
+      "positionBp": 22237508,
+      "p": 0.49
+    },
+    {
+      "id": "example-13-5",
+      "chromosome": "13",
+      "positionBp": 28591082,
+      "p": 0.86
+    },
+    {
+      "id": "example-13-6",
+      "chromosome": "13",
+      "positionBp": 34944656,
+      "p": 0.26
+    },
+    {
+      "id": "example-13-7",
+      "chromosome": "13",
+      "positionBp": 41298230,
+      "p": 0.63
+    },
+    {
+      "id": "example-13-8",
+      "chromosome": "13",
+      "positionBp": 47651803,
+      "p": 0.03
+    },
+    {
+      "id": "example-13-9",
+      "chromosome": "13",
+      "positionBp": 54005377,
+      "p": 0.4
+    },
+    {
+      "id": "example-13-10",
+      "chromosome": "13",
+      "positionBp": 60358951,
+      "p": 0.77
+    },
+    {
+      "id": "example-13-11",
+      "chromosome": "13",
+      "positionBp": 66712525,
+      "p": 0.17
+    },
+    {
+      "id": "example-13-12",
+      "chromosome": "13",
+      "positionBp": 73066098,
+      "p": 0.54
+    },
+    {
+      "id": "example-13-13",
+      "chromosome": "13",
+      "positionBp": 79419672,
+      "p": 0.91
+    },
+    {
+      "id": "example-13-14",
+      "chromosome": "13",
+      "positionBp": 85773246,
+      "p": 0.31
+    },
+    {
+      "id": "example-13-15",
+      "chromosome": "13",
+      "positionBp": 92126820,
+      "p": 0.68
+    },
+    {
+      "id": "example-13-16",
+      "chromosome": "13",
+      "positionBp": 98480394,
+      "p": 0.08
+    },
+    {
+      "id": "example-13-17",
+      "chromosome": "13",
+      "positionBp": 104833967,
+      "p": 0.45
+    },
+    {
+      "id": "example-13-18",
+      "chromosome": "13",
+      "positionBp": 111187541,
+      "p": 0.82
+    },
+    {
+      "id": "example-14-1",
+      "chromosome": "14",
+      "positionBp": 2973437,
+      "p": 0.54
+    },
+    {
+      "id": "example-14-2",
+      "chromosome": "14",
+      "positionBp": 8920310,
+      "p": 0.91
+    },
+    {
+      "id": "example-14-3",
+      "chromosome": "14",
+      "positionBp": 14867183,
+      "p": 0.31
+    },
+    {
+      "id": "example-14-4",
+      "chromosome": "14",
+      "positionBp": 20814056,
+      "p": 0.68
+    },
+    {
+      "id": "example-14-5",
+      "chromosome": "14",
+      "positionBp": 26760930,
+      "p": 0.08
+    },
+    {
+      "id": "example-14-6",
+      "chromosome": "14",
+      "positionBp": 32707803,
+      "p": 0.45
+    },
+    {
+      "id": "example-14-7",
+      "chromosome": "14",
+      "positionBp": 38654676,
+      "p": 0.82
+    },
+    {
+      "id": "example-14-8",
+      "chromosome": "14",
+      "positionBp": 44601549,
+      "p": 0.22
+    },
+    {
+      "id": "example-14-9",
+      "chromosome": "14",
+      "positionBp": 50548422,
+      "p": 0.59
+    },
+    {
+      "id": "example-14-10",
+      "chromosome": "14",
+      "positionBp": 56495296,
+      "p": 0.96
+    },
+    {
+      "id": "example-14-11",
+      "chromosome": "14",
+      "positionBp": 62442169,
+      "p": 0.36
+    },
+    {
+      "id": "example-14-12",
+      "chromosome": "14",
+      "positionBp": 68389042,
+      "p": 0.73
+    },
+    {
+      "id": "example-14-13",
+      "chromosome": "14",
+      "positionBp": 74335915,
+      "p": 0.13
+    },
+    {
+      "id": "example-14-14",
+      "chromosome": "14",
+      "positionBp": 80282789,
+      "p": 0.5
+    },
+    {
+      "id": "example-14-15",
+      "chromosome": "14",
+      "positionBp": 86229662,
+      "p": 0.87
+    },
+    {
+      "id": "example-14-16",
+      "chromosome": "14",
+      "positionBp": 92176535,
+      "p": 0.27
+    },
+    {
+      "id": "example-14-17",
+      "chromosome": "14",
+      "positionBp": 98123408,
+      "p": 0.64
+    },
+    {
+      "id": "example-14-18",
+      "chromosome": "14",
+      "positionBp": 104070281,
+      "p": 0.04
+    },
+    {
+      "id": "example-15-1",
+      "chromosome": "15",
+      "positionBp": 2833089,
+      "p": 0.73
+    },
+    {
+      "id": "example-15-2",
+      "chromosome": "15",
+      "positionBp": 8499266,
+      "p": 0.13
+    },
+    {
+      "id": "example-15-3",
+      "chromosome": "15",
+      "positionBp": 14165443,
+      "p": 0.5
+    },
+    {
+      "id": "example-15-4",
+      "chromosome": "15",
+      "positionBp": 19831620,
+      "p": 0.87
+    },
+    {
+      "id": "example-15-5",
+      "chromosome": "15",
+      "positionBp": 25497797,
+      "p": 0.27
+    },
+    {
+      "id": "example-15-6",
+      "chromosome": "15",
+      "positionBp": 31163974,
+      "p": 0.64
+    },
+    {
+      "id": "example-15-7",
+      "chromosome": "15",
+      "positionBp": 36830152,
+      "p": 0.04
+    },
+    {
+      "id": "example-15-8",
+      "chromosome": "15",
+      "positionBp": 42496329,
+      "p": 0.41
+    },
+    {
+      "id": "example-15-9",
+      "chromosome": "15",
+      "positionBp": 48162506,
+      "p": 0.78
+    },
+    {
+      "id": "example-15-10",
+      "chromosome": "15",
+      "positionBp": 53828683,
+      "p": 0.18
+    },
+    {
+      "id": "example-15-11",
+      "chromosome": "15",
+      "positionBp": 59494860,
+      "p": 0.55
+    },
+    {
+      "id": "example-15-12",
+      "chromosome": "15",
+      "positionBp": 65161037,
+      "p": 0.92
+    },
+    {
+      "id": "example-15-13",
+      "chromosome": "15",
+      "positionBp": 70827215,
+      "p": 0.32
+    },
+    {
+      "id": "example-15-14",
+      "chromosome": "15",
+      "positionBp": 76493392,
+      "p": 0.69
+    },
+    {
+      "id": "example-15-15",
+      "chromosome": "15",
+      "positionBp": 82159569,
+      "p": 0.09
+    },
+    {
+      "id": "example-15-16",
+      "chromosome": "15",
+      "positionBp": 87825746,
+      "p": 0.46
+    },
+    {
+      "id": "example-15-17",
+      "chromosome": "15",
+      "positionBp": 93491923,
+      "p": 0.83
+    },
+    {
+      "id": "example-15-18",
+      "chromosome": "15",
+      "positionBp": 99158100,
+      "p": 0.23
+    },
+    {
+      "id": "example-16-1",
+      "chromosome": "16",
+      "positionBp": 2509398,
+      "p": 0.92
+    },
+    {
+      "id": "example-16-2",
+      "chromosome": "16",
+      "positionBp": 7528195,
+      "p": 0.32
+    },
+    {
+      "id": "example-16-3",
+      "chromosome": "16",
+      "positionBp": 12546992,
+      "p": 0.69
+    },
+    {
+      "id": "example-16-4",
+      "chromosome": "16",
+      "positionBp": 17565789,
+      "p": 0.09
+    },
+    {
+      "id": "example-16-5",
+      "chromosome": "16",
+      "positionBp": 22584586,
+      "p": 0.46
+    },
+    {
+      "id": "example-16-6",
+      "chromosome": "16",
+      "positionBp": 27603383,
+      "p": 0.83
+    },
+    {
+      "id": "example-16-7",
+      "chromosome": "16",
+      "positionBp": 32622180,
+      "p": 0.23
+    },
+    {
+      "id": "example-16-8",
+      "chromosome": "16",
+      "positionBp": 37640977,
+      "p": 0.6
+    },
+    {
+      "id": "example-16-9",
+      "chromosome": "16",
+      "positionBp": 42659774,
+      "p": 0.97
+    },
+    {
+      "id": "example-16-10",
+      "chromosome": "16",
+      "positionBp": 47678571,
+      "p": 0.37
+    },
+    {
+      "id": "example-16-11",
+      "chromosome": "16",
+      "positionBp": 52697368,
+      "p": 0.74
+    },
+    {
+      "id": "example-16-12",
+      "chromosome": "16",
+      "positionBp": 57716165,
+      "p": 0.14
+    },
+    {
+      "id": "example-16-13",
+      "chromosome": "16",
+      "positionBp": 62734962,
+      "p": 0.51
+    },
+    {
+      "id": "example-16-14",
+      "chromosome": "16",
+      "positionBp": 67753759,
+      "p": 0.88
+    },
+    {
+      "id": "example-16-15",
+      "chromosome": "16",
+      "positionBp": 72772556,
+      "p": 0.28
+    },
+    {
+      "id": "example-16-16",
+      "chromosome": "16",
+      "positionBp": 77791353,
+      "p": 0.65
+    },
+    {
+      "id": "example-16-17",
+      "chromosome": "16",
+      "positionBp": 82810150,
+      "p": 0.05
+    },
+    {
+      "id": "example-16-18",
+      "chromosome": "16",
+      "positionBp": 87828947,
+      "p": 0.42
+    },
+    {
+      "id": "example-17-1",
+      "chromosome": "17",
+      "positionBp": 2312707,
+      "p": 0.14
+    },
+    {
+      "id": "example-17-2",
+      "chromosome": "17",
+      "positionBp": 6938120,
+      "p": 0.51
+    },
+    {
+      "id": "example-17-3",
+      "chromosome": "17",
+      "positionBp": 11563533,
+      "p": 0.88
+    },
+    {
+      "id": "example-17-4",
+      "chromosome": "17",
+      "positionBp": 16188947,
+      "p": 0.28
+    },
+    {
+      "id": "example-17-5",
+      "chromosome": "17",
+      "positionBp": 20814360,
+      "p": 0.65
+    },
+    {
+      "id": "example-17-6",
+      "chromosome": "17",
+      "positionBp": 25439774,
+      "p": 0.05
+    },
+    {
+      "id": "example-17-7",
+      "chromosome": "17",
+      "positionBp": 30065187,
+      "p": 0.42
+    },
+    {
+      "id": "example-17-8",
+      "chromosome": "17",
+      "positionBp": 34690600,
+      "p": 0.79
+    },
+    {
+      "id": "example-17-9",
+      "chromosome": "17",
+      "positionBp": 39316014,
+      "p": 0.19
+    },
+    {
+      "id": "example-17-10",
+      "chromosome": "17",
+      "positionBp": 43941427,
+      "p": 0.56
+    },
+    {
+      "id": "example-17-11",
+      "chromosome": "17",
+      "positionBp": 48566841,
+      "p": 0.93
+    },
+    {
+      "id": "example-17-12",
+      "chromosome": "17",
+      "positionBp": 53192254,
+      "p": 0.33
+    },
+    {
+      "id": "example-17-13",
+      "chromosome": "17",
+      "positionBp": 57817667,
+      "p": 0.7
+    },
+    {
+      "id": "example-17-14",
+      "chromosome": "17",
+      "positionBp": 62443081,
+      "p": 0.1
+    },
+    {
+      "id": "example-17-15",
+      "chromosome": "17",
+      "positionBp": 67068494,
+      "p": 0.47
+    },
+    {
+      "id": "example-17-16",
+      "chromosome": "17",
+      "positionBp": 71693908,
+      "p": 0.84
+    },
+    {
+      "id": "example-17-17",
+      "chromosome": "17",
+      "positionBp": 76319321,
+      "p": 0.24
+    },
+    {
+      "id": "example-17-18",
+      "chromosome": "17",
+      "positionBp": 80944734,
+      "p": 0.61
+    },
+    {
+      "id": "example-18-1",
+      "chromosome": "18",
+      "positionBp": 2232591,
+      "p": 0.33
+    },
+    {
+      "id": "example-18-2",
+      "chromosome": "18",
+      "positionBp": 6697774,
+      "p": 0.7
+    },
+    {
+      "id": "example-18-3",
+      "chromosome": "18",
+      "positionBp": 11162956,
+      "p": 0.1
+    },
+    {
+      "id": "example-18-4",
+      "chromosome": "18",
+      "positionBp": 15628139,
+      "p": 0.47
+    },
+    {
+      "id": "example-18-5",
+      "chromosome": "18",
+      "positionBp": 20093321,
+      "p": 0.84
+    },
+    {
+      "id": "example-18-6",
+      "chromosome": "18",
+      "positionBp": 24558504,
+      "p": 0.24
+    },
+    {
+      "id": "example-18-7",
+      "chromosome": "18",
+      "positionBp": 29023686,
+      "p": 0.61
+    },
+    {
+      "id": "example-18-8",
+      "chromosome": "18",
+      "positionBp": 33488869,
+      "p": 0.01
+    },
+    {
+      "id": "example-18-9",
+      "chromosome": "18",
+      "positionBp": 37954051,
+      "p": 0.38
+    },
+    {
+      "id": "example-18-10",
+      "chromosome": "18",
+      "positionBp": 42419234,
+      "p": 0.75
+    },
+    {
+      "id": "example-18-11",
+      "chromosome": "18",
+      "positionBp": 46884416,
+      "p": 0.15
+    },
+    {
+      "id": "example-18-12",
+      "chromosome": "18",
+      "positionBp": 51349599,
+      "p": 0.52
+    },
+    {
+      "id": "example-18-13",
+      "chromosome": "18",
+      "positionBp": 55814781,
+      "p": 0.89
+    },
+    {
+      "id": "example-18-14",
+      "chromosome": "18",
+      "positionBp": 60279964,
+      "p": 0.29
+    },
+    {
+      "id": "example-18-15",
+      "chromosome": "18",
+      "positionBp": 64745146,
+      "p": 0.66
+    },
+    {
+      "id": "example-18-16",
+      "chromosome": "18",
+      "positionBp": 69210329,
+      "p": 0.06
+    },
+    {
+      "id": "example-18-17",
+      "chromosome": "18",
+      "positionBp": 73675511,
+      "p": 0.43
+    },
+    {
+      "id": "example-18-18",
+      "chromosome": "18",
+      "positionBp": 78140694,
+      "p": 0.8
+    },
+    {
+      "id": "example-19-1",
+      "chromosome": "19",
+      "positionBp": 1628267,
+      "p": 0.52
+    },
+    {
+      "id": "example-19-2",
+      "chromosome": "19",
+      "positionBp": 4884801,
+      "p": 0.89
+    },
+    {
+      "id": "example-19-3",
+      "chromosome": "19",
+      "positionBp": 8141336,
+      "p": 0.29
+    },
+    {
+      "id": "example-19-4",
+      "chromosome": "19",
+      "positionBp": 11397870,
+      "p": 0.66
+    },
+    {
+      "id": "example-19-5",
+      "chromosome": "19",
+      "positionBp": 14654404,
+      "p": 0.06
+    },
+    {
+      "id": "example-19-6",
+      "chromosome": "19",
+      "positionBp": 17910938,
+      "p": 0.43
+    },
+    {
+      "id": "example-19-7",
+      "chromosome": "19",
+      "positionBp": 21167472,
+      "p": 0.8
+    },
+    {
+      "id": "example-19-8",
+      "chromosome": "19",
+      "positionBp": 24424007,
+      "p": 0.2
+    },
+    {
+      "id": "example-19-9",
+      "chromosome": "19",
+      "positionBp": 27680541,
+      "p": 0.57
+    },
+    {
+      "id": "example-19-10",
+      "chromosome": "19",
+      "positionBp": 30937075,
+      "p": 0.94
+    },
+    {
+      "id": "example-19-11",
+      "chromosome": "19",
+      "positionBp": 34193609,
+      "p": 0.34
+    },
+    {
+      "id": "example-19-12",
+      "chromosome": "19",
+      "positionBp": 37450144,
+      "p": 0.71
+    },
+    {
+      "id": "example-19-13",
+      "chromosome": "19",
+      "positionBp": 40706678,
+      "p": 0.11
+    },
+    {
+      "id": "example-19-14",
+      "chromosome": "19",
+      "positionBp": 43963212,
+      "p": 0.48
+    },
+    {
+      "id": "example-19-15",
+      "chromosome": "19",
+      "positionBp": 47219746,
+      "p": 0.85
+    },
+    {
+      "id": "example-19-16",
+      "chromosome": "19",
+      "positionBp": 50476280,
+      "p": 0.25
+    },
+    {
+      "id": "example-19-17",
+      "chromosome": "19",
+      "positionBp": 53732815,
+      "p": 0.62
+    },
+    {
+      "id": "example-19-18",
+      "chromosome": "19",
+      "positionBp": 56989349,
+      "p": 0.02
+    },
+    {
+      "id": "example-20-1",
+      "chromosome": "20",
+      "positionBp": 1790116,
+      "p": 0.71
+    },
+    {
+      "id": "example-20-2",
+      "chromosome": "20",
+      "positionBp": 5370347,
+      "p": 0.11
+    },
+    {
+      "id": "example-20-3",
+      "chromosome": "20",
+      "positionBp": 8950579,
+      "p": 0.48
+    },
+    {
+      "id": "example-20-4",
+      "chromosome": "20",
+      "positionBp": 12530810,
+      "p": 0.85
+    },
+    {
+      "id": "example-20-5",
+      "chromosome": "20",
+      "positionBp": 16111042,
+      "p": 0.25
+    },
+    {
+      "id": "example-20-6",
+      "chromosome": "20",
+      "positionBp": 19691273,
+      "p": 0.62
+    },
+    {
+      "id": "example-20-7",
+      "chromosome": "20",
+      "positionBp": 23271505,
+      "p": 0.02
+    },
+    {
+      "id": "example-20-8",
+      "chromosome": "20",
+      "positionBp": 26851736,
+      "p": 0.39
+    },
+    {
+      "id": "example-20-9",
+      "chromosome": "20",
+      "positionBp": 30431968,
+      "p": 0.76
+    },
+    {
+      "id": "example-20-10",
+      "chromosome": "20",
+      "positionBp": 34012199,
+      "p": 0.16
+    },
+    {
+      "id": "example-20-11",
+      "chromosome": "20",
+      "positionBp": 37592431,
+      "p": 0.53
+    },
+    {
+      "id": "example-20-12",
+      "chromosome": "20",
+      "positionBp": 41172662,
+      "p": 0.9
+    },
+    {
+      "id": "example-20-13",
+      "chromosome": "20",
+      "positionBp": 44752894,
+      "p": 0.3
+    },
+    {
+      "id": "example-20-14",
+      "chromosome": "20",
+      "positionBp": 48333125,
+      "p": 0.67
+    },
+    {
+      "id": "example-20-15",
+      "chromosome": "20",
+      "positionBp": 51913357,
+      "p": 0.07
+    },
+    {
+      "id": "example-20-16",
+      "chromosome": "20",
+      "positionBp": 55493588,
+      "p": 0.44
+    },
+    {
+      "id": "example-20-17",
+      "chromosome": "20",
+      "positionBp": 59073820,
+      "p": 0.81
+    },
+    {
+      "id": "example-20-18",
+      "chromosome": "20",
+      "positionBp": 62654051,
+      "p": 0.21
+    },
+    {
+      "id": "example-21-1",
+      "chromosome": "21",
+      "positionBp": 1297500,
+      "p": 0.9
+    },
+    {
+      "id": "example-21-2",
+      "chromosome": "21",
+      "positionBp": 3892499,
+      "p": 0.3
+    },
+    {
+      "id": "example-21-3",
+      "chromosome": "21",
+      "positionBp": 6487498,
+      "p": 0.67
+    },
+    {
+      "id": "example-21-4",
+      "chromosome": "21",
+      "positionBp": 9082497,
+      "p": 0.07
+    },
+    {
+      "id": "example-21-5",
+      "chromosome": "21",
+      "positionBp": 11677496,
+      "p": 0.44
+    },
+    {
+      "id": "example-21-6",
+      "chromosome": "21",
+      "positionBp": 14272495,
+      "p": 0.81
+    },
+    {
+      "id": "example-21-7",
+      "chromosome": "21",
+      "positionBp": 16867494,
+      "p": 0.21
+    },
+    {
+      "id": "example-21-8",
+      "chromosome": "21",
+      "positionBp": 19462493,
+      "p": 0.58
+    },
+    {
+      "id": "example-21-9",
+      "chromosome": "21",
+      "positionBp": 22057492,
+      "p": 0.95
+    },
+    {
+      "id": "example-21-10",
+      "chromosome": "21",
+      "positionBp": 24652491,
+      "p": 0.35
+    },
+    {
+      "id": "example-21-11",
+      "chromosome": "21",
+      "positionBp": 27247490,
+      "p": 0.72
+    },
+    {
+      "id": "example-21-12",
+      "chromosome": "21",
+      "positionBp": 29842489,
+      "p": 0.12
+    },
+    {
+      "id": "example-21-13",
+      "chromosome": "21",
+      "positionBp": 32437488,
+      "p": 0.49
+    },
+    {
+      "id": "example-21-14",
+      "chromosome": "21",
+      "positionBp": 35032487,
+      "p": 0.86
+    },
+    {
+      "id": "example-21-15",
+      "chromosome": "21",
+      "positionBp": 37627486,
+      "p": 0.26
+    },
+    {
+      "id": "example-21-16",
+      "chromosome": "21",
+      "positionBp": 40222485,
+      "p": 0.63
+    },
+    {
+      "id": "example-21-17",
+      "chromosome": "21",
+      "positionBp": 42817484,
+      "p": 0.03
+    },
+    {
+      "id": "example-21-18",
+      "chromosome": "21",
+      "positionBp": 45412483,
+      "p": 0.4
+    },
+    {
+      "id": "example-22-1",
+      "chromosome": "22",
+      "positionBp": 1411624,
+      "p": 0.12
+    },
+    {
+      "id": "example-22-2",
+      "chromosome": "22",
+      "positionBp": 4234872,
+      "p": 0.49
+    },
+    {
+      "id": "example-22-3",
+      "chromosome": "22",
+      "positionBp": 7058121,
+      "p": 0.86
+    },
+    {
+      "id": "example-22-4",
+      "chromosome": "22",
+      "positionBp": 9881369,
+      "p": 0.26
+    },
+    {
+      "id": "example-22-5",
+      "chromosome": "22",
+      "positionBp": 12704617,
+      "p": 0.63
+    },
+    {
+      "id": "example-22-6",
+      "chromosome": "22",
+      "positionBp": 15527865,
+      "p": 0.03
+    },
+    {
+      "id": "example-22-7",
+      "chromosome": "22",
+      "positionBp": 18351113,
+      "p": 0.4
+    },
+    {
+      "id": "example-22-8",
+      "chromosome": "22",
+      "positionBp": 21174362,
+      "p": 0.77
+    },
+    {
+      "id": "example-22-9",
+      "chromosome": "22",
+      "positionBp": 23997610,
+      "p": 0.17
+    },
+    {
+      "id": "example-22-10",
+      "chromosome": "22",
+      "positionBp": 26820858,
+      "p": 0.54
+    },
+    {
+      "id": "example-22-11",
+      "chromosome": "22",
+      "positionBp": 29644106,
+      "p": 0.91
+    },
+    {
+      "id": "example-22-12",
+      "chromosome": "22",
+      "positionBp": 32467355,
+      "p": 0.31
+    },
+    {
+      "id": "example-22-13",
+      "chromosome": "22",
+      "positionBp": 35290603,
+      "p": 0.68
+    },
+    {
+      "id": "example-22-14",
+      "chromosome": "22",
+      "positionBp": 38113851,
+      "p": 0.08
+    },
+    {
+      "id": "example-22-15",
+      "chromosome": "22",
+      "positionBp": 40937099,
+      "p": 0.45
+    },
+    {
+      "id": "example-22-16",
+      "chromosome": "22",
+      "positionBp": 43760347,
+      "p": 0.82
+    },
+    {
+      "id": "example-22-17",
+      "chromosome": "22",
+      "positionBp": 46583596,
+      "p": 0.22
+    },
+    {
+      "id": "example-22-18",
+      "chromosome": "22",
+      "positionBp": 49406844,
+      "p": 0.59
+    },
+    {
+      "id": "focus-2",
+      "chromosome": "2",
+      "positionBp": 100000000,
+      "p": 1.6e-14
+    },
+    {
+      "id": "focus-9",
+      "chromosome": "9",
+      "positionBp": 70000000,
+      "p": 2.5e-10
+    },
+    {
+      "id": "focus-16",
+      "chromosome": "16",
+      "positionBp": 50000000,
+      "p": 2e-8
+    },
+    {
+      "id": "local-example-1",
+      "chromosome": "2",
+      "positionBp": 99550000,
+      "p": 0.03
+    },
+    {
+      "id": "local-example-2",
+      "chromosome": "2",
+      "positionBp": 99620000,
+      "p": 0.002
+    },
+    {
+      "id": "local-example-3",
+      "chromosome": "2",
+      "positionBp": 99700000,
+      "p": 0.0001
+    },
+    {
+      "id": "local-example-4",
+      "chromosome": "2",
+      "positionBp": 99780000,
+      "p": 0.00001
+    },
+    {
+      "id": "local-example-5",
+      "chromosome": "2",
+      "positionBp": 99850000,
+      "p": 2e-7
+    },
+    {
+      "id": "local-example-6",
+      "chromosome": "2",
+      "positionBp": 99920000,
+      "p": 4e-9
+    },
+    {
+      "id": "local-example-7",
+      "chromosome": "2",
+      "positionBp": 99970000,
+      "p": 2e-11
+    },
+    {
+      "id": "local-example-8",
+      "chromosome": "2",
+      "positionBp": 100020000,
+      "p": 8e-12
+    },
+    {
+      "id": "local-example-9",
+      "chromosome": "2",
+      "positionBp": 100070000,
+      "p": 6e-9
+    },
+    {
+      "id": "local-example-10",
+      "chromosome": "2",
+      "positionBp": 100140000,
+      "p": 3e-7
+    },
+    {
+      "id": "local-example-11",
+      "chromosome": "2",
+      "positionBp": 100240000,
+      "p": 0.00004
+    },
+    {
+      "id": "local-example-12",
+      "chromosome": "2",
+      "positionBp": 100360000,
+      "p": 0.001
+    },
+    {
+      "id": "local-example-13",
+      "chromosome": "2",
+      "positionBp": 100460000,
+      "p": 0.04
+    }
+  ],
+  "thresholds": [
+    {
+      "kind": "fixed-p",
+      "label": "给定严格阈值",
+      "p": 5e-8
+    },
+    {
+      "kind": "fixed-p",
+      "label": "给定辅助阈值",
+      "p": 0.00001
+    }
+  ],
+  "highlights": [
+    {
+      "variantId": "focus-2",
+      "label": "给定焦点 1"
+    },
+    {
+      "variantId": "focus-9",
+      "label": "给定焦点 2"
+    },
+    {
+      "variantId": "focus-16",
+      "label": "给定焦点 3"
+    }
+  ],
+  "local": {
+    "leadId": "focus-2",
+    "radiusBp": 500000,
+    "ld": [
+      {
+        "variantId": "focus-2",
+        "r2": 1
+      },
+      {
+        "variantId": "local-example-1",
+        "r2": 0.02
+      },
+      {
+        "variantId": "local-example-2",
+        "r2": 0.06
+      },
+      {
+        "variantId": "local-example-3",
+        "r2": 0.1
+      },
+      {
+        "variantId": "local-example-4",
+        "r2": 0.25
+      },
+      {
+        "variantId": "local-example-5",
+        "r2": 0.42
+      },
+      {
+        "variantId": "local-example-6",
+        "r2": 0.68
+      },
+      {
+        "variantId": "local-example-7",
+        "r2": 0.9
+      },
+      {
+        "variantId": "local-example-8",
+        "r2": 0.95
+      },
+      {
+        "variantId": "local-example-9",
+        "r2": 0.72
+      },
+      {
+        "variantId": "local-example-10",
+        "r2": 0.51
+      },
+      {
+        "variantId": "local-example-11",
+        "r2": 0.3
+      },
+      {
+        "variantId": "local-example-12",
+        "r2": 0.09
+      },
+      {
+        "variantId": "local-example-13",
+        "r2": 0.02
+      }
+    ],
+    "genes": [
+      {
+        "id": "a",
+        "label": "示意基因 A",
+        "startBp": 99580000,
+        "endBp": 99700000,
+        "strand": "+"
+      },
+      {
+        "id": "b",
+        "label": "示意基因 B",
+        "startBp": 99830000,
+        "endBp": 99930000,
+        "strand": "-"
+      },
+      {
+        "id": "c",
+        "label": "示意基因 C",
+        "startBp": 100100000,
+        "endBp": 100260000,
+        "strand": "+"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "id": "initial",
+      "label": "质控前（给定）",
+      "samples": 12480,
+      "variants": 9600000,
+      "note": "输入提供的保留数流程，不重新执行排除判定"
+    },
+    {
+      "id": "retained",
+      "label": "分析集（给定）",
+      "samples": 11962,
+      "variants": 7100000,
+      "note": "最终样本数与检验数由输入给定"
+    }
+  ],
+  "note": "示例点的 P 值、局部 r² 和基因区间均为明确输入的示意值，不代表实际位点或实测 LD。曼哈顿横轴按全部给定染色体长度累计，不把观测点最末位置当作染色体长度。这里只绘给定 P 值子集；QQ 图使用这个集合的 i/(m+1) 排位，不能据此评估整个研究的校准或群体分层。橙色计数是过最严格阈值的输入变异数，不是独立关联位点数。不给出 λGC、关联效应、因果关系或个体疾病风险。"
+}
