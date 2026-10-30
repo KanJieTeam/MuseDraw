@@ -1,0 +1,8 @@
+{
+  "family":"ionic-transfer",
+  "title":"数清电子，再看离子电荷",
+  "subtitle":"离子形成的电子层示意 · 暖橙表示金属，薄荷绿表示非金属；电子总数与总电荷逐项核对。",
+  "cation":{"element":"Na","count":1,"label":"钠"},
+  "anion":{"element":"Cl","count":1,"label":"氯"},
+  "note":"NaCl 表示钠离子与氯离子的最简数量比为 1 : 1；晶体不是由一对一的 NaCl 分子组成。图示电子均为同一种粒子，点和叉只区分来源。"
+}

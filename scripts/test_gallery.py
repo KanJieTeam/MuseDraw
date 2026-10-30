@@ -399,7 +399,23 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/transit-velocity.test.mjs',
                                  'tests/musecore/square-angle.test.mjs',
                                  'tests/musecore/calendar-daytime.test.mjs',
-                                 'tests/musecore/pathway.test.mjs'):
+                                 'tests/musecore/pathway.test.mjs',
+                                 'references/musecore-chemical-objects.md',
+                                 'references/musecore-move-escalation.md',
+                                 'scripts/musecore/chemistry-models.mjs',
+                                 'scripts/musecore/chemistry-figures.mjs',
+                                 'scripts/musecore/ion-models.mjs',
+                                 'scripts/musecore/ion-figures.mjs',
+                                 'scripts/musecore/move-models.mjs',
+                                 'scripts/musecore/move-figures.mjs',
+                                 'scripts/musecore/escalation-models.mjs',
+                                 'scripts/musecore/escalation-figures.mjs',
+                                 'assets/musecore/reaction-balance.json',
+                                 'assets/musecore/ionic-transfer.json',
+                                 'assets/musecore/office-move.json',
+                                 'assets/musecore/oncall-escalation.json',
+                                 'tests/musecore/chemistry-ion.test.mjs',
+                                 'tests/musecore/move-escalation.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

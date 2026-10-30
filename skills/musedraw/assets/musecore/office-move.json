@@ -1,0 +1,120 @@
+{
+  "family": "office-move",
+  "title": "搬家 · 总部办公室迁入安排",
+  "subtitle": "虚构教学计划 · 日期、责任方与箱件去向均由本次输入声明",
+  "offsetMinutes": 480,
+  "origin": "旧址 · 湖滨路 16 号",
+  "destination": "新址 · 滨江路 88 号 12 层",
+  "departments": [
+    {
+      "id": "market",
+      "label": "市场部",
+      "tag": "blue"
+    },
+    {
+      "id": "finance",
+      "label": "财务部",
+      "tag": "yellow"
+    },
+    {
+      "id": "dev",
+      "label": "研发部",
+      "tag": "stripe"
+    },
+    {
+      "id": "admin",
+      "label": "行政部",
+      "tag": "outline"
+    }
+  ],
+  "zones": [
+    {
+      "id": "east",
+      "label": "东区 · 团队工位"
+    },
+    {
+      "id": "archive",
+      "label": "资料室"
+    },
+    {
+      "id": "support",
+      "label": "设备与行政区"
+    }
+  ],
+  "shipments": [
+    {
+      "id": "B01",
+      "department": "market",
+      "zone": "east",
+      "boxes": 18,
+      "status": "planned"
+    },
+    {
+      "id": "B02",
+      "department": "finance",
+      "zone": "archive",
+      "boxes": 12,
+      "status": "planned"
+    },
+    {
+      "id": "B03",
+      "department": "dev",
+      "zone": "east",
+      "boxes": 24,
+      "status": "planned"
+    },
+    {
+      "id": "B04",
+      "department": "admin",
+      "zone": "support",
+      "boxes": 8,
+      "status": "received"
+    }
+  ],
+  "activities": [
+    {
+      "id": "pack",
+      "label": "各部门打包并贴标签",
+      "owner": "各部门指定负责人",
+      "start": "2026-11-09T09:00",
+      "end": "2026-11-20T17:00",
+      "dependsOn": [],
+      "status": "planned"
+    },
+    {
+      "id": "offline",
+      "label": "电脑与网络关闭窗口",
+      "owner": "IT 值班团队",
+      "start": "2026-11-20T18:00",
+      "end": "2026-11-20T18:00",
+      "dependsOn": [
+        "pack"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "move",
+      "label": "搬运并在新址核对箱件",
+      "owner": "搬运团队与部门代表",
+      "start": "2026-11-21T09:00",
+      "end": "2026-11-22T18:00",
+      "dependsOn": [
+        "offline"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "open",
+      "label": "新址开工前检查电脑与网络",
+      "owner": "IT 与各部门代表",
+      "start": "2026-11-23T09:00",
+      "end": "2026-11-23T10:00",
+      "dependsOn": [
+        "move"
+      ],
+      "status": "planned"
+    }
+  ],
+  "contact": "行政协调：李晓（示例联系人）",
+  "note": "时间为显式固定偏移下的经过时间，含夜间与周末，不推断工作日或法定假期。箱数只是声明件数，不表示体积、重量、装载能力或安全结论；登记接收不等于核验无损。"
+}

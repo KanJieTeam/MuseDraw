@@ -1,0 +1,48 @@
+{
+  "family": "oncall-escalation",
+  "title": "值班升级 · 未确认时逐级走下去",
+  "subtitle": "虚构教学策略 · 阈值不是通用 SLA，时刻不代表通知已实际送达",
+  "policyLabel": "本次给定 P1 示例策略",
+  "triggerAt": "2026-11-20T23:50",
+  "offsetMinutes": 480,
+  "steps": [
+    {
+      "id": "primary",
+      "label": "主值班",
+      "recipient": "当班一线工程师",
+      "atMinutes": 0,
+      "action": "按本次策略电话、短信与推送"
+    },
+    {
+      "id": "secondary",
+      "label": "副值班",
+      "recipient": "当班备援工程师",
+      "atMinutes": 5,
+      "action": "同时继续呼叫主值班"
+    },
+    {
+      "id": "manager",
+      "label": "值班经理",
+      "recipient": "当班协调负责人",
+      "atMinutes": 15,
+      "action": "建立事故沟通频道"
+    },
+    {
+      "id": "commander",
+      "label": "事故指挥",
+      "recipient": "本次指定事故负责人",
+      "atMinutes": 30,
+      "action": "按策略升级事故并联系业务方"
+    }
+  ],
+  "observation": {
+    "asOf": "2026-11-21T00:10",
+    "acknowledgedAt": "2026-11-21T00:02",
+    "acknowledgedBy": "副值班（输入登记）"
+  },
+  "handover": {
+    "label": "明确登记的下一次值班交接",
+    "at": "2026-11-23T10:00"
+  },
+  "note": "每个阈值均从给定触发时刻起算。确认时刻与阈值相等时，确认优先，停止该阈值及后续升级。图中仅演算策略资格，不推断通知发送、人员响应、事故恢复或真实 SLA 达成。"
+}

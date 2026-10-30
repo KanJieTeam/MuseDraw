@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.19
+  instructions-version: musecore-2026-10-31.20
 ---
 
 # MuseDraw
@@ -110,6 +110,8 @@ family's encodings, coordinated geometry and placement.
 | Completing a square by area and constructing a triangle-angle proof | [Geometric proofs](references/musecore-geometric-proofs.md) |
 | Gregorian month counts, explicit elapsed times and twelve double-hours | [Civil calendar and time](references/musecore-civil-time.md) |
 | Declared routes, shared stations and explicitly missing pathway segments | [Pathway maps](references/musecore-pathway-map.md) |
+| Exact neutral atom accounting and catalogued simple-ion electron transfer | [Chemical objects](references/musecore-chemical-objects.md) |
+| Declared moving schedules, box destinations and acknowledgement-based escalation | [Moves and escalation](references/musecore-move-escalation.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

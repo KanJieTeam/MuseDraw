@@ -1085,6 +1085,54 @@
           "sourceSha256": "bddba6ad2a4285336b81ba170307b6e8ac8e769a244c1c19333143b043ba3b0c"
         }
       ]
+    },
+    {
+      "id": "reaction-balance",
+      "family": "reaction-balance",
+      "file": "reaction-balance.json",
+      "contentStatus": "explicit educational or fictional operational input; no independently verified experiment or real execution claim",
+      "sourceCases": [
+        {
+          "id": "j02-peiping-fangchengshi",
+          "sourceSha256": "4ddf0430fe8fba0a556c837444f3b5ee1d152558e331ed1c92ce0ae7d820b630"
+        }
+      ]
+    },
+    {
+      "id": "ionic-transfer",
+      "family": "ionic-transfer",
+      "file": "ionic-transfer.json",
+      "contentStatus": "explicit educational or fictional operational input; no independently verified experiment or real execution claim",
+      "sourceCases": [
+        {
+          "id": "154-ionic-bond",
+          "sourceSha256": "3f22bbbc6e1660a450cb4499c699b0bf351416a37543cb3e0dcbcc5740757336"
+        }
+      ]
+    },
+    {
+      "id": "office-move",
+      "family": "office-move",
+      "file": "office-move.json",
+      "contentStatus": "explicit educational or fictional operational input; no independently verified experiment or real execution claim",
+      "sourceCases": [
+        {
+          "id": "o04-bangong-banqian",
+          "sourceSha256": "7908436e08ab7f1447bf60aa6a88e6adf705ed89c52a25586177e8f61bba4fe5"
+        }
+      ]
+    },
+    {
+      "id": "oncall-escalation",
+      "family": "oncall-escalation",
+      "file": "oncall-escalation.json",
+      "contentStatus": "explicit educational or fictional operational input; no independently verified experiment or real execution claim",
+      "sourceCases": [
+        {
+          "id": "117-oncall-escalation",
+          "sourceSha256": "9131fd76cf959cea83da47f8561b5b61da89108c731fa7273a5612eb43e5a6e7"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1303,6 +1351,20 @@
       "reference": "references/musecore-pathway-map.md",
       "ids": [
         "pathway-map"
+      ]
+    },
+    {
+      "reference": "references/musecore-chemical-objects.md",
+      "ids": [
+        "reaction-balance",
+        "ionic-transfer"
+      ]
+    },
+    {
+      "reference": "references/musecore-move-escalation.md",
+      "ids": [
+        "office-move",
+        "oncall-escalation"
       ]
     }
   ]

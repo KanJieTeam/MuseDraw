@@ -1,0 +1,72 @@
+{
+  "family": "reaction-balance",
+  "title": "配平系数，让每一种原子都守恒",
+  "subtitle": "白板计数 · 给定中性物种与组成，求唯一的最简正整数系数；下标保持不变。",
+  "mode": "neutral-atom-count",
+  "reactants": [
+    {
+      "id": "methane",
+      "label": "甲烷",
+      "kind": "molecule",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "C",
+          "count": 1
+        },
+        {
+          "element": "H",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "oxygen",
+      "label": "氧气",
+      "kind": "molecule",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "O",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "carbon-dioxide",
+      "label": "二氧化碳",
+      "kind": "molecule",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "C",
+          "count": 1
+        },
+        {
+          "element": "O",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "label": "水",
+      "kind": "molecule",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "H",
+          "count": 2
+        },
+        {
+          "element": "O",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "condition": "未在此计数练习中声明",
+  "note": "虚线包内的圆逐个对应原子；包的数量对应系数。此图按输入列出的物种核对原子数，不据此断言任意反应都能发生。"
+}
