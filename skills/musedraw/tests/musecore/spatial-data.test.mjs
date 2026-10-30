@@ -19,6 +19,19 @@ try{
  await page.setContent(await editorHtml(await load('blueprint')));await page.waitForFunction(()=>window.MUSECORE_READY===true);
  for(const id of ['blueprint','constellation','scroll','dumbbell','waterfall','funnel','survey','cohort'])await valid(await load(id),id+' measured drawing');
 
+ // A mask must cover the actual SVG font box, not a presumed ascent ratio.
+ // Linux CJK font collections can have taller boxes than Windows fonts.
+ for(const id of ['scroll','dumbbell','waterfall']){
+  await draw(await load(id));
+  const labels=await page.evaluate(()=>[...document.querySelectorAll('#output [data-role="label-backing"]')].map(mask=>{
+   const text=mask.nextElementSibling,box=text.getBBox(),backing=mask.getBBox();
+   return {text:text.textContent,covered:backing.x<=box.x+.01&&backing.y<=box.y+.01&&backing.x+backing.width>=box.x+box.width-.01&&backing.y+backing.height>=box.y+box.height-.01};
+  }));
+  assert(labels.length>0,id+' must exercise backed labels');
+  assert.deepEqual(labels.filter(label=>!label.covered),[],id+' backing must cover each complete SVG text box');
+ }
+ tests.push('label backings cover actual serif and sans SVG font boxes');
+
  const blueprint=await load('blueprint'),bp=await draw(blueprint),bg=bp.audit.geometry;
  assert.equal(bg.total,blueprint.layers.reduce((s,l)=>s+l.value,0));for(const l of bg.layers)near(l.h/l.value,bg.scale);assert.equal(bg.excluded.length,blueprint.excluded.length);tests.push('layer thickness is proportional; excluded amount is outside total');
  const tiny=structuredClone(blueprint);tiny.layers[0].value=.00001;await reject(tiny,/visible resolution/,'invisible layer rejected instead of assigning fake thickness');

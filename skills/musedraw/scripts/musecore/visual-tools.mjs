@@ -7,6 +7,9 @@ export function measureVisual(value,size=24,role='sans',weight=400){
  context??=document.createElement('canvas').getContext('2d');context.font=`${weight} ${size}px ${family}`;
  const w=context.measureText(String(value)).width;widths.set(key,w);return w;
 }
+export function visualFontBounds(value,size=24,role='sans',weight=400){
+ const family=VISUAL_TYPE[role];if(!family)throw Error('Unknown type role');context??=document.createElement('canvas').getContext('2d');context.font=`${weight} ${size}px ${family}`;const metrics=context.measureText(String(value));return {ascent:metrics.fontBoundingBoxAscent??size*1.05,descent:metrics.fontBoundingBoxDescent??size*.30};
+}
 export function visualLines(text,width,{size=24,role='sans',weight=400,max=3}={}){
  if(typeof text!=='string'||!text.trim())throw Error('Nonempty text required');
  const lines=[];
@@ -23,7 +26,11 @@ export function visualText(svg,x,baseline,text,{size=24,role='sans',weight=400,f
 }
 export function backedVisualText(svg,x,baseline,text,{background='#FFFFFF',...options}={}){
  const size=options.size??24,role=options.role??'sans',weight=options.weight??400,anchor=options.anchor??'start',width=measureVisual(text,size,role,weight),left=anchor==='middle'?x-width/2:anchor==='end'?x-width:x;
- el('rect',{x:left-5,y:baseline-size*1.05,width:width+10,height:size*1.35,fill:background,'data-role':'label-backing'},svg);
+ const metrics=visualFontBounds(text,size,role,weight);let top=size*1.05,height=size*1.35;
+ // Preserve the authored padding when it already fits; CJK collection faces
+ // on Linux can have taller line boxes and need a genuinely covering mask.
+ if(metrics.ascent+1>top||metrics.descent+1>size*.30){top=Math.max(top,metrics.ascent+1);height=top+Math.max(size*.30,metrics.descent+1)}
+ el('rect',{x:left-5,y:baseline-top,width:width+10,height,fill:background,'data-role':'label-backing'},svg);
  return visualText(svg,x,baseline,text,options);
 }
 export function visualBlock(svg,x,top,lines,options={}){
