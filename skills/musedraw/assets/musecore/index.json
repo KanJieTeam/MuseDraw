@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "status": "bounded executable composition families; new family aesthetics awaiting review",
   "examples": [
     {
@@ -429,6 +429,102 @@
           "sourceSha256": "ee056a695075dc678bc8641422d5868242a3928d6b1bb01dd5014cbf5d8e137b"
         }
       ]
+    },
+    {
+      "id": "clock",
+      "family": "clock",
+      "file": "clock.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "j01-renshi-zhongbiao",
+          "sourceSha256": "863a0dff75cddce8e5861580f9d0dd4228f181483091da78235dc8b90f286fff"
+        }
+      ]
+    },
+    {
+      "id": "reflection",
+      "family": "reflection",
+      "file": "reflection.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "t02-guang-fanshe",
+          "sourceSha256": "69a8e992222a96bb9102d5fa32f8d2bc05af3d21178e9bdcde27bfe9b7ee12c1"
+        }
+      ]
+    },
+    {
+      "id": "lever",
+      "family": "lever",
+      "file": "lever.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "t09-sanlei-ganggan",
+          "sourceSha256": "a78e9e0468113d99ba62e5789d5d7357e6ca1e5764c4577f01bedda49260dc31"
+        }
+      ]
+    },
+    {
+      "id": "lens",
+      "family": "lens",
+      "file": "lens.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "148-convex-lens",
+          "sourceSha256": "4cd2263a0e81a1150ce4e3794d20d38c0d81811e8ac01711e4b9aa2856abc907"
+        }
+      ]
+    },
+    {
+      "id": "ruler",
+      "family": "ruler",
+      "file": "ruler.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "128-length-units",
+          "sourceSha256": "473bdacf9c73d4622753c12fcf414c299bfe794bd7ce905988b19aa747b3f51c"
+        }
+      ]
+    },
+    {
+      "id": "magnitudes",
+      "family": "magnitudes",
+      "file": "magnitudes.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "151-orders-of-magnitude",
+          "sourceSha256": "302ec9104908dcf710cc2818ec321499d09634df280070bf2cc48534401fc457"
+        }
+      ]
+    },
+    {
+      "id": "solids",
+      "family": "solids",
+      "file": "solids.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "j09-liti-tuxing",
+          "sourceSha256": "0ab3e408a5c4c308e7da157f61863561c173c08acb90283933d6875f476dd3ee"
+        }
+      ]
+    },
+    {
+      "id": "orthoview",
+      "family": "orthoview",
+      "file": "orthoview.json",
+      "contentStatus": "idealized teaching input, not an experimental observation",
+      "sourceCases": [
+        {
+          "id": "145-three-views",
+          "sourceSha256": "d6d9a77debe3db15b23b3d5efce861acac314f6dd34b54c97dfd9eddbf149d0c"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -501,6 +597,19 @@
         "formula",
         "states",
         "deployment"
+      ]
+    },
+    {
+      "reference": "references/musecore-objects.md",
+      "ids": [
+        "clock",
+        "reflection",
+        "lever",
+        "lens",
+        "ruler",
+        "magnitudes",
+        "solids",
+        "orthoview"
       ]
     }
   ]

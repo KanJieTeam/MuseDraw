@@ -1,0 +1,8 @@
+{
+  "family": "reflection",
+  "title": "光的反射：每条光线各有方向",
+  "subtitle": "入射角和反射角，都以镜面法线为基准",
+  "angleDegrees": 40,
+  "tiltDegrees": 0,
+  "note": "理想平面镜示意：同一平面内，反射角等于入射角。镜面倾斜时，法线与两条光线一起重算。"
+}

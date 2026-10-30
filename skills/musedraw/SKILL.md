@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-30.10
+  instructions-version: musecore-2026-10-30.11
 ---
 
 # MuseDraw
@@ -91,6 +91,7 @@ family's encodings, coordinated geometry and placement.
 | Proportional layers, small radial networks, dated histories, paired changes, additive bridges, nested funnels, survey responses and cohorts | [Spatial and quantitative constructions](references/musecore-spatial-data.md) |
 | Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |
 | Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |
+| Time readings, reflected rays, balanced levers, thin lenses, length scales, orders of magnitude and solid projections | [Teaching objects and geometry](references/musecore-objects.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

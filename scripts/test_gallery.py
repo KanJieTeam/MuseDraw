@@ -264,7 +264,12 @@ class GalleryTests(unittest.TestCase):
                                  "scripts/musecore/calculation.mjs", "scripts/musecore/formula.mjs",
                                  "scripts/musecore/state-trace.mjs", "scripts/musecore/states.mjs",
                                  "scripts/musecore/deployment.mjs", "tests/musecore/workflows.test.mjs",
-                                 "assets/musecore/planner.json", "assets/musecore/formula.json"):
+                                 "assets/musecore/planner.json", "assets/musecore/formula.json",
+                                 "references/musecore-objects.md", "scripts/musecore/teaching-objects.mjs",
+                                 "scripts/musecore/chalk-figures.mjs", "scripts/musecore/blueprint-figures.mjs",
+                                 "scripts/musecore/magnitude.mjs", "scripts/musecore/solid-objects.mjs",
+                                 "scripts/musecore/solid-figures.mjs", "tests/musecore/objects.test.mjs",
+                                 "assets/musecore/lens.json", "assets/musecore/orthoview.json"):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

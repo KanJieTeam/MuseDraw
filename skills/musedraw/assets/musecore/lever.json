@@ -1,0 +1,34 @@
+{
+  "family": "lever",
+  "title": "三类杠杆，让力臂关系直接可见",
+  "subtitle": "理想刚性杠杆的力矩平衡 · 教学设定",
+  "forceUnit": "N",
+  "lengthUnit": "m",
+  "examples": [
+    {
+      "id": "first",
+      "label": "第一类：支点居中",
+      "kind": "first",
+      "effortArm": 0.8,
+      "loadArm": 0.2,
+      "loadForce": 100
+    },
+    {
+      "id": "second",
+      "label": "第二类：阻力居中",
+      "kind": "second",
+      "effortArm": 0.8,
+      "loadArm": 0.4,
+      "loadForce": 100
+    },
+    {
+      "id": "third",
+      "label": "第三类：动力居中",
+      "kind": "third",
+      "effortArm": 0.3,
+      "loadArm": 1,
+      "loadForce": 100
+    }
+  ],
+  "note": "各图按自身力臂比例绘制；箭头表示方向，不按力大小缩放。图中省略支点反力，不作为完整受力图。"
+}

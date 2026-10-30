@@ -1,0 +1,36 @@
+{
+  "family": "solids",
+  "title": "看见立体，也核对它的尺寸",
+  "subtitle": "形状、尺寸和体积保持对应 · 教学设定",
+  "unit": "cm",
+  "objects": [
+    {
+      "id": "box",
+      "label": "长方体",
+      "kind": "cuboid",
+      "width": 6,
+      "depth": 3,
+      "height": 4
+    },
+    {
+      "id": "cube",
+      "label": "正方体",
+      "kind": "cube",
+      "size": 4
+    },
+    {
+      "id": "cylinder",
+      "label": "圆柱",
+      "kind": "cylinder",
+      "radius": 2,
+      "height": 5
+    },
+    {
+      "id": "sphere",
+      "label": "球",
+      "kind": "sphere",
+      "radius": 2
+    }
+  ],
+  "note": "每个对象按自身尺寸比例绘制，组间单独缩放；体积为理想几何计算，虚线是辅助线，不表示棱。"
+}

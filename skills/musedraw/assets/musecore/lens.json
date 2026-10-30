@@ -1,0 +1,17 @@
+{
+  "family": "lens",
+  "title": "像距、方向与光线，来自同一组条件",
+  "subtitle": "理想会聚薄透镜，物体置于光轴上方 · 教学设定",
+  "focalLength": 10,
+  "objectDistance": 30,
+  "objectHeight": 4,
+  "unit": "cm",
+  "comparisons": [
+    30,
+    20,
+    15,
+    10,
+    5
+  ],
+  "note": "采用近轴薄透镜模型，镜片轮廓不表示实际口径；正像距为实像，负像距为虚像。示例不是实测光路。"
+}

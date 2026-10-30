@@ -1,0 +1,11 @@
+{
+  "family": "ruler",
+  "title": "同一段长度，换单位也不改变",
+  "subtitle": "零点、终点和每一个刻度共同对应给定长度",
+  "quantity": 4.5,
+  "inputUnit": "cm",
+  "rulerUnit": "cm",
+  "rulerMax": 10,
+  "objectLabel": "示例线段",
+  "note": "这是一把教学示意尺，非实物校准；单位换算保持同一长度，不根据图像猜测测量精度。"
+}
