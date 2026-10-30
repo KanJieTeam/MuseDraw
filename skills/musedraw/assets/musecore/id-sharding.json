@@ -1,0 +1,21 @@
+{
+ "family":"id-sharding",
+ "title":"按用户 ID 分库分表：给定规则与样本改位",
+ "subtitle":"虚构路由规划 · 精确取模与库表地址；迁移数量只统计给定样本，不估计全库数据",
+ "service":"订单服务（教学输入）",
+ "databasePrefix":"db_","tablePrefix":"orders_","algorithm":"flat-modulo-v1",
+ "before":{"label":"当前规则","databaseCount":2,"tablesPerDatabase":2},
+ "after":{"label":"拟扩容规则","databaseCount":4,"tablesPerDatabase":2},
+ "records":[
+  {"id":"u1","label":"演示用户 1001","userId":"1001","rows":1},
+  {"id":"u2","label":"演示用户 1002","userId":"1002","rows":1},
+  {"id":"u3","label":"演示用户 1003","userId":"1003","rows":1},
+  {"id":"u4","label":"演示用户 1004","userId":"1004","rows":1},
+  {"id":"u5","label":"演示用户 1005","userId":"1005","rows":1},
+  {"id":"u6","label":"演示用户 1006","userId":"1006","rows":1},
+  {"id":"u7","label":"演示用户 1007","userId":"1007","rows":1},
+  {"id":"u8","label":"演示用户 1008","userId":"1008","rows":1}
+ ],
+ "queries":[{"label":"明确按用户 ID 读取其记录","kind":"user","userId":"1001"},{"label":"明确覆盖全部表槽的汇总","kind":"all"}],
+ "note":"slot = user_id % (库数 × 每库表数)；db = floor(slot / 每库表数)，table = slot % 每库表数。索引代表稳定的库/表身份。配置改变会使相同 ID 路由不兼容；本图不执行搬迁、双写、事务或生产切换。"
+}

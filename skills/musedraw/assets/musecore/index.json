@@ -1277,6 +1277,102 @@
           "sourceSha256": "3b2ccb30f089b6cd5a117adacf903ca4af26f20d7d30cde816812966f1f2c534"
         }
       ]
+    },
+    {
+      "id": "urn-trials",
+      "family": "urn-trials",
+      "file": "urn-trials.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "136-probability",
+          "sourceSha256": "a944164e981014db20aa530ee111ae26801f77349cc9dec520ecbe4e47e00d9a"
+        }
+      ]
+    },
+    {
+      "id": "measurement-scales",
+      "family": "measurement-scales",
+      "file": "measurement-scales.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "s09-celiang-chidu",
+          "sourceSha256": "118c50ffb38ad777db18440abf01e6c36277fd703f0754d05a3715e21815c473"
+        }
+      ]
+    },
+    {
+      "id": "raft-election",
+      "family": "raft-election",
+      "file": "raft-election.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "106-raft-election",
+          "sourceSha256": "4693d80b1dd5856c26142c5629b68d413990bc8eebd123034e2ce740df9db9ee"
+        }
+      ]
+    },
+    {
+      "id": "id-sharding",
+      "family": "id-sharding",
+      "file": "id-sharding.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "e07-fenku-fenbiao",
+          "sourceSha256": "8d56c1b6fbaa8d1505e286db6124f4ac5a541bf3e54bf0584b88e88efbf9fc17"
+        }
+      ]
+    },
+    {
+      "id": "beta-binomial-update",
+      "family": "beta-binomial-update",
+      "file": "beta-binomial-update.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "174-bayesian-update",
+          "sourceSha256": "f1aaa118ac7b412b61beac3e4c720c3673771939f24415d28668f995b6e5277b"
+        }
+      ]
+    },
+    {
+      "id": "dated-phylogeny",
+      "family": "dated-phylogeny",
+      "file": "dated-phylogeny.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "168-primate-phylogeny",
+          "sourceSha256": "56f9d936929ad7fb5c5d601087414fee1319fc4c382b1aaf4806f1e8fc017fce"
+        }
+      ]
+    },
+    {
+      "id": "shadow-height",
+      "family": "shadow-height",
+      "file": "shadow-height.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "142-flagpole-shadow",
+          "sourceSha256": "ba760d82b0fb7858f90e1e7664c9a4de1fc791d650b19e1b7707f1998ebcf8c7"
+        }
+      ]
+    },
+    {
+      "id": "sun-shadow",
+      "family": "sun-shadow",
+      "file": "sun-shadow.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "140-shadows-in-a-day",
+          "sourceSha256": "1316f71d800b455e27c9b6655246800102214b4e42d191251bc4d30d02bacad3"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1551,6 +1647,34 @@
       "ids": [
         "pod-scheduling",
         "gitops-pull"
+      ]
+    },
+    {
+      "reference": "references/musecore-chance-scales.md",
+      "ids": [
+        "urn-trials",
+        "measurement-scales"
+      ]
+    },
+    {
+      "reference": "references/musecore-election-sharding.md",
+      "ids": [
+        "raft-election",
+        "id-sharding"
+      ]
+    },
+    {
+      "reference": "references/musecore-bayes-phylogeny.md",
+      "ids": [
+        "beta-binomial-update",
+        "dated-phylogeny"
+      ]
+    },
+    {
+      "reference": "references/musecore-shadow-geometry.md",
+      "ids": [
+        "shadow-height",
+        "sun-shadow"
       ]
     }
   ]

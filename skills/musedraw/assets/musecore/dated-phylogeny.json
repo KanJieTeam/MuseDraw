@@ -1,0 +1,37 @@
+{
+ "family":"dated-phylogeny",
+ "title":"灵长类样本：给定拓扑与分歧时间",
+ "subtitle":"本例节点年龄是明确输入的示意值；程序展示树与年龄，不从序列或距离重建进化关系",
+ "ageUnit":"Ma-before-present",
+ "axisMaxMa":75,
+ "rootId":"root",
+ "nodes":[
+  {"id":"root","label":"给定根节点","scientificName":"","ageMa":69,"ageRange":{"youngerMa":65,"olderMa":73},"children":["anthropoids","tarsier"]},
+  {"id":"anthropoids","label":"猴与猿的给定祖先","scientificName":"","ageMa":43,"ageRange":null,"children":["catarrhines","marmoset"]},
+  {"id":"catarrhines","label":"狭鼻类样本祖先","scientificName":"","ageMa":29,"ageRange":null,"children":["owm","apes"]},
+  {"id":"owm","label":"两种猴的给定祖先","scientificName":"","ageMa":10,"ageRange":null,"children":["macaque","baboon"]},
+  {"id":"apes","label":"人猿超科样本祖先","scientificName":"","ageMa":20,"ageRange":null,"children":["greatapes","gibbon"]},
+  {"id":"greatapes","label":"人科样本祖先","scientificName":"","ageMa":15,"ageRange":null,"children":["african","orangutan"]},
+  {"id":"african","label":"非洲猿样本祖先","scientificName":"","ageMa":8.6,"ageRange":null,"children":["humanpan","gorilla"]},
+  {"id":"humanpan","label":"人和 Pan 的给定祖先","scientificName":"","ageMa":6.4,"ageRange":{"youngerMa":5.8,"olderMa":7.2},"children":["pan","human"]},
+  {"id":"pan","label":"两种 Pan 的给定祖先","scientificName":"","ageMa":1.9,"ageRange":{"youngerMa":1.3,"olderMa":2.4},"children":["chimp","bonobo"]},
+  {"id":"macaque","label":"恒河猴","scientificName":"Macaca mulatta","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"baboon","label":"东非狒狒","scientificName":"Papio anubis","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"chimp","label":"黑猩猩","scientificName":"Pan troglodytes","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"bonobo","label":"倭黑猩猩","scientificName":"Pan paniscus","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"human","label":"人","scientificName":"Homo sapiens","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"gorilla","label":"西部大猩猩","scientificName":"Gorilla gorilla","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"orangutan","label":"婆罗洲猩猩","scientificName":"Pongo pygmaeus","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"gibbon","label":"白掌长臂猿","scientificName":"Hylobates lar","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"marmoset","label":"普通绒猴","scientificName":"Callithrix jacchus","ageMa":0,"ageRange":null,"children":[]},
+  {"id":"tarsier","label":"菲律宾眼镜猴","scientificName":"Carlito syrichta","ageMa":0,"ageRange":null,"children":[]}
+ ],
+ "clades":[{"nodeId":"owm","label":"猴科样本"},{"nodeId":"greatapes","label":"人科样本"},{"nodeId":"apes","label":"人猿超科样本"},{"nodeId":"catarrhines","label":"狭鼻类样本"}],
+ "timeBands":[
+  {"label":"纪 · 截取显示窗","segments":[{"label":"白垩纪部分","olderMa":75,"youngerMa":66},{"label":"古近纪","olderMa":66,"youngerMa":23.04},{"label":"新近纪","olderMa":23.04,"youngerMa":2.58},{"label":"第四纪","olderMa":2.58,"youngerMa":0}]},
+  {"label":"世 · 截取显示窗","segments":[{"label":"白垩纪部分","olderMa":75,"youngerMa":66},{"label":"古新世","olderMa":66,"youngerMa":56},{"label":"始新世","olderMa":56,"youngerMa":33.9},{"label":"渐新世","olderMa":33.9,"youngerMa":23.04},{"label":"中新世","olderMa":23.04,"youngerMa":5.333},{"label":"上新世","olderMa":5.333,"youngerMa":2.58},{"label":"第四纪部分","olderMa":2.58,"youngerMa":0}]}
+ ],
+ "intervalLabel":"输入示意年龄范围 · 非文献置信区间",
+ "showMrcaMatrix":true,
+ "note":"拓扑、所有节点年龄、叶端与括注均由输入明确给定，不进行 UPGMA、分子钟拟合或拓扑推断。分歧年龄与三个范围仅为本例示意输入，不是新估计，也不是文献置信区间；未给范围的节点只画中心点。重叠的边际年龄范围不表示所有端点能够同时成立。年代条采用 ICS 2024/12 的输入界线：66、56、33.9、23.04、5.333、2.58 Ma，不自动追踪修订。矩阵是这棵给定树上的最近共同祖先年龄，不是遗传距离或观测矩阵；现生叶端距今为零。"
+}

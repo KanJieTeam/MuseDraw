@@ -1,0 +1,11 @@
+{
+ "family":"beta-binomial-update",
+ "title":"贝叶斯更新：成功率的有限证据",
+ "subtitle":"显式 Beta 先验与给定二元结果 · 同一成功概率、条件独立的简化模型",
+ "model":"exchangeable-bernoulli-beta",
+ "prior":{"alpha":2,"beta":2},
+ "data":{"kind":"sequence","outcomes":[1,0,0,1,0,1,0,0,1,0,0,0,1,0,0,1,1,0,0,0],"checkpoints":[5,10,15,20]},
+ "credibleMass":0.95,
+ "wilsonComparison":true,
+ "note":"先验参数由输入给定，不从标题猜测；它们不是本次真实观测的成功与失败次数。后验密度面积为 1，阴影为等尾后验可信区间。粉色曲线是二项似然除以其在 θ 上的积分，仅为共同纵轴上的形状比较，不是另一份后验。Wilson 对照固定为 95% 置信区间，描述方法的重复抽样覆盖；它与后验可信区间含义不同。这里不处理依赖试验、随时间变化的成功率、缺失结果、因果或实验效应。"
+}

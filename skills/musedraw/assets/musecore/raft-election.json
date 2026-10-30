@@ -1,0 +1,21 @@
+{
+ "family":"raft-election",
+ "title":"Raft 选举：明确消息的小轨迹",
+ "subtitle":"虚构教学输入 · 固定五成员、单候选一轮；不是完整 Raft 协议或故障恢复实现",
+ "nodes":[
+  {"id":"S1","label":"S1","term":1,"votedFor":null,"lastLogTerm":1,"lastLogIndex":8,"online":false},
+  {"id":"S2","label":"S2","term":1,"votedFor":null,"lastLogTerm":1,"lastLogIndex":8,"online":true},
+  {"id":"S3","label":"S3","term":1,"votedFor":null,"lastLogTerm":1,"lastLogIndex":8,"online":true},
+  {"id":"S4","label":"S4","term":1,"votedFor":null,"lastLogTerm":1,"lastLogIndex":7,"online":true},
+  {"id":"S5","label":"S5","term":1,"votedFor":null,"lastLogTerm":1,"lastLogIndex":8,"online":true}
+ ],
+ "candidate":"S3","startAt":170,"durationMs":210,
+ "requests":[
+  {"to":"S1","receivedAt":null,"responseAt":null,"granted":null},
+  {"to":"S2","receivedAt":173,"responseAt":178,"granted":true},
+  {"to":"S4","receivedAt":174,"responseAt":180,"granted":true},
+  {"to":"S5","receivedAt":175,"responseAt":185,"granted":true}
+ ],
+ "heartbeats":[{"to":"S2","receivedAt":190},{"to":"S4","receivedAt":192},{"to":"S5","receivedAt":194}],
+ "note":"开始选举的时刻由输入明确给定，不抽样或推断超时。只核对任期、每任期投票与末日志新旧；心跳只检查接收者任期，不判断完整 AppendEntries 成功或业务可用。"
+}
