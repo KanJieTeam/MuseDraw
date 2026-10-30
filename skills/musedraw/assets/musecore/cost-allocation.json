@@ -1,0 +1,75 @@
+{
+  "family": "cost-allocation",
+  "title": "云成本，每一分都有分摊依据",
+  "subtitle": "虚构示例 · 四类成本按各自计量权重分配，不把平均分摊伪装成实际消耗",
+  "currency": "元",
+  "units": [
+    {
+      "id": "trade",
+      "label": "交易"
+    },
+    {
+      "id": "search",
+      "label": "搜索"
+    },
+    {
+      "id": "data",
+      "label": "数据"
+    },
+    {
+      "id": "tools",
+      "label": "内部工具"
+    }
+  ],
+  "pools": [
+    {
+      "id": "compute",
+      "label": "计算",
+      "basis": "CPU 使用量",
+      "minorUnits": 7800000,
+      "weights": {
+        "trade": 40,
+        "search": 25,
+        "data": 28,
+        "tools": 7
+      }
+    },
+    {
+      "id": "storage",
+      "label": "存储",
+      "basis": "存储容量 × 时长",
+      "minorUnits": 2200000,
+      "weights": {
+        "trade": 45,
+        "search": 18,
+        "data": 30,
+        "tools": 7
+      }
+    },
+    {
+      "id": "network",
+      "label": "网络",
+      "basis": "出站流量",
+      "minorUnits": 1200000,
+      "weights": {
+        "trade": 65,
+        "search": 15,
+        "data": 12,
+        "tools": 8
+      }
+    },
+    {
+      "id": "shared",
+      "label": "平台公共",
+      "basis": "给定的共享权重",
+      "minorUnits": 800000,
+      "weights": {
+        "trade": 4,
+        "search": 3,
+        "data": 2,
+        "tools": 1
+      }
+    }
+  ],
+  "note": "计费窗口与权重口径由使用者提供；本例金额虚构，不作真实成本归因或节省预测。"
+}

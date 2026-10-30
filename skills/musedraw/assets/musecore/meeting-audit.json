@@ -1,0 +1,132 @@
+{
+  "family": "meeting-audit",
+  "title": "会议占用了谁的时间？先核对人时",
+  "subtitle": "虚构团队 · 明确列出的会议，不从日历空白推断空闲",
+  "teamSize": 20,
+  "days": [
+    {
+      "id": "mon",
+      "label": "周一"
+    },
+    {
+      "id": "tue",
+      "label": "周二"
+    },
+    {
+      "id": "wed",
+      "label": "周三"
+    },
+    {
+      "id": "thu",
+      "label": "周四"
+    },
+    {
+      "id": "fri",
+      "label": "周五"
+    }
+  ],
+  "startMinute": 540,
+  "endMinute": 1080,
+  "slotMinutes": 60,
+  "hourlyCost": 180,
+  "currency": "元",
+  "meetings": [
+    {
+      "id": "sync",
+      "label": "团队周会",
+      "attendees": 20,
+      "durationMinutes": 60,
+      "occurrences": [
+        {
+          "day": "mon",
+          "startMinute": 540
+        }
+      ]
+    },
+    {
+      "id": "standup",
+      "label": "工作碰头",
+      "attendees": 8,
+      "durationMinutes": 60,
+      "occurrences": [
+        {
+          "day": "mon",
+          "startMinute": 600
+        },
+        {
+          "day": "tue",
+          "startMinute": 600
+        },
+        {
+          "day": "wed",
+          "startMinute": 600
+        },
+        {
+          "day": "thu",
+          "startMinute": 600
+        },
+        {
+          "day": "fri",
+          "startMinute": 600
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "label": "需求评审",
+      "attendees": 12,
+      "durationMinutes": 120,
+      "occurrences": [
+        {
+          "day": "tue",
+          "startMinute": 840
+        },
+        {
+          "day": "thu",
+          "startMinute": 840
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "label": "设计讨论",
+      "attendees": 6,
+      "durationMinutes": 120,
+      "occurrences": [
+        {
+          "day": "wed",
+          "startMinute": 780
+        }
+      ]
+    },
+    {
+      "id": "one",
+      "label": "专项沟通",
+      "attendees": 4,
+      "durationMinutes": 60,
+      "occurrences": [
+        {
+          "day": "mon",
+          "startMinute": 960
+        },
+        {
+          "day": "fri",
+          "startMinute": 900
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "label": "成果演示",
+      "attendees": 16,
+      "durationMinutes": 60,
+      "occurrences": [
+        {
+          "day": "fri",
+          "startMinute": 960
+        }
+      ]
+    }
+  ],
+  "note": "不同会议可能同时发生；未提供参会人身份，不能据此认定个人冲突或所有人的时间碎片。"
+}

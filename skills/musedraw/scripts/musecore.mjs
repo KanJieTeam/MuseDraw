@@ -14,7 +14,7 @@ const safeJson=o=>JSON.stringify(o).replace(/</g,'\\u003c').replace(/\u2028/g,'\
 
 export async function browserBundle(){
   const parts=[];
-  for(const file of ['../../assets/musecore/artwork/leaf-specimens.mjs','svg.mjs','visual-tools.mjs','quantitative.mjs','graphs.mjs','time-windows.mjs','calculation.mjs','state-trace.mjs','teaching-objects.mjs','solid-objects.mjs','report-families.mjs','visual-families.mjs','data-visuals.mjs','spatial-families.mjs','comparison-families.mjs','distribution-families.mjs','flow-amounts.mjs','workflow-structures.mjs','office-time.mjs','collaboration.mjs','formula.mjs','states.mjs','deployment.mjs','chalk-figures.mjs','blueprint-figures.mjs','solid-figures.mjs','magnitude.mjs','runtime.mjs']){
+  for(const file of ['../../assets/musecore/artwork/leaf-specimens.mjs','svg.mjs','visual-tools.mjs','quantitative.mjs','graphs.mjs','time-windows.mjs','calculation.mjs','state-trace.mjs','teaching-objects.mjs','solid-objects.mjs','office-analysis.mjs','report-families.mjs','visual-families.mjs','data-visuals.mjs','spatial-families.mjs','comparison-families.mjs','distribution-families.mjs','flow-amounts.mjs','workflow-structures.mjs','office-time.mjs','collaboration.mjs','formula.mjs','states.mjs','deployment.mjs','chalk-figures.mjs','blueprint-figures.mjs','solid-figures.mjs','magnitude.mjs','office-cost.mjs','office-objectives.mjs','office-audits.mjs','runtime.mjs']){
     const code=await fs.readFile(path.join(HERE,'musecore',file),'utf8');
     parts.push(code.replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,''));
   }

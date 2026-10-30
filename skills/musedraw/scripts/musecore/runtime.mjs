@@ -17,6 +17,9 @@ import {chalkFamilies} from './chalk-figures.mjs';
 import {blueprintFigureFamilies} from './blueprint-figures.mjs';
 import {solidFamilies} from './solid-figures.mjs';
 import {magnitudeFamilies} from './magnitude.mjs';
+import {officeCostFamilies} from './office-cost.mjs';
+import {officeObjectiveFamilies} from './office-objectives.mjs';
+import {officeAuditFamilies} from './office-audits.mjs';
 export const MuseCore=(()=>{
  const need=(yes,msg)=>{if(!yes)throw Error(msg)};
  const list=(x,min,max,p)=>need(Array.isArray(x)&&x.length>=min&&x.length<=max,`${p}: requires ${min}–${max} items`);
@@ -128,7 +131,7 @@ export const MuseCore=(()=>{
    return finish(f,{family:'schedule',width:720,height:bottom+12,taskWidth:taskW,slotWidth:cw,rowHeights:rowH,bars});
  }
  const helpers={need,list,fields,str,unique,width,wrap,track,finish,labelBox};
- const families={lanes,schedule,...reportFamilies(helpers),...visualFamilies(helpers),...dataVisualFamilies(helpers),...spatialFamilies(helpers),...comparisonFamilies(helpers),...distributionFamilies(helpers),...amountFlowFamilies(helpers),...workflowStructureFamilies(helpers),...officeTimeFamilies(helpers),...collaborationFamilies(helpers),...formulaFamilies(helpers),...stateFamilies(helpers),...deploymentFamilies(helpers),...chalkFamilies(helpers),...blueprintFigureFamilies(helpers),...solidFamilies(helpers),...magnitudeFamilies(helpers)};
+ const families={lanes,schedule,...reportFamilies(helpers),...visualFamilies(helpers),...dataVisualFamilies(helpers),...spatialFamilies(helpers),...comparisonFamilies(helpers),...distributionFamilies(helpers),...amountFlowFamilies(helpers),...workflowStructureFamilies(helpers),...officeTimeFamilies(helpers),...collaborationFamilies(helpers),...formulaFamilies(helpers),...stateFamilies(helpers),...deploymentFamilies(helpers),...chalkFamilies(helpers),...blueprintFigureFamilies(helpers),...solidFamilies(helpers),...magnitudeFamilies(helpers),...officeCostFamilies(helpers),...officeObjectiveFamilies(helpers),...officeAuditFamilies(helpers)};
  function report(b){
    fields(b,['family','title','columns','sections'],'report');str(b.title,'report.title');list(b.sections,2,6,'sections');unique(b.sections,'sections');
    const columns=b.columns??1;need([1,2].includes(columns),'report.columns must be 1 or 2');

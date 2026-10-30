@@ -525,6 +525,54 @@
           "sourceSha256": "d6d9a77debe3db15b23b3d5efce861acac314f6dd34b54c97dfd9eddbf149d0c"
         }
       ]
+    },
+    {
+      "id": "cost-allocation",
+      "family": "cost-allocation",
+      "file": "cost-allocation.json",
+      "contentStatus": "fictional office development content; not a measured result or recommendation",
+      "sourceCases": [
+        {
+          "id": "118-finops-allocation",
+          "sourceSha256": "a740c5b45c9168fd1bbddfe161cb7b9d859b12544b80c9b50f01260b47037abd"
+        }
+      ]
+    },
+    {
+      "id": "objectives",
+      "family": "objectives",
+      "file": "objectives.json",
+      "contentStatus": "fictional office development content; not a measured result or recommendation",
+      "sourceCases": [
+        {
+          "id": "182-okr-alignment",
+          "sourceSha256": "121a4b9431da3cbf078418d3b46eef77612fab1dcd764976ab76cadc1aa33799"
+        }
+      ]
+    },
+    {
+      "id": "meeting-audit",
+      "family": "meeting-audit",
+      "file": "meeting-audit.json",
+      "contentStatus": "fictional office development content; not a measured result or recommendation",
+      "sourceCases": [
+        {
+          "id": "188-meeting-audit",
+          "sourceSha256": "6308bfc1ad635839675e81a07d3e5624eb4530d9170a04cb03d642fe99c4028f"
+        }
+      ]
+    },
+    {
+      "id": "space-use",
+      "family": "space-use",
+      "file": "space-use.json",
+      "contentStatus": "fictional office development content; not a measured result or recommendation",
+      "sourceCases": [
+        {
+          "id": "194-space-utilization",
+          "sourceSha256": "632c9f81106b1a32c5bb1c3726fa93bf4f91ada34ffe34d8f7366882a2e17656"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -610,6 +658,15 @@
         "magnitudes",
         "solids",
         "orthoview"
+      ]
+    },
+    {
+      "reference": "references/musecore-office-analysis.md",
+      "ids": [
+        "cost-allocation",
+        "objectives",
+        "meeting-audit",
+        "space-use"
       ]
     }
   ]

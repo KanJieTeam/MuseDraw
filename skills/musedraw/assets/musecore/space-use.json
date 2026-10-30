@@ -1,0 +1,81 @@
+{
+  "family": "space-use",
+  "title": "办公室使用率，先看采样再下结论",
+  "subtitle": "虚构空间 · 席位容量与各次观察共同计算",
+  "zones": [
+    {
+      "id": "a",
+      "label": "研发区 A",
+      "capacity": 45
+    },
+    {
+      "id": "b",
+      "label": "研发区 B",
+      "capacity": 35
+    },
+    {
+      "id": "c",
+      "label": "协作区",
+      "capacity": 25
+    },
+    {
+      "id": "d",
+      "label": "安静区",
+      "capacity": 15
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "mon",
+      "label": "周一上午",
+      "occupied": {
+        "a": 30,
+        "b": 22,
+        "c": 15,
+        "d": 9
+      }
+    },
+    {
+      "id": "tue",
+      "label": "周二上午",
+      "occupied": {
+        "a": 35,
+        "b": 25,
+        "c": 16,
+        "d": 11
+      }
+    },
+    {
+      "id": "wed",
+      "label": "周三上午",
+      "occupied": {
+        "a": 33,
+        "b": 23,
+        "c": 13,
+        "d": 8
+      }
+    },
+    {
+      "id": "thu",
+      "label": "周四上午",
+      "occupied": {
+        "a": 28,
+        "b": 20,
+        "c": 14,
+        "d": 7
+      }
+    },
+    {
+      "id": "fri",
+      "label": "周五上午",
+      "occupied": {
+        "a": 22,
+        "b": 17,
+        "c": 10,
+        "d": 6
+      }
+    }
+  ],
+  "selected": "wed",
+  "note": "当前席位图展示指定采样时点；没有持续监测数据，不外推到全天。"
+}

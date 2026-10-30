@@ -1,0 +1,114 @@
+{
+  "family": "objectives",
+  "title": "季度目标，让每一项进展都能追溯",
+  "subtitle": "虚构组织 · 指标各自保留起点、当前值和目标值",
+  "objective": "让中小企业三天内用上数字化服务",
+  "teams": [
+    {
+      "id": "product",
+      "label": "产品组",
+      "objective": "让新客户更快完成首次使用",
+      "weight": 1,
+      "results": [
+        {
+          "id": "product-0",
+          "label": "首次完成率",
+          "start": 40,
+          "actual": 72,
+          "target": 90,
+          "unit": "%",
+          "weight": 1
+        },
+        {
+          "id": "product-1",
+          "label": "关键步骤数",
+          "start": 8,
+          "actual": 5,
+          "target": 4,
+          "unit": "步",
+          "weight": 1
+        },
+        {
+          "id": "product-2",
+          "label": "可用性评分",
+          "start": 60,
+          "actual": 78,
+          "target": 90,
+          "unit": "分",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": "交付组",
+      "objective": "让服务交付变得可预期",
+      "weight": 1,
+      "results": [
+        {
+          "id": "delivery-0",
+          "label": "交付周期",
+          "start": 10,
+          "actual": 6,
+          "target": 4,
+          "unit": "天",
+          "weight": 1
+        },
+        {
+          "id": "delivery-1",
+          "label": "标准流程覆盖",
+          "start": 30,
+          "actual": 80,
+          "target": 100,
+          "unit": "%",
+          "weight": 1
+        },
+        {
+          "id": "delivery-2",
+          "label": "首次验收通过率",
+          "start": 70,
+          "actual": 88,
+          "target": 95,
+          "unit": "%",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "success",
+      "label": "客户组",
+      "objective": "让客户持续从服务中受益",
+      "weight": 1,
+      "results": [
+        {
+          "id": "success-0",
+          "label": "活跃使用率",
+          "start": 30,
+          "actual": 55,
+          "target": 80,
+          "unit": "%",
+          "weight": 1
+        },
+        {
+          "id": "success-1",
+          "label": "支持响应时间",
+          "start": 24,
+          "actual": 8,
+          "target": 4,
+          "unit": "小时",
+          "weight": 1
+        },
+        {
+          "id": "success-2",
+          "label": "续约意向",
+          "start": 60,
+          "actual": 78,
+          "target": 90,
+          "unit": "%",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "note": "分数只描述给定指标的线性进展，不代替效果评价；所有权重由输入明确给出。"
+}
