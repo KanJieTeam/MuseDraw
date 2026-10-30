@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.29
+  instructions-version: musecore-2026-10-31.30
 ---
 
 # MuseDraw
@@ -143,6 +143,10 @@ family's encodings, coordinated geometry and placement.
 | Given plant stages and explicit photosynthesis/respiration pathways | [Plant stages and energy](references/musecore-plant-energy.md) |
 | Fixed solar-longitude catalogue and representative elevation section | [Seasons and terrain](references/musecore-season-terrace.md) |
 | Independent parallel-training lessons and exact financial bridges | [Training and statements](references/musecore-training-statements.md) |
+| Declared poems and attributed literary interpretations | [Poetry and reading](references/musecore-poetry-reading.md) |
+| Sourced historical events with explicit time coordinates | [Historical print](references/musecore-history-print.md) |
+| Conditional Bass curves and dated responsibility plans | [Adoption and handoffs](references/musecore-adoption-handoffs.md) |
+| Ideal quantum amplitudes and synthetic sequence geometry | [Grover and primer teaching](references/musecore-grover-primer.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

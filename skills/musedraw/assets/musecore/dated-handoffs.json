@@ -1,0 +1,132 @@
+{
+  "family": "dated-handoffs",
+  "title": "期中考试质量分析流程",
+  "subtitle": "考后两周的给定计划，从成绩记录到个别沟通与跟进",
+  "evidenceKind": "illustrative-plan",
+  "dayOrigin": "以考试结束当天为第0天",
+  "dayPlacement": "ordered-milestones",
+  "startDay": 1,
+  "endDay": 14,
+  "lanes": [
+    {
+      "id": "office",
+      "label": "教务处"
+    },
+    {
+      "id": "grade",
+      "label": "年级组"
+    },
+    {
+      "id": "subject",
+      "label": "学科组"
+    },
+    {
+      "id": "teacher",
+      "label": "班主任"
+    },
+    {
+      "id": "parent",
+      "label": "家长"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "scores",
+      "label": "阅卷与成绩录入",
+      "lane": "office",
+      "day": 1,
+      "importance": "key"
+    },
+    {
+      "id": "statistics",
+      "label": "年级统计：均分、分数段",
+      "lane": "office",
+      "day": 3,
+      "importance": "support"
+    },
+    {
+      "id": "meeting",
+      "label": "年级质量分析会",
+      "lane": "grade",
+      "day": 3,
+      "importance": "key"
+    },
+    {
+      "id": "paper",
+      "label": "试卷分析：找出得分率低的题",
+      "lane": "subject",
+      "day": 5,
+      "importance": "support"
+    },
+    {
+      "id": "teaching",
+      "label": "制定补偿教学计划",
+      "lane": "subject",
+      "day": 7,
+      "importance": "key"
+    },
+    {
+      "id": "talk",
+      "label": "与重点学生个别谈话",
+      "lane": "teacher",
+      "day": 7,
+      "importance": "support"
+    },
+    {
+      "id": "parents",
+      "label": "召开家长会",
+      "lane": "teacher",
+      "day": 10,
+      "importance": "key"
+    },
+    {
+      "id": "home",
+      "label": "了解成绩与在家建议",
+      "lane": "parent",
+      "day": 10,
+      "importance": "support"
+    },
+    {
+      "id": "quiz",
+      "label": "跟进小测，检查效果",
+      "lane": "subject",
+      "day": 14,
+      "importance": "key"
+    }
+  ],
+  "links": [
+    {
+      "from": "scores",
+      "to": "statistics"
+    },
+    {
+      "from": "statistics",
+      "to": "meeting"
+    },
+    {
+      "from": "meeting",
+      "to": "paper"
+    },
+    {
+      "from": "paper",
+      "to": "teaching"
+    },
+    {
+      "from": "teaching",
+      "to": "talk"
+    },
+    {
+      "from": "talk",
+      "to": "parents"
+    },
+    {
+      "from": "parents",
+      "to": "home"
+    },
+    {
+      "from": "teaching",
+      "to": "quiz"
+    }
+  ],
+  "note": "示例计划；关键/配套标记均不表示已完成。"
+}

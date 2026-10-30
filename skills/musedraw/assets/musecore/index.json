@@ -1877,6 +1877,102 @@
           "sourceSha256": "9b2e615e6a5018beb974cb86128e1274e3c6f60ce6db17831876785900832120"
         }
       ]
+    },
+    {
+      "id": "moon-poem",
+      "family": "moon-poem",
+      "file": "moon-poem.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "127-jing-ye-si",
+          "sourceSha256": "a5b7a5745cfefbdfff5fc8ca71049bd23d0c5ed9d874f46743619b806773c1e9"
+        }
+      ]
+    },
+    {
+      "id": "literary-reading-arc",
+      "family": "literary-reading-arc",
+      "file": "literary-reading-arc.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "j04-chibifu-qinggan",
+          "sourceSha256": "b3abc694f80ddfec72679f51b363fab83293344caf087e18f3d7737e9b958417"
+        }
+      ]
+    },
+    {
+      "id": "history-newspaper",
+      "family": "history-newspaper",
+      "file": "history-newspaper.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "150-xinhai-revolution",
+          "sourceSha256": "ab36a16686f047120eaeabc1c26bf57e414156f6ee878af032ba792121e723a8"
+        }
+      ]
+    },
+    {
+      "id": "invention-timeline",
+      "family": "invention-timeline",
+      "file": "invention-timeline.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t11-gongye-geming",
+          "sourceSha256": "5ff4b14a31ad0aacf638751303a1c78a6c20a585d9d63ecdfcd8cd6d6ad8f655"
+        }
+      ]
+    },
+    {
+      "id": "adoption-scenario",
+      "family": "adoption-scenario",
+      "file": "adoption-scenario.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "197-platform-adoption",
+          "sourceSha256": "107736c4d0ad5a3102070e403207e85430d267fafc63345c2ae9fc09787763d2"
+        }
+      ]
+    },
+    {
+      "id": "dated-handoffs",
+      "family": "dated-handoffs",
+      "file": "dated-handoffs.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t16-qizhong-fenxi",
+          "sourceSha256": "1a4ae2b3108963e4f16916fda652f80b177e09e4612f929ece1ece26ab8380c3"
+        }
+      ]
+    },
+    {
+      "id": "grover-amplitudes",
+      "family": "grover-amplitudes",
+      "file": "grover-amplitudes.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "165-grover-search",
+          "sourceSha256": "8f7a59d0a25d83de0b15562f9c6aba80997c4264f952d49f79c80b482cb5e6b9"
+        }
+      ]
+    },
+    {
+      "id": "primer-pair",
+      "family": "primer-pair",
+      "file": "primer-pair.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "180-pcr-primers",
+          "sourceSha256": "392af93cb2fa332cf5c3fa1faff534b5e6b21f35738052770a851d4987b0a9e3"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2325,6 +2421,34 @@
       "ids": [
         "parallel-training",
         "three-statements"
+      ]
+    },
+    {
+      "reference": "references/musecore-poetry-reading.md",
+      "ids": [
+        "moon-poem",
+        "literary-reading-arc"
+      ]
+    },
+    {
+      "reference": "references/musecore-history-print.md",
+      "ids": [
+        "history-newspaper",
+        "invention-timeline"
+      ]
+    },
+    {
+      "reference": "references/musecore-adoption-handoffs.md",
+      "ids": [
+        "adoption-scenario",
+        "dated-handoffs"
+      ]
+    },
+    {
+      "reference": "references/musecore-grover-primer.md",
+      "ids": [
+        "grover-amplitudes",
+        "primer-pair"
       ]
     }
   ]

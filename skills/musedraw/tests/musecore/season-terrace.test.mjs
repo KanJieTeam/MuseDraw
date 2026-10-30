@@ -6,6 +6,14 @@ import {editorHtml} from '../../scripts/musecore.mjs';
 import {loadPlaywrightInfo} from '../../scripts/engine/export.mjs';
 import {resolveBrowser} from '../../scripts/engine/environment.mjs';
 import {SOLAR_TERM_CATALOGUE,solarLongitudeUnit,solarTermsWheelModel,terraceSectionModel} from '../../scripts/musecore/season-terrace-models.mjs';
+import {stAvoidPaperFibres} from '../../scripts/musecore/season-terrace-figures.mjs';
+// Reproduces a fallback glyph extending into a decorative fibre. Actual ink,
+// not the planned advance/line box, must control the material exclusion.
+{
+ const fibre=(x,y)=>({points:[{x,y},{x:x+8,y}],removed:false,remove(){this.removed=true}});
+ const crossed=fibre(95,105),clear=fibre(300,300),s={querySelectorAll(selector){return selector==='text'?[{getBBox:()=>({x:60,y:90,width:72,height:84})}]:[crossed,clear]}};
+ assert.equal(stAvoidPaperFibres(s),1);assert.equal(crossed.removed,true);assert.equal(clear.removed,false);
+}
 const skill=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),load=async n=>JSON.parse(await fs.readFile(path.join(skill,'assets/musecore',n+'.json'),'utf8')),wheel=await load('solar-terms-wheel'),section=await load('terrace-section'),out=process.env.MUSECORE_SEASON_TERRACE_OUT,stamp=new Date().toISOString().replace(/[:.]/g,'-'),tests=[],cases=[],rejectCases=[],change=(b,f)=>{const c=structuredClone(b);f(c);return c};
 const {pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({...resolveBrowser(pw),headless:true}),page=await browser.newPage({viewport:{width:1800,height:1800}});
 async function render(input,stress=false){return page.evaluate(async({input,stress})=>{const original=CanvasRenderingContext2D.prototype.measureText;if(stress)CanvasRenderingContext2D.prototype.measureText=function(t){const m=original.call(this,t);return new Proxy(m,{get(o,k){return k==='fontBoundingBoxAscent'?Reflect.get(o,k,o)+40:Reflect.get(o,k,o)}})};try{const svg=MuseCore.render(input);document.getElementById('output').replaceChildren(svg);await document.fonts.ready;return {svg:svg.outerHTML,audit:MuseCore.audit(svg)}}catch(e){return {error:e.message}}finally{CanvasRenderingContext2D.prototype.measureText=original}},{input,stress})}

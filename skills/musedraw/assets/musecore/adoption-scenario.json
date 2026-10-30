@@ -1,0 +1,55 @@
+{
+  "family": "adoption-scenario",
+  "title": "协作平台全员上线",
+  "subtitle": "2,400名员工的给定参数情景 · 白点为独立示例记录",
+  "evidenceKind": "illustrative-scenario",
+  "observationKind": "illustrative-records",
+  "population": 2400,
+  "p": 0.03,
+  "q": 0.38,
+  "weeks": 20,
+  "targetFraction": 0.9,
+  "observations": [
+    {
+      "id": "w1",
+      "week": 1,
+      "cumulative": 86
+    },
+    {
+      "id": "w2",
+      "week": 2,
+      "cumulative": 194
+    },
+    {
+      "id": "w3",
+      "week": 3,
+      "cumulative": 337
+    },
+    {
+      "id": "w4",
+      "week": 4,
+      "cumulative": 535
+    },
+    {
+      "id": "w5",
+      "week": 5,
+      "cumulative": 752
+    },
+    {
+      "id": "w6",
+      "week": 6,
+      "cumulative": 1066
+    },
+    {
+      "id": "w7",
+      "week": 7,
+      "cumulative": 1310
+    },
+    {
+      "id": "w8",
+      "week": 8,
+      "cumulative": 1660
+    }
+  ],
+  "note": "模型为条件情景，不代表真实上线承诺。"
+}

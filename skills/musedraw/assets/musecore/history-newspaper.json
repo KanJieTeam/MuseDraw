@@ -1,0 +1,6 @@
+{
+ "family":"history-newspaper","title":"武昌首义　民国肇建　清帝退位","subtitle":"辛亥革命前后 · 事件日期与史料线索","masthead":"历史周刊","section":"近代中国 · 辛亥革命专题","recordMode":"catalogue","events":[{"id":"tongmenghui"},{"id":"huanghuagang"},{"id":"wuchang"},{"id":"republic"},{"id":"abdication"}],
+ "elapsed":{"from":"wuchang","to":"abdication"},
+ "panels":[{"title":"从起义到共和","text":"武昌起义后，各省相继响应。南京临时政府成立与清帝退位，是这一时期制度变动的重要节点。","sourceId":"xinhai","kind":"context"},{"title":"制度建设仍在继续","text":"1912年3月11日，南京临时政府颁布《中华民国临时约法》。年表之外，还需结合具体文献阅读这段历史。","sourceId":"xinhai","kind":"context"},{"title":"读史的线索","text":"这里把组织成立、武装起义与政权更替分开记述。事件先后是一条线索，解释历史还须回到史料。","sourceId":"xinhai","kind":"interpretation"}],
+ "note":"日期采用公历；相隔天数不含起始日。"
+}

@@ -1,0 +1,30 @@
+{
+  "family": "primer-pair",
+  "title": "PCR 引物：给定序列核对",
+  "subtitle": "在一段明确的合成模板上定位两条给定引物；逐位检查方向、长度与互补字符。",
+  "sequenceKind": "synthetic-teaching",
+  "template": "GCATAAACCTAATTACCGGAAGTCCCTCCCCACATTGCGTCGCGAGGTAGGCCACTGGATGTTGCGCGCTCACCTAACCCAGCGGCCCATGACGTCACTTAGGGGCTGTCCGTACTGAGAATGATTCGACTTAAGCCCATCAAGTGAAGGTTAGCCGGTAAACCGCCTACCCCCATTACGTTCTAGTCTAACTCCCCAAAGGCGTCGCAATCGTGAGAACGTTCCAACTTGACACCGAAGAAGGACAAGTAGCGGGGTTACGCTGTGTTGGGTAACAGTATACTTGCCGTCTTGTGCGAA",
+  "forward": {
+    "label": "正向引物 F",
+    "start": 31,
+    "end": 50,
+    "sequence": "CACATTGCGTCGCGAGGTAG"
+  },
+  "reverse": {
+    "label": "反向引物 R",
+    "start": 231,
+    "end": 252,
+    "sequence": "CTACTTGTCCTTCTTCGGTGTC"
+  },
+  "example": {
+    "label": "互补示例：两份同一序列",
+    "sequence": "TCAGGACTAGCTAGGCGCGC"
+  },
+  "referenceBands": {
+    "lengthMin": 18,
+    "lengthMax": 25,
+    "gcMin": 40,
+    "gcMax": 60
+  },
+  "note": "仅核对这段合成序列；没有检查基因组特异性、错配、热力学或实验条件，不据此判定引物可用于实验。"
+}

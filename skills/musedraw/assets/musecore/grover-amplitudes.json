@@ -1,0 +1,10 @@
+{
+  "family": "grover-amplitudes",
+  "title": "Grover 搜索：相位与振幅",
+  "subtitle": "显式标记一个基态，在理想实态矢量中逐步计算；线路与每一步振幅使用同一组操作。",
+  "mode": "ideal-single-target-real-state",
+  "qubits": 3,
+  "target": "101",
+  "iterations": 2,
+  "note": "教学状态计算，不连接量子硬件、不抽取测量样本。下方概率来自状态的振幅平方，不代表一次测量必得目标。"
+}

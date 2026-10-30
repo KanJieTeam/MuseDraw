@@ -1,0 +1,11 @@
+{
+ "family":"literary-reading-arc","workId":"chibifu-excerpts","title":"《赤壁赋》的阅读起伏","subtitle":"由清风明月入境，经主客问答，再读结尾的笑与眠。","attribution":"苏轼 · 前赤壁赋 · 元丰五年（1082）","interpretationStatus":"supplied-reading-judgements",
+ "stages":[
+  {"id":"open","sourcePassage":1,"title":"泛舟赤壁","quote":"清风徐来，水波不兴。","readingLabel":"乐","placement":"upper","summary":"从清风、月与江水进入开阔的游赏。"},
+  {"id":"flute","sourcePassage":2,"title":"扣舷而歌","quote":"如怨如慕，如泣如诉。","readingLabel":"转悲","placement":"middle","summary":"歌声与客的洞箫相和，声情发生变化。"},
+  {"id":"lament","sourcePassage":3,"title":"客的悲叹","quote":"哀吾生之须臾，羡长江之无穷。","readingLabel":"悲","placement":"lower","summary":"客由江山往事，感叹个体生命的短暂。"},
+  {"id":"answer","sourcePassage":4,"title":"苏子的回答","quote":"逝者如斯，而未尝往也；","readingLabel":"释然","placement":"middle","summary":"从变与不变两个角度，重新观照水月。"},
+  {"id":"close","sourcePassage":5,"title":"洗盏更酌","quote":"客喜而笑，洗盏更酌。","readingLabel":"喜","placement":"upper","summary":"在笑与再饮中收束，最后相枕而眠。"}
+ ],
+ "conclusion":"一种读法：结尾的“喜”，是经过问答之后重新获得的舒展。","note":"曲线高低为给定的阅读示意，没有情绪分值。"
+}

@@ -1,0 +1,6 @@
+{
+ "family":"moon-poem","workId":"jingyesi-common","title":"静夜思","author":"唐·李白","editionLabel":"通行本 · 由右向左读",
+ "lines":["床前明月光，","疑是地上霜。","举头望明月，","低头思故乡。"],
+ "annotations":[{"lineIndex":1,"anchor":"疑","explanation":"怀疑、以为：月光的白色让人联想到地上的霜。"},{"lineIndex":2,"anchor":"举头","explanation":"抬起头；由望月读到末句的思乡。"}],
+ "motif":{"moonScale":1,"branch":true,"frostStrokes":5},"stamp":"白","note":"月与霜色为诗意留白。"
+}
