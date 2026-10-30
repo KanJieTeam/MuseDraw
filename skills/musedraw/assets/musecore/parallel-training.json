@@ -1,0 +1,12 @@
+{
+  "family":"parallel-training",
+  "title":"大模型训练的三种并行方式",
+  "subtitle":"分别给定的 DP、列张量切分与 GPipe 教学算例",
+  "evidenceKind":"illustrative-plan",
+  "parameterCount":7000000000,
+  "dataParallel":{"devices":[{"id":"g0","label":"G0"},{"id":"g1","label":"G1"},{"id":"g2","label":"G2"},{"id":"g3","label":"G3"},{"id":"g4","label":"G4"},{"id":"g5","label":"G5"},{"id":"g6","label":"G6"},{"id":"g7","label":"G7"}],"gradientBytesPerParameter":2},
+  "tensorParallel":{"batchRows":8,"inputColumns":4096,"shards":[{"id":"t0","label":"G0","columns":1024},{"id":"t1","label":"G1","columns":1024},{"id":"t2","label":"G2","columns":1024},{"id":"t3","label":"G3","columns":1024}]},
+  "pipeline":{"schedule":"gpipe-flush-equal-slots","stages":[{"id":"p0","label":"段0"},{"id":"p1","label":"段1"},{"id":"p2","label":"段2"},{"id":"p3","label":"段3"}],"microbatches":8,"slotUnit":"abstract-slot"},
+  "memory":{"components":[{"id":"weights","label":"参数","bytesPerParameter":2},{"id":"gradients","label":"梯度","bytesPerParameter":2},{"id":"moments","label":"两份动量","bytesPerParameter":8},{"id":"master","label":"主权重","bytesPerParameter":4}],"stateShardCount":8,"capacityBytesPerDevice":80000000000},
+  "note":"GB按10⁹字节。显存栏是独立的给定状态分片算例；普通复制式DP不自动获得此分片。未计激活与额外缓冲。"
+}

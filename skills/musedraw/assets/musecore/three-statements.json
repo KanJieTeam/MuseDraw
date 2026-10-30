@@ -1,0 +1,14 @@
+{
+  "family":"three-statements",
+  "title":"三张报表怎么连起来",
+  "subtitle":"财务入门 · 全部数字为显式示例",
+  "evidenceKind":"illustrative-record",
+  "view":"overview",
+  "period":"全年",
+  "unit":"万元",
+  "minorUnitScale":100,
+  "income":[{"id":"revenue","label":"营业收入","kind":"revenue","amountMinor":100000},{"id":"cost","label":"营业成本","kind":"expense","amountMinor":60000},{"id":"expense","label":"期间费用","kind":"expense","amountMinor":25000},{"id":"depreciation","label":"折旧","kind":"depreciation","amountMinor":5000},{"id":"tax","label":"给定所得税","kind":"tax","amountMinor":2500}],
+  "accounts":[{"id":"cash","label":"现金","kind":"cash","openingMinor":12000,"closingMinor":7500},{"id":"ar","label":"应收账款","kind":"working-asset","openingMinor":20000,"closingMinor":24000},{"id":"inventory","label":"存货","kind":"working-asset","openingMinor":15000,"closingMinor":17000},{"id":"ppe","label":"固定资产净额","kind":"fixed-asset","openingMinor":50000,"closingMinor":53000},{"id":"ap","label":"应付账款","kind":"operating-liability","openingMinor":18000,"closingMinor":20000},{"id":"debt","label":"借款","kind":"debt","openingMinor":30000,"closingMinor":28000},{"id":"capital","label":"股本","kind":"paid-in-equity","openingMinor":40000,"closingMinor":40000},{"id":"retained","label":"留存收益","kind":"retained-earnings","openingMinor":9000,"closingMinor":13500}],
+  "cashMovements":[{"id":"capex","label":"现金购置设备","kind":"fixed-purchase","targetAccount":"ppe","amountMinor":-8000},{"id":"repayment","label":"现金偿还借款","kind":"debt-change","targetAccount":"debt","amountMinor":-2000},{"id":"dividend","label":"现金分红","kind":"dividend","targetAccount":"retained","amountMinor":-3000}],
+  "note":"仅核对给定封闭账户与现金变动；税额直接给定。概览汇总营运资本和投资、筹资明细，detail视图展开原记录。"
+}

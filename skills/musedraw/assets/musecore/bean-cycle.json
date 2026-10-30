@@ -1,0 +1,77 @@
+{
+  "family": "bean-cycle",
+  "title": "菜豆的一生",
+  "subtitle": "给定的五个主要教学阶段；形态用于说明结构，连接用于阅读顺序。",
+  "species": "Phaseolus-vulgaris",
+  "sequenceKind": "supplied-teaching-sequence",
+  "timeKind": "not-supplied",
+  "stages": [
+    {
+      "kind": "seed",
+      "label": "种子",
+      "description": "种皮包着胚，两片子叶储存营养",
+      "elapsedDays": null,
+      "illustration": {
+        "foliageLeaves": 0,
+        "flowers": 0,
+        "pods": 0,
+        "seedsPerPod": 0
+      }
+    },
+    {
+      "kind": "radicle",
+      "label": "萌发",
+      "description": "胚根先突破种皮，向下生长",
+      "elapsedDays": null,
+      "illustration": {
+        "foliageLeaves": 0,
+        "flowers": 0,
+        "pods": 0,
+        "seedsPerPod": 0
+      }
+    },
+    {
+      "kind": "seedling",
+      "label": "幼苗",
+      "description": "子叶出土，第一对单叶在其上方展开",
+      "elapsedDays": null,
+      "illustration": {
+        "foliageLeaves": 2,
+        "flowers": 0,
+        "pods": 0,
+        "seedsPerPod": 0
+      }
+    },
+    {
+      "kind": "flower",
+      "label": "开花",
+      "description": "后生叶为三出复叶；传粉、受精后结果",
+      "elapsedDays": null,
+      "illustration": {
+        "foliageLeaves": 3,
+        "flowers": 3,
+        "pods": 0,
+        "seedsPerPod": 0
+      }
+    },
+    {
+      "kind": "fruit",
+      "label": "结果",
+      "description": "子房发育成豆荚，胚珠发育成种子",
+      "elapsedDays": null,
+      "illustration": {
+        "foliageLeaves": 0,
+        "flowers": 0,
+        "pods": 1,
+        "seedsPerPod": 4
+      }
+    }
+  ],
+  "returnMeaning": "seeds-for-next-generation",
+  "germinationConditions": {
+    "water": "适量的水",
+    "oxygen": "充足的氧气",
+    "temperature": "适宜的温度"
+  },
+  "note": "图中叶、花、豆荚和种子标记是给定的教学示意数量，不预测真实长势或产量。"
+}

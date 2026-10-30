@@ -1805,6 +1805,78 @@
           "sourceSha256": "6a0e963b637e41ed0d16eb81d6efe491000592fadc6ab9f8f9087cc4caa44b21"
         }
       ]
+    },
+    {
+      "id": "bean-cycle",
+      "family": "bean-cycle",
+      "file": "bean-cycle.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t01-caidou-yisheng",
+          "sourceSha256": "4843438371afc6f71f4de5d8bce9779632e491b8f12bfe00309acc8ec88cc134"
+        }
+      ]
+    },
+    {
+      "id": "leaf-energy",
+      "family": "leaf-energy",
+      "file": "leaf-energy.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "146-photosynthesis-respiration",
+          "sourceSha256": "5265692ffe7b3ec75c29ec24da7af413c9b4ff34c7332539dea4303198db4139"
+        }
+      ]
+    },
+    {
+      "id": "solar-terms-wheel",
+      "family": "solar-terms-wheel",
+      "file": "solar-terms-wheel.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t08-ershisi-jieqi",
+          "sourceSha256": "625c9845ccd5af2e6bcf72f1e2805f9b78e9d11be653655b3b134ea4ced8c6f8"
+        }
+      ]
+    },
+    {
+      "id": "terrace-section",
+      "family": "terrace-section",
+      "file": "terrace-section.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "152-three-terraces",
+          "sourceSha256": "a0619b923160ad13b6446f4f1b396d242b372f1dbeccfd71dc3f3f6a28e0e4ae"
+        }
+      ]
+    },
+    {
+      "id": "parallel-training",
+      "family": "parallel-training",
+      "file": "parallel-training.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "175-parallel-training",
+          "sourceSha256": "9f285590e18c90049551f11b1e186676ccf3728e33a1b588c1e4e47915643604"
+        }
+      ]
+    },
+    {
+      "id": "three-statements",
+      "family": "three-statements",
+      "file": "three-statements.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "200-three-statements",
+          "sourceSha256": "9b2e615e6a5018beb974cb86128e1274e3c6f60ce6db17831876785900832120"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2232,6 +2304,27 @@
       "ids": [
         "synthetic-ring-poster",
         "silent-cinema-poster"
+      ]
+    },
+    {
+      "reference": "references/musecore-plant-energy.md",
+      "ids": [
+        "bean-cycle",
+        "leaf-energy"
+      ]
+    },
+    {
+      "reference": "references/musecore-season-terrace.md",
+      "ids": [
+        "solar-terms-wheel",
+        "terrace-section"
+      ]
+    },
+    {
+      "reference": "references/musecore-training-statements.md",
+      "ids": [
+        "parallel-training",
+        "three-statements"
       ]
     }
   ]

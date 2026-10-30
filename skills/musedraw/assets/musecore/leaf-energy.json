@@ -1,0 +1,54 @@
+{
+  "family": "leaf-energy",
+  "title": "光合作用与有氧呼吸",
+  "subtitle": "同一片绿色叶片，既可储存光能，也通过呼吸获得生命活动可利用的能量。",
+  "context": "green-leaf-aerobic-teaching",
+  "illumination": "comparison-only",
+  "oxygenAvailable": true,
+  "photosynthesis": {
+    "location": "chloroplast",
+    "inputs": [
+      "carbon-dioxide",
+      "water"
+    ],
+    "outputs": [
+      "carbohydrate",
+      "oxygen"
+    ],
+    "energyInput": "light",
+    "energyStorage": "carbohydrate-chemical-energy"
+  },
+  "respiration": {
+    "locations": [
+      "cytosol",
+      "mitochondrion"
+    ],
+    "inputs": [
+      "carbohydrate",
+      "oxygen"
+    ],
+    "outputs": [
+      "carbon-dioxide",
+      "water"
+    ],
+    "lightDependence": "not-required",
+    "energyOutputs": [
+      "ATP-supports-work",
+      "heat"
+    ]
+  },
+  "materialLabels": {
+    "carbon-dioxide": "二氧化碳",
+    "water": "水",
+    "carbohydrate": "糖类（有机物）",
+    "oxygen": "氧气"
+  },
+  "comparisonRows": [
+    "location",
+    "condition",
+    "inputs",
+    "outputs",
+    "energy"
+  ],
+  "note": "直箭头表示物质，波线表示能量；箭头粗细不代表通量。水由根部输送到叶片的过程在此省略。"
+}

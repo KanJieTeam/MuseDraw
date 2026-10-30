@@ -1,0 +1,11 @@
+{
+ "family":"solar-terms-wheel",
+ "title":"二十四节气",
+ "subtitle":"太阳黄经每增十五度，循四时而往复。",
+ "selectedTermIds":["lichun","yushui","jingzhe","chunfen","qingming","guyu","lixia","xiaoman","mangzhong","xiazhi","xiaoshu","dashu","liqiu","chushu","bailu","qiufen","hanlu","shuangjiang","lidong","xiaoxue","daxue","dongzhi","xiaohan","dahan"],
+ "startTermId":"lichun",
+ "sunLongitudeDegrees":null,
+ "seasonLabels":["春","夏","秋","冬"],
+ "stamp":"节气",
+ "note":"环上为太阳黄经，不是某年的交节日期；角度等分，日数不等分。"
+}

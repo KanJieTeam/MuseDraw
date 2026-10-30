@@ -1,0 +1,21 @@
+{
+ "family":"terrace-section",
+ "title":"中国地势的三级阶梯",
+ "subtitle":"西高东低的总体格局 · 给定代表高度的示意剖面",
+ "dataStatus":"schematic-representative-heights",
+ "unit":"m",
+ "directionLabels":["西部","东部"],
+ "verticalMaxM":5000,
+ "levels":[
+  {"id":"upper","label":"第一级阶梯","representativeHeightM":4500,"schematicWidthUnits":3,"elevationDescription":"平均海拔在4000米以上","regions":["青藏高原"]},
+  {"id":"middle","label":"第二级阶梯","representativeHeightM":1500,"schematicWidthUnits":4,"elevationDescription":"海拔一般为1000—2000米，局部盆地较低","regions":["内蒙古高原","黄土高原","云贵高原","四川盆地","塔里木盆地","准噶尔盆地"]},
+  {"id":"lower","label":"第三级阶梯","representativeHeightM":300,"schematicWidthUnits":3,"elevationDescription":"多在500米以下，间有丘陵和低山","regions":["东北平原","华北平原","长江中下游平原","东南丘陵"]}
+ ],
+ "boundaries":[
+  {"between":["upper","middle"],"label":"昆仑山—祁连山—横断山"},
+  {"between":["middle","lower"],"label":"大兴安岭—太行山—巫山—雪峰山"}
+ ],
+ "seaLabel":"海洋",
+ "takeaway":"许多大河总体向东入海；阶梯交界的河段落差较大。",
+ "note":"高度共用米制纵轴；横宽和剖面走向仅作示意，不对应一条真实测线。"
+}
