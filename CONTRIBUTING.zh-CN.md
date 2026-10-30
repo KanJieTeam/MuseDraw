@@ -32,8 +32,13 @@ gallery/<case>/
 ```sh
 npm --prefix skills/musedraw install
 node skills/musedraw/scripts/musedraw.mjs render gallery/<case>/scene.json
+python -m pip install -r requirements-ci.txt
 python scripts/check.py
 ```
+
+完整回归检查需要 Python 3.11+，以及 `requirements-ci.txt` 锁定的绘图和图片依赖。
+CI 在两个操作系统和 Pages 验证前都会显式安装，不依赖 Anaconda 或运行器预装包。
+CI 中 Matplotlib 使用无界面的 Agg 后端。
 
 共享引擎或主题改动影响全部图库时，使用 `npm run gallery`。渲染会写入案例中的生成文件，需要保留旧版本时先另存。运行 `node skills/musedraw/scripts/musedraw.mjs themes` 可查看风格列表。
 
@@ -57,7 +62,7 @@ python scripts/check.py
 大预览；用户点击“高清”后才加载 SVG，原始下载文件保持不变。
 修改图库 `preview.jpg` 后，维护者安装 `Pillow==12.3.0`，运行
 `npm run gallery:previews`，提交生成的 `assets/gallery/previews/` 与
-`previews.json`。普通绘图、离线检查和 Pages 构建不需要 Pillow；
+`previews.json`。普通场景绘图不要求 Pillow；完整仓库回归会安装它，执行图片检查。
 检查会核对源图哈希，防止修改案例后继续使用旧缩略图。
 
 README 合集维护：`npm run readme:showcase` 重建 1920×1080 交错叠放的照片拼贴及其源图哈希记录，使用同一可选 Pillow 依赖。

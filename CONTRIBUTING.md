@@ -33,8 +33,14 @@ With Node.js 22+, install the skill's fonts and Playwright once. Setup also atte
 ```sh
 npm --prefix skills/musedraw install
 node skills/musedraw/scripts/musedraw.mjs render gallery/<case>/scene.json
+python -m pip install -r requirements-ci.txt
 python scripts/check.py
 ```
+
+The complete regression suite needs Python 3.11+ and the pinned plotting/image
+dependencies in `requirements-ci.txt`. CI installs them explicitly on both
+operating systems and before Pages verification; a preconfigured Anaconda
+environment is not required. Matplotlib uses its noninteractive Agg backend in CI.
 
 Use `npm run gallery` when the change affects the whole gallery, such as a shared engine or theme change. Rendering writes the case's generated outputs; retain any earlier version you need before rerendering. `node skills/musedraw/scripts/musedraw.mjs themes` lists available styles.
 
@@ -59,8 +65,8 @@ small image first, upgrades its raster preview in the background and loads SVG
 only on the viewer's **高清** request. Original gallery downloads remain unchanged.
 After changing gallery `preview.jpg` files, maintainers can install
 `Pillow==12.3.0` and run `npm run gallery:previews`, then commit the generated
-`assets/gallery/previews/` files and `previews.json`. Normal drawing, offline
-checks and Pages builds do not need Pillow. Source/image hashes catch stale
-thumbnails during checks.
+`assets/gallery/previews/` files and `previews.json`. Source/image hashes catch
+stale thumbnails during checks. Pillow is optional for ordinary scene rendering,
+but the complete repository regression suite installs it for image-based tests.
 
 README showcase maintenance: `npm run readme:showcase` regenerates the 1920x1080 overlapping photo collage and source-hash manifest; it uses the same optional Pillow dependency.

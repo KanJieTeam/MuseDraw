@@ -1,0 +1,5 @@
+# Full repository tests render real reports and decode image artifacts.
+# Keep CI independent of packages preinstalled on a runner or in Anaconda.
+matplotlib==3.11.0
+numpy==2.4.6
+Pillow==12.3.0

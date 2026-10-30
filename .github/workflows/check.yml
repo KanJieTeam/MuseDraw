@@ -8,6 +8,9 @@ on:
 permissions:
   contents: read
 
+env:
+  MPLBACKEND: Agg
+
 jobs:
   offline:
     strategy:
@@ -22,10 +25,14 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
       - uses: actions/setup-node@v7
         with:
           node-version: '22'
           package-manager-cache: false
+      - name: Install pinned Python rendering and image-test dependencies
+        run: python -m pip install --only-binary=:all: -r requirements-ci.txt
       - name: Offline artifacts, Python regressions and Node syntax
         run: |
           python scripts/check.py
@@ -41,10 +48,14 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
       - uses: actions/setup-node@v7
         with:
           node-version: '22'
           package-manager-cache: false
+      - name: Install pinned Python rendering and image-test dependencies
+        run: python -m pip install --only-binary=:all: -r requirements-ci.txt
       - name: Install the explicitly pinned browser-test dependency
         run: npm install --no-save --prefix output/browser-deps playwright@1.63.0
       - name: Install Chromium for browser fixtures
