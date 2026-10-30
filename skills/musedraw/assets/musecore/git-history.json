@@ -1,0 +1,12 @@
+{
+ "family":"git-history",
+ "title":"merge 与 rebase，改变了哪一段历史？",
+ "subtitle":"同一分叉的两种抽象结果 · A/B 等均为教学标识，不是 Git 哈希。",
+ "mainBranch":"main",
+ "topicBranch":"feature",
+ "common":[{"id":"A","label":"建立项目"},{"id":"B","label":"确定公共接口"}],
+ "main":[{"id":"E","label":"主干补充配置"}],
+ "topic":[{"id":"C","label":"增加导出入口"},{"id":"D","label":"补充导出检查"}],
+ "merge":{"id":"M","label":"合并主干与主题分支"},
+ "note":"示意仅计算父提交关系与分支指向；未模拟文件内容、冲突处理或实际命令执行。"
+}

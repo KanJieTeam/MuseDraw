@@ -1,0 +1,17 @@
+{
+  "family":"workforce",
+  "title":"客服工作量，至少需要多少人？",
+  "subtitle":"虚构教学数据 · 平均工作量的人力下界与固定偏移覆盖分别计算",
+  "slots":[
+    {"id":"a","label":"08:00–09:00","startMinute":480,"endMinute":540,"tasks":120,"minutesPerTask":4,"productiveFraction":0.8,"scheduledPeople":8},
+    {"id":"b","label":"09:00–10:00","startMinute":540,"endMinute":600,"tasks":180,"minutesPerTask":4,"productiveFraction":0.8,"scheduledPeople":15},
+    {"id":"c","label":"10:00–11:00","startMinute":600,"endMinute":660,"tasks":240,"minutesPerTask":4,"productiveFraction":0.8,"scheduledPeople":18},
+    {"id":"d","label":"11:00–12:00","startMinute":660,"endMinute":720,"tasks":150,"minutesPerTask":4,"productiveFraction":0.75,"scheduledPeople":15}
+  ],
+  "coverage":{"referenceDate":"2026-11-02","recurringDaily":true,"shifts":[
+    {"id":"east","label":"东区支持团队","offsetMinutes":480,"startMinute":540,"durationMinutes":480,"people":4},
+    {"id":"central","label":"中区支持团队","offsetMinutes":0,"startMinute":540,"durationMinutes":480,"people":3},
+    {"id":"west","label":"西区支持团队","offsetMinutes":-420,"startMinute":540,"durationMinutes":480,"people":2}
+  ]},
+  "note":"排班人数是各工作量时段的独立输入；下方班次另示固定偏移覆盖。输入不声称两者为同一排班方案，也不把平均工作量下界作为服务水平保证。"
+}

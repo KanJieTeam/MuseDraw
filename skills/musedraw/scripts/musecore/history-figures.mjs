@@ -1,0 +1,18 @@
+import {el} from './svg.mjs';
+import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualHeadingPlan,visualFinish,stroke} from './visual-tools.mjs';
+import {gitHistoryModel} from './history-models.mjs';
+
+export function historyFamilies(h){
+ function gitHistory(b){
+  const result=gitHistoryModel(b),W=1900,margin=80,panelWidth=840,bg='#0C1117',panel='#151C24',ink='#D9E1EB',muted='#9BAABD',blue='#75C6FF',yellow='#F2C94C',green='#62D27A',heading=visualHeadingPlan(b.title,b.subtitle,{top:55,width:1740,size:51,role:'mono',max:3}),top=heading.bottom+20;
+  const plan=(mode,x)=>{const data=result[mode],ordered=[...data.nodes].reverse();let cursor=110;const nodes=ordered.map(n=>{const lines=visualLines(n.label,370,{size:24,max:5}),refs=Object.entries(data.refs).filter(([,id])=>id===n.id).map(([name])=>name==='main'?result.mainBranch:result.topicBranch),height=Math.max(76,lines.length*32+refs.length*28+26),node={...n,displayId:n.displayId??n.id,x:mode==='merge'&&n.kind==='topic'?250:60,y:cursor+height/2,labelTop:cursor+10,lines,refs,height};cursor+=height;return node}),lookup=new Map(nodes.map(n=>[n.id,n])),edges=nodes.flatMap(n=>n.parents.map(parent=>{const p=lookup.get(parent),points=n.x===p.x?[[n.x,n.y+20],[p.x,p.y-20]]:[[n.x,n.y+20],[n.x,p.y-36],[p.x,p.y-36],[p.x,p.y-20]];return {child:n.id,parent,points}})),mapping=mode==='rebase'?data.mapping.map(m=>({...m,lines:visualLines(`${m.original} [${m.originalParents.join(',')}] → ${m.displayId} [${m.parents.map(id=>id.startsWith('rebased:')?id.slice(8)+'′':id).join(',')}]`,730,{size:22,role:'mono',max:3})})):[],mapHeight=mapping.reduce((n,m)=>n+m.lines.length*31+18,0);return {mode,x,y:top,nodes,edges,mapping,graphBottom:cursor,height:cursor+70+mapHeight+48}};
+  const plans=[plan('merge',80),plan('rebase',980)],panelHeight=Math.max(...plans.map(p=>p.height)),noteTop=top+panelHeight+35,noteLines=visualLines(b.note,1740,{size:24,max:4}),H=noteTop+noteLines.length*34+75,s=visualPage(W,H,bg);visualHeading(s,b.title,b.subtitle,{x:margin,top:55,width:1740,size:51,role:'mono',fill:ink,subFill:muted,max:3});
+  for(const p of plans){const g=el('g',{transform:`translate(${p.x} ${p.y})`,'data-mode':p.mode},s);el('rect',{x:0,y:0,width:panelWidth,height:panelHeight,rx:9,fill:panel,stroke:'#35404D','stroke-width':1.5},g);visualText(g,30,49,p.mode==='merge'?'$ merge · 保留分叉，新增双亲节点':'$ rebase · 重放主题提交，形成新身份',{size:26,role:'mono',fill:green});
+   for(const edge of p.edges){stroke(g,edge.points,muted,2.3);const [tx,ty]=edge.points.at(-1);el('polygon',{points:`${tx},${ty} ${tx-4},${ty-9} ${tx+4},${ty-9}`,fill:muted},g)}
+   for(const n of p.nodes){const color=['merge','rebased'].includes(n.kind)?yellow:n.kind==='topic'?blue:ink;el('circle',{cx:n.x,cy:n.y,r:19,fill:panel,stroke:color,'stroke-width':2.8,'data-commit':n.id},g);visualText(g,n.x+30,n.y+9,n.displayId,{size:25,role:'mono',weight:700,fill:color});visualBlock(g,430,n.labelTop,n.lines,{size:24,fill:color,leading:32/24});n.refs.forEach((ref,i)=>visualText(g,430,n.labelTop+n.lines.length*32+24+i*28,'('+ref+')',{size:21,role:'mono',weight:700,fill:yellow}))}
+   visualText(g,30,p.graphBottom+35,p.mode==='merge'?'合并节点有两个父提交；箭头指向父提交。':'原标识 [原父] → 新标识 [新父]',{size:22,fill:muted});let y=p.graphBottom+58;for(const map of p.mapping){visualBlock(g,30,y,map.lines,{size:22,role:'mono',fill:blue,leading:31/22});y+=map.lines.length*31+18}
+  }
+  visualBlock(s,margin,noteTop,noteLines,{size:24,fill:muted,leading:34/24});return visualFinish(s,{family:'git-history',width:W,height:H,sourceCase:'e02-git-merge-rebase',...result,panels:plans,identityMeaning:'symbolic IDs only, not Git hashes'});
+ }
+ return {'git-history':gitHistory};
+}

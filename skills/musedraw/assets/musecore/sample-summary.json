@@ -1,0 +1,9 @@
+{
+ "family":"sample-summary",
+ "title":"平均数：把五份物品分得一样多",
+ "subtitle":"虚构教学数据 · 原始数量、平均线与移多补少清单来自同一组输入。",
+ "presentation":"balance",
+ "groups":[{"id":"items","label":"五份物品","observations":[{"id":"a","label":"甲","value":8},{"id":"b","label":"乙","value":14},{"id":"c","label":"丙","value":10},{"id":"d","label":"丁","value":16},{"id":"e","label":"戊","value":12}]}],
+ "unit":"个",
+ "note":"先合再分：总量 ÷ 有记录的份数 = 平均数。橙色实块表示多出的量，虚线框表示补齐到平均数所需的量。"
+}

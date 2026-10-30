@@ -1,0 +1,10 @@
+{
+ "family":"categorical-bars",
+ "title":"借阅偏好：同一份记录怎样变成条形图",
+ "subtitle":"虚构教学数据 · 各类别分别计数，类别之间没有连续数值间隔。",
+ "categories":[{"id":"story","label":"故事"},{"id":"science","label":"科普"},{"id":"history","label":"历史"},{"id":"poetry","label":"诗歌"},{"id":"art","label":"艺术"}],
+ "series":[{"id":"readers","label":"借阅人数","values":[12,7,9,5,11]}],
+ "unit":"人",
+ "tally":true,
+ "note":"a 为逐笔计数，每个完整“正”字表示 5；b 的所有条形共用数值零基线；c 由同一输入计算最高、最低与合计。"
+}

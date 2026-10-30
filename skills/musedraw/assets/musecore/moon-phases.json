@@ -1,0 +1,18 @@
+{
+ "family":"moon-phases",
+ "title":"月相：同一轮月亮的不同亮面",
+ "subtitle":"空间位置与地球所见 · 用太阳—地球—月亮的几何解释外观",
+ "observerHemisphere":"north",
+ "view":"north-up",
+ "phases":[
+  {"id":"new","label":"新月","elongationDegrees":0,"detail":"月亮位于太阳方向"},
+  {"id":"crescent","label":"蛾眉月","elongationDegrees":45,"detail":"可见亮面逐渐增加"},
+  {"id":"first","label":"上弦月","elongationDegrees":90,"detail":"可见亮面恰好一半"},
+  {"id":"gibbous","label":"盈凸月","elongationDegrees":135,"detail":"亮面超过一半"},
+  {"id":"full","label":"满月","elongationDegrees":180,"detail":"月亮位于背离太阳方向"},
+  {"id":"waning","label":"亏凸月","elongationDegrees":225,"detail":"可见亮面逐渐减少"},
+  {"id":"last","label":"下弦月","elongationDegrees":270,"detail":"亮面减小至一半"},
+  {"id":"old","label":"残月","elongationDegrees":315,"detail":"只见一弯亮面"}
+ ],
+ "note":"相角从新月方向起算；空间图从天球北极一侧俯视。月面采用所标示的教学正置方向，实际天空视场可旋转；不模拟月食或日期，大小和距离不按比例。"
+}

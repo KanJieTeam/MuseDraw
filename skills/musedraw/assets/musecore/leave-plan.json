@@ -1,0 +1,12 @@
+{
+  "family":"leave-plan",
+  "title":"本月请假，用掉多少额度？",
+  "subtitle":"2026 年 11 月 · 虚构人员与额度，按输入工作日历计算",
+  "year":2026,"month":11,"workWeek":[1,2,3,4,5],
+  "holidays":["2026-11-06"],"extraWorkdays":["2026-11-07"],
+  "people":[
+    {"id":"lin","label":"林青 · 客户支持","allowanceDays":12,"usedBeforeDays":4,"requests":[{"date":"2026-11-05","status":"approved","days":1},{"date":"2026-11-06","status":"approved","days":1},{"date":"2026-11-07","status":"planned","days":0.5},{"date":"2026-11-09","status":"planned","days":1}]},
+    {"id":"zhou","label":"周宁 · 平台运营","allowanceDays":8,"usedBeforeDays":6,"requests":[{"date":"2026-11-10","status":"approved","days":1},{"date":"2026-11-11","status":"planned","days":1},{"date":"2026-11-12","status":"planned","days":1}]}
+  ],
+  "note":"额度、工作周、休息日和额外工作日均为显式教学输入，不代表法定假期或劳动法权益。非工作日请假记录保留但额度耗用为 0；planned 未混入已批准耗用。"
+}

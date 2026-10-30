@@ -1,0 +1,13 @@
+{
+ "family":"orbital-motion",
+ "title":"相等的时间，扫过相等的面积",
+ "subtitle":"开普勒第二定律 · 单中心天体的理想二维轨道",
+ "normalization":"model-length-and-period",
+ "semiMajorAxis":1,
+ "eccentricity":0.6,
+ "markerCount":12,
+ "durationFraction":0.08333333333333333,
+ "samplesPerWindow":64,
+ "windows":[{"id":"near","label":"近日点附近","startFraction":0},{"id":"far","label":"远日点附近","startFraction":0.5}],
+ "note":"L₀ 为模型长度单位，T 为一个轨道周期；离散点按等时间间隔标记。偏心率为给定的教学参数，图中天体大小为示意。"
+}

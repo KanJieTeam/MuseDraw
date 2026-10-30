@@ -30,6 +30,14 @@ import {architectureFamilies} from './architecture-figures.mjs';
 import {messageSequenceFamilies} from './sequence-figures.mjs';
 import {responsibilityFamilies} from './responsibility-figures.mjs';
 import {backupFamilies} from './backup-figures.mjs';
+import {historyFamilies} from './history-figures.mjs';
+import {loopFamilies} from './loop-figures.mjs';
+import {workforceFamilies} from './workforce-figures.mjs';
+import {leaveFamilies} from './leave-figures.mjs';
+import {orbitFamilies} from './orbit-figures.mjs';
+import {phaseFamilies} from './phase-figures.mjs';
+import {categoryFamilies} from './category-figures.mjs';
+import {sampleFamilies} from './sample-figures.mjs';
 export const MuseCore=(()=>{
  const need=(yes,msg)=>{if(!yes)throw Error(msg)};
  const list=(x,min,max,p)=>need(Array.isArray(x)&&x.length>=min&&x.length<=max,`${p}: requires ${min}–${max} items`);
@@ -141,7 +149,7 @@ export const MuseCore=(()=>{
    return finish(f,{family:'schedule',width:720,height:bottom+12,taskWidth:taskW,slotWidth:cw,rowHeights:rowH,bars});
  }
  const helpers={need,list,fields,str,unique,width,wrap,track,finish,labelBox};
- const families={lanes,schedule,...reportFamilies(helpers),...visualFamilies(helpers),...dataVisualFamilies(helpers),...spatialFamilies(helpers),...comparisonFamilies(helpers),...distributionFamilies(helpers),...amountFlowFamilies(helpers),...workflowStructureFamilies(helpers),...officeTimeFamilies(helpers),...collaborationFamilies(helpers),...formulaFamilies(helpers),...stateFamilies(helpers),...deploymentFamilies(helpers),...chalkFamilies(helpers),...blueprintFigureFamilies(helpers),...solidFamilies(helpers),...magnitudeFamilies(helpers),...officeCostFamilies(helpers),...officeObjectiveFamilies(helpers),...officeAuditFamilies(helpers),...reliabilityFamilies(helpers),...requestFamilies(helpers),...hashFamilies(helpers),...mathShapeFamilies(helpers),...binaryFamilies(helpers),...probabilityFamilies(helpers),...architectureFamilies(helpers),...messageSequenceFamilies(helpers),...responsibilityFamilies(helpers),...backupFamilies(helpers)};
+ const families={lanes,schedule,...reportFamilies(helpers),...visualFamilies(helpers),...dataVisualFamilies(helpers),...spatialFamilies(helpers),...comparisonFamilies(helpers),...distributionFamilies(helpers),...amountFlowFamilies(helpers),...workflowStructureFamilies(helpers),...officeTimeFamilies(helpers),...collaborationFamilies(helpers),...formulaFamilies(helpers),...stateFamilies(helpers),...deploymentFamilies(helpers),...chalkFamilies(helpers),...blueprintFigureFamilies(helpers),...solidFamilies(helpers),...magnitudeFamilies(helpers),...officeCostFamilies(helpers),...officeObjectiveFamilies(helpers),...officeAuditFamilies(helpers),...reliabilityFamilies(helpers),...requestFamilies(helpers),...hashFamilies(helpers),...mathShapeFamilies(helpers),...binaryFamilies(helpers),...probabilityFamilies(helpers),...architectureFamilies(helpers),...messageSequenceFamilies(helpers),...responsibilityFamilies(helpers),...backupFamilies(helpers),...historyFamilies(helpers),...loopFamilies(helpers),...workforceFamilies(helpers),...leaveFamilies(helpers),...orbitFamilies(helpers),...phaseFamilies(helpers),...categoryFamilies(helpers),...sampleFamilies(helpers)};
  function report(b){
    fields(b,['family','title','columns','sections'],'report');str(b.title,'report.title');list(b.sections,2,6,'sections');unique(b.sections,'sections');
    const columns=b.columns??1;need([1,2].includes(columns),'report.columns must be 1 or 2');

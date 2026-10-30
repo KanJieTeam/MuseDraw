@@ -1,0 +1,12 @@
+{
+ "family":"loop-trace",
+ "title":"for 循环，一轮一轮怎样累加",
+ "subtitle":"从 1 到 5 求和 · 每轮明确区分条件、体项、累加与更新。",
+ "variable":"i",
+ "initial":1,
+ "step":1,
+ "bound":5,
+ "comparison":"<=",
+ "accumulator":{"name":"total","initial":0,"action":"add-index"},
+ "note":"条件先判断，再执行本轮体项和累加，最后更新索引；最后一次条件失败后结束。"
+}

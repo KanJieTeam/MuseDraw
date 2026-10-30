@@ -725,6 +725,106 @@
           "sourceSha256": "7986bd69cee5c7c9453a9e73584d31f382fdf7d721d34fb7c6a8549f09096102"
         }
       ]
+    },
+    {
+      "id": "git-history",
+      "family": "git-history",
+      "file": "git-history.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "e02-git-merge-rebase",
+          "sourceSha256": "145d3b919d922217c6871685cb5dd37b3bf0fef76a1f109b7a90f6dbb45b5b54"
+        }
+      ]
+    },
+    {
+      "id": "loop-trace",
+      "family": "loop-trace",
+      "file": "loop-trace.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "t14-for-xunhuan",
+          "sourceSha256": "95b39483a3fd7a2a26ad3acd4cfa68b18eb5369e083b45ad6dd8da751c8f06f9"
+        }
+      ]
+    },
+    {
+      "id": "workforce",
+      "family": "workforce",
+      "file": "workforce.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "198-call-center-staffing",
+          "sourceSha256": "77be3c298f99c317972ec2b7c363ed1274f74fe70c96701f53150f985bc73665"
+        },
+        {
+          "id": "o08-quanqiu-kefu",
+          "sourceSha256": "f802122611dccbd6b03f89c71168d7a41a361de7c439e5c279a5a92aa8c5fa24"
+        }
+      ]
+    },
+    {
+      "id": "leave-plan",
+      "family": "leave-plan",
+      "file": "leave-plan.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "o09-nianxiujia",
+          "sourceSha256": "2f95cdfeff88251834411eef6de3ccce3d5ba480cc4648fd79c96b947b60ef34"
+        }
+      ]
+    },
+    {
+      "id": "orbital-motion",
+      "family": "orbital-motion",
+      "file": "orbital-motion.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "149-keplers-second-law",
+          "sourceSha256": "eaf1038fe8c31f0c210cfc0d33352ccfb41fa284b3951624ec07b58a4c5d9f75"
+        }
+      ]
+    },
+    {
+      "id": "moon-phases",
+      "family": "moon-phases",
+      "file": "moon-phases.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "129-moon-phases",
+          "sourceSha256": "ae8515c628ddb1facd74c0db50967046fffff6c3c937c9f5e7b8b6c25996d5dd"
+        }
+      ]
+    },
+    {
+      "id": "categorical-bars",
+      "family": "categorical-bars",
+      "file": "categorical-bars.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "124-bar-chart",
+          "sourceSha256": "a9502582914900fc4c16a6637185c7b544057176709c3683ca3f4656c01e0628"
+        }
+      ]
+    },
+    {
+      "id": "sample-summary",
+      "family": "sample-summary",
+      "file": "sample-summary.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "135-average",
+          "sourceSha256": "a1ec01e3bc8221c75b32808a99a98fea30ffeab587739ebd924ebbeb9e8cd72b"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -846,6 +946,34 @@
         "message-sequence",
         "daci",
         "backup-inventory"
+      ]
+    },
+    {
+      "reference": "references/musecore-execution.md",
+      "ids": [
+        "git-history",
+        "loop-trace"
+      ]
+    },
+    {
+      "reference": "references/musecore-workdays.md",
+      "ids": [
+        "workforce",
+        "leave-plan"
+      ]
+    },
+    {
+      "reference": "references/musecore-sky-geometry.md",
+      "ids": [
+        "orbital-motion",
+        "moon-phases"
+      ]
+    },
+    {
+      "reference": "references/musecore-small-samples.md",
+      "ids": [
+        "categorical-bars",
+        "sample-summary"
       ]
     }
   ]
