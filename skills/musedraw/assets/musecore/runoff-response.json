@@ -1,0 +1,12 @@
+{
+ "family":"runoff-response",
+ "title":"有效降雨如何形成出口响应",
+ "subtitle":"离散线性示意 · 给定有效雨深与单位响应核，保留完整汇流尾部",
+ "model":"discrete-linear-effective-rain",
+ "dtHours":1,
+ "areaKm2":12,
+ "effectiveRainMm":[0,2,8,12,6,2,0,0],
+ "responsePerHour":[0,0.05,0.15,0.3,0.25,0.15,0.1],
+ "network":{"outletId":"out","outletLabel":"示意出口断面","nodes":[{"id":"out","label":"出口","downstream":null},{"id":"a","label":"上游干支","downstream":"out"},{"id":"b","label":"南侧支流","downstream":"out"},{"id":"a1","label":"西北源流","downstream":"a"},{"id":"a2","label":"北侧源流","downstream":"a"},{"id":"b1","label":"西南源流","downstream":"b"},{"id":"b2","label":"南侧源流","downstream":"b"}]},
+ "note":"有效降雨已明确给定，不在图中估计损失。河网只表达输入连接关系，墨线粗细表示河级；给定响应核不由示意河道推算。流量为每个时间格的平均值，不是真实洪水预报。"
+}

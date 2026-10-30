@@ -1,0 +1,9 @@
+{
+ "family":"interval-spacing",
+ "title":"同一段长度，端点怎样改变对象数",
+ "subtitle":"虚构教学小路 · 等距 15 米，全长 120 米；圆周与直线使用同一比例。",
+ "length":120,"spacing":15,"unit":"米",
+ "object":{"kind":"tree","label":"树","unit":"棵"},
+ "variants":[{"id":"both","topology":"line","endpoints":"both"},{"id":"start","topology":"line","endpoints":"start"},{"id":"end","topology":"line","endpoints":"end"},{"id":"neither","topology":"line","endpoints":"neither"},{"id":"loop","topology":"loop"}],
+ "note":"间隔数由全长除以等距得到；空心端点仅标道路边界，不能当作一棵树。闭环不再把同一个首尾点重复计数。"
+}

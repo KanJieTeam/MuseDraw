@@ -1,0 +1,10 @@
+{
+ "family":"compass-map",
+ "title":"北朝上，方向和路线都从坐标读出",
+ "subtitle":"虚构本地平面图 · 每个坐标单位为 1 米；道路是明确给定的直线路段。",
+ "unit":"米",
+ "landmarks":[{"id":"school","label":"学校","east":0,"north":0},{"id":"park","label":"公园","east":0,"north":400},{"id":"store","label":"商店","east":500,"north":400},{"id":"library","label":"书屋","east":500,"north":0},{"id":"station","label":"车站","east":-500,"north":0},{"id":"hall","label":"展馆","east":-500,"north":-400},{"id":"activity","label":"活动室","east":0,"north":-400}],
+ "roads":[{"id":"r1","from":"station","to":"school","line":"横向路"},{"id":"r2","from":"school","to":"library","line":"横向路"},{"id":"r3","from":"activity","to":"school","line":"纵向路"},{"id":"r4","from":"school","to":"park","line":"纵向路"},{"id":"r5","from":"park","to":"store","line":"北侧路"},{"id":"r6","from":"library","to":"store","line":"北侧路"},{"id":"r7","from":"station","to":"hall","line":"西南路"},{"id":"r8","from":"hall","to":"activity","line":"西南路"}],
+ "origin":"school","route":{"from":"school","to":"store"},
+ "note":"比例尺来自坐标单位；未连接的地标不会被自动补路。距离只比较给定直线路段，不包含现实路况。"
+}

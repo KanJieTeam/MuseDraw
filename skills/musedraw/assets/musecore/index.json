@@ -897,6 +897,82 @@
           "sourceSha256": "253f741f6aa03e23db3c3383bb130f4f0da04a3a0372c1fcdc06e26ae9220c76"
         }
       ]
+    },
+    {
+      "id": "interval-spacing",
+      "family": "interval-spacing",
+      "file": "interval-spacing.json",
+      "contentStatus": "fictional development example; explicit inputs and bounded model, not verified real operational data",
+      "sourceCases": [
+        {
+          "id": "122-tree-planting",
+          "sourceSha256": "cc54b380bda7ed191dec089b9834d7c4794baca13009d98ab83a2ec764e15d97"
+        }
+      ]
+    },
+    {
+      "id": "compass-map",
+      "family": "compass-map",
+      "file": "compass-map.json",
+      "contentStatus": "fictional development example; explicit inputs and bounded model, not verified real operational data",
+      "sourceCases": [
+        {
+          "id": "123-directions-map",
+          "sourceSha256": "cf504c9d03b1c8e1ebf737a610dc035e93c7beecfc689a91f65204b20dd8c64c"
+        }
+      ]
+    },
+    {
+      "id": "approval-workflow",
+      "family": "approval-workflow",
+      "file": "approval-workflow.json",
+      "contentStatus": "fictional development example; explicit inputs and bounded model, not verified real operational data",
+      "sourceCases": [
+        {
+          "id": "o05-yongyin-shenpi",
+          "sourceSha256": "d276c0eaed017779b75dc298b0015f86ab925485f578dbb64c783e582f9b8e72"
+        },
+        {
+          "id": "189-procure-to-pay",
+          "sourceSha256": "2e95c8a57a5055f990d5f0e2824b2478508a3c6fb05e200d7cb9b4c83716cfc5"
+        }
+      ]
+    },
+    {
+      "id": "handoff-checklist",
+      "family": "handoff-checklist",
+      "file": "handoff-checklist.json",
+      "contentStatus": "fictional development example; explicit inputs and bounded model, not verified real operational data",
+      "sourceCases": [
+        {
+          "id": "o10-lizhi-jiaojie",
+          "sourceSha256": "64e49ce4815758789b59bc31ecac329db05a9cfe71c93a4e33f473946ed17c97"
+        }
+      ]
+    },
+    {
+      "id": "contour-field",
+      "family": "contour-field",
+      "file": "contour-field.json",
+      "contentStatus": "fictional development example; explicit inputs and bounded model, not verified real operational data",
+      "sourceCases": [
+        {
+          "id": "147-contour-map",
+          "sourceSha256": "7221672bdbcd05efdd1cbee4d80e1e8d34eaf34340a69fbe6b27280a899700f5"
+        }
+      ]
+    },
+    {
+      "id": "runoff-response",
+      "family": "runoff-response",
+      "file": "runoff-response.json",
+      "contentStatus": "fictional development example; explicit inputs and bounded model, not verified real operational data",
+      "sourceCases": [
+        {
+          "id": "177-watershed-hydrograph",
+          "sourceSha256": "63c792bebbcbb802255bfaf8f720f43f0d2c4ac7886756e93890e5470b9971a7"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1067,6 +1143,27 @@
       "ids": [
         "service-priority",
         "benefit-wallet"
+      ]
+    },
+    {
+      "reference": "references/musecore-spacing-map.md",
+      "ids": [
+        "interval-spacing",
+        "compass-map"
+      ]
+    },
+    {
+      "reference": "references/musecore-approval-handoff.md",
+      "ids": [
+        "approval-workflow",
+        "handoff-checklist"
+      ]
+    },
+    {
+      "reference": "references/musecore-terrain-response.md",
+      "ids": [
+        "contour-field",
+        "runoff-response"
       ]
     }
   ]
