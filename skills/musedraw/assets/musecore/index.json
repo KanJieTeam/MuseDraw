@@ -1661,6 +1661,78 @@
           "sourceSha256": "fe94ed588dff1487a7a5615a3bbb3e287e159a80ea8d2ab7d8535a4479610d1e"
         }
       ]
+    },
+    {
+      "id": "proteomics-panels",
+      "family": "proteomics-panels",
+      "file": "proteomics-panels.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "s02-danbaizhi-zuxue",
+          "sourceSha256": "6e3405a4d7f1f895e15941b1b83edca729b82a2ad581a7c1d3738238ea004f07"
+        }
+      ]
+    },
+    {
+      "id": "calcium-traces",
+      "family": "calcium-traces",
+      "file": "calcium-traces.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "164-calcium-imaging",
+          "sourceSha256": "0424bf7fe89274ae789ed0db4c00c4263920e74bf3883f806e3072253fae7a04"
+        }
+      ]
+    },
+    {
+      "id": "book-repair-poster",
+      "family": "book-repair-poster",
+      "file": "book-repair-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p01-guji-xiufu",
+          "sourceSha256": "c89c98be15b1754c2cef5eca58c0c9471134778158cae3711b4ef1c69d3f98b8"
+        }
+      ]
+    },
+    {
+      "id": "coffee-pour-poster",
+      "family": "coffee-pour-poster",
+      "file": "coffee-pour-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p08-man-yidian",
+          "sourceSha256": "1e8e889bb4242684b45c8751696acd43b4be3ea45b7382718f657e349047086c"
+        }
+      ]
+    },
+    {
+      "id": "river-run-poster",
+      "family": "river-run-poster",
+      "file": "river-run-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p02-binjiang-yepao",
+          "sourceSha256": "e49da37cfa27a0edc1dcb046f940f56785eabce0ca9f7401a19c5c5d130c4fae"
+        }
+      ]
+    },
+    {
+      "id": "lunar-night-poster",
+      "family": "lunar-night-poster",
+      "file": "lunar-night-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p10-shangxian-yue",
+          "sourceSha256": "b925997ea4e784668dd3df343b26604e0425901a398d2c825acd4991a6a87414"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2046,6 +2118,27 @@
       "ids": [
         "chaos-experiment",
         "canary-plan"
+      ]
+    },
+    {
+      "reference": "references/musecore-measured-signals.md",
+      "ids": [
+        "proteomics-panels",
+        "calcium-traces"
+      ]
+    },
+    {
+      "reference": "references/musecore-paper-coffee.md",
+      "ids": [
+        "book-repair-poster",
+        "coffee-pour-poster"
+      ]
+    },
+    {
+      "reference": "references/musecore-night-posters.md",
+      "ids": [
+        "river-run-poster",
+        "lunar-night-poster"
       ]
     }
   ]

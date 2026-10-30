@@ -1,0 +1,17 @@
+{
+  "family": "river-run-poster",
+  "title": "滨江夜跑",
+  "distanceKm": 10,
+  "routeBasis": "given-distance-unscaled-out-and-back",
+  "shape": {"rise":0.60,"bow":0.10},
+  "event": {
+    "date":"2026-11-08",
+    "start":"19:00",
+    "capacity":3000,
+    "venue":"地点示例：滨江公园南门起终点，沿江往返",
+    "registrationDate":"2026-10-25",
+    "registrationTime":"10:00",
+    "registration":"报名示例：请向活动主办方咨询"
+  },
+  "note":"路线无地理比例，里程来自输入。活动信息为示例，请向主办方确认。"
+}

@@ -589,7 +589,27 @@ class GalleryTests(unittest.TestCase):
                                  'assets/musecore/canary-plan.json',
                                  'tests/musecore/circulation-metabolism.test.mjs',
                                  'tests/musecore/cup-knight.test.mjs',
-                                 'tests/musecore/chaos-canary.test.mjs'):
+                                 'tests/musecore/chaos-canary.test.mjs',
+                                 'references/musecore-measured-signals.md',
+                                 'references/musecore-paper-coffee.md',
+                                 'references/musecore-night-posters.md',
+                                 'scripts/musecore/proteomics-models.mjs',
+                                 'scripts/musecore/proteomics-figures.mjs',
+                                 'scripts/musecore/calcium-models.mjs',
+                                 'scripts/musecore/calcium-figures.mjs',
+                                 'scripts/musecore/paper-coffee-models.mjs',
+                                 'scripts/musecore/paper-coffee-figures.mjs',
+                                 'scripts/musecore/night-poster-models.mjs',
+                                 'scripts/musecore/night-poster-figures.mjs',
+                                 'assets/musecore/proteomics-panels.json',
+                                 'assets/musecore/calcium-traces.json',
+                                 'assets/musecore/book-repair-poster.json',
+                                 'assets/musecore/coffee-pour-poster.json',
+                                 'assets/musecore/river-run-poster.json',
+                                 'assets/musecore/lunar-night-poster.json',
+                                 'tests/musecore/proteomics-calcium.test.mjs',
+                                 'tests/musecore/paper-coffee.test.mjs',
+                                 'tests/musecore/night-posters.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

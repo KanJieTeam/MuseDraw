@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.26
+  instructions-version: musecore-2026-10-31.27
 ---
 
 # MuseDraw
@@ -134,6 +134,9 @@ family's encodings, coordinated geometry and placement.
 | Declared adult circulation and supplied metabolic route maps | [Biological routes](references/musecore-circulation-metabolism.md) |
 | Conditional cup calendars and empty-board knight routes | [Computed campaign objects](references/musecore-cup-knight.md) |
 | Supplied fault-experiment observations and explicit canary gates | [Experiments and canaries](references/musecore-chaos-canary.md) |
+| Supplied molecular panels and fluorescence traces | [Measured-signal panels](references/musecore-measured-signals.md) |
+| Bound-book and cup objects with supplied event text | [Material posters](references/musecore-paper-coffee.md) |
+| Unscaled return routes and explicit-phase event posters | [Night campaigns](references/musecore-night-posters.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

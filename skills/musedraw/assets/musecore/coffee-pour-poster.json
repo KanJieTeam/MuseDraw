@@ -1,0 +1,24 @@
+{
+  "family": "coffee-pour-poster",
+  "title": "慢一点",
+  "subtitle": "手冲咖啡馆",
+  "caption": "注水，从中心慢慢绕出去。",
+  "spiral": {
+    "turns": 6.5,
+    "innerRadius": 0.025,
+    "outerRadius": 0.92,
+    "direction": "clockwise"
+  },
+  "handleAngleDegrees": 0,
+  "event": {
+    "openingDate": "2026-11-01",
+    "hours": {
+      "open": "08:00",
+      "close": "19:00"
+    },
+    "offer": "开业七天，手冲半价（给定活动示例）",
+    "address": "地址示例：梧桐路 18 号",
+    "contact": "营业与活动详情请向店方确认"
+  },
+  "note": "开业活动示例；杯中螺旋为构成示意。"
+}

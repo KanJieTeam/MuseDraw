@@ -1,0 +1,920 @@
+{
+  "family": "proteomics-panels",
+  "title": "蛋白质组学：读懂六种数据对象",
+  "subtitle": "合成教学面板：样本与理想肽段、色谱与棒谱、候选列表，以及明确供给的差异结果。",
+  "dataKind": "synthetic-teaching",
+  "relationship": "independent-supplied-panels",
+  "samples": [
+    {
+      "id": "a",
+      "label": "教学样本甲"
+    },
+    {
+      "id": "b",
+      "label": "教学样本乙"
+    },
+    {
+      "id": "c",
+      "label": "教学样本丙"
+    }
+  ],
+  "digestion": {
+    "rule": "ideal-trypsin-KR-not-P",
+    "sequence": "GDLKAVRPESFK",
+    "label": "理想胰蛋白酶切割规则"
+  },
+  "chromatogram": {
+    "label": "合成离子流轨迹",
+    "timeUnit": "min",
+    "intensityUnit": "强度 / a.u.",
+    "points": [
+      {
+        "time": 0,
+        "intensity": 3
+      },
+      {
+        "time": 0.3,
+        "intensity": 3
+      },
+      {
+        "time": 0.6,
+        "intensity": 3
+      },
+      {
+        "time": 0.8999999999999999,
+        "intensity": 3
+      },
+      {
+        "time": 1.2,
+        "intensity": 3.001
+      },
+      {
+        "time": 1.5,
+        "intensity": 3.003
+      },
+      {
+        "time": 1.7999999999999998,
+        "intensity": 3.017
+      },
+      {
+        "time": 2.1,
+        "intensity": 3.077
+      },
+      {
+        "time": 2.4,
+        "intensity": 3.3
+      },
+      {
+        "time": 2.6999999999999997,
+        "intensity": 4.01
+      },
+      {
+        "time": 3,
+        "intensity": 5.934
+      },
+      {
+        "time": 3.3,
+        "intensity": 10.342
+      },
+      {
+        "time": 3.5999999999999996,
+        "intensity": 18.835
+      },
+      {
+        "time": 3.9,
+        "intensity": 32.43
+      },
+      {
+        "time": 4.2,
+        "intensity": 50.139
+      },
+      {
+        "time": 4.5,
+        "intensity": 68.067
+      },
+      {
+        "time": 4.8,
+        "intensity": 80.399
+      },
+      {
+        "time": 5.1,
+        "intensity": 82.342
+      },
+      {
+        "time": 5.3999999999999995,
+        "intensity": 73.091
+      },
+      {
+        "time": 5.7,
+        "intensity": 56.36
+      },
+      {
+        "time": 6,
+        "intensity": 38.008
+      },
+      {
+        "time": 6.3,
+        "intensity": 22.793
+      },
+      {
+        "time": 6.6,
+        "intensity": 12.644
+      },
+      {
+        "time": 6.8999999999999995,
+        "intensity": 7.05
+      },
+      {
+        "time": 7.199999999999999,
+        "intensity": 4.47
+      },
+      {
+        "time": 7.5,
+        "intensity": 3.477
+      },
+      {
+        "time": 7.8,
+        "intensity": 3.203
+      },
+      {
+        "time": 8.1,
+        "intensity": 3.313
+      },
+      {
+        "time": 8.4,
+        "intensity": 3.902
+      },
+      {
+        "time": 8.7,
+        "intensity": 5.489
+      },
+      {
+        "time": 9,
+        "intensity": 9.093
+      },
+      {
+        "time": 9.299999999999999,
+        "intensity": 16.171
+      },
+      {
+        "time": 9.6,
+        "intensity": 28.125
+      },
+      {
+        "time": 9.9,
+        "intensity": 45.296
+      },
+      {
+        "time": 10.2,
+        "intensity": 65.836
+      },
+      {
+        "time": 10.5,
+        "intensity": 85.381
+      },
+      {
+        "time": 10.799999999999999,
+        "intensity": 98.315
+      },
+      {
+        "time": 11.1,
+        "intensity": 100.322
+      },
+      {
+        "time": 11.4,
+        "intensity": 90.694
+      },
+      {
+        "time": 11.7,
+        "intensity": 72.734
+      },
+      {
+        "time": 12,
+        "intensity": 51.937
+      },
+      {
+        "time": 12.299999999999999,
+        "intensity": 33.307
+      },
+      {
+        "time": 12.6,
+        "intensity": 19.565
+      },
+      {
+        "time": 12.9,
+        "intensity": 10.994
+      },
+      {
+        "time": 13.2,
+        "intensity": 6.423
+      },
+      {
+        "time": 13.5,
+        "intensity": 4.36
+      },
+      {
+        "time": 13.799999999999999,
+        "intensity": 3.694
+      },
+      {
+        "time": 14.1,
+        "intensity": 3.924
+      },
+      {
+        "time": 14.399999999999999,
+        "intensity": 5.157
+      },
+      {
+        "time": 14.7,
+        "intensity": 8.078
+      },
+      {
+        "time": 15,
+        "intensity": 13.879
+      },
+      {
+        "time": 15.299999999999999,
+        "intensity": 23.979
+      },
+      {
+        "time": 15.6,
+        "intensity": 39.373
+      },
+      {
+        "time": 15.899999999999999,
+        "intensity": 59.691
+      },
+      {
+        "time": 16.2,
+        "intensity": 82.432
+      },
+      {
+        "time": 16.5,
+        "intensity": 103.053
+      },
+      {
+        "time": 16.8,
+        "intensity": 116.303
+      },
+      {
+        "time": 17.099999999999998,
+        "intensity": 118.373
+      },
+      {
+        "time": 17.4,
+        "intensity": 108.702
+      },
+      {
+        "time": 17.7,
+        "intensity": 90.321
+      },
+      {
+        "time": 18,
+        "intensity": 68.55
+      },
+      {
+        "time": 18.3,
+        "intensity": 48.923
+      },
+      {
+        "time": 18.599999999999998,
+        "intensity": 35.596
+      },
+      {
+        "time": 18.9,
+        "intensity": 30.825
+      },
+      {
+        "time": 19.2,
+        "intensity": 35.273
+      },
+      {
+        "time": 19.5,
+        "intensity": 48.389
+      },
+      {
+        "time": 19.8,
+        "intensity": 68.396
+      },
+      {
+        "time": 20.099999999999998,
+        "intensity": 92.036
+      },
+      {
+        "time": 20.4,
+        "intensity": 114.652
+      },
+      {
+        "time": 20.7,
+        "intensity": 131.062
+      },
+      {
+        "time": 21,
+        "intensity": 137.133
+      },
+      {
+        "time": 21.3,
+        "intensity": 131.334
+      },
+      {
+        "time": 21.599999999999998,
+        "intensity": 115.409
+      },
+      {
+        "time": 21.9,
+        "intensity": 93.762
+      },
+      {
+        "time": 22.2,
+        "intensity": 71.935
+      },
+      {
+        "time": 22.5,
+        "intensity": 54.967
+      },
+      {
+        "time": 22.8,
+        "intensity": 46.342
+      },
+      {
+        "time": 23.099999999999998,
+        "intensity": 47.676
+      },
+      {
+        "time": 23.4,
+        "intensity": 58.813
+      },
+      {
+        "time": 23.7,
+        "intensity": 77.969
+      },
+      {
+        "time": 24,
+        "intensity": 101.817
+      },
+      {
+        "time": 24.3,
+        "intensity": 125.772
+      },
+      {
+        "time": 24.599999999999998,
+        "intensity": 144.747
+      },
+      {
+        "time": 24.9,
+        "intensity": 154.383
+      },
+      {
+        "time": 25.2,
+        "intensity": 152.338
+      },
+      {
+        "time": 25.5,
+        "intensity": 139.02
+      },
+      {
+        "time": 25.8,
+        "intensity": 117.371
+      },
+      {
+        "time": 26.099999999999998,
+        "intensity": 91.775
+      },
+      {
+        "time": 26.4,
+        "intensity": 66.61
+      },
+      {
+        "time": 26.7,
+        "intensity": 45.074
+      },
+      {
+        "time": 27,
+        "intensity": 28.69
+      },
+      {
+        "time": 27.3,
+        "intensity": 17.48
+      },
+      {
+        "time": 27.599999999999998,
+        "intensity": 10.534
+      },
+      {
+        "time": 27.9,
+        "intensity": 6.619
+      },
+      {
+        "time": 28.2,
+        "intensity": 4.604
+      },
+      {
+        "time": 28.5,
+        "intensity": 3.657
+      },
+      {
+        "time": 28.799999999999997,
+        "intensity": 3.248
+      },
+      {
+        "time": 29.099999999999998,
+        "intensity": 3.087
+      },
+      {
+        "time": 29.4,
+        "intensity": 3.028
+      },
+      {
+        "time": 29.7,
+        "intensity": 3.008
+      },
+      {
+        "time": 30,
+        "intensity": 3.002
+      }
+    ]
+  },
+  "spectrum": {
+    "label": "独立合成棒谱",
+    "intensityUnit": "强度 / a.u.",
+    "peaks": [
+      {
+        "mz": 120,
+        "intensity": 10
+      },
+      {
+        "mz": 163,
+        "intensity": 47
+      },
+      {
+        "mz": 206,
+        "intensity": 84
+      },
+      {
+        "mz": 228,
+        "intensity": 38
+      },
+      {
+        "mz": 271,
+        "intensity": 75
+      },
+      {
+        "mz": 314,
+        "intensity": 29
+      },
+      {
+        "mz": 336,
+        "intensity": 66
+      },
+      {
+        "mz": 379,
+        "intensity": 20
+      },
+      {
+        "mz": 422,
+        "intensity": 167
+      },
+      {
+        "mz": 444,
+        "intensity": 11
+      },
+      {
+        "mz": 487,
+        "intensity": 48
+      },
+      {
+        "mz": 530,
+        "intensity": 85
+      },
+      {
+        "mz": 552,
+        "intensity": 39
+      },
+      {
+        "mz": 595,
+        "intensity": 76
+      },
+      {
+        "mz": 638,
+        "intensity": 30
+      },
+      {
+        "mz": 660,
+        "intensity": 67
+      },
+      {
+        "mz": 703,
+        "intensity": 111
+      },
+      {
+        "mz": 746,
+        "intensity": 58
+      },
+      {
+        "mz": 768,
+        "intensity": 12
+      },
+      {
+        "mz": 811,
+        "intensity": 49
+      },
+      {
+        "mz": 854,
+        "intensity": 86
+      },
+      {
+        "mz": 876,
+        "intensity": 40
+      }
+    ]
+  },
+  "candidates": {
+    "scoreLabel": "供给检索分数",
+    "higherIsBetter": true,
+    "records": [
+      {
+        "id": "p1",
+        "peptide": "AVRPESFK",
+        "score": 98
+      },
+      {
+        "id": "p2",
+        "peptide": "GDLK",
+        "score": 91
+      },
+      {
+        "id": "p3",
+        "peptide": "LLEQAK",
+        "score": 42
+      }
+    ]
+  },
+  "volcano": {
+    "valueLabel": "provided-adjusted-p",
+    "foldThreshold": 1,
+    "pThreshold": 0.05,
+    "points": [
+      {
+        "id": "教学特征1",
+        "log2FoldChange": -3.9,
+        "p": 0.00008370764
+      },
+      {
+        "id": "教学特征2",
+        "log2FoldChange": -1,
+        "p": 0.2138962
+      },
+      {
+        "id": "教学特征3",
+        "log2FoldChange": 1.9,
+        "p": 0.02369979
+      },
+      {
+        "id": "教学特征4",
+        "log2FoldChange": -3.1,
+        "p": 0.0006878525
+      },
+      {
+        "id": "教学特征5",
+        "log2FoldChange": -0.2,
+        "p": 0.4298662
+      },
+      {
+        "id": "教学特征6",
+        "log2FoldChange": 2.7,
+        "p": 0.003471944
+      },
+      {
+        "id": "教学特征7",
+        "log2FoldChange": -2.3,
+        "p": 0.009230955
+      },
+      {
+        "id": "教学特征8",
+        "log2FoldChange": 0.6,
+        "p": 0.3569653
+      },
+      {
+        "id": "教学特征9",
+        "log2FoldChange": 3.5,
+        "p": 0.0001884988
+      },
+      {
+        "id": "教学特征10",
+        "log2FoldChange": -1.5,
+        "p": 0.04442704
+      },
+      {
+        "id": "教学特征11",
+        "log2FoldChange": 1.4,
+        "p": 0.09928836
+      },
+      {
+        "id": "教学特征12",
+        "log2FoldChange": -3.6,
+        "p": 0.0001785754
+      },
+      {
+        "id": "教学特征13",
+        "log2FoldChange": -0.7,
+        "p": 0.2928025
+      },
+      {
+        "id": "教学特征14",
+        "log2FoldChange": 2.2,
+        "p": 0.008575594
+      },
+      {
+        "id": "教学特征15",
+        "log2FoldChange": -2.8,
+        "p": 0.001348504
+      },
+      {
+        "id": "教学特征16",
+        "log2FoldChange": 0.1,
+        "p": 0.7079458
+      },
+      {
+        "id": "教学特征17",
+        "log2FoldChange": 3,
+        "p": 0.001130506
+      },
+      {
+        "id": "教学特征18",
+        "log2FoldChange": -2,
+        "p": 0.01633375
+      },
+      {
+        "id": "教学特征19",
+        "log2FoldChange": 0.9,
+        "p": 0.1697707
+      },
+      {
+        "id": "教学特征20",
+        "log2FoldChange": 3.8,
+        "p": 0.000116732
+      },
+      {
+        "id": "教学特征21",
+        "log2FoldChange": -1.2,
+        "p": 0.1423421
+      },
+      {
+        "id": "教学特征22",
+        "log2FoldChange": 1.7,
+        "p": 0.03900686
+      },
+      {
+        "id": "教学特征23",
+        "log2FoldChange": -3.3,
+        "p": 0.0003696719
+      },
+      {
+        "id": "教学特征24",
+        "log2FoldChange": -0.4,
+        "p": 0.3596707
+      },
+      {
+        "id": "教学特征25",
+        "log2FoldChange": 2.5,
+        "p": 0.006165738
+      },
+      {
+        "id": "教学特征26",
+        "log2FoldChange": -2.5,
+        "p": 0.005288328
+      },
+      {
+        "id": "教学特征27",
+        "log2FoldChange": 0.4,
+        "p": 0.4705131
+      },
+      {
+        "id": "教学特征28",
+        "log2FoldChange": 3.3,
+        "p": 0.000355754
+      },
+      {
+        "id": "教学特征29",
+        "log2FoldChange": -1.7,
+        "p": 0.02761474
+      },
+      {
+        "id": "教学特征30",
+        "log2FoldChange": 1.2,
+        "p": 0.1536975
+      },
+      {
+        "id": "教学特征31",
+        "log2FoldChange": -3.8,
+        "p": 0.00009272354
+      },
+      {
+        "id": "教学特征32",
+        "log2FoldChange": -0.9,
+        "p": 0.2056819
+      },
+      {
+        "id": "教学特征33",
+        "log2FoldChange": 2,
+        "p": 0.01455747
+      },
+      {
+        "id": "教学特征34",
+        "log2FoldChange": -3,
+        "p": 0.0007412072
+      },
+      {
+        "id": "教学特征35",
+        "log2FoldChange": -0.1,
+        "p": 0.7079458
+      },
+      {
+        "id": "教学特征36",
+        "log2FoldChange": 2.8,
+        "p": 0.002056769
+      },
+      {
+        "id": "教学特征37",
+        "log2FoldChange": -2.2,
+        "p": 0.009621975
+      },
+      {
+        "id": "教学特征38",
+        "log2FoldChange": 0.7,
+        "p": 0.2416804
+      },
+      {
+        "id": "教学特征39",
+        "log2FoldChange": 3.6,
+        "p": 0.0002248131
+      },
+      {
+        "id": "教学特征40",
+        "log2FoldChange": -1.4,
+        "p": 0.09195281
+      },
+      {
+        "id": "教学特征41",
+        "log2FoldChange": 1.5,
+        "p": 0.06275486
+      },
+      {
+        "id": "教学特征42",
+        "log2FoldChange": -3.5,
+        "p": 0.0001958733
+      },
+      {
+        "id": "教学特征43",
+        "log2FoldChange": -0.6,
+        "p": 0.2728722
+      },
+      {
+        "id": "教学特征44",
+        "log2FoldChange": 2.3,
+        "p": 0.0107625
+      },
+      {
+        "id": "教学特征45",
+        "log2FoldChange": -2.7,
+        "p": 0.002977872
+      },
+      {
+        "id": "教学特征46",
+        "log2FoldChange": 0.2,
+        "p": 0.5623413
+      },
+      {
+        "id": "教学特征47",
+        "log2FoldChange": 3.1,
+        "p": 0.0006619552
+      },
+      {
+        "id": "教学特征48",
+        "log2FoldChange": -1.9,
+        "p": 0.01677817
+      },
+      {
+        "id": "教学特征49",
+        "log2FoldChange": 1,
+        "p": 0.2309598
+      },
+      {
+        "id": "教学特征50",
+        "log2FoldChange": 3.9,
+        "p": 0.00006649134
+      },
+      {
+        "id": "教学特征51",
+        "log2FoldChange": -1.1,
+        "p": 0.1391523
+      },
+      {
+        "id": "教学特征52",
+        "log2FoldChange": 1.8,
+        "p": 0.02421736
+      },
+      {
+        "id": "教学特征53",
+        "log2FoldChange": -3.2,
+        "p": 0.0004012754
+      },
+      {
+        "id": "教学特征54",
+        "log2FoldChange": -0.3,
+        "p": 0.660124
+      },
+      {
+        "id": "教学特征55",
+        "log2FoldChange": 2.6,
+        "p": 0.003682887
+      },
+      {
+        "id": "教学特征56",
+        "log2FoldChange": -2.4,
+        "p": 0.005562179
+      },
+      {
+        "id": "教学特征57",
+        "log2FoldChange": 0.5,
+        "p": 0.3282076
+      },
+      {
+        "id": "教学特征58",
+        "log2FoldChange": 3.4,
+        "p": 0.0004272187
+      },
+      {
+        "id": "教学特征59",
+        "log2FoldChange": -1.6,
+        "p": 0.05785653
+      },
+      {
+        "id": "教学特征60",
+        "log2FoldChange": 1.3,
+        "p": 0.09846766
+      },
+      {
+        "id": "教学特征61",
+        "log2FoldChange": -3.7,
+        "p": 0.0001023805
+      },
+      {
+        "id": "教学特征62",
+        "log2FoldChange": -0.8,
+        "p": 0.1959432
+      },
+      {
+        "id": "教学特征63",
+        "log2FoldChange": 2.1,
+        "p": 0.01844592
+      },
+      {
+        "id": "教学特征64",
+        "log2FoldChange": -2.9,
+        "p": 0.0016497
+      },
+      {
+        "id": "教学特征65",
+        "log2FoldChange": 0,
+        "p": 0.5623413
+      },
+      {
+        "id": "教学特征66",
+        "log2FoldChange": 2.9,
+        "p": 0.001213589
+      },
+      {
+        "id": "教学特征67",
+        "log2FoldChange": -2.1,
+        "p": 0.009982372
+      },
+      {
+        "id": "教学特征68",
+        "log2FoldChange": 0.8,
+        "p": 0.3353231
+      },
+      {
+        "id": "教学特征69",
+        "log2FoldChange": 3.7,
+        "p": 0.0001288895
+      },
+      {
+        "id": "教学特征70",
+        "log2FoldChange": -1.3,
+        "p": 0.09119274
+      },
+      {
+        "id": "教学特征71",
+        "log2FoldChange": 1.6,
+        "p": 0.03941719
+      },
+      {
+        "id": "教学特征72",
+        "log2FoldChange": -3.4,
+        "p": 0.0002141166
+      }
+    ]
+  },
+  "note": "箭头只表示概念中的数据形式；独立面板不构成一次实际分析。不执行质谱检索、蛋白推断或统计检验。"
+}

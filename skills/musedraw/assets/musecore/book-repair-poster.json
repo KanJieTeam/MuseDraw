@@ -1,0 +1,33 @@
+{
+  "family": "book-repair-poster",
+  "title": "补书",
+  "subtitle": "古籍修复体验",
+  "bindingHoles": 4,
+  "visiblePages": 8,
+  "patch": {
+    "corner": "bottom-left",
+    "widthFraction": 0.3,
+    "heightFraction": 0.18
+  },
+  "event": {
+    "date": "2026-10-31",
+    "sessions": [
+      {
+        "start": "14:00",
+        "end": "15:30",
+        "seats": 12
+      },
+      {
+        "start": "16:00",
+        "end": "17:30",
+        "seats": 12
+      }
+    ],
+    "venue": "市图书馆古籍部 · 三楼修复室",
+    "address": "活动地点示例：书院路 12 号",
+    "organizer": "主办示例：市图书馆古籍保护中心",
+    "booking": "预约示例：请向图书馆服务台咨询"
+  },
+  "tagline": "补书，是让一本书还能再被读下去。",
+  "note": "活动信息为示例；纸页、补片和装订为造型示意。"
+}

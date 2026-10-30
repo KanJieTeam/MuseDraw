@@ -1,0 +1,18 @@
+{
+  "family":"lunar-night-poster",
+  "titleSuffix":"之夜",
+  "subtitle":"天文台公众开放日 · 一起认识月面的明暗交界",
+  "focusAngle":90,
+  "phaseAngles":[0,45,90,135,180,225,270,315],
+  "view":"north-up",
+  "surfaceMarks":18,
+  "event":{
+    "date":"2026-12-16",
+    "start":"18:30",
+    "end":"21:30",
+    "venue":"地点示例：城西天文台观测平台",
+    "admission":"入场示例：免费，凭预约入场",
+    "contingency":"给定预案：阴天改为室内讲座"
+  },
+  "note":"月相条件与日期独立，非当晚观测预报；月面纹理非实测。活动信息为示例。"
+}
