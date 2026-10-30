@@ -1,0 +1,27 @@
+{
+  "family": "dice-grid",
+  "title": "点数和为 7，有多少种组合？",
+  "subtitle": "独立、各面等权的两枚六面骰子 · 有限样本空间模型",
+  "weightsA": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "weightsB": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "independent": true,
+  "event": {
+    "kind": "sum-equals",
+    "value": 7
+  },
+  "note": "给定权重不是实测频数；随机模型的理论概率不保证一小批投掷出现相同比例。"
+}

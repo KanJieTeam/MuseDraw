@@ -107,6 +107,19 @@ jobs:
         run: |
           python scripts/build_gallery_site.py
           node scripts/check_gallery_browser.mjs --site output/site --playwright output/browser-deps/node_modules/playwright/index.mjs
+      - name: Check executable MuseCore families with real browser layout
+        env:
+          MUSEDRAW_PLAYWRIGHT: ${{ github.workspace }}/output/browser-deps/node_modules/playwright/index.mjs
+        run: |
+          node skills/musedraw/tests/musecore/browser.test.mjs
+          node skills/musedraw/tests/musecore/visual.test.mjs
+          node skills/musedraw/tests/musecore/spatial-data.test.mjs
+          node skills/musedraw/tests/musecore/distribution.test.mjs
+          node skills/musedraw/tests/musecore/workflows.test.mjs
+          node skills/musedraw/tests/musecore/objects.test.mjs
+          node skills/musedraw/tests/musecore/office-analysis.test.mjs
+          node skills/musedraw/tests/musecore/systems.test.mjs
+          node skills/musedraw/tests/musecore/mathematics.test.mjs
       - name: Save gallery browser evidence
         if: always()
         uses: actions/upload-artifact@v4

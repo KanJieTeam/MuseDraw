@@ -277,7 +277,11 @@ class GalleryTests(unittest.TestCase):
                                  "references/musecore-systems.md", "scripts/musecore/system-models.mjs",
                                  "scripts/musecore/reliability-figures.mjs", "scripts/musecore/request-figures.mjs",
                                  "scripts/musecore/hash-figures.mjs", "tests/musecore/systems.test.mjs",
-                                 "assets/musecore/token-bucket.json", "assets/musecore/hash-ring.json"):
+                                 "assets/musecore/token-bucket.json", "assets/musecore/hash-ring.json",
+                                 "references/musecore-mathematics.md", "scripts/musecore/math-models.mjs",
+                                 "scripts/musecore/math-shapes.mjs", "scripts/musecore/binary-figures.mjs",
+                                 "scripts/musecore/probability-figures.mjs", "tests/musecore/mathematics.test.mjs",
+                                 "assets/musecore/symmetry.json", "assets/musecore/dice-grid.json"):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

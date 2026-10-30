@@ -621,6 +621,54 @@
           "sourceSha256": "3881cb3403fca9cfed82a348ddb5d6a6c7921332bda8fbb9f20128aacd55eb43"
         }
       ]
+    },
+    {
+      "id": "angles",
+      "family": "angles",
+      "file": "angles.json",
+      "contentStatus": "mathematical teaching model, not an empirical observation",
+      "sourceCases": [
+        {
+          "id": "125-angles",
+          "sourceSha256": "5cbef177544d3e9dd2045edb5fbf1e84b9418abcb6d97a57a413c13cdd47717e"
+        }
+      ]
+    },
+    {
+      "id": "symmetry",
+      "family": "symmetry",
+      "file": "symmetry.json",
+      "contentStatus": "mathematical teaching model, not an empirical observation",
+      "sourceCases": [
+        {
+          "id": "126-axial-symmetry",
+          "sourceSha256": "9ed4d9cdea24151694b6a31c6f842ec7354989ff6285e2631150d0ec5d51a53b"
+        }
+      ]
+    },
+    {
+      "id": "binary",
+      "family": "binary",
+      "file": "binary.json",
+      "contentStatus": "mathematical teaching model, not an empirical observation",
+      "sourceCases": [
+        {
+          "id": "153-binary",
+          "sourceSha256": "4dae89831299840ab494b10dceab59510caef3753d6fc9964d122568924406e7"
+        }
+      ]
+    },
+    {
+      "id": "dice-grid",
+      "family": "dice-grid",
+      "file": "dice-grid.json",
+      "contentStatus": "mathematical teaching model, not an empirical observation",
+      "sourceCases": [
+        {
+          "id": "156-two-dice",
+          "sourceSha256": "35573495c7f53736a60e6ba654da137d079aac655ae0fa863a02273f3c426182"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -724,6 +772,15 @@
         "rolling-update",
         "token-bucket",
         "hash-ring"
+      ]
+    },
+    {
+      "reference": "references/musecore-mathematics.md",
+      "ids": [
+        "angles",
+        "symmetry",
+        "binary",
+        "dice-grid"
       ]
     }
   ]
