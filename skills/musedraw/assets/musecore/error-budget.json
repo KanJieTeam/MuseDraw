@@ -1,0 +1,29 @@
+{
+  "family": "error-budget",
+  "title": "错误预算",
+  "subtitle": "虚构服务 · 30 天时间窗口，不可用时段按实际时长累计",
+  "windowMinutes": 43200,
+  "observedThrough": 43200,
+  "target": 0.999,
+  "incidents": [
+    {
+      "id": "a",
+      "label": "第 5 天 · 接口不可用",
+      "startMinute": 7200,
+      "durationMinutes": 8
+    },
+    {
+      "id": "b",
+      "label": "第 13 天 · 服务中断",
+      "startMinute": 18720,
+      "durationMinutes": 15
+    },
+    {
+      "id": "c",
+      "label": "第 26 天 · 故障恢复",
+      "startMinute": 37440,
+      "durationMinutes": 25
+    }
+  ],
+  "note": "本例记录与可用性目标均为教学设定；不代表真实服务情况或自动发布政策。"
+}

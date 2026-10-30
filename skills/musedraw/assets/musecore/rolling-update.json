@@ -1,0 +1,11 @@
+{
+  "family": "rolling-update",
+  "title": "滚动更新，把两条约束分开看",
+  "subtitle": "抽象教学计划 · 先区分活动实例与已就绪实例，再观察扩缩过程",
+  "replicas": 3,
+  "maxSurge": 1,
+  "maxUnavailable": 0,
+  "oldLabel": "旧版本",
+  "newLabel": "新版本",
+  "note": "每一步是状态变化，不是固定时长；实际终止中的实例可能继续占用资源。"
+}

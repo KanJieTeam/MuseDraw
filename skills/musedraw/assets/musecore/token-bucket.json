@@ -1,0 +1,103 @@
+{
+  "family": "token-bucket",
+  "title": "容量允许突发，速率决定长期补充",
+  "subtitle": "同一次模拟产生桶内状态、时间曲线和逐项放行记录",
+  "capacity": 5,
+  "initial": 5,
+  "refillPerSecond": 1,
+  "durationSeconds": 12,
+  "requests": [
+    {
+      "id": "r1",
+      "at": 0,
+      "cost": 1
+    },
+    {
+      "id": "r2",
+      "at": 0.1,
+      "cost": 1
+    },
+    {
+      "id": "r3",
+      "at": 0.2,
+      "cost": 1
+    },
+    {
+      "id": "r4",
+      "at": 0.3,
+      "cost": 1
+    },
+    {
+      "id": "r5",
+      "at": 0.4,
+      "cost": 1
+    },
+    {
+      "id": "r6",
+      "at": 0.5,
+      "cost": 1
+    },
+    {
+      "id": "r7",
+      "at": 1,
+      "cost": 1
+    },
+    {
+      "id": "r8",
+      "at": 1.2,
+      "cost": 1
+    },
+    {
+      "id": "r9",
+      "at": 1.4,
+      "cost": 1
+    },
+    {
+      "id": "r10",
+      "at": 2,
+      "cost": 1
+    },
+    {
+      "id": "r11",
+      "at": 3,
+      "cost": 1
+    },
+    {
+      "id": "r12",
+      "at": 4,
+      "cost": 1
+    },
+    {
+      "id": "r13",
+      "at": 5,
+      "cost": 1
+    },
+    {
+      "id": "r14",
+      "at": 6,
+      "cost": 1
+    },
+    {
+      "id": "r15",
+      "at": 7,
+      "cost": 1
+    },
+    {
+      "id": "r16",
+      "at": 8,
+      "cost": 1
+    },
+    {
+      "id": "r17",
+      "at": 9,
+      "cost": 1
+    },
+    {
+      "id": "r18",
+      "at": 10,
+      "cost": 1
+    }
+  ],
+  "selectedRequest": "r9",
+  "note": "虚构请求序列；初始令牌数与补充速率由输入明确给出。"
+}

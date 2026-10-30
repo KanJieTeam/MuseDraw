@@ -573,6 +573,54 @@
           "sourceSha256": "632c9f81106b1a32c5bb1c3726fa93bf4f91ada34ffe34d8f7366882a2e17656"
         }
       ]
+    },
+    {
+      "id": "error-budget",
+      "family": "error-budget",
+      "file": "error-budget.json",
+      "contentStatus": "fictional engineering teaching input, not an actual service or production plan",
+      "sourceCases": [
+        {
+          "id": "101-error-budget",
+          "sourceSha256": "d53f4156316c2cafd8976d5cdee3c08fde34cb984b4f56230a97a117fe2dd58a"
+        }
+      ]
+    },
+    {
+      "id": "rolling-update",
+      "family": "rolling-update",
+      "file": "rolling-update.json",
+      "contentStatus": "fictional engineering teaching input, not an actual service or production plan",
+      "sourceCases": [
+        {
+          "id": "109-rolling-update",
+          "sourceSha256": "fe9faaf9abe3300b7c83bc032cbb0e4ed8c054bac85a172860e8fc62dc819505"
+        }
+      ]
+    },
+    {
+      "id": "token-bucket",
+      "family": "token-bucket",
+      "file": "token-bucket.json",
+      "contentStatus": "fictional engineering teaching input, not an actual service or production plan",
+      "sourceCases": [
+        {
+          "id": "e05-lingpaitong",
+          "sourceSha256": "581c59ba6d88fd9134abe7ce57dd0830ca8a3a29600be98428489b571260c5f9"
+        }
+      ]
+    },
+    {
+      "id": "hash-ring",
+      "family": "hash-ring",
+      "file": "hash-ring.json",
+      "contentStatus": "fictional engineering teaching input, not an actual service or production plan",
+      "sourceCases": [
+        {
+          "id": "105-consistent-hashing",
+          "sourceSha256": "3881cb3403fca9cfed82a348ddb5d6a6c7921332bda8fbb9f20128aacd55eb43"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -667,6 +715,15 @@
         "objectives",
         "meeting-audit",
         "space-use"
+      ]
+    },
+    {
+      "reference": "references/musecore-systems.md",
+      "ids": [
+        "error-budget",
+        "rolling-update",
+        "token-bucket",
+        "hash-ring"
       ]
     }
   ]

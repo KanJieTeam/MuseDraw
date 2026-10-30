@@ -273,7 +273,11 @@ class GalleryTests(unittest.TestCase):
                                  "references/musecore-office-analysis.md", "scripts/musecore/office-analysis.mjs",
                                  "scripts/musecore/office-cost.mjs", "scripts/musecore/office-objectives.mjs",
                                  "scripts/musecore/office-audits.mjs", "tests/musecore/office-analysis.test.mjs",
-                                 "assets/musecore/cost-allocation.json", "assets/musecore/meeting-audit.json"):
+                                 "assets/musecore/cost-allocation.json", "assets/musecore/meeting-audit.json",
+                                 "references/musecore-systems.md", "scripts/musecore/system-models.mjs",
+                                 "scripts/musecore/reliability-figures.mjs", "scripts/musecore/request-figures.mjs",
+                                 "scripts/musecore/hash-figures.mjs", "tests/musecore/systems.test.mjs",
+                                 "assets/musecore/token-bucket.json", "assets/musecore/hash-ring.json"):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

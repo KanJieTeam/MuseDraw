@@ -1,0 +1,90 @@
+{
+  "family": "hash-ring",
+  "title": "成员改变，只看实际搬走的键",
+  "subtitle": "一致性哈希教学示意 · 同一个键在两幅环上保持相同的哈希位置",
+  "beforeNodes": [
+    {
+      "id": "A",
+      "label": "A"
+    },
+    {
+      "id": "B",
+      "label": "B"
+    },
+    {
+      "id": "C",
+      "label": "C"
+    }
+  ],
+  "afterNodes": [
+    {
+      "id": "A",
+      "label": "A"
+    },
+    {
+      "id": "B",
+      "label": "B"
+    },
+    {
+      "id": "C",
+      "label": "C"
+    },
+    {
+      "id": "D",
+      "label": "D"
+    }
+  ],
+  "keys": [
+    {
+      "id": "record-1",
+      "label": "键 1"
+    },
+    {
+      "id": "record-2",
+      "label": "键 2"
+    },
+    {
+      "id": "record-3",
+      "label": "键 3"
+    },
+    {
+      "id": "record-4",
+      "label": "键 4"
+    },
+    {
+      "id": "record-5",
+      "label": "键 5"
+    },
+    {
+      "id": "record-6",
+      "label": "键 6"
+    },
+    {
+      "id": "record-7",
+      "label": "键 7"
+    },
+    {
+      "id": "record-8",
+      "label": "键 8"
+    },
+    {
+      "id": "record-9",
+      "label": "键 9"
+    },
+    {
+      "id": "record-10",
+      "label": "键 10"
+    },
+    {
+      "id": "record-11",
+      "label": "键 11"
+    },
+    {
+      "id": "record-12",
+      "label": "键 12"
+    }
+  ],
+  "virtualNodes": 3,
+  "selectedKey": "record-2",
+  "note": "键和虚拟点由稳定 ID 计算；这是给定样本的迁移，不外推成整个系统的数据迁移比例。"
+}
