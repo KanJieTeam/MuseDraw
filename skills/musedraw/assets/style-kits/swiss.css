@@ -1,0 +1,11 @@
+/* MuseDraw Swiss: roles for new work, not a fixed page. */
+.muse-swiss{--muse-paper:#F2F1EC;--muse-ink:#0B0B0B;--muse-accent:#E3001B;--muse-muted:#5E5E5A;--muse-gutter:clamp(20px,3vw,48px);color:var(--muse-ink);background:var(--muse-paper);font-family:Arial,"Microsoft YaHei",sans-serif}
+.muse-swiss .muse-display{font-size:clamp(56px,9vw,160px);font-weight:800;line-height:.98;letter-spacing:-.045em;margin:0}
+.muse-swiss .muse-body{font-size:clamp(18px,1.8vw,30px);line-height:1.5;max-width:32em}
+.muse-swiss .muse-evidence{font-family:Consolas,"Microsoft YaHei",monospace;font-variant-numeric:tabular-nums}
+.muse-swiss .muse-field{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--muse-gutter)}
+.muse-swiss .muse-span-8{grid-column:span 8;min-width:0}.muse-swiss .muse-span-4{grid-column:span 4;min-width:0}.muse-swiss .muse-span-12{grid-column:1/-1;min-width:0}
+.muse-swiss .muse-rule{border:0;border-top:1px solid currentColor}
+.muse-swiss .muse-signal{color:var(--muse-accent)}
+.muse-swiss img{max-width:100%;height:auto}
+@media(max-width:640px){.muse-swiss .muse-field{grid-template-columns:minmax(0,1fr)}.muse-swiss .muse-span-8,.muse-swiss .muse-span-4{grid-column:1/-1}.muse-swiss .muse-display{letter-spacing:-.02em}}

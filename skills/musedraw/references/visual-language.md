@@ -35,8 +35,8 @@ the style: what stretches, opens, accumulates, connects, folds or contrasts?
 Let that decision organise the image and headline. Ordinary informational work
 can keep a straightforward structure; a metaphor is not required everywhere.
 
-For an original named-style work, inspect one relevant complete source and its
-design decisions before choosing component treatments from `themes/`. In the
+For an original named-style work, choose a working kit below or inspect one
+relevant complete source before choosing component treatments from `themes/`. In the
 Bauhaus project study, a large circle carries an actual completion quantity,
 while a separate typographic field carries the work and dates. The transferable
 decision is the contrast between those reading roles; a diagram with three
@@ -46,6 +46,22 @@ the spatial argument. Shape, border, shadow and heading defaults are available
 component treatments, not instructions to apply every treatment to every object.
 In HTML, plotting or image work, translate the roles to that medium. Preserve
 chart encodings, distinctions and legibility when choosing a palette.
+
+## Working kits for new subjects
+
+Two families now include tools that can participate directly in making new work:
+
+- [Swiss](style-kits/swiss.md): object/type opposition, a meaningful signal
+  colour, editable silhouettes, document forms, type roles and HTML grid tools.
+- [Ink Wash](style-kits/ink-wash.md): subject-led contours, ink-weight variation,
+  open-field composition, optional vertical display and precise evidence type.
+
+Read only the selected guide. `scripts/style-kit.mjs --style FAMILY --out NEW_DIR`
+copies its drawing module, scoped CSS and a minimal authoring file. This starts
+an original composition rather than replaying a finished case. Use a complete
+study when its established composition is helpful; neither route is compulsory
+for unrelated work. These kits are development resources, not a claim that
+other hosts have acquired the author's aesthetic judgement.
 
 ## The existing twenty families, expanded beyond boxes
 

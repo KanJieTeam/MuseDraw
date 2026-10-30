@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-29.3
+  instructions-version: musecore-2026-10-30.5
 ---
 
 # MuseDraw
@@ -59,8 +59,11 @@ scope of the assistant or require every artifact to be a diagram.
 For a named style, original visual direction or a more expressive poster/report,
 use [MuseDraw visual language](references/visual-language.md): develop the existing
 twenty families through their typography, imagery, spatial rhythm and material.
-For an original named-style work, first inspect a relevant complete composition
-and its design decisions using [style compositions](references/style-studies.md).
+For original Swiss or Ink Wash work, use the matching
+[working style kit](references/visual-language.md#working-kits-for-new-subjects):
+it pairs composition choices, object drawing tools and type roles for new content.
+For other named styles, or when a complete work is the useful starting point,
+inspect a relevant composition using [style compositions](references/style-studies.md).
 Use it to resolve the relationship between objects, type, colour area and space;
 then use the theme JSON for production settings. Carry over decisions that fit
 the new content, not its subject, measurements or page coordinates. If no work
@@ -108,6 +111,14 @@ For everyday office processes, task ownership and project plans, read
 [office diagrams](references/office-diagrams.md). Choose the appropriate flow,
 responsibility matrix or time-based composition from the actual work; do not
 turn every office brief into the same card grid or infer missing assignments.
+
+For a new office or research diagram, read [representation routing](references/representation-routing.md)
+before drawing. Declare the reader question and one primary representation in
+`scene.meta`. The representation is a hard production choice: do not silently
+fall back to a generic architecture card wall when the content does not fit.
+Run `node scripts/representation-lint.mjs scene.json --strict` before delivery;
+an equal-card-wall or missing representation is a failed first draft, not an
+invitation to shrink text or add more boxes.
 
 For a composed office or research report page, [report spreads](references/report-spreads.md)
 provides editable compositions for business, project and research reports,

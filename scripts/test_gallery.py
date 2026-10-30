@@ -244,6 +244,13 @@ class GalleryTests(unittest.TestCase):
                 self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
                 self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
                 for relative in (
+                    "assets/style-kits/marks.mjs",
+                    "assets/style-kits/swiss.css",
+                    "assets/style-kits/ink-wash.css",
+                    "references/style-kits/swiss.md",
+                    "references/style-kits/ink-wash.md",
+                    "references/style-kit-api.md",
+                    "scripts/style-kit.mjs",
                     "assets/visual-language/shared.css",
                     "assets/report-spreads/seed.css",
                     "assets/report-spreads/urban-block.png",

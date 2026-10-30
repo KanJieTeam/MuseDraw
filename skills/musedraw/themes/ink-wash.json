@@ -3,7 +3,7 @@
   "name": "Ink Wash",
   "nameZh": "水墨宣纸",
   "aliases": ["水墨", "墨韵", "宣纸", "国风", "ink"],
-  "summary": "Rice paper, brush-calligraphy headline, a cinnabar seal and vertical column labels. Chinese typographic tradition for government, culture and enterprise reports.",
+  "summary": "Subject-led ink weight, open paper and brush display paired with precise evidence type. Optional vertical writing and meaningful vermilion marks for contemporary Chinese-inspired work.",
   "palette": { "paper": "#F3EEE2", "card": "#FAF7EF", "ink": "#1E1C19", "muted": "#6E675B", "accent": "#B3342A", "dai": "#3E5868", "wash": "#E4DED1" },
   "fonts": { "display": "Ma Shan Zheng, Noto Serif SC, serif", "body": "Noto Serif SC, serif", "mono": "Noto Serif SC, serif" },
   "canvas": { "bg": "paper", "margin": 64, "grain": { "opacity": 0.3, "frequency": 0.75, "r": 0.4, "g": 0.35, "b": 0.25, "alpha": 0.55 }, "glows": [ { "x": 0.9, "y": 0.1, "r": 0.25, "color": "#CFC6B2", "opacity": 0.6 } ] },

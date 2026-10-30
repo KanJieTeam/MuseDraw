@@ -1,0 +1,10 @@
+/* MuseDraw Ink Wash: brush display, clear evidence, optional vertical title. */
+.muse-ink-wash{--muse-paper:#F3EEE2;--muse-ink:#1E1C19;--muse-accent:#B3342A;--muse-muted:#6E675B;--muse-gutter:clamp(24px,4vw,64px);color:var(--muse-ink);background:var(--muse-paper);font-family:"Microsoft YaHei",sans-serif}
+.muse-ink-wash .muse-display{font-family:KaiTi,STKaiti,SimSun,serif;font-size:clamp(52px,7vw,120px);font-weight:400;line-height:1.18;letter-spacing:.08em;margin:0}
+.muse-ink-wash .muse-body{font-size:clamp(18px,1.7vw,28px);line-height:1.75;max-width:32em}
+.muse-ink-wash .muse-evidence{font-family:Consolas,"Microsoft YaHei",monospace;font-variant-numeric:tabular-nums;letter-spacing:normal}
+.muse-ink-wash .muse-field{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(16rem,1fr);gap:var(--muse-gutter);align-items:start}
+.muse-ink-wash .muse-vertical{writing-mode:vertical-rl;text-orientation:upright}
+.muse-ink-wash .muse-proof{color:var(--muse-accent);border-inline-start:2px solid currentColor;padding-inline-start:1em}
+.muse-ink-wash img{max-width:100%;height:auto}
+@media(max-width:720px){.muse-ink-wash .muse-field{grid-template-columns:minmax(0,1fr)}.muse-ink-wash .muse-vertical{writing-mode:horizontal-tb}}

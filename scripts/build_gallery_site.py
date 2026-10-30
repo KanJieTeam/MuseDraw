@@ -84,7 +84,7 @@ def build_skill_download(root, staging):
                 frontend_example = file.suffix == ".html" and file.is_relative_to(source / "assets/frontend")
                 composed_example = (
                     any(file.is_relative_to(source / "assets" / family)
-                        for family in ("report-spreads", "visual-language"))
+                        for family in ("report-spreads", "visual-language", "style-kits"))
                     and file.suffix in {".html", ".css", ".png", ".jpg", ".svg", ".txt"}
                 )
                 if file.suffix in {".md", ".json", ".mjs", ".js", ".py", ".yaml"} or name.endswith("LICENSE") or design_preview or frontend_example or composed_example:
