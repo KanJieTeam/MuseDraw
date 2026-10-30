@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-30.14
+  instructions-version: musecore-2026-10-31.15
 ---
 
 # MuseDraw
@@ -95,6 +95,7 @@ family's encodings, coordinated geometry and placement.
 | Traceable cost allocation, weighted goal progress, meeting workload and sampled seat use | [Office analysis](references/musecore-office-analysis.md) |
 | Time-based error allowance, request/token traces, hash membership and abstract rolling updates | [Engineering process models](references/musecore-systems.md) |
 | Angle sectors, reflected shapes, unsigned binary operations and independent finite-outcome probabilities | [Mathematical objects](references/musecore-mathematics.md) |
+| Software boundaries, ordered messages, DACI role assignments and declared backup inventory | [Boundaries and relationships](references/musecore-relations.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

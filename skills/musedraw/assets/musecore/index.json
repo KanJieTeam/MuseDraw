@@ -669,6 +669,62 @@
           "sourceSha256": "35573495c7f53736a60e6ba654da137d079aac655ae0fa863a02273f3c426182"
         }
       ]
+    },
+    {
+      "id": "architecture",
+      "family": "architecture",
+      "file": "architecture.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "e01-duanlianjie-zujian",
+          "sourceSha256": "e532ef30c5b5f15e8dc1dea6fa3f6d9f8a1d938fa1ad6f9cc07f3b19123643d2"
+        },
+        {
+          "id": "o01-huiyishi-yuding",
+          "sourceSha256": "a5737a726bbef739fec2d16e4b23bb63c294b03c60ca476618ac6483f919254d"
+        },
+        {
+          "id": "171-sequencing-platform-c4",
+          "sourceSha256": "148527647ed2c203a8ae36db35290fae054084bb819c2af3e914868b457bc94c"
+        }
+      ]
+    },
+    {
+      "id": "message-sequence",
+      "family": "message-sequence",
+      "file": "message-sequence.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "e10-tcp-woshou",
+          "sourceSha256": "e68d65ae6a603abe630cef17c9ab192d8508441e613bef1e1da7cb17e17febd2"
+        }
+      ]
+    },
+    {
+      "id": "daci",
+      "family": "daci",
+      "file": "daci.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "o03-daci-juece",
+          "sourceSha256": "2fe0602eeebd4d8ba1200d5ce35e0dadcc64838ebe43bec34dc790a0d7d4164b"
+        }
+      ]
+    },
+    {
+      "id": "backup-inventory",
+      "family": "backup-inventory",
+      "file": "backup-inventory.json",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "sourceCases": [
+        {
+          "id": "110-backup-3-2-1",
+          "sourceSha256": "7986bd69cee5c7c9453a9e73584d31f382fdf7d721d34fb7c6a8549f09096102"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -781,6 +837,15 @@
         "symmetry",
         "binary",
         "dice-grid"
+      ]
+    },
+    {
+      "reference": "references/musecore-relations.md",
+      "ids": [
+        "architecture",
+        "message-sequence",
+        "daci",
+        "backup-inventory"
       ]
     }
   ]

@@ -1,0 +1,18 @@
+{
+  "family": "daci",
+  "title": "谁推动决定，谁最终拍板？",
+  "subtitle": "DACI 决策职责 · 虚构教学示例，非实际组织记录",
+  "decision": "是否更换公司报销系统",
+  "people": [
+    {"id":"wang","label":"王蕾 · 财务经理"},
+    {"id":"chen","label":"陈文 · 首席财务官"},
+    {"id":"lin","label":"林青 · IT 负责人"},
+    {"id":"zhou","label":"周宁 · 法务"},
+    {"id":"wu","label":"吴雨 · 部门助理"},
+    {"id":"li","label":"李禾 · 员工代表"}
+  ],
+  "assignments": {"driver":["wang"],"approver":["chen"],"contributors":["lin","zhou","wu"],"informed":["li","wu"]},
+  "inputs": {"driver":"汇总候选方案、费用与试用反馈。","approver":"依据成本、风险与业务需求作出决定。","contributors":"提供集成、合规与操作流程意见。","informed":"接收最终决定与后续影响。"},
+  "status": "planned",
+  "note": "角色定义参考 Atlassian DACI。吴雨在本示例中同时属于贡献者和知会者；名单按个人 ID 展开。"
+}

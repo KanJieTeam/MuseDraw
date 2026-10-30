@@ -1,0 +1,32 @@
+{
+  "family": "message-sequence",
+  "title": "一份活动场地申请，怎样得到确认",
+  "subtitle": "虚构办公对话 · 申请与改期两个片段；状态标签由示例明确提供。",
+  "panels": [
+    {
+      "id": "booking",
+      "title": "申请：先确认场地，再通知申请人",
+      "participants": [{"id":"applicant","label":"申请人"},{"id":"desk","label":"场地协调员"},{"id":"venue","label":"场地管理员"}],
+      "initialStates": [{"participant":"applicant","label":"待确认"},{"participant":"venue","label":"尚未核对"}],
+      "messages": [
+        {"id":"request","from":"applicant","to":"desk","label":"申请周五下午使用小会议室"},
+        {"id":"check","from":"desk","to":"venue","label":"请核对该时段是否可用"},
+        {"id":"available","from":"venue","to":"desk","label":"该时段可用，已登记保留","replyTo":"check","states":[{"participant":"venue","label":"已保留"}]},
+        {"id":"confirmed","from":"desk","to":"applicant","label":"申请已确认，请按时到场","replyTo":"request","states":[{"participant":"applicant","label":"已获确认"}]}
+      ],
+      "note":"协调员先向管理员核对场地，再把确认结果告知申请人。"
+    },
+    {
+      "id": "reschedule",
+      "title": "改期：明确回复原申请",
+      "participants": [{"id":"applicant","label":"申请人"},{"id":"desk","label":"场地协调员"}],
+      "messages": [
+        {"id":"change","from":"applicant","to":"desk","label":"希望改为下周一，原预约先保留","states":[{"participant":"applicant","label":"等待改期回复"}]},
+        {"id":"answer","from":"desk","to":"applicant","label":"下周一有空档，是否确定改期？","replyTo":"change"},
+        {"id":"accept","from":"applicant","to":"desk","label":"确定改期，请释放原预约","replyTo":"answer","states":[{"participant":"applicant","label":"已确认改期"}]}
+      ],
+      "note":"此处只列出改期对话，原申请的其他处理步骤未给出。"
+    }
+  ],
+  "note": "示例中的状态以对话记录为准；省略的动作和规则不在图中表示。"
+}

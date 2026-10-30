@@ -1,0 +1,29 @@
+{
+  "family": "architecture",
+  "title": "预订服务 · API 容器内部",
+  "subtitle": "组件图 / 单一容器范围 · 展示请求处理、预订规则与外部依赖",
+  "level": "component",
+  "scope": {"id":"booking-api","label":"预订 API","kind":"container","technology":"Java · Spring Boot","system":"会议室预订系统"},
+  "root": "controller",
+  "nodes": [
+    {"id":"controller","label":"预订控制器","kind":"component","technology":"Spring MVC","detail":"校验请求与身份，调用预订规则"},
+    {"id":"rules","label":"预订规则","kind":"component","technology":"Java","detail":"检查时间冲突与可预约时段"},
+    {"id":"repository","label":"预订仓库","kind":"component","technology":"JDBC","detail":"保存预订与签到记录"},
+    {"id":"notification","label":"通知发布器","kind":"component","technology":"AMQP client","detail":"发布预订确认与释放事件"}
+  ],
+  "externals": [
+    {"id":"web","label":"Web 应用","kind":"container","containerType":"application","technology":"React","detail":"员工搜索会议室并提交预订","band":"before"},
+    {"id":"database","label":"预订数据库","kind":"container","containerType":"data","technology":"PostgreSQL","detail":"存储会议室、预订与签到记录","band":"after"},
+    {"id":"queue","label":"通知队列","kind":"container","containerType":"queue","technology":"RabbitMQ","detail":"向通知服务传递预订事件","band":"after"}
+  ],
+  "links": [
+    {"id":"web-controller","from":"web","to":"controller","label":"提交预订","technology":"JSON / HTTPS"},
+    {"id":"controller-rules","from":"controller","to":"rules","label":"检查规则","technology":"Java call"},
+    {"id":"controller-notification","from":"controller","to":"notification","label":"发送预订事件","technology":"Java call"},
+    {"id":"rules-notification","from":"rules","to":"notification","label":"发送冲突提醒","technology":"Java call"},
+    {"id":"rules-repository","from":"rules","to":"repository","label":"查询与保存","technology":"Java call"},
+    {"id":"repository-database","from":"repository","to":"database","label":"读写预订","technology":"SQL / JDBC"},
+    {"id":"notification-queue","from":"notification","to":"queue","label":"发布确认事件","technology":"AMQP"}
+  ],
+  "note": "范围：预订 API 容器。蓝色对象位于范围外，白色组件位于范围内；箭头表示给定的有向依赖。"
+}

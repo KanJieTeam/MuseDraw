@@ -1,0 +1,13 @@
+{
+  "family":"backup-inventory",
+  "title":"3-2-1，从实际清单开始",
+  "subtitle":"虚构备份教学示例 · 数量从现有副本计算，计划副本单列",
+  "copies":[
+    {"id":"source","label":"生产数据","medium":"磁盘","location":"本地机房","offsite":false,"status":"present","original":true},
+    {"id":"local","label":"本地备份","medium":"磁盘","location":"本地备份设备","offsite":false,"status":"present","original":false},
+    {"id":"remote","label":"异地备份","medium":"磁带","location":"异地保管点","offsite":true,"status":"present","original":false},
+    {"id":"planned","label":"第二异地备份","medium":"对象存储","location":"另一地域（计划）","offsite":true,"status":"planned","original":false}
+  ],
+  "transfer":{"bytes":2000000000000,"bytesPerSecond":400000000},
+  "note":"介质类别与异地属性均由输入申报。此图不从备份周期推导 RPO，也不把传输时间当成恢复时间承诺。"
+}
