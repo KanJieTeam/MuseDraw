@@ -1,0 +1,55 @@
+{
+  "family": "log-tiering",
+  "title": "日志冷热分层",
+  "subtitle": "虚构容量规划输入 · 连续半开年龄区间；山形只表达远近层序",
+  "dailyAmount": 200,
+  "unit": "GB",
+  "tiers": [
+    {
+      "id": "hot",
+      "label": "热",
+      "startDay": 0,
+      "endDay": 7,
+      "medium": "SSD · 输入声明介质",
+      "storedFraction": 1,
+      "replicas": 2,
+      "queryNote": "输入目标：秒级查询；本图不验证"
+    },
+    {
+      "id": "warm",
+      "label": "温",
+      "startDay": 7,
+      "endDay": 30,
+      "medium": "普通磁盘 · 输入声明介质",
+      "storedFraction": 0.7,
+      "replicas": 1,
+      "queryNote": "输入目标：十秒级；本图不验证"
+    },
+    {
+      "id": "cold",
+      "label": "冷",
+      "startDay": 30,
+      "endDay": 180,
+      "medium": "对象存储 · 输入声明介质",
+      "storedFraction": 0.25,
+      "replicas": 1,
+      "queryNote": "输入目标：分钟级；本图不验证"
+    },
+    {
+      "id": "archive",
+      "label": "归档",
+      "startDay": 180,
+      "endDay": 365,
+      "medium": "归档对象存储 · 输入声明介质",
+      "storedFraction": 0.1,
+      "replicas": 1,
+      "queryNote": "输入目标：取回需小时级；本图不验证"
+    }
+  ],
+  "baseline": {
+    "label": "同一365天全部采用给定热层参数",
+    "storedFraction": 1,
+    "replicas": 2
+  },
+  "note": "计划储量 = 区间天数 × 每日原始量 × 存后/原始比例 × 副本数。GB/TB采用十进制，GiB/TiB采用二进制；不混算。未计索引、元数据、纠删码与迁移瞬时副本；不表示真实访问分布、物理独立性或查询/恢复保证。显示值四舍五入，合计从未舍入数值计算。"
+}

@@ -1,0 +1,22 @@
+{
+ "family":"repressilator",
+ "title":"三色抑制环，画出实际数值轨迹",
+ "subtitle":"对称六方程 Hill 模型 · 由给定初值和参数积分，不预设一定振荡",
+ "model":"symmetric-six-ode-hill-ring",
+ "normalization":"mRNA-lifetime-and-scaled-concentration",
+ "alpha":216,
+ "leak":0.216,
+ "beta":5,
+ "hill":2,
+ "initial":{"mrna":[0,0,0],"protein":[0,5,0]},
+ "genes":[
+  {"id":"laci","label":"LacI","promoter":"λ PR","repressorId":"ci"},
+  {"id":"tetr","label":"TetR","promoter":"PLlacO1","repressorId":"laci"},
+  {"id":"ci","label":"λ cI","promoter":"PLtetO1","repressorId":"tetr"}
+ ],
+ "duration":60,
+ "step":0.005,
+ "sampleCount":601,
+ "phaseSplit":20,
+ "note":"这里只计算三种 mRNA 与三种蛋白的对称、确定性简化模型。时间以 mRNA 寿命归一化；β 是蛋白与 mRNA 降解率的比值，不是寿命比。线路符号说明编码与抑制关系，不表示可直接实验构建的 DNA 设计。相图保留有限轨迹，不强制闭合，也不把后段轨迹直接宣称为极限环；不计算 GFP、荧光或分钟数。"
+}

@@ -1,0 +1,17 @@
+{
+  "family": "pod-scheduling",
+  "title": "Pod 调度：过滤与打分",
+  "subtitle": "虚构节点快照 · 一个 Pod 的硬约束与调度后余量；分数仅演示单一连续策略",
+  "pod": {"label":"web-7f9c","cpuMilli":2000,"memoryMi":4096,"selector":{"disktype":"ssd"},"tolerations":[]},
+  "weights": {"cpu":1,"memory":1},
+  "nodes": [
+    {"id":"a","label":"node-a","cpuMilli":8000,"usedCpuMilli":6500,"memoryMi":32768,"usedMemoryMi":20480,"labels":{"disktype":"ssd"},"taints":[]},
+    {"id":"b","label":"node-b","cpuMilli":8000,"usedCpuMilli":3000,"memoryMi":32768,"usedMemoryMi":26624,"labels":{"disktype":"ssd"},"taints":[]},
+    {"id":"c","label":"node-c","cpuMilli":16000,"usedCpuMilli":4000,"memoryMi":65536,"usedMemoryMi":16384,"labels":{"disktype":"hdd"},"taints":[]},
+    {"id":"d","label":"node-d","cpuMilli":16000,"usedCpuMilli":2000,"memoryMi":65536,"usedMemoryMi":8192,"labels":{"disktype":"ssd"},"taints":[{"key":"gpu","value":"true","effect":"NoSchedule"}]},
+    {"id":"e","label":"node-e","cpuMilli":8000,"usedCpuMilli":2000,"memoryMi":32768,"usedMemoryMi":10240,"labels":{"disktype":"ssd"},"taints":[]},
+    {"id":"f","label":"node-f","cpuMilli":4000,"usedCpuMilli":1000,"memoryMi":16384,"usedMemoryMi":13312,"labels":{"disktype":"ssd"},"taints":[]},
+    {"id":"g","label":"node-g","cpuMilli":16000,"usedCpuMilli":9000,"memoryMi":65536,"usedMemoryMi":30720,"labels":{"disktype":"ssd"},"taints":[]}
+  ],
+  "note": "所有资源均为显式可分配与已请求量，不代表实时使用率。CPU 用 m（千分之一核），内存用 MiB。并列最高时保留全部候选，不代替真实调度器选定节点。"
+}

@@ -1133,6 +1133,150 @@
           "sourceSha256": "9131fd76cf959cea83da47f8561b5b61da89108c731fa7273a5612eb43e5a6e7"
         }
       ]
+    },
+    {
+      "id": "seir-scenarios",
+      "family": "seir-scenarios",
+      "file": "seir-scenarios.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "166-seir-scenarios",
+          "sourceSha256": "d0f0a0bfa8c8e20b9372b0a511872e6f03f0fd15086bf360b8728e220d8d723c"
+        }
+      ]
+    },
+    {
+      "id": "repressilator",
+      "family": "repressilator",
+      "file": "repressilator.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "169-repressilator",
+          "sourceSha256": "4f771379c52f14e0cceadb0b38784cdf5c8a092bb1ef8b7cb0392a6c328942d9"
+        }
+      ]
+    },
+    {
+      "id": "friction-experiment",
+      "family": "friction-experiment",
+      "file": "friction-experiment.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "j05-huadong-moca",
+          "sourceSha256": "328c7d09c72e74a635ac681e90b5c1f2cdee8232380c8bf1d496bb24c1b28e4d"
+        }
+      ]
+    },
+    {
+      "id": "germination-trial",
+      "family": "germination-trial",
+      "file": "germination-trial.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "t05-zhongzi-mengfa",
+          "sourceSha256": "7f916e7f1f7cda8c8271309c5e4cc82e82f1c69f14dbbad2e40a371363bab41a"
+        }
+      ]
+    },
+    {
+      "id": "incident-review",
+      "family": "incident-review",
+      "file": "incident-review.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "119-incident-postmortem",
+          "sourceSha256": "6c1e153bf2f9d5ea60076c34068e34e4fdbee14887e2901b7b87878e62354750"
+        }
+      ]
+    },
+    {
+      "id": "log-tiering",
+      "family": "log-tiering",
+      "file": "log-tiering.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "112-log-tiering",
+          "sourceSha256": "1ab0b760e076035e758ba7dee78a17b2f5e233a678e392ba974d40c6b6c02223"
+        }
+      ]
+    },
+    {
+      "id": "electromagnetic-spectrum",
+      "family": "electromagnetic-spectrum",
+      "file": "electromagnetic-spectrum.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "t15-dianci-bopu",
+          "sourceSha256": "711fde509edd0eab38924ac1688df2bc7b3fff520d915fda2482c08ac86300f2"
+        }
+      ]
+    },
+    {
+      "id": "bravais-lattices",
+      "family": "bravais-lattices",
+      "file": "bravais-lattices.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "176-bravais-lattices",
+          "sourceSha256": "f04c8a1794466ff9aa8a20d1a773983eb949d46c190eebbba51c12b04e26a854"
+        }
+      ]
+    },
+    {
+      "id": "first-elements",
+      "family": "first-elements",
+      "file": "first-elements.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "t12-qian20-yuansu",
+          "sourceSha256": "2fa4524cb21da819ca86d42d9da1695971853cf23fdefd6992b645246065fb0d"
+        }
+      ]
+    },
+    {
+      "id": "decimal-placevalue",
+      "family": "decimal-placevalue",
+      "file": "decimal-placevalue.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "131-decimals",
+          "sourceSha256": "bdfda07279af443b27d009fc22075191c45348cd2f25d7ed10ef94fa999351e1"
+        }
+      ]
+    },
+    {
+      "id": "pod-scheduling",
+      "family": "pod-scheduling",
+      "file": "pod-scheduling.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "104-pod-scheduling",
+          "sourceSha256": "20a111e373c4bcfa9d93f02237c0a8865c779c57471568201b5cf504089d55e6"
+        }
+      ]
+    },
+    {
+      "id": "gitops-pull",
+      "family": "gitops-pull",
+      "file": "gitops-pull.json",
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
+      "sourceCases": [
+        {
+          "id": "120-gitops-pull",
+          "sourceSha256": "3b2ccb30f089b6cd5a117adacf903ca4af26f20d7d30cde816812966f1f2c534"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1365,6 +1509,48 @@
       "ids": [
         "office-move",
         "oncall-escalation"
+      ]
+    },
+    {
+      "reference": "references/musecore-dynamics.md",
+      "ids": [
+        "seir-scenarios",
+        "repressilator"
+      ]
+    },
+    {
+      "reference": "references/musecore-controlled-experiments.md",
+      "ids": [
+        "friction-experiment",
+        "germination-trial"
+      ]
+    },
+    {
+      "reference": "references/musecore-incident-storage.md",
+      "ids": [
+        "incident-review",
+        "log-tiering"
+      ]
+    },
+    {
+      "reference": "references/musecore-spectrum-lattices.md",
+      "ids": [
+        "electromagnetic-spectrum",
+        "bravais-lattices"
+      ]
+    },
+    {
+      "reference": "references/musecore-elements-decimals.md",
+      "ids": [
+        "first-elements",
+        "decimal-placevalue"
+      ]
+    },
+    {
+      "reference": "references/musecore-scheduling-gitops.md",
+      "ids": [
+        "pod-scheduling",
+        "gitops-pull"
       ]
     }
   ]

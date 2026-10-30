@@ -1,0 +1,18 @@
+{
+  "family": "gitops-pull",
+  "title": "GitOps 拉取：期望、现场与条件同步",
+  "subtitle": "虚构教学快照 · 拉取循环说明资源差异；同步尝试、字段匹配与工作负载健康分别登记",
+  "repository": "platform-config（演示仓库）",
+  "branch": "main",
+  "revision": "demo-42",
+  "controller": "Argo CD（教学模型）",
+  "cluster": "演示集群",
+  "policy": {"automated":true,"selfHeal":true,"changeOrigin":"live"},
+  "resources": [
+    {"id":"web","label":"Deployment / storefront","liveState":"present","health":"degraded","fields":[{"key":"spec.replicas","desired":3,"live":1},{"key":"container.image","desired":"storefront:v2","live":"storefront:v2"}]},
+    {"id":"service","label":"Service / storefront","liveState":"present","health":"healthy","fields":[{"key":"port","desired":8080,"live":8080}]},
+    {"id":"settings","label":"ConfigMap / runtime","liveState":"absent","health":"unknown","fields":[{"key":"mode","desired":"release"}]}
+  ],
+  "lastAttempt": {"revision":"demo-41","outcome":"failed","message":"输入登记上次尝试失败；本图未给定本次同步结果。"},
+  "note": "候选动作只说明显式策略条件，不表示控制器已通知、已应用或已修复。修订标签与现场快照均为演示数据；不由 Git 历史推断集群内操作审计。"
+}

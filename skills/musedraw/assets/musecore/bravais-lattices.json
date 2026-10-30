@@ -1,0 +1,25 @@
+{
+ "family":"bravais-lattices",
+ "title":"十四种布拉维格子：从参数到晶胞",
+ "subtitle":"明确声明的晶格类型与晶胞设置 · 同一相对长度尺度、同一正交投影视角",
+ "lengthUnit":"relative",
+ "view":{"azimuthDeg":20,"elevationDeg":24},
+ "cells":[
+  {"id":"cubic-p","type":"cP","label":"立方 · 简单","setting":"conventional","parameters":{"a":1,"b":1,"c":1,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"cubic-i","type":"cI","label":"立方 · 体心","setting":"conventional","parameters":{"a":1,"b":1,"c":1,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"cubic-f","type":"cF","label":"立方 · 面心","setting":"conventional","parameters":{"a":1,"b":1,"c":1,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"tetragonal-p","type":"tP","label":"四方 · 简单","setting":"conventional","parameters":{"a":0.82,"b":0.82,"c":1.35,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"tetragonal-i","type":"tI","label":"四方 · 体心","setting":"conventional","parameters":{"a":0.82,"b":0.82,"c":1.35,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"orthorhombic-p","type":"oP","label":"正交 · 简单","setting":"conventional","parameters":{"a":1.12,"b":0.76,"c":1.3,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"orthorhombic-c","type":"oS","label":"正交 · C 底心","setting":"conventional","parameters":{"a":1.12,"b":0.76,"c":1.3,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"orthorhombic-i","type":"oI","label":"正交 · 体心","setting":"conventional","parameters":{"a":1.12,"b":0.76,"c":1.3,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"orthorhombic-f","type":"oF","label":"正交 · 面心","setting":"conventional","parameters":{"a":1.12,"b":0.76,"c":1.3,"alpha":90,"beta":90,"gamma":90}},
+  {"id":"monoclinic-p","type":"mP","label":"单斜 · 简单","setting":"unique-b-conventional","parameters":{"a":1.05,"b":0.8,"c":1.2,"alpha":90,"beta":108,"gamma":90}},
+  {"id":"monoclinic-c","type":"mS","label":"单斜 · C 底心","setting":"unique-b-conventional","parameters":{"a":1.05,"b":0.8,"c":1.2,"alpha":90,"beta":108,"gamma":90}},
+  {"id":"triclinic-p","type":"aP","label":"三斜 · 简单","setting":"conventional","parameters":{"a":1.1,"b":0.85,"c":1.2,"alpha":82,"beta":103,"gamma":76}},
+  {"id":"rhombohedral","type":"hR","label":"菱面体 · 初基胞","setting":"rhombohedral-primitive","parameters":{"a":1,"b":1,"c":1,"alpha":78,"beta":78,"gamma":78}},
+  {"id":"hexagonal","type":"hP","label":"六方 · 初基胞","setting":"hexagonal-primitive","parameters":{"a":1,"b":1,"c":1.3,"alpha":90,"beta":90,"gamma":120}}
+ ],
+ "packingComparison":true,
+ "note":"按输入 a、b、c、α、β、γ 计算基矢、晶胞体积和格点位置。顶点共享 1/8，面心与 C 底心各共享 1/2，体心计 1；hR 采用菱面体初基胞，只有 1 个格点，并非含 3 格点的六方 R 设置。hP 是 γ=120° 的初基平行六面体。标准类型 oS、mS 在本图使用 C 底心设置；菱面体晶格属于三方晶系，但并非所有三方晶体都属菱面体晶格。圆点只标格点，不表示原子半径或化学键。这里只检查所选设置的度量关系和若干特殊退化，不从任意晶胞判定最高对称性。立方堆积率基于理想等半径硬球接触，不是材料实测密度。"
+}

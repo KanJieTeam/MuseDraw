@@ -1,0 +1,181 @@
+{
+  "family": "incident-review",
+  "masthead": "运维日报",
+  "issue": "虚构教学复盘 · 01",
+  "publicationDate": "2026-10-19",
+  "title": "缓存集中过期，订单服务降级",
+  "subtitle": "仅演示给定事件、时段汇总量与输入复盘陈述，不代表真实生产事故",
+  "offsetMinutes": 480,
+  "events": [
+    {
+      "id": "deploy",
+      "at": "2026-10-19T14:02",
+      "label": "输入记录：发布缓存配置"
+    },
+    {
+      "id": "impact",
+      "at": "2026-10-19T14:12",
+      "label": "影响窗口开始，监控量出现变化"
+    },
+    {
+      "id": "detect",
+      "at": "2026-10-19T14:15",
+      "label": "登记告警发现时刻"
+    },
+    {
+      "id": "ack",
+      "at": "2026-10-19T14:19",
+      "label": "登记值班确认时刻"
+    },
+    {
+      "id": "diagnose",
+      "at": "2026-10-19T14:31",
+      "label": "复盘记录注明定位缓存集中过期"
+    },
+    {
+      "id": "rollback",
+      "at": "2026-10-19T14:46",
+      "label": "输入记录：回滚配置与预热"
+    },
+    {
+      "id": "end",
+      "at": "2026-10-19T14:59",
+      "label": "输入声明的影响窗口结束"
+    }
+  ],
+  "window": {
+    "startEvent": "impact",
+    "endEvent": "end",
+    "detectedEvent": "detect",
+    "acknowledgedEvent": "ack"
+  },
+  "impact": {
+    "label": "各时段下单成功率",
+    "unit": "笔下单",
+    "scope": "输入影响范围：订单服务；未提供支付与物流的独立观测。",
+    "evidenceIds": [
+      "E2"
+    ],
+    "bins": [
+      {
+        "start": "2026-10-19T14:12",
+        "end": "2026-10-19T14:15",
+        "total": 3300,
+        "failed": 330
+      },
+      {
+        "start": "2026-10-19T14:15",
+        "end": "2026-10-19T14:19",
+        "total": 4400,
+        "failed": 1320
+      },
+      {
+        "start": "2026-10-19T14:19",
+        "end": "2026-10-19T14:31",
+        "total": 13200,
+        "failed": 3960
+      },
+      {
+        "start": "2026-10-19T14:31",
+        "end": "2026-10-19T14:46",
+        "total": 16500,
+        "failed": 4950
+      },
+      {
+        "start": "2026-10-19T14:46",
+        "end": "2026-10-19T14:59",
+        "total": 14300,
+        "failed": 840
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "label": "配置发布内容记录",
+      "source": "虚构演示：发布记录摘录，写明固定过期时间",
+      "eventIds": [
+        "deploy"
+      ]
+    },
+    {
+      "id": "E2",
+      "label": "五个连续时段的下单总数与失败数",
+      "source": "虚构演示：监控汇总导出；以输入区间为统计粒度",
+      "eventIds": [
+        "impact",
+        "detect",
+        "ack",
+        "end"
+      ]
+    },
+    {
+      "id": "E3",
+      "label": "复盘会议明确陈述的机制与核对记录",
+      "source": "虚构演示：会议记录将固定TTL、集中失效及连接拥堵列为报告的原因；此图不独立验证",
+      "eventIds": [
+        "diagnose",
+        "rollback"
+      ]
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "C1",
+      "kind": "reported-cause",
+      "text": "输入复盘记录认为：固定过期时间使同批热点键集中失效，请求穿透至数据库并引发连接拥堵。",
+      "evidenceIds": [
+        "E1",
+        "E3"
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "hypothesis",
+      "text": "预热策略能否减轻同类流量突增，仍需独立负载实验核对。",
+      "evidenceIds": [
+        "E3"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "A1",
+      "label": "评估过期时间随机抖动并记录验证结果",
+      "owner": "缓存组（输入指定）",
+      "dueDate": "2026-10-23",
+      "status": "planned",
+      "evidenceIds": [
+        "E1"
+      ],
+      "conclusionIds": [
+        "C1"
+      ]
+    },
+    {
+      "id": "A2",
+      "label": "增加发布灰度与回滚演练",
+      "owner": "平台组（输入指定）",
+      "dueDate": "2026-11-06",
+      "status": "planned",
+      "evidenceIds": [
+        "E3"
+      ],
+      "conclusionIds": [
+        "C1"
+      ]
+    },
+    {
+      "id": "A3",
+      "label": "给连接使用率告警补充演练记录",
+      "owner": "DBA（输入指定）",
+      "dueDate": "2026-10-21",
+      "status": "planned",
+      "evidenceIds": [
+        "E2"
+      ],
+      "conclusionIds": []
+    }
+  ],
+  "note": "窗口时长与阶段差来自显式事件引用；时间先后不构成因果证据。每段曲线只表示该区间汇总成功率，不推断段内变化；网点表示失败比例而非失败笔数面积。行动完成仅为输入登记状态，不表示措施已验证有效。"
+}

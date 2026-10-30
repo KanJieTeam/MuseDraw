@@ -1,0 +1,24 @@
+{
+ "family":"electromagnetic-spectrum",
+ "title":"电磁波谱：很宽的范围，很窄的可见光",
+ "subtitle":"真空中 λf = c，单光子能量 E = hf · 波段边界采用明确给定的教学约定",
+ "medium":"vacuum",
+ "rangeM":{"min":1e-12,"max":1000},
+ "bands":[
+  {"id":"radio","label":"无线电波","minM":0.001,"maxM":1000,"description":"含微波；广播、通信、雷达等使用其中不同范围。","kind":"other"},
+  {"id":"infrared","label":"红外线","minM":7e-7,"maxM":0.001,"description":"遥控、热辐射探测与红外成像。","kind":"other"},
+  {"id":"visible","label":"可见光","minM":3.8e-7,"maxM":7e-7,"description":"本图约定 380–700 nm；下方单独放大。","kind":"visible"},
+  {"id":"uv","label":"紫外线","minM":1e-8,"maxM":3.8e-7,"description":"紫外光谱分析与荧光激发等。","kind":"other"},
+  {"id":"xray","label":"X 射线","minM":1e-11,"maxM":1e-8,"description":"透射成像与晶体衍射等。","kind":"other"},
+  {"id":"gamma","label":"γ 射线","minM":1e-12,"maxM":1e-11,"description":"高能天文观测等；右边界只截取显示窗。","kind":"other"}
+ ],
+ "visibleZoom":true,
+ "samples":[
+  {"id":"radio-example","label":"给定无线电波长","wavelengthM":3},
+  {"id":"microwave-example","label":"给定微波波长","wavelengthM":0.12},
+  {"id":"ir-example","label":"给定红外波长","wavelengthM":1e-5},
+  {"id":"visible-example","label":"给定可见光波长","wavelengthM":5.5e-7},
+  {"id":"xray-example","label":"给定 X 射线波长","wavelengthM":1e-10}
+ ],
+ "note":"主轴是波长的对数轴；频率与单光子能量由同一个真空波长换算。各波段边界是教学约定，实际命名可重叠，X 与 γ 的命名也可能涉及辐射来源。有限显示窗并非整个电磁波谱的物理上下限。可见色带仅作颜色顺序示意，不是色度匹配、实测光谱或显示器颜色校准；不计算总功率、剂量、介质色散或健康效应。"
+}

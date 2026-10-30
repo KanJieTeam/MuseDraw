@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.20
+  instructions-version: musecore-2026-10-31.21
 ---
 
 # MuseDraw
@@ -112,6 +112,12 @@ family's encodings, coordinated geometry and placement.
 | Declared routes, shared stations and explicitly missing pathway segments | [Pathway maps](references/musecore-pathway-map.md) |
 | Exact neutral atom accounting and catalogued simple-ion electron transfer | [Chemical objects](references/musecore-chemical-objects.md) |
 | Declared moving schedules, box destinations and acknowledgement-based escalation | [Moves and escalation](references/musecore-move-escalation.md) |
+| Explicit finite SEIR scenarios and symmetric six-equation repressilator trajectories | [Explicit dynamics](references/musecore-dynamics.md) |
+| Small friction and germination records with observed and changed conditions | [Controlled experiments](references/musecore-controlled-experiments.md) |
+| Referenced incident events and planned retained log capacity | [Incident evidence and storage](references/musecore-incident-storage.md) |
+| Log-wavelength relationships and declared Bravais cell projections | [Spectrum and lattice geometry](references/musecore-spectrum-lattices.md) |
+| Verified first-twenty element selections and exact decimal hundredths | [Elements and decimal place value](references/musecore-elements-decimals.md) |
+| Explicit node-filter policies and desired/live resource comparisons | [Scheduling and GitOps](references/musecore-scheduling-gitops.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

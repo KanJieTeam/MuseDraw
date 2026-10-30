@@ -1,0 +1,19 @@
+{
+ "family":"seir-scenarios",
+ "title":"给定传播率，形成不同的有限情景",
+ "subtitle":"闭合 SEIR 模型简报 · 所有参数明确给定，不对应真实疾病或疫情预测",
+ "model":"closed-homogeneous-seir",
+ "population":1000000,
+ "initial":{"S":999990,"E":0,"I":10,"R":0},
+ "sigmaPerDay":0.25,
+ "gammaPerDay":0.16666666666666666,
+ "durationDays":300,
+ "stepDays":0.1,
+ "sampleCount":601,
+ "scenarios":[
+  {"id":"a","label":"A · β 始终保持给定值","transmission":[{"startDay":0,"betaPerDay":0.4166666666666667}]},
+  {"id":"b","label":"B · 第 40 日后采用较低 β","transmission":[{"startDay":0,"betaPerDay":0.4166666666666667},{"startDay":40,"betaPerDay":0.2916666666666667}]},
+  {"id":"c","label":"C · 70–130 日采用较低 β，随后恢复原值","transmission":[{"startDay":0,"betaPerDay":0.4166666666666667},{"startDay":70,"betaPerDay":0.16666666666666666},{"startDay":130,"betaPerDay":0.4166666666666667}]}
+ ],
+ "note":"情景只使用输入明确给定的分段传播率。假定人群均匀混合、总人口固定，S→E→I→R，无出生、死亡和再次易感；E 已感染但尚无传染性。曲线是确定性模型计算，不是病例观测或真实预测。峰值来自有限积分网格，期末状态只表示第 300 日，不等同最终流行规模。"
+}

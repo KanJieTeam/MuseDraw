@@ -1,0 +1,19 @@
+{
+  "family":"friction-experiment",
+  "title":"同一木块，逐项核对摩擦力的观测",
+  "subtitle":"期刊式实验记录 · 装置、明确读数和控制变量表来自同一组事实；比较只作描述。",
+  "dataStatus":"synthetic-teaching",
+  "protocol":{"horizontal":true,"constantSpeed":true,"onlyPullAndFrictionHorizontal":true},
+  "surfaces":[{"id":"wood","label":"木板"},{"id":"cloth","label":"棉布"},{"id":"towel","label":"毛巾"}],
+  "trials":[
+    {"id":"wood-low","label":"木板 · 2 N","surface":"wood","blockId":"木块 A","normalForceN":2,"contactAreaCm2":40,"speedCmPerSecond":5,"readings":[0.58,0.60,0.62]},
+    {"id":"wood-high","label":"木板 · 4 N","surface":"wood","blockId":"木块 A","normalForceN":4,"contactAreaCm2":40,"speedCmPerSecond":5,"readings":[1.18,1.20,1.22]},
+    {"id":"cloth-low","label":"棉布 · 2 N","surface":"cloth","blockId":"木块 A","normalForceN":2,"contactAreaCm2":40,"speedCmPerSecond":5,"readings":[0.98,1.00,1.02]},
+    {"id":"cloth-high","label":"棉布 · 4 N","surface":"cloth","blockId":"木块 A","normalForceN":4,"contactAreaCm2":40,"speedCmPerSecond":5,"readings":[1.98,2.00,2.02]},
+    {"id":"towel-low","label":"毛巾 · 2 N","surface":"towel","blockId":"木块 A","normalForceN":2,"contactAreaCm2":40,"speedCmPerSecond":5,"readings":[1.48,1.50,1.52]},
+    {"id":"towel-high","label":"毛巾 · 4 N","surface":"towel","blockId":"木块 A","normalForceN":4,"contactAreaCm2":40,"speedCmPerSecond":5,"readings":[2.98,3.00,3.02]}
+  ],
+  "comparisons":[{"from":"wood-low","to":"wood-high"},{"from":"wood-low","to":"cloth-low"},{"from":"wood-low","to":"towel-high"}],
+  "selectedTrial":"wood-high",
+  "note":"这些读数是明确给定的虚构教学数据，不是实测证据。材料名称不代表连续粗糙度尺度；本图不据此推广速度、面积或任意材料的普遍规律，也不判断统计显著性。"
+}

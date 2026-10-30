@@ -1,0 +1,16 @@
+{
+  "family":"germination-trial",
+  "title":"种子萌发：把处理条件与观测分开核对",
+  "subtitle":"期刊式对照记录 · 所有种子数与柱图比例使用同一计数；浸没组不伪装成只改变供氧。",
+  "dataStatus":"synthetic-teaching",
+  "species":"同批种子的虚构教学记录",
+  "observationDay":5,
+  "control":"moist",
+  "groups":[
+    {"id":"dry","label":"干燥处理","conditions":{"water":"dry","oxygen":"ambient","temperatureC":25,"light":"同一方案","substrate":"同规格纸巾","batch":"批次 A","container":"同规格容器"},"totalSeeds":20,"observedSeeds":20,"germinated":0},
+    {"id":"moist","label":"湿纸巾对照","conditions":{"water":"moist","oxygen":"ambient","temperatureC":25,"light":"同一方案","substrate":"同规格纸巾","batch":"批次 A","container":"同规格容器"},"totalSeeds":20,"observedSeeds":20,"germinated":18},
+    {"id":"submerged","label":"浸没处理","conditions":{"water":"submerged","oxygen":"restricted","temperatureC":25,"light":"同一方案","substrate":"同规格纸巾","batch":"批次 A","container":"同规格容器"},"totalSeeds":20,"observedSeeds":20,"germinated":0},
+    {"id":"cold","label":"较低温处理","conditions":{"water":"moist","oxygen":"ambient","temperatureC":4,"light":"同一方案","substrate":"同规格纸巾","batch":"批次 A","container":"同规格容器"},"totalSeeds":20,"observedSeeds":20,"germinated":0}
+  ],
+  "note":"这是明确标记的虚构教学数据，不能作为真实种子实验的结果。条件与记录只描述该批、该日的比较，不自动证明某个条件的普遍必要性、充分性、单一因果或统计显著性。"
+}
