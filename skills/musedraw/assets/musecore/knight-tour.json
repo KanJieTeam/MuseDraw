@@ -1,0 +1,22 @@
+{
+  "family": "knight-tour",
+  "title": "马走日",
+  "board": "empty-standard-8x8",
+  "mode": "generated-open-tour",
+  "startSquare": "a1",
+  "tieBreak": 0,
+  "path": null,
+  "event": {
+    "name": "城市国际象棋公开赛",
+    "groups": [
+      "少儿组",
+      "成人组"
+    ],
+    "dateLabel": "11 月 21—22 日（示例）",
+    "venue": "市体育馆副馆",
+    "format": "给定赛制：瑞士制 7 轮，等级分不限",
+    "registration": "报名截止 11 月 14 日 · 请联系主办方",
+    "organizer": "主办：市棋类运动协会（示例）"
+  },
+  "note": "在明确的空棋盘上，每步横纵位移分别为一格与两格；红线交叉处不是额外落点。本图路线由有限搜索计算后逐步校验，不是对任意棋盘或任意搜索时限都能求解的保证，也不适用中国象棋的蹩马腿规则。赛事文案为给定示例。"
+}

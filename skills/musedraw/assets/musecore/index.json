@@ -1589,6 +1589,78 @@
           "sourceSha256": "222aec0ada520575aa68b4778aeae35624767227918bb88a277853c2b3f810dc"
         }
       ]
+    },
+    {
+      "id": "blood-circulation",
+      "family": "blood-circulation",
+      "file": "blood-circulation.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "143-blood-circulation",
+          "sourceSha256": "4d0cb172dd0b1b603574f08d28721025756a063b6914a2afa36114d8ae7faea4"
+        }
+      ]
+    },
+    {
+      "id": "metabolism-metro",
+      "family": "metabolism-metro",
+      "file": "metabolism-metro.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "172-metabolism-metro",
+          "sourceSha256": "702c3bd7ed3e08d776dc9b5e829585c2713742e2ad2e780453a7deb7158b25df"
+        }
+      ]
+    },
+    {
+      "id": "cup-calendar",
+      "family": "cup-calendar",
+      "file": "cup-calendar.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p05-zidai-bei",
+          "sourceSha256": "e1892c9e43584c476680d3bbedf993d0b61a821c7aab7e5ec579674d4c25a692"
+        }
+      ]
+    },
+    {
+      "id": "knight-tour",
+      "family": "knight-tour",
+      "file": "knight-tour.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "p09-ma-zou-ri",
+          "sourceSha256": "f62b64a0a522d99ad0c4741512ff935b343514a0cf4290829dbbee7064b14502"
+        }
+      ]
+    },
+    {
+      "id": "chaos-experiment",
+      "family": "chaos-experiment",
+      "file": "chaos-experiment.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "111-chaos-experiment",
+          "sourceSha256": "a9d7bd705a26c2b6925211a945d06493ab6bf5f59764ead841414880f73bcf7c"
+        }
+      ]
+    },
+    {
+      "id": "canary-plan",
+      "family": "canary-plan",
+      "file": "canary-plan.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "e08-huidu-fabu",
+          "sourceSha256": "fe94ed588dff1487a7a5615a3bbb3e287e159a80ea8d2ab7d8535a4479610d1e"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1953,6 +2025,27 @@
       "ids": [
         "north-star-guide",
         "planet-scales"
+      ]
+    },
+    {
+      "reference": "references/musecore-circulation-metabolism.md",
+      "ids": [
+        "blood-circulation",
+        "metabolism-metro"
+      ]
+    },
+    {
+      "reference": "references/musecore-cup-knight.md",
+      "ids": [
+        "cup-calendar",
+        "knight-tour"
+      ]
+    },
+    {
+      "reference": "references/musecore-chaos-canary.md",
+      "ids": [
+        "chaos-experiment",
+        "canary-plan"
       ]
     }
   ]

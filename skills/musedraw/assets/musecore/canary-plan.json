@@ -1,0 +1,183 @@
+{
+  "family": "canary-plan",
+  "title": "灰度发布 · 给定阶段与检查结果",
+  "subtitle": "先读占比目标，再看明确观测；未来阶段保留为计划，不把数值过关当作已完成发布",
+  "evidenceKind": "illustrative",
+  "allocationUnit": "用户占比目标",
+  "oldLabel": "旧版 App",
+  "newLabel": "新版 App",
+  "metrics": [
+    {
+      "id": "error",
+      "label": "错误率",
+      "unit": "%",
+      "comparison": "<",
+      "mode": "absolute",
+      "threshold": 0.1
+    },
+    {
+      "id": "p99",
+      "label": "P99 延迟",
+      "unit": "毫秒",
+      "comparison": "<",
+      "mode": "absolute",
+      "threshold": 300
+    },
+    {
+      "id": "crash",
+      "label": "崩溃率",
+      "unit": "%",
+      "comparison": "<=",
+      "mode": "baseline",
+      "threshold": null
+    },
+    {
+      "id": "conversion",
+      "label": "核心转化率",
+      "unit": "%",
+      "comparison": ">=",
+      "mode": "baseline",
+      "threshold": null
+    }
+  ],
+  "stages": [
+    {
+      "id": "stage1",
+      "label": "阶段 1",
+      "shareBasisPoints": 100,
+      "requiredMinutes": 30,
+      "observedMinutes": 30,
+      "status": "observed",
+      "cohort": "内部员工与明确白名单",
+      "values": {
+        "error": {
+          "current": 0.05,
+          "reference": null
+        },
+        "p99": {
+          "current": 220,
+          "reference": null
+        },
+        "crash": {
+          "current": 0.2,
+          "reference": 0.3
+        },
+        "conversion": {
+          "current": 4.5,
+          "reference": 4.4
+        }
+      }
+    },
+    {
+      "id": "stage2",
+      "label": "阶段 2",
+      "shareBasisPoints": 500,
+      "requiredMinutes": 120,
+      "observedMinutes": 120,
+      "status": "observed",
+      "cohort": "给定随机抽取用户",
+      "values": {
+        "error": {
+          "current": 0.08,
+          "reference": null
+        },
+        "p99": {
+          "current": 265,
+          "reference": null
+        },
+        "crash": {
+          "current": 0.2,
+          "reference": 0.3
+        },
+        "conversion": {
+          "current": 4.5,
+          "reference": 4.4
+        }
+      }
+    },
+    {
+      "id": "stage3",
+      "label": "阶段 3",
+      "shareBasisPoints": 2500,
+      "requiredMinutes": 1440,
+      "observedMinutes": null,
+      "status": "planned",
+      "cohort": "给定主要地区",
+      "values": {
+        "error": {
+          "current": null,
+          "reference": null
+        },
+        "p99": {
+          "current": null,
+          "reference": null
+        },
+        "crash": {
+          "current": null,
+          "reference": null
+        },
+        "conversion": {
+          "current": null,
+          "reference": null
+        }
+      }
+    },
+    {
+      "id": "stage4",
+      "label": "阶段 4",
+      "shareBasisPoints": 5000,
+      "requiredMinutes": 1440,
+      "observedMinutes": null,
+      "status": "planned",
+      "cohort": "与旧版对照观察",
+      "values": {
+        "error": {
+          "current": null,
+          "reference": null
+        },
+        "p99": {
+          "current": null,
+          "reference": null
+        },
+        "crash": {
+          "current": null,
+          "reference": null
+        },
+        "conversion": {
+          "current": null,
+          "reference": null
+        }
+      }
+    },
+    {
+      "id": "stage5",
+      "label": "阶段 5",
+      "shareBasisPoints": 10000,
+      "requiredMinutes": 0,
+      "observedMinutes": null,
+      "status": "planned",
+      "cohort": "计划全量；未登记旧版下线",
+      "values": {
+        "error": {
+          "current": null,
+          "reference": null
+        },
+        "p99": {
+          "current": null,
+          "reference": null
+        },
+        "crash": {
+          "current": null,
+          "reference": null
+        },
+        "conversion": {
+          "current": null,
+          "reference": null
+        }
+      }
+    }
+  ],
+  "rollbackTargetMinutes": 5,
+  "rollback": null,
+  "note": "虚构记录；份额为分配目标，后续阶段尚无观测，间距不表示时间。"
+}

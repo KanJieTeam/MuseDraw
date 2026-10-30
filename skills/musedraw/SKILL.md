@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.25
+  instructions-version: musecore-2026-10-31.26
 ---
 
 # MuseDraw
@@ -131,6 +131,9 @@ family's encodings, coordinated geometry and placement.
 | Declared paragraph outlines and supplied textual witnesses | [Outline and collation](references/musecore-argument-collation.md) |
 | Explicit mesh paths and finite supplied cache histories | [Request paths](references/musecore-request-paths.md) |
 | Supplied celestial coordinates and separate planetary scales | [Celestial geometry](references/musecore-star-planet-scales.md) |
+| Declared adult circulation and supplied metabolic route maps | [Biological routes](references/musecore-circulation-metabolism.md) |
+| Conditional cup calendars and empty-board knight routes | [Computed campaign objects](references/musecore-cup-knight.md) |
+| Supplied fault-experiment observations and explicit canary gates | [Experiments and canaries](references/musecore-chaos-canary.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

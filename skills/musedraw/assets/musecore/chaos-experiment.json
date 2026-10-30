@@ -1,0 +1,294 @@
+{
+  "family": "chaos-experiment",
+  "title": "混沌工程实验",
+  "subtitle": "库存服务延迟注入的给定实验记录 · 全部数值为示例，不来自生产环境",
+  "evidenceKind": "illustrative",
+  "scopeLabel": "明确范围：可用区 B 的 5% 下单流量（示例）",
+  "hypothesis": "给库存调用增加 300 毫秒后，下单 p99 仍低于 800 毫秒，成功率不低于 99.5%。",
+  "windowMinutes": 14,
+  "observedThroughMinute": 14,
+  "methodStep": "stop",
+  "injection": {
+    "label": "注入 +300 毫秒（示例条件）",
+    "startMinute": 5,
+    "endMinute": 8,
+    "status": "recorded"
+  },
+  "stop": {
+    "atMinute": 7.5,
+    "kind": "policy",
+    "note": "示例明确登记：7.5 分钟停止注入"
+  },
+  "metrics": [
+    {
+      "id": "p99",
+      "label": "下单 p99",
+      "unit": "毫秒",
+      "steady": {
+        "comparison": "<",
+        "value": 800
+      },
+      "abort": {
+        "comparison": ">",
+        "value": 800
+      }
+    },
+    {
+      "id": "success",
+      "label": "下单成功率",
+      "unit": "%",
+      "steady": {
+        "comparison": ">=",
+        "value": 99.5
+      },
+      "abort": {
+        "comparison": "<",
+        "value": 99.5
+      }
+    }
+  ],
+  "samples": [
+    {
+      "id": "s0",
+      "atMinute": 0.0,
+      "values": {
+        "p99": 331,
+        "success": null
+      }
+    },
+    {
+      "id": "s1",
+      "atMinute": 0.5,
+      "values": {
+        "p99": 336,
+        "success": null
+      }
+    },
+    {
+      "id": "s2",
+      "atMinute": 1.0,
+      "values": {
+        "p99": 324,
+        "success": null
+      }
+    },
+    {
+      "id": "s3",
+      "atMinute": 1.5,
+      "values": {
+        "p99": 335,
+        "success": null
+      }
+    },
+    {
+      "id": "s4",
+      "atMinute": 2.0,
+      "values": {
+        "p99": 343,
+        "success": null
+      }
+    },
+    {
+      "id": "s5",
+      "atMinute": 2.5,
+      "values": {
+        "p99": 336,
+        "success": null
+      }
+    },
+    {
+      "id": "s6",
+      "atMinute": 3.0,
+      "values": {
+        "p99": 352,
+        "success": null
+      }
+    },
+    {
+      "id": "s7",
+      "atMinute": 3.5,
+      "values": {
+        "p99": 318,
+        "success": null
+      }
+    },
+    {
+      "id": "s8",
+      "atMinute": 4.0,
+      "values": {
+        "p99": 331,
+        "success": null
+      }
+    },
+    {
+      "id": "s9",
+      "atMinute": 4.5,
+      "values": {
+        "p99": 320,
+        "success": null
+      }
+    },
+    {
+      "id": "s10",
+      "atMinute": 5.0,
+      "values": {
+        "p99": 322,
+        "success": null
+      }
+    },
+    {
+      "id": "s11",
+      "atMinute": 5.5,
+      "values": {
+        "p99": 519,
+        "success": null
+      }
+    },
+    {
+      "id": "s12",
+      "atMinute": 6.0,
+      "values": {
+        "p99": 649,
+        "success": null
+      }
+    },
+    {
+      "id": "s13",
+      "atMinute": 6.5,
+      "values": {
+        "p99": 734,
+        "success": null
+      }
+    },
+    {
+      "id": "s14",
+      "atMinute": 7.0,
+      "values": {
+        "p99": 789,
+        "success": null
+      }
+    },
+    {
+      "id": "s15",
+      "atMinute": 7.5,
+      "values": {
+        "p99": 843,
+        "success": null
+      }
+    },
+    {
+      "id": "s16",
+      "atMinute": 8.0,
+      "values": {
+        "p99": 509,
+        "success": null
+      }
+    },
+    {
+      "id": "s17",
+      "atMinute": 8.5,
+      "values": {
+        "p99": 366,
+        "success": null
+      }
+    },
+    {
+      "id": "s18",
+      "atMinute": 9.0,
+      "values": {
+        "p99": 351,
+        "success": null
+      }
+    },
+    {
+      "id": "s19",
+      "atMinute": 9.5,
+      "values": {
+        "p99": 329,
+        "success": null
+      }
+    },
+    {
+      "id": "s20",
+      "atMinute": 10.0,
+      "values": {
+        "p99": 326,
+        "success": null
+      }
+    },
+    {
+      "id": "s21",
+      "atMinute": 10.5,
+      "values": {
+        "p99": 346,
+        "success": null
+      }
+    },
+    {
+      "id": "s22",
+      "atMinute": 11.0,
+      "values": {
+        "p99": 328,
+        "success": null
+      }
+    },
+    {
+      "id": "s23",
+      "atMinute": 11.5,
+      "values": {
+        "p99": 307,
+        "success": null
+      }
+    },
+    {
+      "id": "s24",
+      "atMinute": 12.0,
+      "values": {
+        "p99": 334,
+        "success": null
+      }
+    },
+    {
+      "id": "s25",
+      "atMinute": 12.5,
+      "values": {
+        "p99": 326,
+        "success": null
+      }
+    },
+    {
+      "id": "s26",
+      "atMinute": 13.0,
+      "values": {
+        "p99": 316,
+        "success": null
+      }
+    },
+    {
+      "id": "s27",
+      "atMinute": 13.5,
+      "values": {
+        "p99": 319,
+        "success": null
+      }
+    },
+    {
+      "id": "s28",
+      "atMinute": 14.0,
+      "values": {
+        "p99": 322,
+        "success": null
+      }
+    }
+  ],
+  "findings": [
+    {
+      "text": "7.5 分钟首次触发 p99 中止条件；成功率缺测。",
+      "evidence": [
+        "s15"
+      ]
+    }
+  ],
+  "nextStep": "修订调用策略后，重新观测。",
+  "note": "示例数据；缺测留空，中止触发与实际停止分别记录。"
+}
