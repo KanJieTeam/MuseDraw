@@ -1,0 +1,21 @@
+{
+  "family": "transit-lightcurve",
+  "title": "一颗行星经过恒星前方",
+  "subtitle": "圆轨道理想预测 · 用同一时刻连接投影位置与亮度下降",
+  "model": "uniform-disk-circular-forward",
+  "eccentricity": 0,
+  "aOverStar": 8,
+  "radiusRatio": 0.12,
+  "inclinationDeg": 87,
+  "periodDays": 4,
+  "halfWindowFraction": 0.045,
+  "sampleCount": 401,
+  "snapshots": [
+    {"id":"before","label":"尚未进入星盘","phaseFraction":-0.026},
+    {"id":"ingress","label":"进入星盘边缘","phaseFraction":-0.018},
+    {"id":"middle","label":"最接近星盘中心","phaseFraction":0},
+    {"id":"egress","label":"离开星盘边缘","phaseFraction":0.018},
+    {"id":"after","label":"已经离开星盘","phaseFraction":0.026}
+  ],
+  "note": "均匀恒星盘、单个不透明行星、给定圆轨道；遮光量由两个圆盘的实际重叠面积计算。上方为同一行星在不同给定时刻的叠画，行星与星盘使用同一半径比例，外侧光晕仅作示意。曲线是瞬时理想预测，不含临边昏暗、噪声、曝光积分或真实观测拟合。"
+}

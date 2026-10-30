@@ -973,6 +973,118 @@
           "sourceSha256": "63c792bebbcbb802255bfaf8f720f43f0d2c4ac7886756e93890e5470b9971a7"
         }
       ]
+    },
+    {
+      "id": "transit-lightcurve",
+      "family": "transit-lightcurve",
+      "file": "transit-lightcurve.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "s07-lingxingfa",
+          "sourceSha256": "cb2150b5b36273fa29030b25e91b7a64e2af1c773acbef45875d53a29cec983f"
+        }
+      ]
+    },
+    {
+      "id": "radial-velocity",
+      "family": "radial-velocity",
+      "file": "radial-velocity.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "173-radial-velocity",
+          "sourceSha256": "6e1144c54da6a89b1c971e071b66673ce55b08fd69a70df3a13fce1b724e98ab"
+        }
+      ]
+    },
+    {
+      "id": "completing-square",
+      "family": "completing-square",
+      "file": "completing-square.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "141-completing-square",
+          "sourceSha256": "24c6317338821e22085dab208b6a2fb4d494167abe0e65f772787b0ca96eddec"
+        }
+      ]
+    },
+    {
+      "id": "triangle-angles",
+      "family": "triangle-angles",
+      "file": "triangle-angles.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "160-triangle-angle-sum",
+          "sourceSha256": "ea856212ee723dd0516a5bf666f0fa52287e23df5f7a87125dca62d63db482d3"
+        }
+      ]
+    },
+    {
+      "id": "civil-calendar",
+      "family": "civil-calendar",
+      "file": "civil-calendar.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "130-year-month-day",
+          "sourceSha256": "bbb4e28d27f9128f0136a625e5bc83ba43d6fd9380671b7c1544cfbee6dddb63"
+        }
+      ]
+    },
+    {
+      "id": "daily-time",
+      "family": "daily-time",
+      "file": "daily-time.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "133-twenty-four-hour",
+          "sourceSha256": "e4e9616dacfece3aff17925032fa4656e9dacda0de8ae589dd316b6c81fea624"
+        }
+      ]
+    },
+    {
+      "id": "double-hour-scroll",
+      "family": "daily-time",
+      "file": "double-hour-scroll.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "j07-shier-shichen",
+          "sourceSha256": "00bce004827416395554c711d0c7a56c23f05db51d8c5895e837b70d528884a9"
+        }
+      ]
+    },
+    {
+      "id": "pathway-map",
+      "family": "pathway-map",
+      "file": "pathway-map.json",
+      "contentStatus": "declared development content or synthetic forward model; not an independently verified real system or observation",
+      "sourceCases": [
+        {
+          "id": "114-observability-metro",
+          "sourceSha256": "db83b5d095745e78a23ef554ae5477e944658f3bfa197142a4a87780e0e10a31"
+        },
+        {
+          "id": "o06-xiansuo-huikuan",
+          "sourceSha256": "b741912887588c7e06f88e01fabc2a5964762cfe35ff5ac16ffb6a32d4022451"
+        },
+        {
+          "id": "t04-lixue-xianlu",
+          "sourceSha256": "149beac48444dbaee6bc22a3a17fc3601184864769a03b0a17bd2e9d8dfb73a0"
+        },
+        {
+          "id": "j10-shengwu-bixiu1",
+          "sourceSha256": "17c75d84dc8295b309753aa899cf33d990abe42f44caf9d9444112aaa5e7b032"
+        },
+        {
+          "id": "s05-danbai-jiegou",
+          "sourceSha256": "bddba6ad2a4285336b81ba170307b6e8ac8e769a244c1c19333143b043ba3b0c"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1164,6 +1276,33 @@
       "ids": [
         "contour-field",
         "runoff-response"
+      ]
+    },
+    {
+      "reference": "references/musecore-stellar-signals.md",
+      "ids": [
+        "transit-lightcurve",
+        "radial-velocity"
+      ]
+    },
+    {
+      "reference": "references/musecore-geometric-proofs.md",
+      "ids": [
+        "completing-square",
+        "triangle-angles"
+      ]
+    },
+    {
+      "reference": "references/musecore-civil-time.md",
+      "ids": [
+        "civil-calendar",
+        "daily-time"
+      ]
+    },
+    {
+      "reference": "references/musecore-pathway-map.md",
+      "ids": [
+        "pathway-map"
       ]
     }
   ]

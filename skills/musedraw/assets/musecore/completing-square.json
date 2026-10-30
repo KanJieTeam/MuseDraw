@@ -1,0 +1,9 @@
+{
+  "family":"completing-square",
+  "title":"补一个角，把等式拼成平方",
+  "subtitle":"面积配方法 · 将一次项分成两条矩形；图中边长由方程的正根计算。",
+  "variable":{"symbol":"x","meaning":"原正方形的边长","unit":"厘米"},
+  "linear":6,
+  "constant":16,
+  "note":"本构成限定 x² + kx = c 且 k、c 为正数。几何面积说明正长度解；负的代数根也必须保留，不能画成负边长。"
+}

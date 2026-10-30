@@ -1,0 +1,55 @@
+{
+  "family": "daily-time",
+  "title": "同一时刻，两种记法",
+  "subtitle": "普通计时法、24 时计时法与明确跨日的经过时间。",
+  "notation": "clock",
+  "samples": [
+    {
+      "id": "afternoon",
+      "label": "下午出发",
+      "time": "15:00"
+    },
+    {
+      "id": "evening",
+      "label": "晚间到达",
+      "time": "21:30"
+    },
+    {
+      "id": "noon",
+      "label": "正午",
+      "time": "12:00"
+    },
+    {
+      "id": "midnight",
+      "label": "午夜",
+      "time": "00:00"
+    }
+  ],
+  "intervals": [
+    {
+      "id": "trip",
+      "label": "当天路程",
+      "start": {
+        "time": "08:30",
+        "dayOffset": 0
+      },
+      "end": {
+        "time": "15:10",
+        "dayOffset": 0
+      }
+    },
+    {
+      "id": "overnight",
+      "label": "跨夜路程",
+      "start": {
+        "time": "21:30",
+        "dayOffset": 0
+      },
+      "end": {
+        "time": "06:45",
+        "dayOffset": 1
+      }
+    }
+  ],
+  "note": "第 0 日为本次计算起点，第 1 日为次日。午夜用 00:00 加明确日偏移；同一时刻同一日的时长为零。采用每民用日固定 1440 分钟的教学模型，不处理时区、夏令时或闰秒。"
+}

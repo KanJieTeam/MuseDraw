@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.18
+  instructions-version: musecore-2026-10-31.19
 ---
 
 # MuseDraw
@@ -106,6 +106,10 @@ family's encodings, coordinated geometry and placement.
 | Equal interval counts and explicit north-up local route maps | [Spacing and maps](references/musecore-spacing-map.md) |
 | Declared approval branches, return paths and blocked handoff tasks | [Approval and handoffs](references/musecore-approval-handoff.md) |
 | Sampled elevation fields and ideal effective-rainfall response | [Terrain and response](references/musecore-terrain-response.md) |
+| Explicit circular-transit flux and two-body stellar reflex signals | [Stellar signals](references/musecore-stellar-signals.md) |
+| Completing a square by area and constructing a triangle-angle proof | [Geometric proofs](references/musecore-geometric-proofs.md) |
+| Gregorian month counts, explicit elapsed times and twelve double-hours | [Civil calendar and time](references/musecore-civil-time.md) |
+| Declared routes, shared stations and explicitly missing pathway segments | [Pathway maps](references/musecore-pathway-map.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

@@ -1,0 +1,24 @@
+{
+  "family": "radial-velocity",
+  "title": "恒星的微小摆动，留下速度信号",
+  "subtitle": "给定质量与圆轨道 · 恒星视线运动、谱线位移与同一时轴上的理想预测",
+  "model": "circular-two-body-forward",
+  "eccentricity": 0,
+  "massUnits": "IAU-2015-nominal",
+  "starMassSolar": 1,
+  "planetMassEarth": 100,
+  "periodDays": 12.4,
+  "inclinationDeg": 80,
+  "systemicVelocityMps": 0,
+  "conjunctionPhase": 0,
+  "restWavelengthNm": 656.28,
+  "timesDays": [0,0.7,1.8,2.5,3.4,4.1,5.3,6.2,7.1,8.4,9.2,10.4,11.3,12.4,13.2,14.5,15.6,16.8,18.1,19.5,20.4,21.8,23.2,24.8],
+  "curveSamples": 401,
+  "snapshots": [
+    {"id":"conjunction","label":"视线分量为零","timeDays":0},
+    {"id":"toward","label":"公转分量朝向观测者","timeDays":3.1},
+    {"id":"opposite","label":"另一侧视线分量为零","timeDays":6.2},
+    {"id":"away","label":"公转分量远离观测者","timeDays":9.3}
+  ],
+  "note": "质量采用 IAU 2015 名义单位。所有青色采样点与金色曲线都是给定圆轨道的前向计算，不是望远镜观测，也没有进行周期搜索或拟合。恒星轨道视线剖面使用独立放大比例，恒星图标不表示实际半径。速度正值表示远离观测者；谱线位移采用低速关系 Δλ/λ₀ = vᵣ/c，谱线宽度仅为示意。"
+}
