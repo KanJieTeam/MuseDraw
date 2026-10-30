@@ -1,0 +1,140 @@
+{
+  "family": "journey",
+  "title": "入职以后，每个角色在何时接力",
+  "subtitle": "依照明确的相对天数，把角色与行动排在同一条时间轴 · 虚构计划",
+  "minDay": -3,
+  "maxDay": 30,
+  "phases": [
+    {
+      "label": "入职前",
+      "start": -3,
+      "end": 0
+    },
+    {
+      "label": "第一周",
+      "start": 0,
+      "end": 7
+    },
+    {
+      "label": "建立协作",
+      "start": 7,
+      "end": 14
+    },
+    {
+      "label": "独立工作",
+      "start": 14,
+      "end": 30
+    }
+  ],
+  "lanes": [
+    {
+      "id": "new",
+      "label": "新员工",
+      "events": [
+        {
+          "id": "new1",
+          "label": "确认准备",
+          "day": -2,
+          "milestone": false
+        },
+        {
+          "id": "new2",
+          "label": "认识伙伴",
+          "day": 1,
+          "milestone": false
+        },
+        {
+          "id": "new3",
+          "label": "完成首项工作",
+          "day": 7,
+          "milestone": true
+        },
+        {
+          "id": "new4",
+          "label": "独立交付",
+          "day": 21,
+          "milestone": true
+        }
+      ]
+    },
+    {
+      "id": "lead",
+      "label": "直接经理",
+      "events": [
+        {
+          "id": "lead1",
+          "label": "安排伙伴",
+          "day": -3,
+          "milestone": false
+        },
+        {
+          "id": "lead2",
+          "label": "目标沟通",
+          "day": 1,
+          "milestone": false
+        },
+        {
+          "id": "lead3",
+          "label": "阶段回顾",
+          "day": 14,
+          "milestone": false
+        },
+        {
+          "id": "lead4",
+          "label": "完成复盘",
+          "day": 30,
+          "milestone": true
+        }
+      ]
+    },
+    {
+      "id": "hr",
+      "label": "人力支持",
+      "events": [
+        {
+          "id": "hr1",
+          "label": "入职资料",
+          "day": -2,
+          "milestone": false
+        },
+        {
+          "id": "hr2",
+          "label": "手续办理",
+          "day": 0,
+          "milestone": false
+        },
+        {
+          "id": "hr3",
+          "label": "体验回访",
+          "day": 7,
+          "milestone": false
+        }
+      ]
+    },
+    {
+      "id": "it",
+      "label": "技术支持",
+      "events": [
+        {
+          "id": "it1",
+          "label": "账号准备",
+          "day": -3,
+          "milestone": false
+        },
+        {
+          "id": "it2",
+          "label": "设备交付",
+          "day": 0,
+          "milestone": false
+        },
+        {
+          "id": "it3",
+          "label": "权限复核",
+          "day": 14,
+          "milestone": true
+        }
+      ]
+    }
+  ],
+  "note": "天数是本计划给定的相对时间，不推断真实日期；没有用想象的情绪曲线替代观察或回访。"
+}

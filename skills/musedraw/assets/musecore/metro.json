@@ -1,0 +1,91 @@
+{
+  "family": "metro",
+  "title": "从想法到作品，三条线共同推进",
+  "subtitle": "MuseCore 方法示意 · 各条线保持身份，在共同评审处汇合",
+  "stages": [
+    {
+      "id": "brief",
+      "label": "理解需求"
+    },
+    {
+      "id": "draft",
+      "label": "形成方向"
+    },
+    {
+      "id": "review",
+      "label": "共同评审"
+    },
+    {
+      "id": "make",
+      "label": "完成制作"
+    },
+    {
+      "id": "deliver",
+      "label": "共同交付"
+    }
+  ],
+  "sharedStages": [
+    "review",
+    "deliver"
+  ],
+  "routes": [
+    {
+      "id": "meaning",
+      "label": "表达判断",
+      "color": "#D7282F",
+      "events": [
+        {
+          "stage": "brief",
+          "label": "读者与内容"
+        },
+        {
+          "stage": "draft",
+          "label": "主次与关系"
+        },
+        {
+          "stage": "make",
+          "label": "核对表达"
+        }
+      ]
+    },
+    {
+      "id": "concept",
+      "label": "视觉立意",
+      "color": "#1E9E5A",
+      "events": [
+        {
+          "stage": "brief",
+          "label": "主题与对象"
+        },
+        {
+          "stage": "draft",
+          "label": "主体与空间"
+        },
+        {
+          "stage": "make",
+          "label": "关键画面"
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "label": "风格编排",
+      "color": "#1675AF",
+      "events": [
+        {
+          "stage": "brief",
+          "label": "已有规范"
+        },
+        {
+          "stage": "draft",
+          "label": "字体与材料"
+        },
+        {
+          "stage": "make",
+          "label": "整体协调"
+        }
+      ]
+    }
+  ],
+  "note": "这是协作关系示意；轨道长度不表示耗时，共同站点也不代表额外审批。"
+}

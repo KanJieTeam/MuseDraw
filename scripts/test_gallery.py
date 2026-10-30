@@ -243,6 +243,29 @@ class GalleryTests(unittest.TestCase):
                     self.assertIn("musedraw/" + required, names)
                 self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
                 self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
+                for required in ("scripts/musecore.mjs", "scripts/musecore/runtime.mjs",
+                                 "scripts/musecore/report-families.mjs", "scripts/musecore/svg.mjs",
+                                 "references/musecore-runtime.md", "assets/musecore/index.json",
+                                 "assets/musecore/flow.json", "assets/musecore/report.json",
+                                 "tests/musecore/browser.test.mjs", "tests/musecore/visual.test.mjs",
+                                 "scripts/musecore/visual-families.mjs", "scripts/musecore/data-visuals.mjs",
+                                 "scripts/musecore/editorial.mjs", "assets/musecore/artwork/leaf-specimens.mjs",
+                                 "assets/musecore/specimen.json", "assets/musecore/editorial-page.json",
+                                 "references/musecore-visual-runtime.md", "references/musecore-spatial-data.md",
+                                 "scripts/musecore/quantitative.mjs", "scripts/musecore/spatial-families.mjs",
+                                 "scripts/musecore/comparison-families.mjs", "tests/musecore/spatial-data.test.mjs",
+                                 "assets/musecore/constellation.json", "assets/musecore/cohort.json",
+                                 "references/musecore-distributions.md", "scripts/musecore/distribution-families.mjs",
+                                 "scripts/musecore/flow-amounts.mjs", "tests/musecore/distribution.test.mjs",
+                                 "assets/musecore/histogram.json", "assets/musecore/sankey.json",
+                                 "references/musecore-workflows.md", "scripts/musecore/graphs.mjs",
+                                 "scripts/musecore/workflow-structures.mjs", "scripts/musecore/office-time.mjs",
+                                 "scripts/musecore/time-windows.mjs", "scripts/musecore/collaboration.mjs",
+                                 "scripts/musecore/calculation.mjs", "scripts/musecore/formula.mjs",
+                                 "scripts/musecore/state-trace.mjs", "scripts/musecore/states.mjs",
+                                 "scripts/musecore/deployment.mjs", "tests/musecore/workflows.test.mjs",
+                                 "assets/musecore/planner.json", "assets/musecore/formula.json"):
+                    self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",
                     "assets/style-kits/swiss.css",

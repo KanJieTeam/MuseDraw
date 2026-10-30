@@ -1,0 +1,46 @@
+{
+  "family": "timezone",
+  "title": "共同工作时间，由时钟真正算出来",
+  "subtitle": "固定 UTC 偏移与每日重复工作窗口的对照 · 模拟办公室",
+  "referenceDate": "2026-11-02",
+  "recurringDaily": true,
+  "meetingMinutes": 60,
+  "offices": [
+    {
+      "id": "0",
+      "label": "西区团队",
+      "offsetMinutes": 0,
+      "workStart": 480,
+      "workEnd": 1020
+    },
+    {
+      "id": "1",
+      "label": "中区一组",
+      "offsetMinutes": 60,
+      "workStart": 540,
+      "workEnd": 1080
+    },
+    {
+      "id": "2",
+      "label": "中区二组",
+      "offsetMinutes": 120,
+      "workStart": 540,
+      "workEnd": 1080
+    },
+    {
+      "id": "3",
+      "label": "南区团队",
+      "offsetMinutes": 330,
+      "workStart": 540,
+      "workEnd": 1080
+    },
+    {
+      "id": "4",
+      "label": "东区团队",
+      "offsetMinutes": 480,
+      "workStart": 540,
+      "workEnd": 1080
+    }
+  ],
+  "note": "偏移由输入给定，按每日重复工作时段计算，不核对夏令时；首个起点指 UTC 日期内的最早共同起点。"
+}

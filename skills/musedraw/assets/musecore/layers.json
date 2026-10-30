@@ -1,0 +1,105 @@
+{
+  "family": "layers",
+  "layers": [
+    {
+      "id": "service",
+      "label": "使用对象",
+      "groups": [
+        {
+          "id": "users",
+          "title": "试验人员、复核人员与资料管理人员",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "label": "集成应用",
+      "groups": [
+        {
+          "id": "app",
+          "title": "试验资料服务",
+          "items": [
+            "试样查询",
+            "结果复核",
+            "报告输出",
+            "版本查询"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "label": "方法支撑",
+      "groups": [
+        {
+          "id": "analysis",
+          "title": "统计分析",
+          "items": [
+            "有效记录",
+            "统计方法",
+            "结果表达"
+          ]
+        },
+        {
+          "id": "quality",
+          "title": "质量核对",
+          "items": [
+            "来源核对",
+            "条件核对",
+            "异常提示"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "资料基础",
+      "groups": [
+        {
+          "id": "records",
+          "title": "试验记录与依据",
+          "items": [
+            "委托与登记",
+            "试验观测",
+            "环境记录",
+            "校准记录",
+            "作业说明"
+          ]
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "application",
+      "to": "service",
+      "label": "查询与可编辑结果"
+    },
+    {
+      "from": "analysis",
+      "to": "app",
+      "label": "统计结果"
+    },
+    {
+      "from": "quality",
+      "to": "app",
+      "label": "核对记录"
+    },
+    {
+      "from": "quality",
+      "to": "analysis",
+      "label": "核对结果"
+    },
+    {
+      "from": "records",
+      "to": "analysis",
+      "label": "试验记录"
+    },
+    {
+      "from": "records",
+      "to": "quality",
+      "label": "条件与依据"
+    }
+  ]
+}

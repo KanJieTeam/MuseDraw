@@ -1,0 +1,39 @@
+{
+  "family": "blueprint",
+  "title": "一层层留下，才成为最终镜像",
+  "subtitle": "工程蓝图式分层剖面 · 虚构构建示例",
+  "unit": "MB",
+  "layers": [
+    {
+      "id": "base",
+      "label": "运行基础",
+      "value": 120,
+      "detail": "运行系统与必要库文件"
+    },
+    {
+      "id": "runtime",
+      "label": "语言运行时",
+      "value": 90,
+      "detail": "应用实际依赖的运行环境"
+    },
+    {
+      "id": "deps",
+      "label": "项目依赖",
+      "value": 65,
+      "detail": "锁定版本后的依赖产物"
+    },
+    {
+      "id": "app",
+      "label": "应用代码",
+      "value": 25,
+      "detail": "本次打包的服务与配置"
+    }
+  ],
+  "excluded": [
+    {
+      "label": "构建工具与临时文件",
+      "value": 280
+    }
+  ],
+  "note": "层高按输入大小成比例；右侧虚线区不计入最终总量。此图不是实测镜像分析。"
+}

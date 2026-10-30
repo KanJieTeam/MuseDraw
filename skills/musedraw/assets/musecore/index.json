@@ -1,0 +1,507 @@
+{
+  "version": "0.5.0",
+  "status": "bounded executable composition families; new family aesthetics awaiting review",
+  "examples": [
+    {
+      "id": "layers",
+      "file": "layers.json",
+      "family": "layers",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "association",
+      "file": "association.json",
+      "family": "association",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "flow",
+      "file": "flow.json",
+      "family": "flow",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "assembly",
+      "file": "assembly.json",
+      "family": "assembly",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "lanes",
+      "file": "lanes.json",
+      "family": "lanes",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "schedule",
+      "file": "schedule.json",
+      "family": "schedule",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "report",
+      "file": "report.json",
+      "family": "report",
+      "contentStatus": "original fictional demonstration; not a policy, measured result, or actual project schedule"
+    },
+    {
+      "id": "rhythm",
+      "family": "rhythm",
+      "file": "rhythm.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "p03-caoping-jueshi",
+        "sourceSha256": "f6344da5997266a9a7d842e9e3e4ae357bf018995b9f3055681be8cc339cf700",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "specimen",
+      "family": "specimen",
+      "file": "specimen.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "p04-luoye-tujian",
+        "sourceSha256": "c6e0b38c806f3255e96bb559839e9b16c62bd31cc0c60eaa362dee19fe68bd7f",
+        "role": "Existing native object artwork reused; page recomputed",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "metro",
+      "family": "metro",
+      "file": "metro.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "192-operating-rhythm-metro",
+        "sourceSha256": "6a9bb93f806047a5faf8558ff0e731b94c028d2dfbd3f366c4b52e5097efdabe",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "colour",
+      "family": "colour",
+      "file": "colour.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "t06-sanyuanse",
+        "sourceSha256": "3c10a8524c524d368f5cca894536b6a6734635a089eb3c07b4d1ad28cdf55ad9",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "calendar",
+      "family": "calendar",
+      "file": "calendar.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "d05-rili-reli",
+        "sourceSha256": "d219508ce799defd09ff3538ee9042674c10e9788a69e5b6b436408843ef65da",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "plate",
+      "family": "plate",
+      "file": "plate.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "170-hts-384-plate",
+        "sourceSha256": "93fbcbd3f6ad248f00eef74ad283e29d8d2dc5003aee3be2c4ca9a59980b5966",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "riso",
+      "family": "riso",
+      "file": "riso.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "visual-language/riso-report",
+        "role": "Original two-series overprint study adapted into a computed vector family",
+        "approval": "New rendering not yet user-approved"
+      }
+    },
+    {
+      "id": "editorial-page",
+      "family": "editorial-page",
+      "file": "editorial-page.json",
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
+      "source": {
+        "case": "visual-language/terracotta-material; ink-report; swiss",
+        "role": "Existing generated raster assets retained in a content-sized responsive HTML composition",
+        "approval": "New content layouts not yet user-approved"
+      }
+    },
+    {
+      "id": "blueprint",
+      "family": "blueprint",
+      "file": "blueprint.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "113-image-layers",
+          "sourceSha256": "c3ecc623cdb839dbe7ff52a6ac486d83dde1b1d348f9b1ffdd757e8f64bd08eb"
+        }
+      ]
+    },
+    {
+      "id": "constellation",
+      "family": "constellation",
+      "file": "constellation.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "107-service-star-map",
+          "sourceSha256": "ec0539e9c39415cc739c5b22f2c05cc653d395b86f22d95b2b3b56a3a50db420"
+        }
+      ]
+    },
+    {
+      "id": "scroll",
+      "family": "scroll",
+      "file": "scroll.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "195-decade-scroll",
+          "sourceSha256": "5ce35e197c298f576d6ad91fdfa3a62c97ac449dccba79c9e4fad879e45d2e53"
+        }
+      ]
+    },
+    {
+      "id": "dumbbell",
+      "family": "dumbbell",
+      "file": "dumbbell.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "d03-yaling-gongshi",
+          "sourceSha256": "89e79574bc47ec9079af81d12dce07729f4d812bcdaf9d64b63ced0606f8274a"
+        }
+      ]
+    },
+    {
+      "id": "waterfall",
+      "family": "waterfall",
+      "file": "waterfall.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "d04-pubu-lirun",
+          "sourceSha256": "7c29f954e2fee9de1c278e7b1aaa23e357ea317dea9197f3ee184d2da73c3339"
+        }
+      ]
+    },
+    {
+      "id": "funnel",
+      "family": "funnel",
+      "file": "funnel.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "187-recruiting-funnel",
+          "sourceSha256": "ad0e3e0c6fd8198b4dfd027cee8889a3c3f7d1366f3a21204123da8ebb1d9eca"
+        }
+      ]
+    },
+    {
+      "id": "survey",
+      "family": "survey",
+      "file": "survey.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "190-engagement-survey",
+          "sourceSha256": "e5c5a9f8f6037d7ad0f137f5231d1fad5a30c8ea2ad5e30b1c76cfac4f6b18a0"
+        }
+      ]
+    },
+    {
+      "id": "cohort",
+      "family": "cohort",
+      "file": "cohort.json",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "sourceCases": [
+        {
+          "id": "183-cohort-retention",
+          "sourceSha256": "b2b671bc599ccfbf0b8363a5cfcebca02bc48d2d01f1ce927f3329abf57e4c1d"
+        }
+      ]
+    },
+    {
+      "id": "slope",
+      "family": "slope",
+      "file": "slope.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d01-podu-tu",
+          "sourceSha256": "2dc2b601f584b16578249798ae141d2cb686b1a6ea50e97987bd5559ff574f8e"
+        }
+      ]
+    },
+    {
+      "id": "small-multiples",
+      "family": "small-multiples",
+      "file": "small-multiples.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d02-xiaobeishu-jiangshui",
+          "sourceSha256": "660de0e01a33b4ec612b3084090830961982764f6308b51f6f69b98c240aa888"
+        }
+      ]
+    },
+    {
+      "id": "pyramid",
+      "family": "pyramid",
+      "file": "pyramid.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d07-renkou-jinzita",
+          "sourceSha256": "210b3f077edf5decfea85e58cbed9113d9b8d51d5e5cffab0d8e288949f929b3"
+        }
+      ]
+    },
+    {
+      "id": "scatter-panels",
+      "family": "scatter-panels",
+      "file": "scatter-panels.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d08-ansikumu",
+          "sourceSha256": "56555e18fbc74265abf607d52ede48f9bb16c47eee93cfe40fd877dbfa5517aa"
+        }
+      ]
+    },
+    {
+      "id": "bump",
+      "family": "bump",
+      "file": "bump.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d09-paiming-bianhua",
+          "sourceSha256": "fc08ab2603b62989761443ce9939d5e61d53bf7399d0ee0ce69d153e551793cd"
+        }
+      ]
+    },
+    {
+      "id": "unit-chart",
+      "family": "unit-chart",
+      "file": "unit-chart.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d10-danweitu-tongqin",
+          "sourceSha256": "87b06690c51eed2f29663cdb58d908600f5282066a77f6ed5fc4d57aa8a4b2e8"
+        }
+      ]
+    },
+    {
+      "id": "histogram",
+      "family": "histogram",
+      "file": "histogram.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "155-histogram",
+          "sourceSha256": "7ce105d3eaf1713fa1f93d45ef7b670ce92f0d6f7c67b60d89e41890ff71372f"
+        }
+      ]
+    },
+    {
+      "id": "sankey",
+      "family": "sankey",
+      "file": "sankey.json",
+      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "sourceCases": [
+        {
+          "id": "d06-sangji-shouzhi",
+          "sourceSha256": "71a3c6a5ae16f3e957bd41e35acfe82625a96c8a249f8806a1595f5dc7bbfb00"
+        },
+        {
+          "id": "181-budget-sankey",
+          "sourceSha256": "2091a13ab8e57900162688a5bcf8fe58c1e9e92e7d37dcc4d120a7d7b3291f8b"
+        }
+      ]
+    },
+    {
+      "id": "critical-path",
+      "family": "critical-path",
+      "file": "critical-path.json",
+      "contentStatus": "fictional development input; not a real staffing or project plan",
+      "sourceCases": [
+        {
+          "id": "184-critical-path",
+          "sourceSha256": "962ecea6b9c10cf7056d4055e3a1f0a5400250ffe3defb8cd9f2260c215897ef"
+        }
+      ]
+    },
+    {
+      "id": "hierarchy",
+      "family": "hierarchy",
+      "file": "hierarchy.json",
+      "contentStatus": "fictional development input; not a real staffing or project plan",
+      "sourceCases": [
+        {
+          "id": "185-org-restructure",
+          "sourceSha256": "09d757edabc27ecc62081fd31d0049fbcd6457d10590e1e5aaa1679b56b985c8"
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "family": "journey",
+      "file": "journey.json",
+      "contentStatus": "fictional development input; not a real staffing or project plan",
+      "sourceCases": [
+        {
+          "id": "186-onboarding-journey",
+          "sourceSha256": "0d3f614e269004ff0fb8e6feb4aeb6a7270aff93e9d39cb2bd50537146b8ad7f"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "family": "planner",
+      "file": "planner.json",
+      "contentStatus": "fictional development input; not a real staffing or project plan",
+      "sourceCases": [
+        {
+          "id": "199-weekly-eisenhower",
+          "sourceSha256": "0873342e6a20e55edce7308b08370add3865b03a1b18c09f51d9c918b80f2d83"
+        }
+      ]
+    },
+    {
+      "id": "timezone",
+      "family": "timezone",
+      "file": "timezone.json",
+      "contentStatus": "simulated development input; no real timezone or capacity recommendation",
+      "sourceCases": [
+        {
+          "id": "193-timezone-collaboration",
+          "sourceSha256": "6969c2990a1e7c217ca96a0c5f6dc6fb2925e0d798671ed3b5494ed7a0ff8ec7"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "family": "formula",
+      "file": "formula.json",
+      "contentStatus": "simulated development input; no real timezone or capacity recommendation",
+      "sourceCases": [
+        {
+          "id": "103-hpa-autoscaling",
+          "sourceSha256": "179638b09100d67ba0f21764f0fb6f6076f321475a2adf60e4fbbc0becec7da8"
+        }
+      ]
+    },
+    {
+      "id": "states",
+      "family": "states",
+      "file": "states.json",
+      "contentStatus": "fictional explicit transitions, not a circuit-breaker implementation",
+      "sourceCases": [
+        {
+          "id": "102-circuit-breaker",
+          "sourceSha256": "57d3e52dc63964e3145802790ed6feaa4ad5918b6b6b44d180f136c1621ac792"
+        }
+      ]
+    },
+    {
+      "id": "deployment",
+      "family": "deployment",
+      "file": "deployment.json",
+      "contentStatus": "fictional bounded deployment; no operational assurance",
+      "sourceCases": [
+        {
+          "id": "115-c4-deployment",
+          "sourceSha256": "ee056a695075dc678bc8641422d5868242a3928d6b1bb01dd5014cbf5d8e137b"
+        }
+      ]
+    }
+  ],
+  "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
+  "evidence": "Initial lanes/schedule development renders received positive user feedback. New families and assembled pages await aesthetic review.",
+  "limitations": [
+    "Does not infer omitted facts or relations",
+    "No general aesthetic-quality guarantee",
+    "No independent host-transfer result for this revision"
+  ],
+  "groups": [
+    {
+      "reference": "references/musecore-runtime.md",
+      "ids": [
+        "layers",
+        "association",
+        "flow",
+        "assembly",
+        "lanes",
+        "schedule",
+        "report"
+      ]
+    },
+    {
+      "reference": "references/musecore-visual-runtime.md",
+      "ids": [
+        "rhythm",
+        "specimen",
+        "metro",
+        "colour",
+        "calendar",
+        "plate",
+        "riso",
+        "editorial-page"
+      ]
+    },
+    {
+      "reference": "references/musecore-spatial-data.md",
+      "ids": [
+        "blueprint",
+        "constellation",
+        "scroll",
+        "dumbbell",
+        "waterfall",
+        "funnel",
+        "survey",
+        "cohort"
+      ]
+    },
+    {
+      "reference": "references/musecore-distributions.md",
+      "ids": [
+        "slope",
+        "small-multiples",
+        "pyramid",
+        "scatter-panels",
+        "bump",
+        "unit-chart",
+        "histogram",
+        "sankey"
+      ]
+    },
+    {
+      "reference": "references/musecore-workflows.md",
+      "ids": [
+        "critical-path",
+        "hierarchy",
+        "journey",
+        "planner",
+        "timezone",
+        "formula",
+        "states",
+        "deployment"
+      ]
+    }
+  ]
+}

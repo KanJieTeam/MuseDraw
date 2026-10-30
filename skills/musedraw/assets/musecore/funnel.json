@@ -1,0 +1,45 @@
+{
+  "family": "funnel",
+  "title": "招聘漏斗：每一步留下多少人",
+  "subtitle": "同一批候选人的阶段快照 · 虚构招聘数据",
+  "stages": [
+    {
+      "id": "apply",
+      "label": "收到申请",
+      "value": 2400
+    },
+    {
+      "id": "screen",
+      "label": "简历初筛",
+      "value": 480
+    },
+    {
+      "id": "phone",
+      "label": "初步沟通",
+      "value": 210
+    },
+    {
+      "id": "onsite",
+      "label": "专业面试",
+      "value": 94
+    },
+    {
+      "id": "final",
+      "label": "终轮交流",
+      "value": 38
+    },
+    {
+      "id": "offer",
+      "label": "发出意向",
+      "value": 22
+    },
+    {
+      "id": "join",
+      "label": "确认入职",
+      "value": 17
+    }
+  ],
+  "scale": "log",
+  "unit": "人",
+  "note": "各阶段来自同一嵌套队列；像素只作材料处理，不是一块代表一个人。未提供耗时和流失原因。"
+}

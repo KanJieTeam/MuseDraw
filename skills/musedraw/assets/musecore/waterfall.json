@@ -1,0 +1,43 @@
+{
+  "family": "waterfall",
+  "title": "从年初到年末，利润怎样改变",
+  "subtitle": "首尾总量与中间增减共用一条累计关系 · 虚构财务数据",
+  "start": 820,
+  "startLabel": "年初利润",
+  "changes": [
+    {
+      "id": "new",
+      "label": "新增客户",
+      "delta": 310
+    },
+    {
+      "id": "repeat",
+      "label": "存量复购",
+      "delta": 95
+    },
+    {
+      "id": "price",
+      "label": "结构变化",
+      "delta": 40
+    },
+    {
+      "id": "delivery",
+      "label": "交付成本",
+      "delta": -120
+    },
+    {
+      "id": "people",
+      "label": "人员投入",
+      "delta": -85
+    },
+    {
+      "id": "other",
+      "label": "其他",
+      "delta": -20
+    }
+  ],
+  "endLabel": "年末利润",
+  "expectedEnd": 1040,
+  "unit": "万元",
+  "note": "累计端点由输入计算；柱高采用共同零点。示例没有提供投入回报与因果证据。"
+}

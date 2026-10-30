@@ -1,0 +1,175 @@
+{
+  "family": "deployment",
+  "title": "同一服务，怎样落在不同运行区域",
+  "subtitle": "运行边界、组件与明确的通信关系 · 虚构部署",
+  "actor": {
+    "id": "user",
+    "label": "服务使用者"
+  },
+  "entry": {
+    "id": "entry",
+    "label": "统一接入服务",
+    "detail": "接收并转发明确的请求"
+  },
+  "zones": [
+    {
+      "id": "a",
+      "label": "运行区 A",
+      "components": [
+        {
+          "id": "a-web",
+          "label": "Web 前端",
+          "detail": "提供页面与交互",
+          "kind": "service"
+        },
+        {
+          "id": "a-api",
+          "label": "业务服务",
+          "detail": "执行业务处理",
+          "kind": "service"
+        },
+        {
+          "id": "a-db",
+          "label": "数据实例",
+          "detail": "主要数据副本",
+          "kind": "data"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "label": "运行区 B",
+      "components": [
+        {
+          "id": "b-web",
+          "label": "Web 前端",
+          "detail": "提供页面与交互",
+          "kind": "service"
+        },
+        {
+          "id": "b-api",
+          "label": "业务服务",
+          "detail": "执行业务处理",
+          "kind": "service"
+        },
+        {
+          "id": "b-db",
+          "label": "数据实例",
+          "detail": "同步数据副本",
+          "kind": "data"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "label": "运行区 C",
+      "components": [
+        {
+          "id": "c-web",
+          "label": "Web 前端",
+          "detail": "提供页面与交互",
+          "kind": "service"
+        },
+        {
+          "id": "c-api",
+          "label": "业务服务",
+          "detail": "执行业务处理",
+          "kind": "service"
+        },
+        {
+          "id": "c-db",
+          "label": "数据实例",
+          "detail": "只读数据副本",
+          "kind": "data"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": "actor-entry",
+      "from": "user",
+      "to": "entry",
+      "label": "HTTPS",
+      "kind": "request"
+    },
+    {
+      "id": "a-entry",
+      "from": "entry",
+      "to": "a-web",
+      "label": "HTTPS",
+      "kind": "request"
+    },
+    {
+      "id": "a-web-api",
+      "from": "a-web",
+      "to": "a-api",
+      "label": "HTTP / JSON",
+      "kind": "request"
+    },
+    {
+      "id": "a-api-data",
+      "from": "a-api",
+      "to": "a-db",
+      "label": "数据读写",
+      "kind": "request"
+    },
+    {
+      "id": "b-entry",
+      "from": "entry",
+      "to": "b-web",
+      "label": "HTTPS",
+      "kind": "request"
+    },
+    {
+      "id": "b-web-api",
+      "from": "b-web",
+      "to": "b-api",
+      "label": "HTTP / JSON",
+      "kind": "request"
+    },
+    {
+      "id": "b-api-data",
+      "from": "b-api",
+      "to": "b-db",
+      "label": "数据读写",
+      "kind": "request"
+    },
+    {
+      "id": "c-entry",
+      "from": "entry",
+      "to": "c-web",
+      "label": "HTTPS",
+      "kind": "request"
+    },
+    {
+      "id": "c-web-api",
+      "from": "c-web",
+      "to": "c-api",
+      "label": "HTTP / JSON",
+      "kind": "request"
+    },
+    {
+      "id": "c-api-data",
+      "from": "c-api",
+      "to": "c-db",
+      "label": "数据读写",
+      "kind": "request"
+    },
+    {
+      "id": "replica-ab",
+      "from": "a-db",
+      "to": "b-db",
+      "label": "给定的同步关系",
+      "kind": "sync"
+    },
+    {
+      "id": "replica-ac",
+      "from": "a-db",
+      "to": "c-db",
+      "label": "给定的复制关系",
+      "kind": "sync"
+    }
+  ],
+  "note": "只绘制输入中明确列出的通信；分区位置不代表性能或容灾等级。本图是简化部署视图，不核验具体产品配置。"
+}

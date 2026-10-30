@@ -31,6 +31,13 @@ an expression or when the user requests visual comparison. `author-notes.md`
 retains the author’s design reasoning with obsolete export notes omitted.
 It does not override the current Skill or independently validate scientific claims.
 
+Search results mark a `contentDriven` family when that source already has a
+bounded MuseCore implementation. For changed data or item counts, inspect that
+family's scope and use its `core example` / `core render` route when it fits;
+the installed runtime does not need the optional artwork pack for this route.
+This marker is source provenance, not a recommendation to force any new brief
+into that family. An exact source replay retains the vector route below.
+
 For an unchanged replay, use the existing vector route:
 
 ```sh

@@ -1,0 +1,46 @@
+{
+  "family": "colour",
+  "title": "颜色，让关系可见",
+  "subtitle": "三原色与间色 · 颜料混色的简化示意",
+  "primaries": [
+    {
+      "id": "yellow",
+      "label": "黄",
+      "color": "#F4C20D",
+      "shape": "triangle"
+    },
+    {
+      "id": "red",
+      "label": "红",
+      "color": "#D7262B",
+      "shape": "square"
+    },
+    {
+      "id": "blue",
+      "label": "蓝",
+      "color": "#1F4DA1",
+      "shape": "circle"
+    }
+  ],
+  "mixes": [
+    {
+      "a": "yellow",
+      "b": "red",
+      "label": "黄 + 红 = 橙",
+      "color": "#EC8B11"
+    },
+    {
+      "a": "yellow",
+      "b": "blue",
+      "label": "黄 + 蓝 = 绿",
+      "color": "#2A9960"
+    },
+    {
+      "a": "red",
+      "b": "blue",
+      "label": "红 + 蓝 = 紫",
+      "color": "#6D3E91"
+    }
+  ],
+  "footer": "观察并排色块与交叠区的变化，比较每一组颜色的差异。"
+}

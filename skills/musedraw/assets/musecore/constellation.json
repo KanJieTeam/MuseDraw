@@ -1,0 +1,98 @@
+{
+  "family": "constellation",
+  "title": "订单服务，如何与周围协作",
+  "subtitle": "依赖方向由输入明确给出 · 虚构流量与错误率示例",
+  "center": "order",
+  "unit": "次/秒",
+  "warningAt": 0.005,
+  "criticalAt": 0.01,
+  "nodes": [
+    {
+      "id": "order",
+      "label": "订单服务",
+      "value": 900,
+      "errorRate": 0.002,
+      "tier": 0
+    },
+    {
+      "id": "gateway",
+      "label": "网关入口",
+      "value": 1200,
+      "errorRate": 0.001,
+      "tier": 1
+    },
+    {
+      "id": "payment",
+      "label": "支付服务",
+      "value": 470,
+      "errorRate": 0.013,
+      "tier": 1
+    },
+    {
+      "id": "stock",
+      "label": "库存服务",
+      "value": 650,
+      "errorRate": 0.003,
+      "tier": 1
+    },
+    {
+      "id": "search",
+      "label": "商品检索",
+      "value": 350,
+      "errorRate": 0.006,
+      "tier": 2
+    },
+    {
+      "id": "queue",
+      "label": "消息队列",
+      "value": 520,
+      "errorRate": 0.001,
+      "tier": 2
+    },
+    {
+      "id": "profile",
+      "label": "用户资料",
+      "value": 220,
+      "errorRate": 0.002,
+      "tier": 2
+    },
+    {
+      "id": "audit",
+      "label": "审计记录",
+      "value": 140,
+      "errorRate": 0.001,
+      "tier": 2
+    }
+  ],
+  "edges": [
+    {
+      "from": "gateway",
+      "to": "order"
+    },
+    {
+      "from": "order",
+      "to": "payment"
+    },
+    {
+      "from": "order",
+      "to": "stock"
+    },
+    {
+      "from": "gateway",
+      "to": "search"
+    },
+    {
+      "from": "payment",
+      "to": "queue"
+    },
+    {
+      "from": "order",
+      "to": "profile"
+    },
+    {
+      "from": "stock",
+      "to": "audit"
+    }
+  ],
+  "note": "星的面积正比于给定调用量；琥珀与橙色表示达到输入的错误率阈值。距离不表示延迟，线表示依赖方向。"
+}

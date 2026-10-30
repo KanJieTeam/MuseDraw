@@ -1,0 +1,63 @@
+{
+  "family": "slope",
+  "title": "两次观察，哪些变化最值得看",
+  "subtitle": "同一批服务的评分对照 · 虚构开发数据，不是调查结果或实验结论。",
+  "beforeLabel": "改进前",
+  "afterLabel": "改进后",
+  "unit": "分",
+  "highlight": [
+    "online",
+    "parking"
+  ],
+  "items": [
+    {
+      "id": "library",
+      "label": "图书借阅",
+      "before": 82,
+      "after": 84
+    },
+    {
+      "id": "clinic",
+      "label": "社区诊疗",
+      "before": 74,
+      "after": 77
+    },
+    {
+      "id": "night",
+      "label": "夜间照明",
+      "before": 70,
+      "after": 66
+    },
+    {
+      "id": "bus",
+      "label": "公交准点",
+      "before": 68,
+      "after": 64
+    },
+    {
+      "id": "online",
+      "label": "线上挂号",
+      "before": 62,
+      "after": 81
+    },
+    {
+      "id": "waste",
+      "label": "分类引导",
+      "before": 55,
+      "after": 72
+    },
+    {
+      "id": "opening",
+      "label": "大厅排队",
+      "before": 51,
+      "after": 69
+    },
+    {
+      "id": "parking",
+      "label": "停车便利",
+      "before": 48,
+      "after": 41
+    }
+  ],
+  "note": "端点仍在原始分值的位置；文字拥挤时沿独立轨道排列，细引线保持对应。"
+}

@@ -1,0 +1,133 @@
+{
+  "family": "sankey",
+  "title": "每一笔流入，都能找到它的去处",
+  "subtitle": "同一期间的守恒金额流向 · 虚构开发数据，不是调查结果或实验结论。",
+  "unit": "元",
+  "columns": [
+    "收入来源",
+    "合计",
+    "用途组",
+    "去向"
+  ],
+  "nodes": [
+    {
+      "id": "salary",
+      "label": "工资",
+      "column": 0,
+      "color": "#465465"
+    },
+    {
+      "id": "other",
+      "label": "其他收入",
+      "column": 0,
+      "color": "#7E8E9B"
+    },
+    {
+      "id": "pool",
+      "label": "可分配收入",
+      "column": 1,
+      "color": "#465465"
+    },
+    {
+      "id": "fixed",
+      "label": "固定支出",
+      "column": 2,
+      "color": "#8E9FB2"
+    },
+    {
+      "id": "living",
+      "label": "日常支出",
+      "column": 2,
+      "color": "#D5B575"
+    },
+    {
+      "id": "saving",
+      "label": "留存",
+      "column": 2,
+      "color": "#6C9B88"
+    },
+    {
+      "id": "house",
+      "label": "居住",
+      "column": 3,
+      "color": "#8E9FB2"
+    },
+    {
+      "id": "insurance",
+      "label": "保险",
+      "column": 3,
+      "color": "#8E9FB2"
+    },
+    {
+      "id": "food",
+      "label": "餐饮",
+      "column": 3,
+      "color": "#D5B575"
+    },
+    {
+      "id": "travel",
+      "label": "交通",
+      "column": 3,
+      "color": "#D5B575"
+    },
+    {
+      "id": "reserve",
+      "label": "储蓄",
+      "column": 3,
+      "color": "#6C9B88"
+    }
+  ],
+  "links": [
+    {
+      "from": "salary",
+      "to": "pool",
+      "value": 1000
+    },
+    {
+      "from": "other",
+      "to": "pool",
+      "value": 500
+    },
+    {
+      "from": "pool",
+      "to": "fixed",
+      "value": 600
+    },
+    {
+      "from": "pool",
+      "to": "living",
+      "value": 500
+    },
+    {
+      "from": "pool",
+      "to": "saving",
+      "value": 400
+    },
+    {
+      "from": "fixed",
+      "to": "house",
+      "value": 500
+    },
+    {
+      "from": "fixed",
+      "to": "insurance",
+      "value": 100
+    },
+    {
+      "from": "living",
+      "to": "food",
+      "value": 300
+    },
+    {
+      "from": "living",
+      "to": "travel",
+      "value": 200
+    },
+    {
+      "from": "saving",
+      "to": "reserve",
+      "value": 400
+    }
+  ],
+  "note": "所有流带使用同一数值尺度，内部节点流入等于流出；未平衡的金额不静默归入“其他”。"
+}

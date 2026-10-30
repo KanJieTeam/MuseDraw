@@ -7,7 +7,9 @@ import {createHash} from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..');
 const pkg=JSON.parse(await fs.readFile(path.join(root,'package.json'),'utf8'));
 const files={};
-for(const relative of ['SKILL.md','references/musecore.md']){
+const coreModules=(await fs.readdir(path.join(root,'scripts/musecore'))).filter(name=>name.endsWith('.mjs')).sort().map(name=>'scripts/musecore/'+name);
+const coreExamples=(await fs.readdir(path.join(root,'assets/musecore'))).filter(name=>name.endsWith('.json')).sort().map(name=>'assets/musecore/'+name);
+for(const relative of ['SKILL.md','references/musecore.md','references/musecore-runtime.md','references/musecore-visual-runtime.md','references/musecore-spatial-data.md','references/musecore-distributions.md','references/musecore-workflows.md','references/case-library.md','scripts/case-library.mjs','scripts/musecore.mjs',...coreModules,...coreExamples]){
  const bytes=await fs.readFile(path.join(root,relative));
  files[relative]=createHash('sha256').update(bytes).digest('hex');
 }

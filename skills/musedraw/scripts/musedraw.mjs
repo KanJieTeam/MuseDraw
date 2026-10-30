@@ -92,6 +92,7 @@ function args(argv) {
 async function main() {
   const started = performance.now();
   const [cmd, ...argv] = process.argv.slice(2);
+  if(cmd==='core'){await (await import('./musecore.mjs')).main(argv);return;}
   const { flags, rest } = args(argv);
   const fontMode = flags['font-mode'] ?? 'system';
   if (!['system', 'bundled'].includes(fontMode)) throw new Error('--font-mode must be system or bundled');

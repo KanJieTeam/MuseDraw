@@ -1,0 +1,179 @@
+{
+  "family": "lanes",
+  "stages": [
+    {
+      "id": "select",
+      "label": "送样登记"
+    },
+    {
+      "id": "extract",
+      "label": "试验处理"
+    },
+    {
+      "id": "verify",
+      "label": "复核确认"
+    },
+    {
+      "id": "deliver",
+      "label": "结果归档"
+    }
+  ],
+  "roles": [
+    {
+      "id": "content",
+      "label": "专业人员"
+    },
+    {
+      "id": "code",
+      "label": "资料系统"
+    },
+    {
+      "id": "result",
+      "label": "保留成果"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "x00",
+      "role": "content",
+      "stage": "select",
+      "lines": [
+        "确认委托范围"
+      ]
+    },
+    {
+      "id": "x01",
+      "role": "content",
+      "stage": "extract",
+      "lines": [
+        "核对试验条件"
+      ]
+    },
+    {
+      "id": "x02",
+      "role": "content",
+      "stage": "verify",
+      "lines": [
+        "专业复核"
+      ]
+    },
+    {
+      "id": "x03",
+      "role": "content",
+      "stage": "deliver",
+      "lines": [
+        "确认归档版本"
+      ]
+    },
+    {
+      "id": "x10",
+      "role": "code",
+      "stage": "select",
+      "lines": [
+        "登记试样编号"
+      ]
+    },
+    {
+      "id": "x11",
+      "role": "code",
+      "stage": "extract",
+      "lines": [
+        "汇集观测记录"
+      ]
+    },
+    {
+      "id": "x12",
+      "role": "code",
+      "stage": "verify",
+      "lines": [
+        "展示核对意见"
+      ]
+    },
+    {
+      "id": "x13",
+      "role": "code",
+      "stage": "deliver",
+      "lines": [
+        "保存版本关联"
+      ]
+    },
+    {
+      "id": "x20",
+      "role": "result",
+      "stage": "select",
+      "lines": [
+        "登记信息"
+      ]
+    },
+    {
+      "id": "x21",
+      "role": "result",
+      "stage": "extract",
+      "lines": [
+        "原始观测"
+      ]
+    },
+    {
+      "id": "x22",
+      "role": "result",
+      "stage": "verify",
+      "lines": [
+        "复核记录"
+      ]
+    },
+    {
+      "id": "x23",
+      "role": "result",
+      "stage": "deliver",
+      "lines": [
+        "报告与输入记录"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "x00",
+      "to": "x10"
+    },
+    {
+      "from": "x10",
+      "to": "x20"
+    },
+    {
+      "from": "x01",
+      "to": "x11"
+    },
+    {
+      "from": "x11",
+      "to": "x21"
+    },
+    {
+      "from": "x02",
+      "to": "x12"
+    },
+    {
+      "from": "x12",
+      "to": "x22"
+    },
+    {
+      "from": "x03",
+      "to": "x13"
+    },
+    {
+      "from": "x13",
+      "to": "x23"
+    },
+    {
+      "from": "x10",
+      "to": "x11"
+    },
+    {
+      "from": "x11",
+      "to": "x12"
+    },
+    {
+      "from": "x12",
+      "to": "x13"
+    }
+  ]
+}

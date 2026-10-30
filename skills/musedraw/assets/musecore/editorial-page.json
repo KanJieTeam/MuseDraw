@@ -1,0 +1,19 @@
+{
+  "family": "editorial-page",
+  "style": "terracotta",
+  "eyebrow": "MENDING ROOM / NO. 01",
+  "title": "Mend\nwhat\nmatters.",
+  "description": "一场为舍不得丢掉的旧物准备的小聚。把磨损留下，让修补成为下一段故事的起点。",
+  "facts": [
+    {
+      "value": "08 NOV",
+      "label": "周末修补工作坊"
+    },
+    {
+      "value": "北岸工坊",
+      "label": "针线、织物与旧物故事"
+    }
+  ],
+  "footer": "虚构社区活动 · 原有生成素材：补丁帆布袋、线轴与旧木凳。",
+  "imageCaption": "CARE MAKES ROOM FOR ANOTHER YEAR."
+}

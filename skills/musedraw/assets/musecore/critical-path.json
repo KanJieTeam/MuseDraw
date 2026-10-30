@@ -1,0 +1,87 @@
+{
+  "family": "critical-path",
+  "title": "哪些任务真正决定最早完成时间",
+  "subtitle": "同一份依赖与工期，联动任务网络和时间表 · 虚构项目",
+  "unit": "天",
+  "tasks": [
+    {
+      "id": "A",
+      "label": "需求确认",
+      "duration": 3
+    },
+    {
+      "id": "B",
+      "label": "方案设计",
+      "duration": 5
+    },
+    {
+      "id": "C",
+      "label": "数据准备",
+      "duration": 4
+    },
+    {
+      "id": "D",
+      "label": "接口开发",
+      "duration": 6
+    },
+    {
+      "id": "E",
+      "label": "页面制作",
+      "duration": 7
+    },
+    {
+      "id": "F",
+      "label": "联调检查",
+      "duration": 3
+    },
+    {
+      "id": "G",
+      "label": "安全复核",
+      "duration": 2
+    },
+    {
+      "id": "H",
+      "label": "上线确认",
+      "duration": 1
+    }
+  ],
+  "links": [
+    {
+      "from": "A",
+      "to": "B"
+    },
+    {
+      "from": "A",
+      "to": "C"
+    },
+    {
+      "from": "B",
+      "to": "D"
+    },
+    {
+      "from": "B",
+      "to": "E"
+    },
+    {
+      "from": "C",
+      "to": "D"
+    },
+    {
+      "from": "D",
+      "to": "F"
+    },
+    {
+      "from": "E",
+      "to": "F"
+    },
+    {
+      "from": "F",
+      "to": "G"
+    },
+    {
+      "from": "G",
+      "to": "H"
+    }
+  ],
+  "note": "工期为连续计算单位，不包含周末、资源冲突或缓冲；金色来自零总时差，不是手工指定的重点。"
+}

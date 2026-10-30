@@ -1,0 +1,78 @@
+{
+  "family": "states",
+  "title": "状态随事件改变，每一段都能追踪",
+  "subtitle": "明确的状态、转换与给定事件序列 · 虚构设备流程",
+  "unit": "秒",
+  "states": [
+    {
+      "id": "ready",
+      "label": "就绪",
+      "detail": "等待任务；尚未占用执行资源。"
+    },
+    {
+      "id": "running",
+      "label": "运行",
+      "detail": "处理已经接受的任务。"
+    },
+    {
+      "id": "paused",
+      "label": "暂停",
+      "detail": "保留进度，等待继续或撤销。"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "start",
+      "from": "ready",
+      "to": "running",
+      "label": "接受任务"
+    },
+    {
+      "id": "pause",
+      "from": "running",
+      "to": "paused",
+      "label": "收到暂停事件"
+    },
+    {
+      "id": "resume",
+      "from": "paused",
+      "to": "running",
+      "label": "收到继续事件"
+    },
+    {
+      "id": "finish",
+      "from": "running",
+      "to": "ready",
+      "label": "任务结束"
+    },
+    {
+      "id": "cancel",
+      "from": "paused",
+      "to": "ready",
+      "label": "撤销任务"
+    }
+  ],
+  "trace": {
+    "initial": "ready",
+    "duration": 90,
+    "events": [
+      {
+        "at": 10,
+        "transition": "start"
+      },
+      {
+        "at": 30,
+        "transition": "pause"
+      },
+      {
+        "at": 45,
+        "transition": "resume"
+      },
+      {
+        "at": 80,
+        "transition": "finish"
+      }
+    ]
+  },
+  "note": "轨迹由给定转换事件推演，只有当前状态允许的转换才能接续；条件文字仅作说明，没有被当成程序执行。"
+}

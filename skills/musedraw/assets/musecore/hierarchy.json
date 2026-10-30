@@ -1,0 +1,69 @@
+{
+  "family": "hierarchy",
+  "title": "结构可以改变，总人数仍能核对",
+  "subtitle": "两份结构分别布局，再比较人数与层级 · 虚构组织",
+  "expectSameTotal": true,
+  "panels": [
+    {
+      "id": "before",
+      "label": "调整前",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "项目负责人",
+          "parent": null,
+          "ownCount": 1
+        },
+        {
+          "id": "a",
+          "label": "产品",
+          "parent": "root",
+          "ownCount": 8
+        },
+        {
+          "id": "b",
+          "label": "研发",
+          "parent": "root",
+          "ownCount": 10
+        },
+        {
+          "id": "c",
+          "label": "交付",
+          "parent": "root",
+          "ownCount": 7
+        },
+        {
+          "id": "d",
+          "label": "支持",
+          "parent": "root",
+          "ownCount": 4
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "label": "调整后",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "项目负责人",
+          "parent": null,
+          "ownCount": 1
+        },
+        {
+          "id": "a",
+          "label": "产品与研发",
+          "parent": "root",
+          "ownCount": 18
+        },
+        {
+          "id": "b",
+          "label": "交付与支持",
+          "parent": "root",
+          "ownCount": 11
+        }
+      ]
+    }
+  ],
+  "note": "本级人数指直接归属该节点、未包含子节点的人数；合计由子树递归求和，避免重复统计。"
+}

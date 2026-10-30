@@ -1,0 +1,47 @@
+{
+  "family": "dumbbell",
+  "title": "计划与实际，差在哪里",
+  "subtitle": "同一任务的两个数值，用一条连接线看清偏差 · 虚构工时示例",
+  "beforeLabel": "计划工时",
+  "afterLabel": "实际工时",
+  "unit": "小时",
+  "items": [
+    {
+      "id": "mobile",
+      "label": "移动端重构",
+      "before": 200,
+      "after": 320
+    },
+    {
+      "id": "site",
+      "label": "官网改版",
+      "before": 150,
+      "after": 190
+    },
+    {
+      "id": "api",
+      "label": "接口联调",
+      "before": 130,
+      "after": 165
+    },
+    {
+      "id": "data",
+      "label": "数据迁移",
+      "before": 180,
+      "after": 160
+    },
+    {
+      "id": "docs",
+      "label": "交付文档",
+      "before": 75,
+      "after": 68
+    },
+    {
+      "id": "test",
+      "label": "回归测试",
+      "before": 110,
+      "after": 110
+    }
+  ],
+  "note": "按“实际−计划”排序；空心为计划，实心为实际。橙色表示增加，青色表示减少，不自动判定业务好坏。"
+}

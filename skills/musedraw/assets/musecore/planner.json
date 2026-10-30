@@ -1,0 +1,118 @@
+{
+  "family": "planner",
+  "title": "把优先级放进真正可用的时间",
+  "subtitle": "任务清单与日程使用同一份身份和数量 · 虚构安排",
+  "startMinute": 540,
+  "endMinute": 1080,
+  "days": [
+    {
+      "id": "0",
+      "label": "周一"
+    },
+    {
+      "id": "1",
+      "label": "周二"
+    },
+    {
+      "id": "2",
+      "label": "周三"
+    },
+    {
+      "id": "3",
+      "label": "周四"
+    },
+    {
+      "id": "4",
+      "label": "周五"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "A1",
+      "label": "提交阶段材料",
+      "important": true,
+      "urgent": true,
+      "estimateMinutes": 120
+    },
+    {
+      "id": "A2",
+      "label": "修复交付阻塞",
+      "important": true,
+      "urgent": true,
+      "estimateMinutes": 90
+    },
+    {
+      "id": "B1",
+      "label": "梳理研究结论",
+      "important": true,
+      "urgent": false,
+      "estimateMinutes": 180
+    },
+    {
+      "id": "B2",
+      "label": "准备下月计划",
+      "important": true,
+      "urgent": false,
+      "estimateMinutes": 120
+    },
+    {
+      "id": "C1",
+      "label": "处理日常报销",
+      "important": false,
+      "urgent": true,
+      "estimateMinutes": 60
+    },
+    {
+      "id": "D1",
+      "label": "整理共享目录",
+      "important": false,
+      "urgent": false,
+      "estimateMinutes": 60
+    }
+  ],
+  "sessions": [
+    {
+      "id": "0",
+      "task": "A1",
+      "day": "0",
+      "start": 540,
+      "end": 660
+    },
+    {
+      "id": "1",
+      "task": "A2",
+      "day": "0",
+      "start": 690,
+      "end": 780
+    },
+    {
+      "id": "2",
+      "task": "B1",
+      "day": "1",
+      "start": 540,
+      "end": 660
+    },
+    {
+      "id": "3",
+      "task": "B1",
+      "day": "2",
+      "start": 540,
+      "end": 600
+    },
+    {
+      "id": "4",
+      "task": "B2",
+      "day": "3",
+      "start": 840,
+      "end": 960
+    },
+    {
+      "id": "5",
+      "task": "C1",
+      "day": "1",
+      "start": 960,
+      "end": 1020
+    }
+  ],
+  "note": "短时间块只显示任务编号，完整名称保留在左侧；尚未安排的工作继续留在清单，不自动塞进空档。"
+}

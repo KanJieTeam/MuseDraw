@@ -1,0 +1,11 @@
+export function calculateExpression(expression,variables){
+ const map=new Map(variables.map(v=>[v.id,v])),used=new Set(),trace=[];let visited=0;
+ const fields=(o,allowed)=>{if(!o||typeof o!=='object'||Array.isArray(o)||Object.keys(o).some(k=>!allowed.includes(k)))throw Error('Invalid calculation node fields')};
+ function visit(e,depth){if(depth>8||++visited>48)throw Error('Expression exceeds bounded calculation scope');if(e&&Object.hasOwn(e,'var')){fields(e,['var']);const v=map.get(e.var);if(!v||typeof v.value!=='number'||!Number.isFinite(v.value))throw Error('Unknown or nonnumeric variable: '+e.var);used.add(e.var);return {value:v.value,symbol:v.label,literal:String(v.value)}}
+  if(e&&Object.hasOwn(e,'constant')){fields(e,['constant']);if(typeof e.constant!=='number'||!Number.isFinite(e.constant))throw Error('Constant must be finite number');return {value:e.constant,symbol:String(e.constant),literal:String(e.constant)}}
+  fields(e,['op','args']);if(!['add','sub','mul','div','ceil','floor','min','max'].includes(e.op)||!Array.isArray(e.args))throw Error('Unknown calculation operation');const unary=['ceil','floor'].includes(e.op);if(unary?e.args.length!==1:['sub','div'].includes(e.op)?e.args.length!==2:e.args.length<2||e.args.length>6)throw Error('Invalid operation arity');const children=e.args.map(a=>visit(a,depth+1)),v=children.map(a=>a.value);let value;
+  if(e.op==='add')value=v.reduce((a,b)=>a+b,0);if(e.op==='sub')value=v[0]-v[1];if(e.op==='mul')value=v.reduce((a,b)=>a*b,1);if(e.op==='div'){if(v[1]===0)throw Error('Division by zero');value=v[0]/v[1]}if(e.op==='ceil')value=Math.ceil(v[0]);if(e.op==='floor')value=Math.floor(v[0]);if(e.op==='min')value=Math.min(...v);if(e.op==='max')value=Math.max(...v);if(!Number.isFinite(value))throw Error('Calculation exceeds numeric range');
+  const print=key=>{const xs=children.map(c=>c[key]);if(e.op==='ceil')return '⌈'+xs[0]+'⌉';if(e.op==='floor')return '⌊'+xs[0]+'⌋';if(['min','max'].includes(e.op))return e.op+'('+xs.join(', ')+')';return '('+xs.join({add:' + ',sub:' − ',mul:' × ',div:' ÷ '}[e.op])+')'};trace.push({op:e.op,inputs:v,result:value});return {value,symbol:print('symbol'),literal:print('literal')};
+ }
+ const answer=visit(expression,0);return {...answer,used:[...used],trace};
+}

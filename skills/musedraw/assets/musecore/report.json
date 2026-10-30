@@ -1,0 +1,440 @@
+{
+  "family": "report",
+  "title": "试验资料与质量核对 · 构成示意",
+  "columns": 2,
+  "sections": [
+    {
+      "id": "structure",
+      "title": "01 资料与服务之间的支撑关系",
+      "content": {
+        "family": "layers",
+        "layers": [
+          {
+            "id": "service",
+            "label": "使用对象",
+            "groups": [
+              {
+                "id": "users",
+                "title": "试验人员、复核人员与资料管理人员",
+                "items": []
+              }
+            ]
+          },
+          {
+            "id": "application",
+            "label": "集成应用",
+            "groups": [
+              {
+                "id": "app",
+                "title": "试验资料服务",
+                "items": [
+                  "试样查询",
+                  "结果复核",
+                  "报告输出",
+                  "版本查询"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "methods",
+            "label": "方法支撑",
+            "groups": [
+              {
+                "id": "analysis",
+                "title": "统计分析",
+                "items": [
+                  "有效记录",
+                  "统计方法",
+                  "结果表达"
+                ]
+              },
+              {
+                "id": "quality",
+                "title": "质量核对",
+                "items": [
+                  "来源核对",
+                  "条件核对",
+                  "异常提示"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "data",
+            "label": "资料基础",
+            "groups": [
+              {
+                "id": "records",
+                "title": "试验记录与依据",
+                "items": [
+                  "委托与登记",
+                  "试验观测",
+                  "环境记录",
+                  "校准记录",
+                  "作业说明"
+                ]
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "from": "application",
+            "to": "service",
+            "label": "查询与可编辑结果"
+          },
+          {
+            "from": "analysis",
+            "to": "app",
+            "label": "统计结果"
+          },
+          {
+            "from": "quality",
+            "to": "app",
+            "label": "核对记录"
+          },
+          {
+            "from": "quality",
+            "to": "analysis",
+            "label": "核对结果"
+          },
+          {
+            "from": "records",
+            "to": "analysis",
+            "label": "试验记录"
+          },
+          {
+            "from": "records",
+            "to": "quality",
+            "label": "条件与依据"
+          }
+        ]
+      }
+    },
+    {
+      "id": "links",
+      "title": "02 记录如何关联与溯源",
+      "content": {
+        "family": "association",
+        "sources": {
+          "title": "原始记录",
+          "items": [
+            "委托单",
+            "试样登记",
+            "仪器读数",
+            "环境记录"
+          ]
+        },
+        "hub": {
+          "title": "试验资料索引",
+          "subtitle": "以试验项目为组织单元",
+          "upper": [
+            "原始文件",
+            "保留来源与版本"
+          ],
+          "lower": [
+            "结构化记录",
+            "保留关联字段"
+          ],
+          "relation": "对应保存"
+        },
+        "chain": {
+          "title": "记录关联路径",
+          "nodes": [
+            "试验项目",
+            "送样批次",
+            "试样",
+            "观测记录",
+            "分析结果"
+          ],
+          "keys": [
+            "项目号",
+            "批次号",
+            "试样号",
+            "记录号"
+          ]
+        },
+        "shared": {
+          "title": "独立维护的依据",
+          "items": [
+            [
+              "校准记录",
+              "设备及有效时间"
+            ],
+            [
+              "作业说明",
+              "名称及适用条件"
+            ]
+          ],
+          "relation": "按适用条件引用"
+        }
+      }
+    },
+    {
+      "id": "process",
+      "title": "03 条件不满足时返回核验",
+      "content": {
+        "family": "flow",
+        "inputs": [
+          "试验观测记录",
+          "试样与环境条件",
+          "适用的作业说明"
+        ],
+        "steps": [
+          {
+            "id": "verify",
+            "lines": [
+              "适用条件核验",
+              "核对来源、试样与环境"
+            ]
+          },
+          {
+            "id": "calculate",
+            "lines": [
+              "统计计算",
+              "使用已确认的有效记录"
+            ]
+          },
+          {
+            "id": "result",
+            "lines": [
+              "形成结果",
+              "结果与依据对应保留"
+            ]
+          }
+        ],
+        "decision": {
+          "after": "verify",
+          "label": "条件是否满足",
+          "continueLabel": "是",
+          "returnLabel": "否",
+          "branch": [
+            "标记待核实事项",
+            "保留受影响记录"
+          ],
+          "repair": [
+            "补充依据",
+            "专业复核"
+          ],
+          "recheckLabel": "重新核验"
+        },
+        "checks": [
+          {
+            "step": "verify",
+            "lines": [
+              "资料核对",
+              "来源与适用条件"
+            ]
+          },
+          {
+            "step": "calculate",
+            "lines": [
+              "计算核对",
+              "统计对象与单位"
+            ]
+          },
+          {
+            "step": "result",
+            "lines": [
+              "结果核对",
+              "数值与文字对应"
+            ]
+          }
+        ],
+        "footer": {
+          "title": "结果中同时保留",
+          "items": [
+            "资料版本",
+            "适用范围",
+            "有效记录数",
+            "核对意见"
+          ]
+        }
+      }
+    },
+    {
+      "id": "roles",
+      "title": "04 各阶段的人员、系统与成果",
+      "content": {
+        "family": "lanes",
+        "stages": [
+          {
+            "id": "select",
+            "label": "送样登记"
+          },
+          {
+            "id": "extract",
+            "label": "试验处理"
+          },
+          {
+            "id": "verify",
+            "label": "复核确认"
+          },
+          {
+            "id": "deliver",
+            "label": "结果归档"
+          }
+        ],
+        "roles": [
+          {
+            "id": "content",
+            "label": "专业人员"
+          },
+          {
+            "id": "code",
+            "label": "资料系统"
+          },
+          {
+            "id": "result",
+            "label": "保留成果"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "x00",
+            "role": "content",
+            "stage": "select",
+            "lines": [
+              "确认委托范围"
+            ]
+          },
+          {
+            "id": "x01",
+            "role": "content",
+            "stage": "extract",
+            "lines": [
+              "核对试验条件"
+            ]
+          },
+          {
+            "id": "x02",
+            "role": "content",
+            "stage": "verify",
+            "lines": [
+              "专业复核"
+            ]
+          },
+          {
+            "id": "x03",
+            "role": "content",
+            "stage": "deliver",
+            "lines": [
+              "确认归档版本"
+            ]
+          },
+          {
+            "id": "x10",
+            "role": "code",
+            "stage": "select",
+            "lines": [
+              "登记试样编号"
+            ]
+          },
+          {
+            "id": "x11",
+            "role": "code",
+            "stage": "extract",
+            "lines": [
+              "汇集观测记录"
+            ]
+          },
+          {
+            "id": "x12",
+            "role": "code",
+            "stage": "verify",
+            "lines": [
+              "展示核对意见"
+            ]
+          },
+          {
+            "id": "x13",
+            "role": "code",
+            "stage": "deliver",
+            "lines": [
+              "保存版本关联"
+            ]
+          },
+          {
+            "id": "x20",
+            "role": "result",
+            "stage": "select",
+            "lines": [
+              "登记信息"
+            ]
+          },
+          {
+            "id": "x21",
+            "role": "result",
+            "stage": "extract",
+            "lines": [
+              "原始观测"
+            ]
+          },
+          {
+            "id": "x22",
+            "role": "result",
+            "stage": "verify",
+            "lines": [
+              "复核记录"
+            ]
+          },
+          {
+            "id": "x23",
+            "role": "result",
+            "stage": "deliver",
+            "lines": [
+              "报告与输入记录"
+            ]
+          }
+        ],
+        "links": [
+          {
+            "from": "x00",
+            "to": "x10"
+          },
+          {
+            "from": "x10",
+            "to": "x20"
+          },
+          {
+            "from": "x01",
+            "to": "x11"
+          },
+          {
+            "from": "x11",
+            "to": "x21"
+          },
+          {
+            "from": "x02",
+            "to": "x12"
+          },
+          {
+            "from": "x12",
+            "to": "x22"
+          },
+          {
+            "from": "x03",
+            "to": "x13"
+          },
+          {
+            "from": "x13",
+            "to": "x23"
+          },
+          {
+            "from": "x10",
+            "to": "x11"
+          },
+          {
+            "from": "x11",
+            "to": "x12"
+          },
+          {
+            "from": "x12",
+            "to": "x13"
+          }
+        ]
+      }
+    }
+  ]
+}

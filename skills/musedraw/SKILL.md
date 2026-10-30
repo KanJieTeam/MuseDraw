@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-30.5
+  instructions-version: musecore-2026-10-30.10
 ---
 
 # MuseDraw
@@ -10,8 +10,10 @@ metadata:
 ## MuseCore · the shared creative workflow
 
 **Understand the brief → jointly decide the work → make and deliver it.**
-MuseCore is the design method used by this Skill, not a separate model or an
-autonomous aesthetic engine. Apply it across production media.
+MuseCore couples this shared design method with executable composition tools.
+The bundled runtime computes bounded layouts from content and explicit
+relations; it is not a separate model or a general aesthetic engine. Apply the
+shared method across production media.
 
 1. **Understand the brief.** Identify the audience, use, content facts, supplied
    assets/style and delivery requirements. Carry forward decisions the user has
@@ -75,6 +77,26 @@ Use the known installed Skill directly. Read only the reference for the chosen
 route, rather than scanning every style or example. When the user says that
 installed copy was updated, reread this entrypoint and the selected reference;
 older conversation descriptions may refer to a different workflow.
+
+For repeatable content-driven work, discover the bounded MuseCore families with
+`node scripts/musedraw.mjs core list --compact`, then read only the matching
+reference. Choose by reader task and data structure, rather than a palette.
+The host supplies facts, content and asset selection; the program owns the
+family's encodings, coordinated geometry and placement.
+
+| Reader task / content | Relevant tools |
+| --- | --- |
+| Technical-report relations, checking, task ownership and time slots | [Report constructions](references/musecore-runtime.md) |
+| Rhythm, specimens, shared routes, colour, activity calendars, assay plates, overprint sequences and image-led pages | [Colour and mixed-media constructions](references/musecore-visual-runtime.md) |
+| Proportional layers, small radial networks, dated histories, paired changes, additive bridges, nested funnels, survey responses and cohorts | [Spatial and quantitative constructions](references/musecore-spatial-data.md) |
+| Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |
+| Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |
+
+Each reference declares its scope and exit conditions. These are distinct
+constructions with their own objects, type and material, rather than one page
+with interchangeable colours. Their availability does not establish that a new
+brief has the same statistical or semantic meaning as a source example.
+
 To verify the installed revision, run `node scripts/skill-info.mjs` from that
 Skill directory. It reports its version and hashes; a running chat must reread
 the updated entrypoint and selected references to use them.
@@ -111,6 +133,15 @@ For everyday office processes, task ownership and project plans, read
 [office diagrams](references/office-diagrams.md). Choose the appropriate flow,
 responsibility matrix or time-based composition from the actual work; do not
 turn every office brief into the same card grid or infer missing assignments.
+
+For monochrome technical-report figures using layers, record association,
+content assembly with review, one conditional return, stage-by-role lanes or
+grouped time intervals, use the
+[executable MuseCore report compositions](references/musecore-runtime.md) when
+their scope matches. `node scripts/musedraw.mjs core list` discovers the content
+examples; `core render` computes PNG, SVG and an offline editable page. Preserve
+all required facts and relations; choose another route if they exceed the
+family instead of deleting them to fit.
 
 For a new office or research diagram, read [representation routing](references/representation-routing.md)
 before drawing. Declare the reader question and one primary representation in

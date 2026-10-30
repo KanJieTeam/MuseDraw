@@ -1,0 +1,148 @@
+{
+  "family": "cohort",
+  "title": "客户留存",
+  "subtitle": "不同注册队列，沿相同成熟期观察 · 虚构用户计数",
+  "periods": [
+    "M0",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6"
+  ],
+  "groups": [
+    {
+      "id": "before",
+      "label": "较早队列"
+    },
+    {
+      "id": "after",
+      "label": "较新队列"
+    }
+  ],
+  "focusPeriod": 3,
+  "cohorts": [
+    {
+      "id": "a",
+      "label": "2026-01",
+      "size": 100,
+      "counts": [
+        100,
+        72,
+        52,
+        42,
+        36,
+        30,
+        26
+      ],
+      "group": "before"
+    },
+    {
+      "id": "b",
+      "label": "2026-02",
+      "size": 120,
+      "counts": [
+        120,
+        87,
+        66,
+        54,
+        45,
+        38,
+        32
+      ],
+      "group": "before"
+    },
+    {
+      "id": "c",
+      "label": "2026-03",
+      "size": 140,
+      "counts": [
+        140,
+        100,
+        75,
+        60,
+        48,
+        41,
+        35
+      ],
+      "group": "before"
+    },
+    {
+      "id": "d",
+      "label": "2026-04",
+      "size": 160,
+      "counts": [
+        160,
+        128,
+        104,
+        88,
+        78,
+        71,
+        64
+      ],
+      "group": "after"
+    },
+    {
+      "id": "e",
+      "label": "2026-05",
+      "size": 180,
+      "counts": [
+        180,
+        147,
+        119,
+        101,
+        90,
+        82,
+        null
+      ],
+      "group": "after"
+    },
+    {
+      "id": "f",
+      "label": "2026-06",
+      "size": 200,
+      "counts": [
+        200,
+        168,
+        138,
+        118,
+        106,
+        null,
+        null
+      ],
+      "group": "after"
+    },
+    {
+      "id": "g",
+      "label": "2026-07",
+      "size": 210,
+      "counts": [
+        210,
+        178,
+        147,
+        126,
+        null,
+        null,
+        null
+      ],
+      "group": "after"
+    },
+    {
+      "id": "h",
+      "label": "2026-08",
+      "size": 230,
+      "counts": [
+        230,
+        193,
+        161,
+        null,
+        null,
+        null,
+        null
+      ],
+      "group": "after"
+    }
+  ],
+  "note": "“—”表示尚未观察，不是 0；曲线各期参与队列可能随成熟度变化。本图不证明版本变化造成留存提升。"
+}

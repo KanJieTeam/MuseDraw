@@ -1,0 +1,78 @@
+{
+  "family": "flow",
+  "inputs": [
+    "试验观测记录",
+    "试样与环境条件",
+    "适用的作业说明"
+  ],
+  "steps": [
+    {
+      "id": "verify",
+      "lines": [
+        "适用条件核验",
+        "核对来源、试样与环境"
+      ]
+    },
+    {
+      "id": "calculate",
+      "lines": [
+        "统计计算",
+        "使用已确认的有效记录"
+      ]
+    },
+    {
+      "id": "result",
+      "lines": [
+        "形成结果",
+        "结果与依据对应保留"
+      ]
+    }
+  ],
+  "decision": {
+    "after": "verify",
+    "label": "条件是否满足",
+    "continueLabel": "是",
+    "returnLabel": "否",
+    "branch": [
+      "标记待核实事项",
+      "保留受影响记录"
+    ],
+    "repair": [
+      "补充依据",
+      "专业复核"
+    ],
+    "recheckLabel": "重新核验"
+  },
+  "checks": [
+    {
+      "step": "verify",
+      "lines": [
+        "资料核对",
+        "来源与适用条件"
+      ]
+    },
+    {
+      "step": "calculate",
+      "lines": [
+        "计算核对",
+        "统计对象与单位"
+      ]
+    },
+    {
+      "step": "result",
+      "lines": [
+        "结果核对",
+        "数值与文字对应"
+      ]
+    }
+  ],
+  "footer": {
+    "title": "结果中同时保留",
+    "items": [
+      "资料版本",
+      "适用范围",
+      "有效记录数",
+      "核对意见"
+    ]
+  }
+}

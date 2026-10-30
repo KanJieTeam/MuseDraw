@@ -1,0 +1,130 @@
+{
+  "family": "formula",
+  "title": "把公式、输入与算例放在同一页",
+  "subtitle": "按给定规则计算，再观察条件变化后的结果 · 虚构容量算例",
+  "variables": [
+    {
+      "id": "staff",
+      "label": "人数",
+      "value": 180,
+      "unit": "人",
+      "display": "number"
+    },
+    {
+      "id": "presence",
+      "label": "出勤率",
+      "value": 0.65,
+      "unit": "比例",
+      "display": "percent"
+    },
+    {
+      "id": "turnover",
+      "label": "周转次数",
+      "value": 1.2,
+      "unit": "次",
+      "display": "number"
+    }
+  ],
+  "expression": {
+    "op": "ceil",
+    "args": [
+      {
+        "op": "div",
+        "args": [
+          {
+            "op": "mul",
+            "args": [
+              {
+                "var": "staff"
+              },
+              {
+                "var": "presence"
+              }
+            ]
+          },
+          {
+            "var": "turnover"
+          }
+        ]
+      }
+    ]
+  },
+  "outputLabel": "所需工位",
+  "outputUnit": "个",
+  "xLabel": "给定算例次序",
+  "scenarios": [
+    {
+      "id": "0",
+      "label": "算例1",
+      "at": 1,
+      "values": {
+        "staff": 100,
+        "presence": 0.65
+      }
+    },
+    {
+      "id": "1",
+      "label": "算例2",
+      "at": 2,
+      "values": {
+        "staff": 120,
+        "presence": 0.65
+      }
+    },
+    {
+      "id": "2",
+      "label": "算例3",
+      "at": 3,
+      "values": {
+        "staff": 150,
+        "presence": 0.65
+      }
+    },
+    {
+      "id": "3",
+      "label": "算例4",
+      "at": 4,
+      "values": {
+        "staff": 180,
+        "presence": 0.65
+      }
+    },
+    {
+      "id": "4",
+      "label": "算例5",
+      "at": 5,
+      "values": {
+        "staff": 210,
+        "presence": 0.72
+      }
+    },
+    {
+      "id": "5",
+      "label": "算例6",
+      "at": 6,
+      "values": {
+        "staff": 240,
+        "presence": 0.72
+      }
+    },
+    {
+      "id": "6",
+      "label": "算例7",
+      "at": 7,
+      "values": {
+        "staff": 270,
+        "presence": 0.72
+      }
+    },
+    {
+      "id": "7",
+      "label": "算例8",
+      "at": 8,
+      "values": {
+        "staff": 300,
+        "presence": 0.72
+      }
+    }
+  ],
+  "note": "算式表达的是给定规则，不是实测结论或配置建议；连线只连接给定算例，不推断连续过程。"
+}

@@ -1,0 +1,18 @@
+{
+  "family": "specimen",
+  "title": "落叶图鉴",
+  "subtitle": "秋天留给大地的九种笔迹",
+  "species": [
+    "ginkgo",
+    "acer",
+    "liquidambar",
+    "liriodendron",
+    "platanus",
+    "triadica",
+    "diospyros",
+    "prunus",
+    "salix"
+  ],
+  "columns": 3,
+  "footer": "叶形、叶脉与季节 · 自然观察笔记"
+}
