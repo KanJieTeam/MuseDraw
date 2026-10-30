@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.24
+  instructions-version: musecore-2026-10-31.25
 ---
 
 # MuseDraw
@@ -128,6 +128,9 @@ family's encodings, coordinated geometry and placement.
 | Typed static context and container relationships | [Static systems](references/musecore-typed-systems.md) |
 | Explicit quadrat records and supplied association results | [Field and genomics](references/musecore-field-genomics.md) |
 | Catalogued character structure and affirmative tense examples | [Language teaching](references/musecore-language-structure.md) |
+| Declared paragraph outlines and supplied textual witnesses | [Outline and collation](references/musecore-argument-collation.md) |
+| Explicit mesh paths and finite supplied cache histories | [Request paths](references/musecore-request-paths.md) |
+| Supplied celestial coordinates and separate planetary scales | [Celestial geometry](references/musecore-star-planet-scales.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

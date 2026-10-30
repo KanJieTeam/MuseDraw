@@ -1517,6 +1517,78 @@
           "sourceSha256": "bab35550c54fe31cde95eb5bbd5dc66eab21207f66aea8c97424fab74bae43bb"
         }
       ]
+    },
+    {
+      "id": "argument-outline",
+      "family": "argument-outline",
+      "file": "argument-outline.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t18-yilunwen-jiegou",
+          "sourceSha256": "37a05c1ef28c4f69a22df37d7dc732940caa09fa4d10e0eefbca418f47b0133b"
+        }
+      ]
+    },
+    {
+      "id": "text-collation",
+      "family": "text-collation",
+      "file": "text-collation.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "s04-jiaokan-sifa",
+          "sourceSha256": "93991d6b8b4a014e2a666453d838428d7fe6500b3bc390862b6c37b7de14192e"
+        }
+      ]
+    },
+    {
+      "id": "mesh-request",
+      "family": "mesh-request",
+      "file": "mesh-request.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "116-service-mesh-request",
+          "sourceSha256": "e63f386e2cf6665fdb33bb39c28a9ec764ce7e96a5f476e092708554b1adfa54"
+        }
+      ]
+    },
+    {
+      "id": "cdn-request",
+      "family": "cdn-request",
+      "file": "cdn-request.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "e04-cdn-qingqiu",
+          "sourceSha256": "0054b9a9027b85bf8e360b6fc6f0a1dccd0502825c48daea291a896254d9fd4e"
+        }
+      ]
+    },
+    {
+      "id": "north-star-guide",
+      "family": "north-star-guide",
+      "file": "north-star-guide.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t10-beidou-beijixing",
+          "sourceSha256": "8a72597b0fdd1f5b780dee8422382f510056088e9583acc15c97f8ffa8e063fc"
+        }
+      ]
+    },
+    {
+      "id": "planet-scales",
+      "family": "planet-scales",
+      "file": "planet-scales.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "138-solar-system",
+          "sourceSha256": "222aec0ada520575aa68b4778aeae35624767227918bb88a277853c2b3f810dc"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1860,6 +1932,27 @@
       "ids": [
         "character-structure",
         "tense-timeline"
+      ]
+    },
+    {
+      "reference": "references/musecore-argument-collation.md",
+      "ids": [
+        "argument-outline",
+        "text-collation"
+      ]
+    },
+    {
+      "reference": "references/musecore-request-paths.md",
+      "ids": [
+        "mesh-request",
+        "cdn-request"
+      ]
+    },
+    {
+      "reference": "references/musecore-star-planet-scales.md",
+      "ids": [
+        "north-star-guide",
+        "planet-scales"
       ]
     }
   ]

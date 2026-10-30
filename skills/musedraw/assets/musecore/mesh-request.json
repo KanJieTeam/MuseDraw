@@ -1,0 +1,68 @@
+{
+  "family": "mesh-request",
+  "title": "服务网格中的一次请求",
+  "subtitle": "显式边车路径示例 · 订单服务调用库存服务；青绿为请求，淡紫为控制关系",
+  "pods": [
+    {
+      "id": "order",
+      "label": "Pod：订单服务",
+      "application": "订单服务 · 请求 inventory:8080",
+      "proxy": "Envoy 边车 · 出站 15001",
+      "interception": "示例声明：出站流量由 iptables 重定向"
+    },
+    {
+      "id": "inventory",
+      "label": "Pod：库存服务",
+      "application": "库存服务 · 处理库存查询",
+      "proxy": "Envoy 边车 · 入站 15006",
+      "interception": "示例声明：入站流量由 iptables 重定向"
+    }
+  ],
+  "controller": {
+    "label": "istiod",
+    "detail": "控制面：配置与 CA 服务。证书经各 Pod 的本地 agent 交付给 Envoy（SDS）。"
+  },
+  "controls": [
+    {
+      "pod": "order",
+      "kind": "config",
+      "label": "路由配置",
+      "via": "istiod → Envoy / xDS"
+    },
+    {
+      "pod": "inventory",
+      "kind": "config",
+      "label": "路由配置",
+      "via": "istiod → Envoy / xDS"
+    },
+    {
+      "pod": "order",
+      "kind": "certificate",
+      "label": "工作负载证书",
+      "via": "istiod CA → 本地 agent → Envoy / SDS"
+    },
+    {
+      "pod": "inventory",
+      "kind": "certificate",
+      "label": "工作负载证书",
+      "via": "istiod CA → 本地 agent → Envoy / SDS"
+    }
+  ],
+  "messages": [
+    {
+      "id": "query",
+      "from": "order",
+      "to": "inventory",
+      "label": "库存查询",
+      "transport": "mtls",
+      "authorization": "allow",
+      "reached": "target-application",
+      "stagesMs": [
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "note": "所有路径与到达状态均为明确给定的示例，不表示真实部署或安全验证。未给时长显示未知；未提供响应时不补画返回。"
+}

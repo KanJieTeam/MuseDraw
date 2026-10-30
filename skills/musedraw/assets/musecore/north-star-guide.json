@@ -1,0 +1,166 @@
+{
+  "family": "north-star-guide",
+  "title": "用北斗七星，找到北极星",
+  "subtitle": "沿天璇至天枢的方向，跨过约五份角距；这是一条寻找附近亮星的线索。",
+  "coordinateFrame": "J2000-equatorial-static",
+  "sourceLabel": "给定 J2000 近似赤经 / 赤纬 · 北天极方位等距投影 · 图面旋转不代表观测时刻",
+  "rotationDeg": 40,
+  "stars": [
+    {
+      "id": "dubhe",
+      "label": "天枢",
+      "raDeg": 165.932,
+      "decDeg": 61.751,
+      "magnitude": 1.79
+    },
+    {
+      "id": "merak",
+      "label": "天璇",
+      "raDeg": 165.46,
+      "decDeg": 56.382,
+      "magnitude": 2.37
+    },
+    {
+      "id": "phecda",
+      "label": "天玑",
+      "raDeg": 178.458,
+      "decDeg": 53.695,
+      "magnitude": 2.44
+    },
+    {
+      "id": "megrez",
+      "label": "天权",
+      "raDeg": 183.857,
+      "decDeg": 57.033,
+      "magnitude": 3.31
+    },
+    {
+      "id": "alioth",
+      "label": "玉衡",
+      "raDeg": 193.507,
+      "decDeg": 55.96,
+      "magnitude": 1.77
+    },
+    {
+      "id": "mizar",
+      "label": "开阳",
+      "raDeg": 200.981,
+      "decDeg": 54.925,
+      "magnitude": 2.27
+    },
+    {
+      "id": "alkaid",
+      "label": "摇光",
+      "raDeg": 206.885,
+      "decDeg": 49.313,
+      "magnitude": 1.86
+    },
+    {
+      "id": "polaris",
+      "label": "北极星",
+      "raDeg": 37.955,
+      "decDeg": 89.264,
+      "magnitude": 1.98
+    },
+    {
+      "id": "schedar",
+      "label": "王良四",
+      "raDeg": 10.127,
+      "decDeg": 56.537,
+      "magnitude": 2.24
+    },
+    {
+      "id": "caph",
+      "label": "王良一",
+      "raDeg": 2.295,
+      "decDeg": 59.15,
+      "magnitude": 2.28
+    },
+    {
+      "id": "gamma-cas",
+      "label": "策",
+      "raDeg": 14.177,
+      "decDeg": 60.717,
+      "magnitude": 2.47
+    },
+    {
+      "id": "ruchbah",
+      "label": "阁道三",
+      "raDeg": 21.454,
+      "decDeg": 60.235,
+      "magnitude": 2.68
+    },
+    {
+      "id": "segin",
+      "label": "阁道二",
+      "raDeg": 28.599,
+      "decDeg": 63.67,
+      "magnitude": 3.35
+    }
+  ],
+  "groups": [
+    {
+      "id": "dipper",
+      "label": "北斗七星",
+      "edges": [
+        [
+          "dubhe",
+          "merak"
+        ],
+        [
+          "merak",
+          "phecda"
+        ],
+        [
+          "phecda",
+          "megrez"
+        ],
+        [
+          "megrez",
+          "dubhe"
+        ],
+        [
+          "megrez",
+          "alioth"
+        ],
+        [
+          "alioth",
+          "mizar"
+        ],
+        [
+          "mizar",
+          "alkaid"
+        ]
+      ]
+    },
+    {
+      "id": "cassiopeia",
+      "label": "仙后座 W 形",
+      "edges": [
+        [
+          "caph",
+          "schedar"
+        ],
+        [
+          "schedar",
+          "gamma-cas"
+        ],
+        [
+          "gamma-cas",
+          "ruchbah"
+        ],
+        [
+          "ruchbah",
+          "segin"
+        ]
+      ]
+    }
+  ],
+  "pointer": {
+    "fromId": "merak",
+    "throughId": "dubhe",
+    "targetId": "polaris",
+    "extensionMultiples": 5
+  },
+  "note": "角距按给定赤经、赤纬在球面计算，金线为通过两颗指极星的大圆，目标星并不严格落在线上。北天极与北极星也不重合。此图从天球内侧看向北天，不计算当地日期、时刻、方位、高度或能见度；背景微点与山景仅装饰，山线不是该星图的地平线。"
+}

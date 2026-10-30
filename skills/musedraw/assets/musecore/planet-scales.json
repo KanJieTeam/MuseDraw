@@ -1,0 +1,81 @@
+{
+  "family": "planet-scales",
+  "title": "太阳系，分开看大小与距离",
+  "subtitle": "大小共用一把尺，距离另用一把尺；两条比例互不混用。",
+  "radiusKind": "volume-equivalent-mean-km",
+  "distanceKind": "given-semimajor-axis-au",
+  "sourceLabel": "平均半径：JPL 行星物理参数；半长轴：JPL J2000 拟合轨道元素（地球项为地月质心近似）",
+  "referenceId": "earth",
+  "focusIds": [
+    "earth",
+    "neptune",
+    "jupiter"
+  ],
+  "planets": [
+    {
+      "id": "mercury",
+      "label": "水星",
+      "meanRadiusKm": 2439.4,
+      "semimajorAU": 0.38709927,
+      "color": "#A6A8AB",
+      "ringSymbol": false
+    },
+    {
+      "id": "venus",
+      "label": "金星",
+      "meanRadiusKm": 6051.8,
+      "semimajorAU": 0.72333566,
+      "color": "#E2BE76",
+      "ringSymbol": false
+    },
+    {
+      "id": "earth",
+      "label": "地球",
+      "meanRadiusKm": 6371.0084,
+      "semimajorAU": 1.00000261,
+      "color": "#4A8BDD",
+      "ringSymbol": false
+    },
+    {
+      "id": "mars",
+      "label": "火星",
+      "meanRadiusKm": 3389.5,
+      "semimajorAU": 1.52371034,
+      "color": "#C86037",
+      "ringSymbol": false
+    },
+    {
+      "id": "jupiter",
+      "label": "木星",
+      "meanRadiusKm": 69911,
+      "semimajorAU": 5.202887,
+      "color": "#D6B58F",
+      "ringSymbol": false
+    },
+    {
+      "id": "saturn",
+      "label": "土星",
+      "meanRadiusKm": 58232,
+      "semimajorAU": 9.53667594,
+      "color": "#E0D29E",
+      "ringSymbol": true
+    },
+    {
+      "id": "uranus",
+      "label": "天王星",
+      "meanRadiusKm": 25362,
+      "semimajorAU": 19.18916464,
+      "color": "#9CD5D9",
+      "ringSymbol": false
+    },
+    {
+      "id": "neptune",
+      "label": "海王星",
+      "meanRadiusKm": 24622,
+      "semimajorAU": 30.06992276,
+      "color": "#526FD2",
+      "ringSymbol": false
+    }
+  ],
+  "note": "上排圆直径由体积等效平均半径统一缩放；横向间隙仅用于排列，不是行星间距。下排位置按给定半长轴线性缩放，点的大小只为辨认。太阳图标及土星环为不按比例的符号，环不计入行星直径。a/c 为半长轴对应的理想光行时间，不是当前太阳距离或实时通信延迟；本图不表示行星当前方位或公转轨迹。"
+}

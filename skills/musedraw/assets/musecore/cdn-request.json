@@ -1,0 +1,145 @@
+{
+  "family": "cdn-request",
+  "title": "一次 CDN 请求 · 冷启动到边缘命中",
+  "subtitle": "给定一条缓存链与二十次请求 · 金色为用户到边缘，青色为继续回源；星距不表示地理距离",
+  "user": {
+    "label": "用户",
+    "detail": "示例位置：上海浦东"
+  },
+  "scheduler": {
+    "label": "调度",
+    "detail": "输入已指定上海边缘，不计算最近节点或负载"
+  },
+  "origin": {
+    "label": "源站",
+    "detail": "示例位置：北京机房",
+    "returnsFreshObjects": true
+  },
+  "levels": [
+    {
+      "id": "edge",
+      "label": "边缘节点",
+      "location": "示例：上海",
+      "initial": []
+    },
+    {
+      "id": "regional",
+      "label": "区域中间层",
+      "location": "示例：华东",
+      "initial": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "asset",
+      "label": "静态资源 /assets/app.js",
+      "storage": "public",
+      "maxAgeSeconds": 3600,
+      "sMaxAgeSeconds": null
+    }
+  ],
+  "requests": [
+    {
+      "id": "r1",
+      "atSeconds": 0,
+      "object": "asset"
+    },
+    {
+      "id": "r2",
+      "atSeconds": 1,
+      "object": "asset"
+    },
+    {
+      "id": "r3",
+      "atSeconds": 2,
+      "object": "asset"
+    },
+    {
+      "id": "r4",
+      "atSeconds": 3,
+      "object": "asset"
+    },
+    {
+      "id": "r5",
+      "atSeconds": 4,
+      "object": "asset"
+    },
+    {
+      "id": "r6",
+      "atSeconds": 5,
+      "object": "asset"
+    },
+    {
+      "id": "r7",
+      "atSeconds": 6,
+      "object": "asset"
+    },
+    {
+      "id": "r8",
+      "atSeconds": 7,
+      "object": "asset"
+    },
+    {
+      "id": "r9",
+      "atSeconds": 8,
+      "object": "asset"
+    },
+    {
+      "id": "r10",
+      "atSeconds": 9,
+      "object": "asset"
+    },
+    {
+      "id": "r11",
+      "atSeconds": 10,
+      "object": "asset"
+    },
+    {
+      "id": "r12",
+      "atSeconds": 11,
+      "object": "asset"
+    },
+    {
+      "id": "r13",
+      "atSeconds": 12,
+      "object": "asset"
+    },
+    {
+      "id": "r14",
+      "atSeconds": 13,
+      "object": "asset"
+    },
+    {
+      "id": "r15",
+      "atSeconds": 14,
+      "object": "asset"
+    },
+    {
+      "id": "r16",
+      "atSeconds": 15,
+      "object": "asset"
+    },
+    {
+      "id": "r17",
+      "atSeconds": 16,
+      "object": "asset"
+    },
+    {
+      "id": "r18",
+      "atSeconds": 17,
+      "object": "asset"
+    },
+    {
+      "id": "r19",
+      "atSeconds": 18,
+      "object": "asset"
+    },
+    {
+      "id": "r20",
+      "atSeconds": 19,
+      "object": "asset"
+    }
+  ],
+  "focusRequest": "r1",
+  "note": "虚构有限序列；缓存按输入顺序瞬时查找与回填。此例 19/20 为边缘命中，不能外推生产命中率；不推算网络延迟。"
+}
