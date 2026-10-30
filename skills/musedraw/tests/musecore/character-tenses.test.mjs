@@ -6,6 +6,26 @@ import {tenseStatement,tenseTimelineModel} from '../../scripts/musecore/tense-mo
 import {editorHtml} from '../../scripts/musecore.mjs';
 import {loadPlaywrightInfo} from '../../scripts/engine/export.mjs';
 import {resolveBrowser} from '../../scripts/engine/environment.mjs';
+
+test('whole-character guide knockout follows actual SVG ink bounds rather than canvas advance',async()=>{
+ const {pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
+ try{
+  const page=await browser.newPage({viewport:{width:2600,height:2200}});
+  await page.route(/^https?:\/\//,r=>r.abort());
+  await page.setContent(await editorHtml(chars));await page.waitForFunction(()=>MUSECORE_READY===true);
+  const result=await page.evaluate(input=>{
+   const old=SVGGraphicsElement.prototype.getBBox;
+   SVGGraphicsElement.prototype.getBBox=function(...args){const b=old.apply(this,args);return this.tagName==='text'&&this.textContent==='思'?{x:b.x-11,y:b.y-17,width:b.width+22,height:b.height+34}:b};
+   try{
+    const svg=MuseCore.render(input);document.body.replaceChildren(svg);
+    const audit=MuseCore.audit(svg),g=svg.querySelector('[data-character="思"]'),text=g.querySelector('text'),box=g.querySelector('[data-role="label-backing"]'),ink=text.getBBox(),back=box.getBBox();
+    return {findings:audit.findings,ink:{x:ink.x,y:ink.y,w:ink.width,h:ink.height},back:{x:back.x,y:back.y,w:back.width,h:back.height}};
+   }finally{SVGGraphicsElement.prototype.getBBox=old}
+  },chars);
+  assert.deepEqual(result.findings,[]);
+  const {ink,back}=result;assert.ok(back.x<=ink.x-5&&back.y<=ink.y-5);assert.ok(back.x+back.w>=ink.x+ink.w+5&&back.y+back.h>=ink.y+ink.h+5);
+ }finally{await browser.close()}
+});
 const read=async f=>JSON.parse(await fs.readFile(new URL('../../assets/musecore/'+f+'.json',import.meta.url),'utf8')),chars=await read('character-structure'),tenses=await read('tense-timeline'),clone=structuredClone;
 const state=()=>({...clone(tenses.statements[1]),id:'state',subject:'she',verb:'live-here',context:'continuing-state',example:'She has lived here for three years.'}),plan=()=>({...clone(tenses.statements[4]),subject:'they',verb:'work-here',context:'prior-plan',example:'They are going to work here tomorrow.'});
 test('catalogue identity, ordered teaching parts and geometric guide zones remain explicit',()=>{const b=clone(chars),r=characterStructureModel(b);assert.deepEqual(b,chars);assert.equal(r.characters.length,8);assert.equal(r.structureCount,8);assert.equal(r.componentOccurrences,18);assert.deepEqual(r.characters.find(o=>o.character==='明').parts.map(p=>[p.position,p.text]),[['左','日'],['右','月']]);assert.deepEqual(r.characters.find(o=>o.character==='草').components,['艹','日','十']);assert.deepEqual(characterZones('tripod'),[{x:.25,y:0,width:.5,height:.5,part:0},{x:0,y:.5,width:.5,height:.5,part:1},{x:.5,y:.5,width:.5,height:.5,part:2}]);const enclosed=characterZones('enclosure');assert.deepEqual(enclosed.map(z=>z.part),[0,1]);assert.equal(enclosed[1].x,.22);assert.equal(enclosed[1].width,.56);assert.equal(characterZones('top-enclosure').filter(z=>z.part===0).length,3);assert.equal(Object.keys(CHARACTER_CATALOGUE).length,13);});
