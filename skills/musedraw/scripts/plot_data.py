@@ -158,6 +158,18 @@ def validate(spec):
     return copy.deepcopy(spec)
 
 
+def choose_plot_font(installed, requested=None):
+    if requested:
+        require(requested in installed, 'requested font is not installed: ' + requested)
+        return requested
+    # Linux Noto TTC collections can be exposed by FreeType under the first
+    # (JP) face name even when fontconfig also exposes their SC face. That face
+    # still covers the Chinese labels; never prefer Latin-only DejaVu over it.
+    preferred = ['Noto Sans CJK SC', 'Microsoft YaHei', 'SimHei',
+                 'Noto Sans SC', 'WenQuanYi Zen Hei', 'Noto Sans CJK JP']
+    return next((name for name in preferred if name in installed), 'DejaVu Sans')
+
+
 def build_figure(spec, width=1800, height=1100, font=None):
     spec = validate(spec)
     require(isinstance(width, int) and 1200 <= width <= 4000 and isinstance(height, int) and 700 <= height <= 3000, 'figure size: width 1200..4000, height 700..3000 pixels')
@@ -171,10 +183,7 @@ def build_figure(spec, width=1800, height=1100, font=None):
     except ImportError as error:
         raise RuntimeError('This data-plot route needs Matplotlib in the selected Python environment. Use an existing plotting environment or report this missing capability; the scene renderer is a separate route.') from error
     installed = {face.name for face in font_manager.fontManager.ttflist}
-    if font:
-        require(font in installed, 'requested font is not installed: ' + font)
-    else:
-        font = next((name for name in ['Noto Sans CJK SC', 'Microsoft YaHei', 'SimHei'] if name in installed), 'DejaVu Sans')
+    font = choose_plot_font(installed, font)
     families = list(dict.fromkeys([font, 'DejaVu Sans']))
     settings = {'font.family': families, 'font.size': 13, 'axes.labelsize': 15,
                 'axes.titlesize': 20, 'axes.titleweight': 'bold', 'axes.spines.top': False,

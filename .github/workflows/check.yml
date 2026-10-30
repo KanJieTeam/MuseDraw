@@ -34,6 +34,11 @@ jobs:
       - name: Install pinned Python rendering and image-test dependencies
         run: |
           python -m pip install --only-binary=:all: -r requirements-ci.txt
+      - name: Install CJK fonts for Linux report fixtures
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y fonts-noto-cjk
       - name: Offline artifacts, Python regressions and Node syntax
         run: |
           python scripts/check.py
@@ -58,6 +63,10 @@ jobs:
       - name: Install pinned Python rendering and image-test dependencies
         run: |
           python -m pip install --only-binary=:all: -r requirements-ci.txt
+      - name: Install CJK fonts for Linux report fixtures
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y fonts-noto-cjk
       - name: Install the explicitly pinned browser-test dependency
         run: npm install --no-save --prefix output/browser-deps playwright@1.63.0
       - name: Install Chromium for browser fixtures

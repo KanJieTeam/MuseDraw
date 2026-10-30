@@ -20,6 +20,21 @@ HAS_MATPLOTLIB = importlib.util.find_spec('matplotlib') is not None
 
 
 class PlotContractTests(unittest.TestCase):
+    def test_linux_noto_collection_is_not_ignored_for_latin_only_fallback(self):
+        self.assertEqual(plot.choose_plot_font({'Noto Sans CJK JP', 'DejaVu Sans'}),
+                         'Noto Sans CJK JP')
+        self.assertEqual(plot.choose_plot_font({'Noto Sans CJK SC', 'Noto Sans CJK JP'}),
+                         'Noto Sans CJK SC')
+        self.assertEqual(plot.choose_plot_font({'WenQuanYi Zen Hei', 'DejaVu Sans'}),
+                         'WenQuanYi Zen Hei')
+        self.assertEqual(plot.choose_plot_font({'Microsoft YaHei', 'DejaVu Sans'}),
+                         'Microsoft YaHei')
+        self.assertEqual(plot.choose_plot_font({'DejaVu Sans'}), 'DejaVu Sans')
+        self.assertEqual(plot.choose_plot_font({'DejaVu Sans', 'Noto Sans CJK JP'}, 'DejaVu Sans'),
+                         'DejaVu Sans')
+        with self.assertRaisesRegex(ValueError, 'not installed'):
+            plot.choose_plot_font({'DejaVu Sans'}, 'Missing font')
+
     def test_raw_observations_do_not_accept_missing_values_or_hide_extremes(self):
         self.assertEqual(plot.validate(OBSERVATIONS), OBSERVATIONS)
         for mutate in [lambda b: b['series'][0]['values'].append(None),
