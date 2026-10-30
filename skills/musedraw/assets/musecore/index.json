@@ -1373,6 +1373,78 @@
           "sourceSha256": "1316f71d800b455e27c9b6655246800102214b4e42d191251bc4d30d02bacad3"
         }
       ]
+    },
+    {
+      "id": "hnsw-search",
+      "family": "hnsw-search",
+      "file": "hnsw-search.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "e06-hnsw-jiansuo",
+          "sourceSha256": "ef618ac60eb958d09692b816aaa1dfdc2e161d41ddd8fd2a4aa97d0b37885f35"
+        }
+      ]
+    },
+    {
+      "id": "lb-tail-latency",
+      "family": "lb-tail-latency",
+      "file": "lb-tail-latency.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "108-lb-tail-latency",
+          "sourceSha256": "47be14d6ec110927f759c461f78fa6db526f02be516523b5b73a5b60c37acb66"
+        }
+      ]
+    },
+    {
+      "id": "food-web",
+      "family": "food-web",
+      "file": "food-web.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "132-food-web",
+          "sourceSha256": "8858c3af1fd3d842dd1fd55547f9edc0bc4af192778979334512996935f09725"
+        }
+      ]
+    },
+    {
+      "id": "insect-cycle",
+      "family": "insect-cycle",
+      "file": "insect-cycle.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "139-insect-life-cycle",
+          "sourceSha256": "bc13d4956cdf33bd2fb12c163373858b3cf412033cf8f9c8d3d6f46875e0ac0b"
+        }
+      ]
+    },
+    {
+      "id": "wind-tunnel",
+      "family": "wind-tunnel",
+      "file": "wind-tunnel.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "s06-fengdong",
+          "sourceSha256": "f2eaaf5b92b59c028243cef906ad4503bf72bbb12718709e18a8107054b5f627"
+        }
+      ]
+    },
+    {
+      "id": "light-sheet",
+      "family": "light-sheet",
+      "file": "light-sheet.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "179-light-sheet",
+          "sourceSha256": "4dc06d5fa09fd07545005532c751f0ae4b3fc107b53ec93c475f8fb0dd2cbf85"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -1675,6 +1747,27 @@
       "ids": [
         "shadow-height",
         "sun-shadow"
+      ]
+    },
+    {
+      "reference": "references/musecore-search-latency.md",
+      "ids": [
+        "hnsw-search",
+        "lb-tail-latency"
+      ]
+    },
+    {
+      "reference": "references/musecore-ecology-cycles.md",
+      "ids": [
+        "food-web",
+        "insect-cycle"
+      ]
+    },
+    {
+      "reference": "references/musecore-instrument-geometry.md",
+      "ids": [
+        "wind-tunnel",
+        "light-sheet"
       ]
     }
   ]

@@ -1,0 +1,6 @@
+{
+ "family":"wind-tunnel","title":"低速风洞 · 五段侧视几何","subtitle":"给定矩形截面与器件 · 开式串联结构，气流方向从左至右","unit":"m",
+ "sections":[{"kind":"settling","label":"稳定段","lengthM":1.5,"heightM":1.8,"depthM":1.8},{"kind":"contraction","label":"收缩段","lengthM":1.4},{"kind":"test","label":"实验段","lengthM":1.5,"heightM":0.6,"depthM":0.6},{"kind":"diffuser","label":"扩散段","lengthM":4.4,"outletHeightM":0.85,"outletDepthM":0.85},{"kind":"fan","label":"风扇段","lengthM":0.7}],
+ "instruments":{"honeycomb":true,"screenFractions":[0.45,0.65,0.85],"pitot":true,"balance":true},"testModel":{"kind":"naca0012","chordM":0.45,"centerFraction":0.5,"angleDegrees":0},"drawingId":"WT / 01","purpose":"教学几何示意",
+ "note":"所有尺寸均为明确给定的示例。侧视中的长度与高度共用比例尺，深度只在段表中列出；面积比使用高度×深度，不假定正方形。收缩段平滑曲线只定义图形外形；箭头只标气流方向，不表示流线或速度。蜂窝器、网、皮托管、天平与风扇均为器件符号，不由这些几何推断均匀性、压强恢复、气动力或设备安全。"
+}

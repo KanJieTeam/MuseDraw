@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.22
+  instructions-version: musecore-2026-10-31.23
 ---
 
 # MuseDraw
@@ -122,6 +122,9 @@ family's encodings, coordinated geometry and placement.
 | Single-candidate vote traces and exact decimal-ID sharding | [Election and sharding](references/musecore-election-sharding.md) |
 | Declared Beta-Bernoulli updates and supplied extant-tip dated trees | [Bayesian updates and time trees](references/musecore-bayes-phylogeny.md) |
 | Conditional similar-triangle heights and explicit solar-angle shadow vectors | [Shadow geometry](references/musecore-shadow-geometry.md) |
+| Search through a supplied layered graph and replay finite FCFS requests | [Search and tail latency](references/musecore-search-latency.md) |
+| Explicit feeding webs and verified primary insect-stage catalogues | [Ecology and life cycles](references/musecore-ecology-cycles.md) |
+| Given rectangular wind-tunnel sections and ideal Gaussian sheet geometry | [Instrument geometry](references/musecore-instrument-geometry.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

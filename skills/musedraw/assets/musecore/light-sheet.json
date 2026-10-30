@@ -1,0 +1,6 @@
+{
+ "family":"light-sheet","title":"光片荧光显微镜","subtitle":"给定高斯光束的截面几何 · 正交激发与探测，不等同于实际光学设计","model":"ideal-paraxial-gaussian-cross-section","refractiveIndex":1.33,"waistRadiusUm":2,
+ "channels":[{"id":"cyan","label":"通道 A","vacuumWavelengthNm":488},{"id":"amber","label":"通道 B","vacuumWavelengthNm":561}],"displayChannelId":"cyan","sample":{"widthUm":60,"thicknessUm":100},"thicknessRangeUm":[2,10],
+ "labels":{"illumination":"照明物镜","detection":"检测物镜","camera":"相机","sample":"给定样品边界"},
+ "note":"均匀介质中的理想近轴高斯窄轴截面：w 是局部强度降至中心 1/e² 处的半径，λ₀ 为真空波长；xR = πnw₀²/λ₀。2xR 只是此图采用的共焦长度约定，在 ±xR 处半径已增至 √2w₀，不能称为处处同厚的可用视野。物镜与相机为符号，样品框与光束截面共用微米比例尺；未给出的荧光强度、照明体积比例、分辨率、光毒性与真实视野不作预测。"
+}
