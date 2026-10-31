@@ -1,3 +1,6 @@
+import {cap2DataPyramidFocusFigure} from './cap2-data-pyramid-focus-figures.mjs';
+import {cap2DataPeakPanelFigure} from './cap2-data-peak-panel-figures.mjs';
+import {cap2DataGroupedUnitChart} from './cap2-data-counting-figures.mjs';
 import {el} from './svg.mjs';
 import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualFinish,stroke,number,backedVisualText,visualFontBounds,measureVisual} from './visual-tools.mjs';
 import {binnedHistogramModel} from './histogram-binned-models.mjs';
@@ -27,6 +30,7 @@ export function distributionFamilies(h){
   text(s,1010,bottom+65,`共同纵轴 ${formatNumber(dom.domain[0])}–${formatNumber(dom.domain[1])} ${b.unit}`,{size:19,anchor:'end',fill:muted});foot(s,b,H-58,W);return visualFinish(s,{family:'slope',width:W,height:H,items:marks,domain:dom.domain,sourceCase:'d01-podu-tu'});
  }
  function smallMultiples(b){
+  if(Object.hasOwn(b,'peakSummary'))return cap2DataPeakPanelFigure(b);
   base(b,['categories','series','unit']);str(b.unit,'unit');list(b.categories,3,16,'categories');b.categories.forEach(x=>str(x,'category'));need(new Set(b.categories).size===b.categories.length,'duplicate category');list(b.series,2,9,'series');unique(b.series,'series');
   for(const g of b.series){fields(g,['id','label','values'],'series');str(g.label,'series.label');list(g.values,b.categories.length,b.categories.length,'values');g.values.forEach(v=>{number(v,'value');need(v>=0,'small multiples use nonnegative values')})}
   const cols=b.series.length===2?2:3,W=1800,panelW=(W-160)/cols,panelH=370,rows=Math.ceil(b.series.length/cols),H=250+rows*panelH+80,s=visualPage(W,H,paper);visualHeading(s,b.title,b.subtitle,{width:1660,size:49});const dom=niceDomain(b.series.flatMap(g=>g.values)),panels=[];
@@ -35,6 +39,7 @@ export function distributionFamilies(h){
    const marks=g.values.map((v,j)=>{const bx=left+cw*j+cw*.1,by=Y(v),height=bottom-by;el('rect',{x:bx,y:by,width:cw*.8,height,fill:v===maximum?'#2B689B':'#AFC2D1'},s);if(j===0||j===b.categories.length-1||j%Math.ceil(b.categories.length/5)===0)text(s,left+cw*(j+.5),bottom+26,b.categories[j],{size:17,anchor:'middle',fill:muted});return {category:b.categories[j],value:v,x:bx,y:by,h:height}});panels.push({...g,marks,peaks,total:g.values.reduce((a,v)=>a+v,0)})});foot(s,b,H-58,W);return visualFinish(s,{family:'small-multiples',width:W,height:H,panels,domain:dom.domain,columns:cols,sourceCase:'d02-xiaobeishu-jiangshui'});
  }
  function pyramid(b){
+  if(Object.hasOwn(b,'focus'))return cap2DataPyramidFocusFigure(b);
   base(b,['bands','leftLabel','rightLabel','unit']);for(const k of ['leftLabel','rightLabel','unit'])str(b[k],k);list(b.bands,4,24,'bands');unique(b.bands,'bands');
   for(const it of b.bands){fields(it,['id','label','left','right'],'band');str(it.label,'band.label');for(const k of ['left','right']){number(it[k],k);need(it[k]>=0,'pyramid quantities must be nonnegative')}}
   const W=1600,rowH=37,top=260,bottom=top+b.bands.length*rowH,H=bottom+150,s=visualPage(W,H,paper),left=760,right=880,extent=570,dom=niceDomain(b.bands.flatMap(it=>[it.left,it.right])),S=linearScale(dom.domain,[0,extent]);visualHeading(s,b.title,b.subtitle,{width:1460,size:49});text(s,430,top-45,b.leftLabel,{size:25,weight:700,anchor:'middle',fill:'#456472'});text(s,1150,top-45,b.rightLabel,{size:25,weight:700,anchor:'middle',fill:'#9B7859'});
@@ -56,6 +61,7 @@ export function distributionFamilies(h){
   const items=b.items.map(it=>{const hi=b.highlight.indexOf(it.id),color=hi<0?'#CCD1CF':['#2A6F9D','#B14932','#317B69'][hi],points=it.ranks.map((r,j)=>[X(j),Y(r)]);let d=`M ${points[0].join(' ')}`;for(let j=1;j<points.length;j++){const a=points[j-1],z=points[j],m=(a[0]+z[0])/2;d+=` C ${m} ${a[1]} ${m} ${z[1]} ${z[0]} ${z[1]}`}el('path',{d,fill:'none',stroke:color,'stroke-width':hi<0?1.8:3.5},s);points.forEach(([x,y],j)=>{el('circle',{cx:x,cy:y,r:hi<0?4:13,fill:color},s);if(hi>=0)text(s,x,y+6,String(it.ranks[j]),{size:16,weight:700,fill:'#FFFFFF',anchor:'middle'})});text(s,240,points[0][1]+8,it.label,{size:23,anchor:'end',fill:hi<0?muted:color,weight:hi<0?400:700});text(s,1520,points.at(-1)[1]+8,`${it.ranks.at(-1)}  ${it.label}`,{size:23,fill:hi<0?muted:color,weight:hi<0?400:700});return {...it,color,points}});foot(s,b,H-58,W);return visualFinish(s,{family:'bump',width:W,height:H,items,periods:b.periods,rankDirection:'1 at top; categorical periods',sourceCase:'d09-paiming-bianhua'});
  }
  function unitChart(b){
+  if(Object.hasOwn(b,'countingGroups'))return cap2DataGroupedUnitChart(b);
   base(b,['items','perSymbol','unit','icon']);str(b.unit,'unit');need(['person','square'].includes(b.icon),'icon must be person or square');need(Number.isSafeInteger(b.perSymbol)&&b.perSymbol>0,'perSymbol must be positive integer');list(b.items,2,12,'items');unique(b.items,'items');
   for(const it of b.items){fields(it,['id','label','value'],'item');str(it.label,'item.label');need(Number.isSafeInteger(it.value)&&it.value>=0,'unit count must be nonnegative safe integer');need(it.value%b.perSymbol===0,'fractional symbols require a different unit or chart')}
   const total=b.items.reduce((a,v)=>a+v.value,0),symbols=total/b.perSymbol;need(symbols<=600,'too many symbols; use a larger exact unit or another chart');const W=1700,step=23,perRow=50,top=260,prepared=b.items.map(it=>({...it,labelLines:visualLines(it.label,230,{size:24,max:2}),symbols:it.value/b.perSymbol,rows:Math.max(1,Math.ceil(it.value/b.perSymbol/perRow))}));let y=top;const positioned=prepared.map(it=>{const r={...it,y};y+=Math.max(80,it.labelLines.length*31+49,it.rows*42+30);return r});const H=y+100,s=visualPage(W,H,paper);visualHeading(s,b.title,b.subtitle,{width:1560,size:49});text(s,1600,top-35,`每个符号 = ${b.perSymbol} ${b.unit}`,{size:21,anchor:'end',fill:muted});const marks=[];

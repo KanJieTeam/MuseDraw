@@ -1,0 +1,75 @@
+{
+  "family": "dated-phylogeny",
+  "title": "给定距离的UPGMA合并树",
+  "subtitle": "合成教学矩阵 · UPGMA平均连锁；红点高度=被选簇间平均距离÷2，不是绝对分歧年代。",
+  "reconstruction": {
+    "method": "upgma-average-linkage",
+    "evidenceKind": "synthetic-teaching",
+    "distanceUnit": "示意差异单位",
+    "tips": [
+      {
+        "id": "A",
+        "label": "样本 A",
+        "scientificName": ""
+      },
+      {
+        "id": "B",
+        "label": "样本 B",
+        "scientificName": ""
+      },
+      {
+        "id": "C",
+        "label": "样本 C",
+        "scientificName": ""
+      },
+      {
+        "id": "D",
+        "label": "样本 D",
+        "scientificName": ""
+      },
+      {
+        "id": "E",
+        "label": "样本 E",
+        "scientificName": ""
+      }
+    ],
+    "distances": [
+      [
+        0,
+        5,
+        9,
+        9,
+        8
+      ],
+      [
+        5,
+        0,
+        10,
+        10,
+        9
+      ],
+      [
+        9,
+        10,
+        0,
+        8,
+        7
+      ],
+      [
+        9,
+        10,
+        8,
+        0,
+        3
+      ],
+      [
+        8,
+        9,
+        7,
+        3,
+        0
+      ]
+    ]
+  },
+  "note": "全部距离由调用者明确给定。每步使用所有原始跨簇样本对的算术平均，按簇含叶数加权；精确相同最小值按完整ID的固定词典顺序选一对，所选二叉顺序不表示额外生物学证据。未执行序列分析、年代校准、分子钟检验或bootstrap。"
+}

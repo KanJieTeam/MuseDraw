@@ -1,3 +1,4 @@
+import {cap2DataCalendarPeriodFigure} from './cap2-data-calendar-period-figures.mjs';
 import {el} from './svg.mjs';
 import {measureVisual,visualLines,visualPage,visualText,visualBlock,visualHeading,visualFinish,stroke,number,blend} from './visual-tools.mjs';
 
@@ -5,6 +6,7 @@ export function dataVisualFamilies(h){
  const {need,list,fields,str}=h;
  const palettes={emerald:['#EEF2EA','#B6D4C9','#79B5A5','#41867C','#20574E'],amber:['#F4EEE5','#F2D6A2','#DDA65E','#B66B36','#743E29'],blue:['#EEF0F6','#BBC9E3','#809BCC','#4B6EAE','#284779']};
  function calendar(b){
+  if(Object.hasOwn(b,'periods'))return cap2DataCalendarPeriodFigure(b);
   fields(b,['family','title','year','records','missing','unit','palette','dataStatus','note'],'calendar');for(const k of ['title','unit','dataStatus','note'])str(b[k],k);
   need(Number.isInteger(b.year)&&b.year>=1900&&b.year<=2100,'year: 1900–2100');need(b.missing==='zero'||b.missing==='reject','missing: explicitly choose zero or reject');need(Object.hasOwn(palettes,b.palette),'unknown calendar palette');
   list(b.records,1,366,'records');const records=new Map();

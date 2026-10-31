@@ -1,3 +1,4 @@
+import {orthoviewConvention} from './projection-figures.mjs';
 import {el} from './svg.mjs';
 import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualFinish,stroke} from './visual-tools.mjs';
 import {axisNumber,formatNumber} from './quantitative.mjs';
@@ -20,6 +21,7 @@ export function solidFamilies(h){
   for(const row of rows.slice(0,-1))stroke(s,[[0,row.bottom+40],[W,row.bottom+40]],ink,8);draw(s,margin,noteY,note,dim);return visualFinish(s,{family:'solids',width:W,height:H,objects:figures,rows,columns:cols,artHeight:artH,noteTop:noteY,compositionReferences:['j09-liti-tuxing']});
  }
  function orthoview(b){
+ if(Object.hasOwn(b,'projectionConvention')||Object.hasOwn(b,'gridRowOrder'))return orthoviewConvention(b);
   fields(b,['family','title','subtitle','heights','note'],'orthoview');for(const k of ['title','subtitle','note'])str(b[k],k);const solid=columnSolid(b.heights),W=1800,unit=Math.min(48,300/solid.cols,300/solid.rows,300/solid.maxHeight),frontX=1030,sideX=1460,frontTop=340,baseline=frontTop+solid.maxHeight*unit,topY=baseline+125,H=Math.max(1100,topY+solid.rows*unit+150),s=visualPage(W,H,'#EDE8DC'),ink='#20241E';visualHeading(s,b.title,b.subtitle,{x:80,top:60,width:1640,size:61,fill:ink,subFill:'#687164'});stroke(s,[[80,225],[1720,225]],ink,4);visualText(s,80,290,`${solid.count} 个单位立方体 · 同一组合的三个投影`,{size:27,weight:700,fill:ink});
   const iso=bounds(solid.faces.flatMap(f=>f.points.map(p=>isometricPoint(...p)))),scale=Math.min(700/(iso.right-iso.left),510/(iso.bottom-iso.top)),ox=440-(iso.left+iso.right)/2*scale,oy=875-iso.bottom*scale,faces=drawFaces(s,solid.faces,{scale,x:ox,y:oy,stroke:ink,lineWidth:1.6});
   visualText(s,frontX,frontTop-35,'正视图',{size:27,weight:700,fill:ink});visualText(s,sideX,frontTop-35,'右视图',{size:27,weight:700,fill:ink});visualText(s,frontX,topY-30,'俯视图',{size:27,weight:700,fill:ink});const views={front:[],side:[],top:[]};for(const [heights,x,color,key] of [[solid.front,frontX,'#C83D2C','front'],[solid.side,sideX,'#3478A5','side']])heights.forEach((height,i)=>{for(let z=0;z<height;z++){const cell={x:x+i*unit,y:baseline-(z+1)*unit,w:unit,h:unit,column:i,level:z};el('rect',{x:cell.x,y:cell.y,width:unit,height:unit,fill:color,stroke:ink,'stroke-width':1.4},s);views[key].push(cell)}});solid.top.forEach((row,y)=>row.forEach((occupied,x)=>{if(occupied){const cell={x:frontX+x*unit,y:topY+y*unit,w:unit,h:unit,column:x,row:y};el('rect',{x:cell.x,y:cell.y,width:unit,height:unit,fill:'#E2C34B',stroke:ink,'stroke-width':1.4},s);views.top.push(cell)}}));

@@ -334,13 +334,7 @@
       "id": "sankey",
       "family": "sankey",
       "file": "sankey.json",
-      "contentStatus": "fictional development observations, no empirical or causal claim",
-      "sourceCases": [
-        {
-          "id": "d06-sangji-shouzhi",
-          "sourceSha256": "71a3c6a5ae16f3e957bd41e35acfe82625a96c8a249f8806a1595f5dc7bbfb00"
-        }
-      ]
+      "contentStatus": "fictional development observations, no empirical or causal claim"
     },
     {
       "id": "critical-path",
@@ -514,13 +508,7 @@
       "id": "orthoview",
       "family": "orthoview",
       "file": "orthoview.json",
-      "contentStatus": "idealized teaching input, not an experimental observation",
-      "sourceCases": [
-        {
-          "id": "145-three-views",
-          "sourceSha256": "d6d9a77debe3db15b23b3d5efce861acac314f6dd34b54c97dfd9eddbf149d0c"
-        }
-      ]
+      "contentStatus": "idealized teaching input, not an experimental observation"
     },
     {
       "id": "cost-allocation",
@@ -1306,13 +1294,7 @@
       "id": "dated-phylogeny",
       "family": "dated-phylogeny",
       "file": "dated-phylogeny.json",
-      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
-      "sourceCases": [
-        {
-          "id": "168-primate-phylogeny",
-          "sourceSha256": "56f9d936929ad7fb5c5d601087414fee1319fc4c382b1aaf4806f1e8fc017fce"
-        }
-      ]
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome"
     },
     {
       "id": "shadow-height",
@@ -2387,6 +2369,66 @@
           "sourceSha256": "d0f0a0bfa8c8e20b9372b0a511872e6f03f0fd15086bf360b8728e220d8d723c"
         }
       ]
+    },
+    {
+      "id": "cap2-data-commuting-counts",
+      "file": "cap2-data-commuting-counts.json",
+      "family": "unit-chart",
+      "contentStatus": "Additional bounded composition from explicitly supplied input. No inference of missing source observations, aesthetic approval or complete source reproduction."
+    },
+    {
+      "id": "cap2-data-peak-panel-demo",
+      "file": "cap2-data-peak-panel-demo.json",
+      "family": "small-multiples",
+      "contentStatus": "Explicitly fictional demo of a studied composition; raw source observations are unavailable. Not a reconstruction of source data."
+    },
+    {
+      "id": "cap2-data-population-focus-demo",
+      "file": "cap2-data-population-focus-demo.json",
+      "family": "pyramid",
+      "contentStatus": "Explicitly fictional demo of a studied composition; raw source observations are unavailable. Not a reconstruction of source data."
+    },
+    {
+      "id": "cap2-data-calendar-period-demo",
+      "file": "cap2-data-calendar-period-demo.json",
+      "family": "calendar",
+      "contentStatus": "Explicitly fictional demo of a studied composition; raw source observations are unavailable. Not a reconstruction of source data."
+    },
+    {
+      "id": "cap2-data-household-sankey-source",
+      "file": "cap2-data-household-sankey-source.json",
+      "family": "sankey",
+      "contentStatus": "Additional bounded composition from explicitly supplied input. No inference of missing source observations, aesthetic approval or complete source reproduction.",
+      "sourceCases": [
+        {
+          "id": "d06-sangji-shouzhi",
+          "sourceSha256": "71a3c6a5ae16f3e957bd41e35acfe82625a96c8a249f8806a1595f5dc7bbfb00"
+        }
+      ]
+    },
+    {
+      "id": "orthoview-first-angle",
+      "file": "orthoview-first-angle.json",
+      "family": "orthoview",
+      "contentStatus": "Explicit first-angle convention and front-to-back grid order; four named orthographic views from the same grounded voxel solid. Original unconstrained independent-view branch preserved.",
+      "sourceCases": [
+        {
+          "id": "145-three-views",
+          "sourceSha256": "d6d9a77debe3db15b23b3d5efce861acac314f6dd34b54c97dfd9eddbf149d0c"
+        }
+      ]
+    },
+    {
+      "id": "upgma-distance-teaching",
+      "file": "upgma-distance-teaching.json",
+      "family": "dated-phylogeny",
+      "contentStatus": "New synthetic five-tip complete distance matrix; bounded UPGMA average-linkage reconstruction. Heights are distance/2, not calibrated divergence dates; original ten-tip author-constructed matrix is a separate consistency fixture, not observations or generic evidence.",
+      "sourceCases": [
+        {
+          "id": "168-primate-phylogeny",
+          "sourceSha256": "56f9d936929ad7fb5c5d601087414fee1319fc4c382b1aaf4806f1e8fc017fce"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2989,6 +3031,42 @@
       "reference": "references/cap2-tcp-base62.md",
       "ids": [
         "base62-encoding"
+      ]
+    },
+    {
+      "reference": "references/cap2-data-counting-groups.md",
+      "ids": [
+        "unit-chart"
+      ]
+    },
+    {
+      "reference": "references/cap2-data-peak-panels.md",
+      "ids": [
+        "small-multiples"
+      ]
+    },
+    {
+      "reference": "references/cap2-data-pyramid-focus.md",
+      "ids": [
+        "pyramid"
+      ]
+    },
+    {
+      "reference": "references/cap2-data-calendar-periods.md",
+      "ids": [
+        "calendar"
+      ]
+    },
+    {
+      "reference": "references/cap2-data-eight-sink-sankey.md",
+      "ids": [
+        "sankey"
+      ]
+    },
+    {
+      "reference": "references/musecore-upgma-distance.md",
+      "ids": [
+        "dated-phylogeny"
       ]
     }
   ]

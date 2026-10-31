@@ -1,0 +1,124 @@
+{
+  "family": "pyramid",
+  "title": "同一尺度看结构，再看给定两组的计数比",
+  "subtitle": "虚构开发数据：年龄组人数由调用者明确给定，本输入不是源案例原始人口表。",
+  "leftLabel": "男性",
+  "rightLabel": "女性",
+  "unit": "千人",
+  "bands": [
+    {
+      "id": "0",
+      "label": "0–4",
+      "left": 9,
+      "right": 8
+    },
+    {
+      "id": "1",
+      "label": "5–9",
+      "left": 11,
+      "right": 10
+    },
+    {
+      "id": "2",
+      "label": "10–14",
+      "left": 14,
+      "right": 13
+    },
+    {
+      "id": "3",
+      "label": "15–19",
+      "left": 15,
+      "right": 14
+    },
+    {
+      "id": "4",
+      "label": "20–24",
+      "left": 16,
+      "right": 16
+    },
+    {
+      "id": "5",
+      "label": "25–29",
+      "left": 18,
+      "right": 17
+    },
+    {
+      "id": "6",
+      "label": "30–34",
+      "left": 19,
+      "right": 18
+    },
+    {
+      "id": "7",
+      "label": "35–39",
+      "left": 18,
+      "right": 19
+    },
+    {
+      "id": "8",
+      "label": "40–44",
+      "left": 20,
+      "right": 21
+    },
+    {
+      "id": "9",
+      "label": "45–49",
+      "left": 23,
+      "right": 24
+    },
+    {
+      "id": "10",
+      "label": "50–54",
+      "left": 25,
+      "right": 25
+    },
+    {
+      "id": "11",
+      "label": "55–59",
+      "left": 20,
+      "right": 22
+    },
+    {
+      "id": "12",
+      "label": "60–64",
+      "left": 16,
+      "right": 18
+    },
+    {
+      "id": "13",
+      "label": "65–69",
+      "left": 12,
+      "right": 14
+    },
+    {
+      "id": "14",
+      "label": "70–74",
+      "left": 8,
+      "right": 10
+    },
+    {
+      "id": "15",
+      "label": "75–79",
+      "left": 5,
+      "right": 7
+    },
+    {
+      "id": "16",
+      "label": "80+",
+      "left": 3,
+      "right": 5
+    }
+  ],
+  "note": "左右使用相同的数值尺度，零点各自贴近中央年龄标签；条形长度表示人数。",
+  "focus": {
+    "numeratorIds": [
+      "10"
+    ],
+    "denominatorIds": [
+      "0"
+    ],
+    "numeratorLabel": "50–54 岁组",
+    "denominatorLabel": "0–4 岁组",
+    "note": "这是两个明确给定年龄组的合计比值，不是年龄结构的因果解释，也不代表总人口占比。"
+  }
+}

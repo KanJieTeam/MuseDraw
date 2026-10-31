@@ -1,19 +1,34 @@
 import {el} from './svg.mjs';
-import {visualPage,visualText,visualLines,visualFontBounds,measureVisual,visualFinish,stroke} from './visual-tools.mjs';
+import {visualPage,visualText,visualFontBounds,visualFinish,stroke} from './visual-tools.mjs';
 import {axisNumber,linearScale} from './quantitative.mjs';
 import {cap2DataScatterModel} from './cap2-data-scatter-models.mjs';
 
 export function cap2DataScatterFamilies(){
  function scatterEvidence(input){
+  // SVG fallback glyph ink and canvas font boxes need not have identical bounds.
+  // Keep this probe/cache local to one render so a newly loaded font is measured.
+  const probe=el('svg',{'aria-hidden':'true',width:1,height:1,style:'position:fixed;left:-10000px;top:-10000px;visibility:hidden;pointer-events:none'},document.body),measured=new Map();
+  try{
+  function metrics(text,size=20,weight=400){
+   const key=JSON.stringify([text,size,weight]);if(measured.has(key))return measured.get(key);
+   const node=visualText(probe,0,0,text,{size,weight}),box=node.getBBox(),advance=node.getComputedTextLength(),font=visualFontBounds(text,size,'sans',weight);node.remove();
+   const left=Math.floor(Math.min(0,box.x)),right=Math.ceil(Math.max(advance,box.x+box.width)),ascent=Math.ceil(Math.max(font.ascent,-box.y)),descent=Math.ceil(Math.max(font.descent,box.y+box.height));
+   if(![advance,left,right,ascent,descent].every(Number.isFinite)||advance<0||right<left||(text.trim()&&(advance===0||right===left)))throw Error('Scatter SVG text measurement unavailable');
+   const value={advance,left,right,width:right-left,ascent,descent};measured.set(key,value);return value;
+  }
+  function linesFor(text,width,size,weight,max){
+   const lines=[];for(const paragraph of text.split('\n')){if(!paragraph.trim())throw Error('Empty explicit text line');let part='';for(const ch of paragraph){if(part&&metrics(part+ch,size,weight).width>width){lines.push(part);part=''}if(metrics(ch,size,weight).width>width)throw Error('Glyph exceeds available text width');part+=ch}if(part)lines.push(part)}
+   if(lines.length>max)throw Error(`Text exceeds ${max} lines at ${size}px: ${text.slice(0,60)}`);return lines;
+  }
   const m=cap2DataScatterModel(input),W=1800,margin=80,gap=90,panelW=(W-margin*2-gap)/2,ink='#23323F',muted='#596B76',red='#BE4C32',grid='#E3E9EC',paper='#FFFFFF';
   const plan=(content,width,size=20,weight=400,max=6)=>{
-   const lines=visualLines(content,width,{size,weight,max}),bounds=lines.map(t=>visualFontBounds(t,size,'sans',weight)),ascent=Math.max(...bounds.map(b=>b.ascent)),descent=Math.max(...bounds.map(b=>b.descent)),step=Math.max(size*1.35,ascent+descent+5);
+   const lines=linesFor(content,width,size,weight,max),bounds=lines.map(t=>metrics(t,size,weight)),ascent=Math.max(...bounds.map(b=>b.ascent)),descent=Math.max(...bounds.map(b=>b.descent)),step=Math.max(size*1.35,ascent+descent+5);
    return {lines,size,weight,ascent,descent,step,height:ascent+descent+(lines.length-1)*step};
   };
   const num=v=>v===null?'未定义':v!==0&&(Math.abs(v)<.001||Math.abs(v)>=1e6)?v.toExponential(3):(Object.is(v,-0)?0:v).toFixed(3),signed=v=>(v<0?' − ':' + ')+num(Math.abs(v));
   const title=plan(m.title,W-2*margin,44,800,3),subtitle=plan(m.subtitle,W-2*margin,23,400,4),legend=plan(m.fit?'红线：逐组计算的普通最小二乘直线；仅作描述。':'未绘制拟合线；所有给定观测保留。',W-2*margin-60,19,400,3),range=plan('共同范围：x ['+m.xScale.domain.map(axisNumber).join(', ')+']；y ['+m.yScale.domain.map(axisNumber).join(', ')+']。方差使用 n−1 分母。',W-2*margin,19,400,3);
   const titleY=50,subtitleY=titleY+title.height+18,legendY=subtitleY+subtitle.height+20,rangeY=legendY+legend.height+12,bodyY=rangeY+range.height+38;
-  const xTicks=m.xScale.ticks.map(axisNumber),yTicks=m.yScale.ticks.map(axisNumber),tick=plan('0123456789−.',300,18,400,1),leftInset=Math.max(62,...yTicks.map(t=>measureVisual(t,18)+22)),plotW=panelW-leftInset-24;
+  const xTicks=m.xScale.ticks.map(axisNumber),yTicks=m.yScale.ticks.map(axisNumber),tick=plan('0123456789−.',300,18,400,1),leftInset=Math.max(62,...yTicks.map(t=>metrics(t,18).width+22)),plotW=panelW-leftInset-24;
   if(plotW<420)throw Error('Axis labels exceed the scatter panel reading budget; rescale the supplied units');
   const xLabel=plan(m.xLabel,plotW,20,400,3),yLabel=plan(m.yLabel,plotW,20,400,3);
   const prepared=m.groups.map(g=>{
@@ -25,7 +40,7 @@ export function cap2DataScatterFamilies(){
   for(let i=0;i<prepared.length;i+=2){const members=prepared.slice(i,i+2),header=Math.max(...members.map(g=>g.headHeight)),plotTop=cursor+header+24+yLabel.height+18,plotBottom=plotTop+310,axisTop=plotBottom+17,xLabelTop=axisTop+tick.height+14,bottom=xLabelTop+xLabel.height;rows.push({members,top:cursor,plotTop,plotBottom,axisTop,xLabelTop,bottom});cursor=bottom+50}
   const footer=plan(m.note,W-2*margin,20,400,10),footerY=cursor,H=Math.ceil(footerY+footer.height+48),svg=visualPage(W,H,paper),textPlans=[];
   function draw(x,y,p,fill=ink,anchor='start',role='text'){
-   p.lines.forEach((t,i)=>{const baseline=y+p.ascent+i*p.step,node=visualText(svg,x,baseline,t,{size:p.size,weight:p.weight,fill,anchor});node.dataset.role=role;const width=measureVisual(t,p.size,'sans',p.weight),left=anchor==='middle'?x-width/2:anchor==='end'?x-width:x; textPlans.push({text:t,role,x:left,y:y+i*p.step,width,height:p.ascent+p.descent});});
+   p.lines.forEach((t,i)=>{const baseline=y+p.ascent+i*p.step,node=visualText(svg,x,baseline,t,{size:p.size,weight:p.weight,fill,anchor});node.dataset.role=role;const bound=metrics(t,p.size,p.weight),shift=anchor==='middle'?-bound.advance/2:anchor==='end'?-bound.advance:0;const left=Math.floor(x+shift+bound.left),top=Math.floor(y+i*p.step),right=Math.ceil(x+shift+bound.right),bottom=Math.ceil(y+i*p.step+p.ascent+p.descent);textPlans.push({text:t,role,x:left,y:top,width:right-left,height:bottom-top});});
   }
   draw(margin,titleY,title,ink);draw(margin,subtitleY,subtitle,muted);if(m.fit)stroke(svg,[[margin,legendY+legend.height/2],[margin+40,legendY+legend.height/2]],red,2.5);draw(margin+60,legendY,legend,muted);draw(margin,rangeY,range,muted);
   const panels=[];
@@ -34,7 +49,7 @@ export function cap2DataScatterFamilies(){
    draw(x,y,g.heading);y+=g.heading.height+12;draw(x,y,g.notePlan,muted);y+=g.notePlan.height+18;for(const p of g.summaries){draw(x,y,p,muted,'start','computed-summary');y+=p.height+7}
    draw(left,row.plotTop-yLabel.height-18,yLabel,muted);
    for(const [i,t]of m.yScale.ticks.entries()){const yy=Y(t);stroke(svg,[[left,yy],[right,yy]],grid,1,{'data-role':'background-grid'});const p=plan(yTicks[i],leftInset-15,18,400,1);draw(left-16,yy-p.height/2,p,muted,'end','axis-tick')}
-   let previous=-Infinity;for(const [i,t]of m.xScale.ticks.entries()){const xx=X(t),p=plan(xTicks[i],plotW,18,400,1),width=measureVisual(xTicks[i],18);if(xx-width/2<previous+10)throw Error('Horizontal tick labels collide; rescale units or change the declared range');previous=xx+width/2;draw(xx,row.axisTop,p,muted,'middle','axis-tick')}
+   let previous=-Infinity;for(const [i,t]of m.xScale.ticks.entries()){const xx=X(t),p=plan(xTicks[i],plotW,18,400,1),bound=metrics(xTicks[i],18);if(xx-bound.advance/2+bound.left<previous+10)throw Error('Horizontal tick labels collide; rescale units or change the declared range');previous=xx-bound.advance/2+bound.right;draw(xx,row.axisTop,p,muted,'middle','axis-tick')}
    draw(right,row.xLabelTop,xLabel,muted,'end');
    const clipId='cap2-data-scatter-clip-'+panels.length,defs=el('defs',{},svg),clip=el('clipPath',{id:clipId},defs);el('rect',{x:left,y:row.plotTop,width:right-left,height:row.plotBottom-row.plotTop},clip);const marks=el('g',{'clip-path':'url(#'+clipId+')'},svg);
    if(g.fitShown)stroke(marks,[[X(m.xScale.domain[0]),Y(g.stats.intercept+g.stats.slope*m.xScale.domain[0])],[X(m.xScale.domain[1]),Y(g.stats.intercept+g.stats.slope*m.xScale.domain[1])]],red,2.5,{'data-role':'least-squares-fit'});
@@ -43,6 +58,7 @@ export function cap2DataScatterFamilies(){
   });
   draw(margin,footerY,footer,muted,'start','caller-note');
   return visualFinish(svg,{family:'scatter-evidence',width:W,height:H,groups:panels,xDomain:m.xScale.domain,yDomain:m.yScale.domain,varianceConvention:m.varianceConvention,interpretation:m.interpretation,note:m.note,textPlans,compositionReference:'d08-ansikumu',aestheticApproval:'not-assessed'});
+  }finally{probe.remove()}
  }
  return {'scatter-evidence':scatterEvidence};
 }

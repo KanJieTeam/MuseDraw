@@ -1,0 +1,18 @@
+{
+ "family":"unit-chart",
+ "title":"100 位通勤者里 38 位坐地铁，开车和坐公交加起来是 35 位",
+ "subtitle":"某市一次通勤方式问卷，每位受访者只选最主要的一种。",
+ "note":"示例数据；每位受访者只选最主要的一种，合计 100 人。",
+ "perSymbol":1,
+ "countingGroups":10,
+ "unit":"人",
+ "icon":"person",
+ "items":[
+  {"id":"metro","label":"地铁","value":38,"color":"#1F5FA8"},
+  {"id":"car","label":"开车","value":18,"color":"#6E7781"},
+  {"id":"bus","label":"公交","value":17,"color":"#6E7781"},
+  {"id":"bike","label":"骑行","value":14,"color":"#B0B7BF"},
+  {"id":"walk","label":"步行","value":9,"color":"#B0B7BF"},
+  {"id":"other","label":"其他","value":4,"color":"#B0B7BF"}
+ ]
+}

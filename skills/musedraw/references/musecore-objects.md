@@ -26,7 +26,40 @@ observation or a measurement; identify hypothetical or idealised content.
 | `ruler` | A positive quantity in mm, cm or m, display unit and integer ruler maximum 2–20. Object endpoint, dimension line, ten subdivisions per displayed unit and conversion row share one scale. | The quantity must fit the chosen range. This is a length-scale teaching diagram, not a calibrated screen ruler or a measurement instrument. |
 | `magnitudes` | Three to fourteen labelled positive values between 1e−100 and 1e100, spanning at most 100 orders. Positions use log10 values; label tracks may move while numeric points stay fixed. | All items must represent the same quantity/unit. Zero and negative values are refused. Approximate supplied values remain marked approximate. Do not imply measured precision for illustrative examples. |
 | `solids` | Three to six cubes, cuboids, cylinders or spheres with positive dimensions. Recompute object geometry, dimension annotations and volumes; three objects use one row. | Per-object local scale, not a common size comparison. Sphere auxiliary curves are explanatory, not edges. No arbitrary meshes, surface integration or formal CAD output. |
-| `orthoview` | A 2–6 by 2–6 height map of integers 0–8, with 1–120 unit cubes. Derive exposed isometric faces and front/right/top projections from the same solid. Orthographic views share a unit scale. | Columns are filled continuously from the ground; no holes, overhangs or arbitrary polyhedra. Isometric scale is separate and stated. Unknown cells cannot be silently padded. |
+| `orthoview` | A 2–6 by 2–6 height map of integers 0–8, with 1–120 unit cubes. Derive exposed isometric faces and front/right/top projections from the same solid. An optional explicit-angle branch computes front/left/right/plan from one voxel coordinate system. Orthographic views share a unit scale. | Columns are filled continuously from the ground; no holes, overhangs or arbitrary polyhedra. Isometric scale is separate and stated. Unknown cells cannot be silently padded. |
+
+### Explicit-angle solid comparisons
+
+For `orthoview`, supply **both** `projectionConvention` (`"first-angle"` or
+`"third-angle"`) and `gridRowOrder: "front-to-back"` to select the four-direction
+comparison. Unknown values, either field alone, and unrelated fields are refused.
+The optional source-derived input is `orthoview-first-angle.json`.
+
+Coordinates are x right, y rear, z up. Front looks along +y; left along +x
+(with screen right −y); right along −x (screen right +y); plan along −z
+(screen right +x and screen up +y). Every projected square retains its occupied
+voxel ray and nearest cube. The isometric camera is explicitly mapped back to
+that same height grid. First angle places the left view right of the front and
+plan below; third angle places the right view right of the front and plan above.
+Changing convention changes panel positions, not the contents of a named view.
+These placements follow [Autodesk's projection-angle explanation](https://help.autodesk.com/cloudhelp/ENU/Fusion-Drawing/files/GUID-0DB05CD9-BE99-4E45-9FBD-8B8AF1F297BF.htm).
+
+The same bounded height-map domain applies: 2–6 rows/columns, integer heights
+0–8, 1–120 grounded unit cubes. Four directions are a new comparison facility;
+source 145 itself contains front/left/plan panels. Its nine-cube arrangement is
+consistent with first angle; its left on-screen heights are 3, 2, 1.
+No arbitrary CAD surfaces, overhangs, hidden measurements or formal drafting
+compliance are inferred. Titles, subtitles and notes remain complete; text is
+measured at fixed sizes, and the page expands with the content. Text that cannot
+fit the bounded title/subtitle/note line budgets is refused rather than truncated.
+
+Inputs with **neither** new field retain the legacy rendering, including its
+accepted numeric projections and row orientation. That route presents independent
+direction views; its right-at-right/plan-below layout does not promise a standard
+first- or third-angle unfolding. Do not silently assign it the new coordinate
+convention or reinterpret an existing input. `orthoview-convention.test.mjs`
+checks independent ray identities, both conventions, the non-symmetric example,
+maximum grounded solids, true scope exits and browser font-bound stress.
 
 Titles, explanatory wording, units and whether an ideal model is appropriate
 remain semantic responsibilities. A correct geometric calculation cannot validate

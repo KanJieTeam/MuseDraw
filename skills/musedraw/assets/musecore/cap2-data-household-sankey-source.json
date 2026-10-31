@@ -1,0 +1,41 @@
+{
+ "family":"sankey",
+ "title":"月收入 1.8 万元：38% 先交给房贷和保险，能存下 18%",
+ "subtitle":"一个三口之家的月度收支流向，带宽与金额成正比。",
+ "note":"示例数据。收入与去向各为 18,000 元；固定支出 6,800 元，占 37.8%；储蓄 3,300 元，占 18.3%。标题百分比为整数四舍五入。",
+ "unit":"元",
+ "columns":["收入来源","家庭月收入","三类支出","八项明细"],
+ "nodes":[
+  {"id":"salary1","label":"工资（一）","column":0,"color":"#AEB6BF"},
+  {"id":"salary2","label":"工资（二）","column":0,"color":"#AEB6BF"},
+  {"id":"side","label":"副业","column":0,"color":"#AEB6BF"},
+  {"id":"income","label":"家庭月收入","column":1,"color":"#3B4450"},
+  {"id":"fixed","label":"固定支出","column":2,"color":"#5B6B7F"},
+  {"id":"living","label":"生活支出","column":2,"color":"#C98A2B"},
+  {"id":"reserve","label":"储蓄与娱乐","column":2,"color":"#2E7D5B"},
+  {"id":"mortgage","label":"房贷","column":3,"color":"#5B6B7F"},
+  {"id":"insurance","label":"保险","column":3,"color":"#5B6B7F"},
+  {"id":"food","label":"餐饮","column":3,"color":"#C98A2B"},
+  {"id":"education","label":"教育","column":3,"color":"#C98A2B"},
+  {"id":"daily","label":"日用","column":3,"color":"#C98A2B"},
+  {"id":"transport","label":"交通","column":3,"color":"#C98A2B"},
+  {"id":"savings","label":"储蓄","column":3,"color":"#2E7D5B"},
+  {"id":"entertainment","label":"娱乐","column":3,"color":"#2E7D5B"}
+ ],
+ "links":[
+  {"from":"salary1","to":"income","value":11000},
+  {"from":"salary2","to":"income","value":6000},
+  {"from":"side","to":"income","value":1000},
+  {"from":"income","to":"fixed","value":6800},
+  {"from":"income","to":"living","value":7200},
+  {"from":"income","to":"reserve","value":4000},
+  {"from":"fixed","to":"mortgage","value":6000},
+  {"from":"fixed","to":"insurance","value":800},
+  {"from":"living","to":"food","value":2800},
+  {"from":"living","to":"education","value":2400},
+  {"from":"living","to":"daily","value":1100},
+  {"from":"living","to":"transport","value":900},
+  {"from":"reserve","to":"savings","value":3300},
+  {"from":"reserve","to":"entertainment","value":700}
+ ]
+}

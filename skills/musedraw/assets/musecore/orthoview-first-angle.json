@@ -1,0 +1,25 @@
+{
+  "family": "orthoview",
+  "title": "同一组方块 · 第一角法四向对照",
+  "subtitle": "主视图、左视图、右视图与俯视图来自同一坐标体",
+  "heights": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ]
+  ],
+  "note": "正投影视图共用单位比例，立体示意单独缩放。高度表表示落地连续方柱，不支持悬空或内部孔洞。",
+  "projectionConvention": "first-angle",
+  "gridRowOrder": "front-to-back"
+}

@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.51
+  instructions-version: musecore-2026-10-31.52
 ---
 
 # MuseDraw
@@ -94,6 +94,12 @@ family's encodings, coordinated geometry and placement.
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |
 | Given jump-rope scores and explicit arithmetic redistribution | [Average source input](references/musecore-average-source.md) |
 | Supplied bin frequencies, density and externally reported summaries | [Binned histogram](references/musecore-histogram-binned-source.md) |
+| Grouped exact integer counts | [Workflow](references/cap2-data-counting-groups.md) |
+| Repeated panels with computed peak summaries | [Workflow](references/cap2-data-peak-panels.md) |
+| Explicit age-group count comparisons | [Workflow](references/cap2-data-pyramid-focus.md) |
+| Given calendar intervals and aggregation | [Workflow](references/cap2-data-calendar-periods.md) |
+| Conserved eight-sink amount flows | [Workflow](references/cap2-data-eight-sink-sankey.md) |
+| Complete distance matrix reconstruction | [Workflow](references/musecore-upgma-distance.md) |
 | Complete branches joining one common suffix | [Workflow](references/cap2-converging-pathways.md) |
 | Scatter evidence with recomputed descriptive summaries | [Workflow](references/cap2-data-scatter-evidence.md) |
 | Perpendicular ideal lever arm comparisons | [Workflow](references/cap2-lever-comparison.md) |
