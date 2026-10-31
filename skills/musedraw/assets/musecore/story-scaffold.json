@@ -1,0 +1,10 @@
+{
+ "family":"story-scaffold","title":"看图写话五要素","subtitle":"二年级语文 · 先想清楚，再连成一段话","material":{"kind":"none","label":"未配示范图 · 以下短语均为示例","source":null},"textSource":"MuseDraw J03原挂图的示例短语，非图片识别结果",
+ "elements":[
+  {"id":"time","label":"时间","question":"什么时候？","phrase":"星期天早上","claim":"example","evidence":null,"ending":"，"},
+  {"id":"place","label":"地点","question":"在哪里？","phrase":"在公园里","claim":"example","evidence":null,"ending":""},
+  {"id":"people","label":"人物","question":"有谁？","phrase":"小明和爸爸","claim":"example","evidence":null,"ending":""},
+  {"id":"event","label":"事情","question":"在做什么？","phrase":"放风筝","claim":"example","evidence":null,"ending":"。"},
+  {"id":"result","label":"结果","question":"怎么样？心情呢？","phrase":"风筝飞得很高，他们笑得很开心","claim":"example","evidence":null,"ending":"。"}
+ ],"assembly":["time","people","place","event","result"],"note":"逐色对照，看看有没有漏项；示例与想象不等于图中事实。"
+}

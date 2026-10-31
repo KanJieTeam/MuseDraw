@@ -1,0 +1,10 @@
+{
+ "family":"sorting-catalogue","title":"垃圾分四类","subtitle":"北京公园目录中的常见例子 · 教学摘选","region":"北京市公园生活垃圾分类","reference":{"title":"北京市公园生活垃圾分类指导意见","url":"https://www.beijing.gov.cn/zhengce/zhengcefagui/202008/t20200811_1979366.html","edition":"2020年6月23日 · 京绿办发〔2020〕148号","locator":"第6条四类说明，摘选常见物品"},
+ "categories":[{"id":"recycle","label":"可回收物","color":"#3255A4"},{"id":"hazard","label":"有害垃圾","color":"#E5463D"},{"id":"food","label":"厨余垃圾","color":"#00A95C"},{"id":"other","label":"其他垃圾","color":"#6E6E6E"}],
+ "items":[
+  {"id":"paper","label":"废纸","category":"recycle","locator":"第6条(2)废纸类"},{"id":"box","label":"纸箱","category":"recycle","locator":"第6条(2)纸箱纸板"},{"id":"bottle","label":"塑料瓶","category":"recycle","locator":"第6条(2)塑料类"},{"id":"can","label":"易拉罐","category":"recycle","locator":"第6条(2)金属类"},{"id":"glass","label":"玻璃瓶","category":"recycle","locator":"第6条(2)玻璃类"},{"id":"clothes","label":"旧衣服","category":"recycle","locator":"第6条(2)织物类"},
+  {"id":"recharge","label":"镉镍充电电池","category":"hazard","locator":"第6条(3)镉镍电池"},{"id":"button","label":"氧化汞纽扣电池","category":"hazard","locator":"第6条(3)氧化汞电池、纽扣电池"},{"id":"lamp","label":"废荧光灯管","category":"hazard","locator":"第6条(3)废荧光灯管"},{"id":"medicine","label":"过期药品","category":"hazard","locator":"第6条(3)过期药品及其包装物"},{"id":"paint","label":"废油漆桶","category":"hazard","locator":"第6条(3)废油漆及油漆桶"},
+  {"id":"leftovers","label":"剩饭剩菜","category":"food","locator":"第6条(1)剩菜剩饭"},{"id":"peel","label":"果皮果核","category":"food","locator":"第6条(1)瓜果皮壳"},{"id":"leaves","label":"菜叶菜根","category":"food","locator":"第6条(1)食物残渣、烂菜叶"},{"id":"shell","label":"蛋壳","category":"food","locator":"第6条(1)鸡蛋壳"},
+  {"id":"tissue","label":"用过的纸巾","category":"other","locator":"第6条(4)污染纸张"},{"id":"ceramics","label":"陶瓷碎片","category":"other","locator":"第6条(4)陶瓷制品碎片"},{"id":"cigarette","label":"烟头","category":"other","locator":"第6条(4)烟蒂"},{"id":"dust","label":"尘土","category":"other","locator":"第6条(4)尘土"}
+ ],"answers":[],"note":"仅摘选给定地区目录；投放细则与分类标志请查当地现行指引。"
+}

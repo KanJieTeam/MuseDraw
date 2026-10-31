@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.31
+  instructions-version: musecore-2026-10-31.32
 ---
 
 # MuseDraw
@@ -150,6 +150,12 @@ family's encodings, coordinated geometry and placement.
 | Bounded literary motifs and explicitly supplied syntax operations | [Literary motifs and syntax](references/musecore-narrative-syntax.md) |
 | Declared practice stages and proportional lesson durations | [Practice and lesson timing](references/musecore-weekly-lesson.md) |
 | Verified water transitions and supplied sintering records | [Water and materials](references/musecore-water-sinter.md) |
+| Explicit writing elements and local sorting catalogues | [Writing and sorting](references/musecore-story-sorting.md) |
+| Catalogue multiplication practice and declared classroom weeks | [Practice and classroom weeks](references/musecore-quest-flipped.md) |
+| Supplied CryoEM records and ideal known-particle geometry | [Scientific evidence panels](references/musecore-cryoem-collider.md) |
+| Observed association and separately supplied hypotheses | [Association and hypotheses](references/musecore-confounding.md) |
+| Caller-supplied floor geometry and route annotations | [Supplied evacuation plans](references/musecore-evacuation.md) |
+| Catalogue hand-rubbing steps and classroom practice plans | [Hand-rubbing teaching](references/musecore-handwash.md) |
 
 Each reference declares its scope and exit conditions. These are distinct
 constructions with their own objects, type and material, rather than one page

@@ -2045,6 +2045,114 @@
           "sourceSha256": "c7ea9715f6b2081487a5c30371e1cc9050cea65002d5fcee44e08dfbacca0c8b"
         }
       ]
+    },
+    {
+      "id": "story-scaffold",
+      "family": "story-scaffold",
+      "file": "story-scaffold.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "j03-kantu-xiehua",
+          "sourceSha256": "9a849d5efe34b6727f6a256d4bac70430a0f521308c42fff5db8f83ef4c330d3"
+        }
+      ]
+    },
+    {
+      "id": "sorting-catalogue",
+      "family": "sorting-catalogue",
+      "file": "sorting-catalogue.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "j08-laji-fenlei",
+          "sourceSha256": "8a102fbaa2e250d0486d0891215204e4eee9874402920f73154c803f03fd39c7"
+        }
+      ]
+    },
+    {
+      "id": "multiplication-quest",
+      "family": "multiplication-quest",
+      "file": "multiplication-quest.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t17-koujue-chuangguan",
+          "sourceSha256": "6503c6d4dad15347ea86c156032ff24a5d007d3fc2038e64d789b620c2bddd3a"
+        }
+      ]
+    },
+    {
+      "id": "flipped-week",
+      "family": "flipped-week",
+      "file": "flipped-week.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t19-fanzhuan-ketang",
+          "sourceSha256": "813a7b649ff9443df5340c717c8ebd6314843efaf4b4fd2cf425b1cc9ff58cce"
+        }
+      ]
+    },
+    {
+      "id": "cryoem-evidence",
+      "family": "cryoem-evidence",
+      "file": "cryoem-evidence.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "161-cryoem-spa",
+          "sourceSha256": "aaa507fe772ab558d4bb83c89c9beaa9998baaf183c2ac515342542aa5dd28f1"
+        }
+      ]
+    },
+    {
+      "id": "collider-event",
+      "family": "collider-event",
+      "file": "collider-event.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "163-collider-event",
+          "sourceSha256": "3cc403be3adb73766a8608adee18d3910dc3effbb2abce749c5fa25ce077847b"
+        }
+      ]
+    },
+    {
+      "id": "confounding-panel",
+      "family": "confounding-panel",
+      "file": "confounding-panel.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "s10-xiangguan-yinguo",
+          "sourceSha256": "945a177dffbd09a06d66d55c6cf92003e8e38ef7e6705cdc4f9caf037da14439"
+        }
+      ]
+    },
+    {
+      "id": "evacuation-plan",
+      "family": "evacuation-plan",
+      "file": "evacuation-plan.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "o07-yingji-shusan",
+          "sourceSha256": "d4dc7f8307909467bb8235333fa794c3514e392a7b81835946f3ef6bb0152213"
+        }
+      ]
+    },
+    {
+      "id": "handwash-practice",
+      "family": "handwash-practice",
+      "file": "handwash-practice.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t20-qibu-xishou",
+          "sourceSha256": "23e1d61637030910905ec24b2b4332c9ead116d9b84756a59c5f7189e54e9a40"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2542,6 +2650,45 @@
       "ids": [
         "water-transitions",
         "sintering-record"
+      ]
+    },
+    {
+      "reference": "references/musecore-story-sorting.md",
+      "ids": [
+        "story-scaffold",
+        "sorting-catalogue"
+      ]
+    },
+    {
+      "reference": "references/musecore-quest-flipped.md",
+      "ids": [
+        "multiplication-quest",
+        "flipped-week"
+      ]
+    },
+    {
+      "reference": "references/musecore-cryoem-collider.md",
+      "ids": [
+        "cryoem-evidence",
+        "collider-event"
+      ]
+    },
+    {
+      "reference": "references/musecore-confounding.md",
+      "ids": [
+        "confounding-panel"
+      ]
+    },
+    {
+      "reference": "references/musecore-evacuation.md",
+      "ids": [
+        "evacuation-plan"
+      ]
+    },
+    {
+      "reference": "references/musecore-handwash.md",
+      "ids": [
+        "handwash-practice"
       ]
     }
   ]

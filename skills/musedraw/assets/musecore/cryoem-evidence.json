@@ -1,0 +1,290 @@
+{
+  "family": "cryoem-evidence",
+  "title": "冷冻电镜：四面板证据联读",
+  "subtitle": "合成教学数据：显式处理序列、颗粒筛选、FSC 样点与非测量类投影示意。",
+  "dataKind": "synthetic-teaching",
+  "stages": [
+    {
+      "id": "sample",
+      "label": "样品玻璃化",
+      "detail": "序列起点：玻璃态样品。"
+    },
+    {
+      "id": "collect",
+      "label": "数据收集",
+      "detail": "给定像素尺寸 0.83 Å。"
+    },
+    {
+      "id": "motion",
+      "label": "运动校正",
+      "detail": "逐帧位移校正阶段。"
+    },
+    {
+      "id": "ctf",
+      "label": "CTF 估计",
+      "detail": "对比传递函数估计阶段。"
+    },
+    {
+      "id": "pick",
+      "label": "颗粒挑选",
+      "detail": "选入待分类的颗粒集合。"
+    },
+    {
+      "id": "class2d",
+      "label": "二维分类",
+      "detail": "按给定决策保留或剔除类。"
+    },
+    {
+      "id": "initial",
+      "label": "初始模型",
+      "detail": "从初始三维表示开始。"
+    },
+    {
+      "id": "class3d",
+      "label": "三维分类",
+      "detail": "进一步筛选给定颗粒群。"
+    },
+    {
+      "id": "refine",
+      "label": "精修与验证",
+      "detail": "比较曲线交点及采样尺度。"
+    }
+  ],
+  "particleCounts": [
+    {
+      "stage": "pick",
+      "label": "挑选的颗粒",
+      "count": 2946120
+    },
+    {
+      "stage": "class2d",
+      "label": "二维分类后",
+      "count": 1184300
+    },
+    {
+      "stage": "class3d",
+      "label": "三维分类后",
+      "count": 412880
+    }
+  ],
+  "pixelSizeAngstrom": 0.83,
+  "independentHalfMaps": true,
+  "fsc": [
+    {
+      "id": "masked",
+      "label": "给定加掩膜曲线",
+      "samples": [
+        {
+          "frequency": 0,
+          "fsc": 1
+        },
+        {
+          "frequency": 0.1,
+          "fsc": 0.998
+        },
+        {
+          "frequency": 0.2,
+          "fsc": 0.98
+        },
+        {
+          "frequency": 0.25,
+          "fsc": 0.92
+        },
+        {
+          "frequency": 0.3,
+          "fsc": 0.75
+        },
+        {
+          "frequency": 0.35,
+          "fsc": 0.42
+        },
+        {
+          "frequency": 0.38,
+          "fsc": 0.16
+        },
+        {
+          "frequency": 0.4,
+          "fsc": 0.06
+        },
+        {
+          "frequency": 0.45,
+          "fsc": 0.01
+        },
+        {
+          "frequency": 0.5,
+          "fsc": 0
+        },
+        {
+          "frequency": 0.6,
+          "fsc": 0
+        }
+      ]
+    },
+    {
+      "id": "unmasked",
+      "label": "给定未掩膜曲线",
+      "samples": [
+        {
+          "frequency": 0,
+          "fsc": 1
+        },
+        {
+          "frequency": 0.1,
+          "fsc": 0.995
+        },
+        {
+          "frequency": 0.2,
+          "fsc": 0.94
+        },
+        {
+          "frequency": 0.25,
+          "fsc": 0.8
+        },
+        {
+          "frequency": 0.3,
+          "fsc": 0.45
+        },
+        {
+          "frequency": 0.33,
+          "fsc": 0.18
+        },
+        {
+          "frequency": 0.35,
+          "fsc": 0.09
+        },
+        {
+          "frequency": 0.4,
+          "fsc": 0.02
+        },
+        {
+          "frequency": 0.45,
+          "fsc": 0
+        },
+        {
+          "frequency": 0.5,
+          "fsc": 0
+        },
+        {
+          "frequency": 0.6,
+          "fsc": 0
+        }
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "id": "C1",
+      "label": "类 01",
+      "keep": true,
+      "orientationDeg": 0,
+      "lobeCount": 2
+    },
+    {
+      "id": "C2",
+      "label": "类 02",
+      "keep": false,
+      "orientationDeg": 37,
+      "lobeCount": 3
+    },
+    {
+      "id": "C3",
+      "label": "类 03",
+      "keep": false,
+      "orientationDeg": 74,
+      "lobeCount": 4
+    },
+    {
+      "id": "C4",
+      "label": "类 04",
+      "keep": true,
+      "orientationDeg": 111,
+      "lobeCount": 5
+    },
+    {
+      "id": "C5",
+      "label": "类 05",
+      "keep": true,
+      "orientationDeg": 148,
+      "lobeCount": 6
+    },
+    {
+      "id": "C6",
+      "label": "类 06",
+      "keep": false,
+      "orientationDeg": 185,
+      "lobeCount": 2
+    },
+    {
+      "id": "C7",
+      "label": "类 07",
+      "keep": true,
+      "orientationDeg": 222,
+      "lobeCount": 3
+    },
+    {
+      "id": "C8",
+      "label": "类 08",
+      "keep": true,
+      "orientationDeg": 259,
+      "lobeCount": 4
+    },
+    {
+      "id": "C9",
+      "label": "类 09",
+      "keep": true,
+      "orientationDeg": 296,
+      "lobeCount": 5
+    },
+    {
+      "id": "C10",
+      "label": "类 10",
+      "keep": false,
+      "orientationDeg": 333,
+      "lobeCount": 6
+    },
+    {
+      "id": "C11",
+      "label": "类 11",
+      "keep": true,
+      "orientationDeg": 10,
+      "lobeCount": 2
+    },
+    {
+      "id": "C12",
+      "label": "类 12",
+      "keep": true,
+      "orientationDeg": 47,
+      "lobeCount": 3
+    },
+    {
+      "id": "C13",
+      "label": "类 13",
+      "keep": false,
+      "orientationDeg": 84,
+      "lobeCount": 4
+    },
+    {
+      "id": "C14",
+      "label": "类 14",
+      "keep": true,
+      "orientationDeg": 121,
+      "lobeCount": 5
+    },
+    {
+      "id": "C15",
+      "label": "类 15",
+      "keep": true,
+      "orientationDeg": 158,
+      "lobeCount": 6
+    },
+    {
+      "id": "C16",
+      "label": "类 16",
+      "keep": false,
+      "orientationDeg": 195,
+      "lobeCount": 2
+    }
+  ],
+  "projectionKind": "synthetic-lobes-not-images",
+  "note": "图像与数据均为教学示例。阈值交点按相邻给定样点直线估计，不代表已完成重构或验证。"
+}

@@ -1,0 +1,12 @@
+{
+ "family":"handwash-practice","title":"七步揉搓，认真洗手","subtitle":"大班健康课 · 内 外 夹 弓 大 立 腕","mode":"catalogue","rounds":null,
+ "steps":[
+  {"id":"palms","practiceNote":null,"plannedSeconds":null},
+  {"id":"backs","practiceNote":null,"plannedSeconds":null},
+  {"id":"webs","practiceNote":null,"plannedSeconds":null},
+  {"id":"knuckles","practiceNote":null,"plannedSeconds":null},
+  {"id":"thumbs","practiceNote":null,"plannedSeconds":null},
+  {"id":"tips","practiceNote":null,"plannedSeconds":null},
+  {"id":"wrists","practiceNote":null,"plannedSeconds":null}
+ ],"note":"小图提示揉搓部位与方向，具体动作请跟老师一起示范。"
+}

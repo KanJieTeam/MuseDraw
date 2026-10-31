@@ -1,0 +1,10 @@
+{
+ "family":"confounding-panel",
+ "title":"冰淇淋卖得越多，溺水的人越多？",
+ "subtitle":"共同涨落只是观察；右侧是需要另找证据检验的解释。",
+ "dataKind":"synthetic-teaching","periodLabel":"示例月份 · 按给定顺序",
+ "series":[{"id":"x","label":"冰淇淋销量指数","unit":"指数"},{"id":"y","label":"溺水事件","unit":"起"}],
+ "records":[{"label":"1月","x":20,"y":2},{"label":"2月","x":22,"y":2},{"label":"3月","x":35,"y":3},{"label":"4月","x":50,"y":5},{"label":"5月","x":70,"y":9},{"label":"6月","x":90,"y":14},{"label":"7月","x":100,"y":18},{"label":"8月","x":98,"y":17},{"label":"9月","x":75,"y":10},{"label":"10月","x":50,"y":5},{"label":"11月","x":30,"y":3},{"label":"12月","x":22,"y":2}],
+ "hypothesis":{"status":"illustrative-assumption","commonCause":"气温升高","mediator":"游泳的人增多","explanation":"气温可能同时影响购买冰淇淋与游泳活动。这组示例没有提供气温观测或干预，不能据此断言控制气温后关系消失。"},
+ "note":"示例数据，用于研究方法课；相关不等于因果，也不证明直接作用不存在。"
+}

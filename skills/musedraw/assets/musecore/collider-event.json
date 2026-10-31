@@ -1,0 +1,96 @@
+{
+  "family": "collider-event",
+  "title": "对撞事件的横截面",
+  "subtitle": "已知粒子类型的理想教学事件：同心探测层、计算径迹与给定清单的横动量不平衡。",
+  "dataKind": "synthetic-teaching",
+  "fieldModel": "uniform-axial-ideal",
+  "fieldTesla": 3.8,
+  "layers": [
+    {
+      "kind": "tracker",
+      "label": "径迹室",
+      "outerRadiusM": 1.2
+    },
+    {
+      "kind": "ecal",
+      "label": "电磁量能器",
+      "outerRadiusM": 1.8
+    },
+    {
+      "kind": "hcal",
+      "label": "强子量能器",
+      "outerRadiusM": 3
+    },
+    {
+      "kind": "muon",
+      "label": "外层缪子室",
+      "outerRadiusM": 5
+    }
+  ],
+  "particles": [
+    {
+      "id": "P1",
+      "label": "负缪子",
+      "kind": "muon",
+      "charge": -1,
+      "ptGeV": 45,
+      "phiDeg": 32,
+      "depositGeV": null
+    },
+    {
+      "id": "P2",
+      "label": "正电子",
+      "kind": "electron",
+      "charge": 1,
+      "ptGeV": 32,
+      "phiDeg": 118,
+      "depositGeV": 32
+    },
+    {
+      "id": "P3",
+      "label": "光子",
+      "kind": "photon",
+      "charge": 0,
+      "ptGeV": 28,
+      "phiDeg": 298,
+      "depositGeV": 28
+    },
+    {
+      "id": "P4",
+      "label": "带电强子",
+      "kind": "charged-hadron",
+      "charge": 1,
+      "ptGeV": 6,
+      "phiDeg": 235,
+      "depositGeV": 6
+    },
+    {
+      "id": "P5",
+      "label": "中性强子",
+      "kind": "neutral-hadron",
+      "charge": 0,
+      "ptGeV": 9,
+      "phiDeg": 80,
+      "depositGeV": 9
+    },
+    {
+      "id": "P6",
+      "label": "低横动量带电强子",
+      "kind": "charged-hadron",
+      "charge": -1,
+      "ptGeV": 0.55,
+      "phiDeg": 15,
+      "depositGeV": null
+    },
+    {
+      "id": "P7",
+      "label": "低横动量电子",
+      "kind": "electron",
+      "charge": -1,
+      "ptGeV": 0.3,
+      "phiDeg": 190,
+      "depositGeV": null
+    }
+  ],
+  "note": "粒子身份由输入给定；图示不执行粒子识别。清单不平衡不唯一指向中微子；未供给的对象不会被补造。"
+}
