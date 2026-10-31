@@ -6,8 +6,10 @@ These are separate tasks with separate encodings. `adoption-scenario` plots a co
 
 - Start from `assets/musecore/adoption-scenario.json`. Declare constant per-week p/q, fixed population, two to 52 weeks, target fraction and provenance.
 - Cumulative counts, one-week increments and the continuous instantaneous peak are calculated separately. Modelled expected people may be fractional. They are not actual adoption records.
+- The bar for week k is the interval total N(k)-N(k-1), centered at k-0.5 with width 0.6 week, entirely inside [k-1,k]. Curve and observation positions remain their exact time endpoints. A bar is not an instantaneous rate at its center or endpoint.
 - Up to 26 supplied observations remain separate; null remains missing. Residuals are descriptive, not parameter fitting, validation, uncertainty or causal evidence.
 - q=0 and q<=p remain valid cases; the continuous peak is then at the start. Targets outside the display window are not pulled inside it.
+- Week labels retain the usual one-decimal display. If this would turn a strictly positive model time into zero, they instead show an approximate three-significant-digit value (using an exponent when needed). True zero remains zero. This is a conditional model time, not an observed completion event; display precision does not improve the numerical model or establish forecasting accuracy.
 - No retention, active-use rate, forced migration, shutdown decision or rollout guarantee is inferred.
 
 ## Dated handoffs

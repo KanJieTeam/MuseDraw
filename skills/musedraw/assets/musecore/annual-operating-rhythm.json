@@ -1,0 +1,240 @@
+{
+  "family": "metro",
+  "title": "年度运营节奏",
+  "subtitle": "2027 · 四条工作线与共享评审 · 新的合成月度计划",
+  "annual": {
+    "year": 2027,
+    "months": [
+      {
+        "month": 1,
+        "label": "1月"
+      },
+      {
+        "month": 2,
+        "label": "2月"
+      },
+      {
+        "month": 3,
+        "label": "3月"
+      },
+      {
+        "month": 4,
+        "label": "4月"
+      },
+      {
+        "month": 5,
+        "label": "5月"
+      },
+      {
+        "month": 6,
+        "label": "6月"
+      },
+      {
+        "month": 7,
+        "label": "7月"
+      },
+      {
+        "month": 8,
+        "label": "8月"
+      },
+      {
+        "month": 9,
+        "label": "9月"
+      },
+      {
+        "month": 10,
+        "label": "10月"
+      },
+      {
+        "month": 11,
+        "label": "11月"
+      },
+      {
+        "month": 12,
+        "label": "12月"
+      }
+    ],
+    "routes": [
+      {
+        "id": "finance",
+        "label": "财务线",
+        "color": "#CF4A47",
+        "events": [
+          {
+            "id": "finance-0",
+            "month": 1,
+            "label": "预算确认"
+          },
+          {
+            "id": "finance-1",
+            "month": 3,
+            "label": "年度台账核对"
+          },
+          {
+            "id": "finance-2",
+            "month": 4,
+            "label": "季度结算"
+          },
+          {
+            "id": "finance-3",
+            "month": 7,
+            "label": "半年度结算"
+          },
+          {
+            "id": "finance-4",
+            "month": 10,
+            "label": "季度台账"
+          },
+          {
+            "id": "finance-5",
+            "month": 12,
+            "label": "来年预算复核"
+          }
+        ]
+      },
+      {
+        "id": "people",
+        "label": "人力线",
+        "color": "#419364",
+        "events": [
+          {
+            "id": "people-0",
+            "month": 2,
+            "label": "春季沟通"
+          },
+          {
+            "id": "people-1",
+            "month": 5,
+            "label": "岗位计划"
+          },
+          {
+            "id": "people-2",
+            "month": 8,
+            "label": "年中回顾"
+          },
+          {
+            "id": "people-3",
+            "month": 11,
+            "label": "人才盘点"
+          }
+        ]
+      },
+      {
+        "id": "product",
+        "label": "产品线",
+        "color": "#3B70AA",
+        "events": [
+          {
+            "id": "product-0",
+            "month": 2,
+            "label": "版本规划"
+          },
+          {
+            "id": "product-1",
+            "month": 5,
+            "label": "季度发布"
+          },
+          {
+            "id": "product-2",
+            "month": 7,
+            "label": "中期评审"
+          },
+          {
+            "id": "product-3",
+            "month": 10,
+            "label": "版本复盘"
+          },
+          {
+            "id": "product-4",
+            "month": 12,
+            "label": "年度归档"
+          }
+        ]
+      },
+      {
+        "id": "sales",
+        "label": "销售线",
+        "color": "#DD913D",
+        "events": [
+          {
+            "id": "sales-0",
+            "month": 1,
+            "label": "年度目标会"
+          },
+          {
+            "id": "sales-1",
+            "month": 3,
+            "label": "客户回访"
+          },
+          {
+            "id": "sales-2",
+            "month": 6,
+            "label": "半年检视"
+          },
+          {
+            "id": "sales-3",
+            "month": 9,
+            "label": "季度盘点"
+          },
+          {
+            "id": "sales-4",
+            "month": 12,
+            "label": "全年复盘"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "q1",
+        "label": "Q1经营会",
+        "date": "2027-04-05",
+        "routeIds": [
+          "finance",
+          "people",
+          "product",
+          "sales"
+        ]
+      },
+      {
+        "id": "q2",
+        "label": "Q2经营会",
+        "date": "2027-07-05",
+        "routeIds": [
+          "finance",
+          "people",
+          "product",
+          "sales"
+        ]
+      },
+      {
+        "id": "q3",
+        "label": "Q3经营会",
+        "date": "2027-10-04",
+        "routeIds": [
+          "finance",
+          "people",
+          "product",
+          "sales"
+        ]
+      },
+      {
+        "id": "q4",
+        "label": "Q4经营会",
+        "date": "2028-01-03",
+        "routeIds": [
+          "finance",
+          "people",
+          "product",
+          "sales"
+        ]
+      }
+    ],
+    "weekdayRule": "mon-fri-only",
+    "basis": {
+      "kind": "synthetic-plan",
+      "source": "普通任务与月份是新的合成计划；四次经营会日期沿用192作者说明，Q4明确为2028-01-03。"
+    }
+  },
+  "note": "月内节点错开仅用于排版，不表示具体日或先后。周一至周五日期数未扣法定节假日，也不推定调休。"
+}

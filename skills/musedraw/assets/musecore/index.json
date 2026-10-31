@@ -72,13 +72,19 @@
       "id": "metro",
       "family": "metro",
       "file": "metro.json",
-      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
-      "source": {
-        "case": "192-operating-rhythm-metro",
-        "sourceSha256": "6a9bb93f806047a5faf8558ff0e731b94c028d2dfbd3f366c4b52e5097efdabe",
-        "role": "Existing composition studied; content-driven implementation written",
-        "approval": "No new family-wide aesthetic approval yet"
-      }
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion"
+    },
+    {
+      "id": "annual-operating-rhythm",
+      "file": "annual-operating-rhythm.json",
+      "family": "metro",
+      "contentStatus": "New explicit synthetic month-precision plan with source-referenced review dates. Gregorian Monday-Friday dates only, not holidays or statutory workdays. Does not reconstruct unknown source task dates or dependencies.",
+      "sourceCases": [
+        {
+          "id": "192-operating-rhythm-metro",
+          "sourceSha256": "6a9bb93f806047a5faf8558ff0e731b94c028d2dfbd3f366c4b52e5097efdabe"
+        }
+      ]
     },
     {
       "id": "colour",

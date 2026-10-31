@@ -1,3 +1,4 @@
+import {renderAnnualMetro} from './annual-metro-figures.mjs';
 import {el} from './svg.mjs';
 import {LEAVES} from '../../assets/musecore/artwork/leaf-specimens.mjs';
 import {measureVisual,visualFontBounds,visualLines,visualPage,visualText,visualBlock,visualHeading,visualFinish,stroke,number,hex,blend} from './visual-tools.mjs';
@@ -64,6 +65,7 @@ export function visualFamilies(h){
   return visualFinish(s,{family:'specimen',width:W,height:H,columns,rows,cellHeight:cellH,objects,sourceCase:'p04-luoye-tujian'});
  }
  function metro(b){
+  if(Object.hasOwn(b,'annual'))return renderAnnualMetro(b);
   fields(b,['family','title','subtitle','stages','routes','sharedStages','note'],'metro');for(const k of ['title','subtitle','note'])str(b[k],k);
   list(b.stages,3,7,'stages');list(b.routes,2,4,'routes');list(b.sharedStages,1,b.stages.length,'sharedStages');unique(b.stages,'stages');unique(b.routes,'routes');
   b.stages.forEach(st=>{fields(st,['id','label'],'stage');str(st.label,'stage.label')});const stageSet=new Set(b.stages.map(x=>x.id));

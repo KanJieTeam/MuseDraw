@@ -849,7 +849,14 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/recruitment-funnel.test.mjs',
                                  'references/musecore-recruitment-funnel.md',
                                  'tests/musecore/timezone-endpoints.test.mjs',
-                                 'tests/musecore/flow-schedule-precision.test.mjs'):
+                                 'tests/musecore/flow-schedule-precision.test.mjs',
+                                 'scripts/musecore/annual-metro-models.mjs',
+                                 'scripts/musecore/annual-metro-figures.mjs',
+                                 'assets/musecore/annual-operating-rhythm.json',
+                                 'tests/musecore/annual-metro.test.mjs',
+                                 'references/musecore-annual-metro.md',
+                                 'tests/musecore/adoption-time-precision.test.mjs',
+                                 'tests/musecore/space-use-observed-totals.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",
