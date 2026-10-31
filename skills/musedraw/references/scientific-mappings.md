@@ -127,3 +127,12 @@ Source studies: [transition and spectral correspondence](https://www.nature.com/
 [operating-window comparison](https://www.nature.com/articles/s41893-023-01237-y/figures/1).
 These sources supply visual methods, not reusable levels, peak shapes, physical
 laws or performance claims.
+
+
+### Sankey 与 CPM 的数值域
+
+`sankey` 金额与 `critical-path` 持续时间以输入 Number 的规范十进制表示（`String(value)`，含指数表示）为给定值，不恢复 JSON 原始词法或猜测计算表达式。内部用共同十进制整数尺度核账和正逆推：`0.1`、`0.2` 的合计与 `0.3` 相等；显式给定的 `0.30000000000000004` 与 `0.3` 不相等。整数域不容许差一单位；不以总金额或总工期放大的 epsilon 抹去可表达差异。
+
+输入金额、持续时间及金额聚合/项目时刻不得超过 `Number.MAX_SAFE_INTEGER`，超过时明确拒绝，避免不安全整数和 Infinity 进入图形。CPM 返回的 ES/EF/LS/LF/float 从同一精确结果转为 Number；只有精确零总时差为关键任务，关键边还必须满足前项精确 EF 等于后项精确 ES。输出仍受 Number 表示与显示格式精度限制；不增添业务上的“近关键”阈值。其余依赖域仍为给定 DAG 的完成→开始、零滞后关系，不支持日历、资源约束或 SS/FF 等类型。Sankey 只核验给定金额的守恒，不从预算推执行实际、资金来源追踪或审批状态。
+
+若派生 CPM 时刻或余量转回 Number 后不能无损保留其规范十进制值，也明确拒绝（例如接近最大安全整数时再加 0.1），不让正余量变成 0。极小的正持续时间、工期、余量与轴刻度如经既有格式化变为 0，关键路径分支改用完整指数串；不缩字号，不修改通用数字格式器。

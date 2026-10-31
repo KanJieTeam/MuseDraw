@@ -190,7 +190,13 @@
       "id": "funnel",
       "family": "funnel",
       "file": "funnel.json",
-      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim"
+    },
+    {
+      "id": "recruiting-channel-review",
+      "file": "recruiting-channel-review.json",
+      "family": "funnel",
+      "contentStatus": "Author-generated source example. Given stage/channel/bin counts and externally reported duration summary; accepted-offer and entry-on-duty endpoints remain distinct. Given unit expense does not reconstruct unknown total expense or personal durations.",
       "sourceCases": [
         {
           "id": "187-recruiting-funnel",

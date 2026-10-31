@@ -842,7 +842,14 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/cohort-summary.test.mjs',
                                  'references/musecore-cohort-summary.md',
                                  'tests/musecore/survey-count-bounds.test.mjs',
-                                 'tests/musecore/meeting-ranking-layout.test.mjs'):
+                                 'tests/musecore/meeting-ranking-layout.test.mjs',
+                                 'scripts/musecore/recruitment-models.mjs',
+                                 'scripts/musecore/recruitment-figures.mjs',
+                                 'assets/musecore/recruiting-channel-review.json',
+                                 'tests/musecore/recruitment-funnel.test.mjs',
+                                 'references/musecore-recruitment-funnel.md',
+                                 'tests/musecore/timezone-endpoints.test.mjs',
+                                 'tests/musecore/flow-schedule-precision.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

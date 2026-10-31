@@ -1,3 +1,4 @@
+import {renderRecruitmentFunnel} from './recruitment-figures.mjs';
 import {el} from './svg.mjs';
 import {cohortRetentionSummaryModel} from './cohort-summary-models.mjs';
 import {equationTextPlan,equationDrawPlan} from './equation-figures.mjs';
@@ -31,6 +32,7 @@ export function comparisonFamilies(h){
   return visualFinish(s,{family:'waterfall',width:W,height:H,start:b.start,end:total,bars,domain:dom.domain,sourceCase:'d04-pubu-lirun'});
  }
  function funnel(b){
+  if(Object.hasOwn(b,'recruitment'))return renderRecruitmentFunnel(b);
   fields(b,['family','title','subtitle','stages','scale','unit','note'],'funnel');for(const k of ['title','subtitle','unit','note'])str(b[k],k);need(['linear','log'].includes(b.scale),'funnel scale must be explicit linear or log');list(b.stages,3,8,'stages');unique(b.stages,'stages');
   for(const it of b.stages){fields(it,['id','label','value'],'stage');str(it.label,'stage.label');number(it.value,'value');need(Number.isInteger(it.value)&&it.value>=0,'stage values must be nonnegative counts')}
   need(b.stages[0].value>0&&b.stages.every((it,i)=>!i||it.value<=b.stages[i-1].value),'funnel cohorts must be nested; counts cannot grow');need(b.scale!=='log'||b.stages.every(it=>it.value>0),'log scale requires positive counts');

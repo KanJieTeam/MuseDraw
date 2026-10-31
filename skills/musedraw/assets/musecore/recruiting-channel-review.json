@@ -1,0 +1,152 @@
+{
+  "family": "funnel",
+  "title": "招聘漏斗",
+  "subtitle": "2026年下半年研发岗位招聘 · 原稿示例数据",
+  "stages": [
+    {
+      "id": "stage-0",
+      "label": "投递",
+      "value": 2400
+    },
+    {
+      "id": "stage-1",
+      "label": "简历筛选通过",
+      "value": 480
+    },
+    {
+      "id": "stage-2",
+      "label": "电话面试",
+      "value": 210
+    },
+    {
+      "id": "stage-3",
+      "label": "技术面试",
+      "value": 96
+    },
+    {
+      "id": "stage-4",
+      "label": "终面",
+      "value": 38
+    },
+    {
+      "id": "stage-5",
+      "label": "发出录用",
+      "value": 22
+    },
+    {
+      "id": "stage-6",
+      "label": "接受录用",
+      "value": 17
+    }
+  ],
+  "scale": "log",
+  "unit": "人",
+  "note": "原稿示例。主链与用时终点为接受录用；渠道原标“入职”，未核同口径。单价精度未给，不反推总费。用时箱明确按左闭右开解释，原未公开闭合约定。",
+  "recruitment": {
+    "mainEndpoint": {
+      "stageId": "stage-6"
+    },
+    "channels": {
+      "denominatorStageId": "stage-0",
+      "endpoint": {
+        "type": "external",
+        "id": "entered-duty",
+        "label": "入职"
+      },
+      "relationship": "unverified",
+      "source": "187原SVG来源表；原术语与主链接受录用不同，事件口径未核实",
+      "rows": [
+        {
+          "id": "c0",
+          "label": "员工内推",
+          "applications": 180,
+          "outcomes": 6,
+          "cost": {
+            "kind": "given-per-outcome",
+            "amountMinor": 800000,
+            "currency": "CNY",
+            "precision": "unspecified",
+            "source": "187原SVG每人成本列"
+          }
+        },
+        {
+          "id": "c1",
+          "label": "招聘网站",
+          "applications": 1600,
+          "outcomes": 5,
+          "cost": {
+            "kind": "given-per-outcome",
+            "amountMinor": 2400000,
+            "currency": "CNY",
+            "precision": "unspecified",
+            "source": "187原SVG每人成本列"
+          }
+        },
+        {
+          "id": "c2",
+          "label": "猎头",
+          "applications": 120,
+          "outcomes": 4,
+          "cost": {
+            "kind": "given-per-outcome",
+            "amountMinor": 9000000,
+            "currency": "CNY",
+            "precision": "unspecified",
+            "source": "187原SVG每人成本列"
+          }
+        },
+        {
+          "id": "c3",
+          "label": "校园招聘",
+          "applications": 500,
+          "outcomes": 2,
+          "cost": {
+            "kind": "given-per-outcome",
+            "amountMinor": 3000000,
+            "currency": "CNY",
+            "precision": "unspecified",
+            "source": "187原SVG每人成本列"
+          }
+        }
+      ]
+    },
+    "duration": {
+      "start": {
+        "stageId": "stage-0"
+      },
+      "endpoint": {
+        "type": "stage",
+        "stageId": "stage-6"
+      },
+      "relationship": "same-cohort",
+      "edges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "counts": [
+        0,
+        4,
+        6,
+        3,
+        3,
+        1,
+        0
+      ],
+      "closure": "left-closed-right-open",
+      "reported": {
+        "given": true,
+        "source": "187原SVG给定摘要，未由箱频数反算",
+        "median": 34,
+        "minimum": 22,
+        "maximum": 64
+      },
+      "source": "187原SVG可见方块数；采用明确左闭右开连续区间，不补个人用时"
+    }
+  }
+}
