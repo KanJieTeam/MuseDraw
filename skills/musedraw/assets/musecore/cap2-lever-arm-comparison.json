@@ -1,0 +1,12 @@
+{
+  "family": "lever-arm-comparison",
+  "title": "三类杠杆 · 省力、等臂与费力",
+  "subtitle": "比较动力臂与阻力臂，读出理想平衡时的力比",
+  "lengthUnit": "m",
+  "examples": [
+    {"id":"crowbar","label":"省力杠杆","kind":"first","effortArm":0.8,"loadArm":0.2,"example":"例：撬棍","note":"动力臂较长；同角度转动时，动力作用点走过的弧长较大。"},
+    {"id":"balance","label":"等臂杠杆","kind":"first","effortArm":0.5,"loadArm":0.5,"example":"例：天平","note":"两臂相等；理想平衡时，动力与阻力大小相等。"},
+    {"id":"tweezers","label":"费力杠杆","kind":"third","effortArm":0.3,"loadArm":1,"example":"例：镊子、钓鱼竿","note":"动力臂较短；同角度转动时，动力作用点走过的弧长较小。"}
+  ],
+  "note":"给定力臂来自原作；原作未给出载荷大小，本图只计算符号力比。这里按力臂关系比较省力与费力，与按支点、动力和阻力位置分类的第一、二、三类杠杆有区别。"
+}

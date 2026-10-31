@@ -6,6 +6,10 @@ relative oxygenation are separate encodings. Pulmonary arteries carry the
 lower-oxygen side; arterial/venous naming follows direction relative to the
 heart, not a universal red/blue rule. The map is schematic, not anatomy to scale,
 haemodynamic calculation or a congenital/fetal circulation model.
+A bridged crossing is a non-junction: the crossing route follows the raised
+bridge, without an additional straight segment through the other route. The
+white chevron in the legend and on every directed edge denotes blood-flow
+direction; it does not denote a pressure, velocity or duration.
 
 `metabolism-metro` draws supplied shared station IDs, an explicit cycle, declared
 linear main/branch routes and compartment membership. A shared metabolite keeps

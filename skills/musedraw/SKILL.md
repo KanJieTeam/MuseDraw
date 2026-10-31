@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.50
+  instructions-version: musecore-2026-10-31.51
 ---
 
 # MuseDraw
@@ -94,6 +94,10 @@ family's encodings, coordinated geometry and placement.
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |
 | Given jump-rope scores and explicit arithmetic redistribution | [Average source input](references/musecore-average-source.md) |
 | Supplied bin frequencies, density and externally reported summaries | [Binned histogram](references/musecore-histogram-binned-source.md) |
+| Complete branches joining one common suffix | [Workflow](references/cap2-converging-pathways.md) |
+| Scatter evidence with recomputed descriptive summaries | [Workflow](references/cap2-data-scatter-evidence.md) |
+| Perpendicular ideal lever arm comparisons | [Workflow](references/cap2-lever-comparison.md) |
+| Explicit integer Base62 arithmetic, auxiliary view | [Workflow](references/cap2-tcp-base62.md) |
 | Aggregate organization counts without invented reporting links | [Organization aggregates](references/musecore-hierarchy-aggregate.md) |
 | Supplied PCR example sequence and explicit primer coordinates | [Primer source input](references/musecore-primer-source.md) |
 | Annual point-use aggregates with explicit group denominators | [Annual benefits](references/musecore-benefit-annual-summary.md) |

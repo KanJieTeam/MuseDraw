@@ -1,0 +1,94 @@
+{
+  "family": "seir-scenarios",
+  "title": "明确的时窗，量化给定情景的差别",
+  "subtitle": "闭合SEIR合成教学情景 · 同一初值与参数，比较明确时窗内的数值网格最大值",
+  "model": "closed-homogeneous-seir",
+  "population": 1000000,
+  "initial": {
+    "S": 999990,
+    "E": 0,
+    "I": 10,
+    "R": 0
+  },
+  "sigmaPerDay": 0.25,
+  "gammaPerDay": 0.16666666666666666,
+  "durationDays": 300,
+  "stepDays": 0.1,
+  "sampleCount": 601,
+  "scenarios": [
+    {
+      "id": "a",
+      "label": "A · β 始终保持给定值",
+      "transmission": [
+        {
+          "startDay": 0,
+          "betaPerDay": 0.4166666666666667
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "label": "B · 第 40 日后采用较低 β",
+      "transmission": [
+        {
+          "startDay": 0,
+          "betaPerDay": 0.4166666666666667
+        },
+        {
+          "startDay": 40,
+          "betaPerDay": 0.2916666666666667
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "label": "C · 70–130 日采用较低 β，随后恢复原值",
+      "transmission": [
+        {
+          "startDay": 0,
+          "betaPerDay": 0.4166666666666667
+        },
+        {
+          "startDay": 70,
+          "betaPerDay": 0.16666666666666666
+        },
+        {
+          "startDay": 130,
+          "betaPerDay": 0.4166666666666667
+        }
+      ]
+    }
+  ],
+  "note": "情景仅使用明确给定的分段传播率，假定人群均匀混合、人口固定，S→E→I→R，无出生、死亡和再次易感；E已感染但尚无传染性。a为参照窗、b为比较窗，端点纳入；数值最大值及其时点来自RK4细网格，并非连续解析峰，也不据此判定第二波或干预因果。期末只表示第300日，不等同最终流行规模；不是病例观测或真实疫情预测。",
+  "analysis": {
+    "metric": "finite-mesh-I-fraction-maximum",
+    "comparisons": [
+      {
+        "id": "b-vs-a",
+        "reference": {
+          "scenario": "a",
+          "startDay": 0,
+          "endDay": 300
+        },
+        "comparison": {
+          "scenario": "b",
+          "startDay": 0,
+          "endDay": 300
+        }
+      },
+      {
+        "id": "c-two-windows",
+        "reference": {
+          "scenario": "c",
+          "startDay": 70,
+          "endDay": 130
+        },
+        "comparison": {
+          "scenario": "c",
+          "startDay": 130,
+          "endDay": 300
+        }
+      }
+    ]
+  }
+}

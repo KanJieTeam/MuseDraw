@@ -1,0 +1,211 @@
+{
+  "family": "converging-pathways",
+  "title": "蛋白质结构解析的三条路线",
+  "subtitle": "不同样品准备与测量环节，在结构模型处汇合。",
+  "meaning": "method-stages",
+  "stations": [
+    {
+      "id": "s0",
+      "label": "表达与纯化"
+    },
+    {
+      "id": "s1",
+      "label": "结晶"
+    },
+    {
+      "id": "s2",
+      "label": "X 射线衍射"
+    },
+    {
+      "id": "s3",
+      "label": "解相位"
+    },
+    {
+      "id": "s4",
+      "label": "电子密度图"
+    },
+    {
+      "id": "s5",
+      "label": "结构模型"
+    },
+    {
+      "id": "s6",
+      "label": "冷冻制样"
+    },
+    {
+      "id": "s7",
+      "label": "电镜采集"
+    },
+    {
+      "id": "s8",
+      "label": "颗粒挑选与分类"
+    },
+    {
+      "id": "s9",
+      "label": "三维重构"
+    },
+    {
+      "id": "s10",
+      "label": "同位素标记表达"
+    },
+    {
+      "id": "s11",
+      "label": "多维谱采集"
+    },
+    {
+      "id": "s12",
+      "label": "信号归属"
+    },
+    {
+      "id": "s13",
+      "label": "距离约束"
+    },
+    {
+      "id": "s14",
+      "label": "结构计算"
+    },
+    {
+      "id": "s15",
+      "label": "模型验证"
+    },
+    {
+      "id": "s16",
+      "label": "提交 PDB"
+    }
+  ],
+  "routes": [
+    {
+      "id": "xray",
+      "label": "X 射线晶体学",
+      "color": "#2473A8",
+      "direction": "forward",
+      "stations": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "segments": [
+        {
+          "from": "s0",
+          "to": "s1"
+        },
+        {
+          "from": "s1",
+          "to": "s2"
+        },
+        {
+          "from": "s2",
+          "to": "s3"
+        },
+        {
+          "from": "s3",
+          "to": "s4"
+        },
+        {
+          "from": "s4",
+          "to": "s5"
+        }
+      ],
+      "note": "需要长出排列整齐的晶体"
+    },
+    {
+      "id": "cryoem",
+      "label": "冷冻电镜",
+      "color": "#289A55",
+      "direction": "forward",
+      "stations": [
+        "s0",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s5"
+      ],
+      "segments": [
+        {
+          "from": "s0",
+          "to": "s6"
+        },
+        {
+          "from": "s6",
+          "to": "s7"
+        },
+        {
+          "from": "s7",
+          "to": "s8"
+        },
+        {
+          "from": "s8",
+          "to": "s9"
+        },
+        {
+          "from": "s9",
+          "to": "s5"
+        }
+      ],
+      "note": "样品冻在很薄的玻璃态冰里"
+    },
+    {
+      "id": "nmr",
+      "label": "核磁共振",
+      "color": "#E78A1B",
+      "direction": "forward",
+      "stations": [
+        "s10",
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s5"
+      ],
+      "segments": [
+        {
+          "from": "s10",
+          "to": "s11"
+        },
+        {
+          "from": "s11",
+          "to": "s12"
+        },
+        {
+          "from": "s12",
+          "to": "s13"
+        },
+        {
+          "from": "s13",
+          "to": "s14"
+        },
+        {
+          "from": "s14",
+          "to": "s5"
+        }
+      ],
+      "note": "蛋白在溶液里测，常用于较小蛋白"
+    },
+    {
+      "id": "common",
+      "label": "共同终点",
+      "color": "#687682",
+      "direction": "forward",
+      "stations": [
+        "s5",
+        "s15",
+        "s16"
+      ],
+      "segments": [
+        {
+          "from": "s5",
+          "to": "s15"
+        },
+        {
+          "from": "s15",
+          "to": "s16"
+        }
+      ]
+    }
+  ],
+  "note": "这是教学中的典型方法阶段；各方法内部的迭代、省略环节和替代路线未在此图展开。站距不表示耗时，汇合不表示方法等价。"
+}

@@ -286,13 +286,7 @@
       "id": "scatter-panels",
       "family": "scatter-panels",
       "file": "scatter-panels.json",
-      "contentStatus": "fictional development observations, no empirical or causal claim",
-      "sourceCases": [
-        {
-          "id": "d08-ansikumu",
-          "sourceSha256": "56555e18fbc74265abf607d52ede48f9bb16c47eee93cfe40fd877dbfa5517aa"
-        }
-      ]
+      "contentStatus": "fictional development observations, no empirical or causal claim"
     },
     {
       "id": "bump",
@@ -460,13 +454,7 @@
       "id": "lever",
       "family": "lever",
       "file": "lever.json",
-      "contentStatus": "idealized teaching input, not an experimental observation",
-      "sourceCases": [
-        {
-          "id": "t09-sanlei-ganggan",
-          "sourceSha256": "a78e9e0468113d99ba62e5789d5d7357e6ca1e5764c4577f01bedda49260dc31"
-        }
-      ]
+      "contentStatus": "idealized teaching input, not an experimental observation"
     },
     {
       "id": "lens",
@@ -1120,13 +1108,7 @@
       "id": "seir-scenarios",
       "family": "seir-scenarios",
       "file": "seir-scenarios.json",
-      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome",
-      "sourceCases": [
-        {
-          "id": "166-seir-scenarios",
-          "sourceSha256": "d0f0a0bfa8c8e20b9372b0a511872e6f03f0fd15086bf360b8728e220d8d723c"
-        }
-      ]
+      "contentStatus": "explicit synthetic development example; bounded model or supplied records, not a verified real outcome"
     },
     {
       "id": "repressilator",
@@ -2170,13 +2152,7 @@
       "id": "protein-structure-routes",
       "family": "pathway-map",
       "file": "protein-structure-routes.json",
-      "contentStatus": "Source-derived teaching content; graph is illustrative, not a measured or verified operational result.",
-      "sourceCases": [
-        {
-          "id": "s05-danbai-jiegou",
-          "sourceSha256": "bddba6ad2a4285336b81ba170307b6e8ac8e769a244c1c19333143b043ba3b0c"
-        }
-      ]
+      "contentStatus": "Source-derived teaching content; graph is illustrative, not a measured or verified operational result."
     },
     {
       "id": "sales-handoff-map",
@@ -2355,6 +2331,60 @@
         {
           "id": "199-weekly-eisenhower",
           "sourceSha256": "0873342e6a20e55edce7308b08370add3865b03a1b18c09f51d9c918b80f2d83"
+        }
+      ]
+    },
+    {
+      "id": "cap2-protein-convergence",
+      "file": "cap2-protein-convergence.json",
+      "family": "converging-pathways",
+      "contentStatus": "Bounded executable composition from supplied source examples; caller labels and notes retained. Not exact source reproduction, host-transfer proof or aesthetic approval.",
+      "sourceCases": [
+        {
+          "id": "s05-danbai-jiegou",
+          "sourceSha256": "bddba6ad2a4285336b81ba170307b6e8ac8e769a244c1c19333143b043ba3b0c"
+        }
+      ]
+    },
+    {
+      "id": "cap2-data-anscombe-evidence",
+      "file": "cap2-data-anscombe-evidence.json",
+      "family": "scatter-evidence",
+      "contentStatus": "Bounded executable composition from supplied source examples; caller labels and notes retained. Not exact source reproduction, host-transfer proof or aesthetic approval.",
+      "sourceCases": [
+        {
+          "id": "d08-ansikumu",
+          "sourceSha256": "56555e18fbc74265abf607d52ede48f9bb16c47eee93cfe40fd877dbfa5517aa"
+        }
+      ]
+    },
+    {
+      "id": "cap2-lever-arm-comparison",
+      "file": "cap2-lever-arm-comparison.json",
+      "family": "lever-arm-comparison",
+      "contentStatus": "Bounded executable composition from supplied source examples; caller labels and notes retained. Not exact source reproduction, host-transfer proof or aesthetic approval.",
+      "sourceCases": [
+        {
+          "id": "t09-sanlei-ganggan",
+          "sourceSha256": "a78e9e0468113d99ba62e5789d5d7357e6ca1e5764c4577f01bedda49260dc31"
+        }
+      ]
+    },
+    {
+      "id": "cap2-tcp-base62-source",
+      "file": "cap2-tcp-base62-source.json",
+      "family": "base62-encoding",
+      "contentStatus": "Auxiliary exact integer Base62 encoding only. The e01 short-link architecture source association remains on its existing main diagram; this does not complete that case."
+    },
+    {
+      "id": "seir-window-comparisons",
+      "file": "seir-window-comparisons.json",
+      "family": "seir-scenarios",
+      "contentStatus": "Explicit synthetic finite-window numerical comparisons. RK4 mesh maxima are not continuous analytic peaks, observed epidemics, final-size solutions or causal estimates.",
+      "sourceCases": [
+        {
+          "id": "166-seir-scenarios",
+          "sourceSha256": "d0f0a0bfa8c8e20b9372b0a511872e6f03f0fd15086bf360b8728e220d8d723c"
         }
       ]
     }
@@ -2935,6 +2965,30 @@
       "reference": "references/musecore-weekplan-allocation.md",
       "ids": [
         "weekly-greedy-allocation"
+      ]
+    },
+    {
+      "reference": "references/cap2-converging-pathways.md",
+      "ids": [
+        "converging-pathways"
+      ]
+    },
+    {
+      "reference": "references/cap2-data-scatter-evidence.md",
+      "ids": [
+        "scatter-evidence"
+      ]
+    },
+    {
+      "reference": "references/cap2-lever-comparison.md",
+      "ids": [
+        "lever-arm-comparison"
+      ]
+    },
+    {
+      "reference": "references/cap2-tcp-base62.md",
+      "ids": [
+        "base62-encoding"
       ]
     }
   ]

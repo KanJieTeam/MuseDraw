@@ -1,0 +1,10 @@
+{
+  "family": "base62-encoding",
+  "title": "短链接中的 Base62：1,000,000 怎样变成 4c92",
+  "subtitle": "同一个非负整数，经连续除法得到余数，再反向读取字符。字符表顺序由调用者明确给定。",
+  "decimal": "1000000",
+  "alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "inputLabel": "发号器给出的整数",
+  "outputLabel": "Base62 编码结果",
+  "note": "这是短链接源案例的编码计算辅助图，不是 API 组件全图。Base62 编码保留整数信息；它不提供随机性、保密性或全局发号策略。架构中的返回状态、缓存策略与事件路径需要另外明确给定。"
+}
