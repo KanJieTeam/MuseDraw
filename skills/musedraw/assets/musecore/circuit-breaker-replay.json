@@ -1,0 +1,384 @@
+{
+  "family": "circuit-breaker-replay",
+  "title": "熔断器",
+  "subtitle": "自定义串行教学策略 · 90次给定请求结果，状态与拒绝由规则计算",
+  "evidenceKind": "source-transcribed-example",
+  "view": "overview",
+  "policy": {
+    "windowSize": 20,
+    "minimumCalls": 20,
+    "failureThreshold": 0.5,
+    "cooldownSeconds": 15,
+    "cooldownBoundary": "strict-after",
+    "halfOpenProbeLimit": 5,
+    "halfOpenPolicy": "any-failure-opens"
+  },
+  "requests": [
+    {
+      "atSeconds": 0,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 1,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 2,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 3,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 4,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 5,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 6,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 7,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 8,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 9,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 10,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 11,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 12,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 13,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 14,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 15,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 16,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 17,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 18,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 19,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 20,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 21,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 22,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 23,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 24,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 25,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 26,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 27,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 28,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 29,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 30,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 31,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 32,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 33,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 34,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 35,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 36,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 37,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 38,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 39,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 40,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 41,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 42,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 43,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 44,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 45,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 46,
+      "downstreamResult": "failure"
+    },
+    {
+      "atSeconds": 47,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 48,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 49,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 50,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 51,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 52,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 53,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 54,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 55,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 56,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 57,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 58,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 59,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 60,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 61,
+      "downstreamResult": null
+    },
+    {
+      "atSeconds": 62,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 63,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 64,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 65,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 66,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 67,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 68,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 69,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 70,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 71,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 72,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 73,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 74,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 75,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 76,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 77,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 78,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 79,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 80,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 81,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 82,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 83,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 84,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 85,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 86,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 87,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 88,
+      "downstreamResult": "success"
+    },
+    {
+      "atSeconds": 89,
+      "downstreamResult": "success"
+    }
+  ],
+  "assumptions": [
+    "最小样本20次是适配假设；原稿另给20次统计窗口。",
+    "请求时间取每秒槽的左端，是本例明确约定；请求按序立即完成。",
+    "等待边界采用严格大于15秒，是适配假设；不宣称恢复原作者算法。"
+  ],
+  "note": "失败请求计入放行总数；拒绝时没有下游结果。此为给定示例与明确假设下的自定义教学回放，不是并发执行、慢调用模型或Resilience4j实现。"
+}

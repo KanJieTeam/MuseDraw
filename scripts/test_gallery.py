@@ -788,7 +788,14 @@ class GalleryTests(unittest.TestCase):
                                  'references/musecore-constellation-source.md',
                                  'tests/musecore/constellation-source.test.mjs',
                                  'tests/musecore/phase-layout.test.mjs',
-                                 'tests/musecore/benefit-layout.test.mjs'):
+                                 'tests/musecore/benefit-layout.test.mjs',
+                                 'scripts/musecore/breaker-models.mjs',
+                                 'scripts/musecore/breaker-figures.mjs',
+                                 'assets/musecore/circuit-breaker-replay.json',
+                                 'references/musecore-breaker-replay.md',
+                                 'tests/musecore/breaker-source.test.mjs',
+                                 'tests/musecore/runoff-layout.test.mjs',
+                                 'tests/musecore/solids-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

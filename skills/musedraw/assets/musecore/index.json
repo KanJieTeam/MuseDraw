@@ -394,13 +394,7 @@
       "id": "states",
       "family": "states",
       "file": "states.json",
-      "contentStatus": "fictional explicit transitions, not a circuit-breaker implementation",
-      "sourceCases": [
-        {
-          "id": "102-circuit-breaker",
-          "sourceSha256": "57d3e52dc63964e3145802790ed6feaa4ad5918b6b6b44d180f136c1621ac792"
-        }
-      ]
+      "contentStatus": "fictional explicit transitions, not a circuit-breaker implementation"
     },
     {
       "id": "deployment",
@@ -2261,6 +2255,18 @@
           "sourceSha256": "ec0539e9c39415cc739c5b22f2c05cc653d395b86f22d95b2b3b56a3a50db420"
         }
       ]
+    },
+    {
+      "id": "circuit-breaker-replay",
+      "family": "circuit-breaker-replay",
+      "file": "circuit-breaker-replay.json",
+      "contentStatus": "Source-derived 90 illustrative request results under explicit adaptation assumptions: minimum sample20, instantaneous left-end slot times, strict-after cooldown. Serial custom teaching policy; not author-algorithm recovery, concurrent execution or a Resilience4j implementation. Outcomes, admission and transitions computed from supplied policy; rejected requests have no downstream result.",
+      "sourceCases": [
+        {
+          "id": "102-circuit-breaker",
+          "sourceSha256": "57d3e52dc63964e3145802790ed6feaa4ad5918b6b6b44d180f136c1621ac792"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2821,6 +2827,12 @@
       "reference": "references/musecore-constellation-source.md",
       "ids": [
         "service-dependency-star-map"
+      ]
+    },
+    {
+      "reference": "references/musecore-breaker-replay.md",
+      "ids": [
+        "circuit-breaker-replay"
       ]
     }
   ]
