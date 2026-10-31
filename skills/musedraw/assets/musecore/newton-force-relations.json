@@ -1,0 +1,55 @@
+{
+  "family": "force-motion",
+  "title": "牛顿第二定律 · 明确质量下的理想关系",
+  "subtitle": "给定受力实例与另给定的质量条件，分别计算后并列展示",
+  "units": "SI",
+  "dimension": "horizontal-1d",
+  "verticalBalance": true,
+  "cases": [
+    {
+      "id": "middle",
+      "label": "给定的 2 kg 物体",
+      "massKg": 2,
+      "forces": [
+        {
+          "id": "pull",
+          "label": "给定拉力",
+          "newtons": 10
+        },
+        {
+          "id": "drag",
+          "label": "给定阻力",
+          "newtons": -2
+        }
+      ],
+      "detail": "全部给定水平力相加：10 N − 2 N = 8 N"
+    }
+  ],
+  "note": "仅分析水平方向，已明确给定竖直力平衡；向右为正。所有力箭头共用一个 N 比例尺，加速度另用 m/s² 比例尺。图中没有推断物体的速度或位移。",
+  "relation": {
+    "kind": "acceleration-vs-net-force",
+    "model": "ideal-constant-mass",
+    "netForceRangeN": [
+      0,
+      10
+    ],
+    "masses": [
+      {
+        "id": "m0",
+        "label": "m = 0.5 kg",
+        "massKg": 0.5
+      },
+      {
+        "id": "m1",
+        "label": "m = 1 kg",
+        "massKg": 1
+      },
+      {
+        "id": "m2",
+        "label": "m = 2 kg",
+        "massKg": 2
+      }
+    ],
+    "note": "固定质量的理想关系；横轴为另给定的合外力范围，不是测量记录。"
+  }
+}

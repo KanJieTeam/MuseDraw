@@ -730,13 +730,7 @@
       "id": "workforce",
       "family": "workforce",
       "file": "workforce.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "198-call-center-staffing",
-          "sourceSha256": "77be3c298f99c317972ec2b7c363ed1274f74fe70c96701f53150f985bc73665"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "leave-plan",
@@ -814,13 +808,7 @@
       "id": "force-motion",
       "family": "force-motion",
       "file": "force-motion.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "158-newtons-second-law",
-          "sourceSha256": "b6334e9d29962d00f8658fb173fc1015d0f020fd5ba394b2ee7117fd2eb10f8a"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "equation-balance",
@@ -2243,6 +2231,30 @@
           "sourceSha256": "c3ecc623cdb839dbe7ff52a6ac486d83dde1b1d348f9b1ffdd757e8f64bd08eb"
         }
       ]
+    },
+    {
+      "id": "erlang-staffing",
+      "family": "erlang-staffing",
+      "file": "erlang-staffing.json",
+      "contentStatus": "Source-derived single-peak teaching scenario: 520 calls/hour, 240 seconds, 80% within20 seconds, 30% unavailable. Conditional stationary M/M/c calculation, not real staffing assurance. The source whole-day curve and 485 person-hour assertion are not inferred from this one peak.",
+      "sourceCases": [
+        {
+          "id": "198-call-center-staffing",
+          "sourceSha256": "77be3c298f99c317972ec2b7c363ed1274f74fe70c96701f53150f985bc73665"
+        }
+      ]
+    },
+    {
+      "id": "newton-force-relations",
+      "family": "force-motion",
+      "file": "newton-force-relations.json",
+      "contentStatus": "Source-derived ideal a–net-force conditions for 0.5/1/2 kg over0..10N and a separate given2kg body with10N−2N. These are ideal relations, not fitted observations or velocity/displacement predictions; other source slogans are not claimed as complete reproduction.",
+      "sourceCases": [
+        {
+          "id": "158-newtons-second-law",
+          "sourceSha256": "b6334e9d29962d00f8658fb173fc1015d0f020fd5ba394b2ee7117fd2eb10f8a"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2791,6 +2803,12 @@
       "reference": "references/musecore-image-build.md",
       "ids": [
         "image-build-comparison"
+      ]
+    },
+    {
+      "reference": "references/musecore-erlang-staffing.md",
+      "ids": [
+        "erlang-staffing"
       ]
     }
   ]

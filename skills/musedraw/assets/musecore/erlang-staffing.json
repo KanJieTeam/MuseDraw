@@ -1,0 +1,19 @@
+{
+  "family":"erlang-staffing",
+  "title":"客服高峰，多少人在线？",
+  "subtitle":"给定示例 · 11:00 高峰的 Erlang C 条件测算",
+  "evidenceKind":"source-illustration",
+  "model":"stationary-mm-c-fcfs-no-abandonment",
+  "scenarios":[{
+    "id":"peak",
+    "label":"11:00 高峰 · 每小时 520 通来电",
+    "hourlyCalls":520,
+    "meanServiceSeconds":240,
+    "answerWithinSeconds":20,
+    "targetFraction":0.8,
+    "unavailableFraction":0.3,
+    "maxAgents":1000,
+    "note":"原稿明确给定的单小时示例；未补齐其他小时或全天排班。"
+  }],
+  "note":"条件模型：泊松到达、指数服务时长、同质坐席、单队列先到先服务，无弃呼。各情景独立稳态；结果不保证真实接起水平。"
+}

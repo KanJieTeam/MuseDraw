@@ -774,7 +774,15 @@ class GalleryTests(unittest.TestCase):
                                  'references/musecore-image-build.md',
                                  'tests/musecore/imagebuild-source.test.mjs',
                                  'tests/musecore/force-layout.test.mjs',
-                                 'tests/musecore/incident-layout.test.mjs'):
+                                 'tests/musecore/incident-layout.test.mjs',
+                                 'scripts/musecore/erlstaff-models.mjs',
+                                 'scripts/musecore/erlstaff-figures.mjs',
+                                 'assets/musecore/erlang-staffing.json',
+                                 'references/musecore-erlang-staffing.md',
+                                 'tests/musecore/erlang-staffing-source.test.mjs',
+                                 'assets/musecore/newton-force-relations.json',
+                                 'tests/musecore/force-relations.test.mjs',
+                                 'tests/musecore/book-repair-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",
