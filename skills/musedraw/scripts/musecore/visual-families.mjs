@@ -1,6 +1,6 @@
 import {el} from './svg.mjs';
 import {LEAVES} from '../../assets/musecore/artwork/leaf-specimens.mjs';
-import {measureVisual,visualLines,visualPage,visualText,visualBlock,visualHeading,visualFinish,stroke,number,hex,blend} from './visual-tools.mjs';
+import {measureVisual,visualFontBounds,visualLines,visualPage,visualText,visualBlock,visualHeading,visualFinish,stroke,number,hex,blend} from './visual-tools.mjs';
 
 export function visualFamilies(h){
  const {need,list,fields,str,unique}=h;
@@ -10,18 +10,37 @@ export function visualFamilies(h){
   list(b.patterns,3,12,'patterns');list(b.accentBeats,0,b.beats,'accentBeats');need(new Set(b.accentBeats).size===b.accentBeats.length,'duplicate accent beat');for(const beat of b.accentBeats)need(Number.isInteger(beat)&&beat>=0&&beat<b.beats,'accent beat outside measure');
   list(b.facts,1,3,'facts');b.facts.forEach(f=>{fields(f,['value','label'],'fact');str(f.value,'fact.value');str(f.label,'fact.label')});
   const patterns=b.patterns.map(row=>{list(row,1,24,'notes');return row.map(n=>{fields(n,['at','strength'],'note');number(n.at,'note.at');number(n.strength,'note.strength');need(n.at>=0&&n.at<b.beats&&n.strength>0&&n.strength<=1,'note outside measure or strength range');return n})});
-  const W=1200,H=1600,bg='#2340A0',paper='#F4F2EC',yellow='#F2C230',s=visualPage(W,H,bg),x0=120,span=960,rowH=Math.min(100,740/patterns.length),rmax=Math.min(37,rowH*.34),plotY=120;
-  const beatSpan=span/b.beats;
-  for(let i=0;i<=b.beats;i++)stroke(s,[[x0+beatSpan*i,100],[x0+beatSpan*i,plotY+rowH*patterns.length]],paper,1,{'stroke-opacity':.14});
-  const dots=[];patterns.forEach((row,ri)=>row.forEach(n=>{const x=x0+beatSpan*n.at,y=plotY+rowH*(ri+.5),r=rmax*Math.sqrt(n.strength),accent=b.accentBeats.includes(n.at);el('circle',{cx:x,cy:y,r,fill:accent?yellow:paper},s);dots.push({row:ri,at:n.at,x,y,r,accent})}));
-  const caption=visualLines(b.caption,960,{size:18,max:2});visualBlock(s,120,plotY+rowH*patterns.length+22,caption,{size:18,fill:paper});
-  const headWidth=measureVisual(b.headline,210,'sans',800),headSize=Math.min(210,210*960/headWidth);need(headSize>=100,'headline too long for rhythm display; shorten or choose another composition');
-  const hy=Math.max(1080,plotY+rowH*patterns.length+caption.length*24+70);visualText(s,110,hy+headSize*.75,b.headline,{size:headSize,weight:800,fill:paper});
-  const title=visualLines(b.title,960,{size:46,weight:700,max:2});const titleTop=hy+headSize*.75+headSize*.22+25;visualBlock(s,120,titleTop,title,{size:46,weight:700,fill:paper});
-  const subtitle=visualLines(b.subtitle,960,{size:23,max:2});const subY=titleTop+title.length*59.8+18;visualBlock(s,120,subY,subtitle,{size:23,fill:paper});
-  const fy=Math.max(1430,subY+subtitle.length*29.9+40);need(fy+110<1600,'rhythm content exceeds footer budget');stroke(s,[[120,fy-20],[1080,fy-20]],paper,1,{'stroke-opacity':.35});
-  const fw=960/b.facts.length;b.facts.forEach((f,i)=>{visualBlock(s,120+i*fw,fy,visualLines(f.value,fw-28,{size:28,weight:700,max:2}),{size:28,weight:700,fill:paper});visualBlock(s,120+i*fw,fy+66,visualLines(f.label,fw-28,{size:17,max:2}),{size:17,fill:paper})});
-  return visualFinish(s,{family:'rhythm',width:W,height:H,rowHeight:rowH,headlineSize:headSize,dots,material:{bg,paper,yellow},sourceCase:'p03-caoping-jueshi'});
+  const W=1200,bg='#2340A0',paper='#F4F2EC',yellow='#F2C230',x0=120,span=960,plotY=100;
+  // The wordmark and the measures share the page. Allocate both from actual
+  // type bounds rather than reserving a fixed, mostly empty band above a footer.
+  const plan=(text,width,size,weight=400,max=2)=>{
+   const lines=text.split('\n').flatMap(paragraph=>{
+    need(paragraph.trim().length>0,'Empty explicit text line');
+    const original=visualLines(paragraph,width,{size,weight,max});if(original.length<2||[...original.at(-1)].length>2)return original;
+    // Keep a date's two endpoints intact when they fit separately. Otherwise
+    // redistribute a one/two-character last line without changing the copy.
+    const range=paragraph.match(/^(.+[—–～])(.+)$/);if(range&&range.slice(1).every(t=>measureVisual(t,size,'sans',weight)<=width))return range.slice(1);
+    let low=0,high=width;for(let i=0;i<16;i++){const mid=(low+high)/2;try{visualLines(paragraph,mid,{size,weight,max:original.length});high=mid}catch{low=mid}}
+    const balanced=visualLines(paragraph,Math.min(width,high+.1),{size,weight,max:original.length});
+    for(let i=1;i<balanced.length;i++)if(/^[，。、；：！？）》】]/.test(balanced[i])){const before=[...balanced[i-1]];for(const count of [2,1])if(before.length>count&&measureVisual(before.slice(-count).join('')+balanced[i],size,'sans',weight)<=width){balanced[i]=before.slice(-count).join('')+balanced[i];balanced[i-1]=before.slice(0,-count).join('');break}}
+    return balanced;
+   });need(lines.length<=max,`Text exceeds ${max} lines at ${size}px: ${text.slice(0,60)}`);
+   const bounds=lines.map(line=>visualFontBounds(line,size,'sans',weight)),ascent=Math.max(...bounds.map(m=>m.ascent)),descent=Math.max(...bounds.map(m=>m.descent)),step=Math.max(size*1.2,ascent+descent+5);
+   return {lines,size,weight,ascent,descent,step,height:ascent+descent+(lines.length-1)*step};
+  };
+  const headSize=Math.min(340,span/measureVisual(b.headline,1,'sans',700));need(headSize>=100,'headline too long for rhythm display; shorten or choose another composition');
+  const caption=plan(b.caption,span,18),headline=plan(b.headline,span,headSize,700,1),title=plan(b.title,span,58,700,3),subtitle=plan(b.subtitle,span,24,400,3),fw=span/b.facts.length;
+  const facts=b.facts.map(f=>({value:plan(f.value,fw-28,32,700,3),label:plan(f.label,fw-28,20,400,3)})),factValueH=Math.max(...facts.map(f=>f.value.height)),factLabelH=Math.max(...facts.map(f=>f.label.height)),factHeight=factValueH+12+factLabelH;
+  const textHeight=24+caption.height+14+headline.height+12+title.height+14+subtitle.height+30+28+factHeight,minPlotHeight=Math.max(540,Math.min(900,patterns.length*90)),H=Math.max(1600,plotY+minPlotHeight+textHeight+86),plotHeight=H-plotY-textHeight-86;
+  const s=visualPage(W,H,bg),rowH=plotHeight/patterns.length,beatSpan=span/b.beats,rmax=Math.min(46,rowH*.39,beatSpan*.2),textRegions=[];
+  const block=(p,x,top,role)=>{p.lines.forEach((line,i)=>visualText(s,x,top+p.ascent+i*p.step,line,{size:p.size,weight:p.weight,fill:paper}));textRegions.push({role,x,top,width:role==='fact-value'||role==='fact-label'?fw-28:span,height:p.height,size:p.size,step:p.step,lines:p.lines});return top+p.height};
+  for(let i=0;i<=b.beats;i++)stroke(s,[[x0+beatSpan*i,plotY],[x0+beatSpan*i,plotY+plotHeight]],paper,1,{'stroke-opacity':.14});
+  const dots=[];patterns.forEach((row,ri)=>row.forEach(n=>{const x=x0+beatSpan*n.at,y=plotY+rowH*(ri+.5),r=rmax*Math.sqrt(n.strength),accent=b.accentBeats.includes(n.at);el('circle',{cx:x,cy:y,r,fill:accent?yellow:paper},s);dots.push({row:ri,at:n.at,strength:n.strength,x,y,r,accent})}));
+  let y=block(caption,x0,plotY+plotHeight+24,'caption');
+  y=block(headline,x0,y+14,'headline');y=block(title,x0,y+12,'title');y=block(subtitle,x0,y+14,'subtitle');
+  const dividerY=y+30,fy=dividerY+28;stroke(s,[[x0,dividerY],[x0+span,dividerY]],paper,1,{'stroke-opacity':.35});
+  facts.forEach((f,i)=>{block(f.value,x0+i*fw,fy,'fact-value');block(f.label,x0+i*fw,fy+factValueH+12,'fact-label')});
+  return visualFinish(s,{family:'rhythm',width:W,height:H,rowHeight:rowH,headlineSize:headSize,dots,plot:{x:x0,y:plotY,width:span,height:plotHeight,beats:b.beats,radiusScale:rmax},typography:{textRegions,factValueHeight:factValueH,factLabelHeight:factLabelH},material:{bg,paper,yellow},sourceCase:'p03-caoping-jueshi'});
  }
  function specimen(b){
   fields(b,['family','title','subtitle','species','columns','footer'],'specimen');str(b.title,'title');str(b.subtitle,'subtitle');str(b.footer,'footer');list(b.species,3,9,'species');need(new Set(b.species).size===b.species.length,'duplicate species');

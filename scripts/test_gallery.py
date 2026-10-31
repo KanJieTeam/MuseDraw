@@ -744,7 +744,8 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/cryoem-collider.test.mjs',
                                  'tests/musecore/confounding.test.mjs',
                                  'tests/musecore/evacuation-plan.test.mjs',
-                                 'tests/musecore/handwash.test.mjs'):
+                                 'tests/musecore/handwash.test.mjs',
+                                 'tests/musecore/rhythm-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",
