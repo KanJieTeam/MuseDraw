@@ -1,3 +1,4 @@
+import {renderDevelopmentScroll} from './development-scroll-figures.mjs';
 import {el} from './svg.mjs';
 import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualFinish,stroke,number,measureVisual,backedVisualText} from './visual-tools.mjs';
 import {linearScale,niceDomain,formatNumber} from './quantitative.mjs';
@@ -108,6 +109,7 @@ export function spatialFamilies(h){
   return visualFinish(s,{family:'constellation',width:W,height:H,nodes:[...positions.values()],edges,labels,radiusEncoding:'area proportional to value; no radius minimum',sourceCase:'107-service-star-map'});
  }
  function scroll(b){
+  if(Object.hasOwn(b,'development'))return renderDevelopmentScroll(b);
   fields(b,['family','title','subtitle','points','unit','note'],'scroll');for(const k of ['title','subtitle','unit','note'])str(b[k],k);list(b.points,4,12,'points');
   for(const p of b.points){fields(p,['year','value','event'],'point');number(p.year,'year');number(p.value,'value');str(p.event,'event');need(Number.isInteger(p.year)&&p.value>=0,'year integer; value nonnegative')}
   need(b.points.every((p,i)=>!i||p.year>b.points[i-1].year),'years must strictly increase');const W=1800,H=1050,paper='#EAE3D1',ink='#342F28',faint='#A69D89',red='#AC392D',s=visualPage(W,H,paper);

@@ -16,6 +16,11 @@ reconciliation differences are rejected rather than filled to make totals agree.
 The result is a bounded teaching relationship diagram, not a complete accounting
 standard implementation or an audit of a real business.
 
+Statement arrows bind internal row objects, not display IDs. Caller IDs remain
+literal and may equal generated subtotal IDs (for example `net-income` or
+`asset-total`); such spelling cannot redirect a net-income or account link.
+Arithmetic reconciliation and caller amounts are unchanged by row identification.
+
 Use `core example parallel-training` or `core example three-statements`, inspect
 the schema, then `core render`. Existing expression, dependency-scheduling,
 typography and routing tools are reused by their separate whole-page

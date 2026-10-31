@@ -1,0 +1,195 @@
+{
+  "family": "benefit-wallet",
+  "title": "2026年度弹性福利积分去了哪里",
+  "subtitle": "300人 × 每人2,000积分；分项与组类别为新合成账本，不复原原稿明细",
+  "unit": "points",
+  "categories": [
+    {
+      "id": "health",
+      "label": "健康"
+    },
+    {
+      "id": "family",
+      "label": "家庭"
+    },
+    {
+      "id": "learning",
+      "label": "学习"
+    },
+    {
+      "id": "life",
+      "label": "生活"
+    },
+    {
+      "id": "leisure",
+      "label": "休闲"
+    }
+  ],
+  "annualSummary": {
+    "periodLabel": "2026年度",
+    "evidenceKind": "synthetic-aggregates",
+    "detailLevel": "overall-items-and-group-categories",
+    "comparisonDenominator": "group-used",
+    "itemUses": [
+      {
+        "id": "exam",
+        "label": "体检升级",
+        "category": "health",
+        "usedPoints": 40000
+      },
+      {
+        "id": "medical",
+        "label": "补充医疗",
+        "category": "health",
+        "usedPoints": 38000
+      },
+      {
+        "id": "fitness",
+        "label": "健身",
+        "category": "health",
+        "usedPoints": 60000
+      },
+      {
+        "id": "children",
+        "label": "子女教育",
+        "category": "family",
+        "usedPoints": 56000
+      },
+      {
+        "id": "parent",
+        "label": "父母体检",
+        "category": "family",
+        "usedPoints": 40000
+      },
+      {
+        "id": "course",
+        "label": "课程",
+        "category": "learning",
+        "usedPoints": 52000
+      },
+      {
+        "id": "books",
+        "label": "书籍",
+        "category": "learning",
+        "usedPoints": 32000
+      },
+      {
+        "id": "meal",
+        "label": "餐饮",
+        "category": "life",
+        "usedPoints": 40000
+      },
+      {
+        "id": "travel-work",
+        "label": "交通",
+        "category": "life",
+        "usedPoints": 30000
+      },
+      {
+        "id": "gift",
+        "label": "节日礼品",
+        "category": "life",
+        "usedPoints": 20000
+      },
+      {
+        "id": "holiday",
+        "label": "旅游",
+        "category": "leisure",
+        "usedPoints": 36000
+      },
+      {
+        "id": "performance",
+        "label": "演出",
+        "category": "leisure",
+        "usedPoints": 24000
+      }
+    ],
+    "groups": [
+      {
+        "id": "young",
+        "label": "30岁以下",
+        "employees": 120,
+        "pointsPerEmployee": 2000,
+        "categoryUses": [
+          {
+            "category": "health",
+            "usedPoints": 60000
+          },
+          {
+            "category": "family",
+            "usedPoints": 12000
+          },
+          {
+            "category": "learning",
+            "usedPoints": 48000
+          },
+          {
+            "category": "life",
+            "usedPoints": 36000
+          },
+          {
+            "category": "leisure",
+            "usedPoints": 24000
+          }
+        ]
+      },
+      {
+        "id": "middle",
+        "label": "30至40岁",
+        "employees": 120,
+        "pointsPerEmployee": 2000,
+        "categoryUses": [
+          {
+            "category": "health",
+            "usedPoints": 48000
+          },
+          {
+            "category": "family",
+            "usedPoints": 60000
+          },
+          {
+            "category": "learning",
+            "usedPoints": 24000
+          },
+          {
+            "category": "life",
+            "usedPoints": 36000
+          },
+          {
+            "category": "leisure",
+            "usedPoints": 24000
+          }
+        ]
+      },
+      {
+        "id": "older",
+        "label": "40岁以上",
+        "employees": 60,
+        "pointsPerEmployee": 2000,
+        "categoryUses": [
+          {
+            "category": "health",
+            "usedPoints": 30000
+          },
+          {
+            "category": "family",
+            "usedPoints": 24000
+          },
+          {
+            "category": "learning",
+            "usedPoints": 12000
+          },
+          {
+            "category": "life",
+            "usedPoints": 18000
+          },
+          {
+            "category": "leisure",
+            "usedPoints": 12000
+          }
+        ]
+      }
+    ]
+  },
+  "note": "总体单项与分组类别两份聚合记录按类别核对；未给各组单项细分。只作积分核账，不推税务、满意度、政策或年龄因果。"
+}

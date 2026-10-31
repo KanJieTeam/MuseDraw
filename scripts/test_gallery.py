@@ -856,7 +856,18 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/annual-metro.test.mjs',
                                  'references/musecore-annual-metro.md',
                                  'tests/musecore/adoption-time-precision.test.mjs',
-                                 'tests/musecore/space-use-observed-totals.test.mjs'):
+                                 'tests/musecore/space-use-observed-totals.test.mjs',
+                                 'scripts/musecore/benefit-annual-models.mjs',
+                                 'assets/musecore/benefit-annual-summary.json',
+                                 'tests/musecore/benefit-annual-summary.test.mjs',
+                                 'references/musecore-benefit-annual-summary.md',
+                                 'scripts/musecore/development-scroll-models.mjs',
+                                 'scripts/musecore/development-scroll-figures.mjs',
+                                 'assets/musecore/decade-development-scroll.json',
+                                 'tests/musecore/development-scroll.test.mjs',
+                                 'tests/musecore/statement-anchor-roles.test.mjs',
+                                 'references/musecore-development-scroll.md',
+                                 'tests/musecore/hierarchy-count-scale.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

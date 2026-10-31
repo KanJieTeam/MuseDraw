@@ -1,0 +1,41 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {threeStatementModel} from '../../scripts/musecore/statement-models.mjs';
+import {editorHtml} from '../../scripts/musecore.mjs';
+import {loadPlaywrightInfo} from '../../scripts/engine/export.mjs';
+import {resolveBrowser} from '../../scripts/engine/environment.mjs';
+
+export function statementAnchorCases(base){
+ const cases=[{id:'default',input:structuredClone(base)},{id:'detail',input:{...structuredClone(base),view:'detail'}}];
+ const change=(id,fn)=>{const input=structuredClone(base);fn(input);cases.push({id,input})};
+ const renameAccount=(x,kind,id)=>{const a=x.accounts.find(a=>a.kind===kind),old=a.id;a.id=id;for(const c of x.cashMovements)if(c.targetAccount===old)c.targetAccount=id};
+ change('income-net-income',x=>x.income[0].id='net-income');
+ change('retained-asset-total',x=>renameAccount(x,'retained-earnings','asset-total'));
+ change('depreciation-net-income',x=>x.income.find(r=>r.kind==='depreciation').id='net-income');
+ change('tax-pre-tax',x=>x.income.find(r=>r.kind==='tax').id='pre-tax');
+ change('cash-claims-total',x=>renameAccount(x,'cash','claims-total'));
+ change('fixed-asset-total',x=>renameAccount(x,'fixed-asset','asset-total'));
+ change('all-generated-looking-ids',x=>{x.view='detail';const names=['net-income','pre-tax','cash-net-income','net-cash','cash-depreciation','working-adjustment','operating','investing','financing','asset-total','claims-total','adjust-ar','flow-capex','__proto__','constructor','toString'];let at=0;for(const r of x.income)r.id=names[at++];const rename=new Map();for(const a of x.accounts){rename.set(a.id,names[at]);a.id=names[at++]}for(const c of x.cashMovements){c.id=names[at++];c.targetAccount=rename.get(c.targetAccount)}});
+ change('special-literal-ids',x=>{x.view='detail';let at=0;const names=['__proto__','constructor','gross/收入','cash:profit','quoted"tax','现金/期末','应收:账款','存货 空格','fixed[asset]','liability#一','debt?二','capital&三','留存收益🧾','买入/一','偿还:二','分红"三'],rename=new Map();for(const r of x.income)r.id=names[at++];for(const a of x.accounts){rename.set(a.id,names[at]);a.id=names[at++]}for(const c of x.cashMovements){c.id=names[at++];c.targetAccount=rename.get(c.targetAccount)}});
+ change('long-labels-detail-collisions',x=>{x.view='detail';x.period='明确给定的同一教学期间';x.income[0].id='net-income';renameAccount(x,'retained-earnings','asset-total');for(const r of x.income)r.label='给定原始收入费用与完整项目名称 · '+r.label;for(const a of x.accounts)a.label='给定期初期末余额及完整账户名称 · '+a.label;x.note='本例保留调用者完整名称和ID；期间流量与期初期末存量由给定记录核对，不由ID、颜色或显示位置推断。'});
+ return cases;
+}
+
+// Independent semantic order: supplied income by kind, then generated net;
+// supplied asset accounts, generated total, supplied claims, generated total.
+export function statementAnchorFacts(input,g,actual){
+ const [income,cash,balance]=g.tableGeometry,assetKinds=['cash','working-asset','fixed-asset'],assets=input.accounts.filter(a=>assetKinds.includes(a.kind)),claims=input.accounts.filter(a=>!assetKinds.includes(a.kind));
+ const accountRow=kind=>{const a=input.accounts.find(a=>a.kind===kind),asset=assetKinds.includes(kind),i=asset?assets.indexOf(a):assets.length+1+claims.indexOf(a);return balance.rows[i]};
+ const ordered=[...input.income].sort((a,b)=>['revenue','expense','depreciation','tax'].indexOf(a.kind)-['revenue','expense','depreciation','tax'].indexOf(b.kind));
+ const depreciationIndex=ordered.findIndex(r=>r.kind==='depreciation'),net=income.rows.at(-1),dep=income.rows[depreciationIndex];
+ assert.equal(net.label,'净利润 ①②');assert.deepEqual(net.values,[g.netIncomeMinor]);assert.equal(dep.kind,'depreciation');assert.deepEqual(dep.values,[-g.depreciationMinor]);
+ const expected=[['net-to-retained',income,net,'right',balance,accountRow('retained-earnings'),'left'],['net-to-operating',income,net,'left',cash,cash.rows[0],'left'],['cash-change-to-cash',cash,cash.rows.at(-1),'right',balance,accountRow('cash'),'left'],['depreciation-addback',income,dep,'right',cash,cash.rows[1],'right'],['depreciation-fixed-asset',income,dep,'right',balance,accountRow('fixed-asset'),'left']];
+ const point=(t,r,side)=>[t.x+(side==='right'?t.w:0),t.y+r.mid];
+ for(const [id,fromTable,fromRow,fromSide,toTable,toRow,toSide]of expected){const route=g.routes.find(r=>r.id===id),start=point(fromTable,fromRow,fromSide),end=point(toTable,toRow,toSide),drawn=actual.find(r=>r.id===id);assert.deepEqual(route.points[0],start,id+' model start');assert.deepEqual(route.points.at(-1),end,id+' model end');assert.deepEqual(drawn.start,start,id+' SVG start');assert.deepEqual(drawn.end,end,id+' arrow tip');assert.equal(route.fromRow,fromRow.id);assert.equal(route.toRow,toRow.id);const rows=g.tableGeometry.flatMap(t=>t.rows),fromIndex=rows.indexOf(fromRow),toIndex=rows.indexOf(toRow);for(const [index,table,row,endpoint]of[[fromIndex,fromTable,fromRow,start],[toIndex,toTable,toRow,end]]){const box=drawn.rowBoxes[index],top=table.y+row.y,bottom=top+row.h;assert(box.y>=top-1e-3&&box.bottom<=bottom+1e-3,id+' actual glyphs stay in semantic row cell');assert(top<=endpoint[1]&&endpoint[1]<=bottom,id+' actual anchor stays in semantic row cell');assert(box.text.replace(/\s/gu,'').includes(row.label.replace(/\s/gu,'')),id+' actual semantic label')}for(const p of route.points)assert(p.every(Number.isFinite));}
+}
+
+if(process.env.MUSECORE_FIXTURE_ONLY!=='1'){
+ test('literal IDs do not alter reconciled financial facts',async()=>{const b=JSON.parse(await fs.readFile(new URL('../../assets/musecore/three-statements.json',import.meta.url),'utf8')),reference=threeStatementModel(b);for(const c of statementAnchorCases(b)){const m=threeStatementModel(c.input);for(const k of ['netIncomeMinor','depreciationMinor','operatingMinor','investingMinor','financingMinor','netCashMinor'])assert.equal(m[k],reference[k],c.id);assert(m.checks.every(r=>r.differenceMinor===0));assert.equal(m.cash.closingMinor,7500);assert.equal(m.retained.closingMinor,13500)}});
+ test('production links bind actual semantic rows, including generated-looking and special literal IDs at normal/+40',{timeout:180000},async()=>{const b=JSON.parse(await fs.readFile(new URL('../../assets/musecore/three-statements.json',import.meta.url),'utf8')),{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});try{const page=await browser.newPage();await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(await editorHtml(b));await page.waitForFunction(()=>window.MUSECORE_READY===true);for(const c of statementAnchorCases(b))for(const pressure of[0,40]){const r=await page.evaluate(({input,pressure})=>{const old=CanvasRenderingContext2D.prototype.measureText;if(pressure)CanvasRenderingContext2D.prototype.measureText=function(t){const m=old.call(this,t);return new Proxy(m,{get(o,k){return k==='fontBoundingBoxAscent'?o.fontBoundingBoxAscent+pressure:Reflect.get(o,k,o)}})};try{const svg=MuseCore.render(input);document.getElementById('output').replaceChildren(svg);const audit=MuseCore.audit(svg),rowBoxes=[...svg.querySelectorAll('[data-statement-row]')].map(n=>{const b=n.getBBox();return{y:b.y,bottom:b.y+b.height,text:n.textContent}}),actual=[...svg.querySelectorAll('[data-statement-link]')].map(n=>{const line=n.querySelector('line'),tip=n.querySelector('polygon').getAttribute('points').split(' ')[0].split(',').map(Number);return{id:n.dataset.statementLink,start:[Number(line.getAttribute('x1')),Number(line.getAttribute('y1'))],end:tip,rowBoxes}});return{audit,actual,text:svg.textContent,ids:[...svg.querySelectorAll('[data-statement-row]')].map(n=>n.dataset.statementRow)}}finally{CanvasRenderingContext2D.prototype.measureText=old}},{input:c.input,pressure});assert.deepEqual(r.audit.findings,[],c.id);assert.deepEqual(r.audit.geometry.input,c.input);statementAnchorFacts(c.input,r.audit.geometry,r.actual);const clean=s=>s.replace(/\s/gu,'');assert(clean(r.text).includes(clean(c.input.note)));for(const row of [...c.input.income,...c.input.accounts]){assert(r.ids.includes(row.id),c.id+' literal ID '+row.id);assert(clean(r.text).includes(clean(row.label)),c.id+' full label')}assert.equal(r.actual.length,5)}}finally{await browser.close()}});
+}

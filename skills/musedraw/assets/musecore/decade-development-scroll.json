@@ -1,0 +1,165 @@
+{
+  "family": "scroll",
+  "title": "十年",
+  "subtitle": "2016—2026 · 十年发展手卷 · 示例公司给定记录",
+  "development": {
+    "recordKind": "supplied-examples",
+    "source": "195原SVG与作者说明的示例公司年值。营收万/亿统一为万，原稿未注明币种；2016营收未给，明确保留unknown。",
+    "years": [
+      {
+        "year": 2016,
+        "event": "三人在出租屋创立"
+      },
+      {
+        "year": 2017,
+        "event": "第一款产品上线"
+      },
+      {
+        "year": 2018,
+        "event": "拿到第一笔投资"
+      },
+      {
+        "year": 2019,
+        "event": "员工过五十人"
+      },
+      {
+        "year": 2020,
+        "event": "转为远程优先办公"
+      },
+      {
+        "year": 2021,
+        "event": "进入华东市场"
+      },
+      {
+        "year": 2022,
+        "event": "年营收破亿"
+      },
+      {
+        "year": 2023,
+        "event": "新加坡办公室开业"
+      },
+      {
+        "year": 2024,
+        "event": "推出第二条产品线"
+      },
+      {
+        "year": 2025,
+        "event": "员工过六百人"
+      },
+      {
+        "year": 2026,
+        "event": "新总部启用"
+      }
+    ],
+    "personnel": {
+      "label": "年末员工人数",
+      "unit": "人",
+      "values": [
+        {
+          "year": 2016,
+          "value": 3
+        },
+        {
+          "year": 2017,
+          "value": 12
+        },
+        {
+          "year": 2018,
+          "value": 28
+        },
+        {
+          "year": 2019,
+          "value": 55
+        },
+        {
+          "year": 2020,
+          "value": 90
+        },
+        {
+          "year": 2021,
+          "value": 160
+        },
+        {
+          "year": 2022,
+          "value": 260
+        },
+        {
+          "year": 2023,
+          "value": 380
+        },
+        {
+          "year": 2024,
+          "value": 470
+        },
+        {
+          "year": 2025,
+          "value": 600
+        },
+        {
+          "year": 2026,
+          "value": 680
+        }
+      ],
+      "growth": {
+        "fromYear": 2016,
+        "toYear": 2026
+      }
+    },
+    "revenue": {
+      "label": "全年营收",
+      "unit": "万（币种未注明）",
+      "values": [
+        {
+          "year": 2016,
+          "value": null
+        },
+        {
+          "year": 2017,
+          "value": 50.0
+        },
+        {
+          "year": 2018,
+          "value": 300.0
+        },
+        {
+          "year": 2019,
+          "value": 900.0
+        },
+        {
+          "year": 2020,
+          "value": 2100.0
+        },
+        {
+          "year": 2021,
+          "value": 4800.0
+        },
+        {
+          "year": 2022,
+          "value": 10500.0
+        },
+        {
+          "year": 2023,
+          "value": 16800.0
+        },
+        {
+          "year": 2024,
+          "value": 24000.0
+        },
+        {
+          "year": 2025,
+          "value": 33000.0
+        },
+        {
+          "year": 2026,
+          "value": 41000.0
+        }
+      ],
+      "growth": {
+        "fromYear": 2017,
+        "toYear": 2026
+      },
+      "note": "2016年未给；其余按原稿万/亿统一为万。"
+    }
+  },
+  "note": "朱点为首末给定人数；营收缺值不补0。两项CAGR各按标明的首末年计算，全部数据为原稿示例。"
+}

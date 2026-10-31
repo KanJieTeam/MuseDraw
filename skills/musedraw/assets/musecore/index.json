@@ -160,7 +160,13 @@
       "id": "scroll",
       "family": "scroll",
       "file": "scroll.json",
-      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim"
+    },
+    {
+      "id": "decade-development-scroll",
+      "file": "decade-development-scroll.json",
+      "family": "scroll",
+      "contentStatus": "Author-provided example personnel and independent revenue records.2016 revenue remains unknown; separate units and explicit growth windows. Not a real-company verification or forecast.",
       "sourceCases": [
         {
           "id": "195-decade-scroll",
@@ -874,7 +880,13 @@
       "id": "benefit-wallet",
       "family": "benefit-wallet",
       "file": "benefit-wallet.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
+    },
+    {
+      "id": "benefit-annual-summary",
+      "file": "benefit-annual-summary.json",
+      "family": "benefit-wallet",
+      "contentStatus": "New synthetic annual point aggregates; overall item amounts and group category margins reconcile. No recovered individual/group-item records, prices, policies or source88% reconstruction.",
       "sourceCases": [
         {
           "id": "196-flexible-benefits",
