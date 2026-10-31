@@ -28,3 +28,10 @@ node scripts/musedraw.mjs core example handoff-checklist --out output/handoff.js
 
 Keep names, policy and status grounded in the brief. Use another composition
 when the graph exceeds these limits; do not delete responsibilities to fit it.
+
+`procure-to-pay` retains the source example’s nine operations, ten declared
+connections and five responsibility labels. It is a horizontal relationship
+view, not a recreation of five physical swimlanes. The original approval tiers,
+matching tolerance and dates remain supplied annotations; conflicting boundary
+amounts are not resolved by the renderer, and no actual approval state or
+accounting deadline is calculated.

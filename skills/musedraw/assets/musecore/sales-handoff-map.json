@@ -1,0 +1,170 @@
+{
+  "family": "pathway-map",
+  "title": "从线索到回款",
+  "subtitle": "市场、销售、交付、财务四个部门在三处交接。",
+  "meaning": "declared-flow",
+  "stations": [
+    {
+      "id": "s0",
+      "label": "展会与内容"
+    },
+    {
+      "id": "s1",
+      "label": "线索录入"
+    },
+    {
+      "id": "s2",
+      "label": "线索培育"
+    },
+    {
+      "id": "s3",
+      "label": "合格线索"
+    },
+    {
+      "id": "s4",
+      "label": "商机评估"
+    },
+    {
+      "id": "s5",
+      "label": "方案与报价"
+    },
+    {
+      "id": "s6",
+      "label": "合同签订"
+    },
+    {
+      "id": "s7",
+      "label": "项目启动"
+    },
+    {
+      "id": "s8",
+      "label": "实施"
+    },
+    {
+      "id": "s9",
+      "label": "验收"
+    },
+    {
+      "id": "s10",
+      "label": "开票"
+    },
+    {
+      "id": "s11",
+      "label": "回款"
+    },
+    {
+      "id": "s12",
+      "label": "对账"
+    }
+  ],
+  "routes": [
+    {
+      "id": "market",
+      "label": "市场部",
+      "color": "#8E44AD",
+      "direction": "forward",
+      "stations": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "segments": [
+        {
+          "from": "s0",
+          "to": "s1"
+        },
+        {
+          "from": "s1",
+          "to": "s2"
+        },
+        {
+          "from": "s2",
+          "to": "s3"
+        }
+      ]
+    },
+    {
+      "id": "sales",
+      "label": "销售部",
+      "color": "#0072CE",
+      "direction": "forward",
+      "stations": [
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "segments": [
+        {
+          "from": "s3",
+          "to": "s4"
+        },
+        {
+          "from": "s4",
+          "to": "s5"
+        },
+        {
+          "from": "s5",
+          "to": "s6"
+        }
+      ],
+      "note": "示例：线索到合同约 45 天"
+    },
+    {
+      "id": "delivery",
+      "label": "交付部",
+      "color": "#2DA94F",
+      "direction": "forward",
+      "stations": [
+        "s6",
+        "s7",
+        "s8",
+        "s9"
+      ],
+      "segments": [
+        {
+          "from": "s6",
+          "to": "s7"
+        },
+        {
+          "from": "s7",
+          "to": "s8"
+        },
+        {
+          "from": "s8",
+          "to": "s9"
+        }
+      ],
+      "note": "示例：合同到验收约 60 天"
+    },
+    {
+      "id": "finance",
+      "label": "财务部",
+      "color": "#F58A1F",
+      "direction": "forward",
+      "stations": [
+        "s9",
+        "s10",
+        "s11",
+        "s12"
+      ],
+      "segments": [
+        {
+          "from": "s9",
+          "to": "s10"
+        },
+        {
+          "from": "s10",
+          "to": "s11"
+        },
+        {
+          "from": "s11",
+          "to": "s12"
+        }
+      ],
+      "note": "示例：验收到回款约 30 天"
+    }
+  ],
+  "note": "周期为示例注释，线路长度不编码天数；交接站不表示审批已通过、项目已完成或款项已到账。"
+}

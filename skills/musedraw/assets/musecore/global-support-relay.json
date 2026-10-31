@@ -1,0 +1,80 @@
+{
+  "family": "global-support-relay",
+  "title": "全球客服 24 小时接力",
+  "subtitle": "三个中心各值8小时本地白班 · 冬、夏固定偏移场景对照",
+  "recurringDaily": true,
+  "centers": [
+    {
+      "id": "shanghai",
+      "label": "上海中心",
+      "color": "#6EE7F9",
+      "localWindows": [
+        {
+          "startMinute": 540,
+          "endMinute": 1020
+        }
+      ]
+    },
+    {
+      "id": "dublin",
+      "label": "都柏林中心",
+      "color": "#F2D28A",
+      "localWindows": [
+        {
+          "startMinute": 540,
+          "endMinute": 1020
+        }
+      ]
+    },
+    {
+      "id": "san-francisco",
+      "label": "旧金山中心",
+      "color": "#FF9EC7",
+      "localWindows": [
+        {
+          "startMinute": 540,
+          "endMinute": 1020
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "winter",
+      "label": "冬季偏移场景",
+      "offsets": [
+        {
+          "centerId": "shanghai",
+          "offsetMinutes": 480
+        },
+        {
+          "centerId": "dublin",
+          "offsetMinutes": 0
+        },
+        {
+          "centerId": "san-francisco",
+          "offsetMinutes": -480
+        }
+      ]
+    },
+    {
+      "id": "summer",
+      "label": "夏季偏移场景",
+      "offsets": [
+        {
+          "centerId": "shanghai",
+          "offsetMinutes": 480
+        },
+        {
+          "centerId": "dublin",
+          "offsetMinutes": 60
+        },
+        {
+          "centerId": "san-francisco",
+          "offsetMinutes": -420
+        }
+      ]
+    }
+  ],
+  "note": "给定固定偏移的每日循环示例；欧美夏令时切换不同周，须另给偏移场景。班次数量不表示人数。"
+}

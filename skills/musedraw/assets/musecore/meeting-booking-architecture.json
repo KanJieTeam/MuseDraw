@@ -1,0 +1,186 @@
+{
+  "family": "typed-system",
+  "title": "会议室预订系统 · 原稿容器关系",
+  "subtitle": "单一软件系统 · 两类人员、五个容器、三个外部系统",
+  "level": "container",
+  "scope": {
+    "id": "meeting-booking",
+    "label": "会议室预订系统",
+    "kind": "system",
+    "detail": "会议室预订系统的软件边界；五个容器位于边界内。"
+  },
+  "bands": [
+    {
+      "id": "entry",
+      "label": "用户入口"
+    },
+    {
+      "id": "service",
+      "label": "预订与通知"
+    },
+    {
+      "id": "data",
+      "label": "持久化数据"
+    }
+  ],
+  "elements": [
+    {
+      "id": "employee",
+      "label": "员工",
+      "kind": "person",
+      "detail": "查找空闲会议室；预订、签到、释放",
+      "parent": null
+    },
+    {
+      "id": "administrator",
+      "label": "行政专员",
+      "kind": "person",
+      "detail": "维护会议室信息；查看使用率",
+      "parent": null
+    },
+    {
+      "id": "web",
+      "label": "Web 应用",
+      "kind": "container",
+      "detail": "在浏览器里搜索和预订会议室",
+      "parent": "meeting-booking",
+      "technology": "React",
+      "containerType": "application",
+      "band": "entry"
+    },
+    {
+      "id": "mobile",
+      "label": "移动端",
+      "kind": "container",
+      "detail": "扫门口二维码签到；延长或提前释放",
+      "parent": "meeting-booking",
+      "technology": "iOS / Android",
+      "containerType": "application",
+      "band": "entry"
+    },
+    {
+      "id": "api",
+      "label": "API 服务",
+      "kind": "container",
+      "detail": "预订规则、冲突检测、超时自动释放",
+      "parent": "meeting-booking",
+      "technology": "Java、Spring Boot",
+      "containerType": "application",
+      "band": "service"
+    },
+    {
+      "id": "database",
+      "label": "数据库",
+      "kind": "container",
+      "detail": "会议室、预订记录、签到日志",
+      "parent": "meeting-booking",
+      "technology": "PostgreSQL",
+      "containerType": "data",
+      "band": "data"
+    },
+    {
+      "id": "notify",
+      "label": "通知服务",
+      "kind": "container",
+      "detail": "提醒开会、释放前通知",
+      "parent": "meeting-booking",
+      "technology": "消息队列 + Worker",
+      "containerType": "application",
+      "band": "service"
+    },
+    {
+      "id": "calendar",
+      "label": "企业日历",
+      "kind": "system",
+      "detail": "同步预订到个人日程",
+      "parent": null
+    },
+    {
+      "id": "sso",
+      "label": "统一身份认证",
+      "kind": "system",
+      "detail": "单点登录",
+      "parent": null
+    },
+    {
+      "id": "access",
+      "label": "门禁系统",
+      "kind": "system",
+      "detail": "按预订开放门锁",
+      "parent": null
+    }
+  ],
+  "links": [
+    {
+      "id": "employee-web",
+      "from": "employee",
+      "to": "web",
+      "label": "使用",
+      "technology": "HTTPS"
+    },
+    {
+      "id": "employee-mobile",
+      "from": "employee",
+      "to": "mobile",
+      "label": "使用",
+      "technology": "App"
+    },
+    {
+      "id": "administrator-api",
+      "from": "administrator",
+      "to": "api",
+      "label": "管理会议室",
+      "technology": "HTTPS"
+    },
+    {
+      "id": "web-mobile",
+      "from": "web",
+      "to": "mobile",
+      "label": "用途未给出",
+      "technology": null
+    },
+    {
+      "id": "mobile-api",
+      "from": "mobile",
+      "to": "api",
+      "label": "用途未给出",
+      "technology": null
+    },
+    {
+      "id": "api-database",
+      "from": "api",
+      "to": "database",
+      "label": "读写",
+      "technology": "SQL"
+    },
+    {
+      "id": "api-notify",
+      "from": "api",
+      "to": "notify",
+      "label": "用途未给出",
+      "technology": null
+    },
+    {
+      "id": "database-calendar",
+      "from": "database",
+      "to": "calendar",
+      "label": "同步日程",
+      "technology": "EWS"
+    },
+    {
+      "id": "database-sso",
+      "from": "database",
+      "to": "sso",
+      "label": "验证身份",
+      "technology": "SAML"
+    },
+    {
+      "id": "database-access",
+      "from": "database",
+      "to": "access",
+      "label": "下发开门权限",
+      "technology": "API"
+    }
+  ],
+  "note": "原稿示例。未标注的关系用途和技术保留为未知；原图另有未明确附着的“调用 [JSON/HTTPS]”文字。图只表达静态声明关系，不表示预订、通知或外部对接已经成功。"
+}

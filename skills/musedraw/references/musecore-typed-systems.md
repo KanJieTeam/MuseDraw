@@ -31,3 +31,9 @@ validation. See the primary [C4 context](https://c4model.com/diagrams/system-con
 Run `node scripts/musedraw.mjs core example typed-context --out output/input.json`
 and `node scripts/musedraw.mjs core render output/input.json --out output/view`.
 Passing geometry checks does not establish aesthetic quality.
+
+Two additional source-subject inputs are `meeting-booking-architecture` and
+`sequencing-platform-architecture`. They retain relationships that exceed the
+older architecture DAG route, including external-to-external or returning
+connections. Their source assumptions remain notes, not verified performance.
+An input matching a source does not establish a reproduction of its layout.

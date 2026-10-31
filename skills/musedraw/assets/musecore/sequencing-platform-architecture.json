@@ -1,0 +1,231 @@
+{
+  "family": "typed-system",
+  "title": "测序数据分析平台 · 原稿容器关系",
+  "subtitle": "从测序仪到变异结果 · 两类人员、七个容器、三个外部系统",
+  "level": "container",
+  "scope": {
+    "id": "sequencing",
+    "label": "测序数据分析平台",
+    "kind": "system",
+    "detail": "测序数据分析平台的软件边界；七个容器位于边界内。"
+  },
+  "bands": [
+    {
+      "id": "entry",
+      "label": "门户入口"
+    },
+    {
+      "id": "control",
+      "label": "样本与任务控制"
+    },
+    {
+      "id": "event",
+      "label": "数据接收与事件"
+    },
+    {
+      "id": "data",
+      "label": "数据存储"
+    }
+  ],
+  "elements": [
+    {
+      "id": "technician",
+      "label": "实验技术员",
+      "kind": "person",
+      "detail": "登记样本",
+      "parent": null
+    },
+    {
+      "id": "analyst",
+      "label": "生物信息分析员",
+      "kind": "person",
+      "detail": "提交分析",
+      "parent": null
+    },
+    {
+      "id": "portal",
+      "label": "Web 门户",
+      "kind": "container",
+      "detail": "登记样本、提交分析、浏览结果",
+      "parent": "sequencing",
+      "technology": "React 单页应用",
+      "containerType": "application",
+      "band": "entry"
+    },
+    {
+      "id": "api",
+      "label": "API 服务",
+      "kind": "container",
+      "detail": "权限、样本与任务管理",
+      "parent": "sequencing",
+      "technology": "Python，FastAPI",
+      "containerType": "application",
+      "band": "control"
+    },
+    {
+      "id": "workflow",
+      "label": "工作流引擎",
+      "kind": "container",
+      "detail": "比对、去重、变异检测流程",
+      "parent": "sequencing",
+      "technology": "Nextflow",
+      "containerType": "application",
+      "band": "control"
+    },
+    {
+      "id": "ingest",
+      "label": "数据接收服务",
+      "kind": "container",
+      "detail": "监听运行目录，校验 MD5 后上传",
+      "parent": "sequencing",
+      "technology": "Go",
+      "containerType": "application",
+      "band": "event"
+    },
+    {
+      "id": "queue",
+      "label": "消息队列",
+      "kind": "container",
+      "detail": "传递“数据到达”等事件",
+      "parent": "sequencing",
+      "technology": "RabbitMQ",
+      "containerType": "queue",
+      "band": "event"
+    },
+    {
+      "id": "storage",
+      "label": "对象存储",
+      "kind": "container",
+      "detail": "原始 FASTQ、BAM、VCF",
+      "parent": "sequencing",
+      "technology": "S3 兼容存储",
+      "containerType": "data",
+      "band": "data"
+    },
+    {
+      "id": "metadata",
+      "label": "元数据库",
+      "kind": "container",
+      "detail": "样本、批次、任务状态",
+      "parent": "sequencing",
+      "technology": "PostgreSQL",
+      "containerType": "data",
+      "band": "data"
+    },
+    {
+      "id": "sequencer",
+      "label": "测序仪",
+      "kind": "system",
+      "detail": "按运行写出原始数据",
+      "parent": null
+    },
+    {
+      "id": "lims",
+      "label": "LIMS",
+      "kind": "system",
+      "detail": "实验室信息管理系统",
+      "parent": null
+    },
+    {
+      "id": "cluster",
+      "label": "计算集群",
+      "kind": "system",
+      "detail": "Slurm 调度的 CPU 与 GPU 节点",
+      "parent": null
+    }
+  ],
+  "links": [
+    {
+      "id": "technician-portal",
+      "from": "technician",
+      "to": "portal",
+      "label": "登记样本、看进度",
+      "technology": null
+    },
+    {
+      "id": "analyst-portal",
+      "from": "analyst",
+      "to": "portal",
+      "label": "提交分析、看结果",
+      "technology": null
+    },
+    {
+      "id": "portal-api",
+      "from": "portal",
+      "to": "api",
+      "label": "用途未给出",
+      "technology": "JSON/HTTPS"
+    },
+    {
+      "id": "api-workflow",
+      "from": "api",
+      "to": "workflow",
+      "label": "提交、取消任务",
+      "technology": null
+    },
+    {
+      "id": "api-lims",
+      "from": "api",
+      "to": "lims",
+      "label": "同步样本信息",
+      "technology": "REST"
+    },
+    {
+      "id": "api-metadata",
+      "from": "api",
+      "to": "metadata",
+      "label": "读写样本与任务",
+      "technology": "SQL"
+    },
+    {
+      "id": "sequencer-ingest",
+      "from": "sequencer",
+      "to": "ingest",
+      "label": "写出运行目录",
+      "technology": null
+    },
+    {
+      "id": "ingest-storage",
+      "from": "ingest",
+      "to": "storage",
+      "label": "上传 FASTQ",
+      "technology": "S3 API"
+    },
+    {
+      "id": "ingest-queue",
+      "from": "ingest",
+      "to": "queue",
+      "label": "发布“数据到达”",
+      "technology": "AMQP"
+    },
+    {
+      "id": "queue-workflow",
+      "from": "queue",
+      "to": "workflow",
+      "label": "触发分析",
+      "technology": null
+    },
+    {
+      "id": "workflow-cluster",
+      "from": "workflow",
+      "to": "cluster",
+      "label": "提交作业",
+      "technology": "Slurm"
+    },
+    {
+      "id": "workflow-metadata",
+      "from": "workflow",
+      "to": "metadata",
+      "label": "更新任务状态",
+      "technology": null
+    },
+    {
+      "id": "cluster-storage",
+      "from": "cluster",
+      "to": "storage",
+      "label": "读写 BAM、VCF",
+      "technology": "S3 API"
+    }
+  ],
+  "note": "原稿容量假设：30×全基因组≈93 Gb碱基；按压缩后0.5字节/碱基，每样本FASTQ≈46.5 GB，每批48个样本≈2.2 TB。仅为声明假设，压缩量随测序平台与质量值分箱变化；本图不计算容量或承诺分析运行效果。"
+}

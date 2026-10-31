@@ -745,7 +745,22 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/confounding.test.mjs',
                                  'tests/musecore/evacuation-plan.test.mjs',
                                  'tests/musecore/handwash.test.mjs',
-                                 'tests/musecore/rhythm-layout.test.mjs'):
+                                 'tests/musecore/rhythm-layout.test.mjs',
+                                 'assets/musecore/biology-knowledge-map.json',
+                                 'assets/musecore/mechanics-knowledge-map.json',
+                                 'assets/musecore/protein-structure-routes.json',
+                                 'assets/musecore/sales-handoff-map.json',
+                                 'assets/musecore/meeting-booking-architecture.json',
+                                 'assets/musecore/sequencing-platform-architecture.json',
+                                 'assets/musecore/global-support-relay.json',
+                                 'assets/musecore/procure-to-pay.json',
+                                 'scripts/musecore/support-relay-models.mjs',
+                                 'scripts/musecore/support-relay-figures.mjs',
+                                 'references/musecore-support-relay.md',
+                                 'tests/musecore/architecture-source-inputs.test.mjs',
+                                 'tests/musecore/pathway-source-inputs.test.mjs',
+                                 'tests/musecore/support-relay.test.mjs',
+                                 'tests/musecore/procure-to-pay.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

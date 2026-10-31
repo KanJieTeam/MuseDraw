@@ -1,0 +1,226 @@
+{
+  "family": "pathway-map",
+  "title": "高一力学 · 知识线路图",
+  "subtitle": "运动学与动力学在加速度、牛顿第二定律两站相接。",
+  "meaning": "knowledge-links",
+  "stations": [
+    {
+      "id": "s0",
+      "label": "质点"
+    },
+    {
+      "id": "s1",
+      "label": "参考系"
+    },
+    {
+      "id": "s2",
+      "label": "位移"
+    },
+    {
+      "id": "s3",
+      "label": "速度"
+    },
+    {
+      "id": "s4",
+      "label": "加速度"
+    },
+    {
+      "id": "s5",
+      "label": "速度与时间",
+      "note": "v = v₀ + at"
+    },
+    {
+      "id": "s6",
+      "label": "位移与时间",
+      "note": "x = v₀t + ½at²"
+    },
+    {
+      "id": "s7",
+      "label": "速度与位移",
+      "note": "v² − v₀² = 2ax"
+    },
+    {
+      "id": "s8",
+      "label": "自由落体",
+      "note": "v = gt"
+    },
+    {
+      "id": "s9",
+      "label": "牛顿第二定律",
+      "note": "F = ma"
+    },
+    {
+      "id": "s10",
+      "label": "牛顿第一定律"
+    },
+    {
+      "id": "s11",
+      "label": "牛顿第三定律"
+    },
+    {
+      "id": "s12",
+      "label": "超重与失重"
+    },
+    {
+      "id": "s13",
+      "label": "用牛顿定律解题"
+    },
+    {
+      "id": "s14",
+      "label": "重力"
+    },
+    {
+      "id": "s15",
+      "label": "弹力"
+    },
+    {
+      "id": "s16",
+      "label": "摩擦力"
+    },
+    {
+      "id": "s17",
+      "label": "力的合成与分解"
+    },
+    {
+      "id": "s18",
+      "label": "共点力平衡"
+    }
+  ],
+  "routes": [
+    {
+      "id": "motion",
+      "label": "运动的描述",
+      "color": "#2473A8",
+      "direction": "unoriented",
+      "stations": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "segments": [
+        {
+          "from": "s0",
+          "to": "s1"
+        },
+        {
+          "from": "s1",
+          "to": "s2"
+        },
+        {
+          "from": "s2",
+          "to": "s3"
+        },
+        {
+          "from": "s3",
+          "to": "s4"
+        }
+      ]
+    },
+    {
+      "id": "kinematics",
+      "label": "匀变速直线运动",
+      "color": "#289A55",
+      "direction": "unoriented",
+      "stations": [
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8"
+      ],
+      "segments": [
+        {
+          "from": "s4",
+          "to": "s5"
+        },
+        {
+          "from": "s5",
+          "to": "s6"
+        },
+        {
+          "from": "s6",
+          "to": "s7"
+        },
+        {
+          "from": "s7",
+          "to": "s8"
+        }
+      ]
+    },
+    {
+      "id": "dynamics",
+      "label": "牛顿运动定律",
+      "color": "#D93134",
+      "direction": "unoriented",
+      "stations": [
+        "s4",
+        "s9",
+        "s10",
+        "s11",
+        "s12",
+        "s13"
+      ],
+      "segments": [
+        {
+          "from": "s4",
+          "to": "s9"
+        },
+        {
+          "from": "s9",
+          "to": "s10"
+        },
+        {
+          "from": "s10",
+          "to": "s11"
+        },
+        {
+          "from": "s11",
+          "to": "s12"
+        },
+        {
+          "from": "s12",
+          "to": "s13"
+        }
+      ]
+    },
+    {
+      "id": "forces",
+      "label": "相互作用",
+      "color": "#E78A1B",
+      "direction": "unoriented",
+      "stations": [
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s18",
+        "s9"
+      ],
+      "segments": [
+        {
+          "from": "s14",
+          "to": "s15"
+        },
+        {
+          "from": "s15",
+          "to": "s16"
+        },
+        {
+          "from": "s16",
+          "to": "s17"
+        },
+        {
+          "from": "s17",
+          "to": "s18"
+        },
+        {
+          "from": "s18",
+          "to": "s9"
+        }
+      ]
+    }
+  ],
+  "note": "知识关联无方向；站序服务阅读，不代表解题步骤。公式对应匀变速直线运动、自由落体和牛顿第二定律的相应条件。"
+}

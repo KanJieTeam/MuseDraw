@@ -23,3 +23,15 @@ node scripts/musedraw.mjs core render output/pathways.json --out output/pathways
 Choose this family for a network of named paths and real shared stations,
 rather than choosing it only because a reference uses metro colours. It does
 not infer biochemical pathways, commercial outcomes or missing relationships.
+
+Source-subject examples also include `biology-knowledge-map`,
+`mechanics-knowledge-map`, `protein-structure-routes` and `sales-handoff-map`.
+Use the relevant input rather than replacing its subject with the generic
+observability example. Knowledge routes remain unoriented; commercial cycle
+notes remain supplied examples rather than duration encodings.
+
+Layout may reverse a route on the page to keep shared identities together and
+reduce unused space. Its legend states the reading direction, and segment
+arrows still follow the supplied endpoints. Semantic order is recorded
+separately from actual layout columns; horizontal position across different
+routes is not a universal timeline. Missing connections stay missing.

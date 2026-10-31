@@ -1,0 +1,206 @@
+{
+  "family": "pathway-map",
+  "title": "高中生物必修一 · 知识线路图",
+  "subtitle": "分子、结构、物质与能量、生命历程；共同知识点是换乘站。",
+  "meaning": "knowledge-links",
+  "stations": [
+    {
+      "id": "s0",
+      "label": "组成细胞的元素"
+    },
+    {
+      "id": "s1",
+      "label": "水和无机盐"
+    },
+    {
+      "id": "s2",
+      "label": "糖类与脂质"
+    },
+    {
+      "id": "s3",
+      "label": "蛋白质"
+    },
+    {
+      "id": "s4",
+      "label": "核酸"
+    },
+    {
+      "id": "s5",
+      "label": "细胞膜"
+    },
+    {
+      "id": "s6",
+      "label": "细胞器"
+    },
+    {
+      "id": "s7",
+      "label": "细胞核"
+    },
+    {
+      "id": "s8",
+      "label": "细胞增殖"
+    },
+    {
+      "id": "s9",
+      "label": "物质跨膜运输",
+      "note": "部分方式借助载体蛋白"
+    },
+    {
+      "id": "s10",
+      "label": "酶",
+      "note": "多数是蛋白质"
+    },
+    {
+      "id": "s11",
+      "label": "ATP",
+      "note": "能量货币"
+    },
+    {
+      "id": "s12",
+      "label": "细胞呼吸与光合作用"
+    },
+    {
+      "id": "s13",
+      "label": "有丝分裂"
+    },
+    {
+      "id": "s14",
+      "label": "细胞分化"
+    },
+    {
+      "id": "s15",
+      "label": "衰老"
+    },
+    {
+      "id": "s16",
+      "label": "凋亡"
+    }
+  ],
+  "routes": [
+    {
+      "id": "molecules",
+      "label": "细胞的分子组成",
+      "color": "#E68A1B",
+      "direction": "unoriented",
+      "stations": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "segments": [
+        {
+          "from": "s0",
+          "to": "s1"
+        },
+        {
+          "from": "s1",
+          "to": "s2"
+        },
+        {
+          "from": "s2",
+          "to": "s3"
+        },
+        {
+          "from": "s3",
+          "to": "s4"
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "label": "细胞的结构",
+      "color": "#2473A8",
+      "direction": "unoriented",
+      "stations": [
+        "s3",
+        "s5",
+        "s6",
+        "s7",
+        "s8"
+      ],
+      "segments": [
+        {
+          "from": "s3",
+          "to": "s5"
+        },
+        {
+          "from": "s5",
+          "to": "s6"
+        },
+        {
+          "from": "s6",
+          "to": "s7"
+        },
+        {
+          "from": "s7",
+          "to": "s8"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "label": "物质与能量",
+      "color": "#29984E",
+      "direction": "unoriented",
+      "stations": [
+        "s5",
+        "s9",
+        "s10",
+        "s11",
+        "s12"
+      ],
+      "segments": [
+        {
+          "from": "s5",
+          "to": "s9"
+        },
+        {
+          "from": "s9",
+          "to": "s10"
+        },
+        {
+          "from": "s10",
+          "to": "s11"
+        },
+        {
+          "from": "s11",
+          "to": "s12"
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "label": "细胞的生命历程",
+      "color": "#D93134",
+      "direction": "unoriented",
+      "stations": [
+        "s8",
+        "s13",
+        "s14",
+        "s15",
+        "s16"
+      ],
+      "segments": [
+        {
+          "from": "s8",
+          "to": "s13"
+        },
+        {
+          "from": "s13",
+          "to": "s14"
+        },
+        {
+          "from": "s14",
+          "to": "s15"
+        },
+        {
+          "from": "s15",
+          "to": "s16"
+        }
+      ]
+    }
+  ],
+  "note": "线路用于复习知识关联，不表示反应先后或先修要求；换乘站对应共同概念，线距不编码知识的重要性。"
+}

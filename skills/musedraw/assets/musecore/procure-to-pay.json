@@ -1,0 +1,168 @@
+{
+  "family": "approval-workflow",
+  "title": "采购到付款流程",
+  "subtitle": "源示例：40 台显示器 × ¥920 = ¥36,800；金额、规则与日期均为给定示例，未作制度核验。",
+  "material": "aurora",
+  "start": "apply",
+  "roles": [
+    {
+      "id": "applicant",
+      "label": "申请人"
+    },
+    {
+      "id": "department",
+      "label": "部门负责人"
+    },
+    {
+      "id": "finance",
+      "label": "财务部"
+    },
+    {
+      "id": "procurement",
+      "label": "采购部"
+    },
+    {
+      "id": "supplier",
+      "label": "供应商"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "apply",
+      "label": "提交采购申请\n¥36,800\n附用途说明",
+      "role": "applicant",
+      "kind": "action"
+    },
+    {
+      "id": "department",
+      "label": "部门负责人审批\n所有金额都需要",
+      "role": "department",
+      "kind": "action"
+    },
+    {
+      "id": "finance",
+      "label": "财务总监审批\n¥5,000–50,000\n加签",
+      "role": "finance",
+      "kind": "action"
+    },
+    {
+      "id": "compare",
+      "label": "询价比价\n超过 ¥20,000\n需 3 家报价",
+      "role": "procurement",
+      "kind": "action"
+    },
+    {
+      "id": "order",
+      "label": "下达采购订单\n订单号、数量\n单价",
+      "role": "procurement",
+      "kind": "action"
+    },
+    {
+      "id": "supplier",
+      "label": "发货并开票\n发票 ¥37,300",
+      "role": "supplier",
+      "kind": "action"
+    },
+    {
+      "id": "receipt",
+      "label": "收货确认\n实收 40 台",
+      "role": "applicant",
+      "kind": "action"
+    },
+    {
+      "id": "match",
+      "label": "三单匹配\n差异 +1.36%\n容差 ±2%",
+      "role": "finance",
+      "kind": "action"
+    },
+    {
+      "id": "payment",
+      "label": "安排付款\n12 月 07 日付款",
+      "role": "department",
+      "kind": "end"
+    }
+  ],
+  "edges": [
+    {
+      "id": "submit",
+      "from": "apply",
+      "to": "department",
+      "kind": "control",
+      "label": "提交申请",
+      "feedback": false
+    },
+    {
+      "id": "review",
+      "from": "department",
+      "to": "finance",
+      "kind": "control",
+      "label": "本单给定加签",
+      "feedback": false
+    },
+    {
+      "id": "quote",
+      "from": "finance",
+      "to": "compare",
+      "kind": "control",
+      "label": "询价比价",
+      "feedback": false
+    },
+    {
+      "id": "place",
+      "from": "compare",
+      "to": "order",
+      "kind": "control",
+      "label": "下达订单",
+      "feedback": false
+    },
+    {
+      "id": "fulfil",
+      "from": "order",
+      "to": "supplier",
+      "kind": "control",
+      "label": "订单流转",
+      "feedback": false
+    },
+    {
+      "id": "delivery",
+      "from": "supplier",
+      "to": "receipt",
+      "kind": "data",
+      "label": "货物送达",
+      "feedback": false
+    },
+    {
+      "id": "invoice",
+      "from": "supplier",
+      "to": "match",
+      "kind": "data",
+      "label": "发票 ¥37,300",
+      "feedback": false
+    },
+    {
+      "id": "receipt-data",
+      "from": "receipt",
+      "to": "match",
+      "kind": "data",
+      "label": "收货信息：40 台",
+      "feedback": false
+    },
+    {
+      "id": "order-data",
+      "from": "order",
+      "to": "match",
+      "kind": "data",
+      "label": "采购订单 ¥36,800",
+      "feedback": false
+    },
+    {
+      "id": "pay",
+      "from": "match",
+      "to": "payment",
+      "kind": "control",
+      "label": "本单给定：在 ±2% 容差内",
+      "feedback": false
+    }
+  ],
+  "note": "源示例规则（未核验）：所有金额均需部门负责人审批；< ¥5,000 部门负责人；¥5,000–50,000 加财务总监；≥ ¥50,000 再加总经理。本单走：部门负责人 → 财务总监。\n三单匹配：订单 ¥36,800，收货 40 × ¥920 = ¥36,800，发票 ¥37,300。发票日 2026-11-05，账期 30 天，到期日 12 月 05 日为星期六，顺延到 12 月 07 日星期一。\n原稿未画退货、部分到货和预付款；责任标签保留原泳道归属。金额、报价、差异和日期均为源给定，不是本程序的计算结果。"
+}

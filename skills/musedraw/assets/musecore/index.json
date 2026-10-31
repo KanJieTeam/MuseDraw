@@ -679,14 +679,6 @@
         {
           "id": "e01-duanlianjie-zujian",
           "sourceSha256": "e532ef30c5b5f15e8dc1dea6fa3f6d9f8a1d938fa1ad6f9cc07f3b19123643d2"
-        },
-        {
-          "id": "o01-huiyishi-yuding",
-          "sourceSha256": "a5737a726bbef739fec2d16e4b23bb63c294b03c60ca476618ac6483f919254d"
-        },
-        {
-          "id": "171-sequencing-platform-c4",
-          "sourceSha256": "148527647ed2c203a8ae36db35290fae054084bb819c2af3e914868b457bc94c"
         }
       ]
     },
@@ -759,10 +751,6 @@
         {
           "id": "198-call-center-staffing",
           "sourceSha256": "77be3c298f99c317972ec2b7c363ed1274f74fe70c96701f53150f985bc73665"
-        },
-        {
-          "id": "o08-quanqiu-kefu",
-          "sourceSha256": "f802122611dccbd6b03f89c71168d7a41a361de7c439e5c279a5a92aa8c5fa24"
         }
       ]
     },
@@ -931,10 +919,6 @@
         {
           "id": "o05-yongyin-shenpi",
           "sourceSha256": "d276c0eaed017779b75dc298b0015f86ab925485f578dbb64c783e582f9b8e72"
-        },
-        {
-          "id": "189-procure-to-pay",
-          "sourceSha256": "2e95c8a57a5055f990d5f0e2824b2478508a3c6fb05e200d7cb9b4c83716cfc5"
         }
       ]
     },
@@ -1067,22 +1051,6 @@
         {
           "id": "114-observability-metro",
           "sourceSha256": "db83b5d095745e78a23ef554ae5477e944658f3bfa197142a4a87780e0e10a31"
-        },
-        {
-          "id": "o06-xiansuo-huikuan",
-          "sourceSha256": "b741912887588c7e06f88e01fabc2a5964762cfe35ff5ac16ffb6a32d4022451"
-        },
-        {
-          "id": "t04-lixue-xianlu",
-          "sourceSha256": "149beac48444dbaee6bc22a3a17fc3601184864769a03b0a17bd2e9d8dfb73a0"
-        },
-        {
-          "id": "j10-shengwu-bixiu1",
-          "sourceSha256": "17c75d84dc8295b309753aa899cf33d990abe42f44caf9d9444112aaa5e7b032"
-        },
-        {
-          "id": "s05-danbai-jiegou",
-          "sourceSha256": "bddba6ad2a4285336b81ba170307b6e8ac8e769a244c1c19333143b043ba3b0c"
         }
       ]
     },
@@ -2153,6 +2121,102 @@
           "sourceSha256": "23e1d61637030910905ec24b2b4332c9ead116d9b84756a59c5f7189e54e9a40"
         }
       ]
+    },
+    {
+      "id": "biology-knowledge-map",
+      "family": "pathway-map",
+      "file": "biology-knowledge-map.json",
+      "contentStatus": "Source-derived teaching content; graph is illustrative, not a measured or verified operational result.",
+      "sourceCases": [
+        {
+          "id": "j10-shengwu-bixiu1",
+          "sourceSha256": "17c75d84dc8295b309753aa899cf33d990abe42f44caf9d9444112aaa5e7b032"
+        }
+      ]
+    },
+    {
+      "id": "mechanics-knowledge-map",
+      "family": "pathway-map",
+      "file": "mechanics-knowledge-map.json",
+      "contentStatus": "Source-derived teaching content; graph is illustrative, not a measured or verified operational result.",
+      "sourceCases": [
+        {
+          "id": "t04-lixue-xianlu",
+          "sourceSha256": "149beac48444dbaee6bc22a3a17fc3601184864769a03b0a17bd2e9d8dfb73a0"
+        }
+      ]
+    },
+    {
+      "id": "protein-structure-routes",
+      "family": "pathway-map",
+      "file": "protein-structure-routes.json",
+      "contentStatus": "Source-derived teaching content; graph is illustrative, not a measured or verified operational result.",
+      "sourceCases": [
+        {
+          "id": "s05-danbai-jiegou",
+          "sourceSha256": "bddba6ad2a4285336b81ba170307b6e8ac8e769a244c1c19333143b043ba3b0c"
+        }
+      ]
+    },
+    {
+      "id": "sales-handoff-map",
+      "family": "pathway-map",
+      "file": "sales-handoff-map.json",
+      "contentStatus": "Source-derived teaching content; graph is illustrative, not a measured or verified operational result.",
+      "sourceCases": [
+        {
+          "id": "o06-xiansuo-huikuan",
+          "sourceSha256": "b741912887588c7e06f88e01fabc2a5964762cfe35ff5ac16ffb6a32d4022451"
+        }
+      ]
+    },
+    {
+      "id": "meeting-booking-architecture",
+      "family": "typed-system",
+      "file": "meeting-booking-architecture.json",
+      "contentStatus": "Source-derived static relationships; source SVG/notes disagreements are preserved and documented, not repaired by inference.",
+      "sourceCases": [
+        {
+          "id": "o01-huiyishi-yuding",
+          "sourceSha256": "a5737a726bbef739fec2d16e4b23bb63c294b03c60ca476618ac6483f919254d"
+        }
+      ]
+    },
+    {
+      "id": "sequencing-platform-architecture",
+      "family": "typed-system",
+      "file": "sequencing-platform-architecture.json",
+      "contentStatus": "Source-derived static relationships; source capacity assumptions remain supplied notes, not calculated performance.",
+      "sourceCases": [
+        {
+          "id": "171-sequencing-platform-c4",
+          "sourceSha256": "148527647ed2c203a8ae36db35290fae054084bb819c2af3e914868b457bc94c"
+        }
+      ]
+    },
+    {
+      "id": "global-support-relay",
+      "family": "global-support-relay",
+      "file": "global-support-relay.json",
+      "contentStatus": "Source-derived local shifts and supplied offset scenarios; exact daily interval calculation, not verified real staffing or civil-time lookup.",
+      "sourceCases": [
+        {
+          "id": "o08-quanqiu-kefu",
+          "sourceSha256": "f802122611dccbd6b03f89c71168d7a41a361de7c439e5c279a5a92aa8c5fa24"
+        }
+      ]
+    },
+    {
+      "id": "procure-to-pay",
+      "family": "approval-workflow",
+      "file": "procure-to-pay.json",
+      "contentStatus": "Source-derived operations, relationships and responsibility labels; source policy inconsistencies retained as annotations, not an approval engine or physical swimlane recreation.",
+      "sourceCases": [
+        {
+          "id": "189-procure-to-pay",
+          "sourceSha256": "2e95c8a57a5055f990d5f0e2824b2478508a3c6fb05e200d7cb9b4c83716cfc5"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2689,6 +2753,12 @@
       "reference": "references/musecore-handwash.md",
       "ids": [
         "handwash-practice"
+      ]
+    },
+    {
+      "reference": "references/musecore-support-relay.md",
+      "ids": [
+        "global-support-relay"
       ]
     }
   ]
