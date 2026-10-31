@@ -802,7 +802,11 @@ class GalleryTests(unittest.TestCase):
                                  'references/musecore-autoscale-replay.md',
                                  'tests/musecore/autoscale-source.test.mjs',
                                  'tests/musecore/lens-layout.test.mjs',
-                                 'tests/musecore/priority-layout.test.mjs'):
+                                 'tests/musecore/priority-layout.test.mjs',
+                                 'assets/musecore/artwork/river-run-display.mjs',
+                                 'assets/musecore/artwork/river-run-display.LICENSE.txt',
+                                 'tests/musecore/ion-layout.test.mjs',
+                                 'tests/musecore/river-poster-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

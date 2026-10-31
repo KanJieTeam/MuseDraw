@@ -87,7 +87,7 @@ def build_skill_download(root, staging):
                         for family in ("report-spreads", "visual-language", "style-kits"))
                     and file.suffix in {".html", ".css", ".png", ".jpg", ".svg", ".txt"}
                 )
-                if file.suffix in {".md", ".json", ".mjs", ".js", ".py", ".yaml"} or name.endswith("LICENSE") or design_preview or frontend_example or composed_example:
+                if file.suffix in {".md", ".json", ".mjs", ".js", ".py", ".yaml"} or name.endswith(("LICENSE", ".LICENSE.txt")) or design_preview or frontend_example or composed_example:
                     files[file.relative_to(source).as_posix()] = file
     files["LICENSE"] = root / "LICENSE"
     if (root / "NOTICE").is_file():

@@ -6,6 +6,11 @@ project author for inclusion. Original SVG and PNG files are retained alongside
 replay scenes; obsolete export notes have been omitted from the design text.
 Example data and simulations are illustrative, not independently certified results.
 The spatial interface experiment includes Three.js under its bundled MIT license.
+The river-run poster embeds the unmodified TeX Gyre Heros Cn Bold 2.004 font
+component under the GUST Font License and LaTeX Project Public License 1.3c.
+Its copyright, full licenses, manifest and original-package source are retained in
+skills/musedraw/assets/musecore/artwork/river-run-display.LICENSE.txt and in
+the exported SVG metadata. This third-party font is not relicensed as Apache code.
 
 Project-authored instructions, helper code and example figures are provided under
 the Apache License, Version 2.0. External sites linked as visual references retain

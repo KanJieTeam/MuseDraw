@@ -82,7 +82,8 @@ import {primerFamilies} from './primer-figures.mjs';
 import {plantcycleFamilies} from './plantcycle-figures.mjs';
 import {leafenergyFamilies} from './leafenergy-figures.mjs';
 import {shadowCinemaFamilies} from './shadow-cinema-figures.mjs';
-import {nightPosterFamilies} from './night-poster-figures.mjs';
+import {nightPosterFamilies,riverRunFontReady} from './night-poster-figures.mjs';
+import {riverRunPosterModel} from './night-poster-models.mjs';
 import {proteomicsFamilies} from './proteomics-figures.mjs';
 import {calciumFamilies} from './calcium-figures.mjs';
 import {paperCoffeeFamilies} from './paper-coffee-figures.mjs';
@@ -267,6 +268,7 @@ export const MuseCore=(()=>{
    return finish(f,{family:'report',width:W,height:y,columns,sections:placements});
  }
  families.report=report;
+ async function prepare(input){if(input?.family==='river-run-poster'){riverRunPosterModel(input);await riverRunFontReady()}}
  function render(input){need(input&&Object.hasOwn(families,input.family),'unsupported family');return families[input.family](input)}
- return {render,audit,width,families:Object.keys(families)};
+ return {render,prepare,audit,width,families:Object.keys(families)};
 })();
