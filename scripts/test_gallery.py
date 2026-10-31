@@ -767,7 +767,14 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/sankey-terminal.test.mjs',
                                  'tests/musecore/source-tcp-quantities.test.mjs',
                                  'tests/musecore/typed-system-layout.test.mjs',
-                                 'tests/musecore/hash-layout.test.mjs'):
+                                 'tests/musecore/hash-layout.test.mjs',
+                                 'scripts/musecore/imagebuild-models.mjs',
+                                 'scripts/musecore/imagebuild-figures.mjs',
+                                 'assets/musecore/image-build-comparison.json',
+                                 'references/musecore-image-build.md',
+                                 'tests/musecore/imagebuild-source.test.mjs',
+                                 'tests/musecore/force-layout.test.mjs',
+                                 'tests/musecore/incident-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

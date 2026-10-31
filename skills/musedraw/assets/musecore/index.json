@@ -142,13 +142,7 @@
       "id": "blueprint",
       "family": "blueprint",
       "file": "blueprint.json",
-      "contentStatus": "fictional development data; no operational, scientific or causal claim",
-      "sourceCases": [
-        {
-          "id": "113-image-layers",
-          "sourceSha256": "c3ecc623cdb839dbe7ff52a6ac486d83dde1b1d348f9b1ffdd757e8f64bd08eb"
-        }
-      ]
+      "contentStatus": "fictional development data; no operational, scientific or causal claim"
     },
     {
       "id": "constellation",
@@ -2237,6 +2231,18 @@
           "sourceSha256": "f7074dec80822738b4106cdee008b78f259a3b2d29f73546fb3e37222e7538df"
         }
       ]
+    },
+    {
+      "id": "image-build-comparison",
+      "family": "image-build-comparison",
+      "file": "image-build-comparison.json",
+      "contentStatus": "Source illustrative image sizes in one explicit unit, independently additive stacks and declared artifact transfer; no Docker execution, inferred inheritance or real build-size prediction. Excluded build-stage total is supplied as 931 MB, not filled with geometric guesses of component sizes.",
+      "sourceCases": [
+        {
+          "id": "113-image-layers",
+          "sourceSha256": "c3ecc623cdb839dbe7ff52a6ac486d83dde1b1d348f9b1ffdd757e8f64bd08eb"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2779,6 +2785,12 @@
       "reference": "references/musecore-support-relay.md",
       "ids": [
         "global-support-relay"
+      ]
+    },
+    {
+      "reference": "references/musecore-image-build.md",
+      "ids": [
+        "image-build-comparison"
       ]
     }
   ]

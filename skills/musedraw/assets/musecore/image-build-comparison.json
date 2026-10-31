@@ -1,0 +1,26 @@
+{
+  "family": "image-build-comparison",
+  "title": "镜像分层剖面",
+  "subtitle": "同一个 Python 服务：单阶段构建与多阶段构建的最终镜像",
+  "evidenceKind": "source-illustration",
+  "unit": "MB",
+  "stages": [
+    {"id":"single","label":"单阶段构建","role":"comparison-image","layers":[
+      {"id":"base","label":"FROM 完整系统镜像","value":117},
+      {"id":"tools","label":"RUN apt-get install build-essential …","value":384},
+      {"id":"dependencies","label":"RUN pip install -r requirements.txt","value":412},
+      {"id":"source","label":"COPY . /app","value":6}
+    ]},
+    {"id":"final","label":"多阶段 · 最终镜像","role":"final-image","layers":[
+      {"id":"runtime","label":"FROM 精简运行时镜像","value":52},
+      {"id":"wheels","label":"COPY --from=build /wheels …","value":61},
+      {"id":"source","label":"COPY . /app","value":6}
+    ]},
+    {"id":"build","label":"构建阶段","role":"excluded-stage","layers":[
+      {"id":"total","label":"构建阶段合计","value":931,"detail":"源示例仅给合计，不拆分各操作的大小。"}
+    ],"note":"FROM 完整系统镜像\nRUN apt-get install …\nRUN pip wheel …"}
+  ],
+  "comparisons":[{"id":"final-over-single","fromStage":"single","toStage":"final","label":"最终镜像 / 单阶段镜像"}],
+  "copies":[{"id":"wheel-artifact","fromStage":"build","toStage":"final","toLayer":"wheels","label":"只复制编译好的 wheel 文件"}],
+  "note":"尺寸为源稿给定示例，并非公开镜像实测。复制箭头表示产物转移，不表示复制整个 931 MB 构建阶段。"
+}
