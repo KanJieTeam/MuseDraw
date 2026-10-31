@@ -1,0 +1,9 @@
+{
+ "family":"sample-summary",
+ "title":"平均数",
+ "subtitle":"第三小组 5 名同学一分钟跳绳成绩（原稿给定示例）",
+ "presentation":"balance",
+ "groups":[{"id":"skipping","label":"一分钟跳绳成绩","observations":[{"id":"ming","label":"小明","value":128},{"id":"hong","label":"小红","value":142},{"id":"gang","label":"小刚","value":116},{"id":"li","label":"小丽","value":150},{"id":"jun","label":"小军","value":134}]}],
+ "unit":"下",
+ "note":"成绩为原稿给定示例；移多补少演示数量的等量分配，不改变各人的原记录。"
+}

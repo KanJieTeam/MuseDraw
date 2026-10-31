@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.44
+  instructions-version: musecore-2026-10-31.45
 ---
 
 # MuseDraw
@@ -92,6 +92,9 @@ family's encodings, coordinated geometry and placement.
 | Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |
 | Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |
+| Given jump-rope scores and explicit arithmetic redistribution | [Average source input](references/musecore-average-source.md) |
+| Supplied bin frequencies, density and externally reported summaries | [Binned histogram](references/musecore-histogram-binned-source.md) |
+| Same-key ring and mod-n membership migration | [Hash strategy comparison](references/musecore-hash-modulo.md) |
 | Optional SLO comparison and constant burn-rate scenario tables | [Error-budget panels](references/musecore-error-budget-panels.md) |
 | Time readings, reflected rays, balanced levers, thin lenses, length scales, orders of magnitude and solid projections | [Teaching objects and geometry](references/musecore-objects.md) |
 | Traceable cost allocation, weighted goal progress, meeting workload and sampled seat use | [Office analysis](references/musecore-office-analysis.md) |

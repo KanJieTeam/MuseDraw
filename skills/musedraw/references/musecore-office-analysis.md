@@ -42,3 +42,62 @@ apportionment checks test arithmetic, not additional artworks or aesthetic
 approval. Source identities/hashes live in the example registry; the original
 works are preserved. This revision has not independently demonstrated aesthetic
 transfer through WorkBuddy or ZCode.
+
+
+## Explicit retained costs and derived shared costs
+
+The optional `allocationMode: "retained-direct-cost"` selects a separate bounded
+view of the same `cost-allocation` family. Inputs without this field keep the
+existing allocation and presentation path. An unknown mode is refused.
+
+Copy `assets/musecore/cost-retained-derived.json` for a distinct fictional
+example. It has the same 2–6 units and 2–6 pools and currency scale of 100. A
+direct pool retains its explicit complete `weights`. Its optional
+`retained: {minorUnits, label}` gives a nonnegative integer amount no greater
+than the pool amount. The label is mandatory, including for an explicit zero.
+The remainder is distributed with the existing largest remainder allocator. A
+positive finite weight sum is still required for fully retained or zero pools.
+Unused weight percentages never imply retained costs.
+
+At most one shared pool may use `directCostPoolIds`, a nonempty unique list
+of direct pool IDs, instead of hand-entered weights. Its basis for each unit is
+the sum of that unit's already rounded integer allocations in exactly those
+selected direct pools. Retained amounts are excluded. No self-reference,
+shared-to-shared reference, manual shared weight or retained shared amount is
+accepted. Presentation order does not control dependency calculation.
+
+The selected direct basis must have a positive denominator. A zero-amount
+shared pool is accepted when that denominator is positive and allocates zeros.
+A zero denominator is refused for both zero and positive shared amounts; the
+program does not invent weights or divide 0 by 0. A zero direct-only ledger is
+allowed and displays undefined percentages explicitly. All amounts and summed
+totals must be safe integers; existing allocation precision refusals remain.
+
+`allocateRetainedCostPools(units,pools)` reuses `allocateMinorUnits`. It
+returns pool allocations, explicit retained records, unit parts, and a shared
+`derivedBasis` containing selected pool IDs, each computed integer unit basis
+and their denominator. The caller's `basis` text stays intact. Every pool
+conserves allocations plus retained; the complete account conserves all unit
+totals plus retained. Warm retained records stay separate from unit ranking.
+Unit percentages divide by the complete account including retained; retained
+percentages divide by their identified pool. Shared provenance shows the
+selected direct pools and direct-cost-to-shared amounts. Additional categories
+and long text expand measured layout or are refused without smaller type.
+
+The 118 source supplies its pool totals, 11,700 yuan retained compute cost and
+final unit totals, but not the complete pool allocation weights. Its SVG
+segment widths are not treated as independently supplied data, and the new
+fictional example does not fit or reproduce those source totals. The original
+source describes rounding to whole yuan; this existing construction continues
+to allocate in integer minor units at scale 100. No claim of identical source
+rounding, actual idle utilization, waste, savings, fairness or recommended
+operational action follows from retained money. The composition reference is
+separate from the actual input source. Caller title, basis, labels and note are
+retained in full.
+
+`node tests/musecore/cost-retained-derived.test.mjs` checks independent
+integer rational apportionment, both allocation stages, multiple retained
+pools, explicit zero rules, selected dependencies and conservation, real SVG
+unit/pool identities and bar geometry, full caller text, measured typography
+under ascent pressure, and actual rejection boundaries. The original office
+analysis tests remain unchanged.

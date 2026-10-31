@@ -298,7 +298,13 @@
       "id": "histogram",
       "family": "histogram",
       "file": "histogram.json",
-      "contentStatus": "fictional development observations, no empirical or causal claim",
+      "contentStatus": "fictional development observations, no empirical or causal claim"
+    },
+    {
+      "id": "grouped-test-scores",
+      "family": "histogram",
+      "file": "grouped-test-scores.json",
+      "contentStatus": "Source-given bin counts; mean, median and extrema are explicitly externally supplied summaries, not recomputed from unavailable individual records.",
       "sourceCases": [
         {
           "id": "155-histogram",
@@ -502,7 +508,13 @@
       "id": "cost-allocation",
       "family": "cost-allocation",
       "file": "cost-allocation.json",
-      "contentStatus": "fictional office development content; not a measured result or recommendation",
+      "contentStatus": "fictional office development content; not a measured result or recommendation"
+    },
+    {
+      "id": "cost-retained-derived",
+      "family": "cost-allocation",
+      "file": "cost-retained-derived.json",
+      "contentStatus": "Explicit synthetic integer-minor-unit account with retained amounts and derived shared-cost weights; not reconstruction of unpublished source pool proportions.",
       "sourceCases": [
         {
           "id": "118-finops-allocation",
@@ -592,7 +604,13 @@
       "id": "hash-ring",
       "family": "hash-ring",
       "file": "hash-ring.json",
-      "contentStatus": "fictional engineering teaching input, not an actual service or production plan",
+      "contentStatus": "fictional engineering teaching input, not an actual service or production plan"
+    },
+    {
+      "id": "hash-ring-modulo-comparison",
+      "family": "hash-ring",
+      "file": "hash-ring-modulo-comparison.json",
+      "contentStatus": "Explicit synthetic same-key comparison using the existing uint32 teaching hash, not source MD5 keys or reported 6/20 results.",
       "sourceCases": [
         {
           "id": "105-consistent-hashing",
@@ -772,7 +790,13 @@
       "id": "sample-summary",
       "family": "sample-summary",
       "file": "sample-summary.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
+    },
+    {
+      "id": "rope-skipping-average",
+      "family": "sample-summary",
+      "file": "rope-skipping-average.json",
+      "contentStatus": "Source-given five fictional jump-rope scores; redistribution is arithmetic illustration and does not alter the original records.",
       "sourceCases": [
         {
           "id": "135-average",

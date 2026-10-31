@@ -822,7 +822,21 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/error-budget-panels.test.mjs',
                                  'tests/musecore/magnitude-layout.test.mjs',
                                  'tests/musecore/journey-layout.test.mjs',
-                                 'tests/musecore/objectives-weight-layout.test.mjs'):
+                                 'tests/musecore/objectives-weight-layout.test.mjs',
+                                 'assets/musecore/rope-skipping-average.json',
+                                 'references/musecore-average-source.md',
+                                 'tests/musecore/average-source.test.mjs',
+                                 'assets/musecore/hash-ring-modulo-comparison.json',
+                                 'tests/musecore/hash-modulo.test.mjs',
+                                 'references/musecore-hash-modulo.md',
+                                 'assets/musecore/cost-retained-derived.json',
+                                 'tests/musecore/cost-retained-derived.test.mjs',
+                                 'references/musecore-office-analysis.md',
+                                 'assets/musecore/grouped-test-scores.json',
+                                 'tests/musecore/histogram-binned.test.mjs',
+                                 'references/musecore-histogram-binned-source.md',
+                                 'scripts/musecore/hash-modulo-models.mjs',
+                                 'scripts/musecore/histogram-binned-models.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

@@ -1,0 +1,72 @@
+{
+  "family": "cost-allocation",
+  "allocationMode": "retained-direct-cost",
+  "title": "成本分摊 · 显式规则虚构算例",
+  "subtitle": "保留成本独立列示；公共成本按选定直接成本派生",
+  "currency": "元",
+  "units": [
+    {
+      "id": "orders",
+      "label": "订单组"
+    },
+    {
+      "id": "catalogue",
+      "label": "目录组"
+    },
+    {
+      "id": "ops",
+      "label": "运维组"
+    }
+  ],
+  "pools": [
+    {
+      "id": "cpu",
+      "label": "计算",
+      "basis": "显式请求权重",
+      "minorUnits": 10101,
+      "weights": {
+        "orders": 3,
+        "catalogue": 2,
+        "ops": 0
+      },
+      "retained": {
+        "minorUnits": 1101,
+        "label": "未分摊计算成本"
+      }
+    },
+    {
+      "id": "disk",
+      "label": "存储",
+      "basis": "显式容量权重",
+      "minorUnits": 3000,
+      "weights": {
+        "orders": 1,
+        "catalogue": 1,
+        "ops": 1
+      }
+    },
+    {
+      "id": "egress",
+      "label": "网络",
+      "basis": "显式出网权重",
+      "minorUnits": 1001,
+      "weights": {
+        "orders": 0,
+        "catalogue": 1,
+        "ops": 1
+      }
+    },
+    {
+      "id": "platform",
+      "label": "平台公共",
+      "basis": "按计算、存储、网络直接成本之和",
+      "minorUnits": 2003,
+      "directCostPoolIds": [
+        "cpu",
+        "disk",
+        "egress"
+      ]
+    }
+  ],
+  "note": "虚构计算示例，不来自118原稿金额或团队分配比例。"
+}
