@@ -1,0 +1,242 @@
+{
+  "family": "deployment",
+  "deploymentTree": {
+    "infrastructure": [
+      {
+        "id": "east1",
+        "parent": null,
+        "kind": "region",
+        "label": "华东 1",
+        "detail": "部署节点：云区域"
+      },
+      {
+        "id": "a",
+        "parent": "east1",
+        "kind": "az",
+        "label": "可用区 A",
+        "detail": "部署节点：可用区"
+      },
+      {
+        "id": "a-pool",
+        "parent": "a",
+        "kind": "service-host",
+        "label": "K8s 节点池",
+        "detail": "部署节点：Kubernetes 1.30"
+      },
+      {
+        "id": "a-host",
+        "parent": "a",
+        "kind": "data-host",
+        "label": "云数据库实例",
+        "detail": "部署节点：托管 PostgreSQL"
+      },
+      {
+        "id": "b",
+        "parent": "east1",
+        "kind": "az",
+        "label": "可用区 B",
+        "detail": "部署节点：可用区"
+      },
+      {
+        "id": "b-pool",
+        "parent": "b",
+        "kind": "service-host",
+        "label": "K8s 节点池",
+        "detail": "部署节点：Kubernetes 1.30"
+      },
+      {
+        "id": "b-host",
+        "parent": "b",
+        "kind": "data-host",
+        "label": "云数据库实例",
+        "detail": "部署节点：托管 PostgreSQL"
+      },
+      {
+        "id": "c",
+        "parent": "east1",
+        "kind": "az",
+        "label": "可用区 C",
+        "detail": "部署节点：可用区"
+      },
+      {
+        "id": "c-pool",
+        "parent": "c",
+        "kind": "service-host",
+        "label": "K8s 节点池",
+        "detail": "部署节点：Kubernetes 1.30"
+      },
+      {
+        "id": "c-host",
+        "parent": "c",
+        "kind": "data-host",
+        "label": "云数据库实例",
+        "detail": "部署节点：托管 PostgreSQL"
+      }
+    ],
+    "instances": [
+      {
+        "id": "a-web",
+        "host": "a-pool",
+        "kind": "service",
+        "label": "Web 前端",
+        "detail": "容器：Nginx"
+      },
+      {
+        "id": "a-api",
+        "host": "a-pool",
+        "kind": "service",
+        "label": "订单 API",
+        "detail": "容器：Java 21，Spring Boot\n下单、查询订单"
+      },
+      {
+        "id": "a-db",
+        "host": "a-host",
+        "kind": "data",
+        "label": "PostgreSQL 主库",
+        "detail": "数据库：PostgreSQL 16"
+      },
+      {
+        "id": "b-web",
+        "host": "b-pool",
+        "kind": "service",
+        "label": "Web 前端",
+        "detail": "容器：Nginx"
+      },
+      {
+        "id": "b-api",
+        "host": "b-pool",
+        "kind": "service",
+        "label": "订单 API",
+        "detail": "容器：Java 21，Spring Boot\n下单、查询订单"
+      },
+      {
+        "id": "b-db",
+        "host": "b-host",
+        "kind": "data",
+        "label": "同步备库",
+        "detail": "数据库：PostgreSQL 16"
+      },
+      {
+        "id": "c-web",
+        "host": "c-pool",
+        "kind": "service",
+        "label": "Web 前端",
+        "detail": "容器：Nginx"
+      },
+      {
+        "id": "c-api",
+        "host": "c-pool",
+        "kind": "service",
+        "label": "订单 API",
+        "detail": "容器：Java 21，Spring Boot\n下单、查询订单"
+      },
+      {
+        "id": "c-db",
+        "host": "c-host",
+        "kind": "data",
+        "label": "只读副本",
+        "detail": "数据库：PostgreSQL 16"
+      }
+    ]
+  },
+  "title": "订单服务部署图",
+  "subtitle": "[部署图] 生产环境，华东 1 区域",
+  "actor": {
+    "id": "customer",
+    "label": "顾客",
+    "detail": "人员"
+  },
+  "entry": {
+    "id": "lb",
+    "host": "east1",
+    "label": "公网负载均衡",
+    "detail": "七层负载均衡\n分发 HTTPS 请求"
+  },
+  "links": [
+    {
+      "id": "access",
+      "from": "customer",
+      "to": "lb",
+      "label": "访问 [HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "a-forward",
+      "from": "lb",
+      "to": "a-web",
+      "label": "转发 [HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "a-call",
+      "from": "a-web",
+      "to": "a-api",
+      "label": "调用 [JSON/HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "a-jdbc",
+      "from": "a-api",
+      "to": "a-db",
+      "label": "读写 [JDBC]",
+      "kind": "request"
+    },
+    {
+      "id": "b-forward",
+      "from": "lb",
+      "to": "b-web",
+      "label": "转发 [HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "b-call",
+      "from": "b-web",
+      "to": "b-api",
+      "label": "调用 [JSON/HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "b-jdbc",
+      "from": "b-api",
+      "to": "a-db",
+      "label": "读写 [JDBC]",
+      "kind": "request"
+    },
+    {
+      "id": "c-forward",
+      "from": "lb",
+      "to": "c-web",
+      "label": "转发 [HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "c-call",
+      "from": "c-web",
+      "to": "c-api",
+      "label": "调用 [JSON/HTTPS]",
+      "kind": "request"
+    },
+    {
+      "id": "c-jdbc",
+      "from": "c-api",
+      "to": "a-db",
+      "label": "读写 [JDBC]",
+      "kind": "request"
+    },
+    {
+      "id": "sync",
+      "from": "a-db",
+      "to": "b-db",
+      "label": "同步复制",
+      "kind": "replication"
+    },
+    {
+      "id": "async",
+      "from": "a-db",
+      "to": "c-db",
+      "label": "异步复制 [流复制]",
+      "kind": "replication"
+    }
+  ],
+  "note": "示例版本；仅展示明确给定的实例、宿主与关系。"
+}
