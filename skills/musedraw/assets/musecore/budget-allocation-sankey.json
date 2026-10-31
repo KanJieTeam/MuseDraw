@@ -1,0 +1,280 @@
+{
+  "family": "sankey",
+  "title": "2027 年度预算：资金从哪里来、到哪里去",
+  "subtitle": "单位：亿元；全年收入预算 8.5 亿元（示例数据）",
+  "unit": "亿元",
+  "columns": [
+    "收入来源",
+    "总收入",
+    "成本、费用与利润",
+    "三类费用的性质"
+  ],
+  "nodes": [
+    {
+      "id": "product-a",
+      "label": "产品 A 收入",
+      "column": 0,
+      "color": "#3E6496"
+    },
+    {
+      "id": "product-b",
+      "label": "产品 B 收入",
+      "column": 0,
+      "color": "#3E6496"
+    },
+    {
+      "id": "service",
+      "label": "服务收入",
+      "column": 0,
+      "color": "#3E6496"
+    },
+    {
+      "id": "other",
+      "label": "其他收入",
+      "column": 0,
+      "color": "#3E6496"
+    },
+    {
+      "id": "pool",
+      "label": "总收入",
+      "column": 1,
+      "color": "#13294B"
+    },
+    {
+      "id": "operating-cost",
+      "label": "营业成本",
+      "column": 2,
+      "color": "#7F9CC3",
+      "terminal": true
+    },
+    {
+      "id": "rd",
+      "label": "研发费用",
+      "column": 2,
+      "color": "#13294B"
+    },
+    {
+      "id": "sales",
+      "label": "销售费用",
+      "column": 2,
+      "color": "#13294B"
+    },
+    {
+      "id": "admin",
+      "label": "管理费用",
+      "column": 2,
+      "color": "#13294B"
+    },
+    {
+      "id": "profit",
+      "label": "营业利润",
+      "column": 2,
+      "color": "#C77C2E",
+      "terminal": true
+    },
+    {
+      "id": "payroll",
+      "label": "人员薪酬",
+      "column": 3,
+      "color": "#13294B"
+    },
+    {
+      "id": "cloud",
+      "label": "外包与云资源",
+      "column": 3,
+      "color": "#13294B"
+    },
+    {
+      "id": "marketing",
+      "label": "市场推广",
+      "column": 3,
+      "color": "#13294B"
+    },
+    {
+      "id": "travel",
+      "label": "差旅会务",
+      "column": 3,
+      "color": "#13294B"
+    },
+    {
+      "id": "office",
+      "label": "办公与租金",
+      "column": 3,
+      "color": "#13294B"
+    }
+  ],
+  "links": [
+    {
+      "from": "product-a",
+      "to": "pool",
+      "value": 4.2,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "product-b",
+      "to": "pool",
+      "value": 2.6,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "service",
+      "to": "pool",
+      "value": 1.4,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "other",
+      "to": "pool",
+      "value": 0.3,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "pool",
+      "to": "operating-cost",
+      "value": 3.4,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "pool",
+      "to": "rd",
+      "value": 1.6,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "pool",
+      "to": "sales",
+      "value": 1.3,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "pool",
+      "to": "admin",
+      "value": 0.7,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "pool",
+      "to": "profit",
+      "value": 1.5,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原稿明文节点金额；对应流带核对。"
+      }
+    },
+    {
+      "from": "rd",
+      "to": "payroll",
+      "value": 1.1,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第10条流路径；起点上下缘 389.4 与 451.0 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "rd",
+      "to": "cloud",
+      "value": 0.4,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第11条流路径；起点上下缘 451.0 与 473.4 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "rd",
+      "to": "travel",
+      "value": 0.1,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第12条流路径；起点上下缘 473.4 与 479.0 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "sales",
+      "to": "payroll",
+      "value": 0.7,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第13条流路径；起点上下缘 497.0 与 536.2 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "sales",
+      "to": "marketing",
+      "value": 0.45,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第14条流路径；起点上下缘 536.2 与 561.4 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "sales",
+      "to": "travel",
+      "value": 0.15,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第15条流路径；起点上下缘 561.4 与 569.8 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "admin",
+      "to": "payroll",
+      "value": 0.45,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第16条流路径；起点上下缘 587.8 与 613.0 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "admin",
+      "to": "cloud",
+      "value": 0.1,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第17条流路径；起点上下缘 613.0 与 618.6 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "admin",
+      "to": "travel",
+      "value": 0.05,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第18条流路径；起点上下缘 618.6 与 621.4 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    },
+    {
+      "from": "admin",
+      "to": "office",
+      "value": 0.1,
+      "valueSource": {
+        "reference": "gallery/collections/visual-cases/181-budget-sankey/source.svg",
+        "basis": "原生 SVG 第19条流路径；起点上下缘 621.4 与 627.0 px；差值除以作者明确比例 56 px/亿元，精确解码；不是独立原数据表。"
+      }
+    }
+  ],
+  "note": "示例预算：总收入池不表示某项收入专用于某项费用；营业成本与营业利润止于本列。原稿指标：毛利率60%、营业利润率17.6%、研发占比18.8%、薪酬2.25亿元。编制日程：9月收入预测、10月部门申报、11月平衡与审议、12月董事会批准（未给完成状态）。"
+}

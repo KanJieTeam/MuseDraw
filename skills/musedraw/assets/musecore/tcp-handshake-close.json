@@ -1,0 +1,162 @@
+{
+  "family": "message-sequence",
+  "title": "TCP 的三次握手与四次挥手",
+  "subtitle": "普通主动打开与单端主动关闭的教学示意；状态按已给定报文成功接收后列示，不表示耗时或协议校验。",
+  "panels": [
+    {
+      "id": "handshake",
+      "title": "建立连接：三次握手",
+      "participants": [
+        {
+          "id": "client",
+          "label": "客户端"
+        },
+        {
+          "id": "server",
+          "label": "服务器"
+        }
+      ],
+      "initialStates": [
+        {
+          "participant": "client",
+          "label": "CLOSED"
+        },
+        {
+          "participant": "server",
+          "label": "LISTEN"
+        }
+      ],
+      "messages": [
+        {
+          "id": "syn",
+          "from": "client",
+          "to": "server",
+          "label": "SYN，seq = x",
+          "states": [
+            {
+              "participant": "client",
+              "label": "SYN-SENT"
+            },
+            {
+              "participant": "server",
+              "label": "SYN-RECEIVED"
+            }
+          ]
+        },
+        {
+          "id": "synack",
+          "from": "server",
+          "to": "client",
+          "label": "SYN + ACK，seq = y\nack = x + 1",
+          "replyTo": "syn",
+          "states": [
+            {
+              "participant": "client",
+              "label": "ESTABLISHED"
+            }
+          ]
+        },
+        {
+          "id": "ack",
+          "from": "client",
+          "to": "server",
+          "label": "ACK，seq = x + 1\nack = y + 1",
+          "replyTo": "synack",
+          "states": [
+            {
+              "participant": "server",
+              "label": "ESTABLISHED"
+            }
+          ]
+        }
+      ],
+      "note": "第三个报文确认对端的 SYN；三次握手帮助避免旧的重复连接请求造成混淆。这里不画同时打开、重传或异常分支。"
+    },
+    {
+      "id": "close",
+      "title": "断开连接：四次挥手",
+      "participants": [
+        {
+          "id": "client",
+          "label": "客户端"
+        },
+        {
+          "id": "server",
+          "label": "服务器"
+        }
+      ],
+      "initialStates": [
+        {
+          "participant": "client",
+          "label": "ESTABLISHED"
+        },
+        {
+          "participant": "server",
+          "label": "ESTABLISHED"
+        }
+      ],
+      "messages": [
+        {
+          "id": "fin",
+          "from": "client",
+          "to": "server",
+          "label": "FIN + ACK，seq = u\n此处确认号略",
+          "states": [
+            {
+              "participant": "client",
+              "label": "FIN-WAIT-1"
+            },
+            {
+              "participant": "server",
+              "label": "CLOSE-WAIT"
+            }
+          ]
+        },
+        {
+          "id": "finack",
+          "from": "server",
+          "to": "client",
+          "label": "ACK，ack = u + 1",
+          "replyTo": "fin",
+          "states": [
+            {
+              "participant": "client",
+              "label": "FIN-WAIT-2"
+            }
+          ]
+        },
+        {
+          "id": "serverfin",
+          "from": "server",
+          "to": "client",
+          "label": "FIN + ACK，seq = w\n此处确认号略",
+          "states": [
+            {
+              "participant": "client",
+              "label": "TIME-WAIT"
+            },
+            {
+              "participant": "server",
+              "label": "LAST-ACK"
+            }
+          ]
+        },
+        {
+          "id": "lastack",
+          "from": "client",
+          "to": "server",
+          "label": "ACK，ack = w + 1",
+          "replyTo": "serverfin",
+          "states": [
+            {
+              "participant": "server",
+              "label": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "note": "收到 FIN 后可先确认，待本端应用关闭后再发 FIN；此处省略中间数据段。\nTIME-WAIT 通常等待 2MSL 后转为 CLOSED，并可在对端重传 FIN 时再次发送最后的 ACK。"
+    }
+  ],
+  "note": "依据源图及 RFC 9293 §3.5、§3.6 的普通示例。x、y 为初始序号，u、w 为关闭时两端 FIN 的序号；SYN/FIN 占一个序号，纯 ACK 不占序号。状态是显式教学事实，程序不验证 TCP；不把四报文当成所有关闭情况。"
+}

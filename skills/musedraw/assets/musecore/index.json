@@ -327,10 +327,6 @@
         {
           "id": "d06-sangji-shouzhi",
           "sourceSha256": "71a3c6a5ae16f3e957bd41e35acfe82625a96c8a249f8806a1595f5dc7bbfb00"
-        },
-        {
-          "id": "181-budget-sankey",
-          "sourceSha256": "2091a13ab8e57900162688a5bcf8fe58c1e9e92e7d37dcc4d120a7d7b3291f8b"
         }
       ]
     },
@@ -686,13 +682,7 @@
       "id": "message-sequence",
       "family": "message-sequence",
       "file": "message-sequence.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "e10-tcp-woshou",
-          "sourceSha256": "e68d65ae6a603abe630cef17c9ab192d8508441e613bef1e1da7cb17e17febd2"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "daci",
@@ -854,13 +844,7 @@
       "id": "two-quantities",
       "family": "two-quantities",
       "file": "two-quantities.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "121-chicken-rabbit",
-          "sourceSha256": "f7074dec80822738b4106cdee008b78f259a3b2d29f73546fb3e37222e7538df"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "service-priority",
@@ -2215,6 +2199,42 @@
         {
           "id": "189-procure-to-pay",
           "sourceSha256": "2e95c8a57a5055f990d5f0e2824b2478508a3c6fb05e200d7cb9b4c83716cfc5"
+        }
+      ]
+    },
+    {
+      "id": "budget-allocation-sankey",
+      "family": "sankey",
+      "file": "budget-allocation-sankey.json",
+      "contentStatus": "Source-derived illustrative budget with 15 nodes and 19 amounts; ten detail amounts are exactly decoded from documented SVG scale, not an independent source data table. Explicit early endpoints retain the common amount scale; source footer is annotation, not the original metric-card layout.",
+      "sourceCases": [
+        {
+          "id": "181-budget-sankey",
+          "sourceSha256": "2091a13ab8e57900162688a5bcf8fe58c1e9e92e7d37dcc4d120a7d7b3291f8b"
+        }
+      ]
+    },
+    {
+      "id": "tcp-handshake-close",
+      "family": "message-sequence",
+      "file": "tcp-handshake-close.json",
+      "contentStatus": "Source-derived ordinary TCP active opening and one-end active closing teaching sequence; supplied states and messages, no protocol validator or timing calculation.",
+      "sourceCases": [
+        {
+          "id": "e10-tcp-woshou",
+          "sourceSha256": "e68d65ae6a603abe630cef17c9ab192d8508441e613bef1e1da7cb17e17febd2"
+        }
+      ]
+    },
+    {
+      "id": "chicken-rabbit-counts",
+      "family": "two-quantities",
+      "file": "chicken-rabbit-counts.json",
+      "contentStatus": "Source-derived 35-object, 94-unit arithmetic teaching input. Counts computed exactly; generic counting symbols, not a recreation of animal drawings.",
+      "sourceCases": [
+        {
+          "id": "121-chicken-rabbit",
+          "sourceSha256": "f7074dec80822738b4106cdee008b78f259a3b2d29f73546fb3e37222e7538df"
         }
       ]
     }

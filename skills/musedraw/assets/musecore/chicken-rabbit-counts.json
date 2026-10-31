@@ -1,0 +1,23 @@
+{
+  "family": "two-quantities",
+  "title": "鸡兔同笼",
+  "subtitle": "今有雉兔同笼，上有三十五头，下有九十四足。问雉兔各几何？（每鸡2足，每兔4足）",
+  "types": [
+    {
+      "id": "chicken",
+      "label": "鸡",
+      "coefficient": 2
+    },
+    {
+      "id": "rabbit",
+      "label": "兔",
+      "coefficient": 4
+    }
+  ],
+  "totalObjects": 35,
+  "totalQuantity": 94,
+  "objectUnit": "只",
+  "quantityUnit": "足",
+  "discrete": true,
+  "note": "源图题目注明出自《孙子算经》，雉指野鸡。每个圆框代表一只鸡、每个方框代表一只兔；每点代表一足。白点是每只先按2足算的基准，黄点是兔多出的2足；通用计数符号未复刻鸡冠、兔耳。"
+}

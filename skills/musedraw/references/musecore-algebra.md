@@ -26,3 +26,8 @@ node scripts/musedraw.mjs core render output/equation.json --out output/equation
 `equation-models.mjs` provides the shared exact rational operations used by
 both models. The native whiteboard/chalk objects, text and marks are computed
 together; inspect the result at its intended size and keep editable source.
+
+`chicken-rabbit-counts` is the separate source-subject input for 35 heads and
+94 feet, with coefficients 2 and 4. The model computes 23 chickens and 12
+rabbits and draws all 35 counted objects. Its circle/square counting symbols
+do not reproduce the source’s animal illustrations.

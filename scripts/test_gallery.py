@@ -760,7 +760,14 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/architecture-source-inputs.test.mjs',
                                  'tests/musecore/pathway-source-inputs.test.mjs',
                                  'tests/musecore/support-relay.test.mjs',
-                                 'tests/musecore/procure-to-pay.test.mjs'):
+                                 'tests/musecore/procure-to-pay.test.mjs',
+                                 'assets/musecore/budget-allocation-sankey.json',
+                                 'assets/musecore/tcp-handshake-close.json',
+                                 'assets/musecore/chicken-rabbit-counts.json',
+                                 'tests/musecore/sankey-terminal.test.mjs',
+                                 'tests/musecore/source-tcp-quantities.test.mjs',
+                                 'tests/musecore/typed-system-layout.test.mjs',
+                                 'tests/musecore/hash-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

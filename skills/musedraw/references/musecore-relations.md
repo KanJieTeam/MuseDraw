@@ -55,3 +55,9 @@ and [component](https://c4model.com/diagrams/component) descriptions. DACI role
 definitions follow [Atlassian's team playbook](https://www.atlassian.com/team-playbook/plays/daci).
 The distinction between stored copies and a verified recovery process is
 consistent with [Canadian Centre for Cyber Security backup guidance](https://www.cyber.gc.ca/en/guidance/tips-backing-your-information-itsap40002).
+
+`tcp-handshake-close` supplies the source example’s two teaching panels with
+three opening and four closing messages. Their states remain supplied
+assertions; this renderer neither checks a protocol implementation nor infers
+message duration. State text reserves measured ink height before the next
+message, including when the installed font has taller glyph bounds.
