@@ -1,0 +1,75 @@
+{
+  "family": "error-budget",
+  "title": "错误预算",
+  "subtitle": "时间可用性教学 · 故障序列为合成输入，双表参数取自来源示例",
+  "windowMinutes": 43200,
+  "observedThrough": 43200,
+  "target": 0.999,
+  "incidents": [
+    {
+      "id": "a",
+      "label": "第 5 天 · 接口不可用",
+      "startMinute": 7200,
+      "durationMinutes": 8
+    },
+    {
+      "id": "b",
+      "label": "第 13 天 · 服务中断",
+      "startMinute": 18720,
+      "durationMinutes": 15
+    },
+    {
+      "id": "c",
+      "label": "第 26 天 · 故障恢复",
+      "startMinute": 37440,
+      "durationMinutes": 25
+    }
+  ],
+  "note": "30天额度、五档SLO和三组速率窗口取自原稿教学表；上方8、15、25分钟故障为合成输入，不声称复现原稿的逐日消耗或源第26天首次耗尽。",
+  "panels": {
+    "evidenceKind": "source-adapted-teaching",
+    "comparisonTargets": [
+      {
+        "id": "s99",
+        "target": 0.99
+      },
+      {
+        "id": "s995",
+        "target": 0.995
+      },
+      {
+        "id": "s999",
+        "target": 0.999
+      },
+      {
+        "id": "s9995",
+        "target": 0.9995
+      },
+      {
+        "id": "s9999",
+        "target": 0.9999
+      }
+    ],
+    "burnRateScenarios": [
+      {
+        "id": "fast",
+        "rate": 14.4,
+        "windowMinutes": 60,
+        "action": "立即呼叫值班"
+      },
+      {
+        "id": "slow",
+        "rate": 6,
+        "windowMinutes": 360,
+        "action": "立即呼叫值班"
+      },
+      {
+        "id": "ticket",
+        "rate": 1,
+        "windowMinutes": 4320,
+        "action": "提工单处理"
+      }
+    ],
+    "note": "动作仅为给定示例文字，不表示已执行；三行是单窗口参数换算，不是完整多窗口告警配置。"
+  }
+}

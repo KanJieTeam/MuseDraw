@@ -1,0 +1,75 @@
+{
+  "family": "magnitudes",
+  "title": "数量级",
+  "subtitle": "从原子到可观测宇宙：11 个给定的近似长度尺度",
+  "unit": "m",
+  "items": [
+    {
+      "id": "hydrogen",
+      "label": "氢原子直径（量级示例）",
+      "value": 1e-10,
+      "approximate": true
+    },
+    {
+      "id": "virus",
+      "label": "病毒尺寸（示例）",
+      "value": 1e-07,
+      "approximate": true
+    },
+    {
+      "id": "red-cell",
+      "label": "红细胞直径",
+      "value": 7e-06,
+      "approximate": true
+    },
+    {
+      "id": "sand",
+      "label": "沙粒尺寸（示例）",
+      "value": 0.001,
+      "approximate": true
+    },
+    {
+      "id": "human",
+      "label": "人的身高（示例）",
+      "value": 1.7,
+      "approximate": true
+    },
+    {
+      "id": "everest",
+      "label": "珠穆朗玛峰雪面高程",
+      "value": 8849,
+      "approximate": true
+    },
+    {
+      "id": "earth",
+      "label": "地球平均直径",
+      "value": 12700000.0,
+      "approximate": true
+    },
+    {
+      "id": "sun-earth",
+      "label": "日地平均距离",
+      "value": 150000000000.0,
+      "approximate": true
+    },
+    {
+      "id": "light-year",
+      "label": "1 光年（距离单位）",
+      "value": 9460000000000000.0,
+      "approximate": true
+    },
+    {
+      "id": "milky-way",
+      "label": "银河系直径",
+      "value": 9.5e+20,
+      "approximate": true
+    },
+    {
+      "id": "observable",
+      "label": "可观测宇宙直径",
+      "value": 8.8e+26,
+      "approximate": true
+    }
+  ],
+  "note": "≈ 为所选的近似长度；病毒、沙粒、身高仅作示例。点位按 log₁₀(m) 计算，标签独立避让；光年表示距离。"
+}

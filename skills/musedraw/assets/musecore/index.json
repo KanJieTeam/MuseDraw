@@ -460,7 +460,13 @@
       "id": "magnitudes",
       "family": "magnitudes",
       "file": "magnitudes.json",
-      "contentStatus": "idealized teaching input, not an experimental observation",
+      "contentStatus": "idealized teaching input, not an experimental observation"
+    },
+    {
+      "id": "atom-to-observable-universe",
+      "family": "magnitudes",
+      "file": "atom-to-observable-universe.json",
+      "contentStatus": "Eleven source-adapted approximate physical lengths; selected examples, not universal sizes or fresh measurements.",
       "sourceCases": [
         {
           "id": "151-orders-of-magnitude",
@@ -544,7 +550,13 @@
       "id": "error-budget",
       "family": "error-budget",
       "file": "error-budget.json",
-      "contentStatus": "fictional engineering teaching input, not an actual service or production plan",
+      "contentStatus": "fictional engineering teaching input, not an actual service or production plan"
+    },
+    {
+      "id": "error-budget-evidence",
+      "family": "error-budget",
+      "file": "error-budget-evidence.json",
+      "contentStatus": "Source-adapted SLO/scenario tables with explicitly synthetic incidents; not a reconstruction of the missing daily source series or a complete multiwindow alert policy.",
       "sourceCases": [
         {
           "id": "101-error-budget",

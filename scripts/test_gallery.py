@@ -813,7 +813,16 @@ class GalleryTests(unittest.TestCase):
                                  'references/musecore-weekplan-allocation.md',
                                  'tests/musecore/weekplan-source.test.mjs',
                                  'tests/musecore/grover-layout.test.mjs',
-                                 'tests/musecore/cinema-poster-layout.test.mjs'):
+                                 'tests/musecore/cinema-poster-layout.test.mjs',
+                                 'scripts/musecore/error-budget-panels.mjs',
+                                 'assets/musecore/error-budget-evidence.json',
+                                 'assets/musecore/atom-to-observable-universe.json',
+                                 'references/musecore-error-budget-panels.md',
+                                 'references/musecore-magnitude-source.md',
+                                 'tests/musecore/error-budget-panels.test.mjs',
+                                 'tests/musecore/magnitude-layout.test.mjs',
+                                 'tests/musecore/journey-layout.test.mjs',
+                                 'tests/musecore/objectives-weight-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",
