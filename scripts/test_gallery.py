@@ -244,6 +244,23 @@ class GalleryTests(unittest.TestCase):
                 self.assertFalse(any(set(Path(name).parts) & {"..", "node_modules", "output", ".git", "gallery"} for name in names))
                 self.assertEqual(bundle.read("musedraw/SKILL.md"), (ROOT / "skills/musedraw/SKILL.md").read_bytes())
                 for required in ("scripts/musecore.mjs", "scripts/musecore/runtime.mjs",
+                                 'scripts/musecore/cap2-j02-lcm-models.mjs',
+                                 'scripts/musecore/cap2-j02-lcm-figures.mjs',
+                                 'scripts/cap2-j02-render.mjs',
+                                 'assets/musecore/cap2-j02-phosphorus-lcm.json',
+                                 'tests/musecore/cap2-j02-lcm.test.mjs',
+                                 'references/cap2-j02-lcm.md',
+                                 'scripts/musecore/cap2-j09-solid-features-models.mjs',
+                                 'scripts/musecore/cap2-j09-solid-features-figures.mjs',
+                                 'scripts/cap2-j09-render.mjs',
+                                 'assets/musecore/cap2-j09-primary-solids.json',
+                                 'tests/musecore/cap2-j09-solid-features.test.mjs',
+                                 'references/cap2-j09-solid-features.md',
+                                 'scripts/musecore/cap2-loop-measured-layout.mjs',
+                                 'assets/musecore/cap2-loop-range-boundary.json',
+                                 'tests/musecore/cap2-loop-measured-layout.test.mjs',
+                                 'references/cap2-loop-measured-layout.md',
+
                                  "scripts/musecore/report-families.mjs", "scripts/musecore/svg.mjs",
                                  "references/musecore-runtime.md", "assets/musecore/index.json",
                                  "assets/musecore/flow.json", "assets/musecore/report.json",

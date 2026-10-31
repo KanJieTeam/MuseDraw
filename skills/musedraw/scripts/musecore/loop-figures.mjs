@@ -1,3 +1,4 @@
+import {cap2LoopMeasuredLayout} from './cap2-loop-measured-layout.mjs';
 import {el} from './svg.mjs';
 import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualHeadingPlan,visualFinish,stroke} from './visual-tools.mjs';
 import {loopTraceModel} from './loop-models.mjs';
@@ -13,7 +14,7 @@ export function loopFamilies(h){
   el('rect',{x:80,y:summaryTop,width:650,height:summaryHeight,rx:9,fill:'#05090D',stroke:'#35404D','stroke-width':1.5},s);visualText(s,110,summaryTop+42,`$ result · ${result.iterationCount} 轮累加`,{size:25,role:'mono',fill:green});visualBlock(s,110,summaryTop+70,summaryLines,{size:47,role:'mono',weight:700,fill:yellow,leading:61/47});
   visualText(s,tableX,top+40,`执行记录 · ${result.conditionCount} 次条件判断`,{size:30,weight:700,fill:ink});el('rect',{x:tableX,y:tableTop,width:tableWidth,height:tableBottom-tableTop,rx:8,fill:panel,stroke:'#35404D','stroke-width':1.5},s);const centers=[];let x=tableX;for(const width of widths){centers.push(x+width/2);x+=width}['轮次',b.variable,'条件','体项 term',`${b.accumulator.name} 前 → 后`,'更新后 '+b.variable].forEach((text,i)=>visualText(s,centers[i],tableTop+40,text,{size:24,weight:700,fill:muted,anchor:'middle'}));stroke(s,[[tableX+20,tableTop+headerHeight],[tableX+tableWidth-20,tableTop+headerHeight]],'#35404D',1);
   const rows=result.iterations.map(row=>({...row,values:[row.iteration,row.i,'真',row.term,`${row.before} → ${row.after}`,row.next]}));rows.push({iteration:null,i:result.finalIndex,condition:false,values:['结束',result.finalIndex,'假','—','保持 '+result.finalAccumulator,'不更新']});rows.forEach((row,index)=>{const y=tableTop+headerHeight+index*rowHeight;row.y=y;row.values.forEach((value,i)=>visualText(s,centers[i],y+48,String(value),{size:26,role:i===2?'sans':'mono',fill:row.condition===false?red:i===4?yellow:i===1||i===5?blue:ink,anchor:'middle'}));if(index<rows.length-1)stroke(s,[[tableX+20,y+rowHeight],[tableX+tableWidth-20,y+rowHeight]],'#263240',1)});
-  visualBlock(s,margin,noteTop,noteLines,{size:24,fill:muted,leading:34/24});return visualFinish(s,{family:'loop-trace',width:W,height:H,sourceCase:'t14-for-xunhuan',...result,codeSteps,returnPoints,rows,table:{x:tableX,top:tableTop,bottom:tableBottom,centers,widths},executionMeaning:'condition, closed body term, accumulation, index update; includes the final false condition'});
+  visualBlock(s,margin,noteTop,noteLines,{size:24,fill:muted,leading:34/24});return cap2LoopMeasuredLayout(visualFinish(s,{family:'loop-trace',width:W,height:H,sourceCase:'t14-for-xunhuan',...result,codeSteps,returnPoints,rows,table:{x:tableX,top:tableTop,bottom:tableBottom,centers,widths},executionMeaning:'condition, closed body term, accumulation, index update; includes the final false condition'}));
  }
  return {'loop-trace':loopTrace};
 }

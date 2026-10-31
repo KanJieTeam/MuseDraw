@@ -1,0 +1,16 @@
+{
+  "family": "loop-trace",
+  "title": "range(1, 6)：为什么循环体执行5次",
+  "subtitle": "用既有边界展开核追踪1、2、3、4、5；stop=6不进入循环体，total从0累加到15。",
+  "variable": "i",
+  "initial": 1,
+  "step": 1,
+  "bound": 6,
+  "comparison": "<",
+  "accumulator": {
+    "name": "total",
+    "initial": 0,
+    "action": "add-index"
+  },
+  "note": "这是range(1,6)的等价整数边界展开，不是Python解释器。表中“更新后i”和结束行的6是下一候选值；Python实际for循环结束后i仍为5。循环体total=total+i执行5次，print(total)输出15。"
+}

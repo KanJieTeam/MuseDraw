@@ -484,13 +484,7 @@
       "id": "solids",
       "family": "solids",
       "file": "solids.json",
-      "contentStatus": "idealized teaching input, not an experimental observation",
-      "sourceCases": [
-        {
-          "id": "j09-liti-tuxing",
-          "sourceSha256": "0ab3e408a5c4c308e7da157f61863561c173c08acb90283933d6875f476dd3ee"
-        }
-      ]
+      "contentStatus": "idealized teaching input, not an experimental observation"
     },
     {
       "id": "orthoview",
@@ -1018,13 +1012,7 @@
       "id": "reaction-balance",
       "family": "reaction-balance",
       "file": "reaction-balance.json",
-      "contentStatus": "explicit educational or fictional operational input; no independently verified experiment or real execution claim",
-      "sourceCases": [
-        {
-          "id": "j02-peiping-fangchengshi",
-          "sourceSha256": "4ddf0430fe8fba0a556c837444f3b5ee1d152558e331ed1c92ce0ae7d820b630"
-        }
-      ]
+      "contentStatus": "explicit educational or fictional operational input; no independently verified experiment or real execution claim"
     },
     {
       "id": "ionic-transfer",
@@ -2534,6 +2522,41 @@
         "role": "Existing composition studied; content-driven implementation written",
         "approval": "No new family-wide aesthetic approval yet"
       }
+    },
+    {
+      "id": "reaction-lcm",
+      "file": "cap2-j02-phosphorus-lcm.json",
+      "family": "reaction-lcm",
+      "contentStatus": "source-derived phosphorus atom-count teaching; explicit LCM method, not chemical prediction",
+      "compositionReference": "j02-peiping-fangchengshi",
+      "reference": "references/cap2-j02-lcm.md",
+      "sourceCases": [
+        {
+          "id": "j02-peiping-fangchengshi",
+          "sourceSha256": "4ddf0430fe8fba0a556c837444f3b5ee1d152558e331ed1c92ce0ae7d820b630"
+        }
+      ]
+    },
+    {
+      "id": "cap2-primary-solid-features",
+      "family": "primary-solid-features",
+      "file": "cap2-j09-primary-solids.json",
+      "compositionReference": "j09-liti-tuxing",
+      "contentStatus": "Source-derived ideal shape features; independent illustrative scale, catalogue teaching prompts are not observations.",
+      "reference": "references/cap2-j09-solid-features.md",
+      "sourceCases": [
+        {
+          "id": "j09-liti-tuxing",
+          "sourceSha256": "0ab3e408a5c4c308e7da157f61863561c173c08acb90283933d6875f476dd3ee"
+        }
+      ]
+    },
+    {
+      "id": "cap2-loop-range-boundary",
+      "file": "cap2-loop-range-boundary.json",
+      "family": "loop-trace",
+      "reference": "references/cap2-loop-measured-layout.md",
+      "contentStatus": "Supplied finite pre-test loop teaching trace; not Python post-loop variable semantics or observed execution."
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -3256,6 +3279,24 @@
       "reference": "references/musecore-plate-robust.md",
       "ids": [
         "plate"
+      ]
+    },
+    {
+      "reference": "references/cap2-j02-lcm.md",
+      "ids": [
+        "reaction-lcm"
+      ]
+    },
+    {
+      "reference": "references/cap2-j09-solid-features.md",
+      "ids": [
+        "primary-solid-features"
+      ]
+    },
+    {
+      "reference": "references/cap2-loop-measured-layout.md",
+      "ids": [
+        "loop-trace"
       ]
     }
   ]

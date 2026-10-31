@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.53
+  instructions-version: musecore-2026-10-31.54
 ---
 
 # MuseDraw
@@ -98,6 +98,9 @@ family's encodings, coordinated geometry and placement.
 | threshold bands | [Workflow](references/cap2-threshold-bands.md) |
 | component context | [Workflow](references/cap2-component-context.md) |
 | reflection layout | [Workflow](references/cap2-reflection-layout.md) |
+| LCM atom-count lesson | [Workflow](references/cap2-j02-lcm.md) |
+| primary solid features | [Workflow](references/cap2-j09-solid-features.md) |
+| measured loop trace | [Workflow](references/cap2-loop-measured-layout.md) |
 | fraction equation | [Workflow](references/cap2-fraction-equation.md) |
 | office collective daci | [Workflow](references/cap2-office-collective-daci.md) |
 | office priority source | [Workflow](references/cap2-office-priority-source.md) |

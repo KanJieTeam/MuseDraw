@@ -1,0 +1,17 @@
+import {el} from './svg.mjs';
+import {visualPage,visualFinish,stroke} from './visual-tools.mjs';
+import {equationTextPlan,equationDrawPlan} from './equation-figures.mjs';
+import {cap2ReactionLCMModel} from './cap2-j02-lcm-models.mjs';
+export function cap2ReactionLCMFamilies(){
+ function reactionLCM(b){
+  const m=cap2ReactionLCMModel(b),W=2000,ink='#202326',blue='#2763AC',red='#CA4538',green='#248251',p=(text,width,size=27,max=3,weight=400)=>equationTextPlan(text,width,{size,max,weight}),title=p(b.title,W-160,52,2,700),subtitle=p(b.subtitle,W-160,26,3),titleY=60,subtitleY=titleY+title.height+23,given=p('给定物种：'+m.unbalancedEquation,W-180,37,2,700),givenY=subtitleY+subtitle.height+35;
+  let y=givenY+given.height+55;const rows=m.steps.map(step=>{const label=p(step.label,300,28,3,700),formula=p(step.formula,1410,37,3,700),explanation=p(step.explanation,1410,26,4),height=Math.max(label.height+32,formula.height+explanation.height+27)+24,row={...step,y,height,labelPlan:label,formulaPlan:formula,explanationPlan:explanation};y+=height+28;return row});
+  const condition=p('条件说明：'+m.condition,W-200,26,2),conditionY=y+8,result=p(m.balancedEquation,1320,54,2,700),rx=Math.SQRT2*(result.width/2+24),ry=Math.SQRT2*(result.height/2+14),cx=100+rx,cy=conditionY+condition.height+35+ry;if(100+2*rx>W-80)throw Error('reaction-lcm: result needs a wider detail view');const resultBox={x:cx-result.width/2,y:cy-result.height/2,width:result.width,height:result.height},ellipse={cx,cy,rx,ry};
+  const verification=p('逐种检查：'+m.conservation.map(c=>`${c.element} 左 ${c.before} = 右 ${c.after}`).join('；')+'。系数全部为正，最大公因数为 1。',W-200,30,3,700),verificationY=cy+ry+35,scope=p('只改物种前的系数，不改下标。本页是给定组成的原子计数教学；守恒不预测反应发生，不处理电荷或电子配平。',W-200,24,4),scopeY=verificationY+verification.height+28,note=p(b.note,W-200,24,4),noteY=scopeY+scope.height+24,H=noteY+note.height+65,s=visualPage(W,H,'#CBD0D2');
+  el('rect',{x:22,y:22,width:W-44,height:H-44,fill:'#F9FAF6'},s);equationDrawPlan(s,80,titleY,title,{fill:ink});stroke(s,[[80,titleY+title.height+8],[80+title.width,titleY+title.height+10]],ink,3);equationDrawPlan(s,80,subtitleY,subtitle,{fill:'#526778'});equationDrawPlan(s,90,givenY,given,{fill:ink});
+  for(const row of rows){el('path',{d:`M 82 ${row.y-8} L 405 ${row.y-10} L 407 ${row.y+row.labelPlan.height+16} L 80 ${row.y+row.labelPlan.height+18} Z`,fill:'none',stroke:blue,'stroke-width':2},s);equationDrawPlan(s,100,row.y+4,row.labelPlan,{fill:blue});equationDrawPlan(s,475,row.y,row.formulaPlan,{fill:row.id==='propagate'?ink:blue});equationDrawPlan(s,475,row.y+row.formulaPlan.height+23,row.explanationPlan,{fill:ink})}
+  equationDrawPlan(s,100,conditionY,condition,{fill:red});el('ellipse',{...ellipse,fill:'none',stroke:red,'stroke-width':3},s);equationDrawPlan(s,resultBox.x,resultBox.y,result,{fill:ink});equationDrawPlan(s,100,verificationY,verification,{fill:green});equationDrawPlan(s,100,scopeY,scope,{fill:'#526778'});equationDrawPlan(s,100,noteY,note,{fill:'#526778'});
+  return visualFinish(s,{family:'reaction-lcm',width:W,height:H,...m,stepGeometry:rows.map(q=>({id:q.id,y:q.y,height:q.height,coefficients:q.coefficients})),resultBox,resultEllipse:ellipse,compositionReference:'j02-peiping-fangchengshi',encoding:'Four computed LCM-first steps reuse exact atom balance. Unknown coefficients remain squares until derived; the result ellipse encloses the full measured text rectangle with positive padding.'});
+ }
+ return {'reaction-lcm':reactionLCM};
+}

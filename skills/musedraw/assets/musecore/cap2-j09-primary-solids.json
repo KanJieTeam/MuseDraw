@@ -1,0 +1,41 @@
+{
+  "family": "primary-solid-features",
+  "title": "认识立体图形",
+  "subtitle": "一年级数学 · 找一找面、棱和顶点，再动手试一试。",
+  "edgeConvention": "straight-edges",
+  "objects": [
+    {
+      "id": "box",
+      "kind": "cuboid",
+      "label": "长方体",
+      "activities": [
+        "touch-opposite"
+      ]
+    },
+    {
+      "id": "cube",
+      "kind": "cube",
+      "label": "正方体",
+      "activities": [
+        "compare-all"
+      ]
+    },
+    {
+      "id": "cylinder",
+      "kind": "cylinder",
+      "label": "圆柱",
+      "activities": [
+        "roll-and-stand"
+      ]
+    },
+    {
+      "id": "sphere",
+      "kind": "sphere",
+      "label": "球",
+      "activities": [
+        "turn-and-look"
+      ]
+    }
+  ],
+  "note": "用理想几何形状认识特征；每个图形各自缩放，不比较大小。"
+}

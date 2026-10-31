@@ -1,0 +1,53 @@
+{
+  "family": "reaction-lcm",
+  "title": "用最小公倍数法配平",
+  "subtitle": "磷燃烧的原子计数教学 · 每一步只改系数，下标不变。",
+  "mode": "neutral-atom-count",
+  "reactants": [
+    {
+      "id": "P",
+      "label": "磷",
+      "kind": "atom",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "O2",
+      "label": "氧气",
+      "kind": "molecule",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "O",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "Poxide",
+      "label": "五氧化二磷",
+      "kind": "formula-unit",
+      "charge": 0,
+      "atoms": [
+        {
+          "element": "P",
+          "count": 2
+        },
+        {
+          "element": "O",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "condition": "点燃",
+  "note": "P₂O₅按组成单位计数；本页只核对给定物种，不据此判断任意反应能否发生。",
+  "pivotElement": "O"
+}
