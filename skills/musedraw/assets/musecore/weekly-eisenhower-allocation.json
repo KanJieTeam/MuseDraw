@@ -1,0 +1,210 @@
+{
+  "family": "weekly-greedy-allocation",
+  "title": "把四象限排进这一周",
+  "subtitle": "合成周计划 · 先处理重要急事，再处理紧急小事，最后为重要长线工作安排时间",
+  "evidenceKind": "synthetic-teaching",
+  "assumptions": [],
+  "startMinute": 540,
+  "endMinute": 1080,
+  "slotMinutes": 30,
+  "days": [
+    {
+      "id": "mon",
+      "label": "周一"
+    },
+    {
+      "id": "tue",
+      "label": "周二"
+    },
+    {
+      "id": "wed",
+      "label": "周三"
+    },
+    {
+      "id": "thu",
+      "label": "周四"
+    },
+    {
+      "id": "fri",
+      "label": "周五"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "A1",
+      "label": "修复交付阻塞",
+      "important": true,
+      "urgent": true,
+      "estimateMinutes": 180,
+      "deadlineDay": "mon",
+      "splittable": true
+    },
+    {
+      "id": "A2",
+      "label": "整理周报素材",
+      "important": true,
+      "urgent": true,
+      "estimateMinutes": 180,
+      "deadlineDay": "wed",
+      "splittable": true
+    },
+    {
+      "id": "B1",
+      "label": "梳理产品权限",
+      "important": true,
+      "urgent": false,
+      "estimateMinutes": 360,
+      "deadlineDay": null,
+      "splittable": true
+    },
+    {
+      "id": "B2",
+      "label": "准备客户演示",
+      "important": true,
+      "urgent": false,
+      "estimateMinutes": 180,
+      "deadlineDay": "thu",
+      "splittable": false
+    },
+    {
+      "id": "B3",
+      "label": "结对辅导新人",
+      "important": true,
+      "urgent": false,
+      "estimateMinutes": 180,
+      "deadlineDay": null,
+      "splittable": false
+    },
+    {
+      "id": "C1",
+      "label": "回复合作询问",
+      "important": false,
+      "urgent": true,
+      "estimateMinutes": 90,
+      "deadlineDay": "tue",
+      "splittable": true
+    },
+    {
+      "id": "C2",
+      "label": "核对月度票据",
+      "important": false,
+      "urgent": true,
+      "estimateMinutes": 90,
+      "deadlineDay": "fri",
+      "splittable": true
+    },
+    {
+      "id": "D1",
+      "label": "整理历史便签",
+      "important": false,
+      "urgent": false,
+      "estimateMinutes": 60,
+      "deadlineDay": null,
+      "splittable": true
+    },
+    {
+      "id": "D2",
+      "label": "试读工具手册",
+      "important": false,
+      "urgent": false,
+      "estimateMinutes": 60,
+      "deadlineDay": null,
+      "splittable": true
+    }
+  ],
+  "blocked": [
+    {
+      "id": "lunch-mon",
+      "label": "午休",
+      "day": "mon",
+      "start": 720,
+      "end": 780
+    },
+    {
+      "id": "lunch-tue",
+      "label": "午休",
+      "day": "tue",
+      "start": 720,
+      "end": 780
+    },
+    {
+      "id": "lunch-wed",
+      "label": "午休",
+      "day": "wed",
+      "start": 720,
+      "end": 780
+    },
+    {
+      "id": "lunch-thu",
+      "label": "午休",
+      "day": "thu",
+      "start": 720,
+      "end": 780
+    },
+    {
+      "id": "lunch-fri",
+      "label": "午休",
+      "day": "fri",
+      "start": 720,
+      "end": 780
+    },
+    {
+      "id": "M1",
+      "label": "项目周会",
+      "day": "mon",
+      "start": 600,
+      "end": 645
+    },
+    {
+      "id": "M2",
+      "label": "方案评审",
+      "day": "tue",
+      "start": 840,
+      "end": 900
+    },
+    {
+      "id": "M3",
+      "label": "客户沟通",
+      "day": "wed",
+      "start": 600,
+      "end": 660
+    },
+    {
+      "id": "M4",
+      "label": "结对交流",
+      "day": "thu",
+      "start": 960,
+      "end": 990
+    },
+    {
+      "id": "M5",
+      "label": "周末复盘",
+      "day": "fri",
+      "start": 900,
+      "end": 960
+    },
+    {
+      "id": "K1",
+      "label": null,
+      "day": "tue",
+      "start": 555,
+      "end": 570
+    },
+    {
+      "id": "K2",
+      "label": null,
+      "day": "thu",
+      "start": 570,
+      "end": 585
+    }
+  ],
+  "policy": {
+    "order": "Q1-Q3-Q2",
+    "deadlineBoundary": "inclusive-day-end",
+    "partialSlotBlock": "any-positive-overlap",
+    "q2SlotOrder": "weekwide-morning-first",
+    "morningEndMinute": 720,
+    "tieBreak": "input-order"
+  },
+  "note": "任务、固定占用与时间均为合成教学输入。此贪心顺序只生成一种安排，不保证最优，也不代表实际工作已经完成。"
+}

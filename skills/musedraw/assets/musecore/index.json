@@ -358,13 +358,7 @@
       "id": "planner",
       "family": "planner",
       "file": "planner.json",
-      "contentStatus": "fictional development input; not a real staffing or project plan",
-      "sourceCases": [
-        {
-          "id": "199-weekly-eisenhower",
-          "sourceSha256": "0873342e6a20e55edce7308b08370add3865b03a1b18c09f51d9c918b80f2d83"
-        }
-      ]
+      "contentStatus": "fictional development input; not a real staffing or project plan"
     },
     {
       "id": "timezone",
@@ -2273,6 +2267,18 @@
           "sourceSha256": "179638b09100d67ba0f21764f0fb6f6076f321475a2adf60e4fbbc0becec7da8"
         }
       ]
+    },
+    {
+      "id": "weekly-eisenhower-allocation",
+      "family": "weekly-greedy-allocation",
+      "file": "weekly-eisenhower-allocation.json",
+      "contentStatus": "Explicitly synthetic single-person weekly tasks and fixed occupancies. A declared finite-slot greedy policy computes all sessions, deadline constraints, split/contiguous work, excluded quadrant4 tasks and quantization loss. Source199 informs the composition and bounded policy idea; its unpublished schedule inputs/algorithm and32h/19h claims are not reproduced. Not optimal scheduling or a verified real work calendar.",
+      "sourceCases": [
+        {
+          "id": "199-weekly-eisenhower",
+          "sourceSha256": "0873342e6a20e55edce7308b08370add3865b03a1b18c09f51d9c918b80f2d83"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2845,6 +2851,12 @@
       "reference": "references/musecore-autoscale-replay.md",
       "ids": [
         "cpu-sequence-replay"
+      ]
+    },
+    {
+      "reference": "references/musecore-weekplan-allocation.md",
+      "ids": [
+        "weekly-greedy-allocation"
       ]
     }
   ]
