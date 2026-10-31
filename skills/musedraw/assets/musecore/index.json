@@ -148,13 +148,7 @@
       "id": "constellation",
       "family": "constellation",
       "file": "constellation.json",
-      "contentStatus": "fictional development data; no operational, scientific or causal claim",
-      "sourceCases": [
-        {
-          "id": "107-service-star-map",
-          "sourceSha256": "ec0539e9c39415cc739c5b22f2c05cc653d395b86f22d95b2b3b56a3a50db420"
-        }
-      ]
+      "contentStatus": "fictional development data; no operational, scientific or causal claim"
     },
     {
       "id": "scroll",
@@ -2255,6 +2249,18 @@
           "sourceSha256": "b6334e9d29962d00f8658fb173fc1015d0f020fd5ba394b2ee7117fd2eb10f8a"
         }
       ]
+    },
+    {
+      "id": "service-dependency-star-map",
+      "family": "constellation",
+      "file": "service-dependency-star-map.json",
+      "contentStatus": "Source-derived 11 services and 13 directed dependencies. Seven error rates are supplied as strict upper-bound classes, four as explicit exact rates; no precise missing error rates or per-edge call volumes are invented. Does not reproduce the source author’s unspecified per-edge call-volume sum.",
+      "sourceCases": [
+        {
+          "id": "107-service-star-map",
+          "sourceSha256": "ec0539e9c39415cc739c5b22f2c05cc653d395b86f22d95b2b3b56a3a50db420"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2809,6 +2815,12 @@
       "reference": "references/musecore-erlang-staffing.md",
       "ids": [
         "erlang-staffing"
+      ]
+    },
+    {
+      "reference": "references/musecore-constellation-source.md",
+      "ids": [
+        "service-dependency-star-map"
       ]
     }
   ]

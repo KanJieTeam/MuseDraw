@@ -782,7 +782,13 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/erlang-staffing-source.test.mjs',
                                  'assets/musecore/newton-force-relations.json',
                                  'tests/musecore/force-relations.test.mjs',
-                                 'tests/musecore/book-repair-layout.test.mjs'):
+                                 'tests/musecore/book-repair-layout.test.mjs',
+                                 'scripts/musecore/constellation-models.mjs',
+                                 'assets/musecore/service-dependency-star-map.json',
+                                 'references/musecore-constellation-source.md',
+                                 'tests/musecore/constellation-source.test.mjs',
+                                 'tests/musecore/phase-layout.test.mjs',
+                                 'tests/musecore/benefit-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

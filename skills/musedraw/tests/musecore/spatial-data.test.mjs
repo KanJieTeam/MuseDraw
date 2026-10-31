@@ -77,7 +77,29 @@ try{
  const directory=await fs.mkdtemp(path.join(os.tmpdir(),'musecore-wide-'));
  try{const check=await renderContent(scroll,{out:directory});const png=await fs.readFile(path.join(directory,'diagram.png'));assert.equal(png.readUInt32BE(16),check.geometry.width*2);assert(png.readUInt32BE(20)>=check.geometry.height*2);
   const reference=await browser.newPage({viewport:{width:check.geometry.width+64,height:1200},deviceScaleFactor:2});
-  try{const svg=await fs.readFile(path.join(directory,'diagram.svg'),'utf8');await reference.setContent('<!doctype html><meta charset="utf-8"><style>body{margin:0}svg{display:block}</style>'+svg);await reference.evaluate(()=>document.fonts.ready);const expected=await reference.locator('svg').screenshot();assert(png.equals(expected),'PNG must equal the independently mounted unclipped SVG, not merely have a wide header')}finally{await reference.close()}
+  try{
+   const svg=await fs.readFile(path.join(directory,'diagram.svg'),'utf8');
+   await reference.setContent('<!doctype html><meta charset="utf-8"><style>body{margin:0}svg{display:block}</style>'+svg);
+   await reference.evaluate(()=>document.fonts.ready);
+   const expected=await reference.locator('svg').screenshot();
+   if(!png.equals(expected)){
+    // Keep the strict equality gate. Preserve both buffers before the temporary
+    // export is removed; byte inequality alone cannot establish a pixel cause.
+    const evidence=path.join(skill,'output/musecore-spatial-png-failures',Date.now()+'-'+process.pid);
+    await fs.mkdir(evidence,{recursive:true});
+    const referenceState=await reference.evaluate(()=>({fontStatus:document.fonts.status,devicePixelRatio,viewport:{width:innerWidth,height:innerHeight},svgBox:document.querySelector('svg').getBoundingClientRect().toJSON(),textStyles:[...document.querySelectorAll('svg text')].slice(0,12).map(t=>({text:t.textContent,fontFamily:getComputedStyle(t).fontFamily,fontSize:getComputedStyle(t).fontSize,fontWeight:getComputedStyle(t).fontWeight}))}));
+    const dimensions=buffer=>({width:buffer.readUInt32BE(16),height:buffer.readUInt32BE(20),bytes:buffer.length});
+    await Promise.all([
+     fs.writeFile(path.join(evidence,'actual.png'),png),
+     fs.writeFile(path.join(evidence,'expected.png'),expected),
+     fs.writeFile(path.join(evidence,'diagram.svg'),svg),
+     fs.writeFile(path.join(evidence,'input.json'),JSON.stringify(scroll,null,2)),
+     fs.writeFile(path.join(evidence,'comparison.json'),JSON.stringify({browser:browser.version(),node:process.version,actual:dimensions(png),expected:dimensions(expected),referenceState,geometry:check.geometry,note:'Strict PNG-byte equality failed. Buffers retained for independent pixel decoding; cause is not inferred from a retry.'},null,2))
+    ]);
+    console.error('Strict SVG/PNG comparison evidence: '+evidence);
+   }
+   assert(png.equals(expected),'PNG must equal the independently mounted unclipped SVG, not merely have a wide header');
+  }finally{await reference.close()}
   tests.push('production PNG matches a standalone unclipped 1800px-wide SVG at 2×')
  }finally{await fs.rm(directory,{recursive:true,force:true})}
  console.log(JSON.stringify({passed:tests.length,tests},null,2));
