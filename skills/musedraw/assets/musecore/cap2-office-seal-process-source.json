@@ -1,0 +1,15 @@
+{
+ "family":"pathway-map","title":"用印审批流程","subtitle":"公司印章管理办法 · 附图；保留原稿七步与三条示例规章。",
+ "meaning":"declared-flow",
+ "stations":[
+  {"id":"seal-1","label":"1 填写用印申请","note":"写明文件、份数、用途"},
+  {"id":"seal-2","label":"2 部门负责人审批"},
+  {"id":"seal-3","label":"3 法务审核","note":"合同类文件必经"},
+  {"id":"seal-4","label":"4 印章管理员核对","note":"核对文件与申请一致"},
+  {"id":"seal-5","label":"5 登记用印台账"},
+  {"id":"seal-6","label":"6 盖章","note":"示例专用章"},
+  {"id":"seal-7","label":"7 复印件归档"}
+ ],
+ "routes":[{"id":"source-order","label":"原稿七步展示顺序","color":"#A83E32","direction":"forward","stations":["seal-1","seal-2","seal-3","seal-4","seal-5","seal-6","seal-7"],"segments":[{"from":"seal-1","to":"seal-2"},{"from":"seal-2","to":"seal-3"},{"from":"seal-3","to":"seal-4"},{"from":"seal-4","to":"seal-5"},{"from":"seal-5","to":"seal-6"},{"from":"seal-6","to":"seal-7"}],"note":"示例制度；合同类文件必经法务审核。原稿未提供非合同文件的旁路或明确退回步骤，未补造这些关系。"}],
+ "note":"三条规矩\n一、先审批，后盖章；空白文件、空白页一律不盖。\n二、印章原则上不带出公司；确需外带，须两人同行，当日归还。\n三、每次用印都登记台账，台账与复印件一同保存。\n流程与规矩为原稿示例制度，未提供实例状态；次序不表示任何申请已获批准。"
+}

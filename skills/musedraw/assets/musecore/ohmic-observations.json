@@ -1,0 +1,57 @@
+{
+  "family": "ohmic-circuit",
+  "title": "电流与电压的关系",
+  "subtitle": "给定过原点约束的最小二乘拟合 · 电压、电流采用 V 与 A",
+  "view": "supplied-observations",
+  "recordKind": "author-simulated-experiment",
+  "units": "SI",
+  "fit": {
+    "kind": "least-squares-through-origin"
+  },
+  "voltagesV": [
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    3
+  ],
+  "series": [
+    {
+      "id": "r5",
+      "label": "定值电阻一",
+      "nominalResistanceOhm": 5,
+      "currentsA": [
+        0.096,
+        0.201,
+        0.306,
+        0.398,
+        0.501,
+        0.598
+      ]
+    },
+    {
+      "id": "r10",
+      "label": "定值电阻二",
+      "nominalResistanceOhm": 10,
+      "currentsA": [
+        0.046,
+        0.103,
+        0.148,
+        0.2,
+        0.246,
+        0.302
+      ]
+    }
+  ],
+  "selected": {
+    "seriesId": "r5",
+    "voltageIndex": 5
+  },
+  "setup": {
+    "kind": "series-rheostat-ammeter-parallel-voltmeter",
+    "switchPosition": "open",
+    "note": "器材示意中的开关打开；右侧是另行给定的记录，不是这幅开关状态下的实时读数。"
+  },
+  "note": "原稿数值由理想关系加小量扰动生成，是教学示例。拟合采用给定的过原点约束，不据此确认实际导体线性或排除温度与电表影响。"
+}

@@ -1,0 +1,9 @@
+{
+ "family":"daci","title":"DACI 决策角色","subtitle":"以「是否更换公司报销系统」为例：每个决定只有一个推动者、一个批准者；群体原文单独保留。",
+ "decision":"是否更换公司报销系统",
+ "people":[{"id":"driver-wang","label":"财务部经理 王蕾"},{"id":"approver-cfo","label":"首席财务官"}],
+ "assignments":{"driver":["driver-wang"],"approver":["approver-cfo"],"contributors":[],"informed":[]},
+ "collectives":{"contributors":[{"id":"source-contributors","label":"IT、法务、两位部门助理","count":null,"note":"原文为「若干人」。两位部门助理保留在标签中；IT 与法务未提供完整个人身份或人数，不能据此补造成员名单。"}],"informed":[{"id":"all-staff","label":"全体员工","count":null,"note":"原文为「若干人」，未提供全体员工人数。不给定人数不等于 0 人。"}]},
+ "inputs":{"driver":"收集信息、组织讨论，按时推动出结论","approver":"做最终决定，对结果负责","contributors":"提供专业意见，但不拍板","informed":"决定后被通知，不参与讨论"},
+ "note":"原稿示例角色，非实际组织记录。常见错误：两个人都以为自己是批准者，或者把所有人都列为贡献者。先定 D 和 A，再决定谁是 C、谁只需要 I。原稿群体只有标签和若干人的说明；两个明确个人不构成全部决策参与者人数。"
+}

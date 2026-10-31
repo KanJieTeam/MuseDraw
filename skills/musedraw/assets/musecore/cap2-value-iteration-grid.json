@@ -1,0 +1,256 @@
+{
+  "family": "grid-value-iteration",
+  "title": "价值迭代 · 从给定规则计算策略",
+  "subtitle": "确定性教学迷宫：白箭头来自 Bellman 更新，路径由计算策略执行。",
+  "view": "overview",
+  "evidenceKind": "illustrative",
+  "agent": "智能体",
+  "environment": "示例迷宫环境",
+  "rewardUnit": "奖励单位",
+  "gamma": 0.9,
+  "grid": {
+    "rows": 5,
+    "columns": 5,
+    "cells": [
+      {
+        "id": "s00",
+        "label": "(0,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s01",
+        "label": "(0,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s02",
+        "label": "(0,2)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s03",
+        "label": "(0,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s04",
+        "label": "终点",
+        "blocked": false,
+        "terminal": true,
+        "marker": "goal",
+        "entryReward": 10,
+        "stateValue": null
+      },
+      {
+        "id": "s10",
+        "label": "(1,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s11",
+        "label": "(1,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s12",
+        "label": "墙",
+        "blocked": true,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": null,
+        "stateValue": null
+      },
+      {
+        "id": "s13",
+        "label": "陷阱",
+        "blocked": false,
+        "terminal": true,
+        "marker": "trap",
+        "entryReward": -10,
+        "stateValue": null
+      },
+      {
+        "id": "s14",
+        "label": "(1,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s20",
+        "label": "(2,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s21",
+        "label": "(2,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s22",
+        "label": "墙",
+        "blocked": true,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": null,
+        "stateValue": null
+      },
+      {
+        "id": "s23",
+        "label": "(2,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s24",
+        "label": "(2,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s30",
+        "label": "(3,0)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s31",
+        "label": "陷阱",
+        "blocked": false,
+        "terminal": true,
+        "marker": "trap",
+        "entryReward": -10,
+        "stateValue": null
+      },
+      {
+        "id": "s32",
+        "label": "(3,2)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s33",
+        "label": "(3,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s34",
+        "label": "(3,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s40",
+        "label": "起点",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s41",
+        "label": "(4,1)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s42",
+        "label": "(4,2)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s43",
+        "label": "(4,3)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      },
+      {
+        "id": "s44",
+        "label": "(4,4)",
+        "blocked": false,
+        "terminal": false,
+        "marker": "normal",
+        "entryReward": -1,
+        "stateValue": null
+      }
+    ]
+  },
+  "initial": "s40",
+  "note": "虚构教学环境；奖励与墙体为显式输入。V 和白箭头由本支路计算；不声称完成训练或对应真实任务。",
+  "solver": {
+    "wallRule": "stay-and-receive-current-entry-reward",
+    "actionOrder": [
+      "north",
+      "east",
+      "south",
+      "west"
+    ],
+    "valueTolerance": 1e-08,
+    "maxIterations": 500,
+    "traceLimit": 24
+  }
+}

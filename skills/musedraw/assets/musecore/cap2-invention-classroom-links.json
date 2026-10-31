@@ -1,0 +1,53 @@
+{
+  "family": "invention-timeline",
+  "title": "工业革命：年代事实与课堂联系假设",
+  "subtitle": "六个有出处的里程碑；底部逐条联系供课堂讨论，不由年代先后推出因果。",
+  "recordMode": "catalogue",
+  "events": [
+    {
+      "id": "shuttle"
+    },
+    {
+      "id": "jenny"
+    },
+    {
+      "id": "waterframe"
+    },
+    {
+      "id": "condenser"
+    },
+    {
+      "id": "steamboat"
+    },
+    {
+      "id": "locomotive"
+    }
+  ],
+  "connections": [
+    {
+      "from": "shuttle",
+      "to": "jenny",
+      "label": "课堂待检验假设：织布变快 → 纱线需求增加 → 纺纱改进；本图未验证这一机制与幅度。",
+      "sourceId": "kay"
+    },
+    {
+      "from": "waterframe",
+      "to": "condenser",
+      "label": "课堂待检验假设：纺纱工厂的动力需求 → 蒸汽动力改进；不能把同为1769年的记录当作因果证据。",
+      "sourceId": "watt"
+    },
+    {
+      "from": "condenser",
+      "to": "steamboat",
+      "label": "课堂待检验假设：蒸汽动力改进 → 水上运输变化；需另查技术传承和采用过程。",
+      "sourceId": "fulton"
+    },
+    {
+      "from": "condenser",
+      "to": "locomotive",
+      "label": "课堂待检验假设：蒸汽动力改进 → 陆上运输变化；铁路发展的多种条件未在本图建模。",
+      "sourceId": "stephenson"
+    }
+  ],
+  "note": "本图沿用有出处的1764年珍妮机与1769年独立冷凝器专利，不复制原图1765与1785的笼统断言。下面的联系均为调用者提出的课堂待检验假设；所引史料只支持相关事件，不能单独证明联系、必要性或唯一原因。共同线性年代轴和类型示意图不表示机器尺寸与性能。"
+}

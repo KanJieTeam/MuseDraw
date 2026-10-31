@@ -1,3 +1,4 @@
+import {observationCircuit} from './observation-circuit-figures.mjs';
 import {el} from './svg.mjs';
 import {measureVisual,visualFontBounds,visualPage,visualText,visualLines,visualBlock,visualHeading,visualHeadingPlan,visualFinish,stroke} from './visual-tools.mjs';
 import {niceDomain,linearScale,axisNumber} from './quantitative.mjs';
@@ -8,6 +9,7 @@ function circuitNoteStep(lines){return Math.ceil(Math.max(29,...lines.map(t=>{co
 function circuitLegend(r,width){const value='R = '+circuitValue(r.resistanceOhm)+' Ω',text=r.label+' · '+value;return measureVisual(text,20)<=width?[text]:[...visualLines(r.label,width,{size:20,max:2}),value]}
 export function circuitFamilies(h){
  function ohmicCircuit(b){
+  if(Object.hasOwn(b,'view'))return observationCircuit(b);
   const m=idealOhmicCircuit(b),W=2260,ink='#202B34',muted='#66737D',colors=['#276998','#C34F63','#368878'],head=visualHeadingPlan(b.title,b.subtitle,{width:2120,size:45}),top=head.bottom+42,plot={x:835,y:top+95,w:580,h:505},currentFactor=Math.max(...m.series.flatMap(r=>r.points.map(p=>p.currentA)))<.1?1000:1,currentUnit=currentFactor===1000?'mA':'A',xd=niceDomain(m.voltagesV),yd=niceDomain(m.series.flatMap(r=>r.points.map(p=>p.currentA*currentFactor))),X=linearScale(xd.domain,[plot.x,plot.x+plot.w]),Y=linearScale(yd.domain,[plot.y+plot.h,plot.y]),tableX=1540,tableW=650,voltageW=100,cw=(tableW-voltageW)/m.series.length,seriesPlans=m.series.map((r,i)=>({...r,color:colors[i],legendLines:circuitLegend(r,plot.w-40),labelLines:visualLines(r.label,cw-22,{size:20,weight:700,max:3})})),tableHeadH=Math.max(...seriesPlans.map(r=>r.labelLines.length*27))+60,tableTop=top+95,tableBottom=tableTop+tableHeadH+m.voltagesV.length*45,noteLines=visualLines(b.note,2120,{size:20,role:'serif',max:4}),noteStep=circuitNoteStep(noteLines),contentBottom=Math.max(top+775,tableBottom+100,plot.y+plot.h+105+seriesPlans.reduce((sum,r)=>sum+r.legendLines.length*28+12,0)),H=contentBottom+noteLines.length*noteStep+80,s=visualPage(W,H,'#FFFFFF'),selectedIndex=m.series.findIndex(r=>r.id===m.selected.seriesId),accent=colors[selectedIndex];
   visualHeading(s,b.title,b.subtitle,{width:2120,size:45,fill:ink,subFill:muted});for(const [x,letter,label] of [[70,'a','理想电路 · 选定状态'],[775,'b','I–U 模型曲线'],[1540,'c','同步预测值']]){visualText(s,x,top+26,letter,{size:35,weight:800,fill:ink});visualText(s,x+43,top+23,label,{size:24,fill:muted})}
   const left=125,right=500,wireTop=top+130,wireBottom=top+535,sy=top+335,ax=310,ar=27,vr=27,vx=620,sourceR=31,resTop=sy-55,resBottom=sy+55,vUpper=sy-92,vLower=sy+92;

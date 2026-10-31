@@ -1,0 +1,18 @@
+{
+  "family": "specimen",
+  "title": "落叶图鉴",
+  "subtitle": "植物园秋季特展（示例）· 30种本地树木落叶标本；图中9种、展厅另21种",
+  "species": [
+    "ginkgo",
+    "acer",
+    "liquidambar",
+    "liriodendron",
+    "platanus",
+    "triadica",
+    "diospyros",
+    "prunus",
+    "salix"
+  ],
+  "columns": 3,
+  "footer": "11月1日—12月15日 · 每天9:00—17:00 · 植物园标本馆一层 · 随门票参观"
+}

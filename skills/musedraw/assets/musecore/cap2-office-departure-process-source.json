@@ -1,0 +1,15 @@
+{
+ "family":"pathway-map","title":"员工离职交接","subtitle":"七步走完，人走得体面，公司也不留尾巴 · 原稿七步与责任标签；不是个人离职记录。",
+ "meaning":"declared-flow",
+ "stations":[
+  {"id":"leave-1","label":"1 提交离职申请","note":"员工\n提前 30 天书面通知"},
+  {"id":"leave-2","label":"2 离职面谈","note":"直属上级、HR\n了解原因，\n确认最后工作日"},
+  {"id":"leave-3","label":"3 工作交接","note":"员工、直属上级\n交接清单双方签字"},
+  {"id":"leave-4","label":"4 归还资产","note":"IT\n电脑、门禁卡、工牌"},
+  {"id":"leave-5","label":"5 关闭账号","note":"IT\n邮箱与各系统权限"},
+  {"id":"leave-6","label":"6 结清工资","note":"财务\n离职时一次付清"},
+  {"id":"leave-7","label":"7 离职证明","note":"HR\n当天出具；15 日内\n转档案社保"}
+ ],
+ "routes":[{"id":"source-order","label":"原稿七步展示顺序","color":"#B85F3D","direction":"forward","stations":["leave-1","leave-2","leave-3","leave-4","leave-5","leave-6","leave-7"],"segments":[{"from":"leave-1","to":"leave-2"},{"from":"leave-2","to":"leave-3"},{"from":"leave-3","to":"leave-4"},{"from":"leave-4","to":"leave-5"},{"from":"leave-5","to":"leave-6"},{"from":"leave-6","to":"leave-7"}],"note":"箭头只保留原稿展示次序，不表示工资结清或出具证明必须等待前一步完成。未给退回规则、完成状态或个人接收人。"}],
+ "note":"原稿依据《劳动合同法》第三十七条、第五十条；工资一次付清的原稿说明对应《工资支付暂行规定》第九条。\n范围说明：提前 30 天书面通知不是所有离职情形的统一条件；第三十七条另有试用期内提前三日通知的规定，原稿未展开其他适用情形。\n原文「当天出具；15 日内转档案社保」保留为期限说明，不据此计算个人截止日，也不推断手续已完成。"
+}

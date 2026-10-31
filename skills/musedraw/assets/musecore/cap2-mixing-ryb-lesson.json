@@ -1,0 +1,25 @@
+{
+  "family":"ryb-colour-lesson",
+  "system":"ryb-classroom",
+  "title":"三原色与间色",
+  "subtitle":"美术课的红黄蓝体系 · 先看两两混色，再找色环上的对面",
+  "mixHeading":"两种原色，调出一种间色",
+  "wheelHeading":"六色色环 · 正对的两色互为互补色",
+  "colours":[
+    {"id":"yellow","label":"黄","color":"#F4C20D","shape":"triangle"},
+    {"id":"red","label":"红","color":"#D7262B","shape":"square"},
+    {"id":"blue","label":"蓝","color":"#1F4DA1","shape":"circle"},
+    {"id":"orange","label":"橙","color":"#EE7A1A"},
+    {"id":"green","label":"绿","color":"#2E9E4B"},
+    {"id":"violet","label":"紫","color":"#6B3FA0"}
+  ],
+  "mixes":[
+    {"id":"orange-mix","a":"red","b":"yellow","result":"orange","label":"红与黄"},
+    {"id":"green-mix","a":"yellow","b":"blue","result":"green","label":"黄与蓝"},
+    {"id":"violet-mix","a":"red","b":"blue","result":"violet","label":"红与蓝"}
+  ],
+  "wheelStart":"red",
+  "direction":"clockwise",
+  "focus":"red",
+  "note":"在本课的 RYB 基本色模型中，三原色不能互相调出；间色由两种原色调成。色样是理想化的课堂示意，实际颜料的混合效果会有差别；这不是色光相加的规律。"
+}

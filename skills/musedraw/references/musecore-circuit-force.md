@@ -13,6 +13,53 @@ the numerical table uses the same values. Do not pass noisy measurements into
 this ideal-prediction view, imply temperature independence for a real material,
 or invent data from a photographed apparatus.
 
+## Optional supplied observation records
+
+`ohmic-circuit` with `view: "supplied-observations"` uses a separate bounded
+model, `observationCircuitModel`. The source-derived `ohmic-observations.json`
+retains source 144's twelve **author-simulated** current values. These are
+teaching records, not new measurements. Omitting `view` retains the existing
+`model: "ideal-ohmic"` forward-prediction route unchanged.
+
+Supply `recordKind` (`author-simulated-experiment` or `supplied-observations`),
+`units: "SI"`, and `fit: {"kind": "least-squares-through-origin"}`. Give 2–9
+strictly increasing common `voltagesV` within 0–60 V, and 1–3 unique `series`,
+each with `id`, `label` and one explicit `currentsA` value per voltage. Currents
+must be finite and within 0–20 A. Optional `nominalResistanceOhm` is a descriptive
+0.1–10000 Ω reference; it never generates or fits records. No missing observations
+are filled and differing voltage grids are not resampled.
+
+The explicitly chosen fit minimizes `Σ(I − kU)²` through the origin:
+`k = Σ(UI) / Σ(U²)`, with a positive representable denominator. The slope's
+finite reciprocal is displayed separately from the nominal reference. A zero
+slope has `inverseSlopeOhm: null` and a visible no-finite-inverse state; it does
+not establish a real open circuit or infinite resistance. Numeric underflow,
+unrepresentable reciprocals, unknown units/fits and malformed records are refused.
+The fit does not by itself prove that a real material obeys Ohm's law. No free
+intercept, significance test, uncertainty, temperature correction or meter-loading
+model is inferred. [OpenStax, Ohm's law](https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law)
+explains the ideal relation; the origin constraint here is an explicit caller
+choice. It is not the unconstrained regression in `pairedStats`.
+
+`selected` supplies `seriesId` and `voltageIndex` for the **record** highlighted
+in graph/table. `setup` separately declares
+`kind: "series-rheostat-ammeter-parallel-voltmeter"`, `switchPosition` (`open`
+or `closed`) and a complete `note` distinguishing apparatus from records. This
+catalogue draws A in series and V across the fixed resistor, with the supplied
+switch posture and a series rheostat. Its meters have role labels, no numeric
+record readouts or current-flow arrow; it is not asserted to be the sampled
+circuit state. Source 144 draws an open switch, which is kept explicit.
+
+The journal panels preserve all raw samples and complete caller labels/notes.
+All point coordinates, table values and selection identities share those records.
+Coincident records keep the same centre and use distinct circle styles, without
+jitter. Fonts remain fixed; measured text expands the page within declared line
+budgets, and overflow is refused rather than truncated. The bounded apparatus
+is not an arbitrary circuit solver. `ohmic-observations.test.mjs` independently
+checks the decimal-unit algebra, source inverses 5.00/10.03 Ω, isolated record
+changes, nominal-reference independence, zero slope, actual SVG/table identities,
+font pressure and real scope rejections. Execution is not aesthetic approval.
+
 `force-motion` is restricted to `horizontal-1d` with an explicit SI mass, all
 given signed horizontal forces and an explicit vertical-equilibrium assumption.
 Each of 1–4 cases has at most four forces, at most two in either direction.

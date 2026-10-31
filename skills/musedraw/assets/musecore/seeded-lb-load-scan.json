@@ -1,0 +1,80 @@
+{
+  "family": "lb-tail-latency",
+  "title": "异构服务上的负载与尾部",
+  "subtitle": "显式种子的有限排队实验 · 同一到达与工作量比较四种分配策略",
+  "note": "线与点均来自本页给定的有限运行；未绘制置信区间，不据此承诺真实服务或稳态性能。",
+  "study": {
+    "kind": "seeded-fcfs",
+    "unit": "模拟时间单位",
+    "arrival": "poisson",
+    "work": "exponential-mean-one",
+    "rng": "xorshift32-v1",
+    "servers": [
+      {
+        "id": "S1",
+        "label": "快服务1",
+        "rate": 1
+      },
+      {
+        "id": "S2",
+        "label": "快服务2",
+        "rate": 1
+      },
+      {
+        "id": "S3",
+        "label": "快服务3",
+        "rate": 1
+      },
+      {
+        "id": "S4",
+        "label": "快服务4",
+        "rate": 1
+      },
+      {
+        "id": "S5",
+        "label": "快服务5",
+        "rate": 1
+      },
+      {
+        "id": "S6",
+        "label": "快服务6",
+        "rate": 1
+      },
+      {
+        "id": "S7",
+        "label": "慢服务7",
+        "rate": 0.5
+      },
+      {
+        "id": "S8",
+        "label": "慢服务8",
+        "rate": 0.5
+      }
+    ],
+    "policies": [
+      "round-robin",
+      "random-single",
+      "least-inflight",
+      "random-two"
+    ],
+    "loads": [
+      0.3,
+      0.4,
+      0.5,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "seeds": [
+      1701,
+      3809,
+      5501
+    ],
+    "warmup": 10000,
+    "samples": 100000,
+    "focusLoad": 0.5,
+    "focusSeed": 1701
+  }
+}

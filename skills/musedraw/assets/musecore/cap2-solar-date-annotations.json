@@ -1,0 +1,163 @@
+{
+  "family": "solar-terms-wheel",
+  "title": "二十四节气",
+  "subtitle": "二十四节气与四季 · 公历标注为调用者给定的大致日期",
+  "selectedTermIds": [
+    "lichun",
+    "yushui",
+    "jingzhe",
+    "chunfen",
+    "qingming",
+    "guyu",
+    "lixia",
+    "xiaoman",
+    "mangzhong",
+    "xiazhi",
+    "xiaoshu",
+    "dashu",
+    "liqiu",
+    "chushu",
+    "bailu",
+    "qiufen",
+    "hanlu",
+    "shuangjiang",
+    "lidong",
+    "xiaoxue",
+    "daxue",
+    "dongzhi",
+    "xiaohan",
+    "dahan"
+  ],
+  "startTermId": "lichun",
+  "sunLongitudeDegrees": null,
+  "seasonLabels": [
+    "春",
+    "夏",
+    "秋",
+    "冬"
+  ],
+  "stamp": "节气",
+  "note": "公历标注沿用给定的常见大致日期，各年交节可能不同；这里不从黄经计算年度节气时刻。黄经每隔 15°，角度等分，日数不等分。",
+  "termAnnotations": [
+    {
+      "id": "lichun",
+      "approximateDateLabel": "2月4日前后",
+      "note": null
+    },
+    {
+      "id": "yushui",
+      "approximateDateLabel": "2月19日前后",
+      "note": null
+    },
+    {
+      "id": "jingzhe",
+      "approximateDateLabel": "3月6日前后",
+      "note": null
+    },
+    {
+      "id": "chunfen",
+      "approximateDateLabel": "3月21日前后",
+      "note": null
+    },
+    {
+      "id": "qingming",
+      "approximateDateLabel": "4月5日前后",
+      "note": null
+    },
+    {
+      "id": "guyu",
+      "approximateDateLabel": "4月20日前后",
+      "note": null
+    },
+    {
+      "id": "lixia",
+      "approximateDateLabel": "5月6日前后",
+      "note": null
+    },
+    {
+      "id": "xiaoman",
+      "approximateDateLabel": "5月21日前后",
+      "note": null
+    },
+    {
+      "id": "mangzhong",
+      "approximateDateLabel": "6月6日前后",
+      "note": null
+    },
+    {
+      "id": "xiazhi",
+      "approximateDateLabel": "6月21日前后",
+      "note": null
+    },
+    {
+      "id": "xiaoshu",
+      "approximateDateLabel": "7月7日前后",
+      "note": null
+    },
+    {
+      "id": "dashu",
+      "approximateDateLabel": "7月23日前后",
+      "note": null
+    },
+    {
+      "id": "liqiu",
+      "approximateDateLabel": "8月8日前后",
+      "note": null
+    },
+    {
+      "id": "chushu",
+      "approximateDateLabel": "8月23日前后",
+      "note": null
+    },
+    {
+      "id": "bailu",
+      "approximateDateLabel": "9月8日前后",
+      "note": null
+    },
+    {
+      "id": "qiufen",
+      "approximateDateLabel": "9月23日前后",
+      "note": null
+    },
+    {
+      "id": "hanlu",
+      "approximateDateLabel": "10月8日前后",
+      "note": null
+    },
+    {
+      "id": "shuangjiang",
+      "approximateDateLabel": "10月23日前后",
+      "note": null
+    },
+    {
+      "id": "lidong",
+      "approximateDateLabel": "11月7日前后",
+      "note": null
+    },
+    {
+      "id": "xiaoxue",
+      "approximateDateLabel": "11月22日前后",
+      "note": null
+    },
+    {
+      "id": "daxue",
+      "approximateDateLabel": "12月7日前后",
+      "note": null
+    },
+    {
+      "id": "dongzhi",
+      "approximateDateLabel": "12月22日前后",
+      "note": null
+    },
+    {
+      "id": "xiaohan",
+      "approximateDateLabel": "1月6日前后",
+      "note": null
+    },
+    {
+      "id": "dahan",
+      "approximateDateLabel": "1月20日前后",
+      "note": null
+    }
+  ]
+}

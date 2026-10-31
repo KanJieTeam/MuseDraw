@@ -1,3 +1,4 @@
+import {plateRobustFigure} from './plate-robust-figures.mjs';
 import {cap2DataCalendarPeriodFigure} from './cap2-data-calendar-period-figures.mjs';
 import {el} from './svg.mjs';
 import {measureVisual,visualLines,visualPage,visualText,visualBlock,visualHeading,visualFinish,stroke,number,blend} from './visual-tools.mjs';
@@ -30,6 +31,7 @@ export function dataVisualFamilies(h){
   return visualFinish(s,{family:'calendar',width:W,height:H,year:b.year,days,total,months,longest,weekendShare,breaks,palette:colors,monthly,sourceCase:'d05-rili-reli'});
  }
  function plate(b){
+  if(Object.hasOwn(b,'thresholdPolicy'))return plateRobustFigure(b);
   fields(b,['family','title','subtitle','rows','columns','values','range','threshold','direction','unit','controls','dataStatus'],'plate');for(const k of ['title','subtitle','unit','dataStatus'])str(b[k],k);
   list(b.rows,4,16,'rows');need(new Set(b.rows).size===b.rows.length,'duplicate plate row');b.rows.forEach(r=>{str(r,'row');need(r.length<=3,'plate row label too long')});need(Number.isInteger(b.columns)&&b.columns>=6&&b.columns<=24,'columns: 6–24');list(b.values,b.rows.length*b.columns,b.rows.length*b.columns,'values');b.values.forEach(v=>number(v,'well value'));
   list(b.range,2,2,'range');b.range.forEach(v=>number(v,'range bound'));need(b.range[1]>b.range[0]&&b.values.every(v=>v>=b.range[0]&&v<=b.range[1]),'values must lie in the declared scale');number(b.threshold,'threshold');need(b.threshold>=b.range[0]&&b.threshold<=b.range[1],'threshold outside scale');need(['above','below'].includes(b.direction),'direction: above or below');

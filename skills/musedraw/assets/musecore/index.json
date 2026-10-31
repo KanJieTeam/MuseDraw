@@ -90,13 +90,7 @@
       "id": "colour",
       "family": "colour",
       "file": "colour.json",
-      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
-      "source": {
-        "case": "t06-sanyuanse",
-        "sourceSha256": "3c10a8524c524d368f5cca894536b6a6734635a089eb3c07b4d1ad28cdf55ad9",
-        "role": "Existing composition studied; content-driven implementation written",
-        "approval": "No new family-wide aesthetic approval yet"
-      }
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion"
     },
     {
       "id": "calendar",
@@ -114,13 +108,7 @@
       "id": "plate",
       "family": "plate",
       "file": "plate.json",
-      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion",
-      "source": {
-        "case": "170-hts-384-plate",
-        "sourceSha256": "93fbcbd3f6ad248f00eef74ad283e29d8d2dc5003aee3be2c4ca9a59980b5966",
-        "role": "Existing composition studied; content-driven implementation written",
-        "approval": "No new family-wide aesthetic approval yet"
-      }
+      "contentStatus": "fictional or simulated development input; not a real event, teaching validation or experimental conclusion"
     },
     {
       "id": "riso",
@@ -748,13 +736,7 @@
       "id": "leave-plan",
       "family": "leave-plan",
       "file": "leave-plan.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "o09-nianxiujia",
-          "sourceSha256": "2f95cdfeff88251834411eef6de3ccce3d5ba480cc4648fd79c96b947b60ef34"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "orbital-motion",
@@ -814,13 +796,7 @@
       "id": "ohmic-circuit",
       "family": "ohmic-circuit",
       "file": "ohmic-circuit.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "144-ohms-law",
-          "sourceSha256": "6eca1e2d229cfb0f8de9989ec15f826925b1ae0d36efff3404e892e077861150"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "force-motion",
@@ -832,13 +808,7 @@
       "id": "equation-balance",
       "family": "equation-balance",
       "file": "equation-balance.json",
-      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system",
-      "sourceCases": [
-        {
-          "id": "t03-yiyuan-yici",
-          "sourceSha256": "e21943bdc4e617fb837b49c504a793a9e5093dfa23ba9a5118890daf786ae8e0"
-        }
-      ]
+      "contentStatus": "fictional development example; explicit relationships and declarations, not a verified real system"
     },
     {
       "id": "two-quantities",
@@ -1336,13 +1306,7 @@
       "id": "lb-tail-latency",
       "family": "lb-tail-latency",
       "file": "lb-tail-latency.json",
-      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
-      "sourceCases": [
-        {
-          "id": "108-lb-tail-latency",
-          "sourceSha256": "47be14d6ec110927f759c461f78fa6db526f02be516523b5b73a5b60c37acb66"
-        }
-      ]
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome"
     },
     {
       "id": "food-web",
@@ -2429,6 +2393,147 @@
           "sourceSha256": "56f9d936929ad7fb5c5d601087414fee1319fc4c382b1aaf4806f1e8fc017fce"
         }
       ]
+    },
+    {
+      "id": "cap2-mixing-ryb-lesson",
+      "file": "cap2-mixing-ryb-lesson.json",
+      "family": "ryb-colour-lesson",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-mixing-lesson.md",
+      "source": {
+        "case": "t06-sanyuanse",
+        "sourceSha256": "3c10a8524c524d368f5cca894536b6a6734635a089eb3c07b4d1ad28cdf55ad9",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
+    },
+    {
+      "id": "cap2-leave-thresholds",
+      "file": "cap2-leave-thresholds.json",
+      "family": "threshold-bands",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-threshold-bands.md",
+      "sourceCases": [
+        {
+          "id": "o09-nianxiujia",
+          "sourceSha256": "2f95cdfeff88251834411eef6de3ccce3d5ba480cc4648fd79c96b947b60ef34"
+        }
+      ]
+    },
+    {
+      "id": "cap2-component-shortlink-source",
+      "file": "cap2-component-shortlink-source.json",
+      "family": "component-context",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-component-context.md"
+    },
+    {
+      "id": "cap2-fraction-equation",
+      "file": "cap2-fraction-equation.json",
+      "family": "fraction-equation",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-fraction-equation.md",
+      "sourceCases": [
+        {
+          "id": "t03-yiyuan-yici",
+          "sourceSha256": "e21943bdc4e617fb837b49c504a793a9e5093dfa23ba9a5118890daf786ae8e0"
+        }
+      ]
+    },
+    {
+      "id": "cap2-office-collective-daci-source",
+      "file": "cap2-office-collective-daci-source.json",
+      "family": "daci",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-office-collective-daci.md"
+    },
+    {
+      "id": "cap2-office-priority-source",
+      "file": "cap2-office-priority-source.json",
+      "family": "service-priority",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-office-priority-source.md"
+    },
+    {
+      "id": "cap2-value-iteration-grid",
+      "file": "cap2-value-iteration-grid.json",
+      "family": "grid-value-iteration",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-value-iteration.md"
+    },
+    {
+      "id": "cap2-solar-date-annotations",
+      "file": "cap2-solar-date-annotations.json",
+      "family": "solar-terms-wheel",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-solar-date-annotations.md"
+    },
+    {
+      "id": "cap2-leaf-exhibition-source",
+      "file": "cap2-leaf-exhibition-source.json",
+      "family": "specimen",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-leaf-exhibition-source.md"
+    },
+    {
+      "id": "cap2-office-seal-process-source",
+      "file": "cap2-office-seal-process-source.json",
+      "family": "pathway-map",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-office-procedure-sources.md"
+    },
+    {
+      "id": "cap2-office-departure-process-source",
+      "file": "cap2-office-departure-process-source.json",
+      "family": "pathway-map",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-office-procedure-sources.md"
+    },
+    {
+      "id": "cap2-invention-classroom-links",
+      "file": "cap2-invention-classroom-links.json",
+      "family": "invention-timeline",
+      "contentStatus": "Bounded supplied-content construction or source-task adaptation; no invented missing observations, current-policy certification, aesthetic approval or full source replay.",
+      "reference": "references/cap2-invention-classroom-links.md"
+    },
+    {
+      "id": "seeded-lb-load-scan",
+      "file": "seeded-lb-load-scan.json",
+      "family": "lb-tail-latency",
+      "contentStatus": "New explicitly seeded finite ideal queue experiment; not recovery of missing original random trajectories, a steady-state estimate or a real SLO.",
+      "reference": "references/musecore-latency-study.md",
+      "sourceCases": [
+        {
+          "id": "108-lb-tail-latency",
+          "sourceSha256": "47be14d6ec110927f759c461f78fa6db526f02be516523b5b73a5b60c37acb66"
+        }
+      ]
+    },
+    {
+      "id": "ohmic-observations",
+      "file": "ohmic-observations.json",
+      "family": "ohmic-circuit",
+      "contentStatus": "Author-simulated or caller-supplied SI records with an explicit origin-constrained fit; apparatus shown separately, no material-law proof.",
+      "reference": "references/musecore-circuit-force.md",
+      "sourceCases": [
+        {
+          "id": "144-ohms-law",
+          "sourceSha256": "6eca1e2d229cfb0f8de9989ec15f826925b1ae0d36efff3404e892e077861150"
+        }
+      ]
+    },
+    {
+      "id": "plate-robust-screen",
+      "file": "plate-robust-screen.json",
+      "family": "plate",
+      "contentStatus": "Clearly synthetic complete plate; exact canonical-decimal median/MAD threshold and full hit list, not original missing source observations or biological validation.",
+      "reference": "references/musecore-plate-robust.md",
+      "source": {
+        "case": "170-hts-384-plate",
+        "sourceSha256": "93fbcbd3f6ad248f00eef74ad283e29d8d2dc5003aee3be2c4ca9a59980b5966",
+        "role": "Existing composition studied; content-driven implementation written",
+        "approval": "No new family-wide aesthetic approval yet"
+      }
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -3067,6 +3172,90 @@
       "reference": "references/musecore-upgma-distance.md",
       "ids": [
         "dated-phylogeny"
+      ]
+    },
+    {
+      "reference": "references/cap2-mixing-lesson.md",
+      "ids": [
+        "ryb-colour-lesson"
+      ]
+    },
+    {
+      "reference": "references/cap2-threshold-bands.md",
+      "ids": [
+        "threshold-bands"
+      ]
+    },
+    {
+      "reference": "references/cap2-component-context.md",
+      "ids": [
+        "component-context"
+      ]
+    },
+    {
+      "reference": "references/cap2-reflection-layout.md",
+      "ids": [
+        "reflection"
+      ]
+    },
+    {
+      "reference": "references/cap2-fraction-equation.md",
+      "ids": [
+        "fraction-equation"
+      ]
+    },
+    {
+      "reference": "references/cap2-office-collective-daci.md",
+      "ids": [
+        "daci"
+      ]
+    },
+    {
+      "reference": "references/cap2-office-priority-source.md",
+      "ids": [
+        "service-priority"
+      ]
+    },
+    {
+      "reference": "references/cap2-value-iteration.md",
+      "ids": [
+        "grid-value-iteration"
+      ]
+    },
+    {
+      "reference": "references/cap2-solar-date-annotations.md",
+      "ids": [
+        "solar-terms-wheel"
+      ]
+    },
+    {
+      "reference": "references/cap2-leaf-exhibition-source.md",
+      "ids": [
+        "specimen"
+      ]
+    },
+    {
+      "reference": "references/cap2-office-procedure-sources.md",
+      "ids": [
+        "pathway-map"
+      ]
+    },
+    {
+      "reference": "references/cap2-invention-classroom-links.md",
+      "ids": [
+        "invention-timeline"
+      ]
+    },
+    {
+      "reference": "references/musecore-latency-study.md",
+      "ids": [
+        "lb-tail-latency"
+      ]
+    },
+    {
+      "reference": "references/musecore-plate-robust.md",
+      "ids": [
+        "plate"
       ]
     }
   ]

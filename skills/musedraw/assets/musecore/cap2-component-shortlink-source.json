@@ -1,0 +1,37 @@
+{
+  "family": "component-context",
+  "title": "短链接服务 · API 组件与范围外事件上下文",
+  "subtitle": "一个 API 容器，六个内部组件。Kafka 与其他团队的统计服务保持在边界外；原图中的十一条有向关系全部保留。",
+  "readerQuestion": "哪些组件位于 API 容器内，读写依赖如何跨出边界，点击事件又如何到达范围外的统计服务？",
+  "scope": {"id":"api","label":"API 服务","technology":"Go","system":"短链接服务"},
+  "components": [
+    {"id":"redirect","label":"跳转控制器","technology":null,"detail":"查短码，返回 302"},
+    {"id":"create","label":"创建控制器","technology":null,"detail":"收长链接，返回短码"},
+    {"id":"generator","label":"短码生成器","technology":null,"detail":"发号器 + Base62 编码"},
+    {"id":"repository","label":"链接仓库","technology":null,"detail":"读写短码与长链接映射"},
+    {"id":"cache","label":"缓存客户端","technology":null,"detail":"热门短码放进缓存"},
+    {"id":"publisher","label":"点击事件发布器","technology":null,"detail":"异步记录每次访问"}
+  ],
+  "externals": [
+    {"id":"visitor","label":"访问者","kind":"person","technology":null,"detail":"点击短链接","placement":"before","ownership":null},
+    {"id":"web","label":"Web 前端","kind":"container","containerType":"application","technology":"Vue","detail":"用户粘贴长链接","placement":"before","ownership":null},
+    {"id":"redis","label":"Redis","kind":"container","containerType":"data","technology":"缓存","detail":"短码 → 长链接","placement":"after","ownership":null},
+    {"id":"mysql","label":"MySQL","kind":"container","containerType":"data","technology":"数据库","detail":"全部映射记录","placement":"after","ownership":null},
+    {"id":"kafka","label":"消息队列","kind":"container","containerType":"queue","technology":"Kafka","detail":"点击事件","placement":"after","ownership":null},
+    {"id":"statistics","label":"统计服务","kind":"container","containerType":"application","technology":"Python","detail":"按天汇总点击量","placement":"after","ownership":"其他团队"}
+  ],
+  "relationships": [
+    {"id":"visit","from":"visitor","to":"redirect","label":"打开 /4c92","technology":"HTTPS"},
+    {"id":"submit","from":"web","to":"create","label":"提交长链接","technology":"JSON/HTTPS"},
+    {"id":"code","from":"create","to":"generator","label":"申请短码","technology":null},
+    {"id":"save","from":"create","to":"repository","label":"保存映射","technology":null},
+    {"id":"query","from":"redirect","to":"repository","label":"按短码查询","technology":null},
+    {"id":"cache-first","from":"repository","to":"cache","label":"先查缓存","technology":null},
+    {"id":"redis-io","from":"cache","to":"redis","label":"读写","technology":"RESP"},
+    {"id":"fallback","from":"repository","to":"mysql","label":"缓存未命中时","technology":"SQL"},
+    {"id":"click","from":"redirect","to":"publisher","label":null,"technology":null},
+    {"id":"publish","from":"publisher","to":"kafka","label":"发布事件","technology":null},
+    {"id":"subscribe","from":"kafka","to":"statistics","label":"订阅点击事件","technology":null}
+  ],
+  "note": "源示例的静态依赖图。内部组件没有单独给出技术；无标签箭头、未注明的关系技术保留为空缺。范围外不等于属于另一个软件系统，也不等于发生在更晚时刻。Base62 的 1,000,000 → 4c92 计算另见编码辅助图；这里保留源图的 302 返回事实，不推断 HTTP 缓存行为。"
+}

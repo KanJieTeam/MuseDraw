@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.52
+  instructions-version: musecore-2026-10-31.53
 ---
 
 # MuseDraw
@@ -94,6 +94,20 @@ family's encodings, coordinated geometry and placement.
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |
 | Given jump-rope scores and explicit arithmetic redistribution | [Average source input](references/musecore-average-source.md) |
 | Supplied bin frequencies, density and externally reported summaries | [Binned histogram](references/musecore-histogram-binned-source.md) |
+| mixing lesson | [Workflow](references/cap2-mixing-lesson.md) |
+| threshold bands | [Workflow](references/cap2-threshold-bands.md) |
+| component context | [Workflow](references/cap2-component-context.md) |
+| reflection layout | [Workflow](references/cap2-reflection-layout.md) |
+| fraction equation | [Workflow](references/cap2-fraction-equation.md) |
+| office collective daci | [Workflow](references/cap2-office-collective-daci.md) |
+| office priority source | [Workflow](references/cap2-office-priority-source.md) |
+| value iteration | [Workflow](references/cap2-value-iteration.md) |
+| solar date annotations | [Workflow](references/cap2-solar-date-annotations.md) |
+| leaf exhibition source | [Workflow](references/cap2-leaf-exhibition-source.md) |
+| office procedure sources | [Workflow](references/cap2-office-procedure-sources.md) |
+| invention classroom links | [Workflow](references/cap2-invention-classroom-links.md) |
+| Finite seeded heterogeneous-server load experiments | [Workflow](references/musecore-latency-study.md) |
+| Explicit median/MAD screening rules and complete hit evidence | [Workflow](references/musecore-plate-robust.md) |
 | Grouped exact integer counts | [Workflow](references/cap2-data-counting-groups.md) |
 | Repeated panels with computed peak summaries | [Workflow](references/cap2-data-peak-panels.md) |
 | Explicit age-group count comparisons | [Workflow](references/cap2-data-pyramid-focus.md) |

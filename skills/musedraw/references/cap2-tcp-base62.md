@@ -7,7 +7,7 @@ value. The blue input/output band, coloured digits and matching remainder column
 keep the number transformation visible. Measured text height increases the
 canvas; text keeps its reading size. Overflow refuses.
 
-Before shared-runtime integration, run the independent review CLI:
+The family is registered in the normal `core render` route. An independent CLI is also available:
 
 ```sh
 node scripts/cap2-tcp-render.mjs assets/musecore/cap2-tcp-base62-source.json --out output/base62

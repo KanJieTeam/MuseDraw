@@ -20,7 +20,7 @@ node scripts/cap2-lever-render.mjs assets/musecore/cap2-lever-arm-comparison.jso
 The standalone preview produces PNG, SVG, an editable offline HTML page,
 complete input and geometry checks. A Noto Sans SC/CJK font file can be passed
 with `--noto` or `MUSEDRAW_CAP2_NOTO`; it is embedded in the offline editor.
-The shared `core render` entry point requires the separate integration patch.
+The shared `core render` entry point includes this family.
 
 One geometric scale determines all arm dimensions. Force arrows show direction
 only; their lengths do not encode magnitude. Reactions are omitted, so these
