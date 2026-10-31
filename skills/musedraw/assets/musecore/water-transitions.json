@@ -1,0 +1,55 @@
+{
+  "family": "water-transitions",
+  "title": "水的三态变化",
+  "subtitle": "冰、液态水与水蒸气之间的给定转变；橙色表示水吸热，蓝色表示水放热。",
+  "substance": "water",
+  "states": [
+    {
+      "kind": "solid",
+      "label": "冰"
+    },
+    {
+      "kind": "liquid",
+      "label": "液态水"
+    },
+    {
+      "kind": "gas",
+      "label": "水蒸气"
+    }
+  ],
+  "transitions": [
+    {
+      "kind": "melting",
+      "example": "snow"
+    },
+    {
+      "kind": "freezing",
+      "example": "ice"
+    },
+    {
+      "kind": "vaporization",
+      "example": "drying"
+    },
+    {
+      "kind": "condensation",
+      "example": "mist"
+    },
+    {
+      "kind": "sublimation",
+      "example": "ice"
+    },
+    {
+      "kind": "deposition",
+      "example": "frost"
+    }
+  ],
+  "reference": {
+    "kind": "normal-pressure-rounded",
+    "pressureKPa": 101.325,
+    "domain": [
+      -20,
+      120
+    ]
+  },
+  "note": "箭头表示转变方向，不表示速率或热量。水蒸气不可见；可见“白气”含有液态小水滴。"
+}

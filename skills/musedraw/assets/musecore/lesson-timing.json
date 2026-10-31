@@ -1,0 +1,13 @@
+{
+ "family":"lesson-timing","title":"一节课的45分钟","subtitle":"初二数学《勾股定理》 · 给定的课堂时间安排","evidenceKind":"illustrative-plan","totalMinutes":45,"selectionLabel":"学生动手的探究与练习",
+ "roles":[{"id":"teacher","label":"教师"},{"id":"student","label":"学生"}],
+ "segments":[
+  {"id":"intro","label":"导入","minutes":5,"kind":"activity","selected":false,"actions":[{"role":"teacher","text":"出示方格纸上的直角三角形"},{"role":"student","text":"猜三条边有什么关系"}]},
+  {"id":"explore","label":"探究新知","minutes":18,"kind":"activity","selected":true,"actions":[{"role":"teacher","text":"组织拼图、数方格"},{"role":"student","text":"分组验证 a² + b² = c²"}]},
+  {"id":"practice","label":"练习巩固","minutes":12,"kind":"activity","selected":true,"actions":[{"role":"teacher","text":"巡视，挑出典型错误讲评"},{"role":"student","text":"求未知边，分层完成"}]},
+  {"id":"summary","label":"课堂小结","minutes":5,"kind":"activity","selected":false,"actions":[{"role":"teacher","text":"追问：什么情况下能用"},{"role":"student","text":"用一句话说出定理"}]},
+  {"id":"homework","label":"布置作业","minutes":3,"kind":"activity","selected":false,"actions":[{"role":"teacher","text":"布置实践题"},{"role":"student","text":"记作业"}]},
+  {"id":"buffer","label":"机动","minutes":2,"kind":"buffer","selected":false,"actions":[{"role":"teacher","text":null},{"role":"student","text":null}]}
+ ],
+ "note":"示例教案；时长为计划分配，空白动作表示未指定。"
+}

@@ -1,0 +1,15 @@
+{
+ "family":"weekly-practice","title":"一年级入学适应四周","subtitle":"从幼儿园到小学，一周只练一件事","evidenceKind":"illustrative-plan","originLabel":"以适应计划启动日为第1天","startDate":null,
+ "stages":[
+  {"id":"school","goal":"认识学校","weeks":1,"practices":["找得到教室、厕所、饮水处","知道上课铃和下课铃"]},
+  {"id":"organize","goal":"学会整理","weeks":1,"practices":["自己整理书包和课桌","按课表准备书本"]},
+  {"id":"class","goal":"适应一节课","weeks":1,"practices":["从20分钟专注慢慢到40分钟","举手发言、轮流说话"]},
+  {"id":"show","goal":"小小展示会","weeks":1,"practices":["每人展示一件新学会的事","家长开放日"]}
+ ],
+ "roles":[
+  {"id":"teacher","label":"老师","action":"每天放学前用一分钟夸具体的进步，例如「今天你自己把水杯放回了原处」。","stages":[]},
+  {"id":"parent","label":"家长","action":"晚上和孩子一起整理第二天的书包，不替他做；早上提前十分钟出门。","stages":[]},
+  {"id":"child","label":"孩子","action":"遇到不会的事，先说「老师，我需要帮忙」。","stages":[]}
+ ],
+ "note":"示例教学安排；练习目标不代表每位孩子必须在该周达到。"
+}

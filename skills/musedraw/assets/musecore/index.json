@@ -1973,6 +1973,78 @@
           "sourceSha256": "392af93cb2fa332cf5c3fa1faff534b5e6b21f35738052770a851d4987b0a9e3"
         }
       ]
+    },
+    {
+      "id": "beiying-motif-poster",
+      "family": "beiying-motif-poster",
+      "file": "beiying-motif-poster.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t07-beiying",
+          "sourceSha256": "544f58062f4ae68c5e300738593904ef215641a111109515b753443a1701f551"
+        }
+      ]
+    },
+    {
+      "id": "classical-syntax-sheet",
+      "family": "classical-syntax-sheet",
+      "file": "classical-syntax-sheet.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "157-classical-chinese-syntax",
+          "sourceSha256": "c73d72c3cfa95298e20376c212474f0e6c889c897a2b48c0a7eaafcbeeebf322"
+        }
+      ]
+    },
+    {
+      "id": "weekly-practice",
+      "family": "weekly-practice",
+      "file": "weekly-practice.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "j06-ruxue-shiying",
+          "sourceSha256": "78022dc53c156598561bfe4553185aaff6d739aa176e6a083bf979482d18ac24"
+        }
+      ]
+    },
+    {
+      "id": "lesson-timing",
+      "family": "lesson-timing",
+      "file": "lesson-timing.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "t13-yijieke-45fenzhong",
+          "sourceSha256": "2c5a12f46eada4cd7eba780d33303780f9f5a92136e8d2d0da88fdb84e97f6e5"
+        }
+      ]
+    },
+    {
+      "id": "water-transitions",
+      "family": "water-transitions",
+      "file": "water-transitions.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "134-states-of-water",
+          "sourceSha256": "ba96da59627b9ed4e63670a1d0cc4ccd722207b364f94dff47714710a2ff066a"
+        }
+      ]
+    },
+    {
+      "id": "sintering-record",
+      "family": "sintering-record",
+      "file": "sintering-record.json",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "sourceCases": [
+        {
+          "id": "178-ceramic-sintering",
+          "sourceSha256": "c7ea9715f6b2081487a5c30371e1cc9050cea65002d5fcee44e08dfbacca0c8b"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2449,6 +2521,27 @@
       "ids": [
         "grover-amplitudes",
         "primer-pair"
+      ]
+    },
+    {
+      "reference": "references/musecore-narrative-syntax.md",
+      "ids": [
+        "beiying-motif-poster",
+        "classical-syntax-sheet"
+      ]
+    },
+    {
+      "reference": "references/musecore-weekly-lesson.md",
+      "ids": [
+        "weekly-practice",
+        "lesson-timing"
+      ]
+    },
+    {
+      "reference": "references/musecore-water-sinter.md",
+      "ids": [
+        "water-transitions",
+        "sintering-record"
       ]
     }
   ]

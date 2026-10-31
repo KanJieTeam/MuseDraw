@@ -1,0 +1,3 @@
+{
+ "family":"beiying-motif-poster","title":"背影","author":"朱自清","subtitle":"文学阅读 · 从反复出现的背影梳理文序","moments":[{"id":"opening","heading":"开篇点题","reading":"以最难忘的父亲背影引出回忆。"},{"id":"climbing","heading":"月台买橘","reading":"写父亲攀上月台的动作，让背影成为具体的画面。"},{"id":"parting","heading":"车站分别","reading":"父亲离去，背影消失在人群中。"},{"id":"letter","heading":"篇末回望","reading":"读信时，父亲的背影在泪光中再次浮现。"}],"focus":"climbing","figure":{"coatWidth":0.42,"handSpan":0.58,"lean":-0.035,"raisedFoot":"right","heightRatio":1},"overprint":{"offset":8,"halftone":true},"note":"人物为文学意象；按所列位置回到原文阅读。"
+}

@@ -1,0 +1,101 @@
+{
+  "family": "sintering-record",
+  "title": "陶瓷烧结：给定曲线与形态",
+  "subtitle": "温度、相对密度和阶段时间窗均为显式供给；显微结构只作非比例的教学示意。",
+  "materialLabel": "氧化铝陶瓷教学示例",
+  "dataKind": "synthetic-teaching",
+  "timeUnit": "h",
+  "samples": [
+    {
+      "time": 0,
+      "temperatureC": 25,
+      "relativeDensityPercent": 58
+    },
+    {
+      "time": 1,
+      "temperatureC": 330,
+      "relativeDensityPercent": 58
+    },
+    {
+      "time": 2,
+      "temperatureC": 635,
+      "relativeDensityPercent": 58
+    },
+    {
+      "time": 3,
+      "temperatureC": 940,
+      "relativeDensityPercent": 58.1
+    },
+    {
+      "time": 4,
+      "temperatureC": 1245,
+      "relativeDensityPercent": 59
+    },
+    {
+      "time": 4.8,
+      "temperatureC": 1490,
+      "relativeDensityPercent": 65
+    },
+    {
+      "time": 5.1,
+      "temperatureC": 1550,
+      "relativeDensityPercent": 77
+    },
+    {
+      "time": 6.2,
+      "temperatureC": 1550,
+      "relativeDensityPercent": 92
+    },
+    {
+      "time": 7.1,
+      "temperatureC": 1550,
+      "relativeDensityPercent": 97
+    },
+    {
+      "time": 8,
+      "temperatureC": 1000,
+      "relativeDensityPercent": 97.8
+    },
+    {
+      "time": 9.6,
+      "temperatureC": 25,
+      "relativeDensityPercent": 97.8
+    }
+  ],
+  "stageWindows": [
+    {
+      "kind": "neck",
+      "label": "初期形态示意",
+      "from": 0,
+      "to": 4.8,
+      "caption": "接触处出现细颈；颗粒与间隙为示意。",
+      "grainCount": 15,
+      "poreCount": 0
+    },
+    {
+      "kind": "channels",
+      "label": "中期形态示意",
+      "from": 4.8,
+      "to": 6.2,
+      "caption": "晶粒之间保留连通的气孔通道示意。",
+      "grainCount": 12,
+      "poreCount": 0
+    },
+    {
+      "kind": "isolated",
+      "label": "后期形态示意",
+      "from": 6.2,
+      "to": 9.6,
+      "caption": "孤立气孔和晶粒边界示意，不按密度定像素。",
+      "grainCount": 9,
+      "poreCount": 8
+    }
+  ],
+  "microstructureKind": "schematic-not-measured",
+  "assumptions": {
+    "massConserved": true,
+    "sameTheoreticalDensity": true,
+    "isotropic": true
+  },
+  "note": "给定数据用于教学展示；不预测烧结机理、材料性能、工艺安全或实验成功。收缩率仅在所列条件下由端点密度换算。"
+}
