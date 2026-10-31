@@ -866,6 +866,15 @@ class GalleryTests(unittest.TestCase):
                                  'assets/musecore/decade-development-scroll.json',
                                  'tests/musecore/development-scroll.test.mjs',
                                  'tests/musecore/statement-anchor-roles.test.mjs',
+                                 'scripts/musecore/hierarchy-aggregate-models.mjs',
+                                 'scripts/musecore/hierarchy-aggregate-figures.mjs',
+                                 'assets/musecore/org-restructure-aggregate.json',
+                                 'tests/musecore/hierarchy-aggregate.test.mjs',
+                                 'references/musecore-hierarchy-aggregate.md',
+                                 'assets/musecore/pcr-primer-source.json',
+                                 'tests/musecore/primer-source.test.mjs',
+                                 'references/musecore-primer-source.md',
+                                 'tests/musecore/gwas-threshold-neighbours.test.mjs',
                                  'references/musecore-development-scroll.md',
                                  'tests/musecore/hierarchy-count-scale.test.mjs'):
                     self.assertIn("musedraw/" + required, names)

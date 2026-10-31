@@ -12,7 +12,11 @@ are synthetic and do not justify extrapolating a population over the full field.
 `-log10(p)`. The input declares chromosome lengths, assembly, coordinates,
 thresholds, local-region records and any LD values or gene tracks. The Manhattan,
 QQ and local panels use that supplied input; the QQ panel describes only the
-given set. It does not run association tests, calculate LD, infer independent
+given set. Manhattan and QQ significance colours compare each original P value
+directly with the original threshold (P <= threshold); log-coordinate rounding
+does not change the classification or the significant-variant count. Local
+colours remain supplied r-squared categories, with the declared lead shown
+separately. It does not run association tests, calculate LD, infer independent
 loci, population stratification, risk, biological mechanism or causality. It does
 not infer a complete analysis from the illustrative subset or report lambda-GC.
 

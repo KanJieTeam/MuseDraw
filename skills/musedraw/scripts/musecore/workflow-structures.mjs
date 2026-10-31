@@ -1,3 +1,4 @@
+import {hierarchyAggregate} from './hierarchy-aggregate-figures.mjs';
 import {el} from './svg.mjs';
 import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualHeadingPlan,visualFinish,stroke,number} from './visual-tools.mjs';
 import {linearScale,niceDomain,formatNumber} from './quantitative.mjs';
@@ -20,6 +21,7 @@ export function workflowStructureFamilies(h){
   visualText(s,80,H-95,`最早完成 ${criticalNumber(g.finish)} ${b.unit} · 金色为零总时差任务`,{size:25,weight:700,fill:gold});visualBlock(s,80,H-58,visualLines(b.note,1640,{size:19,max:2}),{size:19,fill:muted});return visualFinish(s,{family:'critical-path',width:W,height:H,tasks:g.nodes,links:routes,bars,finish:g.finish,sourceCase:'184-critical-path'});
  }
  function hierarchy(b){
+  if(b.view==='aggregate')return hierarchyAggregate(b);
   fields(b,['family','title','subtitle','panels','expectSameTotal','note'],'hierarchy');for(const k of ['title','subtitle','note'])str(b[k],k);need(typeof b.expectSameTotal==='boolean','expectSameTotal must be explicit');list(b.panels,1,2,'panels');unique(b.panels,'panels');
   const trees=b.panels.map(p=>{fields(p,['id','label','nodes'],'panel');str(p.label,'panel.label');list(p.nodes,3,24,'nodes');unique(p.nodes,'nodes');for(const n of p.nodes){fields(n,['id','label','parent','ownCount'],'node');str(n.label,'node.label');need(n.parent===null||typeof n.parent==='string','parent must be ID or null')}const g=rootedTree(p.nodes);need(Math.max(...g.nodes.map(n=>n.level))<=4,'hierarchy exceeds five levels');return {...p,g}});if(b.expectSameTotal)need(trees.length===2&&trees[0].g.root.subtreeCount===trees[1].g.root.subtreeCount,'hierarchy totals differ despite expectSameTotal');
   const W=1800,panelW=(W-160)/trees.length,ink='#24251F',red='#963C2D',muted='#777B70',context=document.createElement('canvas').getContext('2d'),probe=el('g',{}),fonts=Object.fromEntries(['sans','serif'].map(role=>[role,visualText(probe,0,0,'M',{role}).getAttribute('font-family')]));

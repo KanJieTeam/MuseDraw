@@ -364,7 +364,13 @@
       "id": "hierarchy",
       "family": "hierarchy",
       "file": "hierarchy.json",
-      "contentStatus": "fictional development input; not a real staffing or project plan",
+      "contentStatus": "fictional development input; not a real staffing or project plan"
+    },
+    {
+      "id": "org-restructure-aggregate",
+      "file": "org-restructure-aggregate.json",
+      "family": "hierarchy",
+      "contentStatus": "Source illustrative role counts and director distributions; no individual reporting links or department manager/employee details inferred. Management roles explicitly classified. No N-1 span inference.",
       "sourceCases": [
         {
           "id": "185-org-restructure",
@@ -1942,7 +1948,13 @@
       "id": "primer-pair",
       "family": "primer-pair",
       "file": "primer-pair.json",
-      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome",
+      "contentStatus": "development teaching example; the input declares catalogued, illustrative or supplied values; not a verified real-system outcome"
+    },
+    {
+      "id": "pcr-primer-source",
+      "file": "pcr-primer-source.json",
+      "family": "primer-pair",
+      "contentStatus": "Author-provided illustrative template and explicit primer coordinates. GC and inclusive product length computed; no unimplemented empirical Tm or thermodynamic dimer claim.",
       "sourceCases": [
         {
           "id": "180-pcr-primers",

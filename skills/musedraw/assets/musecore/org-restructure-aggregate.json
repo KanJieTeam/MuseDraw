@@ -1,0 +1,131 @@
+{
+  "family": "hierarchy",
+  "view": "aggregate",
+  "title": "八个部门合并为五个：管理岗减少 19 个，总人数不变",
+  "subtitle": "组织调整专刊 · 原稿示例数据的聚合对比",
+  "roles": [
+    {
+      "id": "gm",
+      "label": "总经理",
+      "management": true
+    },
+    {
+      "id": "vp",
+      "label": "副总裁",
+      "management": true
+    },
+    {
+      "id": "director",
+      "label": "总监",
+      "management": true
+    },
+    {
+      "id": "manager",
+      "label": "经理",
+      "management": true
+    },
+    {
+      "id": "staff",
+      "label": "员工",
+      "management": false
+    }
+  ],
+  "countedRole": "director",
+  "expectSameTotal": true,
+  "panels": [
+    {
+      "id": "before",
+      "label": "调整前",
+      "levelCounts": {
+        "gm": 1,
+        "vp": 8,
+        "director": 26,
+        "manager": 58,
+        "staff": 219
+      },
+      "departments": [
+        {
+          "id": "d0",
+          "label": "产品",
+          "count": 4
+        },
+        {
+          "id": "d1",
+          "label": "研发",
+          "count": 4
+        },
+        {
+          "id": "d2",
+          "label": "销售",
+          "count": 3
+        },
+        {
+          "id": "d3",
+          "label": "市场",
+          "count": 3
+        },
+        {
+          "id": "d4",
+          "label": "客户成功",
+          "count": 3
+        },
+        {
+          "id": "d5",
+          "label": "运营",
+          "count": 3
+        },
+        {
+          "id": "d6",
+          "label": "财务",
+          "count": 3
+        },
+        {
+          "id": "d7",
+          "label": "人力行政",
+          "count": 3
+        }
+      ],
+      "departmentScope": "full"
+    },
+    {
+      "id": "after",
+      "label": "调整后",
+      "levelCounts": {
+        "gm": 1,
+        "vp": 5,
+        "director": 22,
+        "manager": 46,
+        "staff": 238
+      },
+      "departments": [
+        {
+          "id": "d0",
+          "label": "产品与研发",
+          "count": 5
+        },
+        {
+          "id": "d1",
+          "label": "销售与市场",
+          "count": 5
+        },
+        {
+          "id": "d2",
+          "label": "客户成功",
+          "count": 4
+        },
+        {
+          "id": "d3",
+          "label": "运营",
+          "count": 4
+        },
+        {
+          "id": "d4",
+          "label": "财务与人力",
+          "count": 4
+        }
+      ],
+      "departmentScope": "full"
+    }
+  ],
+  "note": "示例数据。级别人数与部门总监分布是两份聚合视图；没有给出经理、员工的部门细分或个人汇报关系。"
+}

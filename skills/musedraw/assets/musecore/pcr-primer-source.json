@@ -1,0 +1,30 @@
+{
+  "family": "primer-pair",
+  "title": "PCR 引物：给定示例序列核对",
+  "subtitle": "原稿300 bp合成模板；给定F31–50、R231–252，扩增范围222 bp（含引物区）。",
+  "sequenceKind": "synthetic-teaching",
+  "template": "TTTGTTCCGGCTCTATACGGGAGCGACGGCGGAATGAGCGAGCGACTAACGGTTAGTGTACTTAGAATAGTGGTGAGCTAGCTCTAGCTACGGAACGCGCAGGCGTAGCGCTACGGGAGCGTGCAAGGTCACACCAGATAACTCCGCGCCCCGAATCCCACAGACTTTAGTTCGCAGTCTCTTCTCCTCACCCCTCGGGTAGTAGCATGCACGTATTCCAGCCGCTCATGCCAACCTTACCCCATACCTTCTCCAGTCATGTTCGCTACCCAGTCCAGGGGATTAGGCTGTTATGCCAGA",
+  "forward": {
+    "label": "正向引物 F",
+    "start": 31,
+    "end": 50,
+    "sequence": "GGAATGAGCGAGCGACTAAC"
+  },
+  "reverse": {
+    "label": "反向引物 R",
+    "start": 231,
+    "end": 252,
+    "sequence": "AGAAGGTATGGGGTAAGGTTGG"
+  },
+  "example": {
+    "label": "互补示例：两份同一序列",
+    "sequence": "TCAGGACTAGCTAGGCGCGC"
+  },
+  "referenceBands": {
+    "lengthMin": 18,
+    "lengthMax": 25,
+    "gcMin": 40,
+    "gcMax": 60
+  },
+  "note": "全部序列取180原稿合成示例。原稿按经验式给出Tm约53.8/54.8°C；此图未重算Tm，也不据互补字符断言二聚体形成、基因组特异性或实验适用性。"
+}

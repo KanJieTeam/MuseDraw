@@ -38,8 +38,22 @@ test('pure: independently calculated growth windows, unknown and zero policies d
 for(const c of refused())test('pure refusal: '+c.id,()=>assert.throws(()=>developmentScrollModel(c.input),new RegExp(c.pattern)));
 function widthRefusalInput(){const b=clone(source),years=[1900,1901,1902,2026];b.development.years=years.map((year,i)=>({year,event:'给定题记'+i}));for(const k of ['personnel','revenue']){b.development[k].values=years.map((year,i)=>({year,value:i+1}));b.development[k].growth={fromYear:1900,toYear:2026};}return b;}
 test('pure: uneven year span is valid mathematics before measured composition budget is applied',()=>assert.deepEqual(developmentScrollModel(widthRefusalInput()).yearDomain,[1900,2026]));
+// log/expm1 results can differ by an ULP across Node/Chromium builds. This fixed
+// four-epsilon budget applies only to the two finite, nontrivial CAGR rates;
+// all source values, windows, statuses, nulls and exact zero/-100% stay strict.
+const CAGR_ENGINE_EPSILONS=4;
+function assertDevelopmentModel(actual,expected){
+ const {personnel:ap,revenue:ar,...aFields}=actual,{personnel:ep,revenue:er,...eFields}=expected;assert.deepEqual(aFields,eFields);
+ for(const [key,a,e]of [['personnel',ap,ep],['revenue',ar,er]]){const {growth:ag,...am}=a,{growth:eg,...em}=e;assert.deepEqual(am,em);const {rate:av,...af}=ag,{rate:ev,...ef}=eg;assert.deepEqual(af,ef);if(ev===null||ev===0||ev===-1)assert.equal(av,ev,key+' exact CAGR branch');else{assert(Number.isFinite(av)&&Number.isFinite(ev),key+' finite CAGR');const tolerance=CAGR_ENGINE_EPSILONS*Number.EPSILON*Math.max(1,Math.abs(ev));assert(Math.abs(av-ev)<=tolerance,key+' CAGR difference exceeds '+tolerance);}}
+}
+test('pure: cross-engine comparator checks rates within its fixed budget and every other model field strictly',()=>{
+ const expected=developmentScrollModel(source),oneUlp=clone(expected);oneUlp.personnel.growth.rate=0.7200408679002405;assertDevelopmentModel(oneUlp,expected);
+ for(const mutate of [m=>m.personnel.growth.rate+=1e-12,m=>m.revenue.growth.rate+=1e-12,m=>m.personnel.growth.rate=null,m=>m.years[0].year++,m=>m.personnel.values[0].value++,m=>m.personnel.growth.fromYear++,m=>m.revenue.growth.elapsedYears++,m=>m.revenue.growth.status='unknown-endpoint',m=>m.revenue.values[0].value=0]){const actual=clone(expected);mutate(actual);assert.throws(()=>assertDevelopmentModel(actual,expected));}
+ const zero=developmentScrollModel(variants().find(c=>c.id==='all-zero').input),fakeRate=clone(zero);fakeRate.personnel.growth.rate=0;assert.throws(()=>assertDevelopmentModel(fakeRate,zero));
+ for(const id of ['constant-positive','end-zero']){const exact=developmentScrollModel(variants().find(c=>c.id===id).input),changed=clone(exact);changed.personnel.growth.rate+=Number.EPSILON;assert.throws(()=>assertDevelopmentModel(changed,exact));}
+});
 function assertGeometry(g,input){
- const m=developmentScrollModel(input);assert.deepEqual(g.development,m);assert.equal(g.compositionReference,'195-decade-scroll');assert.equal(Object.hasOwn(g,'sourceCase'),false);assert.equal(g.personnelDomain[0],0);assert.equal(g.revenueDomain[0],0);
+ const m=developmentScrollModel(input);assertDevelopmentModel(g.development,m);assert.equal(g.compositionReference,'195-decade-scroll');assert.equal(Object.hasOwn(g,'sourceCase'),false);assert.equal(g.personnelDomain[0],0);assert.equal(g.revenueDomain[0],0);
  for(const key of ['personnel','revenue']){const data=key==='personnel'?g.peoplePoints:g.revenueBars;assert.equal(data.length,m.years.length);for(const [i,p]of data.entries()){assert.equal(p.value,m[key].values[i].value);const x0=data[0].x,x1=data.at(-1).x;assert(Math.abs((p.x-x0)/(x1-x0)-(p.year-m.yearDomain[0])/(m.yearDomain[1]-m.yearDomain[0]))<1e-10);if(key==='revenue'){assert(p.value===null?p.height===null:Math.abs(p.y+p.height-g.baselines.revenue)<1e-8);if(p.value===0)assert.equal(p.height,0);}else assert.equal(p.value===null,p.y===null);}}
  assert.deepEqual(g.segments.map(s=>[s.fromYear,s.toYear]),m.years.slice(1).flatMap((r,i)=>m.personnel.values[i].value!==null&&m.personnel.values[i+1].value!==null?[[m.years[i].year,r.year]]:[]));
 }
