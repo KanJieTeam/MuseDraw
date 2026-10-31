@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.40
+  instructions-version: musecore-2026-10-31.41
 ---
 
 # MuseDraw
@@ -101,6 +101,7 @@ family's encodings, coordinated geometry and placement.
 | Compare exact daily UTC gaps and overlaps from supplied local shifts and fixed offsets | [Support relay](references/musecore-support-relay.md) |
 | Conditional stationary waiting-queue service targets and integer staffing from supplied assumptions | [Erlang staffing](references/musecore-erlang-staffing.md) |
 | Compute serial custom breaker admission, threshold checks and ordered request-state transitions | [Breaker teaching replay](references/musecore-breaker-replay.md) |
+| Replay explicit CPU demand with replica feedback and declared synchronous teaching-policy limits | [CPU teaching replay](references/musecore-autoscale-replay.md) |
 | Equal-time ideal orbits and geometrically consistent lunar illumination | [Sky geometry](references/musecore-sky-geometry.md) |
 | Categorical series, observed samples, means and explicit thresholds | [Small-sample evidence](references/musecore-small-samples.md) |
 | Ideal fixed-resistance circuits and complete given horizontal forces | [Circuits and force](references/musecore-circuit-force.md) |

@@ -795,7 +795,14 @@ class GalleryTests(unittest.TestCase):
                                  'references/musecore-breaker-replay.md',
                                  'tests/musecore/breaker-source.test.mjs',
                                  'tests/musecore/runoff-layout.test.mjs',
-                                 'tests/musecore/solids-layout.test.mjs'):
+                                 'tests/musecore/solids-layout.test.mjs',
+                                 'scripts/musecore/autoscale-models.mjs',
+                                 'scripts/musecore/autoscale-figures.mjs',
+                                 'assets/musecore/hpa-cpu-teaching-replay.json',
+                                 'references/musecore-autoscale-replay.md',
+                                 'tests/musecore/autoscale-source.test.mjs',
+                                 'tests/musecore/lens-layout.test.mjs',
+                                 'tests/musecore/priority-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

@@ -382,13 +382,7 @@
       "id": "formula",
       "family": "formula",
       "file": "formula.json",
-      "contentStatus": "simulated development input; no real timezone or capacity recommendation",
-      "sourceCases": [
-        {
-          "id": "103-hpa-autoscaling",
-          "sourceSha256": "179638b09100d67ba0f21764f0fb6f6076f321475a2adf60e4fbbc0becec7da8"
-        }
-      ]
+      "contentStatus": "Fictional workplace-capacity arithmetic scenarios with independent overrides; not a real staffing recommendation or an infrastructure autoscaling controller."
     },
     {
       "id": "states",
@@ -2267,6 +2261,18 @@
           "sourceSha256": "57d3e52dc63964e3145802790ed6feaa4ad5918b6b6b44d180f136c1621ac792"
         }
       ]
+    },
+    {
+      "id": "hpa-cpu-teaching-replay",
+      "family": "cpu-sequence-replay",
+      "file": "hpa-cpu-teaching-replay.json",
+      "contentStatus": "Explicitly synthetic 31-point CPU-demand teaching sequence with parameters and one arithmetic example informed by source103. Applied counts feed the next evaluation under declared complete metrics, ready replicas, empty history and per-evaluation rate conventions. The undistributed source24h input, peak and17/17 events are not reproduced; not a full Kubernetes controller or live-cluster forecast.",
+      "sourceCases": [
+        {
+          "id": "103-hpa-autoscaling",
+          "sourceSha256": "179638b09100d67ba0f21764f0fb6f6076f321475a2adf60e4fbbc0becec7da8"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -2833,6 +2839,12 @@
       "reference": "references/musecore-breaker-replay.md",
       "ids": [
         "circuit-breaker-replay"
+      ]
+    },
+    {
+      "reference": "references/musecore-autoscale-replay.md",
+      "ids": [
+        "cpu-sequence-replay"
       ]
     }
   ]

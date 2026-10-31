@@ -1,0 +1,153 @@
+{
+  "family": "cpu-sequence-replay",
+  "title": "CPU 需求与副本数逐次联动",
+  "subtitle": "合成教学场景 · 固定间隔 CPU 采样",
+  "dataStatus": "synthetic-teaching",
+  "assumptions": {
+    "allReplicasReady": true,
+    "metricsComplete": true,
+    "uniformDistribution": true
+  },
+  "initialReplicas": 4,
+  "requestCores": 1,
+  "targetUtilization": 0.6,
+  "tolerance": 0.1,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "evaluationSeconds": 15,
+  "downscaleWindowSeconds": 300,
+  "scaleUp": {
+    "maxPercentIncrease": 100,
+    "maxPodsIncrease": 4
+  },
+  "scaleDown": {
+    "maxPercentDecrease": 100
+  },
+  "samples": [
+    {
+      "atSeconds": 0,
+      "cpuCores": 3.6
+    },
+    {
+      "atSeconds": 15,
+      "cpuCores": 3.6
+    },
+    {
+      "atSeconds": 30,
+      "cpuCores": 9
+    },
+    {
+      "atSeconds": 45,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 60,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 75,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 90,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 105,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 120,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 135,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 150,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 165,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 180,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 195,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 210,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 225,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 240,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 255,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 270,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 285,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 300,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 315,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 330,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 345,
+      "cpuCores": 1.2
+    },
+    {
+      "atSeconds": 360,
+      "cpuCores": 1.32
+    },
+    {
+      "atSeconds": 375,
+      "cpuCores": 1.321
+    },
+    {
+      "atSeconds": 390,
+      "cpuCores": 0
+    },
+    {
+      "atSeconds": 405,
+      "cpuCores": 9
+    },
+    {
+      "atSeconds": 420,
+      "cpuCores": 9
+    },
+    {
+      "atSeconds": 435,
+      "cpuCores": 0
+    },
+    {
+      "atSeconds": 450,
+      "cpuCores": 1.2
+    }
+  ],
+  "note": "合成教学数据，仅解释给定规则下的反馈，不是实际集群记录或配置建议。"
+}
