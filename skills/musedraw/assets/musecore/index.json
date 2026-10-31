@@ -214,7 +214,13 @@
       "id": "cohort",
       "family": "cohort",
       "file": "cohort.json",
-      "contentStatus": "fictional development data; no operational, scientific or causal claim",
+      "contentStatus": "fictional development data; no operational, scientific or causal claim"
+    },
+    {
+      "id": "cohort-equal-summary",
+      "file": "cohort-equal-summary.json",
+      "family": "cohort",
+      "contentStatus": "Explicit synthetic retained-user counts with declared equal-cohort aggregation and minimum cohort support; not reconstruction of source rounded percentages or causal evidence.",
       "sourceCases": [
         {
           "id": "183-cohort-retention",

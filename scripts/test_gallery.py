@@ -836,7 +836,13 @@ class GalleryTests(unittest.TestCase):
                                  'tests/musecore/histogram-binned.test.mjs',
                                  'references/musecore-histogram-binned-source.md',
                                  'scripts/musecore/hash-modulo-models.mjs',
-                                 'scripts/musecore/histogram-binned-models.mjs'):
+                                 'scripts/musecore/histogram-binned-models.mjs',
+                                 'scripts/musecore/cohort-summary-models.mjs',
+                                 'assets/musecore/cohort-equal-summary.json',
+                                 'tests/musecore/cohort-summary.test.mjs',
+                                 'references/musecore-cohort-summary.md',
+                                 'tests/musecore/survey-count-bounds.test.mjs',
+                                 'tests/musecore/meeting-ranking-layout.test.mjs'):
                     self.assertIn("musedraw/" + required, names)
                 for relative in (
                     "assets/style-kits/marks.mjs",

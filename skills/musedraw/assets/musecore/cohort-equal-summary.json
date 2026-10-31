@@ -1,0 +1,278 @@
+{
+  "family": "cohort",
+  "title": "客户留存",
+  "subtitle": "合成教学人数 · 同一成熟期的等权队列均值",
+  "periods": [
+    "M0",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M10",
+    "M11"
+  ],
+  "groups": [
+    {
+      "id": "early",
+      "label": "较早队列"
+    },
+    {
+      "id": "recent",
+      "label": "较新队列"
+    }
+  ],
+  "focusPeriod": 3,
+  "cohorts": [
+    {
+      "id": "cohort0",
+      "label": "合成队列 1",
+      "size": 180,
+      "group": "early",
+      "counts": [
+        180,
+        133,
+        100,
+        79,
+        66,
+        57,
+        52,
+        48,
+        46,
+        45,
+        43,
+        41
+      ]
+    },
+    {
+      "id": "cohort1",
+      "label": "合成队列 2",
+      "size": 260,
+      "group": "early",
+      "counts": [
+        260,
+        195,
+        148,
+        117,
+        98,
+        85,
+        78,
+        72,
+        70,
+        67,
+        65,
+        null
+      ]
+    },
+    {
+      "id": "cohort2",
+      "label": "合成队列 3",
+      "size": 220,
+      "group": "early",
+      "counts": [
+        220,
+        167,
+        127,
+        101,
+        85,
+        74,
+        68,
+        63,
+        61,
+        59,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort3",
+      "label": "合成队列 4",
+      "size": 350,
+      "group": "early",
+      "counts": [
+        350,
+        259,
+        196,
+        154,
+        129,
+        112,
+        101,
+        94,
+        91,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort4",
+      "label": "合成队列 5",
+      "size": 300,
+      "group": "early",
+      "counts": [
+        300,
+        225,
+        171,
+        135,
+        114,
+        99,
+        90,
+        84,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort5",
+      "label": "合成队列 6",
+      "size": 210,
+      "group": "recent",
+      "counts": [
+        210,
+        180,
+        155,
+        134,
+        121,
+        111,
+        105,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort6",
+      "label": "合成队列 7",
+      "size": 280,
+      "group": "recent",
+      "counts": [
+        280,
+        235,
+        201,
+        173,
+        156,
+        142,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort7",
+      "label": "合成队列 8",
+      "size": 400,
+      "group": "recent",
+      "counts": [
+        400,
+        340,
+        292,
+        252,
+        228,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort8",
+      "label": "合成队列 9",
+      "size": 320,
+      "group": "recent",
+      "counts": [
+        320,
+        275,
+        236,
+        204,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort9",
+      "label": "合成队列 10",
+      "size": 450,
+      "group": "recent",
+      "counts": [
+        450,
+        378,
+        324,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort10",
+      "label": "合成队列 11",
+      "size": 360,
+      "group": "recent",
+      "counts": [
+        360,
+        306,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "cohort11",
+      "label": "合成队列 12",
+      "size": 240,
+      "group": "recent",
+      "counts": [
+        240,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "retentionSummary": {
+    "aggregation": "equal-cohort",
+    "minimumCohorts": 2,
+    "note": "各队列等权；每期至少2个已观察队列才显示均值。参与队列随成熟期变化，曲线不是固定同一批队列的连续追踪。"
+  },
+  "note": "合成教学人数与留存计数，非真实客户记录。—为尚未观察，n为该期已观察队列数；本图不作显著性或因果判断。"
+}
