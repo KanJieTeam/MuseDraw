@@ -2603,6 +2603,13 @@
       "file": "decision-tree-demo.json",
       "family": "decision-tree",
       "contentStatus": "Original fictional decision rules with explicit branches; no probability, confidence, ownership or recommendation inferred."
+    },
+    {
+      "id": "volcano-plot-demo",
+      "file": "volcano-plot-demo.json",
+      "family": "volcano-plot",
+      "contentStatus": "original synthetic teaching data; p-values and effects are supplied inputs, not experimental conclusions",
+      "reference": "references/musecore-volcano-plot.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
