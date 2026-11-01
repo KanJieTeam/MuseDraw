@@ -70,6 +70,6 @@ means, including units or a legend when needed. Do not infer that meaning from
 a decorative preview. Likewise, a pale theme still needs text contrast; changing
 a dark screen to pastel does not by itself improve its information hierarchy.
 
-Study source: [EasyV public marketplace](https://easyv.cloud/market). Its previews
+Study source: public dashboard examples. Its previews
 are reference material, not reusable production facts or a guarantee of quality.
 Further per-case visual records and user review must test these decisions.

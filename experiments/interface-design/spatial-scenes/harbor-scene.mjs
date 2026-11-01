@@ -324,7 +324,7 @@ export function buildScene(stage) {
     recommendedCamera:[30,85,125],recommendedTarget:[0,2.5,-1.0],recommendedSpan:81,
     meta:{
       title:'海岚港 · 连续岸线夜航作业区',original:true,externalAssets:false,
-      referencesViewed:['outputs/design-library/assets/collected/N11444-fdc70cc7164ebf08d3dd.jpg','outputs/easyv-originals-20261025/harbor/large.png'],
+      referencesViewed:['outputs/design-library/assets/collected/N11444-fdc70cc7164ebf08d3dd.jpg'],
       composition:'原创连续岸线；后方堆场与仓库、9台岸桥和3艘不同尺度的集装箱船；前方水域约占平面28%。非参考截图的布局或模型复刻。',
       geometry:'曲面挤出船体、叠层船桥、真实箱体棱与波纹、桁架吊臂/拉索/吊具、门架轮组/阶梯、龙门吊、集卡与小灯具；重复构件采用InstancedMesh。',
       entities:['B01','B02','B03'],containerModelCount:containerCount,

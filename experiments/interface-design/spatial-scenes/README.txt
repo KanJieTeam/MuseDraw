@@ -29,7 +29,7 @@ Production procedure:
 Evidence: two original themes, four viewports, two cameras, 64 object/camera checks. Independent image review records local improvement in object recognizability and depth; it does not establish top-level taste across all tasks.
 The aspect framing constant and finite label candidates were tested only for the two example geometries and three objects. Denser scenes require their own constraints and validation.
 
-All geometry and example business data are original fictitious demonstrations. External EasyV images and models are not included. Three.js is vendored at 0.180.0 under the included MIT license.
+All geometry and example business data are original fictitious demonstrations. External reference images and models are not included. Three.js is vendored at 0.180.0 under the included MIT license.
 No construction, navigation, production-control or regulatory accuracy is asserted by these demonstration models.
 
 Reproduce the browser regression independently:

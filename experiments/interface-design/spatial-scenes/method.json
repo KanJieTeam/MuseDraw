@@ -2,9 +2,9 @@
   "createdAt": "2026-10-25T06:36:13.009692+00:00",
   "status": "experimental; local spatial dashboard capability, not globally proven taste",
   "evidenceSources": [
-    "EasyV D00429 港口货运监管可视化",
-    "EasyV D00437 农业数智化管控系统",
-    "EasyV D00127 智能工业生产质量监测(浅色)"
+    "spatial dashboard case A",
+    "spatial dashboard case B",
+    "comparison dashboard case C"
   ],
   "decisionToCode": [
     {
@@ -90,7 +90,7 @@
   "scope": [
     "Only use scene-led rendering when spatial relationships help the task. It is not the default for statistical or workflow dashboards.",
     "Native text, charts and operational values are separate from the 3D scene.",
-    "No external artwork or original EasyV models copied.",
+    "No external artwork or original models copied.",
     "Three.js 0.180.0 is pinned locally with MIT license."
   ],
   "validation": "regression.json",

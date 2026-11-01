@@ -53,7 +53,7 @@ wins. Their presence does not establish that the study targets have been met.
 
 ## Current source boundaries
 
-- [EasyV public marketplace](https://easyv.cloud/market): public template metadata
+- Public dashboard examples: public template metadata
   and previews are available. One verified partition reported 884 entries; that
   does not establish a 10,000-item corpus.
 - [v0 templates](https://v0.app/templates): public case-level `uses` and

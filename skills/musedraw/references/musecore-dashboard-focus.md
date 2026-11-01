@@ -1,6 +1,6 @@
 # MuseCore dashboard-focus
 
-`dashboard-focus` is a bounded EasyV-style operational dashboard composition. It routes one operational question to one hero relation, then places named evidence panels and a bounded metric strip.
+`dashboard-focus` is a bounded operational-dashboard operational dashboard composition. It routes one operational question to one hero relation, then places named evidence panels and a bounded metric strip.
 
 ## Routes
 
