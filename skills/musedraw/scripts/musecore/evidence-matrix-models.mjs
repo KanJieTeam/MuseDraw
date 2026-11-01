@@ -15,7 +15,8 @@ export function evidenceMatrixModel(b){
  const rows=b.rows.map((r,ri)=>{need(r&&typeof r==='object'&&!Array.isArray(r),'row must be object');need(!rowIds.has(r.id),'duplicate row id');rowIds.add(r.id);text(r.id,`rows[${ri}].id`,32);text(r.label,`rows[${ri}].label`,42);need(Array.isArray(r.values)&&r.values.length===columns.length,`rows[${ri}].values must match columns`);const values=r.values.map((v,ci)=>{need(v&&typeof v==='object'&&!Array.isArray(v),'cell must be object');need(statusSet.has(v.status),`rows[${ri}].values[${ci}].status unsupported`);if(v.note!==undefined)text(v.note,`rows[${ri}].values[${ci}].note`,48);return {status:v.status,note:v.note??null}});return {id:r.id,label:r.label,values}});
  const legend=b.legend??[{status:'confirmed',label:'已确认'},{status:'partial',label:'部分证据'},{status:'missing',label:'未提供'},{status:'blocked',label:'待处理'},{status:'not-applicable',label:'不适用'}];
  need(Array.isArray(legend)&&legend.length===5,'legend requires five statuses');
- for(const [i,l] of legend.entries()){need(l&&statusSet.has(l.status),`legend[${i}] status invalid`);text(l.label,`legend[${i}].label`,18)}
+ const legendIds=new Set();
+ for(const [i,l] of legend.entries()){need(l&&statusSet.has(l.status),`legend[${i}] status invalid`);need(!legendIds.has(l.status),`legend duplicate status: ${l.status}`);legendIds.add(l.status);text(l.label,`legend[${i}].label`,18)}
  return {family:b.family,title:b.title,subtitle:b.subtitle,dataStatus:b.dataStatus,note:b.note,columns,rows,legend};
 }
 
