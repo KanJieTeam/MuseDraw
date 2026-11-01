@@ -1,0 +1,13 @@
+{
+  "family":"survival-curve",
+  "title":"两种处理的时间到事件曲线",
+  "subtitle":"显式记录事件与右删失；阶梯高度只由每个时间点仍在观察的记录计算",
+  "unit":"观察时间（周）",
+  "dataStatus":"合成教学记录；仅展示给定队列，不代表总体效果",
+  "groups":[
+    {"id":"baseline","label":"基线方案","records":[{"time":2,"event":true},{"time":3,"event":false},{"time":4,"event":true},{"time":5,"event":false},{"time":6,"event":true},{"time":7,"event":true},{"time":8,"event":false},{"time":10,"event":true},{"time":11,"event":false},{"time":13,"event":true}]},
+    {"id":"adapted","label":"调整方案","records":[{"time":3,"event":false},{"time":5,"event":true},{"time":6,"event":false},{"time":7,"event":true},{"time":9,"event":false},{"time":10,"event":true},{"time":12,"event":false},{"time":14,"event":true},{"time":15,"event":false},{"time":16,"event":true}]},
+    {"id":"delayed","label":"延后方案","records":[{"time":2,"event":false},{"time":4,"event":false},{"time":6,"event":true},{"time":7,"event":false},{"time":8,"event":true},{"time":9,"event":false},{"time":11,"event":true},{"time":12,"event":false},{"time":14,"event":true},{"time":15,"event":false}]}
+  ],
+  "note":"阶梯下降表示发生事件；叉号表示到该时间点仍未发生事件而结束观察（右删失）。未提供置信区间、风险比或因果解释。"
+}
