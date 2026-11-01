@@ -2590,6 +2590,19 @@
       "family": "risk-matrix",
       "contentStatus": "original fictional demonstration; not a measured assessment or universal policy",
       "reference": "references/musecore-risk-matrix.md"
+    },
+    {
+      "id": "survival-curve-demo",
+      "file": "survival-curve-demo.json",
+      "family": "survival-curve",
+      "contentStatus": "Original synthetic teaching records with explicit right-censoring; no population, causal, confidence-interval or hazard claim.",
+      "reference": "references/musecore-survival-curve.md"
+    },
+    {
+      "id": "decision-tree-demo",
+      "file": "decision-tree-demo.json",
+      "family": "decision-tree",
+      "contentStatus": "Original fictional decision rules with explicit branches; no probability, confidence, ownership or recommendation inferred."
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
