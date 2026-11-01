@@ -284,5 +284,5 @@ export const MuseCore=(()=>{
  families.report=report;
  async function prepare(input){if(input?.family==='river-run-poster'){riverRunPosterModel(input);await riverRunFontReady()}}
  function render(input){need(input&&Object.hasOwn(families,input.family),'unsupported family');return families[input.family](input)}
- return {render,prepare,audit,width,families:Object.keys(families)};
+ return {render,renderResponsive(input,viewport){need(input?.family==='dashboard-focus','responsive rendering currently supports dashboard-focus only');return dashboardFocusResponsiveFigure(input,viewport)},prepare,audit,width,families:Object.keys(families)};
 })();
