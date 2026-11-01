@@ -22,6 +22,9 @@ test('dashboard focus accepts four operational routes and records three viewport
    assert.equal(result.error,null);assert.deepEqual(result.audit.findings,[]);assert.equal(result.audit.geometry.viewports.join(','),'390,1024,1440');assert(result.svg.includes('data-hero'));assert(result.svg.length>2000);
    for(const width of [390,1024,1440]){await page.setViewportSize({width,height:900});await page.screenshot({fullPage:true});}
  }
+  const stress=await browser.newPage({viewport:{width:390,height:900}});await stress.setContent(await editorHtml(base));await stress.waitForFunction(()=>window.MUSECORE_READY===true);
+  const tall=await stress.evaluate(()=>{const old=CanvasRenderingContext2D.prototype.measureText;CanvasRenderingContext2D.prototype.measureText=function(value){const m=old.call(this,value);return new Proxy(m,{get(target,key){return key==='fontBoundingBoxAscent'?(target.fontBoundingBoxAscent??20)+40:Reflect.get(target,key,target)}})};try{const svg=MuseCore.renderResponsive(JSON.parse(document.getElementById('input').value),390);document.getElementById('output').replaceChildren(svg);return {audit:MuseCore.audit(svg),geometry:JSON.parse(svg.dataset.geometry)}}finally{CanvasRenderingContext2D.prototype.measureText=old}});
+  assert.deepEqual(tall.audit.findings,[]);assert.equal(tall.geometry.viewport,390);await stress.close();
  }finally{await browser.close()}
 });
 

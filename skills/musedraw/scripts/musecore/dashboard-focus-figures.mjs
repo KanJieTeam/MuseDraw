@@ -40,7 +40,11 @@ export function dashboardFocusResponsiveFigure(input, viewport=390){
  draw(margin,titleY,title);draw(margin,freshY,fresh,{fill:muted});stroke(svg,[[margin,ruleY],[W-margin,ruleY]],line,1);
  const heroH=narrow?Math.max(250,m.hero.kind==='inventory'?Math.ceil(m.hero.assets.length/3)*62+78:250):Math.max(330,m.hero.kind==='inventory'?Math.ceil(m.hero.assets.length/4)*76+78:330),hero={x:margin,y:ruleY+16,w:W-margin*2,h:heroH};
  const supportHeights=m.support.map(p=>p.rows?Math.max(narrow?82:96,52+p.rows.length*(narrow?20:22)):narrow?92:112),supportH=supportHeights.reduce((a,b)=>a+b,0)+gap*Math.max(0,m.support.length-1)+42,side={x:margin,y:hero.y+hero.h+gap,w:W-margin*2,h:supportH};
- const metricCols=narrow?2:Math.min(4,m.summary.length),metricRows=Math.ceil(m.summary.length/metricCols),metricW=(W-margin*2-gap*(metricCols-1))/metricCols,metricH=narrow?82:92,metricY=side.y+side.h+gap,H=metricY+metricRows*metricH+gap*(metricRows-1)+margin;
+ // Keep a real lower reserve for CJK ascent/descent differences.  This is
+ // intentionally generous: a browser/font fallback may report a much taller
+ // box than the nominal CSS size, and the layout must grow instead of clipping
+ // the last metric label at the bottom edge.
+ const metricCols=narrow?2:Math.min(4,m.summary.length),metricRows=Math.ceil(m.summary.length/metricCols),metricW=(W-margin*2-gap*(metricCols-1))/metricCols,metricH=narrow?130:140,metricY=side.y+side.h+gap,H=metricY+metricRows*metricH+gap*(metricRows-1)+margin;
  svg.setAttribute('height',H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.firstChild.setAttribute('height',H);
  el('rect',{x:hero.x,y:hero.y,width:hero.w,height:hero.h,rx:10,fill:'#102936',stroke:line,'stroke-width':1,'data-hero':'true','data-responsive-region':'hero'},svg);
  draw(hero.x+16,hero.y+26,plan(`主视图 · ${m.heroRelation}`,hero.w-32,narrow?15:17,700,1),{fill:amber});
