@@ -1,0 +1,12 @@
+{
+  "family":"volcano-plot",
+  "title":"处理差异的效应量与证据强度",
+  "subtitle":"每个点是一项预先登记的比较；虚线只标出本页声明的筛选阈值",
+  "xLabel":"效应量（对数比例）",
+  "yLabel":"−log10（p 值）",
+  "thresholdP":0.01,
+  "thresholdEffect":1.2,
+  "dataStatus":"合成教学数据；p 值与效应量为输入示例，不代表真实实验结论",
+  "points":[{"id":"g01","label":"转录因子 A","effect":2.1,"pValue":0.0004,"group":"上调"},{"id":"g02","label":"代谢通路 B","effect":-1.8,"pValue":0.0012,"group":"下调"},{"id":"g03","label":"应激响应 C","effect":1.4,"pValue":0.006,"group":"上调"},{"id":"g04","label":"膜蛋白 D","effect":-1.25,"pValue":0.009,"group":"下调"},{"id":"g05","effect":0.8,"pValue":0.0002},{"id":"g06","effect":-0.7,"pValue":0.0008},{"id":"g07","effect":2.8,"pValue":0.08},{"id":"g08","effect":-2.2,"pValue":0.06},{"id":"g09","effect":0.25,"pValue":0.32},{"id":"g10","effect":-0.4,"pValue":0.21},{"id":"g11","effect":1.05,"pValue":0.02},{"id":"g12","effect":-1.1,"pValue":0.014},{"id":"g13","effect":0.55,"pValue":0.11},{"id":"g14","effect":-0.65,"pValue":0.15},{"id":"g15","effect":1.7,"pValue":0.018},{"id":"g16","effect":-1.45,"pValue":0.025}],
+  "note":"阈值由输入明确给出；达到筛选线不等于效应具有实际意义。请在正文中说明多重比较、效应量不确定性和研究设计。"
+}
