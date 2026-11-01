@@ -19,3 +19,4 @@ export function evidenceMatrixModel(b){
  return {family:b.family,title:b.title,subtitle:b.subtitle,dataStatus:b.dataStatus,note:b.note,columns,rows,legend};
 }
 
+
