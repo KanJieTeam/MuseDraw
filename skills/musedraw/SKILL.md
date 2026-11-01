@@ -92,6 +92,7 @@ family's encodings, coordinated geometry and placement.
 | Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |
 | Same-substrate condition and state comparisons with an explicit baseline | [Condition comparison](references/musecore-condition-comparison.md) |
 | Bounded likelihood × impact risk registers with declared response status | [Risk matrix](references/musecore-risk-matrix.md) |
+| Explicit evidence status across candidate objects and criteria | [Evidence matrix](references/musecore-evidence-matrix.md) |
 | Explicit 2D apparatus layouts with separated measurement/control/reference paths and traced readings | [Device measurement](references/musecore-device-measurement.md) |
 | Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |
@@ -317,3 +318,4 @@ node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --st
 Use `--lang en` for English. Read the scene workflow's runtime section only if
 preparation is needed; the starter does not require schema, theme or gallery
 research before its first render.
+

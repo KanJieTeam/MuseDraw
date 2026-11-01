@@ -1,0 +1,26 @@
+{
+  "family": "evidence-matrix",
+  "title": "研究方案核验矩阵",
+  "subtitle": "三种候选方案按同一组证据要求核对",
+  "dataStatus": "虚构办公示例；状态只复述输入声明",
+  "columns": [
+    {"id":"alpha","label":"方案甲"},
+    {"id":"beta","label":"方案乙"},
+    {"id":"gamma","label":"方案丙"}
+  ],
+  "rows": [
+    {"id":"scope","label":"范围与对象已界定","values":[{"status":"confirmed","note":"边界已给定"},{"status":"partial","note":"仍缺一项"},{"status":"blocked","note":"待补资料"}]},
+    {"id":"method","label":"方法与步骤可追溯","values":[{"status":"partial"},{"status":"confirmed","note":"步骤有记录"},{"status":"missing","note":"未提供"}]},
+    {"id":"measure","label":"指标与核验方式明确","values":[{"status":"confirmed"},{"status":"partial"},{"status":"confirmed","note":"按输入核验"}]},
+    {"id":"handoff","label":"交付与责任边界清楚","values":[{"status":"not-applicable"},{"status":"confirmed"},{"status":"partial","note":"责任人待定"}]},
+    {"id":"risk","label":"限制与待处理事项已登记","values":[{"status":"partial"},{"status":"blocked","note":"风险条件未闭合"},{"status":"missing"}]}
+  ],
+  "legend": [
+    {"status":"confirmed","label":"已确认"},
+    {"status":"partial","label":"部分证据"},
+    {"status":"missing","label":"未提供"},
+    {"status":"blocked","label":"待处理"},
+    {"status":"not-applicable","label":"不适用"}
+  ],
+  "note": "矩阵不计算总分，也不替代评审；每个符号只表示输入中声明的证据状态。"
+}
