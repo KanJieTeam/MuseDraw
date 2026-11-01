@@ -6,7 +6,7 @@
 
 - `categories` 是所有面板共用的离散顺序，3–12 项；
 - `groups` 是跨面板稳定的身份编码，颜色只承载组身份；
-- 每面板必须声明且只声明一个角色：`overview`、`comparison`、`detail`；
+- 每面板必须声明且只声明一个角色：`overview`、`comparison`、`detail`；需要四面板时增加唯一的 `validation` 角色，自动改为 2×2 排布；
 - 每面板必须声明 `sampleDefinition` 与 `sourceIds`；每个来源 ID 必须在 `sources` 中存在；
 - 所有数值来自调用者，所有面板共用从 0 开始的线性纵轴；误差只接受同长度的 `low` / `high`，不会被解释为置信区间；
 - 画面在总览、比较、细节之间保持共同类别、组身份和尺度；细节不能偷偷换标尺。

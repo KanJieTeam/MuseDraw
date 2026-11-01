@@ -18,7 +18,7 @@ export function evidenceChainModel(input){
  need(Array.isArray(input.panels)&&input.panels.length>=3&&input.panels.length<=4,'panels requires 3–4 evidence panels');
  const pids=new Set(),roles=new Set();
  const panels=input.panels.map((p,pi)=>{
-  own(p,['id','role','title','sampleDefinition','sourceIds','series','note'],'panel');id(p.id,`panels[${pi}].id`);text(p.title,`panels[${pi}].title`,100);text(p.sampleDefinition,`panels[${pi}].sampleDefinition`,180);need(['overview','comparison','detail'].includes(p.role),`panels[${pi}].role must be overview, comparison or detail`);need(!pids.has(p.id),'duplicate panel id');pids.add(p.id);need(!roles.has(p.role),`panel role ${p.role} must appear once`);roles.add(p.role);
+  own(p,['id','role','title','sampleDefinition','sourceIds','series','note'],'panel');id(p.id,`panels[${pi}].id`);text(p.title,`panels[${pi}].title`,100);text(p.sampleDefinition,`panels[${pi}].sampleDefinition`,180);need(['overview','comparison','detail','validation'].includes(p.role),`panels[${pi}].role must be overview, comparison or detail`);need(!pids.has(p.id),'duplicate panel id');pids.add(p.id);need(!roles.has(p.role),`panel role ${p.role} must appear once`);roles.add(p.role);
   need(Array.isArray(p.sourceIds)&&p.sourceIds.length>=1&&p.sourceIds.length<=8,`panels[${pi}].sourceIds required`);for(const sid of p.sourceIds){id(sid,`panels[${pi}].sourceIds`);need(sids.has(sid),`panels[${pi}]: unknown source ${sid}`)}
   if(p.note!==undefined)text(p.note,`panels[${pi}].note`,220);
   need(Array.isArray(p.series)&&p.series.length>=1&&p.series.length<=gids.size,`panels[${pi}].series requires 1–${gids.size}`);
@@ -43,7 +43,7 @@ export function evidenceChainModel(input){
   });
   return {...p,series};
  });
- need(roles.has('overview')&&roles.has('comparison')&&roles.has('detail'),'panels must include overview, comparison and detail roles');
+ need(roles.has('overview')&&roles.has('comparison')&&roles.has('detail'),'panels must include overview, comparison and detail roles');need(input.panels.length===3||roles.has('validation'),'4 panels require validation role');
  const all=panels.flatMap(p=>p.series.flatMap(s=>s.uncertainty?[...s.uncertainty.low,...s.uncertainty.high]:s.values));
  const max=Math.max(...all,0);need(max>0,'at least one positive observation required');
  return {family:input.family,title:input.title,subtitle:input.subtitle,note:input.note,unit:input.unit,evidenceKind:input.evidenceKind,categories:[...input.categories],groups:input.groups.map(g=>({...g})),sources:input.sources.map(s=>({...s})),panels,sharedDomain:[0,max],scope:'Three-role evidence chain: shared categories, group identity and zero-based linear scale. Values and uncertainty are supplied; no statistical inference, normalization or source-image reconstruction.',traceability:{panelSources:panels.map(p=>({panelId:p.id,sourceIds:[...p.sourceIds]}))}};
