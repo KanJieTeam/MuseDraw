@@ -38,6 +38,8 @@ test('dashboard focus refuses five unsafe contract boundaries',async()=>{
   [x=>{x.claims={realtime:true};x.freshness='';},/freshness/],
   [x=>{x.claims={realtime:true,mode:'snapshot',source:'file.csv'}},/live mode/],
   [x=>{x.claims={realtime:true,mode:'live',source:''}},/realtime source/],
+  [x=>{x.support[0].bindsTo[1]='UNKNOWN'},/does not match a hero point/],
+  [x=>{x.support[0].bindsTo=x.support[0].bindsTo.slice(0,2)},/bindsTo must align/],
   [x=>{x.heroRelation='comparison';x.operationalQuestion='comparison';x.hero={kind:'map',points:[]}},/comparison hero requires/],
  ];
  for(const [change,re] of invalid){const input=structuredClone(base);change(input);assert.throws(()=>dashboardFocusModel(input),re)}
