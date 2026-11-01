@@ -15,7 +15,7 @@ function variants(base){
  return [base,process,comparison,trend,inventory];
 }
 
-test('dashboard focus accepts four operational routes and records three viewport targets',async()=>{
+test('dashboard focus accepts five operational routes and records three viewport targets',async()=>{
  const base=await fixture();for(const input of variants(base)){const model=dashboardFocusModel(input);assert.deepEqual(model.summary.map(x=>x.unit).length,input.summary.length);assert.deepEqual(model.scope.includes('freshness'),true);assert.deepEqual(model.heroRelation,input.heroRelation)}
  const html=await editorHtml(base),{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
  try{const page=await browser.newPage({viewport:{width:1440,height:900}});await page.setContent(html);await page.waitForFunction(()=>window.MUSECORE_READY===true);for(const input of variants(base)){

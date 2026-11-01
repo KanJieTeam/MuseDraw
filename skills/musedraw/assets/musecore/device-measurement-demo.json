@@ -12,7 +12,8 @@
   ],
   "paths": [
     {"from":"source","to":"sample","kind":"control","source":"Fig. 3b excitation path"},
-    {"from":"sample","to":"detector","kind":"measurement","source":"Fig. 3b measurement response"},
+    {"from":"sample","to":"sensor","kind":"measurement","source":"Fig. 3b sample-to-sensing path"},
+    {"from":"sensor","to":"detector","kind":"measurement","source":"Fig. 3b measurement response"},
     {"from":"controller","to":"sample","kind":"control","source":"Fig. 3c control loop"},
     {"from":"detector","to":"controller","kind":"reference","source":"Fig. 3c feedback reference"}
   ],
@@ -22,3 +23,4 @@
   ],
   "note": "示意图只使用提供的二维位置；未提供尺寸、波长或比例时不补画精确物理量。"
 }
+
