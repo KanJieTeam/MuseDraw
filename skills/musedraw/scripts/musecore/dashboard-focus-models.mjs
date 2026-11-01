@@ -9,8 +9,8 @@ export function dashboardFocusModel(input){
  dfNeed(input.family==='dashboard-focus','dashboard-focus family required');
  const questions=['incident','capacity','comparison','trend','inventory'];
  const relations=['spatial','process','comparison','trend','inventory'];
- dfNeed(questions.includes(input.operationalQuestion),'unsupported operationalQuestion; choose incident, capacity, comparison or inventory');
- dfNeed(relations.includes(input.heroRelation),'unsupported heroRelation; choose spatial, process, comparison or inventory');
+ dfNeed(questions.includes(input.operationalQuestion),'unsupported operationalQuestion; choose incident, capacity, comparison, trend or inventory');
+ dfNeed(relations.includes(input.heroRelation),'unsupported heroRelation; choose spatial, process, comparison, trend or inventory');
  dfNeed(input.heroRelation!=='comparison'||input.operationalQuestion==='comparison','heroRelation comparison must answer the comparison question');dfNeed(input.heroRelation!=='trend'||input.operationalQuestion==='trend','heroRelation trend must answer the trend question');
  dfText(input.title,'title',120);dfText(input.freshness,'freshness',80);
  dfNeed(Array.isArray(input.summary)&&input.summary.length>=1&&input.summary.length<=4,'summary metrics exceed 4 or are missing');
