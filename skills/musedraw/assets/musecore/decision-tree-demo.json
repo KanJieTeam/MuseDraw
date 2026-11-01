@@ -1,0 +1,24 @@
+{
+  "family": "decision-tree",
+  "title": "样本是否进入下一轮",
+  "subtitle": "把一次判断拆成可追溯的分支，结果停在明确的出口",
+  "question": "按当前记录，是否具备继续验证的条件？",
+  "nodes": [
+    {"id":"root","label":"资料是否完整？","kind":"decision","level":0},
+    {"id":"complete","label":"质量门槛是否达标？","kind":"decision","level":1},
+    {"id":"missing","label":"补齐资料后再审","kind":"outcome","level":1},
+    {"id":"ready","label":"保留为候选","kind":"decision","level":2},
+    {"id":"weak","label":"退回补测","kind":"outcome","level":2},
+    {"id":"approve","label":"进入下一轮验证","kind":"outcome","level":3},
+    {"id":"hold","label":"暂缓，记录原因","kind":"outcome","level":3}
+  ],
+  "edges": [
+    {"from":"root","to":"complete","label":"是"},
+    {"from":"root","to":"missing","label":"否"},
+    {"from":"complete","to":"ready","label":"是"},
+    {"from":"complete","to":"weak","label":"否"},
+    {"from":"ready","to":"approve","label":"条件满足"},
+    {"from":"ready","to":"hold","label":"仍有缺口"}
+  ],
+  "note": "示例只表达给定规则的分支，不代表真实审批标准；每个出口都保留原始判断词。"
+}
