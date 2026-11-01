@@ -1,0 +1,31 @@
+{
+  "family": "evidence-chain",
+  "title": "同一队列的三层证据链",
+  "subtitle": "总览先回答差异是否存在；比较面板固定共同标尺；细节面板保留不确定性。",
+  "note": "示例数据用于教学演示；误差范围由调用者提供，不表示独立重复、因果关系或统计显著性。",
+  "unit": "相对信号",
+  "evidenceKind": "synthetic-teaching",
+  "categories": ["基线", "处理后 1 h", "处理后 6 h", "处理后 24 h", "恢复期"],
+  "groups": [
+    {"id":"control","label":"对照组","color":"#426A8C"},
+    {"id":"treated","label":"处理组","color":"#C56B4A"}
+  ],
+  "sources": [
+    {"id":"source-table","label":"表 S1：汇总值"},
+    {"id":"source-replicates","label":"图 S2：重复测量范围"},
+    {"id":"source-method","label":"方法段：时间点定义"}
+  ],
+  "panels": [
+    {"id":"overview","role":"overview","title":"总览｜组间轨迹","sampleDefinition":"每个时间点的组汇总；所有面板共用零点与纵轴上限。","sourceIds":["source-table","source-method"],"series":[
+      {"groupId":"control","values":[30,36,43,46,41]},
+      {"groupId":"treated","values":[30,50,72,64,48]}
+    ]},
+    {"id":"comparison","role":"comparison","title":"比较｜同一时间标尺","sampleDefinition":"同一五个时间点的处理/对照成对比较；不把间隔解释为连续采样。","sourceIds":["source-table","source-method"],"series":[
+      {"groupId":"control","values":[30,36,43,46,41]},
+      {"groupId":"treated","values":[30,50,72,64,48]}
+    ],"note":"颜色只标识组身份；差异大小由共同纵轴读取。"},
+    {"id":"detail","role":"detail","title":"细节｜重复范围","sampleDefinition":"处理组的汇总值与重复测量范围并列；范围来自调用者，未推断置信区间。","sourceIds":["source-table","source-replicates"],"series":[
+      {"groupId":"treated","values":[30,50,72,64,48],"uncertainty":{"low":[27,45,65,58,43],"high":[33,56,79,70,54]}}
+    ]}
+  ]
+}
