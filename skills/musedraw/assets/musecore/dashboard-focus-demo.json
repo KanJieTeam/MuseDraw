@@ -1,0 +1,10 @@
+{
+  "family": "dashboard-focus",
+  "operationalQuestion": "incident",
+  "heroRelation": "spatial",
+  "title": "港区设施响应态势",
+  "freshness": "2026-11-01 14:30",
+  "summary": [{"label":"活跃警情","value":"3","unit":"起"},{"label":"待响应","value":"7","unit":"项"},{"label":"平均响应","value":"18","unit":"分钟"}],
+  "support": [{"name":"response-queue","relation":"record","title":"待响应队列","rows":["泵站 P-03 · 9 分钟","闸门 G-08 · 14 分钟","仓储 W-02 · 21 分钟"]},{"name":"trend","relation":"trend","title":"近 6 小时警情趋势","values":[2,4,3,5,3,3]}],
+  "hero": {"kind":"map","points":[{"label":"P-03","x":35,"y":42,"status":"critical"},{"label":"G-08","x":61,"y":31,"status":"warning"},{"label":"W-02","x":72,"y":66,"status":"warning"}]}
+}
