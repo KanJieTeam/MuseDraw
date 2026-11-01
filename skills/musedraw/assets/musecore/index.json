@@ -2583,6 +2583,13 @@
           "role": "Cross-industry capability candidate from Nature audit"
         }
       ]
+    },
+    {
+      "id": "risk-matrix-demo",
+      "file": "risk-matrix-demo.json",
+      "family": "risk-matrix",
+      "contentStatus": "original fictional demonstration; not a measured assessment or universal policy",
+      "reference": "references/musecore-risk-matrix.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
