@@ -259,6 +259,14 @@
       ]
     },
     {
+      "id": "evidence-chain-demo",
+      "family": "evidence-chain",
+      "file": "evidence-chain-demo.json",
+      "contentStatus": "Synthetic teaching data with explicit panel roles, shared scales and source traceability; no empirical or causal claim.",
+      "reference": "references/musecore-evidence-chain.md"
+    },
+
+    {
       "id": "pyramid",
       "family": "pyramid",
       "file": "pyramid.json",
@@ -2610,6 +2618,7 @@
       "ids": [
         "slope",
         "small-multiples",
+        "evidence-chain",
         "pyramid",
         "scatter-panels",
         "bump",
