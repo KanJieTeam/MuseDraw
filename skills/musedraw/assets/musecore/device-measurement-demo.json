@@ -1,0 +1,24 @@
+{
+  "family": "device-measurement",
+  "title": "装置中的一次测量",
+  "question": "样品在哪里被测量，读数从哪条路径产生？",
+  "unit": "相对信号",
+  "components": [
+    {"id":"source","label":"激励源","role":"source","x":0.04,"y":0.35,"w":0.15,"h":0.2,"source":"Fig. 3a source"},
+    {"id":"sample","label":"样品腔","role":"sample","x":0.30,"y":0.30,"w":0.18,"h":0.30,"source":"Fig. 3a sample chamber"},
+    {"id":"sensor","label":"传感区","role":"sensor","x":0.58,"y":0.36,"w":0.15,"h":0.18,"source":"Fig. 3a sensing region"},
+    {"id":"detector","label":"探测器","role":"detector","x":0.80,"y":0.29,"w":0.16,"h":0.30,"source":"Fig. 3a detector"},
+    {"id":"controller","label":"控制器","role":"controller","x":0.43,"y":0.72,"w":0.18,"h":0.16,"source":"Fig. 3a controller"}
+  ],
+  "paths": [
+    {"from":"source","to":"sample","kind":"control","source":"Fig. 3b excitation path"},
+    {"from":"sample","to":"detector","kind":"measurement","source":"Fig. 3b measurement response"},
+    {"from":"controller","to":"sample","kind":"control","source":"Fig. 3c control loop"},
+    {"from":"detector","to":"controller","kind":"reference","source":"Fig. 3c feedback reference"}
+  ],
+  "readings": [
+    {"id":"r1","label":"峰值响应","value":0.74,"status":"measured","source":"Fig. 3d response trace","componentId":"detector"},
+    {"id":"r2","label":"重复测量","value":null,"status":"missing","source":"protocol §4.2","componentId":"detector"}
+  ],
+  "note": "示意图只使用提供的二维位置；未提供尺寸、波长或比例时不补画精确物理量。"
+}

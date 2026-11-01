@@ -272,7 +272,6 @@
       "contentStatus": "Fictional development data for same-substrate condition comparison; no empirical or causal claim.",
       "reference": "references/musecore-condition-comparison.md"
     },
-
     {
       "id": "pyramid",
       "family": "pyramid",
@@ -2572,6 +2571,18 @@
       "family": "loop-trace",
       "reference": "references/cap2-loop-measured-layout.md",
       "contentStatus": "Supplied finite pre-test loop teaching trace; not Python post-loop variable semantics or observed execution."
+    },
+    {
+      "id": "device-measurement-demo",
+      "family": "device-measurement",
+      "file": "device-measurement-demo.json",
+      "contentStatus": "fictional development data; explicit 2D apparatus geometry and source-traced measurement states; not an empirical result",
+      "sourceCases": [
+        {
+          "id": "nature-device-measurement",
+          "role": "Cross-industry capability candidate from Nature audit"
+        }
+      ]
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -3314,6 +3325,12 @@
       "reference": "references/cap2-loop-measured-layout.md",
       "ids": [
         "loop-trace"
+      ]
+    },
+    {
+      "reference": "references/musecore-device-measurement.md",
+      "ids": [
+        "device-measurement"
       ]
     }
   ]

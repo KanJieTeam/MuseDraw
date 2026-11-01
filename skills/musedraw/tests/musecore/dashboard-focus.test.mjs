@@ -10,8 +10,9 @@ const fixture=()=>fs.readFile(new URL('../../assets/musecore/dashboard-focus-dem
 function variants(base){
  const process=structuredClone(base);process.operationalQuestion='capacity';process.heroRelation='process';process.title='装配线产能瓶颈';process.summary=[{label:'日产出',value:'1284',unit:'件/日'},{label:'阻塞工位',value:'2',unit:'个'},{label:'完成率',value:'86',unit:'%'}];process.hero={kind:'process',stages:[{label:'来料',value:198},{label:'加工',value:176},{label:'装配',value:143},{label:'检验',value:132},{label:'包装',value:121},{label:'出库',value:118}]};
  const comparison=structuredClone(base);comparison.operationalQuestion='comparison';comparison.heroRelation='comparison';comparison.title='四区域交付效率对比';comparison.freshness='2026-10 月';comparison.summary=[{label:'最高区域',value:'华东',unit:'区域'},{label:'平均交付',value:'3.8',unit:'天'}];comparison.hero={kind:'comparison',series:[{label:'华东',value:92},{label:'华南',value:86},{label:'华北',value:79},{label:'西部',value:71}]};
+ const trend=structuredClone(base);trend.operationalQuestion='trend';trend.heroRelation='trend';trend.title='响应队列变化';trend.hero={kind:'trend',unit:'起',period:'近6小时',emphasis:'活跃警情',series:[{label:'活跃警情',values:[2,4,3,5,3,3]},{label:'待响应',values:[5,6,8,7,7,6]}]};
  const inventory=structuredClone(base);inventory.operationalQuestion='inventory';inventory.heroRelation='inventory';inventory.title='园区设备资产清单';inventory.summary=[{label:'设备总数',value:'24',unit:'台'},{label:'在线',value:'21',unit:'台'},{label:'待维护',value:'3',unit:'台'}];inventory.hero={kind:'inventory',assets:[{id:'AHU-04',status:'due'},{id:'P-11',status:'online'},{id:'CH-02',status:'online'},{id:'FCU-08',status:'online'},{id:'P-12',status:'online'},{id:'AHU-03',status:'online'},{id:'FCU-09',status:'online'},{id:'P-15',status:'due'}]};
- return [base,process,comparison,inventory];
+ return [base,process,comparison,trend,inventory];
 }
 
 test('dashboard focus accepts four operational routes and records three viewport targets',async()=>{
@@ -35,6 +36,8 @@ test('dashboard focus refuses five unsafe contract boundaries',async()=>{
   [x=>x.summary=[...x.summary,...x.summary],/summary metrics exceed 4/],
   [x=>x.support[0].relation=null,/unnamed relation/],
   [x=>{x.claims={realtime:true};x.freshness='';},/freshness/],
+  [x=>{x.claims={realtime:true,mode:'snapshot',source:'file.csv'}},/live mode/],
+  [x=>{x.claims={realtime:true,mode:'live',source:''}},/realtime source/],
   [x=>{x.heroRelation='comparison';x.operationalQuestion='comparison';x.hero={kind:'map',points:[]}},/comparison hero requires/],
  ];
  for(const [change,re] of invalid){const input=structuredClone(base);change(input);assert.throws(()=>dashboardFocusModel(input),re)}
