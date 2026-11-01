@@ -18,3 +18,4 @@ export function evidenceMatrixModel(b){
  for(const [i,l] of legend.entries()){need(l&&statusSet.has(l.status),`legend[${i}] status invalid`);text(l.label,`legend[${i}].label`,18)}
  return {family:b.family,title:b.title,subtitle:b.subtitle,dataStatus:b.dataStatus,note:b.note,columns,rows,legend};
 }
+
