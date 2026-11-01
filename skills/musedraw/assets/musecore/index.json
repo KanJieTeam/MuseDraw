@@ -265,6 +265,13 @@
       "contentStatus": "Synthetic teaching data with explicit panel roles, shared scales and source traceability; no empirical or causal claim.",
       "reference": "references/musecore-evidence-chain.md"
     },
+    {
+      "id": "condition-comparison-demo",
+      "family": "condition-comparison",
+      "file": "condition-comparison-demo.json",
+      "contentStatus": "Fictional development data for same-substrate condition comparison; no empirical or causal claim.",
+      "reference": "references/musecore-condition-comparison.md"
+    },
 
     {
       "id": "pyramid",
@@ -2619,6 +2626,7 @@
         "slope",
         "small-multiples",
         "evidence-chain",
+        "condition-comparison",
         "pyramid",
         "scatter-panels",
         "bump",

@@ -1,0 +1,25 @@
+{
+  "family": "condition-comparison",
+  "title": "同一底物上的条件变化",
+  "question": "保持底物与尺度不变，只比较激活状态的变化",
+  "unit": "相对信号",
+  "note": "示例输入：数值为演示数据，不可视为论文结论。共同底物：样品 A；颜色只标注状态，不代表样品身份。",
+  "substrate": {
+    "id": "sample-a",
+    "label": "样品 A · 固定底物",
+    "source": "示例 Fig. 2a substrate map",
+    "segments": [
+      {"id": "s1", "label": "底物区", "weight": 1},
+      {"id": "s2", "label": "结合区", "weight": 1},
+      {"id": "s3", "label": "读出区", "weight": 1}
+    ]
+  },
+  "baseline": {"id": "control", "label": "对照基线", "substrateId": "sample-a", "source": "示例 Fig. 2a control", "value": 0.32, "status": "measured"},
+  "scale": {"min": 0, "max": 1},
+  "conditions": [
+    {"id": "low", "label": "低剂量", "substrateId": "sample-a", "source": "示例 Fig. 2b low-dose", "value": 0.48, "status": "measured", "changedSegmentId": "s2"},
+    {"id": "high", "label": "高剂量", "substrateId": "sample-a", "source": "示例 Fig. 2c high-dose", "value": 0.77, "status": "measured", "changedSegmentId": "s2"},
+    {"id": "washout", "label": "洗脱后", "substrateId": "sample-a", "source": "示例 Fig. 2d washout", "value": null, "status": "missing", "changedSegmentId": null},
+    {"id": "followup", "label": "后续验证", "substrateId": "sample-a", "source": "示例 protocol §4.2", "value": null, "status": "planned", "changedSegmentId": null}
+  ]
+}
