@@ -93,6 +93,8 @@ family's encodings, coordinated geometry and placement.
 | Same-substrate condition and state comparisons with an explicit baseline | [Condition comparison](references/musecore-condition-comparison.md) |
 | Bounded likelihood × impact risk registers with declared response status | [Risk matrix](references/musecore-risk-matrix.md) |
 | Explicit evidence status across candidate objects and criteria | [Evidence matrix](references/musecore-evidence-matrix.md) |
+| Effect estimates with explicitly supplied interval endpoints and row sources | [Forest plot](references/musecore-forest-plot.md) |
+| Period-by-stream demand and capacity ledgers with explicit gap states | [Capacity plan](references/musecore-capacity-plan.md) |
 | Explicit 2D apparatus layouts with separated measurement/control/reference paths and traced readings | [Device measurement](references/musecore-device-measurement.md) |
 | Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |

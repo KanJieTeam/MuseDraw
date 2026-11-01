@@ -1,0 +1,19 @@
+{
+  "family":"forest-plot",
+  "title":"多项实验比较的效应量与区间",
+  "subtitle":"每一行保留输入的估计值、区间端点和来源；竖线是本页声明的参照值",
+  "xLabel":"效应量（相对参照值）",
+  "unit":"标准化效应",
+  "reference":0,
+  "intervalLabel":"输入区间",
+  "dataStatus":"合成教学数据；估计值与区间为已登记示例，不代表真实临床或生物学结论",
+  "rows":[
+    {"id":"study-a","label":"干预 A · 细胞应激","estimate":0.42,"low":0.12,"high":0.71,"weight":5,"source":"实验记录 A，表 2"},
+    {"id":"study-b","label":"干预 B · 代谢通路","estimate":-0.18,"low":-0.46,"high":0.09,"weight":4,"source":"实验记录 B，表 1"},
+    {"id":"study-c","label":"干预 C · 屏障完整性","estimate":0.63,"low":0.28,"high":0.94,"weight":3,"source":"实验记录 C，补充表 3"},
+    {"id":"study-d","label":"干预 D · 迁移响应","estimate":0.07,"low":-0.21,"high":0.35,"weight":2,"source":"实验记录 D，表 4"},
+    {"id":"study-e","label":"干预 E · 代偿信号","estimate":-0.51,"low":-0.83,"high":-0.19,"weight":2,"source":"实验记录 E，表 2"},
+    {"id":"study-f","label":"干预 F · 组织恢复","estimate":0.29,"low":0.02,"high":0.57,"weight":1,"source":"实验记录 F，表 1"}
+  ],
+  "note":"区间端点由输入直接给出；本图不把区间解释成某一特定置信水平，也不计算合并效应。请在正文中说明研究设计、区间定义和不确定性来源。"
+}
