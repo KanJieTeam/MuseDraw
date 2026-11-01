@@ -1,0 +1,13 @@
+{
+  "family": "capacity-plan",
+  "title": "研究交付容量盘",
+  "subtitle": "把每个工作流在各周期的需求与可用容量放在同一条轨道上",
+  "dataStatus": "虚构演示数据 · 单位：工时",
+  "periods": [{"id":"p1","label":"第1周"},{"id":"p2","label":"第2周"},{"id":"p3","label":"第3周"},{"id":"p4","label":"第4周"}],
+  "streams": [
+    {"id":"analysis","label":"样本分析","unit":"工时","values":[{"demand":32,"capacity":40},{"demand":46,"capacity":40},{"demand":38,"capacity":42},{"demand":28,"capacity":36}]},
+    {"id":"field","label":"现场核验","unit":"工时","values":[{"demand":20,"capacity":18},{"demand":18,"capacity":24},{"demand":30,"capacity":24,"note":"预约集中"},{"demand":22,"capacity":28}]},
+    {"id":"report","label":"报告编制","unit":"工时","values":[{"demand":12,"capacity":16},{"demand":14,"capacity":16},{"demand":20,"capacity":20},{"demand":34,"capacity":26}]}
+  ],
+  "note": "容量为当前登记的可用工时，需求为任务估计；缺口只表示两者差值，不等同于延期或质量结论。"
+}

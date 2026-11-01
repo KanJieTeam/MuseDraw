@@ -2612,11 +2612,25 @@
       "reference": "references/musecore-volcano-plot.md"
     },
     {
+      "id": "forest-plot-demo",
+      "file": "forest-plot-demo.json",
+      "family": "forest-plot",
+      "contentStatus": "original synthetic teaching data with explicit effect estimates, intervals and row sources; no pooled or causal claim",
+      "reference": "references/musecore-forest-plot.md"
+    },
+    {
       "id": "evidence-matrix-demo",
       "file": "evidence-matrix.json",
       "family": "evidence-matrix",
       "contentStatus": "original synthetic status register; no ranking, score or causal conclusion is inferred",
       "reference": "references/musecore-evidence-matrix.md"
+    },
+    {
+      "id": "capacity-plan-demo",
+      "file": "capacity-plan-demo.json",
+      "family": "capacity-plan",
+      "contentStatus": "original synthetic capacity ledger; demand and capacity are supplied values and do not infer staffing, delay or quality",
+      "reference": "references/musecore-capacity-plan.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
