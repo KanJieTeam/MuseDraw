@@ -31,7 +31,7 @@ export function dashboardFocusFigure(input){
 export function dashboardFocusResponsiveFigure(input, viewport=390){
  const m=dashboardFocusModel(input.family==='dashboard-focus'?input:{...input,family:'dashboard-focus'}),vw=Number(viewport);
  if(!Number.isFinite(vw)||vw<320||vw>8000)throw Error('dashboard viewport must be 320..8000px');
- if(vw>=1440){const s=dashboardFocusFigure(input),g=JSON.parse(s.dataset.geometry||'{}');g.viewport=vw;g.responsive=false;s.dataset.geometry=JSON.stringify(g);return s}
+ if(vw>=1800){const s=dashboardFocusFigure(input),g=JSON.parse(s.dataset.geometry||'{}');g.viewport=vw;g.responsive=false;s.dataset.geometry=JSON.stringify(g);return s}
  const narrow=vw<700,W=Math.round(vw),margin=narrow?18:32,gap=narrow?14:20,bg='#0B1722',ink='#F2F5F1',muted='#A9C0BD',line='#2C4B57',teal='#65B8B1',amber='#E8B052',red='#E56D63';
  const plan=(t,w,size=16,weight=400,max=3,role='sans')=>{const lines=visualLines(t,Math.max(24,w),{size,weight,max,role}),fb=lines.map(x=>visualFontBounds(x,size,role,weight)),ascent=Math.max(...fb.map(x=>x.ascent)),descent=Math.max(...fb.map(x=>x.descent)),step=Math.max(size*1.34,ascent+descent+4);return {lines,size,weight,role,ascent,descent,step,height:ascent+descent+(lines.length-1)*step}};
  const textPlans=[],svg=visualPage(W,200,bg);

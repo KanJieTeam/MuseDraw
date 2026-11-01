@@ -45,7 +45,7 @@ test('dashboard focus responsive composition reflows at phone and tablet widths'
  try{const page=await browser.newPage({viewport:{width:1440,height:900}});await page.setContent(await editorHtml(base));await page.waitForFunction(()=>window.MUSECORE_READY===true);
   for(const width of [390,1024,1440]){
    const result=await page.evaluate(width=>{try{const svg=MuseCore.renderResponsive(window.__dashboardSeed||JSON.parse(document.getElementById('input').value),width);document.getElementById('output').replaceChildren(svg);return {error:null,audit:MuseCore.audit(svg),svg:svg.outerHTML,geometry:JSON.parse(svg.dataset.geometry)}}catch(e){return {error:e.message}}},width);
-   assert.equal(result.error,null);assert.deepEqual(result.audit.findings,[]);assert.equal(result.geometry.viewport,width);assert.equal(result.geometry.responsive,width<1440);
+   assert.equal(result.error,null);assert.deepEqual(result.audit.findings,[]);assert.equal(result.geometry.viewport,width);assert.equal(result.geometry.responsive,width<1800);
    assert.deepEqual(result.geometry.readingOrder,['hero','support','metrics']);assert(result.geometry.hero.width<=width-36);assert(result.geometry.support.every(x=>x.name));
    await page.setViewportSize({width,height:900});const overflow=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth}));assert(overflow.scrollWidth<=overflow.clientWidth+1,`${width}px responsive wrapper overflow`);
   }
