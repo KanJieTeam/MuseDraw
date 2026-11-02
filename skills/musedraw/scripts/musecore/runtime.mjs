@@ -19,7 +19,6 @@ import {evidenceMatrixFamilies} from './evidence-matrix-figures.mjs';
 import {volcanoPlotFamilies} from './volcano-figures.mjs';
 import {forestPlotFamilies} from './forest-plot-figures.mjs';
 import {heatmapFamilies} from './heatmap-figures.mjs';
-import {heatmapFamilies} from './heatmap-figures.mjs';
 import {capacityPlanFamilies} from './capacity-plan-figures.mjs';
 
 // Browser runtime: content and explicit relations in, coordinated report geometry out.
