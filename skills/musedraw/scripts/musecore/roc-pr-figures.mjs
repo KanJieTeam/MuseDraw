@@ -6,7 +6,7 @@ function panel(s,{x,y,w,h,title,xLabel,yLabel,points,xKey,yKey,strokeColor,diago
  const ink='#1D2A33',muted='#637176',grid='#D7DFDC',paper='#F9FBF9',px=x+82,py=y+62,pw=w-118,ph=h-112;
  el('rect',{x,y,width:w,height:h,fill:paper,stroke:'#B8C5C0','stroke-width':1.2,'data-roc-panel':title},s);
  visualText(s,x+24,y+34,title,{size:30,weight:800,fill:ink});
- for(let i=0;i<=4;i++){const xx=px+pw*i/4,yy=py+ph-ph*i/4;stroke(s,[[xx,py],[xx,py+ph]],grid,1,{'data-role':'grid'});stroke(s,[[px,yy],[px+pw,yy]],grid,1,{'data-role':'grid'});visualText(s,xx,py+ph+32,(i/4).toFixed(2),{size:18,anchor:'middle',fill:muted});visualText(s,px-15,yy+6,(1-i/4).toFixed(2),{size:18,anchor:'end',fill:muted})}
+ for(let i=0;i<=4;i++){const xx=px+pw*i/4,yy=py+ph*i/4;stroke(s,[[xx,py],[xx,py+ph]],grid,1,{'data-role':'grid'});stroke(s,[[px,yy],[px+pw,yy]],grid,1,{'data-role':'grid'});visualText(s,xx,py+ph+32,(i/4).toFixed(2),{size:18,anchor:'middle',fill:muted});visualText(s,px-15,yy+6,(1-i/4).toFixed(2),{size:18,anchor:'end',fill:muted})}
  stroke(s,[[px,py],[px,py+ph],[px+pw,py+ph]],ink,2);
  if(diagonal)stroke(s,[[px,py+ph],[px+pw,py]],'#B1BDB8',2,{'stroke-dasharray':'8 8','data-roc-reference':'chance'});
  const X=v=>px+v*pw,Y=v=>py+ph-v*ph,pts=points.map(p=>[X(p[xKey]),Y(p[yKey])]);
