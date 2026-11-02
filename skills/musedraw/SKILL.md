@@ -92,7 +92,6 @@ family's encodings, coordinated geometry and placement.
 | Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |
 | Same-substrate condition and state comparisons with an explicit baseline | [Condition comparison](references/musecore-condition-comparison.md) |
 | Bounded likelihood × impact risk registers with declared response status | [Risk matrix](references/musecore-risk-matrix.md) |
-| Two-period rank movement with explicit object identity and source traceability | [Rank shift](references/musecore-rank-shift.md) |
 | Explicit evidence status across candidate objects and criteria | [Evidence matrix](references/musecore-evidence-matrix.md) |
 | Effect estimates with explicitly supplied interval endpoints and row sources | [Forest plot](references/musecore-forest-plot.md) |
 | Period-by-stream demand and capacity ledgers with explicit gap states | [Capacity plan](references/musecore-capacity-plan.md) |
