@@ -2645,6 +2645,20 @@
       "family": "pareto-analysis",
       "contentStatus": "original synthetic additive categories; cumulative share is calculated from supplied values and does not infer cause or priority",
       "reference": "references/musecore-pareto-analysis.md"
+    },
+    {
+      "id": "roc-pr-curve-demo",
+      "file": "roc-pr-curve-demo.json",
+      "family": "roc-pr-curve",
+      "contentStatus": "original synthetic operating points with explicit threshold, rate and source fields; no fitted or population claim",
+      "reference": "references/musecore-roc-pr-curve.md"
+    },
+    {
+      "id": "waterfall-demo",
+      "file": "waterfall-demo.json",
+      "family": "waterfall-bridge",
+      "contentStatus": "original synthetic additive bridge; total is checked arithmetically and no causal or forecast claim is inferred",
+      "reference": "references/musecore-waterfall.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",

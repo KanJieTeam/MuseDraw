@@ -1,0 +1,16 @@
+{
+  "family": "waterfall-bridge",
+  "title": "季度经营变化桥",
+  "subtitle": "从期初基线经过已登记增减项到期末合计",
+  "unit": "万元",
+  "dataStatus": "合成教学数据 · 仅用于说明读法",
+  "steps": [
+    {"id":"start","label":"期初基线","kind":"start","value":120,"source":"经营表 A · 行 2"},
+    {"id":"new-work","label":"新增项目","kind":"increase","value":34,"source":"经营表 A · 行 7"},
+    {"id":"rework","label":"返工抵减","kind":"decrease","value":18,"source":"复盘表 B · 行 3"},
+    {"id":"license","label":"许可费用","kind":"decrease","value":9,"source":"费用表 C · 行 5"},
+    {"id":"retention","label":"续约收入","kind":"increase","value":27,"source":"经营表 A · 行 12"},
+    {"id":"total","label":"期末合计","kind":"total","value":154,"source":"由前述输入算得"}
+  ],
+  "note": "每根中间柱的数值是输入的增减量；期末合计必须等于期初基线加上所有带符号的中间项。本图不解释原因，也不预测下一期。"
+}

@@ -1,0 +1,19 @@
+{
+  "family": "roc-pr-curve",
+  "title": "分类器阈值下的辨别与查准",
+  "subtitle": "每个点保留登记的阈值与四项率值；两条曲线只重排同一组输入",
+  "thresholdLabel": "阈值",
+  "dataStatus": "合成教学数据；操作点为输入示例，不代表真实模型或人群表现",
+  "points": [
+    {"id":"op01","label":"起点","threshold":1,"fpr":0,"tpr":0,"precision":1,"recall":0,"source":"评估表 A · 行 2"},
+    {"id":"op02","label":"低误报","threshold":0.85,"fpr":0.03,"tpr":0.41,"precision":0.82,"recall":0.12,"source":"评估表 A · 行 3"},
+    {"id":"op03","label":"早期召回","threshold":0.72,"fpr":0.08,"tpr":0.62,"precision":0.76,"recall":0.28,"source":"评估表 A · 行 4"},
+    {"id":"op04","label":"折中点","threshold":0.6,"fpr":0.15,"tpr":0.74,"precision":0.67,"recall":0.42,"source":"评估表 A · 行 5"},
+    {"id":"op05","label":"高召回","threshold":0.48,"fpr":0.26,"tpr":0.82,"precision":0.58,"recall":0.56,"source":"评估表 A · 行 6"},
+    {"id":"op06","threshold":0.36,"fpr":0.41,"tpr":0.88,"precision":0.51,"recall":0.68,"source":"评估表 A · 行 7"},
+    {"id":"op07","threshold":0.24,"fpr":0.58,"tpr":0.93,"precision":0.46,"recall":0.78,"source":"评估表 A · 行 8"},
+    {"id":"op08","threshold":0.12,"fpr":0.77,"tpr":0.97,"precision":0.41,"recall":0.88,"source":"评估表 A · 行 9"},
+    {"id":"op09","threshold":0,"fpr":1,"tpr":1,"precision":0.37,"recall":1,"source":"评估表 A · 行 10"}
+  ],
+  "note": "横轴和纵轴均为输入率值；AUC 是沿登记点做的梯形面积汇总，不是置信区间或泛化性能证明。正文仍需说明样本划分、阳性比例、阈值选择和不确定性。"
+}
