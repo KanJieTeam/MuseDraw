@@ -2654,6 +2654,13 @@
       "reference": "references/musecore-roc-pr-curve.md"
     },
     {
+      "id": "raincloud-demo",
+      "file": "raincloud-demo.json",
+      "family": "raincloud",
+      "contentStatus": "original synthetic observations with explicit raw values and group sources; no inferential claim",
+      "reference": "references/musecore-raincloud.md"
+    },
+    {
       "id": "waterfall-demo",
       "file": "waterfall-demo.json",
       "family": "waterfall-bridge",
