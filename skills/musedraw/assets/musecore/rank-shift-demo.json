@@ -1,0 +1,15 @@
+{
+  "family":"rank-shift",
+  "title":"项目优先级的名次变化",
+  "subtitle":"同一组事项在两个评审时点的名次移动；连线只表达输入的前后位置",
+  "periods":[{"id":"opening","label":"初评 · 4 月"},{"id":"review","label":"复评 · 6 月"}],
+  "dataStatus":"合成教学数据；名次来自已登记的两次评审，不代表真实项目结论",
+  "items":[
+    {"id":"field","label":"现场采样","beforeRank":5,"afterRank":2,"source":"评审表 A · 行 4"},
+    {"id":"schema","label":"数据字典","beforeRank":2,"afterRank":1,"source":"评审表 A · 行 7"},
+    {"id":"model","label":"预测模型","beforeRank":1,"afterRank":4,"source":"评审表 B · 行 2"},
+    {"id":"report","label":"报告整编","beforeRank":4,"afterRank":5,"source":"评审表 B · 行 8"},
+    {"id":"archive","label":"资料归档","beforeRank":3,"afterRank":3,"source":"评审表 C · 行 1"}
+  ],
+  "note":"名次数值越小位置越靠上；蓝线表示名次前移，赭线表示名次后移，灰线表示没有变化。图中不解释变化原因，也不把名次当作分数。"
+}

@@ -1,0 +1,23 @@
+{
+  "family": "agreement-plot",
+  "title": "两种测量的成对差值",
+  "subtitle": "每个点连接同一对象的两次读数；参考线与界限由输入明确提供",
+  "xLabel": "两次读数的均值",
+  "yLabel": "第二次 − 第一次",
+  "unit": "相对单位",
+  "referenceDifference": 0,
+  "lowerLimit": -0.42,
+  "upperLimit": 0.42,
+  "dataStatus": "合成教学数据；成对读数用于说明图形，不代表仪器验证或总体一致性",
+  "pairs": [
+    {"id":"p01","label":"样本 01","first":2.1,"second":2.0,"source":"配对表 A · 行 2"},
+    {"id":"p02","label":"样本 02","first":2.8,"second":3.0,"source":"配对表 A · 行 3"},
+    {"id":"p03","label":"样本 03","first":3.4,"second":3.2,"source":"配对表 A · 行 4"},
+    {"id":"p04","label":"样本 04","first":4.1,"second":4.4,"source":"配对表 A · 行 5"},
+    {"id":"p05","label":"样本 05","first":4.8,"second":4.6,"source":"配对表 A · 行 6"},
+    {"id":"p06","label":"样本 06","first":5.3,"second":5.5,"source":"配对表 A · 行 7"},
+    {"id":"p07","label":"样本 07","first":6.0,"second":5.7,"source":"配对表 A · 行 8"},
+    {"id":"p08","label":"样本 08","first":6.8,"second":6.9,"source":"配对表 A · 行 9"}
+  ],
+  "note": "纵轴是每对读数的有向差值；水平线仅表示本页输入的参考差值和界限，不是自动计算的接受标准。请在正文中说明仪器、配对条件、单位和界限来源。"
+}

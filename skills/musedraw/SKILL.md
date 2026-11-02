@@ -92,6 +92,7 @@ family's encodings, coordinated geometry and placement.
 | Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |
 | Same-substrate condition and state comparisons with an explicit baseline | [Condition comparison](references/musecore-condition-comparison.md) |
 | Bounded likelihood × impact risk registers with declared response status | [Risk matrix](references/musecore-risk-matrix.md) |
+| Two-period rank movement with explicit object identity and source traceability | [Rank shift](references/musecore-rank-shift.md) |
 | Explicit evidence status across candidate objects and criteria | [Evidence matrix](references/musecore-evidence-matrix.md) |
 | Effect estimates with explicitly supplied interval endpoints and row sources | [Forest plot](references/musecore-forest-plot.md) |
 | Period-by-stream demand and capacity ledgers with explicit gap states | [Capacity plan](references/musecore-capacity-plan.md) |
@@ -99,6 +100,7 @@ family's encodings, coordinated geometry and placement.
 | Ordered additive categories with an explicit cumulative-share line | [Pareto analysis](references/musecore-pareto-analysis.md) |
 | Explicit threshold operating points shown as coordinated ROC and PR curves | [ROC–PR curve](references/musecore-roc-pr-curve.md) |
 | Raw observations with coordinated density, quartiles and points | [Raincloud](references/musecore-raincloud.md) |
+| Paired readings with explicit mean-difference reference and limits | [Agreement plot](references/musecore-agreement-plot.md) |
 | Explicit start, signed bridge steps and checked end total | [Waterfall](references/musecore-waterfall.md) |
 | Explicit 2D apparatus layouts with separated measurement/control/reference paths and traced readings | [Device measurement](references/musecore-device-measurement.md) |
 | Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |

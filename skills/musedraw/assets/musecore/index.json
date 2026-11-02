@@ -2592,6 +2592,13 @@
       "reference": "references/musecore-risk-matrix.md"
     },
     {
+      "id": "rank-shift-demo",
+      "file": "rank-shift-demo.json",
+      "family": "rank-shift",
+      "contentStatus": "original synthetic two-period rank records; movement is arithmetic and does not infer scores, causes or recommendations",
+      "reference": "references/musecore-rank-shift.md"
+    },
+    {
       "id": "survival-curve-demo",
       "file": "survival-curve-demo.json",
       "family": "survival-curve",
@@ -2659,6 +2666,13 @@
       "family": "raincloud",
       "contentStatus": "original synthetic observations with explicit raw values and group sources; no inferential claim",
       "reference": "references/musecore-raincloud.md"
+    },
+    {
+      "id": "agreement-plot-demo",
+      "file": "agreement-plot-demo.json",
+      "family": "agreement-plot",
+      "contentStatus": "original synthetic paired readings with explicit reference and limits; no inferential claim",
+      "reference": "references/musecore-agreement-plot.md"
     },
     {
       "id": "waterfall-demo",
