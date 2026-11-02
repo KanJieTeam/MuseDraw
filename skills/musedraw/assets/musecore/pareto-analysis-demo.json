@@ -1,0 +1,19 @@
+{
+  "family": "pareto-analysis",
+  "title": "交付问题的构成与累计占比",
+  "subtitle": "类别值按登记顺序排列；折线只表示这些值的累计份额",
+  "categoryLabel": "问题类别",
+  "valueLabel": "登记次数",
+  "unit": "次",
+  "targetShare": 0.8,
+  "dataStatus": "合成教学数据；用于说明读法，不代表真实质量统计",
+  "items": [
+    {"id":"clarity","label":"口径未定","value":28,"source":"复盘表 A · 行 3"},
+    {"id":"handoff","label":"交接缺项","value":21,"source":"复盘表 A · 行 7"},
+    {"id":"source","label":"来源未标","value":16,"source":"复盘表 B · 行 2"},
+    {"id":"format","label":"格式返工","value":11,"source":"复盘表 B · 行 9"},
+    {"id":"export","label":"导出遗漏","value":7,"source":"复盘表 C · 行 4"},
+    {"id":"other","label":"其他已登记项","value":5,"source":"复盘表 C · 行 8"}
+  ],
+  "note": "柱高是输入的类别值；折线是从左到右的累计占比。80%线是本页选择的阅读参考，不是质量门槛或改进承诺。"
+}

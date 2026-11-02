@@ -2619,6 +2619,13 @@
       "reference": "references/musecore-forest-plot.md"
     },
     {
+      "id": "heatmap-demo",
+      "file": "heatmap-demo.json",
+      "family": "heatmap",
+      "contentStatus": "original synthetic teaching measurements with cell-level source traceability; no clustering or significance claim is inferred",
+      "reference": "references/musecore-heatmap.md"
+    },
+    {
       "id": "evidence-matrix-demo",
       "file": "evidence-matrix.json",
       "family": "evidence-matrix",
@@ -2631,6 +2638,13 @@
       "family": "capacity-plan",
       "contentStatus": "original synthetic capacity ledger; demand and capacity are supplied values and do not infer staffing, delay or quality",
       "reference": "references/musecore-capacity-plan.md"
+    },
+    {
+      "id": "pareto-analysis-demo",
+      "file": "pareto-analysis-demo.json",
+      "family": "pareto-analysis",
+      "contentStatus": "original synthetic additive categories; cumulative share is calculated from supplied values and does not infer cause or priority",
+      "reference": "references/musecore-pareto-analysis.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
