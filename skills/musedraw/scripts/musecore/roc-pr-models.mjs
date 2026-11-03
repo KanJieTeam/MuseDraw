@@ -19,6 +19,9 @@ export function rocPrCurveModel(input){
   rText(p.id,'point.id',32);rNeed(!ids.has(p.id),'duplicate point id');ids.add(p.id);
   if(p.label!==undefined)rText(p.label,'point.label',36,true);
   rNum(p.threshold,'point.threshold');rNum(p.fpr,'point.fpr');rNum(p.tpr,'point.tpr');rNum(p.precision,'point.precision');rNum(p.recall,'point.recall');rText(p.source,'point.source',160);
+  // In one binary evaluation recall and true-positive rate are the same
+  // fraction TP / (TP + FN), not independent coordinates.
+  rNeed(Math.abs(p.tpr-p.recall)<=1e-12,'point.tpr and point.recall must agree for the same operating point');
   if(index){rNeed(p.threshold<=input.points[index-1].threshold,'thresholds must be non-increasing');rNeed(p.fpr>=input.points[index-1].fpr,'false-positive rate must be non-decreasing');rNeed(p.tpr>=input.points[index-1].tpr,'true-positive rate must be non-decreasing');rNeed(p.recall>=input.points[index-1].recall,'recall must be non-decreasing')}
   return {...p,index};
  });
@@ -31,12 +34,12 @@ export function rocPrCurveModel(input){
 
 export const demoRocPrCurve={family:'roc-pr-curve',title:'分类器阈值下的辨别与查准',subtitle:'每个点保留登记的阈值与四项率值；两条曲线只重排同一组输入',thresholdLabel:'阈值',dataStatus:'合成教学数据；操作点为输入示例，不代表真实模型或人群表现',points:[
  {id:'op01',label:'起点',threshold:1,fpr:0,tpr:0,precision:1,recall:0,source:'评估表 A · 行 2'},
- {id:'op02',label:'低误报',threshold:.85,fpr:.03,tpr:.41,precision:.82,recall:.12,source:'评估表 A · 行 3'},
- {id:'op03',label:'早期召回',threshold:.72,fpr:.08,tpr:.62,precision:.76,recall:.28,source:'评估表 A · 行 4'},
- {id:'op04',label:'折中点',threshold:.60,fpr:.15,tpr:.74,precision:.67,recall:.42,source:'评估表 A · 行 5'},
- {id:'op05',label:'高召回',threshold:.48,fpr:.26,tpr:.82,precision:.58,recall:.56,source:'评估表 A · 行 6'},
- {id:'op06',threshold:.36,fpr:.41,tpr:.88,precision:.51,recall:.68,source:'评估表 A · 行 7'},
- {id:'op07',threshold:.24,fpr:.58,tpr:.93,precision:.46,recall:.78,source:'评估表 A · 行 8'},
- {id:'op08',threshold:.12,fpr:.77,tpr:.97,precision:.41,recall:.88,source:'评估表 A · 行 9'},
- {id:'op09',threshold:0,fpr:1,tpr:1,precision:.37,recall:1,source:'评估表 A · 行 10'}
+ {id:'op02',label:'低误报',threshold:.85,fpr:.03,tpr:.41,precision:0.889214536928,recall:0.41,source:'评估表 A · 行 3'},
+ {id:'op03',label:'早期召回',threshold:.72,fpr:.08,tpr:.62,precision:0.819871336669,recall:0.62,source:'评估表 A · 行 4'},
+ {id:'op04',label:'折中点',threshold:.60,fpr:.15,tpr:.74,precision:0.743415693728,recall:0.74,source:'评估表 A · 行 5'},
+ {id:'op05',label:'高召回',threshold:.48,fpr:.26,tpr:.82,precision:0.649400684932,recall:0.82,source:'评估表 A · 行 6'},
+ {id:'op06',threshold:.36,fpr:.41,tpr:.88,precision:0.557629731118,recall:0.88,source:'评估表 A · 行 7'},
+ {id:'op07',threshold:.24,fpr:.58,tpr:.93,precision:0.484989429175,recall:0.93,source:'评估表 A · 行 8'},
+ {id:'op08',threshold:.12,fpr:.77,tpr:.97,precision:0.425236966825,recall:0.97,source:'评估表 A · 行 9'},
+ {id:'op09',threshold:0,fpr:1,tpr:1,precision:0.37,recall:1,source:'评估表 A · 行 10'}
 ],note:'横轴和纵轴均为输入率值；AUC 是沿登记点做的梯形面积汇总，不是置信区间或泛化性能证明。正文仍需说明样本划分、阳性比例、阈值选择和不确定性。'};

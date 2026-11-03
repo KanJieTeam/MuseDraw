@@ -2602,7 +2602,8 @@
       "id": "decision-tree-demo",
       "file": "decision-tree-demo.json",
       "family": "decision-tree",
-      "contentStatus": "Original fictional decision rules with explicit branches; no probability, confidence, ownership or recommendation inferred."
+      "contentStatus": "Original fictional decision rules with explicit branches; no probability, confidence, ownership or recommendation inferred.",
+      "reference": "references/musecore-decision-tree.md"
     },
     {
       "id": "volcano-plot-demo",
@@ -2673,6 +2674,34 @@
       "family": "waterfall-bridge",
       "contentStatus": "original synthetic additive bridge; total is checked arithmetically and no causal or forecast claim is inferred",
       "reference": "references/musecore-waterfall.md"
+    },
+    {
+      "id": "trend-band-demo",
+      "file": "trend-band-demo.json",
+      "family": "trend-band",
+      "contentStatus": "original synthetic ordered-category values and declared target endpoints; no time-spacing or inferential claim",
+      "reference": "references/musecore-trend-band.md"
+    },
+    {
+      "id": "rank-shift-demo",
+      "file": "rank-shift-demo.json",
+      "family": "rank-shift",
+      "contentStatus": "original synthetic two-period rank records; no cause or score is inferred",
+      "reference": "references/musecore-rank-shift.md"
+    },
+    {
+      "id": "dashboard-focus-demo",
+      "file": "dashboard-focus-demo.json",
+      "family": "dashboard-focus",
+      "contentStatus": "original synthetic operational snapshot with explicit status and units",
+      "reference": "references/musecore-dashboard-focus.md"
+    },
+    {
+      "id": "order-service-deployment-hosts",
+      "file": "order-service-deployment-hosts.json",
+      "family": "deployment",
+      "contentStatus": "synthetic explicit infrastructure and instance relations; no actual deployment claim",
+      "reference": "references/musecore-deployment-hosts.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",

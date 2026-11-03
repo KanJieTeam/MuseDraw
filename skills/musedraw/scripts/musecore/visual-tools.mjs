@@ -37,6 +37,16 @@ export function visualBlock(svg,x,top,lines,options={}){
  const size=options.size??24,leading=options.leading??1.3;
  lines.forEach((line,i)=>visualText(svg,x,top+size+i*size*leading,line,options));return lines.length*size*leading;
 }
+// Opt-in measured blocks for content-driven constructions. Existing authored
+// visualBlock compositions keep their coordinates and leading unchanged.
+export function measuredVisualPlan(text,width,{size=24,role='sans',weight=400,max=4}={}){
+ const lines=visualLines(text,width,{size,role,weight,max}),bounds=lines.map(line=>visualFontBounds(line,size,role,weight));
+ const ascent=Math.max(...bounds.map(b=>b.ascent)),descent=Math.max(...bounds.map(b=>b.descent)),step=Math.max(size*1.35,ascent+descent+6);
+ return {lines,size,role,weight,ascent,descent,step,width:Math.max(...lines.map(line=>measureVisual(line,size,role,weight))),height:ascent+descent+(lines.length-1)*step};
+}
+export function drawVisualPlan(svg,x,top,plan,{fill='#1a1a1a',anchor='start',...attributes}={}){
+ return plan.lines.map((line,i)=>{const node=visualText(svg,x,top+plan.ascent+i*plan.step,line,{size:plan.size,role:plan.role,weight:plan.weight,fill,anchor});for(const [key,value] of Object.entries(attributes))node.setAttribute(key,value);return node});
+}
 export function visualHeadingPlan(title,subtitle,{top=58,width=1260,size=54,role='sans',max=2}={}){
  const titleLines=visualLines(title,width,{size,role,weight:800,max}),h=titleLines.length*size*1.3,sub=visualLines(subtitle,width,{size:22,max:2}),sh=sub.length*22*1.3;
  return {titleLines,sub,h,sh,bottom:top+h+14+sh+34};

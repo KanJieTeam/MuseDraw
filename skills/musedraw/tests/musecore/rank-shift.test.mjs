@@ -13,10 +13,13 @@ test('rank model keeps supplied ranks and derives movement only from rank number
  const m=rankShiftModel(demo);assert.deepEqual(m.items.map(x=>x.direction),['up','up','down','down','same']);assert.deepEqual(m.items.map(x=>x.change),[3,1,-3,-1,0]);assert.deepEqual(m.counts,{up:2,down:2,same:1});assert.deepEqual(m.sourceTraceability.map(x=>x.id),demo.items.map(x=>x.id));assert.deepEqual(demo,clone(demo));
 });
 
-test('production renders SVG at 390/1024/1440 widths and under font pressure',{timeout:240000},async()=>{
+// Multi-content/font/viewport assertions live in scientific-scale-layout.test.mjs.
+test('rank default production SVG retains the supplied objects',async()=>{
  const {pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
- try{for(const width of [390,1024,1440])for(const pressure of [0,40]){const page=await browser.newPage({viewport:{width,height:1800}});await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(await editorHtml(demo));await page.waitForFunction(()=>window.MUSECORE_READY===true);const got=await page.evaluate(({input,pressure})=>{const old=CanvasRenderingContext2D.prototype.measureText;if(pressure)CanvasRenderingContext2D.prototype.measureText=function(t){const m=old.call(this,t);return new Proxy(m,{get(o,k){if(k==='width')return m.width+pressure;return Reflect.get(o,k,o)}})};try{const svg=MuseCore.render(input);document.getElementById('output').replaceChildren(svg);const a=MuseCore.audit(svg);return {findings:a.findings,text:svg.textContent,lines:svg.querySelectorAll('[data-rank-shift-line]').length,before:svg.querySelectorAll('[data-rank-shift-before]').length,after:svg.querySelectorAll('[data-rank-shift-after]').length,width:a.geometry.width,height:a.geometry.height}}finally{CanvasRenderingContext2D.prototype.measureText=old}},{input:demo,pressure});assert.deepEqual(got.findings,[],`width ${width} pressure ${pressure}`);assert.equal(got.lines,5);assert.equal(got.before,5);assert.equal(got.after,5);assert(!/NaN|Infinity|undefined/.test(got.text));assert.equal(got.width,1900);assert(got.height>900);await page.close();}}
- finally{await browser.close()}
+ try{const page=await browser.newPage({viewport:{width:2400,height:1800}});await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(await editorHtml(demo));await page.waitForFunction(()=>window.MUSECORE_READY===true);
+  const result=await page.evaluate(()=>{const svg=document.querySelector('#output svg');return {findings:window.MUSECORE_RESULT.findings,lines:svg.querySelectorAll('[data-rank-shift-line]').length,before:svg.querySelectorAll('[data-rank-shift-before]').length,after:svg.querySelectorAll('[data-rank-shift-after]').length}});
+  assert.deepEqual(result.findings,[]);assert.equal(result.lines,5);assert.equal(result.before,5);assert.equal(result.after,5);
+ }finally{await browser.close()}
 });
 
 test('rank model rejects ties, missing source, unsupported fields and out-of-range ranks',()=>{

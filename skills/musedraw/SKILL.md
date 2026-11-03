@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-10-31.54
+  instructions-version: musecore-2026-11-03.55
 ---
 
 # MuseDraw
@@ -102,6 +102,8 @@ family's encodings, coordinated geometry and placement.
 | Raw observations with coordinated density, quartiles and points | [Raincloud](references/musecore-raincloud.md) |
 | Paired readings with explicit mean-difference reference and limits | [Agreement plot](references/musecore-agreement-plot.md) |
 | Explicit start, signed bridge steps and checked end total | [Waterfall](references/musecore-waterfall.md) |
+| Equally spaced ordered categories, supplied series and a declared target interval | [Ordered series and target bands](references/musecore-trend-band.md) |
+| Explicit region, availability-zone, host and instance containment with supplied request/replication links | [Deployment hosts](references/musecore-deployment-hosts.md) |
 | Explicit 2D apparatus layouts with separated measurement/control/reference paths and traced readings | [Device measurement](references/musecore-device-measurement.md) |
 | Dependency schedules, hierarchies, role journeys, priority planning, fixed-offset collaboration, arithmetic scenarios, transition traces and replicated deployment | [Structures, time and calculations](references/musecore-workflows.md) |
 | Eleven supplied physical length scales and measured title layout | [Length-scale source example](references/musecore-magnitude-source.md) |

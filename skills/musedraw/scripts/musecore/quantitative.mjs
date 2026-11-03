@@ -13,6 +13,34 @@ export function niceDomain(values,{zero=true,steps=5}={}){
 }
 export const formatNumber=n=>Number(n.toFixed(2)).toLocaleString('en-US',{maximumFractionDigits:2});
 export const axisNumber=n=>Number(n.toPrecision(12)).toLocaleString('en-US',{maximumSignificantDigits:12});
+
+// Scale-dependent padding: a fixed minimum of one destroys small physical units.
+// Constant zero has no observed scale; only that case uses a unit-wide fallback.
+export function paddedNumericExtent(values,padding=.08){
+ if(!values.length||!values.every(Number.isFinite))throw Error('Finite values required for numeric extent');
+ const low=Math.min(...values),high=Math.max(...values),span=high-low,magnitude=Math.max(Math.abs(low),Math.abs(high));
+ const pad=Math.max(span?span*padding:magnitude?magnitude*padding:1,Number.EPSILON*magnitude*32,Number.MIN_VALUE*32);
+ const min=low-pad,max=high+pad;
+ if(!Number.isFinite(min)||!Number.isFinite(max)||!(max>min)||!Number.isFinite(max-min))throw Error('Numeric extent cannot be represented');
+ return {min,max};
+}
+
+export function numericDisplay(value,digits=6){
+ if(!Number.isFinite(value))throw Error('Finite display value required');
+ const n=Number(value.toPrecision(digits));
+ if(n===0)return '0';
+ return Math.abs(n)>=1e6||Math.abs(n)<1e-3?n.toExponential(digits-1).replace(/(\.\d*?[1-9])0+e/,'$1e').replace(/\.0+e/,'e'):String(n);
+}
+
+export function distinctNumericTicks(min,max,count=6){
+ if(!Number.isFinite(min)||!Number.isFinite(max)||!(max>min)||!Number.isInteger(count)||count<2)throw Error('Increasing finite tick domain required');
+ const values=Array.from({length:count},(_,i)=>min+(max-min)*i/(count-1));
+ for(let digits=4;digits<=17;digits++){
+  const labels=values.map(value=>numericDisplay(value,digits));
+  if(new Set(labels).size===count)return values.map((value,i)=>({value,label:labels[i]}));
+ }
+ throw Error('Numeric ticks cannot be distinguished at this precision');
+}
 export function sampleStats(values){
  if(values.length<2)throw Error('At least two samples required');values.forEach(v=>number(v,'sample'));
  const mean=values.reduce((s,v)=>s+v,0)/values.length,sd=Math.sqrt(values.reduce((s,v)=>s+(v-mean)**2,0)/(values.length-1));return {n:values.length,mean,sd};

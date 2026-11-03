@@ -1,17 +1,39 @@
 import {el} from './svg.mjs';
-import {visualPage,visualText,visualLines,visualHeadingPlan,visualBlock,visualFinish,stroke} from './visual-tools.mjs';
+import {visualPage,visualFinish,stroke,measuredVisualPlan,drawVisualPlan} from './visual-tools.mjs';
+import {distinctNumericTicks,numericDisplay,labelTrack} from './quantitative.mjs';
 import {agreementPlotModel} from './agreement-models.mjs';
 
 export function agreementPlotFamilies(){return {'agreement-plot':input=>{
- const m=agreementPlotModel(input),W=2100,margin=100,ink='#1D2A33',muted='#637176',grid='#D7DFDC',paper='#F8FAF8',accent='#356F78',amber='#B17A2F',red='#A64F53';
- const head=visualHeadingPlan(m.title,m.subtitle,{top:54,width:1900,size:54,max:3}),status=visualLines(m.dataStatus,1900,{size:23,max:3}),note=visualLines(m.note,1900,{size:22,max:6});
- const plot={x:220,y:head.bottom+180,w:1280,h:730},summaryX=plot.x+plot.w+90,summaryW=W-summaryX-margin,x=v=>plot.x+(v-m.domain.xMin)/(m.domain.xMax-m.domain.xMin)*plot.w,y=v=>plot.y+plot.h-(v-m.domain.yMin)/(m.domain.yMax-m.domain.yMin)*plot.h;
- const H=plot.y+plot.h+220+note.length*34+250,s=visualPage(W,H,paper);
- visualBlock(s,margin,54,head.titleLines,{size:54,weight:800,fill:ink,leading:1.25});visualBlock(s,margin,54+head.h+14,head.sub,{size:23,fill:muted,leading:1.3});visualBlock(s,margin,head.bottom+34,status,{size:23,fill:muted,leading:1.3});
- for(let i=0;i<=5;i++){const xx=plot.x+plot.w*i/5;stroke(s,[[xx,plot.y],[xx,plot.y+plot.h]],grid,1,{'data-role':'grid'});visualText(s,xx,plot.y+plot.h+35,(m.domain.xMin+(m.domain.xMax-m.domain.xMin)*i/5).toFixed(1),{size:20,anchor:'middle',fill:muted})}for(let i=0;i<=4;i++){const yy=plot.y+plot.h*i/4;stroke(s,[[plot.x,yy],[plot.x+plot.w,yy]],grid,1,{'data-role':'grid'});visualText(s,plot.x-18,yy+7,(m.domain.yMax-(m.domain.yMax-m.domain.yMin)*i/4).toFixed(2),{size:20,anchor:'end',fill:muted})}
- stroke(s,[[plot.x,plot.y],[plot.x,plot.y+plot.h],[plot.x+plot.w,plot.y+plot.h]],ink,2);visualText(s,plot.x+plot.w/2,plot.y+plot.h+80,`${m.xLabel} · ${m.unit}`,{size:23,anchor:'middle',fill:muted});visualText(s,20,plot.y-24,m.yLabel,{size:23,weight:700,anchor:'start',fill:muted});
- for(const [value,color,key,label] of [[m.upperLimit,red,'upper','上界'],[m.referenceDifference,amber,'reference','参考'],[m.lowerLimit,red,'lower','下界']]){const yy=y(value);stroke(s,[[plot.x,yy],[plot.x+plot.w,yy]],color,key==='reference'?3:2,{'stroke-dasharray':key==='reference'?'':'10 8','data-agreement-line':key});visualText(s,plot.x+plot.w-8,yy-10,`${label} ${value}`,{size:19,anchor:'end',fill:color})}
- const points=[];for(const p of m.pairs){const cx=x(p.mean),cy=y(p.difference);el('circle',{cx,cy,r:9,fill:accent,stroke:paper,'stroke-width':3,'data-agreement-point':p.id},s);points.push({id:p.id,x:cx,y:cy,mean:p.mean,difference:p.difference})}
- visualText(s,summaryX,plot.y+30,'输入摘要',{size:30,weight:800,fill:ink});visualBlock(s,summaryX,plot.y+84,visualLines(`${m.pairs.length} 对读数\n平均差值 ${m.meanDifference.toFixed(3)}\n参考差值 ${m.referenceDifference}\n界限 ${m.lowerLimit} 至 ${m.upperLimit}`,summaryW,{size:23,max:6,weight:650}),{size:23,weight:650,fill:ink,leading:1.45});visualText(s,summaryX,plot.y+300,'读法',{size:30,weight:800,fill:ink});visualBlock(s,summaryX,plot.y+355,visualLines('横轴：每对读数的均值\n纵轴：第二次减第一次\n点：每个输入配对\n水平线：调用方提供的参考和界限',summaryW,{size:22,max:8}),{size:22,fill:muted,leading:1.4});visualText(s,summaryX,plot.y+570,'追溯',{size:30,weight:800,fill:ink});visualBlock(s,summaryX,plot.y+625,visualLines('每个点的两次读数与 source\n保留在 geometry.sourceTraceability。',summaryW,{size:22,max:4}),{size:22,fill:muted,leading:1.4});
- stroke(s,[[margin,H-note.length*34-48],[W-margin,H-note.length*34-48]],'#B8C5C0',1);visualBlock(s,margin,H-note.length*34-22,note,{size:22,fill:muted,leading:1.35});return visualFinish(s,{family:'agreement-plot',width:W,height:H,input,model:m,plot:{...plot,domain:m.domain},points,sourceTraceability:m.sourceTraceability,scope:m.scope});
+ const m=agreementPlotModel(input),W=2100,margin=100,ink='#1D2A33',muted='#637176',grid='#D7DFDC',paper='#FFFFFF',accent='#356F78',amber='#B17A2F',red='#A64F53';
+ const plan=(text,width,size=22,weight=400,max=6)=>measuredVisualPlan(text,width,{size,weight,max});
+ const title=plan(m.title,1900,54,800,5),sub=plan(m.subtitle,1900,23),status=plan(m.dataStatus,1900,22),note=plan(m.note,1900,22,400,12);
+ const titleY=54,subY=titleY+title.height+22,statusY=subY+sub.height+20;
+ const xTicks=distinctNumericTicks(m.domain.xMin,m.domain.xMax),yTicks=distinctNumericTicks(m.domain.yMin,m.domain.yMax,5),yPlans=yTicks.map(t=>plan(t.label,480,20,400,1));
+ const plot={x:margin+Math.max(...yPlans.map(p=>p.width))+26,y:0,w:0,h:730};plot.w=1400-plot.x;
+ if(plot.w<650)throw Error('agreement-plot: numeric labels leave insufficient plot width');
+ const yLabel=plan(`${m.yLabel} · ${m.unit}`,plot.w,23,700,6),yLabelY=statusY+status.height+50;
+ plot.y=yLabelY+yLabel.height+22;
+ const summaryX=1590,summaryW=W-summaryX-margin,x=v=>plot.x+(v-m.domain.xMin)/(m.domain.xMax-m.domain.xMin)*plot.w,y=v=>plot.y+plot.h-(v-m.domain.yMin)/(m.domain.yMax-m.domain.yMin)*plot.h;
+ const xPlans=xTicks.map(t=>plan(t.label,plot.w/5-14,20,400,2)),xTickY=plot.y+plot.h+20,xLabel=plan(`${m.xLabel} · ${m.unit}`,plot.w,23,400,6),xLabelY=xTickY+Math.max(...xPlans.map(p=>p.height))+24;
+ const sections=[{title:'输入摘要',text:`${m.pairs.length} 对读数\n平均差值 ${numericDisplay(m.meanDifference)}\n参考差值 ${numericDisplay(m.referenceDifference)}\n下界 ${numericDisplay(m.lowerLimit)}\n上界 ${numericDisplay(m.upperLimit)}`},{title:'读法',text:'横轴：每对读数的均值\n纵轴：第二次减第一次\n点：每个输入配对\n水平线：给定的参考与界限'},{title:'追溯',text:'两次原始读数、派生坐标与原始来源随输入保留，可逐项核对。'}].map(section=>({...section,heading:plan(section.title,summaryW,28,800,2),body:plan(section.text,summaryW,22,400,12)}));
+ let summaryBottom=plot.y;for(const section of sections){section.y=summaryBottom;summaryBottom+=section.heading.height+18+section.body.height+36}
+ const annotationDefs=[{value:m.upperLimit,color:red,key:'upper',name:'上界'},{value:m.referenceDifference,color:amber,key:'reference',name:'参考'},{value:m.lowerLimit,color:red,key:'lower',name:'下界'}].map(d=>({...d,plan:plan(`${d.name}\n${numericDisplay(d.value)}`,160,19,700,4),desired:y(d.value)}));
+ const annotationHeight=Math.max(...annotationDefs.map(d=>d.plan.height)),annotationGap=annotationHeight+18;
+ const annotations=labelTrack(annotationDefs,{top:plot.y+annotationHeight/2+6,bottom:plot.y+plot.h-annotationHeight/2-6,gap:annotationGap});
+ const ruleY=Math.max(summaryBottom,xLabelY+xLabel.height)+42,noteY=ruleY+28,H=Math.ceil(noteY+note.height+50),s=visualPage(W,H,paper);
+ const draw=(x,y,p,fill=ink,anchor='start',attrs={})=>drawVisualPlan(s,x,y,p,{fill,anchor,...attrs});
+ draw(margin,titleY,title);draw(margin,subY,sub,muted);draw(margin,statusY,status,muted);draw(plot.x,yLabelY,yLabel,muted);
+ for(const [i,tick] of xTicks.entries()){const xx=x(tick.value);stroke(s,[[xx,plot.y],[xx,plot.y+plot.h]],grid,1,{'data-role':'grid'});draw(xx,xTickY,xPlans[i],muted,'middle',{'data-agreement-x-tick':String(tick.value)})}
+ for(const [i,tick] of yTicks.entries()){const yy=y(tick.value);stroke(s,[[plot.x,yy],[plot.x+plot.w,yy]],grid,1,{'data-role':'grid'});draw(plot.x-18,yy-yPlans[i].height/2,yPlans[i],muted,'end',{'data-agreement-y-tick':String(tick.value)})}
+ stroke(s,[[plot.x,plot.y],[plot.x,plot.y+plot.h],[plot.x+plot.w,plot.y+plot.h]],ink,1.5);draw(plot.x+plot.w/2,xLabelY,xLabel,muted,'middle');
+ for(const d of annotations){const yy=y(d.value),labelY=d.placed-d.plan.height/2;
+  stroke(s,[[plot.x,yy],[plot.x+plot.w,yy]],d.color,d.key==='reference'?3:2,{'stroke-dasharray':d.key==='reference'?'':'10 8','data-agreement-line':d.key});
+  // A displaced label gets a leader; the supplied line stays at its exact y.
+  stroke(s,[[plot.x+plot.w,yy],[plot.x+plot.w+8,yy],[plot.x+plot.w+8,d.placed],[plot.x+plot.w+14,d.placed]],d.color,1.2,{'data-agreement-leader':d.key});
+  draw(plot.x+plot.w+18,labelY,d.plan,d.color);
+ }
+ const points=m.pairs.map(p=>{const cx=x(p.mean),cy=y(p.difference);el('circle',{cx,cy,r:8,fill:accent,stroke:paper,'stroke-width':2.5,'data-agreement-point':p.id},s);return {id:p.id,x:cx,y:cy,mean:p.mean,difference:p.difference}});
+ for(const section of sections){draw(summaryX,section.y,section.heading);draw(summaryX,section.y+section.heading.height+18,section.body,muted)}
+ stroke(s,[[margin,ruleY],[W-margin,ruleY]],grid,1);draw(margin,noteY,note,muted);
+ return visualFinish(s,{family:'agreement-plot',width:W,height:H,input,model:m,plot:{...plot,domain:m.domain},points,sourceTraceability:m.sourceTraceability,scope:m.scope});
 }}}

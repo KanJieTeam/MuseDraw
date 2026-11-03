@@ -1,9 +1,11 @@
+import {renderHostedDeployment} from './deployment-host-figures.mjs';
 import {el} from './svg.mjs';
 import {visualPage,visualText,visualLines,visualBlock,visualHeading,visualHeadingPlan,visualFinish,stroke,backedVisualText} from './visual-tools.mjs';
 
 export function deploymentFamilies(h){
  const {fields,list,str,need,unique}=h;
  function deployment(b){
+  if(Object.hasOwn(b,'deploymentTree'))return renderHostedDeployment(b);
   fields(b,['family','title','subtitle','actor','entry','zones','links','note'],'deployment');for(const k of ['title','subtitle','note'])str(b[k],k);fields(b.actor,['id','label'],'actor');str(b.actor.id,'actor.id');str(b.actor.label,'actor.label');fields(b.entry,['id','label','detail'],'entry');for(const k of ['id','label','detail'])str(b.entry[k],'entry.'+k);list(b.zones,2,4,'zones');unique(b.zones,'zones');list(b.links,2,28,'links');unique(b.links,'links');
   const ids=new Set([b.actor.id,b.entry.id]);need(ids.size===2,'actor and entry IDs must differ');const originals=[];
   for(const zone of b.zones){fields(zone,['id','label','components'],'zone');str(zone.label,'zone.label');list(zone.components,1,5,'zone.components');for(const [i,n] of zone.components.entries()){fields(n,['id','label','detail','kind'],'component');for(const k of ['id','label','detail'])str(n[k],'component.'+k);need(!ids.has(n.id),'duplicate deployment object ID');ids.add(n.id);need(['service','data'].includes(n.kind),'component must be service or data');need(n.kind!=='data'||i===zone.components.length-1,'data component must be last in its deployment lane');originals.push({...n,zone:zone.id,index:i})}}
