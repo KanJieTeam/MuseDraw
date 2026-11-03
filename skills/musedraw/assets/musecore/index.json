@@ -2702,6 +2702,13 @@
       "family": "deployment",
       "contentStatus": "synthetic explicit infrastructure and instance relations; no actual deployment claim",
       "reference": "references/musecore-deployment-hosts.md"
+    },
+    {
+      "id": "multi-panel-evidence-demo",
+      "file": "multi-panel-evidence-demo.json",
+      "family": "multi-panel-evidence",
+      "contentStatus": "synthetic teaching evidence with explicit panel roles, shared scale, statuses and source traceability",
+      "reference": "references/musecore-multi-panel-evidence.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",

@@ -1,0 +1,78 @@
+{
+  "family": "multi-panel-evidence",
+  "title": "同一问题的四层证据",
+  "subtitle": "总览先定位变化，比较保持共同标尺，细节与核验各自承担一个问题",
+  "question": "处理后的变化是否稳定，并且有足够的记录支持下一步判断？",
+  "note": "示例为合成教学数据；状态和来源只复述输入声明，不代表统计显著性、因果关系或真实实验结果。",
+  "evidenceKind": "synthetic-teaching",
+  "scalePolicy": "shared-zero",
+  "sources": [
+    {"id":"summary-table","label":"表 S1：组汇总"},
+    {"id":"replicate-range","label":"图 S2：重复范围"},
+    {"id":"method-record","label":"方法记录：时间点与样本定义"},
+    {"id":"review-log","label":"核验记录：限制与待处理项"}
+  ],
+  "groups": [
+    {"id":"control","label":"对照组","color":"#426A8C"},
+    {"id":"treated","label":"处理组","color":"#B65D48"}
+  ],
+  "panels": [
+    {
+      "id":"overview",
+      "role":"overview",
+      "title":"总览｜轨迹先回答变化在哪里",
+      "sampleDefinition":"每个时间点的组汇总；所有量化面板共用零点和纵轴上限。",
+      "sourceIds":["summary-table","method-record"],
+      "kind":"plot",
+      "weight":2,
+      "categories":["基线","处理后 1 h","处理后 6 h","处理后 24 h","恢复期"],
+      "series":[
+        {"groupId":"control","values":[30,36,43,46,41]},
+        {"groupId":"treated","values":[30,50,72,64,48]}
+      ]
+    },
+    {
+      "id":"comparison",
+      "role":"comparison",
+      "title":"比较｜共同时间标尺",
+      "sampleDefinition":"同五个时间点比较处理组与对照组；间隔不代表连续采样。",
+      "sourceIds":["summary-table","method-record"],
+      "kind":"plot",
+      "weight":1,
+      "categories":["基线","处理后 1 h","处理后 6 h","处理后 24 h","恢复期"],
+      "series":[
+        {"groupId":"control","values":[30,36,43,46,41]},
+        {"groupId":"treated","values":[30,50,72,64,48]}
+      ]
+    },
+    {
+      "id":"detail",
+      "role":"detail",
+      "title":"细节｜重复范围是否支持读法",
+      "sampleDefinition":"处理组汇总值与重复测量范围并列；范围由调用者提供。",
+      "sourceIds":["summary-table","replicate-range"],
+      "kind":"plot",
+      "weight":1,
+      "categories":["基线","处理后 1 h","处理后 6 h","处理后 24 h","恢复期"],
+      "series":[
+        {"groupId":"treated","values":[30,50,72,64,48],"uncertainty":{"low":[27,45,65,58,43],"high":[33,56,79,70,54]}}
+      ]
+    },
+    {
+      "id":"validation",
+      "role":"validation",
+      "title":"核验｜证据边界",
+      "sampleDefinition":"逐项记录当前能否支持下一步判断；不把缺口隐藏在总分里。",
+      "sourceIds":["review-log","method-record"],
+      "kind":"table",
+      "weight":1,
+      "columns":[{"id":"record","label":"记录"},{"id":"next","label":"下一步"},{"id":"risk","label":"风险"}],
+      "rows":[
+        {"id":"definition","label":"样本定义","cells":[{"status":"confirmed"},{"status":"confirmed"},{"status":"not-applicable"}]},
+        {"id":"range","label":"重复范围","cells":[{"status":"confirmed"},{"status":"partial","note":"需补充"},{"status":"partial"}]},
+        {"id":"causal","label":"因果解释","cells":[{"status":"missing"},{"status":"blocked"},{"status":"blocked"}]},
+        {"id":"source","label":"来源记录","cells":[{"status":"confirmed"},{"status":"confirmed"},{"status":"not-applicable"}]}
+      ]
+    }
+  ]
+}
