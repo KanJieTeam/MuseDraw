@@ -11,10 +11,11 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','panelCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','panelCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
+ if(input.flowKind!==undefined)enumValue(input.flowKind,['nested-funnel','branch-rejoin'],'flowKind');
  for(const k of ['panelCount','objectCount','labelCount']){need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
  if(input.requestedFormat!==undefined)enumValue(input.requestedFormat,['svg','png','html','pptx'],'requestedFormat');
  const refuse=(code,message,alternatives=[])=>({decision:'refuse',code,message,alternatives,readerTask:input.readerTask,readerQuestion:input.readerQuestion});
@@ -35,13 +36,14 @@ export function routeMuseCore(input){
  }
  if(input.readerTask==='image-evidence')return input.hasSourceAsset?{decision:'preserve-source',family:'source-image',reason:'retain authorized image, channel identity and scale bar'}:refuse('source-image-required','图像证据必须保留源图。',['provide-source-image']);
  const routes={
-  'cohort-flow':{family:'cohort',reason:'start/branch/exclusion/rejoin are the primary relation'},
+  'cohort-flow':{family:'funnel',reference:'references/musecore-workflows.md',reason:'nested cohort counts use the bounded funnel family'},
   'spatial-field':{family:'field',reason:'coordinates and spatial quantity are the primary relation'},
   swimlane:{family:'lanes',reason:'ownership is the primary relation'},
   timeline:{family:'schedule',reason:'one time axis is the primary relation'},
   'entity-chain':{family:'association',reason:'entities and shared keys are the primary relation'}
  };
- if(routes[input.readerTask])return {decision:'route',...routes[input.readerTask]};
+ if(input.readerTask==='cohort-flow'&&input.flowKind==='branch-rejoin')return refuse('cohort-flow-capability-pending','分支、排除、交叉和回流需要独立的守恒流能力；当前 funnel 只接受单一嵌套队列。',['split-into-stages','custom-representation']);
+ if(routes[input.readerTask]&&(!['cohort-flow'].includes(input.readerTask)||input.flowKind==='nested-funnel'))return {decision:'route',...routes[input.readerTask]};
  if(input.readerTask==='chart'){
   if(!input.hasRawData)return refuse('raw-data-required','数据图需要原始或明确汇总数据。',['provide-data','image-evidence']);
   return {decision:'route',family:'data-backend',reason:'choose a data family after declaring axis and uncertainty semantics'};
