@@ -276,6 +276,12 @@ Run `node scripts/representation-lint.mjs scene.json --strict` before delivery;
 an equal-card-wall or missing representation is a failed first draft, not an
 invitation to shrink text or add more boxes.
 
+For executable MuseCore families, use the explicit route contract before choosing
+an implementation: `node scripts/musedraw.mjs core route route-input.json`.
+It requires the reader task, evidence type, raw-data/source/coordinate facts and
+size bounds, then returns a bounded family, source-preservation decision or an
+explainable refusal. It does not classify prose or invent missing geometry.
+
 For a composed office or research report page, [report spreads](references/report-spreads.md)
 provides editable compositions for business, project and research reports,
 with typography, actual data charts and optional artwork. Adapt a composition

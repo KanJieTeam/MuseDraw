@@ -4,6 +4,7 @@
 //   node scripts/musedraw.mjs render scene.json [more.json ...] [--theme id] [--out dir]
 //   node scripts/musedraw.mjs themes
 //   node scripts/musedraw.mjs validate scene.json [more.json ...] [--theme id]
+//   node scripts/musedraw.mjs core route route-input.json
 //
 // Writes diagram@2x.png, diagram.svg and checks.json.
 // (or into --out). Needs `npm install` in this skill folder for fonts and

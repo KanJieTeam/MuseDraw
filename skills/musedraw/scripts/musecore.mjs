@@ -6,6 +6,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {loadPlaywrightInfo} from './engine/export.mjs';
 import {resolveBrowser} from './engine/environment.mjs';
 import {editorialHtml} from './musecore/editorial.mjs';
+import {routeMuseCore} from './musecore/router.mjs';
 
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const ASSETS=path.resolve(HERE,'../assets/musecore');
@@ -69,6 +70,12 @@ export async function main(argv=process.argv.slice(2)){
   const [cmd,...args]=argv,pos=[],flags={};
   for(let i=0;i<args.length;i++){const a=args[i];if(a==='--compact'&&cmd==='list'){flags.compact=true;continue}if(a.startsWith('--')){if(!['--out','--browser','--playwright'].includes(a))throw Error('Unknown option '+a);if(!args[i+1]||args[i+1].startsWith('--'))throw Error(a+' requires a value');flags[a.slice(2)]=args[++i]}else pos.push(a)}
   const catalog=JSON.parse(await fs.readFile(path.join(ASSETS,'index.json'),'utf8'));
+  if(cmd==='route'){
+    if(pos.length!==1)throw Error('Usage: musecore.mjs route route-input.json');
+    const input=JSON.parse(await fs.readFile(path.resolve(pos[0]),'utf8'));
+    console.log(JSON.stringify(routeMuseCore(input),null,2));
+    return;
+  }
   if(cmd==='list'){if(pos.length)throw Error('Use list [--compact]');console.log(JSON.stringify(flags.compact?{version:catalog.version,status:catalog.status,examples:catalog.examples.map(e=>({id:e.id,family:e.family,reference:e.reference??catalog.groups?.find(g=>g.ids.includes(e.family))?.reference}))}:catalog,null,2));return}
   if(cmd==='example'){
     const entry=catalog.examples.find(e=>e.id===pos[0]);if(!entry||pos.length!==1||!flags.out)throw Error('Use example <id> --out <new-input.json>; use list for available examples');
