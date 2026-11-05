@@ -111,7 +111,7 @@ export function routeMuseCore(input){
   timeline:{family:'schedule',reference:'references/musecore-runtime.md',reason:'one time axis is the primary relation'},
   'entity-chain':{family:'association',reference:'references/musecore-runtime.md',reason:'entities and shared keys are the primary relation'}
  };
- if(input.readerTask==='cohort-flow'&&input.flowKind==='branch-rejoin')return refuse('cohort-flow-capability-pending','分支、排除、交叉和回流需要独立的守恒流能力；当前 funnel 只接受单一嵌套队列。',['split-into-stages','custom-representation']);
+ if(input.readerTask==='cohort-flow'&&input.flowKind==='branch-rejoin')return {decision:'route',family:'cohort-branch-rejoin',reference:'references/musecore-cohort-branch-rejoin.md',reason:'explicit branch and rejoin counts with conservation checks'};
  if(routes[input.readerTask]&&(!['cohort-flow'].includes(input.readerTask)||input.flowKind==='nested-funnel'))return {decision:'route',...routes[input.readerTask]};
  if(input.readerTask==='chart'){
   if(!input.hasRawData)return refuse('raw-data-required','数据图需要原始或明确汇总数据。',['provide-data','image-evidence']);

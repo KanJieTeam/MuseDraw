@@ -33,7 +33,7 @@ test('unknown or malformed tasks do not silently fall back',()=>{
  assert.throws(()=>routeMuseCore({...base,readerTask:'unknown'}),/readerTask must be one of/);
  const r=routeMuseCore({...base,readerTask:'chart',evidenceType:'table',hasRawData:true});assert.equal(r.decision,'select-data-grammar');assert.equal(Object.hasOwn(r,'family'),false);
  const u=routeMuseCore({...base,readerTask:'condition-comparison',hasSharedSubstrate:false});assert.equal(u.code,'shared-substrate-required');
- const branch=routeMuseCore({...base,readerTask:'cohort-flow',flowKind:'branch-rejoin'});assert.equal(branch.code,'cohort-flow-capability-pending');
+ const branch=routeMuseCore({...base,readerTask:'cohort-flow',flowKind:'branch-rejoin'});assert.equal(branch.decision,'route');assert.equal(branch.family,'cohort-branch-rejoin');
 });
 
 test('every routed candidate names an executable registered family and an existing scope reference',()=>{

@@ -1,0 +1,25 @@
+{
+  "family":"cohort-branch-rejoin",
+  "title":"样本队列从入组到复核的分支与汇合",
+  "subtitle":"每个节点给出实际人数；分支边明确排除或转入数量，汇合前后保持守恒。",
+  "note":"合成教学数据。分支不表示未登记的重叠，汇合不表示因果；若来源不能说明人数去向，应拒绝绘制而不是猜测。",
+  "unit":"人",
+  "evidenceKind":"synthetic-teaching",
+  "sources":[{"id":"registry","label":"登记表：入口与最终复核人数"},{"id":"screen","label":"筛选记录：排除数量"},{"id":"followup","label":"随访表：两条复核路径"}],
+  "nodes":[
+    {"id":"entry","label":"入组队列","count":240,"role":"entry","sourceIds":["registry"]},
+    {"id":"screen","label":"资格筛选","count":240,"role":"branch","sourceIds":["screen"]},
+    {"id":"eligible","label":"符合条件","count":180,"role":"stage","sourceIds":["screen"]},
+    {"id":"excluded","label":"排除后登记","count":60,"role":"stage","sourceIds":["screen"]},
+    {"id":"review","label":"集中复核","count":240,"role":"rejoin","sourceIds":["followup"]},
+    {"id":"exit","label":"完成复核","count":240,"role":"exit","sourceIds":["registry","followup"]}
+  ],
+  "links":[
+    {"id":"entry-screen","from":"entry","to":"screen","amount":240,"kind":"flow","label":"进入筛选","sourceIds":["registry","screen"]},
+    {"id":"screen-eligible","from":"screen","to":"eligible","amount":180,"kind":"split","label":"符合","sourceIds":["screen"]},
+    {"id":"screen-excluded","from":"screen","to":"excluded","amount":60,"kind":"split","label":"排除","sourceIds":["screen"]},
+    {"id":"eligible-review","from":"eligible","to":"review","amount":180,"kind":"rejoin","label":"转入复核","sourceIds":["followup"]},
+    {"id":"excluded-review","from":"excluded","to":"review","amount":60,"kind":"rejoin","label":"补充复核","sourceIds":["followup"]},
+    {"id":"review-exit","from":"review","to":"exit","amount":240,"kind":"flow","label":"完成","sourceIds":["registry","followup"]}
+  ]
+}

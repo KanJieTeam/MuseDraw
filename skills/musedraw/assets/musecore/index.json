@@ -2723,6 +2723,13 @@
     "family": "mechanism-chain",
     "contentStatus": "synthetic teaching mechanism with ordered scales, declared evidence modes and source lineage",
     "reference": "references/musecore-mechanism-chain.md"
+    },
+    {
+      "id": "cohort-branch-rejoin-demo",
+      "file": "cohort-branch-rejoin-demo.json",
+      "family": "cohort-branch-rejoin",
+      "contentStatus": "synthetic teaching cohort flow with explicit branch/rejoin conservation and source lineage",
+      "reference": "references/musecore-cohort-branch-rejoin.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
