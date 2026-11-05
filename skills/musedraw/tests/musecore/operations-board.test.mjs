@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+import path from 'node:path';
 import {operationsBoardModel} from '../../scripts/musecore/operations-board-models.mjs';
 import {editorHtml} from '../../scripts/musecore.mjs';
 import {loadPlaywrightInfo} from '../../scripts/engine/export.mjs';
@@ -43,9 +44,10 @@ test('operations board recomputes an eight-item CJK queue under real font pressu
   for(const pressure of [0,40]){
    await page.evaluate(({pressure})=>{window.MUSECORE_READY=false;if(pressure&&!window.__boardPressure){const old=CanvasRenderingContext2D.prototype.measureText;CanvasRenderingContext2D.prototype.measureText=function(t){const m=old.call(this,t);return new Proxy(m,{get(o,k){if(k==='width'||k==='fontBoundingBoxAscent')return Reflect.get(o,k,o)+pressure;return Reflect.get(o,k,o)}})};window.__boardPressure=true;}document.getElementById('generate').click()},{pressure});
    await page.waitForFunction(()=>window.MUSECORE_READY===true);const result=await page.evaluate(()=>window.MUSECORE_RESULT);assert.deepEqual(result.findings,[],`pressure ${pressure}`);assert.equal(result.geometry.family,'operations-board');assert.equal(result.geometry.queue.length,8);assert(result.geometry.height>1120,'queue height must be content-sized');
-   const facts=await page.evaluate(()=>{const svg=document.querySelector('#output svg'),g=JSON.parse(svg.dataset.geometry);const texts=[...svg.querySelectorAll('text')].map(e=>{const b=e.getBBox();return {text:e.textContent,x:b.x,y:b.y,w:b.width,h:b.height}});return {svgW:g.width,svgH:g.height,texts,queueMarks:svg.querySelectorAll('[data-queue-state]').length,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth}});
+   const facts=await page.evaluate(()=>{const svg=document.querySelector('#output svg'),g=JSON.parse(svg.dataset.geometry);const texts=[...svg.querySelectorAll('text')].map(e=>{const b=e.getBBox();return {text:e.textContent,x:b.x,y:b.y,w:b.width,h:b.height}});return {svgW:g.width,svgH:g.height,texts,queueMarks:svg.querySelectorAll('[data-queue-state]').length,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,svg:svg.outerHTML}});
    assert.equal(facts.queueMarks,8);for(const t of facts.texts){assert(t.x>=-.5&&t.y>=-.5&&t.x+t.w<=result.geometry.width+.5,`text width overflow: ${t.text}`);assert(t.y+t.h<=result.geometry.height+.5,`text height overflow: ${t.text}`)}
    for(const width of [1024,390]){await page.setViewportSize({width,height:1800});const narrow=await page.evaluate(()=>({bodyScrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,outputScrollWidth:document.querySelector('#output').scrollWidth,svgWidth:document.querySelector('#output svg').viewBox.baseVal.width}));assert.equal(narrow.clientWidth,width);assert(narrow.bodyScrollWidth<=width+1,`body overflow at ${width}px`);assert(narrow.outputScrollWidth>=narrow.svgWidth,`narrow viewport clipped board at ${width}px`)}
+   if(process.env.MUSECORE_OPERATIONS_OUT){const dir=path.join(process.env.MUSECORE_OPERATIONS_OUT,pressure?'eight-cjk-plus40':'eight-cjk-normal');await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'diagram.svg'),facts.svg);await fs.writeFile(path.join(dir,'checks.json'),JSON.stringify({geometry:result.geometry,texts:facts.texts,fontLoaded:!!fontBytes,pressure},null,2));await page.setViewportSize({width:result.geometry.width+40,height:1800});await page.locator('#output svg').screenshot({path:path.join(dir,'diagram.png')})}
   }
   await page.close();
  }finally{await browser.close()}
