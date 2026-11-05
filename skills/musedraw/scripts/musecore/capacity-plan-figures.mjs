@@ -7,7 +7,11 @@ export function capacityPlanFamilies(){
   const m=capacityPlanModel(input),W=1900,margin=86,labelW=300,gridX=margin+labelW,gridW=W-gridX-margin,colGap=18,colW=(gridW-(m.periods.length-1)*colGap)/m.periods.length;
   const paper='#F6F3EA',ink='#1C2B31',muted='#667478',rule='#BCC2BD',blue='#2A6672',amber='#C97842',red='#B24D4B',green='#5A806F';
   const plan=(text,width,size=24,weight=400,max=3)=>{const lines=visualLines(text,width,{size,weight,max});lines.height=lines.length*size*1.3;return lines};
-  const title=plan(m.title,W-2*margin,58,800,2),sub=plan(`${m.subtitle} · ${m.dataStatus}`,W-2*margin,24,400,3),headerH=104;
+  // subtitle and dataStatus are validated independently by the model, then
+  // rendered as one line-wrapped block.  Their combined legal maximum is
+  // wider than three lines at the display size, so reserve enough lines for
+  // the full authored content instead of rejecting valid input.
+  const title=plan(m.title,W-2*margin,58,800,2),sub=plan(`${m.subtitle} · ${m.dataStatus}`,W-2*margin,24,400,6),headerH=104;
   const rowPlans=m.streams.map(s=>{const label=plan(s.label,labelW-28,28,700,2), cells=s.values.map(v=>{const note=v.note?plan(v.note,colW-24,16,400,2):null;return {note}});return {label,cells}});
   const rowH=rowPlans.map(r=>Math.max(185,r.label.height+70,...r.cells.map(c=>c.note?c.note.height+162:0)));
   const legendH=76,note=plan(m.note,W-2*margin,21,400,4),H=58+title.height+14+sub.height+30+headerH+rowH.reduce((a,b)=>a+b,0)+legendH+note.height+82;

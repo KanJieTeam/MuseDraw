@@ -36,3 +36,9 @@ test('capacity plan renders SVG/PNG at desktop, narrow viewports and CJK ascent 
  }finally{await browser.close()}
 });
 
+test('capacity plan renders the full legal subtitle and status lengths in a browser',async()=>{
+ const input=clone();input.subtitle='研'.repeat(180);input.dataStatus='数'.repeat(100);
+ const html=await editorHtml(input),{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
+ try{const page=await browser.newPage({viewport:{width:390,height:1800}});await page.setContent(html);await page.waitForFunction(()=>window.MUSECORE_READY===true);const result=await page.evaluate(()=>({error:document.querySelector('#error')?.textContent||'',audit:window.MUSECORE_RESULT?.findings||[],height:document.querySelector('#output svg')?.viewBox.baseVal.height||0}));assert.equal(result.error,'');assert.deepEqual(result.audit,[]);assert(result.height>1100)}finally{await browser.close()}
+});
+
