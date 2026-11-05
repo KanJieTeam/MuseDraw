@@ -13,6 +13,7 @@ test('explicit reader task routes to a bounded family',()=>{
  const a=routeMuseCore({...base,readerTask:'apparatus-measurement',evidenceType:'apparatus',hasCoordinates:true});assert.equal(a.family,'device-measurement');
  const c=routeMuseCore({...base,readerTask:'cohort-flow',flowKind:'nested-funnel'});assert.equal(c.family,'funnel');
  const m=routeMuseCore({...base,readerTask:'mechanism-chain',evidenceType:'mechanism'});assert.equal(m.family,'mechanism-chain');
+ const o=routeMuseCore({...base,readerTask:'operations-board',evidenceType:'status'});assert.equal(o.family,'operations-board');
 });
 
 test('router refuses missing evidence facts instead of inventing them',()=>{
@@ -39,7 +40,8 @@ test('every routed candidate names an executable registered family and an existi
   ['swimlane',{evidenceType:'workflow'},'lanes'],
   ['timeline',{evidenceType:'workflow'},'schedule'],
   ['entity-chain',{evidenceType:'workflow'},'association'],
-  ['mechanism-chain',{evidenceType:'mechanism'},'mechanism-chain']
+  ['mechanism-chain',{evidenceType:'mechanism'},'mechanism-chain'],
+  ['operations-board',{evidenceType:'status'},'operations-board']
  ];
  for(const [readerTask,extra,family] of cases){
   const result=routeMuseCore({...base,readerTask,...extra});
@@ -81,7 +83,7 @@ test('generic charts request grammar selection and never report a fabricated exe
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
- for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','image-evidence','chart']){
+ for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','image-evidence','chart']){
   const result=routeMuseCore({...base,readerTask,requestedFormat:'pptx'});
   assert.equal(result.decision,'refuse');assert.equal(result.code,'unsupported-output-format');
  }
@@ -96,4 +98,6 @@ test('malformed declarations and unqualified cohort requests remain explicit',()
  assert.throws(()=>routeMuseCore({...base,readerTask:'spatial-field',fieldKind:'temperature-map'}),/fieldKind/);
  assert.equal(routeMuseCore({...base,readerTask:'mechanism-chain',evidenceType:'quantitative'}).code,'mechanism-evidence-required');
  assert.equal(routeMuseCore({...base,readerTask:'mechanism-chain',evidenceType:'mechanism',hasRawData:false}).code,'raw-data-required');
+ assert.equal(routeMuseCore({...base,readerTask:'operations-board',evidenceType:'quantitative'}).code,'status-evidence-required');
+ assert.equal(routeMuseCore({...base,readerTask:'operations-board',evidenceType:'status',hasRawData:false}).code,'raw-data-required');
 });

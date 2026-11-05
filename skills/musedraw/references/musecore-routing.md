@@ -21,6 +21,7 @@ node skills/musedraw/scripts/musedraw.mjs core route route-input.json
 按任务追加的声明：
 
 - `multi-panel-evidence` 必须有 `plotPanelCount`，取值为 1 到 `panelCount`，并声明有数据。当前模型必须包含至少一个正值数据图，只接受数据图、状态表、说明文字，不接受纯表格/纯文字或源图面板。声明不等于验证，实际数据仍须通过模型的共用类别、数值域及来源检查。
+- `operations-board` 必须声明 `evidenceType: "status"` 并有原始或汇总趋势数据。它只接受一个当前指标、2–4 个登记状态信号、一个 3–12 点趋势和 2–8 个明确的队列事项；不会把主题词推断成实时状态、负责人或优先级。
 - `cohort-flow` 必须声明 `flowKind: "nested-funnel"` 才能选择 `funnel`。`branch-rejoin` 明确拒绝，未声明时不猜测。funnel 的 3–8 层、计数非递增和嵌套队列含义由对应契约继续检查。
 - `spatial-field` 必须声明坐标、数据以及 `fieldKind: "regular-height-grid"`，才会选择真实存在的 `contour-field`。这仅是规则高程网格的候选路线；以米为单位、网格间距、等高线拓扑等由模型验证。其他场量或散点采样不能直接套用高程能力。
 

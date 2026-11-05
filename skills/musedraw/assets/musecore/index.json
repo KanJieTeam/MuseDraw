@@ -2697,6 +2697,13 @@
       "reference": "references/musecore-dashboard-focus.md"
     },
     {
+      "id": "operations-board-demo",
+      "file": "operations-board-demo.json",
+      "family": "operations-board",
+      "contentStatus": "original synthetic operational snapshot with explicit signals, measured trend and work queue",
+      "reference": "references/musecore-operations-board.md"
+    },
+    {
       "id": "order-service-deployment-hosts",
       "file": "order-service-deployment-hosts.json",
       "family": "deployment",

@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -51,6 +51,11 @@ export function routeMuseCore(input){
   if(!input.hasRawData)return refuse('raw-data-required','等高线能力需要明确的高程网格数据。',['provide-data','image-evidence']);
   if(input.fieldKind!=='regular-height-grid')return refuse('spatial-field-scope-required','当前路由仅支持以米为单位的规则高程网格；其他场量或采样结构需另选能力。',['declare-regular-height-grid','custom-representation']);
   return {decision:'route',family:'contour-field',reference:'references/musecore-terrain-response.md',reason:'explicit regular height grid; the family validates metric units, spacing and topology'};
+ }
+ if(input.readerTask==='operations-board'){
+  if(input.evidenceType!=='status')return refuse('status-evidence-required','运营看板需要声明 status 证据类型；不要把主题词当成实时状态。',['declare-status-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','运营看板需要显式趋势观测和登记状态；没有数据不能补画当前态势。',['provide-data','custom-representation']);
+  return {decision:'route',family:'operations-board',reference:'references/musecore-operations-board.md',reason:'one declared operational headline, measured trend and explicit work queue'};
  }
  const routes={
   'cohort-flow':{family:'funnel',reference:'references/musecore-spatial-data.md',reason:'nested cohort counts use the bounded funnel family'},

@@ -1,0 +1,22 @@
+{
+  "family": "operations-board",
+  "title": "交付运行看板",
+  "subtitle": "把当前态势、变化方向和下一步动作放在同一条阅读路径上",
+  "asOf": "2026-11-05 14:00",
+  "headline": "86",
+  "headlineUnit": "% 按期完成",
+  "headlineState": "watch",
+  "signals": [
+    {"label":"进行中","value":12,"unit":"项","state":"steady","detail":"按当前排程推进"},
+    {"label":"需关注","value":3,"unit":"项","state":"watch","detail":"今日内确认阻塞点"},
+    {"label":"已逾期","value":1,"unit":"项","state":"critical","detail":"已分派负责人"}
+  ],
+  "trend": {"unit":"完成率 %","period":"近 7 个工作日","labels":["周一","周二","周三","周四","周五","周六","周日"],"values":[72,75,74,79,81,84,86],"emphasis":"按期完成"},
+  "queue": [
+    {"id":"Q-01","label":"确认数据口径","owner":"数据组","due":"今天 16:00","state":"now"},
+    {"id":"Q-02","label":"补齐验收截图","owner":"报告组","due":"明天 11:00","state":"next"},
+    {"id":"Q-03","label":"复核高风险项","owner":"项目组","due":"明天 15:00","state":"next"},
+    {"id":"Q-04","label":"处理接口回退","owner":"平台组","due":"已逾期","state":"held"}
+  ],
+  "note":"状态来自登记时点；趋势只描述观测值，不替代项目复盘。"
+}
