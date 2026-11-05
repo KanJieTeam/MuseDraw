@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,12 +11,13 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','panelCount','plotPanelCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','panelCount','plotPanelCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
  if(input.flowKind!==undefined)enumValue(input.flowKind,['nested-funnel','branch-rejoin'],'flowKind');
  if(input.fieldKind!==undefined)enumValue(input.fieldKind,['regular-height-grid','other-spatial-field'],'fieldKind');
+ if(input.riskKind!==undefined)enumValue(input.riskKind,['likelihood-impact','other-risk-register'],'riskKind');
  for(const k of ['panelCount','objectCount','labelCount']){need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
  if(input.plotPanelCount!==undefined)need(Number.isInteger(input.plotPanelCount)&&input.plotPanelCount>=0,'plotPanelCount must be a nonnegative integer');
  if(input.requestedFormat!==undefined)enumValue(input.requestedFormat,['svg','png','html','pptx'],'requestedFormat');
@@ -56,6 +57,13 @@ export function routeMuseCore(input){
   if(input.evidenceType!=='status')return refuse('status-evidence-required','运营看板需要声明 status 证据类型；不要把主题词当成实时状态。',['declare-status-evidence','custom-representation']);
   if(!input.hasRawData)return refuse('raw-data-required','运营看板需要显式趋势观测和登记状态；没有数据不能补画当前态势。',['provide-data','custom-representation']);
   return {decision:'route',family:'operations-board',reference:'references/musecore-operations-board.md',reason:'one declared operational headline, measured trend and explicit work queue'};
+ }
+ if(input.readerTask==='risk-matrix'){
+  if(input.evidenceType!=='status')return refuse('status-evidence-required','风险矩阵需要声明 status 证据类型；不要把主题词当成风险登记。',['declare-status-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','风险矩阵需要明确的可能性、影响等级和登记事项；没有数据不能补画风险。',['provide-risk-register','custom-representation']);
+  if(input.riskKind!=='likelihood-impact')return refuse('risk-matrix-scope-required','当前风险矩阵只支持已声明的“可能性 × 影响”二维登记；其他风险结构需另选能力。',['declare-likelihood-impact','custom-representation']);
+  if(input.objectCount<1||input.objectCount>18)return refuse('risk-item-count-out-of-range','当前风险矩阵只接受 1–18 个登记事项；超出后应拆页或换密集清单。',['split-page','evidence-matrix']);
+  return {decision:'route',family:'risk-matrix',reference:'references/musecore-risk-matrix.md',reason:'explicit likelihood × impact register with supplied axis scores and actions'};
  }
  if(input.readerTask==='measurement-scales'){
   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);
