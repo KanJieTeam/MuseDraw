@@ -26,6 +26,7 @@ node skills/musedraw/scripts/musedraw.mjs core route route-input.json
 - `decision-tree` 必须声明 `evidenceType: "workflow"`、`decisionKind: "explicit-branch"` 和 3–18 个节点。当前能力只接受一个问题、相邻层级的显式分支和可达出口；不会从主题词推断概率、置信度、责任人或推荐结论。
 - `evidence-matrix` 必须声明 `evidenceType: "table"`、`hasRawData: true`、`matrixKind: "evidence-status"`，并明确 `columnCount` 为 2–5、`rowCount` 为 3–10。每格只能是已确认、部分证据、未提供、待处理或不适用等登记状态；不会自动计算得分、排名、完整度或因果。
 - `capacity-plan` 必须声明 `evidenceType: "quantitative"`、`hasRawData: true`、`capacityKind: "period-stream-gap"`，并明确 `periodCount` 为 2–8、`streamCount` 为 1–6。程序只计算 `capacity - demand`；不会把缺口推断成延期、人员建议、预测或质量结论。
+- `dashboard-focus` 必须声明 `dashboardKind: "single-question"`、`hasRawData: true` 和一个 `heroRelation`（`spatial`、`process`、`comparison`、`trend`、`inventory`），并保持 2–8 个主视图/辅助证据对象。当前看板只服务一个运营问题；不会用装饰主图、重复 KPI 或未声明时点冒充态势。
 - `measurement-scales` 必须声明 `evidenceType: "quantitative"` 和已提供的尺度事实。类别、等间隔、零点和单位必须由输入明确给出；程序不从变量名称猜测定类、定序、定距或定比。
 - `cohort-flow` 必须声明 `flowKind: "nested-funnel"` 才能选择 `funnel`。`branch-rejoin` 明确拒绝，未声明时不猜测。funnel 的 3–8 层、计数非递增和嵌套队列含义由对应契约继续检查。
 - `spatial-field` 必须声明坐标、数据以及 `fieldKind: "regular-height-grid"`，才会选择真实存在的 `contour-field`。这仅是规则高程网格的候选路线；以米为单位、网格间距、等高线拓扑等由模型验证。其他场量或散点采样不能直接套用高程能力。

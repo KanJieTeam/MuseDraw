@@ -18,6 +18,7 @@ test('explicit reader task routes to a bounded family',()=>{
  const dt=routeMuseCore({...base,readerTask:'decision-tree',evidenceType:'workflow',decisionKind:'explicit-branch',hasRawData:false,objectCount:7});assert.equal(dt.family,'decision-tree');
  const em=routeMuseCore({...base,readerTask:'evidence-matrix',evidenceType:'table',matrixKind:'evidence-status',columnCount:3,rowCount:5});assert.equal(em.family,'evidence-matrix');
  const cp=routeMuseCore({...base,readerTask:'capacity-plan',evidenceType:'quantitative',capacityKind:'period-stream-gap',periodCount:4,streamCount:3});assert.equal(cp.family,'capacity-plan');
+ const db=routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'status',dashboardKind:'single-question',heroRelation:'trend',objectCount:4});assert.equal(db.family,'dashboard-focus');
  const ms=routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'quantitative'});assert.equal(ms.family,'measurement-scales');
 });
 
@@ -51,6 +52,7 @@ test('every routed candidate names an executable registered family and an existi
   ,['decision-tree',{evidenceType:'workflow',decisionKind:'explicit-branch',hasRawData:false,objectCount:7},'decision-tree']
   ,['evidence-matrix',{evidenceType:'table',matrixKind:'evidence-status',columnCount:3,rowCount:5},'evidence-matrix']
   ,['capacity-plan',{evidenceType:'quantitative',capacityKind:'period-stream-gap',periodCount:4,streamCount:3},'capacity-plan']
+  ,['dashboard-focus',{evidenceType:'status',dashboardKind:'single-question',heroRelation:'trend',objectCount:4},'dashboard-focus']
   ,['measurement-scales',{evidenceType:'quantitative'},'measurement-scales']
  ];
  for(const [readerTask,extra,family] of cases){
@@ -93,7 +95,7 @@ test('generic charts request grammar selection and never report a fabricated exe
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
- for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','measurement-scales','image-evidence','chart']){
+ for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','measurement-scales','image-evidence','chart']){
   const result=routeMuseCore({...base,readerTask,requestedFormat:'pptx'});
   assert.equal(result.decision,'refuse');assert.equal(result.code,'unsupported-output-format');
  }
@@ -127,6 +129,11 @@ test('malformed declarations and unqualified cohort requests remain explicit',()
  assert.equal(routeMuseCore({...base,readerTask:'capacity-plan',evidenceType:'quantitative',periodCount:4,streamCount:3}).code,'capacity-plan-scope-required');
  assert.equal(routeMuseCore({...base,readerTask:'capacity-plan',evidenceType:'quantitative',capacityKind:'period-stream-gap',periodCount:9,streamCount:3}).code,'capacity-period-count-out-of-range');
  assert.equal(routeMuseCore({...base,readerTask:'capacity-plan',evidenceType:'quantitative',capacityKind:'period-stream-gap',periodCount:4,streamCount:7}).code,'capacity-stream-count-out-of-range');
+ assert.equal(routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'table',dashboardKind:'single-question',heroRelation:'trend',objectCount:4}).code,'dashboard-evidence-required');
+ assert.equal(routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'status',dashboardKind:'single-question',heroRelation:'trend',hasRawData:false,objectCount:4}).code,'raw-data-required');
+ assert.equal(routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'status',heroRelation:'trend',objectCount:4}).code,'dashboard-focus-scope-required');
+ assert.equal(routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'status',dashboardKind:'single-question',objectCount:4}).code,'hero-relation-required');
+ assert.equal(routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'status',dashboardKind:'single-question',heroRelation:'trend',objectCount:9}).code,'dashboard-object-count-out-of-range');
  assert.equal(routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'table'}).code,'quantitative-evidence-required');
  assert.equal(routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'quantitative',hasRawData:false}).code,'raw-data-required');
 });

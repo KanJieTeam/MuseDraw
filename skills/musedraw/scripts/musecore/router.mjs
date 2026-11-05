@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,7 +11,7 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','panelCount','plotPanelCount','columnCount','rowCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','dashboardKind','heroRelation','panelCount','plotPanelCount','columnCount','rowCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
@@ -21,6 +21,8 @@ export function routeMuseCore(input){
  if(input.decisionKind!==undefined)enumValue(input.decisionKind,['explicit-branch','other-decision'],'decisionKind');
  if(input.matrixKind!==undefined)enumValue(input.matrixKind,['evidence-status','other-matrix'],'matrixKind');
  if(input.capacityKind!==undefined)enumValue(input.capacityKind,['period-stream-gap','other-capacity'],'capacityKind');
+ if(input.dashboardKind!==undefined)enumValue(input.dashboardKind,['single-question','other-dashboard'],'dashboardKind');
+ if(input.heroRelation!==undefined)enumValue(input.heroRelation,['spatial','process','comparison','trend','inventory'],'heroRelation');
  for(const k of ['panelCount','objectCount','labelCount','columnCount','rowCount','periodCount','streamCount']){if(input[k]!==undefined)need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
  if(input.plotPanelCount!==undefined)need(Number.isInteger(input.plotPanelCount)&&input.plotPanelCount>=0,'plotPanelCount must be a nonnegative integer');
  if(input.requestedFormat!==undefined)enumValue(input.requestedFormat,['svg','png','html','pptx'],'requestedFormat');
@@ -89,6 +91,14 @@ export function routeMuseCore(input){
   if(!Number.isInteger(input.periodCount)||input.periodCount<2||input.periodCount>8)return refuse('capacity-period-count-out-of-range','容量轨道只接受 2–8 个周期。',['split-periods','custom-representation']);
   if(!Number.isInteger(input.streamCount)||input.streamCount<1||input.streamCount>6)return refuse('capacity-stream-count-out-of-range','容量轨道只接受 1–6 条工作流。',['split-streams','custom-representation']);
   return {decision:'route',family:'capacity-plan',reference:'references/musecore-capacity-plan.md',reason:'explicit period-by-stream demand and capacity values with computed gaps'};
+ }
+ if(input.readerTask==='dashboard-focus'){
+  if(!['quantitative','status'].includes(input.evidenceType))return refuse('dashboard-evidence-required','运营看板需要声明 quantitative 或 status 证据类型；不要把主题词当成运营事实。',['declare-dashboard-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','运营看板需要明确的主视图数据、指标和时点；没有数据不能补画态势。',['provide-dashboard-data','custom-representation']);
+  if(input.dashboardKind!=='single-question')return refuse('dashboard-focus-scope-required','当前看板只支持一个运营问题对应一个主视图；多问题总览需拆成多个看板。',['declare-single-question','split-dashboard']);
+  if(input.heroRelation===undefined)return refuse('hero-relation-required','请声明主视图关系：spatial、process、comparison、trend 或 inventory。',['declare-hero-relation']);
+  if(input.objectCount<2||input.objectCount>8)return refuse('dashboard-object-count-out-of-range','当前看板只接受 2–8 个主视图与辅助证据对象。',['split-dashboard','custom-representation']);
+  return {decision:'route',family:'dashboard-focus',reference:'references/musecore-dashboard-focus.md',reason:'one explicit operational question with one matching hero relation and bounded support evidence'};
  }
  if(input.readerTask==='measurement-scales'){
   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);
