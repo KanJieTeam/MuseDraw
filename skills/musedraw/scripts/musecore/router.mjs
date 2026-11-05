@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -56,6 +56,11 @@ export function routeMuseCore(input){
   if(input.evidenceType!=='status')return refuse('status-evidence-required','运营看板需要声明 status 证据类型；不要把主题词当成实时状态。',['declare-status-evidence','custom-representation']);
   if(!input.hasRawData)return refuse('raw-data-required','运营看板需要显式趋势观测和登记状态；没有数据不能补画当前态势。',['provide-data','custom-representation']);
   return {decision:'route',family:'operations-board',reference:'references/musecore-operations-board.md',reason:'one declared operational headline, measured trend and explicit work queue'};
+ }
+ if(input.readerTask==='measurement-scales'){
+  if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','测量尺度示例需要调用者提供明确的类别、单位、等间隔和零点声明。',['provide-data','custom-representation']);
+  return {decision:'route',family:'measurement-scales',reference:'references/musecore-chance-scales.md',reason:'explicit nominal, ordinal, interval or ratio declarations before comparison'};
  }
  const routes={
   'cohort-flow':{family:'funnel',reference:'references/musecore-spatial-data.md',reason:'nested cohort counts use the bounded funnel family'},
