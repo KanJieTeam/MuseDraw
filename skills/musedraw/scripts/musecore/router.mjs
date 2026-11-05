@@ -115,6 +115,7 @@ export function routeMuseCore(input){
   return {decision:'route',family:'calibration-plot',reference:'references/musecore-calibration-plot.md',reason:'explicit observed-predicted pairs with supplied intervals and condition summaries'};
  }
  if(input.readerTask==='portfolio-health'){
+  if(!Number.isInteger(input.objectCount))return refuse('object-count-required','项目健康地图需要声明工作流数量，必须与输入登记一致。',['declare-object-count']);
   if(input.evidenceType!=='status')return refuse('status-evidence-required','项目健康地图需要声明 status 证据类型；不要从主题词推断健康状态。',['declare-status-evidence','custom-representation']);
   if(!input.hasRawData)return refuse('raw-data-required','项目健康地图需要明确的阶段、健康状态、负责人、下一节点和截止偏移。',['provide-portfolio-data','custom-representation']);
   if(input.objectCount<1||input.objectCount>16)return refuse('portfolio-stream-count-out-of-range','项目健康地图只接受 1–16 条工作流；超出后应拆页或改用清单。',['split-portfolio','custom-representation']);
@@ -140,4 +141,5 @@ export function routeMuseCore(input){
  }
  return refuse('no-bounded-family','没有匹配的窄能力；必须声明 custom representation，不得静默回退到卡片网格。',['custom-representation','clarify-reader-task']);
 }
+
 
