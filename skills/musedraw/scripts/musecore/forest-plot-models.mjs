@@ -1,3 +1,5 @@
+import {paddedNumericExtent} from './quantitative.mjs';
+
 const fNeed=(ok,msg)=>{if(!ok)throw Error('forest-plot: '+msg)};
 function fFields(o,keys,label){fNeed(o&&typeof o==='object'&&!Array.isArray(o),label+' requires object');for(const k of Object.keys(o))fNeed(keys.includes(k),label+'.'+k+': unsupported field')}
 function fText(v,label,max,empty=false){fNeed(typeof v==='string'&&(empty||v.trim())&&[...v].length<=max,label+': nonempty text, at most '+max+' characters')}
@@ -23,8 +25,12 @@ export function forestPlotModel(b){
   if(row.weight!==undefined)fNum(row.weight,'row.weight',0,1e6);fText(row.source,'row.source',160);
   return {...row,index,weight:row.weight??1};
  });
- const all=[b.reference,...rows.flatMap(r=>[r.low,r.high,r.estimate])],rawMin=Math.min(...all),rawMax=Math.max(...all),span=Math.max(rawMax-rawMin,1),pad=span*.08;
- const min=rawMin-pad,max=rawMax+pad,weightMax=Math.max(...rows.map(r=>r.weight));
+ // Keep the physical scale of the supplied values. A unit-sized fallback makes
+ // micro/effect-size intervals collapse onto the reference line and turns all
+ // ticks into the same rounded label. Constant data are handled by the shared
+ // extent helper; otherwise padding is relative to the observed span.
+ const all=[b.reference,...rows.flatMap(r=>[r.low,r.high,r.estimate])],extent=paddedNumericExtent(all),weightMax=Math.max(...rows.map(r=>r.weight));
+ const min=extent.min,max=extent.max;
  return {family:'forest-plot',title:b.title,subtitle:b.subtitle,xLabel:b.xLabel,unit:b.unit,reference:b.reference,intervalLabel:b.intervalLabel,dataStatus:b.dataStatus,rows,note:b.note??'',domain:{min,max},weightMax,scope:'Explicit effect estimates, interval endpoints and optional display weights only. Intervals are not assigned a confidence level or probability; no pooled estimate, heterogeneity, multiplicity correction, causality or clinical recommendation is inferred.',sourceTraceability:rows.map(r=>({id:r.id,label:r.label,source:r.source}))};
 }
 
