@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -18,7 +18,7 @@ export function routeMuseCore(input){
  if(input.flowKind!==undefined)enumValue(input.flowKind,['nested-funnel','branch-rejoin'],'flowKind');
  if(input.fieldKind!==undefined)enumValue(input.fieldKind,['regular-height-grid','other-spatial-field'],'fieldKind');
  if(input.riskKind!==undefined)enumValue(input.riskKind,['likelihood-impact','other-risk-register'],'riskKind');
- if(input.decisionKind!==undefined)enumValue(input.decisionKind,['explicit-branch','other-decision'],'decisionKind');
+ if(input.decisionKind!==undefined)enumValue(input.decisionKind,['explicit-branch','register','other-decision'],'decisionKind');
  if(input.matrixKind!==undefined)enumValue(input.matrixKind,['evidence-status','other-matrix'],'matrixKind');
  if(input.capacityKind!==undefined)enumValue(input.capacityKind,['period-stream-gap','other-capacity'],'capacityKind');
  if(input.dashboardKind!==undefined)enumValue(input.dashboardKind,['single-question','other-dashboard'],'dashboardKind');
@@ -99,6 +99,13 @@ export function routeMuseCore(input){
   if(input.heroRelation===undefined)return refuse('hero-relation-required','请声明主视图关系：spatial、process、comparison、trend 或 inventory。',['declare-hero-relation']);
   if(input.objectCount<2||input.objectCount>8)return refuse('dashboard-object-count-out-of-range','当前看板只接受 2–8 个主视图与辅助证据对象。',['split-dashboard','custom-representation']);
   return {decision:'route',family:'dashboard-focus',reference:'references/musecore-dashboard-focus.md',reason:'one explicit operational question with one matching hero relation and bounded support evidence'};
+ }
+ if(input.readerTask==='decision-register'){
+  if(input.evidenceType!=='status')return refuse('status-evidence-required','决策登记册需要声明 status 证据类型；不要把主题词当成已登记的决定。',['declare-status-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','决策登记册需要明确的状态、责任人、截止偏移和下一步；没有这些事实不能补画登记项。',['provide-decision-register','custom-representation']);
+  if(input.decisionKind!=='register')return refuse('decision-register-scope-required','当前登记册只接受已声明的提案、已决和受阻状态；分支判断应使用决策树。',['declare-decision-register','decision-tree']);
+  if(!Number.isInteger(input.objectCount)||input.objectCount<0||input.objectCount>12)return refuse('decision-count-out-of-range','决策登记册只接受 0–12 条登记项；超出后应拆册或换密集清单。',['split-register','evidence-matrix']);
+  return {decision:'route',family:'decision-register',reference:'references/musecore-decision-register.md',reason:'explicit decision statuses, owners, due offsets and next steps'};
  }
  if(input.readerTask==='measurement-scales'){
   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);

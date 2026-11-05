@@ -2730,6 +2730,13 @@
       "family": "cohort-branch-rejoin",
       "contentStatus": "synthetic teaching cohort flow with explicit branch/rejoin conservation and source lineage",
       "reference": "references/musecore-cohort-branch-rejoin.md"
+    },
+    {
+      "id": "decision-register-demo",
+      "file": "decision-register-demo.json",
+      "family": "decision-register",
+      "contentStatus": "synthetic decision register with explicit status, owner, due offset, impact and confidence",
+      "reference": "references/musecore-decision-register.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",

@@ -144,6 +144,7 @@ family's encodings, coordinated geometry and placement.
 | Given recruitment channels, expense basis and duration bins | [Recruitment auxiliary views](references/musecore-recruitment-funnel.md) |
 | Explicit cohort aggregation and minimum observed support | [Cohort summaries](references/musecore-cohort-summary.md) |
 | Explicit cohort branches and rejoining paths with conserved integer counts | [Cohort branch/rejoin](references/musecore-cohort-branch-rejoin.md) |
+| Explicit decision status, owner, due offset, impact and confidence register | [Decision register](references/musecore-decision-register.md) |
 | One declared molecular–cellular–organism mechanism chain with evidence modes and source lineage | [Mechanism chain](references/musecore-mechanism-chain.md) |
 | Current operational headline, status signals, measured trend and explicit work queue | [Operations board](references/musecore-operations-board.md) |
 | Same-key ring and mod-n membership migration | [Hash strategy comparison](references/musecore-hash-modulo.md) |
