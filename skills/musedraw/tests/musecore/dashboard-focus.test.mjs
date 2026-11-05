@@ -56,3 +56,11 @@ test('dashboard focus responsive composition reflows at phone and tablet widths'
   }
  }finally{await browser.close()}
 });
+
+test('dashboard focus preserves zero values as zero-length marks',async()=>{
+ const base=await fixture(),{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
+ try{const page=await browser.newPage({viewport:{width:390,height:900}});await page.setContent(await editorHtml(base));await page.waitForFunction(()=>window.MUSECORE_READY===true);
+  const result=await page.evaluate(()=>{const input=JSON.parse(document.getElementById('input').value);input.operationalQuestion='capacity';input.heroRelation='process';input.hero={kind:'process',stages:[{label:'来料',value:0},{label:'装配',value:12}]};input.support[1].values=[0,0,0];const svg=MuseCore.renderResponsive(input,390);document.getElementById('output').replaceChildren(svg);return {hero:[...svg.querySelectorAll('[data-role="hero-stage"]')].map(node=>Number(node.getAttribute('height'))),support:[...svg.querySelectorAll('[data-role="support-observation"]')].map(node=>Number(node.getAttribute('height')))}});
+  assert.deepEqual(result.hero[0],0);assert.deepEqual(result.support,[0,0,0]);
+ }finally{await browser.close()}
+});
