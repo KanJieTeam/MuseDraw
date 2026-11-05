@@ -30,12 +30,16 @@ export function multiPanelEvidenceModel(input){
  mpeNeed(Array.isArray(input.panels)&&input.panels.length>=3&&input.panels.length<=4,'panels requires 3–4 evidence panels');
  const roles=['overview','comparison','detail','validation'],panelIds=new Set(),roleSet=new Set(),plotCategories=[];
  const panels=input.panels.map((p,pi)=>{
-  mpeOwn(p,['id','role','title','sampleDefinition','sourceIds','kind','weight','categories','series','columns','rows','blocks'],'panel');
+  mpeOwn(p,['id','role','title','sampleDefinition','sourceIds','kind','weight','categories','series','columns','rows','blocks'],`panels[${pi}]`);
   mpeId(p.id,`panels[${pi}].id`);mpeText(p.title,`panels[${pi}].title`,100);mpeText(p.sampleDefinition,`panels[${pi}].sampleDefinition`,190);
   mpeNeed(roles.includes(p.role),`panels[${pi}].role must be overview, comparison, detail or validation`);mpeNeed(!panelIds.has(p.id),'duplicate panel id');mpeNeed(!roleSet.has(p.role),`panel role ${p.role} must appear once`);panelIds.add(p.id);roleSet.add(p.role);
   mpeNeed(Number.isInteger(p.weight)&&p.weight>=1&&p.weight<=3,`panels[${pi}].weight must be integer 1–3`);
   mpeNeed(Array.isArray(p.sourceIds)&&p.sourceIds.length>=1&&p.sourceIds.length<=8,`panels[${pi}].sourceIds required`);for(const sid of p.sourceIds){mpeId(sid,`panels[${pi}].sourceIds`);mpeNeed(sourceIds.has(sid),`panels[${pi}]: unknown source ${sid}`)}
   mpeNeed(['plot','table','text'].includes(p.kind),`panels[${pi}].kind must be plot, table or text`);
+  const contentKeys={plot:['categories','series'],table:['columns','rows'],text:['blocks']}[p.kind];
+  mpeNeed(contentKeys.every(k=>Object.hasOwn(p,k)),`panels[${pi}]: missing ${contentKeys.join(' and ')}`);
+  for(const key of Object.keys(p))mpeNeed(['id','role','title','sampleDefinition','sourceIds','kind','weight',...contentKeys].includes(key),`panels[${pi}].${key}: unsupported field`);
+  mpeOwn(p,['id','role','title','sampleDefinition','sourceIds','kind','weight',...contentKeys],`panels[${pi}]`);
   if(p.kind==='plot'){
    mpeNeed(Array.isArray(p.categories)&&p.categories.length>=2&&p.categories.length<=10,`panels[${pi}].categories requires 2–10 labels`);p.categories.forEach((c,i)=>mpeText(c,`panels[${pi}].categories[${i}]`,42));mpeNeed(new Set(p.categories).size===p.categories.length,'plot categories must be unique');
    mpeNeed(Array.isArray(p.series)&&p.series.length>=1&&p.series.length<=groupIds.size,`panels[${pi}].series requires 1–${groupIds.size} series`);const seen=new Set();
@@ -55,6 +59,9 @@ export function multiPanelEvidenceModel(input){
  });
  mpeNeed(roleSet.has('overview'),'panels must include one overview role');
  if(plotCategories.length>1){const first=JSON.stringify(plotCategories[0].categories);mpeNeed(plotCategories.every(p=>JSON.stringify(p.categories)===first),'all plot panels must share category identities under shared-zero policy')}
- const values=panels.flatMap(p=>p.kind==='plot'?p.series.flatMap(s=>s.values):[]),max=Math.max(...values,0);mpeNeed(max>0,'at least one positive plot observation required');
+ const values=panels.flatMap(p=>p.kind==='plot'?p.series.flatMap(s=>s.values):[]);
+ mpeNeed(values.some(v=>v>0),'at least one positive plot observation required');
+ const endpoints=panels.flatMap(p=>p.kind==='plot'?p.series.flatMap(s=>s.uncertainty?.high??[]):[]);
+ const max=Math.max(...values,...endpoints);
  return {family:input.family,title:input.title,subtitle:input.subtitle,question:input.question,note:input.note,evidenceKind:input.evidenceKind,scalePolicy:input.scalePolicy,sources:input.sources.map(s=>({...s})),groups:input.groups.map(g=>({...g})),panels,sharedDomain:[0,max],scope:'Bounded multi-panel evidence composition: one explicit overview plus comparison/detail/validation roles. Plot panels share categories and a zero-based domain; table/text panels retain supplied statuses and declarations. No statistics, source-image reconstruction, causal claim or panel relation is inferred.',traceability:{panelSources:panels.map(p=>({panelId:p.id,role:p.role,sourceIds:[...p.sourceIds]}))}};
 }
