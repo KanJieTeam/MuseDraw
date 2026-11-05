@@ -1,0 +1,24 @@
+{
+  "family":"calibration-plot",
+  "title":"双条件预测校准：观测值与区间覆盖",
+  "subtitle":"每个点保留同一条记录中的观测、预测和预测区间；颜色只区分声明的实验条件。",
+  "xLabel":"观测响应",
+  "yLabel":"预测响应",
+  "unit":"mmol/L",
+  "dataStatus":"实验记录 · 预注册区间",
+  "conditions":[
+    {"id":"control","label":"对照","color":"#287D8E","source":"实验记录 C · 条件栏"},
+    {"id":"treated","label":"处理","color":"#C05A3E","source":"实验记录 T · 条件栏"}
+  ],
+  "rows":[
+    {"id":"c01","condition":"control","observed":12.1,"predicted":11.8,"low":10.7,"high":12.9,"source":"实验记录 C · 行 1"},
+    {"id":"c02","condition":"control","observed":14.6,"predicted":14.2,"low":13.0,"high":15.5,"source":"实验记录 C · 行 2"},
+    {"id":"c03","condition":"control","observed":16.8,"predicted":17.1,"low":15.4,"high":18.2,"source":"实验记录 C · 行 3"},
+    {"id":"c04","condition":"control","observed":19.4,"predicted":18.7,"low":17.5,"high":20.1,"source":"实验记录 C · 行 4"},
+    {"id":"t01","condition":"treated","observed":12.8,"predicted":13.4,"low":11.9,"high":14.8,"source":"实验记录 T · 行 1"},
+    {"id":"t02","condition":"treated","observed":15.2,"predicted":15.9,"low":14.4,"high":17.0,"source":"实验记录 T · 行 2"},
+    {"id":"t03","condition":"treated","observed":17.9,"predicted":17.1,"low":15.8,"high":18.8,"source":"实验记录 T · 行 3"},
+    {"id":"t04","condition":"treated","observed":20.3,"predicted":19.6,"low":18.2,"high":21.0,"source":"实验记录 T · 行 4"}
+  ],
+  "note":"区间是输入数据中逐行给定的预测区间；覆盖率只描述这 8 条记录。虚线 y=x 是校准参照，不是拟合结果，也不支持因果或外推结论。"
+}
