@@ -21,7 +21,7 @@ export function mechanismChainFigure(input){
  const note=mcTextPlan(m.note,W-margin*2,{size:18,max:3});
  const headerY=44,subY=headerY+header.height+14,ruleY=subY+sub.height+22;
  const bandY=ruleY+22,bandH=38,scaleGap=14,scaleW=(W-margin*2-scaleGap*2)/3;
- const top=bandY+bandH+28,usable=W-margin*2,step=usable/count,cardW=Math.min(300,step-26),inner=24;
+ const top=bandY+bandH+28,usable=W-margin*2,step=usable/count,gap=count>=7?70:26,cardW=Math.min(300,step-gap),inner=24;
  const labelSize=count>=7?21:24;
  const nodePlans=m.nodes.map(node=>{
   const label=mcTextPlan(node.label,cardW-inner*2,{size:labelSize,weight:800,max:4});
@@ -30,7 +30,7 @@ export function mechanismChainFigure(input){
   return {label,source};
  });
  const maxLabel=Math.max(...nodePlans.map(p=>p.label.height)),maxSource=Math.max(...nodePlans.map(p=>p.source.height));
- const cardH=Math.max(360,60+maxLabel+68+52+maxSource+28);
+ const cardH=Math.max(360,224+maxLabel+maxSource);
  const cardY=top+32,nodeMap=new Map();
  for(let i=0;i<m.order.length;i++){
   const node=m.nodes.find(n=>n.id===m.order[i]),x=margin+i*step+(step-cardW)/2;
@@ -56,8 +56,8 @@ export function mechanismChainFigure(input){
  for(const link of m.links){
   const a=nodeMap.get(link.from),b=nodeMap.get(link.to),y=cardY+cardH/2;
   stroke(svg,[[a.x+a.w+5,y],[b.x-12,y]],link.effect==='inhibits'?'#B84444':'#4E7B62',4,{'marker-end':'url(#mc-arrow)','data-role':'mechanism-link'});
-  const edgeX=(a.x+a.w+b.x)/2,edge=mcTextPlan(`${link.effect} · ${link.evidence}`,160,{size:13,weight:700,max:2});
-  mcDrawPlan(svg,edgeX,y-30,edge,{fill:link.effect==='inhibits'?'#B84444':'#4E7B62',anchor:'middle'});
+  const edgeX=(a.x+a.w+b.x)/2,edge=mcTextPlan(`${link.effect} · ${link.evidence}`,count>=7?90:240,{size:count>=7?11:12,weight:700,max:count>=7?3:1});
+  mcDrawPlan(svg,edgeX,y-26-edge.height,edge,{fill:link.effect==='inhibits'?'#B84444':'#4E7B62',anchor:'middle'});
  }
  const geometries=[];
  for(const [i,node] of m.nodes.entries()){
