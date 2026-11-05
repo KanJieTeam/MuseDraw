@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,13 +11,14 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','panelCount','plotPanelCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','panelCount','plotPanelCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
  if(input.flowKind!==undefined)enumValue(input.flowKind,['nested-funnel','branch-rejoin'],'flowKind');
  if(input.fieldKind!==undefined)enumValue(input.fieldKind,['regular-height-grid','other-spatial-field'],'fieldKind');
  if(input.riskKind!==undefined)enumValue(input.riskKind,['likelihood-impact','other-risk-register'],'riskKind');
+ if(input.decisionKind!==undefined)enumValue(input.decisionKind,['explicit-branch','other-decision'],'decisionKind');
  for(const k of ['panelCount','objectCount','labelCount']){need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
  if(input.plotPanelCount!==undefined)need(Number.isInteger(input.plotPanelCount)&&input.plotPanelCount>=0,'plotPanelCount must be a nonnegative integer');
  if(input.requestedFormat!==undefined)enumValue(input.requestedFormat,['svg','png','html','pptx'],'requestedFormat');
@@ -64,6 +65,12 @@ export function routeMuseCore(input){
   if(input.riskKind!=='likelihood-impact')return refuse('risk-matrix-scope-required','当前风险矩阵只支持已声明的“可能性 × 影响”二维登记；其他风险结构需另选能力。',['declare-likelihood-impact','custom-representation']);
   if(input.objectCount<1||input.objectCount>18)return refuse('risk-item-count-out-of-range','当前风险矩阵只接受 1–18 个登记事项；超出后应拆页或换密集清单。',['split-page','evidence-matrix']);
   return {decision:'route',family:'risk-matrix',reference:'references/musecore-risk-matrix.md',reason:'explicit likelihood × impact register with supplied axis scores and actions'};
+ }
+ if(input.readerTask==='decision-tree'){
+  if(input.evidenceType!=='workflow')return refuse('workflow-evidence-required','决策树需要声明 workflow 证据类型；不要把主题词当成分支关系。',['declare-workflow-evidence','custom-representation']);
+  if(input.decisionKind!=='explicit-branch')return refuse('decision-tree-scope-required','当前决策树只支持已声明的显式分支判断；概率、置信度或责任分配需另选能力。',['declare-explicit-branch','custom-representation']);
+  if(input.objectCount<3||input.objectCount>18)return refuse('decision-node-count-out-of-range','当前决策树只接受 3–18 个节点；超出后应拆成多个问题或换密集结构。',['split-question','evidence-matrix']);
+  return {decision:'route',family:'decision-tree',reference:'references/musecore-decision-tree.md',reason:'one explicit question with reachable adjacent-level branches and declared outcomes'};
  }
  if(input.readerTask==='measurement-scales'){
   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);

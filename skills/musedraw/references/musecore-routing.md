@@ -23,6 +23,7 @@ node skills/musedraw/scripts/musedraw.mjs core route route-input.json
 - `multi-panel-evidence` 必须有 `plotPanelCount`，取值为 1 到 `panelCount`，并声明有数据。当前模型必须包含至少一个正值数据图，只接受数据图、状态表、说明文字，不接受纯表格/纯文字或源图面板。声明不等于验证，实际数据仍须通过模型的共用类别、数值域及来源检查。
 - `operations-board` 必须声明 `evidenceType: "status"` 并有原始或汇总趋势数据。它只接受一个当前指标、2–4 个登记状态信号、一个 3–12 点趋势和 2–8 个明确的队列事项；不会把主题词推断成实时状态、负责人或优先级。
 - `risk-matrix` 必须声明 `evidenceType: "status"`、`hasRawData: true` 和 `riskKind: "likelihood-impact"`。当前能力只接受 1–18 个事项、两条已登记的离散等级轴和连续的严重度分段；不会从“风险”一词推断概率、损失或责任。
+- `decision-tree` 必须声明 `evidenceType: "workflow"`、`decisionKind: "explicit-branch"` 和 3–18 个节点。当前能力只接受一个问题、相邻层级的显式分支和可达出口；不会从主题词推断概率、置信度、责任人或推荐结论。
 - `measurement-scales` 必须声明 `evidenceType: "quantitative"` 和已提供的尺度事实。类别、等间隔、零点和单位必须由输入明确给出；程序不从变量名称猜测定类、定序、定距或定比。
 - `cohort-flow` 必须声明 `flowKind: "nested-funnel"` 才能选择 `funnel`。`branch-rejoin` 明确拒绝，未声明时不猜测。funnel 的 3–8 层、计数非递增和嵌套队列含义由对应契约继续检查。
 - `spatial-field` 必须声明坐标、数据以及 `fieldKind: "regular-height-grid"`，才会选择真实存在的 `contour-field`。这仅是规则高程网格的候选路线；以米为单位、网格间距、等高线拓扑等由模型验证。其他场量或散点采样不能直接套用高程能力。

@@ -15,6 +15,7 @@ test('explicit reader task routes to a bounded family',()=>{
  const m=routeMuseCore({...base,readerTask:'mechanism-chain',evidenceType:'mechanism'});assert.equal(m.family,'mechanism-chain');
  const o=routeMuseCore({...base,readerTask:'operations-board',evidenceType:'status'});assert.equal(o.family,'operations-board');
  const rm=routeMuseCore({...base,readerTask:'risk-matrix',evidenceType:'status',riskKind:'likelihood-impact'});assert.equal(rm.family,'risk-matrix');
+ const dt=routeMuseCore({...base,readerTask:'decision-tree',evidenceType:'workflow',decisionKind:'explicit-branch',hasRawData:false,objectCount:7});assert.equal(dt.family,'decision-tree');
  const ms=routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'quantitative'});assert.equal(ms.family,'measurement-scales');
 });
 
@@ -45,6 +46,7 @@ test('every routed candidate names an executable registered family and an existi
   ['mechanism-chain',{evidenceType:'mechanism'},'mechanism-chain'],
   ['operations-board',{evidenceType:'status'},'operations-board'],
   ['risk-matrix',{evidenceType:'status',riskKind:'likelihood-impact'},'risk-matrix']
+  ,['decision-tree',{evidenceType:'workflow',decisionKind:'explicit-branch',hasRawData:false,objectCount:7},'decision-tree']
   ,['measurement-scales',{evidenceType:'quantitative'},'measurement-scales']
  ];
  for(const [readerTask,extra,family] of cases){
@@ -87,7 +89,7 @@ test('generic charts request grammar selection and never report a fabricated exe
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
- for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','measurement-scales','image-evidence','chart']){
+ for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','measurement-scales','image-evidence','chart']){
   const result=routeMuseCore({...base,readerTask,requestedFormat:'pptx'});
   assert.equal(result.decision,'refuse');assert.equal(result.code,'unsupported-output-format');
  }
@@ -108,6 +110,9 @@ test('malformed declarations and unqualified cohort requests remain explicit',()
  assert.equal(routeMuseCore({...base,readerTask:'risk-matrix',evidenceType:'status',riskKind:'likelihood-impact',hasRawData:false}).code,'raw-data-required');
  assert.equal(routeMuseCore({...base,readerTask:'risk-matrix',evidenceType:'status',hasRawData:true}).code,'risk-matrix-scope-required');
  assert.equal(routeMuseCore({...base,readerTask:'risk-matrix',evidenceType:'status',riskKind:'likelihood-impact',objectCount:19}).code,'risk-item-count-out-of-range');
+ assert.equal(routeMuseCore({...base,readerTask:'decision-tree',evidenceType:'status',decisionKind:'explicit-branch'}).code,'workflow-evidence-required');
+ assert.equal(routeMuseCore({...base,readerTask:'decision-tree',evidenceType:'workflow'}).code,'decision-tree-scope-required');
+ assert.equal(routeMuseCore({...base,readerTask:'decision-tree',evidenceType:'workflow',decisionKind:'explicit-branch',hasRawData:false,objectCount:2}).code,'decision-node-count-out-of-range');
  assert.equal(routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'table'}).code,'quantitative-evidence-required');
  assert.equal(routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'quantitative',hasRawData:false}).code,'raw-data-required');
 });
