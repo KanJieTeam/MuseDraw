@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -107,6 +107,19 @@ export function routeMuseCore(input){
   if(!Number.isInteger(input.objectCount)||input.objectCount<0||input.objectCount>12)return refuse('decision-count-out-of-range','决策登记册只接受 0–12 条登记项；超出后应拆册或换密集清单。',['split-register','evidence-matrix']);
   return {decision:'route',family:'decision-register',reference:'references/musecore-decision-register.md',reason:'explicit decision statuses, owners, due offsets and next steps'};
  }
+ if(input.readerTask==='calibration-plot'){
+  if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','预测校准图需要声明 quantitative 证据类型；不要把主题词当成观测与预测配对。',['declare-quantitative-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','预测校准图需要逐行的观测、预测、区间端点和来源；没有这些事实不能补画不确定性。',['provide-calibration-data','custom-representation']);
+  if(!Number.isInteger(input.rowCount)||input.rowCount<6||input.rowCount>120)return refuse('calibration-row-count-out-of-range','预测校准图只接受 6–120 条观测–预测配对；超出后应拆页或改用密集数据表。',['split-calibration','custom-representation']);
+  if(!Number.isInteger(input.columnCount)||input.columnCount<2||input.columnCount>4)return refuse('calibration-condition-count-out-of-range','预测校准图只接受 2–4 个已声明条件。',['split-conditions','custom-representation']);
+  return {decision:'route',family:'calibration-plot',reference:'references/musecore-calibration-plot.md',reason:'explicit observed-predicted pairs with supplied intervals and condition summaries'};
+ }
+ if(input.readerTask==='portfolio-health'){
+  if(input.evidenceType!=='status')return refuse('status-evidence-required','项目健康地图需要声明 status 证据类型；不要从主题词推断健康状态。',['declare-status-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','项目健康地图需要明确的阶段、健康状态、负责人、下一节点和截止偏移。',['provide-portfolio-data','custom-representation']);
+  if(input.objectCount<1||input.objectCount>16)return refuse('portfolio-stream-count-out-of-range','项目健康地图只接受 1–16 条工作流；超出后应拆页或改用清单。',['split-portfolio','custom-representation']);
+  return {decision:'route',family:'portfolio-health',reference:'references/musecore-portfolio-health.md',reason:'explicit phase-by-health map with checkpoint rail'};
+ }
  if(input.readerTask==='measurement-scales'){
   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);
   if(!input.hasRawData)return refuse('raw-data-required','测量尺度示例需要调用者提供明确的类别、单位、等间隔和零点声明。',['provide-data','custom-representation']);
@@ -127,3 +140,4 @@ export function routeMuseCore(input){
  }
  return refuse('no-bounded-family','没有匹配的窄能力；必须声明 custom representation，不得静默回退到卡片网格。',['custom-representation','clarify-reader-task']);
 }
+

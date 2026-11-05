@@ -1,0 +1,17 @@
+{
+  "family": "portfolio-health",
+  "title": "本季度工作流健康地图",
+  "subtitle": "按阶段定位工作流，再把下一检查点带回负责人手里",
+  "todayDay": 120,
+  "phases": [{"id":"discover","label":"探索与定义"},{"id":"build","label":"构建与验证"},{"id":"operate","label":"上线与运营"}],
+  "healthStates": [{"id":"stable","label":"按计划","kind":"stable"},{"id":"watch","label":"需要关注","kind":"watch"},{"id":"blocked","label":"已有阻塞","kind":"blocked"}],
+  "streams": [
+    {"id":"WF-01","label":"客户访谈与需求边界","phase":"discover","health":"stable","owner":"研究组","nextMilestone":"完成第 3 轮访谈纪要","dueDay":126,"signal":"样本数 18 / 24"},
+    {"id":"WF-02","label":"数据口径与字段清单","phase":"discover","health":"watch","owner":"数据组","nextMilestone":"锁定历史口径差异","dueDay":123,"signal":"待确认 4 个字段"},
+    {"id":"WF-03","label":"接口契约与模拟服务","phase":"build","health":"stable","owner":"平台组","nextMilestone":"完成联调样例","dueDay":132,"signal":"通过 21 / 24 项"},
+    {"id":"WF-04","label":"权限审阅与审计记录","phase":"build","health":"blocked","owner":"安全组","nextMilestone":"补齐跨区访问说明","dueDay":118,"signal":"等待 1 项外部确认"},
+    {"id":"WF-05","label":"试点反馈回收","phase":"operate","health":"watch","owner":"交付组","nextMilestone":"完成试点回访","dueDay":129,"signal":"已回收 7 / 10 份"},
+    {"id":"WF-06","label":"上线后性能观察","phase":"operate","health":"stable","owner":"运维组","nextMilestone":"发布首周观察结论","dueDay":140,"signal":"当前 p95 420ms"}
+  ],
+  "note": "示例使用虚构工作流与相对日期，仅演示结构化登记和版面重排。"
+}

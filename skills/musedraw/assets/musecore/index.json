@@ -2737,6 +2737,13 @@
       "family": "decision-register",
       "contentStatus": "synthetic decision register with explicit status, owner, due offset, impact and confidence",
       "reference": "references/musecore-decision-register.md"
+    },
+    {
+      "id": "calibration-plot-demo",
+      "file": "calibration-plot-demo.json",
+      "family": "calibration-plot",
+      "contentStatus": "synthetic observed-predicted pairs with explicit interval endpoints and row sources",
+      "reference": "references/musecore-calibration-plot.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
@@ -3489,3 +3496,4 @@
     }
   ]
 }
+

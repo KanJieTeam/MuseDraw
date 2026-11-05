@@ -95,6 +95,7 @@ family's encodings, coordinated geometry and placement.
 | Two-period rank movement with explicit object identity and source traceability | [Rank shift](references/musecore-rank-shift.md) |
 | Explicit evidence status across candidate objects and criteria | [Evidence matrix](references/musecore-evidence-matrix.md) |
 | Effect estimates with explicitly supplied interval endpoints and row sources | [Forest plot](references/musecore-forest-plot.md) |
+| Observed–predicted pairs with explicit prediction intervals and condition summaries | [Calibration plot](references/musecore-calibration-plot.md) |
 | Period-by-stream demand and capacity ledgers with explicit gap states | [Capacity plan](references/musecore-capacity-plan.md) |
 | Rectangular measurement matrices with cell-level provenance and bounded colour encoding | [Heatmap](references/musecore-heatmap.md) |
 | Ordered additive categories with an explicit cumulative-share line | [Pareto analysis](references/musecore-pareto-analysis.md) |
@@ -145,6 +146,7 @@ family's encodings, coordinated geometry and placement.
 | Explicit cohort aggregation and minimum observed support | [Cohort summaries](references/musecore-cohort-summary.md) |
 | Explicit cohort branches and rejoining paths with conserved integer counts | [Cohort branch/rejoin](references/musecore-cohort-branch-rejoin.md) |
 | Explicit decision status, owner, due offset, impact and confidence register | [Decision register](references/musecore-decision-register.md) |
+| Explicit phase-by-health workstream map with owners, next milestones and checkpoint rail | [Portfolio health map](references/musecore-portfolio-health.md) |
 | One declared molecular–cellular–organism mechanism chain with evidence modes and source lineage | [Mechanism chain](references/musecore-mechanism-chain.md) |
 | Current operational headline, status signals, measured trend and explicit work queue | [Operations board](references/musecore-operations-board.md) |
 | Same-key ring and mod-n membership migration | [Hash strategy comparison](references/musecore-hash-modulo.md) |
@@ -339,4 +341,5 @@ node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --st
 Use `--lang en` for English. Read the scene workflow's runtime section only if
 preparation is needed; the starter does not require schema, theme or gallery
 research before its first render.
+
 
