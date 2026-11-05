@@ -56,8 +56,10 @@ export function mechanismChainFigure(input){
  for(const link of m.links){
   const a=nodeMap.get(link.from),b=nodeMap.get(link.to),y=cardY+cardH/2;
   stroke(svg,[[a.x+a.w+5,y],[b.x-12,y]],link.effect==='inhibits'?'#B84444':'#4E7B62',4,{'marker-end':'url(#mc-arrow)','data-role':'mechanism-link'});
-  const edgeX=(a.x+a.w+b.x)/2,edge=mcTextPlan(`${link.effect} · ${link.evidence}`,count>=7?90:240,{size:count>=7?11:12,weight:700,max:count>=7?3:1});
-  mcDrawPlan(svg,edgeX,y-26-edge.height,edge,{fill:link.effect==='inhibits'?'#B84444':'#4E7B62',anchor:'middle'});
+  if(count<7){
+   const edgeX=(a.x+a.w+b.x)/2,edge=mcTextPlan(`${link.effect} · ${link.evidence}`,160,{size:12,weight:700,max:2});
+   mcDrawPlan(svg,edgeX,y-26-edge.height,edge,{fill:link.effect==='inhibits'?'#B84444':'#4E7B62',anchor:'middle'});
+  }
  }
  const geometries=[];
  for(const [i,node] of m.nodes.entries()){
