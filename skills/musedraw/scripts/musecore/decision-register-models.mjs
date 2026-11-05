@@ -1,0 +1,12 @@
+function drNeed(ok,message){if(!ok)throw Error(message)}
+function drText(v,label){drNeed(typeof v==='string'&&v.trim().length>0,label+' must be nonempty text')}
+function drInteger(v,label,min,max){drNeed(Number.isInteger(v)&&v>=min&&v<=max,label+' must be integer '+min+'..'+max);return v}
+export function decisionRegisterModel(input){
+ drNeed(input&&typeof input==='object'&&!Array.isArray(input),'decision-register: object required')
+ const allowed=['family','title','subtitle','todayDay','decisions','note'];for(const k of Object.keys(input))drNeed(allowed.includes(k),'decision-register.'+k+' unsupported field')
+ drNeed(input.family==='decision-register','family must be decision-register');drText(input.title,'title');drText(input.subtitle,'subtitle');drText(input.note,'note');drInteger(input.todayDay,'todayDay',-36500,36500);drNeed(Array.isArray(input.decisions)&&input.decisions.length<=12,'decisions requires 0–12 items')
+ const ids=new Set(), statuses=['proposed','decided','blocked'];
+ const decisions=input.decisions.map((d,i)=>{drNeed(d&&typeof d==='object'&&!Array.isArray(d),'decision '+i+' object required');for(const k of Object.keys(d))drNeed(['id','label','owner','status','dueDay','impact','confidence','nextStep'].includes(k),'decision.'+k+' unsupported field');drText(d.id,'decision.id');drNeed(d.id.length<=24,'decision.id at most 24 chars');drNeed(!ids.has(d.id),'duplicate decision id');ids.add(d.id);drText(d.label,'decision.label');drText(d.owner,'decision.owner');drText(d.nextStep,'decision.nextStep');drNeed(statuses.includes(d.status),'decision.status must be proposed, decided or blocked');drInteger(d.dueDay,'decision.dueDay',-36500,36500);drInteger(d.impact,'decision.impact',0,100);drInteger(d.confidence,'decision.confidence',0,100);return {...d,overdue:d.status!=='decided'&&d.dueDay<input.todayDay,daysFromToday:d.dueDay-input.todayDay}})
+ const byStatus=Object.fromEntries(statuses.map(s=>[s,decisions.filter(d=>d.status===s)]));
+ return {todayDay:input.todayDay,decisions,byStatus,counts:Object.fromEntries(statuses.map(s=>[s,byStatus[s].length])),overdue:decisions.filter(d=>d.overdue),zeroImpact:decisions.filter(d=>d.impact===0),zeroConfidence:decisions.filter(d=>d.confidence===0),statusOrder:statuses,scope:'Explicit decision register with supplied status, owner, due-day offset, impact and confidence. Overdue is a mechanical comparison to todayDay; no status or priority is inferred. Days are integer offsets, not calendar dates.',empty:decisions.length===0}
+}

@@ -1,0 +1,13 @@
+{
+  "family":"decision-register",
+  "title":"产品评审 · 决策登记册",
+  "subtitle":"把待决、已决与受阻事项放在同一张可追踪的工作面上",
+  "todayDay":12,
+  "decisions":[
+    {"id":"D-104","label":"是否切换计费供应商","owner":"林岚 · 财务","status":"proposed","dueDay":10,"impact":88,"confidence":42,"nextStep":"补齐迁移报价与合同退出条款"},
+    {"id":"D-105","label":"移动端灰度范围","owner":"周晗 · 产品","status":"decided","dueDay":8,"impact":64,"confidence":91,"nextStep":"将结论写入发布单"},
+    {"id":"D-106","label":"数据保留期例外","owner":"赵清 · 法务","status":"blocked","dueDay":5,"impact":0,"confidence":0,"nextStep":"等待区域合规意见"},
+    {"id":"D-107","label":"客服夜班排班","owner":"陈默 · 运营","status":"proposed","dueDay":18,"impact":35,"confidence":67,"nextStep":"确认周末覆盖人数"}
+  ],
+  "note":"示例登记册：状态、责任人、相对截止日和下一步均来自调用方。"
+}
