@@ -341,5 +341,3 @@ node <skill>/scripts/musedraw.mjs quickstart rag --lang zh --out output/rag --st
 Use `--lang en` for English. Read the scene workflow's runtime section only if
 preparation is needed; the starter does not require schema, theme or gallery
 research before its first render.
-
-
