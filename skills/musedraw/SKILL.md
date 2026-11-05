@@ -143,6 +143,7 @@ family's encodings, coordinated geometry and placement.
 | Explicit annual work lines, month-precision events and dated shared reviews | [Annual metro](references/musecore-annual-metro.md) |
 | Given recruitment channels, expense basis and duration bins | [Recruitment auxiliary views](references/musecore-recruitment-funnel.md) |
 | Explicit cohort aggregation and minimum observed support | [Cohort summaries](references/musecore-cohort-summary.md) |
+| One declared molecular–cellular–organism mechanism chain with evidence modes and source lineage | [Mechanism chain](references/musecore-mechanism-chain.md) |
 | Same-key ring and mod-n membership migration | [Hash strategy comparison](references/musecore-hash-modulo.md) |
 | Optional SLO comparison and constant burn-rate scenario tables | [Error-budget panels](references/musecore-error-budget-panels.md) |
 | Time readings, reflected rays, balanced levers, thin lenses, length scales, orders of magnitude and solid projections | [Teaching objects and geometry](references/musecore-objects.md) |

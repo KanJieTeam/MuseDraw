@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -39,6 +39,11 @@ export function routeMuseCore(input){
  if(input.readerTask==='apparatus-measurement'){
   if(!input.hasCoordinates)return refuse('coordinates-required','装置测量图需要每个部件的二维位置；没有坐标只能画概念关系。',['provide-coordinates','custom-representation']);
   return {decision:'route',family:'device-measurement',reference:'references/musecore-device-measurement.md',reason:'explicit apparatus geometry and measurement path'};
+ }
+ if(input.readerTask==='mechanism-chain'){
+  if(input.evidenceType!=='mechanism')return refuse('mechanism-evidence-required','机制链需要声明 mechanism 证据类型；不要把主题词当成机制关系。',['declare-mechanism-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','机制链需要节点读数、区间和来源指针；没有这些事实不能补画机制链。',['provide-data','custom-representation']);
+  return {decision:'route',family:'mechanism-chain',reference:'references/musecore-mechanism-chain.md',reason:'one declared molecular-to-organism chain with explicit evidence modes'};
  }
  if(input.readerTask==='image-evidence')return input.hasSourceAsset?{decision:'preserve-source',family:'source-image',reason:'retain authorized image, channel identity and scale bar'}:refuse('source-image-required','图像证据必须保留源图。',['provide-source-image']);
  if(input.readerTask==='spatial-field'){

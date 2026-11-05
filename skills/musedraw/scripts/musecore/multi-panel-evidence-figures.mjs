@@ -132,7 +132,7 @@ export function multiPanelEvidenceFigure(input){
   geometryPanels.push({id:p.id,role:p.role,kind:p.kind,x,y,width:w,height:row.height,weight:p.weight,sourceIds:[...p.sourceIds],content});x+=w+gap;
  }y+=row.height+gap}
  draw(svg,margin,H-note.height-28,note,{fill:mpePalette.muted});
- return visualFinish(svg,{family:'multi-panel-evidence',width:W,height:H,title:m.title,subtitle:m.subtitle,question:m.question,evidenceKind:m.evidenceKind,scalePolicy:m.scalePolicy,sharedDomain:m.sharedDomain,panels:geometryPanels,traceability:m.traceability,textPlans,note:m.note,compositionReference:'nature-multipanel-evidence',aestheticApproval:'not-assessed'});
+ return visualFinish(svg,{family:'multi-panel-evidence',width:W,height:H,title:m.title,subtitle:m.subtitle,question:m.question,evidenceKind:m.evidenceKind,scalePolicy:m.scalePolicy,sharedDomain:m.sharedDomain,panels:geometryPanels,traceability:m.traceability,textPlans,note:m.note,compositionReference:'multi-panel-evidence',aestheticApproval:'not-assessed'});
 }
 
 export function multiPanelEvidenceFamilies(){return {'multi-panel-evidence':multiPanelEvidenceFigure}}

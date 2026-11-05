@@ -1,0 +1,32 @@
+{
+  "family": "mechanism-chain",
+  "title": "跨尺度机制链：光照脉冲到叶片碳同化",
+  "subtitle": "节点保留给定读数与区间；边只记录声明的作用方向和证据模式，不把链条升级为因果识别。",
+  "note": "合成教学数据；区间与来源指针由调用者提供。该链只描述一个声明的分子→细胞→个体路径，不推断剂量反应、统计显著性或野外普适性。",
+  "unit": "相对信号",
+  "evidenceKind": "synthetic-teaching",
+  "scales": [
+    {"id":"molecular","label":"分子尺度","color":"#3478A4"},
+    {"id":"cellular","label":"细胞尺度","color":"#3C8C72"},
+    {"id":"organism","label":"个体尺度","color":"#B16A35"}
+  ],
+  "sources": [
+    {"id":"assay","label":"酶活测定：给定相对读数","kind":"assay"},
+    {"id":"pulse","label":"光照脉冲方案：处理时间","kind":"perturbation"},
+    {"id":"timecourse","label":"时间序列：四个观测窗","kind":"time-course"},
+    {"id":"synthesis","label":"教学汇编：路径声明与限制","kind":"synthesis"}
+  ],
+  "nodes": [
+    {"id":"light","label":"光照脉冲","scale":"molecular","value":0.8,"interval":{"low":0.7,"high":0.9},"sourceIds":["pulse"],"role":"input","color":"#3478A4"},
+    {"id":"kinase","label":"光敏激酶活性","scale":"molecular","value":1.6,"interval":{"low":1.3,"high":1.9},"sourceIds":["assay","timecourse"],"role":"mediator","color":"#3478A4"},
+    {"id":"stoma","label":"气孔开放比例","scale":"cellular","value":2.4,"interval":{"low":2.0,"high":2.8},"sourceIds":["timecourse"],"role":"mediator","color":"#3C8C72"},
+    {"id":"flux","label":"叶肉 CO₂ 通量","scale":"cellular","value":3.1,"interval":{"low":2.6,"high":3.6},"sourceIds":["assay","timecourse"],"role":"mediator","color":"#3C8C72"},
+    {"id":"carbon","label":"整株碳同化读数","scale":"organism","value":4.2,"interval":{"low":3.5,"high":4.8},"sourceIds":["assay","synthesis"],"role":"readout","color":"#B16A35"}
+  ],
+  "links": [
+    {"from":"light","to":"kinase","effect":"activates","evidence":"perturbation","sourceIds":["pulse","assay"]},
+    {"from":"kinase","to":"stoma","effect":"modulates","evidence":"temporal","sourceIds":["timecourse"]},
+    {"from":"stoma","to":"flux","effect":"activates","evidence":"direct-measurement","sourceIds":["assay"]},
+    {"from":"flux","to":"carbon","effect":"modulates","evidence":"inferred-link","sourceIds":["synthesis","timecourse"]}
+  ]
+}

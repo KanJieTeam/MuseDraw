@@ -2709,6 +2709,13 @@
       "family": "multi-panel-evidence",
       "contentStatus": "synthetic teaching evidence with explicit panel roles, shared scale, statuses and source traceability",
       "reference": "references/musecore-multi-panel-evidence.md"
+  },
+  {
+    "id": "mechanism-chain-demo",
+    "file": "mechanism-chain-demo.json",
+    "family": "mechanism-chain",
+    "contentStatus": "synthetic teaching mechanism with ordered scales, declared evidence modes and source lineage",
+    "reference": "references/musecore-mechanism-chain.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",

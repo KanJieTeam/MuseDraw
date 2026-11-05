@@ -74,7 +74,7 @@ test('multi-panel evidence rejects unsupported inference and unaligned panels',a
   [x=>x.panels[0].sourceIds=['unknown'],/unknown source/],
   [x=>x.panels[0].role='detail',/role detail must appear once/],
   [x=>x.panels[3].weight=4,/weight must be integer/],
-  [x=>x.panels[0].blocks=[{id:'ignored',label:'Important',text:'Must not disappear'}],/blocks: unsupported field/],
+  [x=>x.panels[0].blocks=[{id:'ignored',label:'Important',text:'Must not disappear'}],/panels\[0\]: unsupported field/],
   [x=>x.panels.filter(p=>p.kind==='plot').forEach(p=>p.series.forEach(s=>{s.values.fill(0);delete s.uncertainty})),/positive plot observation/]
  ]){const c=structuredClone(b);mutate(c);assert.throws(()=>multiPanelEvidenceModel(c),pattern)}
 });
