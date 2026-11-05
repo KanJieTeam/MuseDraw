@@ -2744,6 +2744,13 @@
       "family": "calibration-plot",
       "contentStatus": "synthetic observed-predicted pairs with explicit interval endpoints and row sources",
       "reference": "references/musecore-calibration-plot.md"
+    },
+    {
+      "id": "portfolio-health-demo",
+      "file": "portfolio-health-demo.json",
+      "family": "portfolio-health",
+      "contentStatus": "synthetic phase-by-health workstreams with explicit owners and checkpoint dates",
+      "reference": "references/musecore-portfolio-health.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",
