@@ -260,6 +260,13 @@ paired changes, raw observation distributions and measured heatmaps. This route
 does not require scene geometry. For mechanisms and physical
 objects use [scientific composition](references/scientific-design.md).
 
+When the brief explicitly asks for cross-group scatter evidence with every
+observation retained and only descriptive summaries, route with
+`chartKind: "scatter-evidence"`; the bounded `scatter-evidence` family validates
+the numeric groups, recomputes summaries and rejects unsupported statistical
+claims. An unqualified chart request must still use the generic data grammar
+selection instead of silently choosing a scatter layout.
+
 For everyday office processes, task ownership and project plans, read
 [office diagrams](references/office-diagrams.md). Choose the appropriate flow,
 responsibility matrix or time-based composition from the actual work; do not

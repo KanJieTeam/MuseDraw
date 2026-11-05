@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import fixtureJson from '../../assets/musecore/forest-plot-demo.json' with {type:'json'};
 import {forestPlotModel} from '../../scripts/musecore/forest-plot-models.mjs';
 import {numericDisplay} from '../../scripts/musecore/quantitative.mjs';

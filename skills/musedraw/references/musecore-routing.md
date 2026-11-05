@@ -28,13 +28,14 @@ node skills/musedraw/scripts/musedraw.mjs core route route-input.json
 - `capacity-plan` 必须声明 `evidenceType: "quantitative"`、`hasRawData: true`、`capacityKind: "period-stream-gap"`，并明确 `periodCount` 为 2–8、`streamCount` 为 1–6。程序只计算 `capacity - demand`；不会把缺口推断成延期、人员建议、预测或质量结论。
 - `dashboard-focus` 必须声明 `dashboardKind: "single-question"`、`hasRawData: true` 和一个 `heroRelation`（`spatial`、`process`、`comparison`、`trend`、`inventory`），并保持 2–8 个主视图/辅助证据对象。当前看板只服务一个运营问题；不会用装饰主图、重复 KPI 或未声明时点冒充态势。
 - `measurement-scales` 必须声明 `evidenceType: "quantitative"` 和已提供的尺度事实。类别、等间隔、零点和单位必须由输入明确给出；程序不从变量名称猜测定类、定序、定距或定比。
+- `chart` 若声明 `chartKind: "scatter-evidence"`，必须同时声明 `evidenceType: "quantitative"`、`hasRawData: true` 和 2–6 个观测组（`objectCount`）。此路线保留每个原始观测点，只计算描述性摘要与可选的逐组普通最小二乘线；不会补造显著性、因果或异常值结论。未声明 `chartKind` 的普通数据图仍返回 `select-data-grammar`，不静默选择散点结构。
 - `cohort-flow` 必须声明 `flowKind: "nested-funnel"` 才能选择 `funnel`。`branch-rejoin` 明确拒绝，未声明时不猜测。funnel 的 3–8 层、计数非递增和嵌套队列含义由对应契约继续检查。
 - `spatial-field` 必须声明坐标、数据以及 `fieldKind: "regular-height-grid"`，才会选择真实存在的 `contour-field`。这仅是规则高程网格的候选路线；以米为单位、网格间距、等高线拓扑等由模型验证。其他场量或散点采样不能直接套用高程能力。
 
 路由结果有四种：
 
 - `route`：选择一个已注册的候选能力族及其范围说明，仍需填写和验证该族的输入；
-- `select-data-grammar`：普通 `chart` 请求尚不足以确定具体图形，返回真实的 `scripts/plot_data.py` 路线和 `references/data-figures.md`，要求按比较任务选择 line、scatter、bar、interval、heatmap、paired 或 observations。它不是 MuseCore family，也不是已经通过的数据规格。该工具直接输出 SVG/PNG，HTML 需另选路线；
+- `select-data-grammar`：未声明专门 `chartKind` 的普通 `chart` 请求尚不足以确定具体图形，返回真实的 `scripts/plot_data.py` 路线和 `references/data-figures.md`，要求按比较任务选择 line、scatter、bar、interval、heatmap、paired 或 observations。它不是 MuseCore family，也不是已经通过的数据规格。该工具直接输出 SVG/PNG，HTML 需另选路线；
 - `preserve-source`：源图本身是证据，保留它并只添加受控标注；
 - `refuse`：列出越界原因和可行替代路线。
 

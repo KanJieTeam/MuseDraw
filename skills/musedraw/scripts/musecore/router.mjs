@@ -11,7 +11,7 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','dashboardKind','heroRelation','panelCount','plotPanelCount','columnCount','rowCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','dashboardKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
@@ -23,6 +23,7 @@ export function routeMuseCore(input){
  if(input.capacityKind!==undefined)enumValue(input.capacityKind,['period-stream-gap','other-capacity'],'capacityKind');
  if(input.dashboardKind!==undefined)enumValue(input.dashboardKind,['single-question','other-dashboard'],'dashboardKind');
  if(input.heroRelation!==undefined)enumValue(input.heroRelation,['spatial','process','comparison','trend','inventory'],'heroRelation');
+ if(input.chartKind!==undefined)enumValue(input.chartKind,['scatter-evidence','other-chart'],'chartKind');
  for(const k of ['panelCount','objectCount','labelCount','columnCount','rowCount','periodCount','streamCount']){if(input[k]!==undefined)need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
  if(input.plotPanelCount!==undefined)need(Number.isInteger(input.plotPanelCount)&&input.plotPanelCount>=0,'plotPanelCount must be a nonnegative integer');
  if(input.requestedFormat!==undefined)enumValue(input.requestedFormat,['svg','png','html','pptx'],'requestedFormat');
@@ -137,6 +138,11 @@ export function routeMuseCore(input){
  if(input.readerTask==='chart'){
   if(!input.hasRawData)return refuse('raw-data-required','数据图需要原始或明确汇总数据。',['provide-data','image-evidence']);
   if(input.requestedFormat==='html')return refuse('unsupported-output-format','数据绘图工具直接输出 SVG 和 PNG；HTML 交互页面需要另一条制作路线。',['svg','png','custom-representation']);
+  if(input.chartKind==='scatter-evidence'){
+   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','散点证据图需要声明 quantitative 证据类型；不要把主题词当成观测值。',['declare-quantitative-evidence','custom-representation']);
+   if(!Number.isInteger(input.objectCount)||input.objectCount<2||input.objectCount>6)return refuse('scatter-group-count-out-of-range','散点证据图只接受 2–6 个已声明观测组；超出后应拆图或选择其他数据语法。',['split-groups','custom-representation']);
+   return {decision:'route',family:'scatter-evidence',reference:'references/cap2-data-scatter-evidence.md',reason:'explicit cross-group observations with retained points and descriptive fit only'};
+  }
   return {decision:'select-data-grammar',reference:'references/data-figures.md',script:'scripts/plot_data.py',supportedKinds:['line','scatter','bar','interval','heatmap','paired','observations'],reason:'data availability does not identify a chart; choose the comparison and explicit axis, pairing or uncertainty semantics before invoking the plotting script'};
  }
  return refuse('no-bounded-family','没有匹配的窄能力；必须声明 custom representation，不得静默回退到卡片网格。',['custom-representation','clarify-reader-task']);

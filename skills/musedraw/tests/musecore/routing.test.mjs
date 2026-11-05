@@ -22,6 +22,7 @@ test('explicit reader task routes to a bounded family',()=>{
  const ms=routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'quantitative'});assert.equal(ms.family,'measurement-scales');
  const dr=routeMuseCore({...base,readerTask:'decision-register',evidenceType:'status',decisionKind:'register',objectCount:4});assert.equal(dr.family,'decision-register');
  const cal=routeMuseCore({...base,readerTask:'calibration-plot',evidenceType:'quantitative',rowCount:8,columnCount:2});assert.equal(cal.family,'calibration-plot');
+ const scatter=routeMuseCore({...base,readerTask:'chart',evidenceType:'quantitative',chartKind:'scatter-evidence',objectCount:3});assert.equal(scatter.family,'scatter-evidence');
 });
 
 test('router refuses missing evidence facts instead of inventing them',()=>{
@@ -58,6 +59,7 @@ test('every routed candidate names an executable registered family and an existi
   ,['measurement-scales',{evidenceType:'quantitative'},'measurement-scales']
   ,['decision-register',{evidenceType:'status',decisionKind:'register',objectCount:4},'decision-register']
   ,['calibration-plot',{evidenceType:'quantitative',rowCount:8,columnCount:2},'calibration-plot']
+  ,['chart',{evidenceType:'quantitative',chartKind:'scatter-evidence',objectCount:3},'scatter-evidence']
  ];
  for(const [readerTask,extra,family] of cases){
   const result=routeMuseCore({...base,readerTask,...extra});
@@ -96,6 +98,10 @@ test('generic charts request grammar selection and never report a fabricated exe
  assert.deepEqual(result.supportedKinds,['line','scatter','bar','interval','heatmap','paired','observations']);
  assert.equal(routeMuseCore({...base,readerTask:'chart',hasRawData:false}).code,'raw-data-required');
  assert.equal(routeMuseCore({...base,readerTask:'chart',requestedFormat:'html'}).code,'unsupported-output-format');
+ const scatter=routeMuseCore({...base,readerTask:'chart',evidenceType:'quantitative',chartKind:'scatter-evidence',objectCount:3});
+ assert.equal(scatter.decision,'route');assert.equal(scatter.family,'scatter-evidence');
+ for(const objectCount of [1,7])assert.equal(routeMuseCore({...base,readerTask:'chart',evidenceType:'quantitative',chartKind:'scatter-evidence',objectCount}).code,'scatter-group-count-out-of-range');
+ assert.equal(routeMuseCore({...base,readerTask:'chart',evidenceType:'status',chartKind:'scatter-evidence',objectCount:3}).code,'quantitative-evidence-required');
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
