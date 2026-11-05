@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -140,3 +140,4 @@ export function routeMuseCore(input){
  }
  return refuse('no-bounded-family','没有匹配的窄能力；必须声明 custom representation，不得静默回退到卡片网格。',['custom-representation','clarify-reader-task']);
 }
+
