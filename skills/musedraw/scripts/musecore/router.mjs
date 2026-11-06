@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','evidence-chain','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,7 +11,7 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','resourceKind','dashboardKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','resourceCount','workstreamCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','resourceKind','dashboardKind','evidenceChainKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','resourceCount','workstreamCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
@@ -23,6 +23,7 @@ export function routeMuseCore(input){
  if(input.capacityKind!==undefined)enumValue(input.capacityKind,['period-stream-gap','other-capacity'],'capacityKind');
  if(input.resourceKind!==undefined)enumValue(input.resourceKind,['resource-workstream-load','other-resource'],'resourceKind');
  if(input.dashboardKind!==undefined)enumValue(input.dashboardKind,['single-question','other-dashboard'],'dashboardKind');
+ if(input.evidenceChainKind!==undefined)enumValue(input.evidenceChainKind,['shared-scale-chain','other-evidence-chain'],'evidenceChainKind');
  if(input.heroRelation!==undefined)enumValue(input.heroRelation,['spatial','process','comparison','trend','inventory'],'heroRelation');
  if(input.chartKind!==undefined)enumValue(input.chartKind,['scatter-evidence','other-chart'],'chartKind');
  for(const k of ['panelCount','objectCount','labelCount','columnCount','rowCount','periodCount','streamCount']){if(input[k]!==undefined)need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
@@ -39,6 +40,15 @@ export function routeMuseCore(input){
   if(input.plotPanelCount===undefined)return refuse('plot-panel-count-required','请声明实际数据图面板数；有数据不等于页面包含数据图。',['declare-plot-panel-count']);
   if(input.plotPanelCount<1||input.plotPanelCount>input.panelCount)return refuse('plot-panel-count-out-of-range','数据图面板数必须为 1 到 panelCount；其余面板只能是状态表或文字。',['custom-representation']);
   return {decision:'route',family:'multi-panel-evidence',reference:'references/musecore-multi-panel-evidence.md',reason:'explicit panel roles and shared evidence question'};
+ }
+ if(input.readerTask==='evidence-chain'){
+  if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','证据链需要声明 quantitative 证据类型；不要把主题词或状态标签当成数值面板。',['declare-quantitative-evidence','multi-panel-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','证据链需要每个面板的观测值、来源和样本定义；没有这些事实不能补画统一标尺。',['provide-panel-data','multi-panel-evidence','custom-representation']);
+  if(input.evidenceChainKind!=='shared-scale-chain')return refuse('evidence-chain-scope-required','当前证据链只支持总览、比较、细节共享类别与零起点线性标尺；不同单位或不同时间轴需另选能力。',['declare-shared-scale-chain','multi-panel-evidence','custom-representation']);
+  if(!Number.isInteger(input.panelCount)||input.panelCount<3||input.panelCount>4)return refuse('evidence-chain-panel-count-out-of-range','证据链只接受 3–4 个有角色的面板；超出后应拆页或改用多面板能力。',['split-page','multi-panel-evidence']);
+  if(!Number.isInteger(input.columnCount)||input.columnCount<3||input.columnCount>12)return refuse('evidence-chain-category-count-out-of-range','证据链只接受 3–12 个共享类别；超出后应拆分时间窗或改用密集数据视图。',['split-categories','chart']);
+  if(!Number.isInteger(input.sourceCount)||input.sourceCount<1||input.sourceCount>16)return refuse('evidence-chain-source-count-out-of-range','证据链只接受 1–16 个登记来源；超出后应拆分来源册。',['split-sources','claim-trace']);
+  return {decision:'route',family:'evidence-chain',reference:'references/musecore-evidence-chain.md',reason:'overview, comparison and detail panels share declared categories, group identity and zero-based linear scale'};
  }
  if(input.readerTask==='condition-comparison'){
   if(!input.hasSharedSubstrate)return refuse('shared-substrate-required','条件对照必须声明共同 substrate、方向和相位。',['multi-panel-evidence','custom-representation']);

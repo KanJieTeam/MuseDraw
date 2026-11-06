@@ -9,6 +9,7 @@ const base={readerQuestion:'读者需要看见同一问题的证据如何分层�
 
 test('explicit reader task routes to a bounded family',()=>{
  const r=routeMuseCore({...base,readerTask:'multi-panel-evidence'});assert.deepEqual({decision:r.decision,family:r.family},{decision:'route',family:'multi-panel-evidence'});
+ const ec=routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:3});assert.equal(ec.family,'evidence-chain');
  const s=routeMuseCore({...base,readerTask:'swimlane',evidenceType:'workflow'});assert.equal(s.family,'lanes');
  const a=routeMuseCore({...base,readerTask:'apparatus-measurement',evidenceType:'apparatus',hasCoordinates:true});assert.equal(a.family,'device-measurement');
  const c=routeMuseCore({...base,readerTask:'cohort-flow',flowKind:'nested-funnel'});assert.equal(c.family,'funnel');
@@ -42,6 +43,7 @@ test('unknown or malformed tasks do not silently fall back',()=>{
 test('every routed candidate names an executable registered family and an existing scope reference',()=>{
  const cases=[
   ['multi-panel-evidence',{},'multi-panel-evidence'],
+  ['evidence-chain',{evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:3},'evidence-chain'],
   ['condition-comparison',{hasSharedSubstrate:true},'condition-comparison'],
   ['apparatus-measurement',{evidenceType:'apparatus',hasCoordinates:true},'device-measurement'],
   ['cohort-flow',{flowKind:'nested-funnel'},'funnel'],
@@ -92,6 +94,15 @@ test('spatial route requires an explicit regular height grid instead of treating
  for(const fieldKind of [undefined,'other-spatial-field'])assert.equal(routeMuseCore({...spatial,hasCoordinates:true,fieldKind}).code,'spatial-field-scope-required');
 });
 
+test('evidence chain refuses unbounded panel claims instead of inventing a shared scale',()=>{
+ assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'table',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:3}).code,'quantitative-evidence-required');
+ assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',hasRawData:false,panelCount:3,columnCount:5,sourceCount:3}).code,'raw-data-required');
+ assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',panelCount:3,columnCount:5,sourceCount:3}).code,'evidence-chain-scope-required');
+ assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:2,columnCount:5,sourceCount:3}).code,'evidence-chain-panel-count-out-of-range');
+ assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:13,sourceCount:3}).code,'evidence-chain-category-count-out-of-range');
+ assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:17}).code,'evidence-chain-source-count-out-of-range');
+});
+
 test('generic charts request grammar selection and never report a fabricated executable family',()=>{
  const result=routeMuseCore({...base,readerTask:'chart',objectCount:1000,requestedFormat:'svg'});
  assert.equal(result.decision,'select-data-grammar');assert.equal(Object.hasOwn(result,'family'),false);
@@ -107,7 +118,7 @@ test('generic charts request grammar selection and never report a fabricated exe
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
- for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','measurement-scales','claim-trace','image-evidence','chart']){
+ for(const readerTask of ['multi-panel-evidence','evidence-chain','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','measurement-scales','claim-trace','image-evidence','chart']){
   const result=routeMuseCore({...base,readerTask,requestedFormat:'pptx'});
   assert.equal(result.decision,'refuse');assert.equal(result.code,'unsupported-output-format');
  }
