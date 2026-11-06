@@ -2751,6 +2751,13 @@
       "family": "portfolio-health",
       "contentStatus": "synthetic phase-by-health workstreams with explicit owners and checkpoint dates",
       "reference": "references/musecore-portfolio-health.md"
+    },
+    {
+      "id": "claim-trace-demo",
+      "file": "claim-trace-demo.json",
+      "family": "claim-trace",
+      "contentStatus": "original synthetic teaching data with explicit claim levels, source states and non-causal relations",
+      "reference": "references/musecore-claim-trace.md"
     }
   ],
   "material": "Each visual family carries its own type, space, object and colour decisions; the technical-report families retain their monochrome material.",

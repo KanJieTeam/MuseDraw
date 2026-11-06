@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,7 +11,7 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','dashboardKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','dashboardKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
@@ -126,6 +126,13 @@ export function routeMuseCore(input){
   if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','测量尺度示例需要声明 quantitative 证据类型；不能从变量名称推断尺度。',['declare-quantitative-evidence','custom-representation']);
   if(!input.hasRawData)return refuse('raw-data-required','测量尺度示例需要调用者提供明确的类别、单位、等间隔和零点声明。',['provide-data','custom-representation']);
   return {decision:'route',family:'measurement-scales',reference:'references/musecore-chance-scales.md',reason:'explicit nominal, ordinal, interval or ratio declarations before comparison'};
+ }
+ if(input.readerTask==='claim-trace'){
+  if(!['status','table'].includes(input.evidenceType))return refuse('claim-evidence-required','主张回查需要声明 status 或 table 证据类型；不要把主题词当成来源事实。',['declare-claim-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','主张回查需要每条主张、来源状态和关系；没有登记事实不能补画证据链。',['provide-claim-sources','custom-representation']);
+  if(!Number.isInteger(input.claimCount)||input.claimCount<3||input.claimCount>8)return refuse('claim-count-out-of-range','主张回查只接受 3–8 条主张。',['split-claims','custom-representation']);
+  if(!Number.isInteger(input.sourceCount)||input.sourceCount<3||input.sourceCount>12)return refuse('source-count-out-of-range','主张回查只接受 3–12 个来源。',['split-sources','custom-representation']);
+  return {decision:'route',family:'claim-trace',reference:'references/musecore-claim-trace.md',reason:'explicit claim levels, source statuses and non-causal relations'};
  }
  const routes={
   'cohort-flow':{family:'funnel',reference:'references/musecore-spatial-data.md',reason:'nested cohort counts use the bounded funnel family'},

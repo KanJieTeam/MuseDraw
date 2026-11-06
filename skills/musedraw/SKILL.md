@@ -95,6 +95,7 @@ family's encodings, coordinated geometry and placement.
 | Two-period rank movement with explicit object identity and source traceability | [Rank shift](references/musecore-rank-shift.md) |
 | Explicit evidence status across candidate objects and criteria | [Evidence matrix](references/musecore-evidence-matrix.md) |
 | Effect estimates with explicitly supplied interval endpoints and row sources | [Forest plot](references/musecore-forest-plot.md) |
+| Explicit research claims linked to source status without pooling or causal inference | [Claim trace](references/musecore-claim-trace.md) |
 | Observed–predicted pairs with explicit prediction intervals and condition summaries | [Calibration plot](references/musecore-calibration-plot.md) |
 | Period-by-stream demand and capacity ledgers with explicit gap states | [Capacity plan](references/musecore-capacity-plan.md) |
 | Rectangular measurement matrices with cell-level provenance and bounded colour encoding | [Heatmap](references/musecore-heatmap.md) |

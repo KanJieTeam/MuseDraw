@@ -28,6 +28,7 @@ node skills/musedraw/scripts/musedraw.mjs core route route-input.json
 - `capacity-plan` 必须声明 `evidenceType: "quantitative"`、`hasRawData: true`、`capacityKind: "period-stream-gap"`，并明确 `periodCount` 为 2–8、`streamCount` 为 1–6。程序只计算 `capacity - demand`；不会把缺口推断成延期、人员建议、预测或质量结论。
 - `dashboard-focus` 必须声明 `dashboardKind: "single-question"`、`hasRawData: true` 和一个 `heroRelation`（`spatial`、`process`、`comparison`、`trend`、`inventory`），并保持 2–8 个主视图/辅助证据对象。当前看板只服务一个运营问题；不会用装饰主图、重复 KPI 或未声明时点冒充态势。
 - `measurement-scales` 必须声明 `evidenceType: "quantitative"` 和已提供的尺度事实。类别、等间隔、零点和单位必须由输入明确给出；程序不从变量名称猜测定类、定序、定距或定比。
+- `claim-trace` 必须声明 `evidenceType: "status"` 或 `"table"`，并提供至少 3 条主张、3–12 条来源和逐条关系。主张层级、来源状态及支持/相反/待核关系均由输入声明；不会从语气补造因果、置信度或缺失证据。
 - `chart` 若声明 `chartKind: "scatter-evidence"`，必须同时声明 `evidenceType: "quantitative"`、`hasRawData: true` 和 2–6 个观测组（`objectCount`）。此路线保留每个原始观测点，只计算描述性摘要与可选的逐组普通最小二乘线；不会补造显著性、因果或异常值结论。未声明 `chartKind` 的普通数据图仍返回 `select-data-grammar`，不静默选择散点结构。
 - `cohort-flow` 必须声明 `flowKind: "nested-funnel"` 才能选择 `funnel`。`branch-rejoin` 明确拒绝，未声明时不猜测。funnel 的 3–8 层、计数非递增和嵌套队列含义由对应契约继续检查。
 - `spatial-field` 必须声明坐标、数据以及 `fieldKind: "regular-height-grid"`，才会选择真实存在的 `contour-field`。这仅是规则高程网格的候选路线；以米为单位、网格间距、等高线拓扑等由模型验证。其他场量或散点采样不能直接套用高程能力。

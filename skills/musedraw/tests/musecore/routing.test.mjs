@@ -57,6 +57,7 @@ test('every routed candidate names an executable registered family and an existi
   ,['capacity-plan',{evidenceType:'quantitative',capacityKind:'period-stream-gap',periodCount:4,streamCount:3},'capacity-plan']
   ,['dashboard-focus',{evidenceType:'status',dashboardKind:'single-question',heroRelation:'trend',objectCount:4},'dashboard-focus']
   ,['measurement-scales',{evidenceType:'quantitative'},'measurement-scales']
+  ,['claim-trace',{evidenceType:'table',claimCount:4,sourceCount:5},'claim-trace']
   ,['decision-register',{evidenceType:'status',decisionKind:'register',objectCount:4},'decision-register']
   ,['calibration-plot',{evidenceType:'quantitative',rowCount:8,columnCount:2},'calibration-plot']
   ,['chart',{evidenceType:'quantitative',chartKind:'scatter-evidence',objectCount:3},'scatter-evidence']
@@ -105,7 +106,7 @@ test('generic charts request grammar selection and never report a fabricated exe
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
- for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','measurement-scales','image-evidence','chart']){
+ for(const readerTask of ['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','measurement-scales','claim-trace','image-evidence','chart']){
   const result=routeMuseCore({...base,readerTask,requestedFormat:'pptx'});
   assert.equal(result.decision,'refuse');assert.equal(result.code,'unsupported-output-format');
  }
@@ -146,6 +147,10 @@ test('malformed declarations and unqualified cohort requests remain explicit',()
  assert.equal(routeMuseCore({...base,readerTask:'dashboard-focus',evidenceType:'status',dashboardKind:'single-question',heroRelation:'trend',objectCount:9}).code,'dashboard-object-count-out-of-range');
  assert.equal(routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'table'}).code,'quantitative-evidence-required');
  assert.equal(routeMuseCore({...base,readerTask:'measurement-scales',evidenceType:'quantitative',hasRawData:false}).code,'raw-data-required');
+ assert.equal(routeMuseCore({...base,readerTask:'claim-trace',evidenceType:'table',hasRawData:false,claimCount:4,sourceCount:5}).code,'raw-data-required');
+ assert.equal(routeMuseCore({...base,readerTask:'claim-trace',evidenceType:'quantitative',hasRawData:true,claimCount:4,sourceCount:5}).code,'claim-evidence-required');
+ assert.equal(routeMuseCore({...base,readerTask:'claim-trace',evidenceType:'table',hasRawData:true,claimCount:2,sourceCount:5}).code,'claim-count-out-of-range');
+ assert.equal(routeMuseCore({...base,readerTask:'claim-trace',evidenceType:'table',hasRawData:true,claimCount:4,sourceCount:2}).code,'source-count-out-of-range');
  assert.equal(routeMuseCore({...base,readerTask:'decision-register',evidenceType:'quantitative',decisionKind:'register',objectCount:4}).code,'status-evidence-required');
  assert.equal(routeMuseCore({...base,readerTask:'decision-register',evidenceType:'status',decisionKind:'register',hasRawData:false,objectCount:4}).code,'raw-data-required');
  assert.equal(routeMuseCore({...base,readerTask:'decision-register',evidenceType:'status',objectCount:4}).code,'decision-register-scope-required');
