@@ -1,0 +1,117 @@
+{
+  "family": "resource-allocation",
+  "title": "交付资源分配矩阵",
+  "subtitle": "把团队资源、工作流负载与剩余容量放在同一张可核对的表上",
+  "unit": "工时",
+  "dataStatus": "虚构演示数据 · 资源容量与工作量均为登记值",
+  "resources": [
+    {
+      "id": "analysis",
+      "label": "分析工时",
+      "capacity": 160,
+      "source": "资源登记 R-01"
+    },
+    {
+      "id": "field",
+      "label": "现场工时",
+      "capacity": 96,
+      "source": "资源登记 R-02"
+    },
+    {
+      "id": "review",
+      "label": "复核工时",
+      "capacity": 72,
+      "source": "资源登记 R-03"
+    },
+    {
+      "id": "design",
+      "label": "制图工时",
+      "capacity": 64,
+      "source": "资源登记 R-04"
+    }
+  ],
+  "workstreams": [
+    {
+      "id": "survey",
+      "label": "基础资料整理",
+      "source": "排程记录 W-01",
+      "allocations": [
+        {
+          "resourceId": "analysis",
+          "amount": 42,
+          "source": "分配 W-01/A"
+        },
+        {
+          "resourceId": "field",
+          "amount": 18,
+          "source": "分配 W-01/F"
+        },
+        {
+          "resourceId": "review",
+          "amount": 12,
+          "source": "分配 W-01/R"
+        },
+        {
+          "resourceId": "design",
+          "amount": 8,
+          "source": "分配 W-01/D"
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "label": "区域模型核验",
+      "source": "排程记录 W-02",
+      "allocations": [
+        {
+          "resourceId": "analysis",
+          "amount": 66,
+          "source": "分配 W-02/A"
+        },
+        {
+          "resourceId": "field",
+          "amount": 34,
+          "source": "分配 W-02/F"
+        },
+        {
+          "resourceId": "review",
+          "amount": 22,
+          "source": "分配 W-02/R"
+        },
+        {
+          "resourceId": "design",
+          "amount": 14,
+          "source": "分配 W-02/D"
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "label": "成果报告编制",
+      "source": "排程记录 W-03",
+      "allocations": [
+        {
+          "resourceId": "analysis",
+          "amount": 38,
+          "source": "分配 W-03/A"
+        },
+        {
+          "resourceId": "field",
+          "amount": 10,
+          "source": "分配 W-03/F"
+        },
+        {
+          "resourceId": "review",
+          "amount": 28,
+          "source": "分配 W-03/R"
+        },
+        {
+          "resourceId": "design",
+          "amount": 32,
+          "source": "分配 W-03/D"
+        }
+      ]
+    }
+  ],
+  "note": "容量来自当前资源登记，负载来自工作流分配；余量只表示容量减去已登记负载，不等同于人员可用性、交付承诺或质量结论。"
+}

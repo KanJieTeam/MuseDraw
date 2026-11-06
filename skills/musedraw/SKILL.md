@@ -98,6 +98,7 @@ family's encodings, coordinated geometry and placement.
 | Explicit research claims linked to source status without pooling or causal inference | [Claim trace](references/musecore-claim-trace.md) |
 | Observed–predicted pairs with explicit prediction intervals and condition summaries | [Calibration plot](references/musecore-calibration-plot.md) |
 | Period-by-stream demand and capacity ledgers with explicit gap states | [Capacity plan](references/musecore-capacity-plan.md) |
+| Explicit resource × workstream allocations with computed load and remaining capacity | [Resource allocation](references/musecore-resource-allocation.md) |
 | Rectangular measurement matrices with cell-level provenance and bounded colour encoding | [Heatmap](references/musecore-heatmap.md) |
 | Ordered additive categories with an explicit cumulative-share line | [Pareto analysis](references/musecore-pareto-analysis.md) |
 | Explicit threshold operating points shown as coordinated ROC and PR curves | [ROC–PR curve](references/musecore-roc-pr-curve.md) |

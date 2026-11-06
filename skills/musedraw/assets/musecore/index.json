@@ -2641,6 +2641,13 @@
       "reference": "references/musecore-capacity-plan.md"
     },
     {
+      "id": "resource-allocation-demo",
+      "file": "resource-allocation-demo.json",
+      "family": "resource-allocation",
+      "contentStatus": "original synthetic resource ledger; every allocation is explicit and load/remaining capacity are arithmetic summaries",
+      "reference": "references/musecore-resource-allocation.md"
+    },
+    {
       "id": "pareto-analysis-demo",
       "file": "pareto-analysis-demo.json",
       "family": "pareto-analysis",

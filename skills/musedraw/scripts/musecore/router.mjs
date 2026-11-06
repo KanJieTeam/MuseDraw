@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,7 +11,7 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','dashboardKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','resourceKind','dashboardKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','resourceCount','workstreamCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
@@ -21,6 +21,7 @@ export function routeMuseCore(input){
  if(input.decisionKind!==undefined)enumValue(input.decisionKind,['explicit-branch','register','other-decision'],'decisionKind');
  if(input.matrixKind!==undefined)enumValue(input.matrixKind,['evidence-status','other-matrix'],'matrixKind');
  if(input.capacityKind!==undefined)enumValue(input.capacityKind,['period-stream-gap','other-capacity'],'capacityKind');
+ if(input.resourceKind!==undefined)enumValue(input.resourceKind,['resource-workstream-load','other-resource'],'resourceKind');
  if(input.dashboardKind!==undefined)enumValue(input.dashboardKind,['single-question','other-dashboard'],'dashboardKind');
  if(input.heroRelation!==undefined)enumValue(input.heroRelation,['spatial','process','comparison','trend','inventory'],'heroRelation');
  if(input.chartKind!==undefined)enumValue(input.chartKind,['scatter-evidence','other-chart'],'chartKind');
@@ -92,6 +93,14 @@ export function routeMuseCore(input){
   if(!Number.isInteger(input.periodCount)||input.periodCount<2||input.periodCount>8)return refuse('capacity-period-count-out-of-range','容量轨道只接受 2–8 个周期。',['split-periods','custom-representation']);
   if(!Number.isInteger(input.streamCount)||input.streamCount<1||input.streamCount>6)return refuse('capacity-stream-count-out-of-range','容量轨道只接受 1–6 条工作流。',['split-streams','custom-representation']);
   return {decision:'route',family:'capacity-plan',reference:'references/musecore-capacity-plan.md',reason:'explicit period-by-stream demand and capacity values with computed gaps'};
+ }
+ if(input.readerTask==='resource-allocation'){
+  if(input.evidenceType!=='quantitative')return refuse('quantitative-evidence-required','资源分配矩阵需要声明 quantitative 证据类型；不要从主题词推断负载。',['declare-quantitative-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','资源分配矩阵需要每个资源和工作流的显式分配数值；没有数据不能补画负载。',['provide-resource-ledger','custom-representation']);
+  if(input.resourceKind!=='resource-workstream-load')return refuse('resource-allocation-scope-required','当前资源矩阵只支持已声明的“资源 × 工作流”分配与余量；人员预测、排班优化和利用率模型需另选能力。',['declare-resource-workstream-load','custom-representation']);
+  if(!Number.isInteger(input.resourceCount)||input.resourceCount<2||input.resourceCount>8)return refuse('resource-count-out-of-range','资源分配矩阵只接受 2–8 个资源列。',['split-resources','custom-representation']);
+  if(!Number.isInteger(input.workstreamCount)||input.workstreamCount<2||input.workstreamCount>8)return refuse('workstream-count-out-of-range','资源分配矩阵只接受 2–8 条工作流。',['split-workstreams','custom-representation']);
+  return {decision:'route',family:'resource-allocation',reference:'references/musecore-resource-allocation.md',reason:'explicit resource capacities and workstream allocations with computed remaining amounts'};
  }
  if(input.readerTask==='dashboard-focus'){
   if(!['quantitative','status'].includes(input.evidenceType))return refuse('dashboard-evidence-required','运营看板需要声明 quantitative 或 status 证据类型；不要把主题词当成运营事实。',['declare-dashboard-evidence','custom-representation']);
