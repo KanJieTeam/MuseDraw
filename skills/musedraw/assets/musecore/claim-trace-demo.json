@@ -1,0 +1,143 @@
+{
+  "family": "claim-trace",
+  "title": "从观测到解释：一条可回查的证据链",
+  "subtitle": "把主张层级、来源状态和限制条件分开画；图面不把“相关”写成“因果”",
+  "dataStatus": "演示数据；主张与来源均为虚构登记项，不代表实验结论",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "处理后信号在 24 h 内上升",
+      "level": "observed",
+      "detail": "直接观测；时间窗、单位和样本范围见来源 O1",
+      "limits": [
+        {
+          "id": "c1-l1",
+          "text": "仅覆盖声明的时间窗与样本范围。",
+          "sourceId": "o1"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "label": "信号变化与屏障恢复同步出现",
+      "level": "inferred",
+      "detail": "由两组时间序列的共同变化提出，仍需独立干预验证",
+      "limits": [
+        {
+          "id": "c2-l1",
+          "text": "同步变化不能单独证明因果方向。",
+          "sourceId": "o2"
+        },
+        {
+          "id": "c2-l2",
+          "text": "批次与测量条件的差异限制外推。",
+          "sourceId": "o3"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "label": "该信号可能参与屏障恢复",
+      "level": "hypothesis",
+      "detail": "待机制实验检验；本图不把假设当作已证实因果",
+      "limits": [
+        {
+          "id": "c3-l1",
+          "text": "抑制实验尚未完成，机制关系仍属假设。",
+          "sourceId": "m1"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "label": "不同批次的方向一致性有限",
+      "level": "inferred",
+      "detail": "批次 B 的区间跨过零点，不能直接汇总为稳定效应",
+      "limits": [
+        {
+          "id": "c4-l1",
+          "text": "区间定义与缺失值处理需在正文中说明。",
+          "sourceId": "o3"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "o1",
+      "label": "O1 · 24 h 定时观测",
+      "kind": "observation",
+      "status": "direct",
+      "detail": "原始读数与时间点已登记；单位为相对信号"
+    },
+    {
+      "id": "o2",
+      "label": "O2 · 屏障恢复时间序列",
+      "kind": "experiment",
+      "status": "direct",
+      "detail": "同一实验批次；恢复指标与信号未做因果操控"
+    },
+    {
+      "id": "o3",
+      "label": "O3 · 批次 B 复测",
+      "kind": "experiment",
+      "status": "indirect",
+      "detail": "区间较宽；样本量与缺失值处理见实验记录"
+    },
+    {
+      "id": "r1",
+      "label": "R1 · 机制综述线索",
+      "kind": "review",
+      "status": "indirect",
+      "detail": "用于提出候选机制，不替代本项目的直接证据"
+    },
+    {
+      "id": "m1",
+      "label": "M1 · 待执行抑制实验",
+      "kind": "model",
+      "status": "missing",
+      "detail": "尚未完成；不能在图中当作支持证据"
+    }
+  ],
+  "links": [
+    {
+      "claimId": "c1",
+      "sourceId": "o1",
+      "relation": "supports"
+    },
+    {
+      "claimId": "c2",
+      "sourceId": "o1",
+      "relation": "supports"
+    },
+    {
+      "claimId": "c2",
+      "sourceId": "o2",
+      "relation": "supports"
+    },
+    {
+      "claimId": "c3",
+      "sourceId": "r1",
+      "relation": "supports",
+      "note": "候选机制线索"
+    },
+    {
+      "claimId": "c3",
+      "sourceId": "m1",
+      "relation": "qualifies",
+      "note": "待执行；不作为当前证据"
+    },
+    {
+      "claimId": "c4",
+      "sourceId": "o3",
+      "relation": "supports"
+    },
+    {
+      "claimId": "c4",
+      "sourceId": "o1",
+      "relation": "contradicts",
+      "note": "与单批次方向不同"
+    }
+  ],
+  "note": "读图顺序：先看主张层级，再看连到它的来源状态与限制。direct / indirect / missing 是输入登记，不是模型评分。请在正文中说明研究设计、区间定义和未完成实验。"
+}
