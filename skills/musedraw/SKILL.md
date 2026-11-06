@@ -87,6 +87,7 @@ family's encodings, coordinated geometry and placement.
 | Reader task / content | Relevant tools |
 | --- | --- |
 | Technical-report relations, checking, task ownership and time slots | [Report constructions](references/musecore-runtime.md) |
+| Typed software boundaries, components, supporting systems and routed dependencies | [Architecture views](references/architecture-views.md) |
 | Rhythm, specimens, shared routes, colour, activity calendars, assay plates, overprint sequences and image-led pages | [Colour and mixed-media constructions](references/musecore-visual-runtime.md) |
 | Proportional layers, small radial networks, dated histories, paired changes, additive bridges, nested funnels, survey responses and cohorts | [Spatial and quantitative constructions](references/musecore-spatial-data.md) |
 | Common-scale panels, paired-time slopes, population bands, scatter, ranks, exact symbols, histograms and conserved amounts | [Distributions and flows](references/musecore-distributions.md) |

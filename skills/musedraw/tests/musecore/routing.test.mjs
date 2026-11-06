@@ -10,6 +10,7 @@ const base={readerQuestion:'读者需要看见同一问题的证据如何分层�
 test('explicit reader task routes to a bounded family',()=>{
  const r=routeMuseCore({...base,readerTask:'multi-panel-evidence'});assert.deepEqual({decision:r.decision,family:r.family},{decision:'route',family:'multi-panel-evidence'});
  const ec=routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:3});assert.equal(ec.family,'evidence-chain');
+ const ar=routeMuseCore({...base,readerTask:'architecture',evidenceType:'workflow',architectureKind:'bounded-c4-dag',objectCount:6});assert.equal(ar.family,'architecture');
  const s=routeMuseCore({...base,readerTask:'swimlane',evidenceType:'workflow'});assert.equal(s.family,'lanes');
  const a=routeMuseCore({...base,readerTask:'apparatus-measurement',evidenceType:'apparatus',hasCoordinates:true});assert.equal(a.family,'device-measurement');
  const c=routeMuseCore({...base,readerTask:'cohort-flow',flowKind:'nested-funnel'});assert.equal(c.family,'funnel');
@@ -44,6 +45,7 @@ test('every routed candidate names an executable registered family and an existi
  const cases=[
   ['multi-panel-evidence',{},'multi-panel-evidence'],
   ['evidence-chain',{evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:3},'evidence-chain'],
+  ['architecture',{evidenceType:'workflow',architectureKind:'bounded-c4-dag',objectCount:6},'architecture'],
   ['condition-comparison',{hasSharedSubstrate:true},'condition-comparison'],
   ['apparatus-measurement',{evidenceType:'apparatus',hasCoordinates:true},'device-measurement'],
   ['cohort-flow',{flowKind:'nested-funnel'},'funnel'],
@@ -103,6 +105,13 @@ test('evidence chain refuses unbounded panel claims instead of inventing a share
  assert.equal(routeMuseCore({...base,readerTask:'evidence-chain',evidenceType:'quantitative',evidenceChainKind:'shared-scale-chain',panelCount:3,columnCount:5,sourceCount:17}).code,'evidence-chain-source-count-out-of-range');
 });
 
+test('architecture route refuses ambiguous system claims instead of using a generic card wall',()=>{
+ assert.equal(routeMuseCore({...base,readerTask:'architecture',evidenceType:'quantitative',architectureKind:'bounded-c4-dag',objectCount:6}).code,'workflow-evidence-required');
+ assert.equal(routeMuseCore({...base,readerTask:'architecture',evidenceType:'workflow',architectureKind:'bounded-c4-dag',hasRawData:false,objectCount:6}).code,'raw-data-required');
+ assert.equal(routeMuseCore({...base,readerTask:'architecture',evidenceType:'workflow',objectCount:6}).code,'architecture-scope-required');
+ assert.equal(routeMuseCore({...base,readerTask:'architecture',evidenceType:'workflow',architectureKind:'bounded-c4-dag',objectCount:11}).code,'architecture-object-count-out-of-range');
+});
+
 test('generic charts request grammar selection and never report a fabricated executable family',()=>{
  const result=routeMuseCore({...base,readerTask:'chart',objectCount:1000,requestedFormat:'svg'});
  assert.equal(result.decision,'select-data-grammar');assert.equal(Object.hasOwn(result,'family'),false);
@@ -118,7 +127,7 @@ test('generic charts request grammar selection and never report a fabricated exe
 });
 
 test('requested native presentations are not silently fulfilled by vector or bitmap output',()=>{
- for(const readerTask of ['multi-panel-evidence','evidence-chain','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','measurement-scales','claim-trace','image-evidence','chart']){
+ for(const readerTask of ['multi-panel-evidence','evidence-chain','architecture','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','measurement-scales','claim-trace','image-evidence','chart']){
   const result=routeMuseCore({...base,readerTask,requestedFormat:'pptx'});
   assert.equal(result.decision,'refuse');assert.equal(result.code,'unsupported-output-format');
  }

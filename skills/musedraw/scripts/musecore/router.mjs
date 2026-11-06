@@ -2,7 +2,7 @@ const need=(ok,msg)=>{if(!ok)throw Error(msg)};
 const text=(v,label,max=180)=>{need(typeof v==='string'&&v.trim().length>0,`${label}: nonempty text required`);need([...v].length<=max,`${label}: exceeds ${max} characters`)};
 const enumValue=(v,values,label)=>{need(values.includes(v),`${label} must be one of ${values.join(', ')}`);return v};
 
-const TASKS=['multi-panel-evidence','evidence-chain','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
+const TASKS=['multi-panel-evidence','evidence-chain','architecture','mechanism-chain','condition-comparison','apparatus-measurement','cohort-flow','spatial-field','swimlane','timeline','entity-chain','operations-board','risk-matrix','decision-tree','evidence-matrix','capacity-plan','resource-allocation','dashboard-focus','decision-register','calibration-plot','portfolio-health','measurement-scales','claim-trace','image-evidence','chart'];
 const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image','table','workflow'];
 
 /**
@@ -11,7 +11,7 @@ const EVIDENCE=['quantitative','status','mechanism','apparatus','spatial','image
  */
 export function routeMuseCore(input){
  need(input&&typeof input==='object'&&!Array.isArray(input),'route input must be an object');
- const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','resourceKind','dashboardKind','evidenceChainKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','resourceCount','workstreamCount','objectCount','labelCount','requestedFormat'];
+ const allowed=['readerTask','readerQuestion','evidenceType','hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate','flowKind','fieldKind','riskKind','decisionKind','matrixKind','capacityKind','resourceKind','dashboardKind','evidenceChainKind','architectureKind','heroRelation','chartKind','panelCount','plotPanelCount','columnCount','rowCount','claimCount','sourceCount','periodCount','streamCount','resourceCount','workstreamCount','objectCount','labelCount','requestedFormat'];
  for(const k of Object.keys(input))need(allowed.includes(k),`route input.${k}: unsupported field`);
  enumValue(input.readerTask,TASKS,'readerTask');text(input.readerQuestion,'readerQuestion',240);enumValue(input.evidenceType,EVIDENCE,'evidenceType');
  for(const k of ['hasRawData','hasSourceAsset','hasCoordinates','hasSharedSubstrate'])need(typeof input[k]==='boolean',`${k} must be boolean`);
@@ -24,6 +24,7 @@ export function routeMuseCore(input){
  if(input.resourceKind!==undefined)enumValue(input.resourceKind,['resource-workstream-load','other-resource'],'resourceKind');
  if(input.dashboardKind!==undefined)enumValue(input.dashboardKind,['single-question','other-dashboard'],'dashboardKind');
  if(input.evidenceChainKind!==undefined)enumValue(input.evidenceChainKind,['shared-scale-chain','other-evidence-chain'],'evidenceChainKind');
+ if(input.architectureKind!==undefined)enumValue(input.architectureKind,['bounded-c4-dag','other-architecture'],'architectureKind');
  if(input.heroRelation!==undefined)enumValue(input.heroRelation,['spatial','process','comparison','trend','inventory'],'heroRelation');
  if(input.chartKind!==undefined)enumValue(input.chartKind,['scatter-evidence','other-chart'],'chartKind');
  for(const k of ['panelCount','objectCount','labelCount','columnCount','rowCount','periodCount','streamCount']){if(input[k]!==undefined)need(Number.isInteger(input[k])&&input[k]>=0,`${k} must be a nonnegative integer`);}
@@ -49,6 +50,13 @@ export function routeMuseCore(input){
   if(!Number.isInteger(input.columnCount)||input.columnCount<3||input.columnCount>12)return refuse('evidence-chain-category-count-out-of-range','证据链只接受 3–12 个共享类别；超出后应拆分时间窗或改用密集数据视图。',['split-categories','chart']);
   if(!Number.isInteger(input.sourceCount)||input.sourceCount<1||input.sourceCount>16)return refuse('evidence-chain-source-count-out-of-range','证据链只接受 1–16 个登记来源；超出后应拆分来源册。',['split-sources','claim-trace']);
   return {decision:'route',family:'evidence-chain',reference:'references/musecore-evidence-chain.md',reason:'overview, comparison and detail panels share declared categories, group identity and zero-based linear scale'};
+ }
+ if(input.readerTask==='architecture'){
+  if(input.evidenceType!=='workflow')return refuse('workflow-evidence-required','软件架构图需要声明 workflow 证据类型；不要把主题词当成系统边界或调用关系。',['declare-workflow-evidence','custom-representation']);
+  if(!input.hasRawData)return refuse('raw-data-required','软件架构图需要明确的范围、内部对象、外部对象、方向和技术事实；没有这些事实不能补画系统。',['provide-architecture-facts','custom-representation']);
+  if(input.architectureKind!=='bounded-c4-dag')return refuse('architecture-scope-required','当前架构能力只支持一个系统/容器边界内的有向无环依赖视图；部署拓扑、循环消息和多系统关系需另选能力。',['declare-bounded-c4-dag','deployment','custom-representation']);
+  if(!Number.isInteger(input.objectCount)||input.objectCount<2||input.objectCount>10)return refuse('architecture-object-count-out-of-range','当前架构能力只接受 2–10 个范围内对象；超出后应拆分容器图、组件图或换专门拓扑视图。',['split-architecture','custom-representation']);
+  return {decision:'route',family:'architecture',reference:'references/architecture-views.md',reason:'bounded C4-style system boundary with typed objects and directed acyclic dependencies'};
  }
  if(input.readerTask==='condition-comparison'){
   if(!input.hasSharedSubstrate)return refuse('shared-substrate-required','条件对照必须声明共同 substrate、方向和相位。',['multi-panel-evidence','custom-representation']);
