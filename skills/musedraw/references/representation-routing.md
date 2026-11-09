@@ -13,9 +13,10 @@ Every new office or research diagram must declare one primary representation:
 | Who acts, decides or reviews? | `swimlane` | role lanes, actions in the responsible lane, decision and return paths |
 | What changes over time? | `timeline` | one time axis, parallel work on that axis, real milestones |
 | What sits inside which boundary? | `boundary-map` | explicit containment, external dependencies and interface edges |
+| Where do the same array elements appear after a reshape or reorder? | `array-reorder` | two complete arrays with preserved IDs, values and labels, derived from one source |
 
 The host should put the choice in `scene.meta.representation` and name the one
-sentence the figure proves in `scene.meta.readerQuestion`. If none of the six
+sentence the figure proves in `scene.meta.readerQuestion`. If none of these
 fits, stop and choose a custom representation explicitly. Do not silently fall
 back to a card grid.
 
@@ -55,6 +56,11 @@ Refuse or split the figure when the requested content has no single primary
 relationship, when more than about 25 objects are required for one view, or
 when labels must be shrunk below the delivery size. A smaller font and more
 cards are not a valid repair.
+
+The bounded [array composition](representation-views.md) has its own count
+and reading-size limits. Equal-sized cells express equal array positions;
+they are not a fallback card layout. Its strict linter checks the complete
+identity and geometry contract before applying that exception.
 
 The six report figures in the勘察报告 example should route as follows:
 

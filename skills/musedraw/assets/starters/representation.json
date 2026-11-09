@@ -1,0 +1,23 @@
+{
+  "method": "representation",
+  "title": "同一组样本，换一种排列",
+  "theme": "journal",
+  "source": {
+    "id": "samples",
+    "shape": [2, 3],
+    "elements": [
+      {"id": "a", "value": 12, "label": "样本 A"},
+      {"id": "b", "value": 12, "label": "样本 B"},
+      {"id": "c", "value": 18, "label": "样本 C"},
+      {"id": "d", "value": 31, "label": "样本 D"},
+      {"id": "e", "value": 18, "label": "样本 E"},
+      {"id": "f", "value": 26, "label": "样本 F"}
+    ]
+  },
+  "target": {
+    "shape": [3, 2],
+    "order": ["a", "d", "b", "e", "c", "f"]
+  },
+  "focusIds": ["b", "e"],
+  "note": "自制示意数据；仅重排相同元素，不计算聚合、新特征或物理变化。"
+}

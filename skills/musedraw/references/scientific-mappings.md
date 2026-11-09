@@ -47,10 +47,13 @@ ones. For a reorder/reshape, write a short element mapping first: for example,
 views. If a feature or value changes, distinguish that change from position.
 Matching colours alone are insufficient when two elements have the same value.
 
-Use `tensor` for explicit arrays and native cells/text for a mapped sequence.
-Keep an authoring map of source element IDs to destination positions; array
-terminals are indexed by position, so a second tensor does not automatically
-inherit semantic element identity. Draw correspondence only where it is needed
+For a bounded matrix/sequence reshape or reorder, use
+[identity-preserving array views](representation-views.md). Define source
+elements once and give the target shape and ID order; the compiler validates
+the permutation and inherits the labels and values. It does not aggregate or
+create features. For other arrays, use `tensor` and native cells/text with an
+explicit authoring map. Ordinary tensor terminals remain position-indexed;
+independent tensors do not automatically inherit identity. Draw correspondence only where it is needed
 to follow the operation. Do not connect every cell with a line if matching short
 IDs already make the mapping clear. A reshape arrow denotes a representation
 operation, not a physical movement or a new graph bond.

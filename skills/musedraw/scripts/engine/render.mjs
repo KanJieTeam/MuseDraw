@@ -212,8 +212,10 @@ class Ctx {
       for (let i = 1; i < cols; i++) { const x = m + ((W - 2 * m) * i) / cols; out += `<path d="M${f(x)} ${m}v8M${f(x)} ${H - m}v-8" stroke="${this.c(cv.frameColor ?? 'ink')}" stroke-width="0.75"/>`; }
       for (let i = 1; i < rows; i++) { const y = m + ((H - 2 * m) * i) / rows; out += `<path d="M${m} ${f(y)}h8M${W - m} ${f(y)}h-8" stroke="${this.c(cv.frameColor ?? 'ink')}" stroke-width="0.75"/>`; }
       const ff = this.font('mono');
-      for (let i = 0; i < cols; i++) { const x = m + ((W - 2 * m) * (i + 0.5)) / cols; out += `<text x="${f(x)}" y="${m + 6.5}" font-family="${esc(ff)}" font-size="7" fill="${this.c(cv.frameColor ?? 'ink')}" text-anchor="middle">${i + 1}</text>`; }
-      for (let i = 0; i < rows; i++) { const y = m + ((H - 2 * m) * (i + 0.5)) / rows; out += `<text x="${m + 4}" y="${f(y + 2.5)}" font-family="${esc(ff)}" font-size="7" fill="${this.c(cv.frameColor ?? 'ink')}" text-anchor="middle">${'ABCDEFGH'[i]}</text>`; }
+      if (cv.frameLabels !== false) {
+        for (let i = 0; i < cols; i++) { const x = m + ((W - 2 * m) * (i + 0.5)) / cols; out += `<text x="${f(x)}" y="${m + 6.5}" font-family="${esc(ff)}" font-size="7" fill="${this.c(cv.frameColor ?? 'ink')}" text-anchor="middle">${i + 1}</text>`; }
+        for (let i = 0; i < rows; i++) { const y = m + ((H - 2 * m) * (i + 0.5)) / rows; out += `<text x="${m + 4}" y="${f(y + 2.5)}" font-family="${esc(ff)}" font-size="7" fill="${this.c(cv.frameColor ?? 'ink')}" text-anchor="middle">${'ABCDEFGH'[i]}</text>`; }
+      }
     } else if (cv.frame === 'border') {
       const m = cv.frameInset ?? 20;
       out += `<rect x="${m}" y="${m}" width="${W - 2 * m}" height="${H - 2 * m}" fill="none" stroke="${this.c(cv.frameColor ?? 'ink')}" stroke-width="${cv.frameWidth ?? 1}"/>`;

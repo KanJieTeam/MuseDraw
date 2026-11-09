@@ -1,7 +1,8 @@
 # Semantic composition
 
 Use this route for ordinary directed flows (with or without responsibility
-lanes), matched object states and explicit RACI responsibility matrices. Describe content and relationships; the code
+lanes), matched object states, explicit RACI responsibility matrices and
+[identity-preserving array views](representation-views.md). Describe content and relationships; the code
 owns page geometry, readable type and role styling. No extra installation.
 
 ```sh

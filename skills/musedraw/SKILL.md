@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-11-03.55
+  instructions-version: musecore-2026-11-09.56
 ---
 
 # MuseDraw
@@ -331,6 +331,9 @@ detail views and layers,
 use the matching [object-composition method](references/object-composition.md).
 Make the relationship visible in the drawing; don't replace it with explanatory
 cards. The engine's `object-views` block keeps repeated native objects consistent.
+For matrix/sequence reorder or reshape with the same elements, use
+[identity-preserving array views](references/representation-views.md); define
+elements once and let the compiler derive both views from the explicit ID order.
 
 ## Native scene production
 
