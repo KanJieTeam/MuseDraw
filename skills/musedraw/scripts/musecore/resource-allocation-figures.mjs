@@ -7,15 +7,18 @@ export function resourceAllocationFigure(input){
  const M=100,gap=44,pad=24,ink='#1E2C32',muted='#627176',paper='#F6F3EE',rule='#C9D0CD',accent='#2E6F73',amber='#A16A30',red='#B44E4B',green='#4D7E68';
  const plan=(text,width,size=22,weight=400,max=4)=>measuredVisualPlan(text,width,{size,weight,max});
  const widest=(texts,size,weight=400)=>Math.max(...texts.map(text=>measureVisual(text,size,'sans',weight)));
- const totalCapacity=m.resources.reduce((sum,r)=>sum+r.capacity,0);
+ const totalCapacity=m.totalCapacity;
  const amountTexts=m.workstreams.flatMap(w=>w.allocations.map(c=>String(c.amount)));
  // Width follows the values and resource count. Text keeps its size.
- const rw=Math.ceil(Math.max(170,widest(amountTexts,26,750)+pad*2,widest([m.unit],15)+pad*2,
+ const minResourceWidth=Math.ceil(Math.max(170,widest(amountTexts,26,750)+pad*2,widest([m.unit],15)+pad*2,
   widest(m.resources.map(r=>`容量 ${r.capacity}`),17)+pad*2));
- const ww=380,gw=rw*m.resources.length,gx=M+ww;
+ const ww=380,gx=M+ww;
  const loadTexts=m.workstreams.map(w=>`总负载 ${w.total} ${m.unit}`);
  const sw=Math.ceil(Math.max(390,widest(loadTexts,21,750)+pad*2,widest([`资源总容量 ${totalCapacity} ${m.unit}`],17)+pad*2));
- const sx=gx+gw+gap,W=Math.max(1800,sx+sw+M),contentWidth=W-M*2;
+ const W=Math.max(1800,gx+minResourceWidth*m.resources.length+gap+sw+M),contentWidth=W-M*2;
+ // Share spare canvas width among the comparable resource columns. The minimum
+ // two-resource ledger must not leave half its composition as unused space.
+ const rw=(W-M*2-ww-gap-sw)/m.resources.length,gw=rw*m.resources.length,sx=gx+gw+gap;
  if(W>8000)throw Error('resource allocation exceeds supported width; split resources or shorten labels');
  const title=plan(m.title,contentWidth,54,800,3),subtitle=plan(m.subtitle,contentWidth,23,400,5),status=plan(m.dataStatus,contentWidth,18,400,5),note=plan(m.note,contentWidth,20,400,8);
  const titleY=54,subY=titleY+title.height+18,statusY=subY+subtitle.height+12,ruleY=statusY+status.height+28,my=ruleY+36;
