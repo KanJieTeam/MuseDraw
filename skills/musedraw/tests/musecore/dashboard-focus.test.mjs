@@ -64,3 +64,59 @@ test('dashboard focus preserves zero values as zero-length marks',async()=>{
   assert.deepEqual(result.hero[0],0);assert.deepEqual(result.support,[0,0,0]);
  }finally{await browser.close()}
 });
+
+test('dashboard trend rejects ambiguous shared-axis inputs and accepts supplied time labels',async()=>{
+ const input=variants(await fixture())[3];input.hero.periods=['08:00','09:00','10:00','11:00','12:00','13:00'];
+ assert.deepEqual(dashboardFocusModel(input).hero.periods,input.hero.periods);
+ for(const [change,message] of [
+  [x=>x.hero.series[1].values.pop(),/matching observation counts/],
+  [x=>x.hero.series[1].label=x.hero.series[0].label,/labels must be unique/],
+  [x=>x.hero.periods.pop(),/periods must match/],
+  [x=>x.hero.periods[1]=x.hero.periods[0],/periods must be unique/],
+  [x=>x.hero.periods[0]='',/nonempty/]
+ ]){const bad=structuredClone(input);change(bad);assert.throws(()=>dashboardFocusModel(bad),message)}
+});
+
+test('dashboard trend exposes numeric scale, every time and every series at actual export and responsive sizes',{timeout:120000},async()=>{
+ const input=variants(await fixture())[3];input.title='维修队列 · 合成测试快照';input.hero.periods=['08:00','09:00','10:00','11:00','12:00','13:00'];
+ const dense=structuredClone(input);dense.hero.periods=Array.from({length:18},(_,i)=>`批次${i+1}：给定记录条件与较长的时间标签`);dense.hero.series.forEach((s,i)=>s.values=Array.from({length:18},(_,j)=>i?18-j:2+j));
+ const indexed=structuredClone(input);delete indexed.hero.periods;
+ const {pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)}),out=process.env.MUSECORE_DASHBOARD_OUT;
+ try{for(const [name,seed] of [['times',input],['dense',dense],['indices',indexed]])for(const width of [390,1024,1440,1800])for(const stress of [false,true]){
+  const page=await browser.newPage({viewport:{width,height:1200}});
+  try{
+   let html=await editorHtml(seed);
+   if(stress)html=html.replace('<script>(()=>{',`<script>(()=>{const baseMeasure=CanvasRenderingContext2D.prototype.measureText;CanvasRenderingContext2D.prototype.measureText=function(t){const m=baseMeasure.call(this,t);return new Proxy(m,{get(o,k){if(k==='width')return Reflect.get(o,k,o)*1.25;if(k==='fontBoundingBoxAscent')return (Reflect.get(o,k,o)||20)+40;return Reflect.get(o,k,o)}})};`);
+   await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(html);await page.waitForFunction(()=>window.MUSECORE_READY===true);
+   const r=await page.evaluate(({seed,width})=>{const svg=width===1800?MuseCore.render(seed):MuseCore.renderResponsive(seed,width);document.getElementById('output').replaceChildren(svg);const texts=[...svg.querySelectorAll('text')].map(e=>{const b=e.getBBox();return {text:e.textContent,x:b.x,y:b.y,w:b.width,h:b.height}}),collisions=[];for(let i=0;i<texts.length;i++)for(let j=i+1;j<texts.length;j++){const a=texts[i],b=texts[j];if(Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>.5&&Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>.5)collisions.push([a.text,b.text])}return {audit:MuseCore.audit(svg),svg:svg.outerHTML,texts,collisions,ticks:[...svg.querySelectorAll('[data-trend-tick]')].map(e=>({value:+e.dataset.trendTick,label:e.textContent})),periods:[...svg.querySelectorAll('[data-trend-period]')].map(e=>e.textContent),series:[...svg.querySelectorAll('polyline[data-trend-series]')].map(e=>({label:e.dataset.trendSeries,dash:e.getAttribute('stroke-dasharray'),points:e.getAttribute('points').split(' ').map(p=>p.split(',').map(Number))}))}}, {seed,width});
+   const label=`${name}-${width}${stress?'-font-pressure':''}`,g=r.audit.geometry,p=g.trend;
+   assert.deepEqual(r.audit.findings,[],label);assert.deepEqual(r.collisions,[],label+' actual text ink');
+   assert.equal(g.width,width);assert.equal(g.hero.width,width===1800?1076:width-(width<700?36:64));
+   assert.equal(new Set(r.ticks.map(t=>t.label)).size,5,label+' numeric tick labels');assert.equal(r.periods.length,seed.hero.series[0].values.length,label+' per-observation horizontal key');
+   const displayed=r.texts.map(t=>t.text).join('').replace(/\s/gu,'');
+   assert(!r.texts.some(t=>/^(?:主视图\s*·\s*trend|RECORD|TREND)$/.test(t.text)),label+' internal route identifiers stay out of the delivered dashboard');
+   assert(displayed.includes('趋势变化'),label+' viewer-facing heading');
+   for(const series of seed.hero.series)assert(displayed.includes(series.label),label+' all series visible');
+   for(const period of seed.hero.periods??[])assert(displayed.includes(period.replace(/\s/gu,'')),label+' given period visible');
+   if(!seed.hero.periods)assert(displayed.includes('未提供逐点时间'),label+' no invented time');
+   for(const [i,s] of seed.hero.series.entries())for(const [j,v] of s.values.entries()){
+    const [x,y]=r.series[i].points[j];assert(Math.abs(x-(p.x+p.w*j/(s.values.length-1)))<1e-7);assert(Math.abs(y-(p.y+p.h-v/p.yDomain[1]*p.h))<1e-7);
+   }
+   assert(r.series[1].dash,label+' secondary series remains identifiable without colour');
+   for(const t of r.texts)assert(t.x>=-.5&&t.y>=-.5&&t.x+t.w<=g.width+.5&&t.y+t.h<=g.height+.5,label+' text inside canvas '+t.text);
+   if(out&&!stress&&name==='times'){const {default:path}=await import('node:path'),dir=path.join(out,label);await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'diagram.svg'),r.svg);await fs.writeFile(path.join(dir,'checks.json'),JSON.stringify(r.audit,null,2));await page.setContent(`<style>body{margin:0}</style>${r.svg}`);const png=await page.locator('svg').screenshot({path:path.join(dir,'diagram.png')});assert.equal(png.readUInt32BE(16),width,'export must include the full responsive SVG')}
+  }finally{await page.close()}
+ }}finally{await browser.close()}
+});
+
+test('dashboard trend keeps finite scales and distinct ticks at floating-point boundaries',async()=>{
+ const input=variants(await fixture())[3],{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
+ try{const page=await browser.newPage();await page.setContent(await editorHtml(input));await page.waitForFunction(()=>window.MUSECORE_READY===true);
+  for(const values of [[0,1e308],[0,Number.MIN_VALUE],[0,0]])for(const width of [390,1800]){
+   const seed=structuredClone(input);seed.hero.series=[{label:'给定边界观测',values}];seed.hero.emphasis='给定边界观测';
+   const r=await page.evaluate(({seed,width})=>{const svg=width===1800?MuseCore.render(seed):MuseCore.renderResponsive(seed,width);document.getElementById('output').replaceChildren(svg);return {audit:MuseCore.audit(svg),ticks:[...svg.querySelectorAll('[data-trend-tick]')].map(e=>({value:Number(e.dataset.trendTick),label:e.textContent})),points:svg.querySelector('polyline[data-trend-series]').getAttribute('points').split(' ').map(p=>p.split(',').map(Number))}},{seed,width});
+   assert.deepEqual(r.audit.findings,[]);assert(r.ticks.length>=2);assert.equal(new Set(r.ticks.map(t=>t.value)).size,r.ticks.length);assert.equal(new Set(r.ticks.map(t=>t.label)).size,r.ticks.length);assert(r.ticks.every(t=>Number.isFinite(t.value)));assert(r.points.flat().every(Number.isFinite));
+   const p=r.audit.geometry.trend;assert.equal(r.points[0][1],p.y+p.h);assert.equal(r.points[1][1],values[1]===0?p.y+p.h:p.y);
+  }
+ }finally{await browser.close()}
+});
