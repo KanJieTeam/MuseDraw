@@ -120,3 +120,42 @@ test('dashboard trend keeps finite scales and distinct ticks at floating-point b
   }
  }finally{await browser.close()}
 });
+
+test('dashboard spatial rejects unknown state tokens and ambiguous label bindings',async()=>{
+ const input=await fixture();
+ for(const status of ['normal','warning','critical','unknown','offline']){const x=structuredClone(input);x.hero.points[0].status=status;assert.equal(dashboardFocusModel(x).hero.points[0].status,status)}
+ for(const [change,message] of [
+  [x=>x.hero.points[0].status='healthy',/status unsupported/],
+  [x=>delete x.hero.points[0].status,/status unsupported/],
+  [x=>x.hero.points[1].label=x.hero.points[0].label,/labels must be unique/]
+ ]){const x=structuredClone(input);change(x);assert.throws(()=>dashboardFocusModel(x),message)}
+});
+
+test('dashboard spatial uses the same honest coordinate plane and state grammar across export and responsive views',{timeout:120000},async()=>{
+ const seed=await fixture();seed.title='设施位置与登记状态 · 合成示例';
+ seed.hero.points=[{label:'N-01',x:0,y:0,status:'normal'},{label:'W-02',x:100,y:0,status:'warning'},{label:'C-03',x:20,y:55,status:'critical'},{label:'U-04',x:100,y:100,status:'unknown'},{label:'O-05',x:0,y:100,status:'offline'}];
+ seed.support=[{name:'records',relation:'record',title:'对象记录',rows:seed.hero.points.map(p=>`${p.label} 的给定记录`),bindsTo:seed.hero.points.map(p=>p.label)}];
+ const before=structuredClone(seed),out=process.env.MUSECORE_SPATIAL_OUT,{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
+ try{for(const width of [390,1024,1440,1800])for(const stress of [false,true]){
+  const page=await browser.newPage({viewport:{width,height:1200}});
+  try{let html=await editorHtml(seed);if(stress)html=html.replace('<script>(()=>{',`<script>(()=>{const original=CanvasRenderingContext2D.prototype.measureText;CanvasRenderingContext2D.prototype.measureText=function(t){const m=original.call(this,t);return new Proxy(m,{get(o,k){if(k==='width')return Reflect.get(o,k,o)*1.25;if(k==='fontBoundingBoxAscent')return (Reflect.get(o,k,o)||20)+40;return Reflect.get(o,k,o)}})};`);
+   await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(html);await page.waitForFunction(()=>window.MUSECORE_READY===true);
+   const r=await page.evaluate(({seed,width})=>{const svg=width===1800?MuseCore.render(seed):MuseCore.renderResponsive(seed,width);document.getElementById('output').replaceChildren(svg);const texts=[...svg.querySelectorAll('text')].map(e=>{const b=e.getBBox();return {text:e.textContent,x:b.x,y:b.y,w:b.width,h:b.height}}),collisions=[];for(let i=0;i<texts.length;i++)for(let j=i+1;j<texts.length;j++){const a=texts[i],b=texts[j];if(Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>.5&&Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>.5)collisions.push([a.text,b.text])}return {audit:MuseCore.audit(svg),svg:svg.outerHTML,paths:svg.querySelectorAll('path').length,texts,collisions,markers:[...svg.querySelectorAll('[data-role="hero-marker"]')].map(e=>({label:e.dataset.spatialLabel,state:e.dataset.spatialState,tag:e.tagName,fill:e.getAttribute('fill'),stroke:e.getAttribute('stroke'),title:e.querySelector('title').textContent,box:(()=>{const b=e.getBBox();return {x:b.x,y:b.y,w:b.width,h:b.height}})()})),bindings:[...svg.querySelectorAll('[data-binding]')].map(e=>({label:e.dataset.binding,fill:e.getAttribute('fill')}))}},{seed,width});
+   const label=`${width}-${stress?'font-pressure':'normal'}`,g=r.audit.geometry,p=g.spatial;
+   assert.deepEqual(r.audit.findings,[],label);assert.deepEqual(r.collisions,[],label+' actual text ink');assert.equal(r.paths,0,label+' no invented map paths');assert.equal(p.coordinateSystem,'normalized-layout');assert.equal(p.baseGeometry,'none-supplied');assert.equal(p.axisDirection,'x-right-y-down');assert.equal(g.width,width);
+   const visible=r.texts.map(t=>t.text).join('');for(const text of ['归一化位置示意','非地理底图','正常','告警','严重','未知','离线'])assert(visible.includes(text));
+   for(const [i,q]of seed.hero.points.entries()){const actual=p.points[i],marker=r.markers[i];assert.equal(actual.label,q.label);assert.equal(actual.status,q.status);assert.equal(actual.xPixel,p.x+q.x/100*p.w);assert.equal(actual.yPixel,p.y+q.y/100*p.h);assert.equal(marker.state,q.status);assert(marker.title.includes(q.label));assert.equal(r.bindings[i].label,q.label);assert.equal(r.bindings[i].fill,marker.stroke)}
+   assert.equal(r.markers[3].fill,'none');assert.equal(r.markers[4].tag,'rect');assert.notEqual(r.markers[3].stroke,r.markers[0].stroke);assert.notEqual(r.markers[4].fill,r.markers[0].fill);for(const marker of r.markers)for(const text of r.texts){const b=marker.box;assert(!(Math.min(text.x+text.w,b.x+b.w)-Math.max(text.x,b.x)>.5&&Math.min(text.y+text.h,b.y+b.h)-Math.max(text.y,b.y)>.5),label+' marker covers text: '+marker.label+' / '+text.text)}
+   for(const t of r.texts)assert(t.x>=-.5&&t.y>=-.5&&t.x+t.w<=g.width+.5&&t.y+t.h<=g.height+.5,label+' text inside canvas '+t.text);
+   if(out){const {default:path}=await import('node:path'),dir=path.join(out,label);await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'diagram.svg'),r.svg);await fs.writeFile(path.join(dir,'checks.json'),JSON.stringify(r.audit,null,2));await page.setContent(`<style>body{margin:0}</style>${r.svg}`);const png=await page.locator('svg').screenshot({path:path.join(dir,'diagram.png')});assert.equal(png.readUInt32BE(16),width)}
+  }finally{await page.close()}
+ }}finally{await browser.close()}
+ assert.deepEqual(seed,before,'rendering and validation preserve supplied labels, coordinates, states and records');
+});
+
+test('dashboard spatial refuses coincident markers instead of hiding one registered entity',async()=>{
+ const seed=await fixture(),{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)});
+ try{const page=await browser.newPage();await page.setContent(await editorHtml(seed));await page.waitForFunction(()=>window.MUSECORE_READY===true);seed.hero.points[1].x=seed.hero.points[0].x;seed.hero.points[1].y=seed.hero.points[0].y;
+  for(const width of [390,1800]){const message=await page.evaluate(({seed,width})=>{try{if(width===1800)MuseCore.render(seed);else MuseCore.renderResponsive(seed,width);return ''}catch(e){return e.message}},{seed,width});assert.match(message,/Spatial markers overlap/)}
+ }finally{await browser.close()}
+});

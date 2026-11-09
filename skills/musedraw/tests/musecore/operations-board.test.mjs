@@ -52,3 +52,20 @@ test('operations board recomputes an eight-item CJK queue under real font pressu
   await page.close();
  }finally{await browser.close()}
 });
+
+test('operations board keeps workflow hold independent of supplied deadline text',{timeout:120000},async()=>{
+ const seed=clone();seed.queue=[{id:'H-01',label:'等待外部确认的事项',owner:'甲组',due:'2030-01-01',state:'held'},{id:'N-02',label:'继续执行的事项',owner:'乙组',due:'原文：截止待核实',state:'now'},{id:'H-03',label:'已报告逾期且暂挂的事项',owner:'丙组',due:'原文：已逾期',state:'held'}];
+ const before=structuredClone(seed),{pw}=await loadPlaywrightInfo(),browser=await pw.chromium.launch({headless:true,...resolveBrowser(pw)}),out=process.env.MUSECORE_HELD_OUT;
+ try{for(const stress of [false,true]){const page=await browser.newPage({viewport:{width:1900,height:1200}});
+  try{let html=await editorHtml(seed);if(stress)html=html.replace('<script>(()=>{',`<script>(()=>{const original=CanvasRenderingContext2D.prototype.measureText;CanvasRenderingContext2D.prototype.measureText=function(t){const m=original.call(this,t);return new Proxy(m,{get(o,k){if(k==='width')return Reflect.get(o,k,o)*1.25;if(k==='fontBoundingBoxAscent')return (Reflect.get(o,k,o)||20)+40;return Reflect.get(o,k,o)}})};`);
+   await page.route(/^https?:\/\//,r=>r.abort());await page.setContent(html);await page.waitForFunction(()=>window.MUSECORE_READY===true);
+   const r=await page.evaluate(()=>{const svg=document.querySelector('#output svg');return {audit:window.MUSECORE_RESULT,svg:svg?.outerHTML,states:[...svg.querySelectorAll('[data-queue-state-label]')].map(e=>({id:e.dataset.queueStateLabel,label:e.textContent})),text:[...svg.querySelectorAll('text')].map(e=>e.textContent).join('\n')}});
+   assert.deepEqual(r.audit.findings,[]);assert(r.text.includes("按登记顺序"));assert(!r.text.includes("按状态排序"));assert.deepEqual(r.states,[{id:'H-01',label:'暂挂'},{id:'N-02',label:'现在'},{id:'H-03',label:'暂挂'}]);for(const q of seed.queue)assert(r.text.includes(q.due),'keep the given deadline/status text independently');
+   // This family remains a wide artifact with a scrollable editor. These
+   // viewport checks do not claim a responsive rearrangement of its content.
+   for(const width of [390,1024,1440]){await page.setViewportSize({width,height:1200});const size=await page.evaluate(()=>({body:document.documentElement.scrollWidth,available:document.documentElement.clientWidth,output:document.querySelector('#output').scrollWidth,svg:document.querySelector('svg').viewBox.baseVal.width}));assert(size.body<=size.available+1);assert.equal(size.svg,1800);assert(size.output>=1800)}
+   if(out){const dir=path.join(out,stress?'wide-board-font-pressure':'wide-board-normal');await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'diagram.svg'),r.svg);await fs.writeFile(path.join(dir,'checks.json'),JSON.stringify(r.audit,null,2));await page.setViewportSize({width:1800,height:1200});await page.setContent(`<style>body{margin:0}</style>${r.svg}`);const png=await page.locator('svg').screenshot({path:path.join(dir,'diagram.png')});assert.equal(png.readUInt32BE(16),1800)}
+  }finally{await page.close()}
+ }}finally{await browser.close()}
+ assert.deepEqual(seed,before);
+});

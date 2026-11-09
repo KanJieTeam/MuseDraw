@@ -14,6 +14,22 @@ Every numeric support panel must provide `values`, `unit`, and `period`. A realt
 
 The route is intentionally bounded: at most four summary metrics and four support panels. Unsupported or decorative heroes are rejected rather than styled around.
 
+## Spatial positions and status
+
+The spatial input supplies normalized layout positions in `0..100`, with x
+increasing rightward and y downward. It supplies no geographic base geometry;
+the output explicitly labels a coordinate schematic and never invents rivers,
+land parcels or other map features. Desktop and responsive output use the same
+coordinate semantics. For a geographic map or floor plan, use a route with
+caller-supplied geometry.
+
+Point labels must be unique because the existing `bindsTo` record links use
+those labels. Each point must declare `normal`, `warning`, `critical`, `unknown`
+or `offline`; absent or unsupported status is refused. Unknown and offline have
+distinct neutral markers, not a normal-state color. The renderer keeps the
+given positions; markers that would hide each other, or labels that cannot fit
+without overlap, require a split view or another representation.
+
 ## Trend labels
 
 Every series must have a distinct label and the same number of observations.

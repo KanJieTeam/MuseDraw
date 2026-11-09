@@ -31,6 +31,11 @@ test('metric rows and spectrum guides remain separate from actual CJK ink',{time
      return {audit:MuseCore.audit(svg),texts,metrics,svg:svg.outerHTML};
     },{input,width});
     assert.deepEqual(r.audit.findings,[],id+'/'+pressure+'/'+width);
+    if(input.heroRelation==='spatial'){
+     const heading=r.texts.find(t=>t.text==='空间分布'),caption=r.texts.find(t=>t.text.includes('归一化位置示意'));
+     assert(heading&&caption,'keep both spatial heading and coordinate disclaimer visible');
+     assert(caption.y>=heading.y+heading.h+8,`measured hero heading needs its own height before the chart at ${pressure}/${width}`);
+    }
     if(input.support){const text=r.texts.map(t=>t.text).join('').replace(/\s/gu,'');for(const panel of input.support)for(const row of panel.rows??[])assert(text.includes(row.replace(/\s/gu,'')),'all supplied support rows remain visible at '+width)}
     for(const metric of r.metrics){const matching=r.texts.filter(t=>t.x>=metric.x&&t.x+t.w<=metric.x+metric.w&&t.y>=metric.y&&t.y+t.h<=metric.y+metric.h);assert(matching.length>=2,'value and label fit own metric');const expected=input.summary.find(k=>k.label===metric.label);assert(matching.some(t=>t.text===expected.value));assert(matching.map(t=>t.text).join('').includes(expected.label));for(let i=0;i<matching.length;i++)for(const t of matching.slice(i+1)){const a=matching[i];assert(!(Math.min(a.x+a.w,t.x+t.w)>Math.max(a.x,t.x)&&Math.min(a.y+a.h,t.y+t.h)>Math.max(a.y,t.y)),'metric ink is separated')}}
     if(out){const dir=path.join(out,id+'-'+pressure+'-'+width);await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'diagram.svg'),r.svg);await fs.writeFile(path.join(dir,'checks.json'),JSON.stringify(r,null,2));await page.setViewportSize({width:Math.ceil(r.audit.geometry.width)+64,height:1800});await page.locator('#output svg').screenshot({path:path.join(dir,'diagram.png')})}
