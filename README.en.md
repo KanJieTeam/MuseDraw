@@ -24,8 +24,6 @@ You bring what you want to express. MuseDraw helps work out how to present it: w
 - **Keep revising through conversation.** Add a step, shift the emphasis, or develop a direction you like.
 - **Use the work and keep the freedom to change it.** Diagrams retain source files, images retain prompts and useful assets, and web work retains HTML/CSS/JavaScript for sharing, using, and refining.
 
-[![MuseDraw: different subjects, distinct visual expressions](assets/gallery/readme-showcase.jpg)](https://kanjieteam.github.io/MuseDraw/)
-
 [Explore the work and source files](https://kanjieteam.github.io/MuseDraw/) · [See how it works today](docs/usage.md)
 
 ## Start creating

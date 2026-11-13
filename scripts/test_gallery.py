@@ -193,7 +193,7 @@ class GalleryTests(unittest.TestCase):
         self.assertEqual(source_total, index["sourceBytes"])
         self.assertLess(total, source_total * 0.15)
 
-    def test_readme_collage_keeps_selected_cases_and_twenty_styles_in_one_image(self):
+    def test_gallery_collage_asset_and_single_readme_cover(self):
         from build_readme_showcase import CASES, FEATURED
         selected = ["05-mvp-whiteboard", "06-kafka-riso", "38-good-lesson-chalkboard",
                     "03-gitops-terminal", "08-ai-agent-aurora", "17-onboarding-90-pastel",
@@ -217,7 +217,9 @@ class GalleryTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(image).hexdigest(), manifest["sha256"])
         for filename in ("README.md", "README.zh-CN.md", "README.en.md"):
             text = (ROOT / filename).read_text(encoding="utf-8")
-            self.assertEqual(text.count("assets/gallery/readme-showcase.jpg"), 1)
+            self.assertNotIn("assets/gallery/readme-showcase.jpg", text)
+            self.assertEqual(text.count("assets/brand/musedraw-cover.png"), 1)
+            self.assertEqual(len(re.findall(r"<img\b|!\[", text)), 1)
             self.assertNotIn("flagship-grid.jpg", text)
 
     def test_skill_download_is_complete_reproducible_and_runtime_free(self):
