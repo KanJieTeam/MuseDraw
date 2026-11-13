@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="780" viewBox="0 0 1440 780" role="img" aria-label="Original illustrated listening rooms at night">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#1b3151"/><stop offset="1" stop-color="#53657b"/></linearGradient><linearGradient id="warm" x2="0" y2="1"><stop stop-color="#ffcb84"/><stop offset="1" stop-color="#ba603d"/></linearGradient><pattern id="panel" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#26364b"/><path d="M0 24 24 0" stroke="#516077" stroke-width="2"/></pattern></defs>
+<rect width="1440" height="780" fill="url(#sky)"/><circle cx="1125" cy="125" r="49" fill="#e1e1c6"/><g fill="#bac9cb"><circle cx="800" cy="71" r="2"/><circle cx="1005" cy="116" r="2"/><circle cx="1310" cy="83" r="2"/><circle cx="1265" cy="214" r="2"/><circle cx="919" cy="45" r="2"/></g>
+<path d="M0 623 1440 558V780H0Z" fill="#152437"/><path d="m470 480 670-98 250 152-736 158Z" fill="#536477"/><path d="m470 480 184 212v42L470 523Z" fill="#2f4157"/><path d="m654 692 736-158v46L654 734Z" fill="#23364c"/>
+<path d="M650 236 1012 194 1012 501 650 570Z" fill="#192a40"/><path d="m1012 194 286 121v259l-286-73Z" fill="#6a655e"/><path d="m650 236 276-117 372 196-286-121Z" fill="#30465d"/>
+<path d="m681 276 137-16v239l-137 26Z" fill="url(#warm)"/><path d="m845 257 137-17v225l-137 28Z" fill="url(#panel)"/>
+<path d="m1055 244 195 80v200l-195-46Z" fill="url(#warm)"/>
+<path d="m1082 285 142 52v109l-142-39Z" fill="#354451"/><path d="m1095 295 6 114m16-108 6 115m16-106 6 112m16-103 6 109m16-100 6 106m16-96 6 102" stroke="#9ba29c" stroke-width="5"/>
+<ellipse cx="914" cy="436" rx="43" ry="14" fill="#101d2f"/><path d="M912 436v60m-26-2 27-11 27 4" fill="none" stroke="#182234" stroke-width="8"/>
+<path d="m713 438 47-4v61l-47 9Zm54-71 31-2v83l-31 5Z" fill="#7c452e"/><path d="m711 435 49-5 14 10-52 7Z" fill="#e1b17a"/>
+<path d="M552 354 620 340V560l-68 14Z" fill="#8f5840"/><path d="m560 367 50-9v63l-50 10Z" fill="#f6b86d"/>
+<path d="m842 580 202-40 112 55-207 45Z" fill="#a68b6c"/><path d="m949 640 207-45v15l-207 47Z" fill="#725c4c"/><path d="m842 580 107 60v17l-107-62Z" fill="#504944"/>
+<g fill="none" stroke="#d9b677" stroke-width="2" opacity=".8"><path d="M542 185q280 139 720 65"/><path d="m610 214 0 22m85-1v23m92-6v22m98-12v22m103-18v20m99-23v19m100-28v18"/></g><g fill="#ffca82"><circle cx="610" cy="239" r="5"/><circle cx="695" cy="260" r="5"/><circle cx="787" cy="277" r="5"/><circle cx="885" cy="286" r="5"/><circle cx="988" cy="290" r="5"/><circle cx="1087" cy="285" r="5"/><circle cx="1187" cy="276" r="5"/></g>
+<path d="M1309 590V380m0 108c-62 7-90-39-67-78 42 3 70 39 67 78m0 51c62-6 86-47 66-81-40 6-61 40-66 81" fill="#274539" stroke="#263c37" stroke-width="7"/>
+<path d="m455 703 56 28m-16-54 56 28m-16-54 56 28m-16-54 56 28" stroke="#8a989d" stroke-width="2"/>
+</svg>

@@ -288,6 +288,8 @@ def run_node_checks(root, playwright=None, browser=None):
     print(f"PASS Node syntax: {len(modules)} modules (not browser layout tests).")
     geometry_tests = [root / "skills/musedraw/tests/callout-layout/layout.test.mjs",
                       root / "skills/musedraw/tests/style-kit.test.mjs",
+                      root / "skills/musedraw/tests/frontend-system/model.test.mjs",
+                      root / "skills/musedraw/tests/visual-review/visual-review.test.mjs",
                       root / "skills/musedraw/tests/open-channel/open-channel.test.mjs",
                       root / "skills/musedraw/tests/material-footprint/material-footprint.test.mjs",
                       root / "scripts/test_compose_plan.mjs",

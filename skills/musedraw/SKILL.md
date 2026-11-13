@@ -2,7 +2,7 @@
 name: musedraw
 description: Create and revise visual work from a brief or selected example, including posters, illustrations, diagrams, scientific figures and frontend/UI. Choose native scenes, HTML/CSS/JavaScript or available image-generation tools to suit the work; deliver the requested image, runnable page or editable source without forcing every artifact into SVG.
 metadata:
-  instructions-version: musecore-2026-11-09.56
+  instructions-version: musecore-2026-11-13.1
 ---
 
 # MuseDraw
@@ -241,6 +241,12 @@ review, use [visual revision](references/design-review.md) with actual renders,
 separate factual/functional checks and a preserved best version. Independent
 critique depends on the host; do not label self-review independent. This is not
 an additional mandatory stage for ordinary scene delivery.
+For internal comparison campaigns, [independent review tools](references/visual-review.md)
+prepare anonymous image packets, reconcile reversed presentation order and
+check agreement against separately held human preferences. Use fresh contexts
+with actual image access. These tools record advisory evidence, not aesthetic
+approval; routine checks and internal revisions need not make the user judge
+every draft.
 
 - **Painting, photographic imagery, textured illustration or image editing:**
   read [image work](references/image-work.md) and use an available host image
@@ -311,6 +317,12 @@ For record review, coordination or operations, also read
 HTML/CSS/JavaScript or use the project's existing frontend stack, then deliver
 source and browser previews. This route does not require a scene or scene-engine
 render. The diagram instructions below apply to drawings and scene artifacts.
+For a bounded public catalogue or timed public programme, the experimental
+[executable frontend systems](references/frontend-system.md) provide coordinated
+type, imagery, composition and responsive controls from structured content, or
+scoped assets for an existing app. Inspect their declared range before using
+them; keep other websites on the frontend route. These systems have function
+and layout checks, not a demonstrated general aesthetic advantage.
 
 For a native-vector poster, information graphic, teaching explanation or scientific
 multi-panel artwork, use the [visual case library](references/case-library.md) to

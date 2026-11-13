@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "system": "signal",
+  "locale": "en",
+  "brand": {"name": "Night Signal", "kicker": "A gathering for close listening"},
+  "page": {
+    "kicker": "Two evenings / Small rooms / Open ears",
+    "title": "Find a different frequency.",
+    "intro": "Listening walks, open conversations and small sound experiments. Make a personal route through two evenings; overlapping times stay visible so you can choose.",
+    "actionLabel": "Explore the programme",
+    "sectionTitle": "Choose what to tune into.",
+    "footer": "Fictional programme for demonstrating local itinerary controls. Keeping a session does not register attendance, reserve space or confirm availability. All times are local civil times as supplied."
+  },
+  "image": {"src": "listening-rooms.svg", "alt": "Original illustrated cutaway of listening rooms, acoustic panels and a shared courtyard at night", "width": 1440, "height": 780, "credit": "Original vector illustration / fictional listening rooms", "fit": "cover", "position": "right"},
+  "items": [
+    {"id": "NS-01", "title": "The city, with the volume turned down", "summary": "A slow listening walk, followed by a shared set of notes about what we noticed.", "category": "Walk", "date": "2026-12-04", "start": "18:00", "end": "19:10", "place": "Courtyard entrance", "cost": "Free / fictional session", "source": "Original fictional programme NS-01.", "detail": ["The walking route, access arrangements and weather plan are unspecified. A real programme needs those facts from its organiser."]},
+    {"id": "NS-02", "title": "A room made from small sounds", "summary": "An open table of paper, wood and everyday objects. Try an idea, then listen to someone else's.", "category": "Workshop", "date": "2026-12-04", "start": "18:40", "end": "20:00", "place": "Room A / Ground floor", "cost": "Free / fictional session", "source": "Original fictional programme NS-02.", "detail": ["This workshop overlaps NS-01 by thirty minutes. The local itinerary reports that relationship without deciding which session you should attend."]},
+    {"id": "NS-03", "title": "What a microphone leaves out", "summary": "A conversation about recording places, describing uncertainty, and asking before recording people.", "category": "Conversation", "date": "2026-12-04", "start": "20:15", "end": "21:00", "place": "Listening room", "cost": "Free / fictional session", "source": "Original fictional programme NS-03.", "detail": ["No speakers, access services or live recordings are represented by this fictional example."]},
+    {"id": "NS-04", "title": "A score for an unfamiliar street", "summary": "Make a short set of listening instructions for a place you haven't visited yet.", "category": "Workshop", "date": "2026-12-05", "start": "17:30", "end": "18:30", "place": "Room A / Ground floor", "cost": "Free / fictional session", "source": "Original fictional programme NS-04.", "detail": ["Instructions are creative prompts. This session does not supply a geographic map or navigation route."]},
+    {"id": "NS-05", "title": "Leave a little silence", "summary": "A shared closing session with time for a final note, a question, or a quiet departure.", "category": "Conversation", "date": "2026-12-05", "start": "19:00", "end": "20:00", "place": "Courtyard room", "cost": "Free / fictional session", "source": "Original fictional programme NS-05.", "detail": ["Attendance, capacity and availability remain unspecified. This page only stores a personal list on the current device."]}
+  ]
+}

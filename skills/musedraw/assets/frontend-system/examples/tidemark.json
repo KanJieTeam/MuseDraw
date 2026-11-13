@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "system": "specimen",
+  "locale": "en",
+  "brand": {"name": "Tidemark", "kicker": "A coastal observation index"},
+  "page": {
+    "kicker": "Field records / Estuary study collection",
+    "title": "Small observations, held together.",
+    "intro": "A working collection of shore notes, material studies and listening records. Follow a subject, inspect the source, and keep a reading list for your next visit to the water.",
+    "actionLabel": "Open the index",
+    "sectionTitle": "Notes from the near shore",
+    "footer": "Fictional demonstration collection. The records, dates and creators are illustrative; they do not report environmental measurements. Reading lists stay on this device."
+  },
+  "image": {"src": "shore-study.svg", "alt": "Original vector study of a folded coastal notebook beside three shoreline specimens", "width": 1000, "height": 440, "credit": "Original vector study / illustrative objects, not field evidence", "fit": "contain", "position": "center"},
+  "items": [
+    {"id": "TM-26-01", "title": "A notebook for the turning tide", "summary": "A blank recording sheet that keeps time, weather notes and a small drawing on the same spread.", "category": "Field tools", "year": 2026, "creator": "Estuary workshop", "format": "12 pages / printable worksheet", "source": "Original fictional demonstration record TM-26-01.", "detail": ["The sheet proposes places for observations, not a method for measuring water level. No measurements have been supplied.", "Use the separate source field to retain the origin of a real record when adapting this collection."]},
+    {"id": "TM-25-06", "title": "Where the salt line dries", "summary": "A sequence of material descriptions from a harbour wall, arranged as reading notes rather than sampled data.", "category": "Material notes", "year": 2025, "creator": "Mira Lane", "format": "Notebook / 8 descriptions", "source": "Original fictional demonstration record TM-25-06.", "detail": ["The descriptions are a fictional editorial example. Surface colour does not establish salinity or material condition."]},
+    {"id": "TM-25-03", "title": "Listening under the footbridge", "summary": "An outline for noting changes in a soundscape without recording or identifying passing voices.", "category": "Listening", "year": 2025, "creator": "Near Shore Studio", "format": "Method outline / text", "source": "Original fictional demonstration record TM-25-03.", "detail": ["The record describes a possible listening exercise. It contains no audio recordings or claims about a particular site."]},
+    {"id": "TM-24-09", "title": "Fragments that travel", "summary": "A reading list about found materials, with room to distinguish a direct observation from a later interpretation.", "category": "Material notes", "year": 2024, "creator": "Estuary workshop", "format": "Reference list / 6 entries", "source": "Original fictional demonstration record TM-24-09.", "detail": ["No specimen was collected for this demonstration. Replace this record with supplied, traceable source material for a real catalogue."]},
+    {"id": "TM-23-02", "title": "Return to the same small place", "summary": "A repeat-visit prompt: keep the viewpoint stable, describe what changes, and leave uncertainty visible.", "category": "Field tools", "year": 2023, "creator": "Mira Lane", "format": "Prompt sheet / 2 pages", "source": "Original fictional demonstration record TM-23-02.", "detail": ["This is an editorial prompt, not a controlled experimental protocol. The collection deliberately supplies no invented results."]}
+  ]
+}

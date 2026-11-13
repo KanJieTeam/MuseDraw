@@ -29,6 +29,14 @@ separate action that requires the user's request.
 
 ## Before implementation
 
+For a public catalogue or timed public programme, the experimental
+[frontend systems](frontend-system.md) can carry coordinated typography, spatial
+rhythm, image framing and controls as executable assets. Use a system only when
+its reader task and structured input fit. It can mount in a dedicated region
+beside existing host logic; it does not replace a product or decide every
+website's structure. Other briefs retain this open frontend workflow. Inspect
+the actual result; the kit's browser checks do not establish aesthetic approval.
+
 Write a short private direction: who is using this page, what they must decide,
 which content should lead, and what visual choice belongs specifically to this
 subject. Use the actual facts to choose structure. A reservation page should

@@ -58,6 +58,23 @@ successive edits, revisit composition, asset choice or the production medium
 instead of repeating cosmetic adjustments. Respect the user's continuing request
 and any stated budget; report unavailable tools or unresolved limits honestly.
 
+## Internal screening and user checkpoints
+
+When the user delegates sustained improvement, handle routine factual/browser
+checks and bounded internal revisions before presenting a version checkpoint.
+Reserve human calibration for meaningful version changes, persistent subjective
+disagreements or the user's explicit review request. Do not make every internal
+draft wait for a user vote.
+
+The [local review tools](visual-review.md) package unchanged screenshots without
+creator identities, check reviewer records, reconcile reversed image orders and
+compare choices with separately held human feedback. A valid record is not a
+correct aesthetic judgement. Freeze the review procedure before testing unseen
+preferences; keep human labels and creator reasoning outside reviewer contexts.
+Report actual matching, disagreement and abstention on that content count.
+Use uncalibrated criticism as advisory observations, not as an automatic release
+gate or a claim that the user's taste has been learned.
+
 ## Learn a method, not a victory count
 
 A method change needs trials on new content. Keep development subjects separate
